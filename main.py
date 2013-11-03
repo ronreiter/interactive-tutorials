@@ -125,6 +125,10 @@ def favicon():
 def default_index():
     return index("Welcome")
 
+@app.route("/about")
+def about():
+    return make_response(render_template("about.html"))
+
 @app.route("/<title>")
 def index(title):
     tutorial = title.replace("_", " ").encode("utf-8")
