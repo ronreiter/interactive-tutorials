@@ -47,10 +47,10 @@ def wikify(text):
 def init_tutorials():
     for domain in os.listdir("tutorials"):
         tutorial_data[domain] = {}
-        if not os.path.isdir(os.path.join("tutorials", domain)):
+        if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             continue
 
-        for tutorial_file in os.listdir(os.path.join("tutorials", domain)):
+        for tutorial_file in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             if not tutorial_file.endswith(".md"):
                 continue
 
@@ -58,7 +58,7 @@ def init_tutorials():
             if not tutorial in tutorial_data[domain]:
                 tutorial_data[domain][tutorial] = {}
 
-            tutorial_data[domain][tutorial]["text"] = open(os.path.join("tutorials", domain, tutorial_file)).read().replace("\r\n", "\n")
+            tutorial_data[domain][tutorial]["text"] = open(os.path.join(os.path.dirname(__file__), "tutorials", domain, tutorial_file)).read().replace("\r\n", "\n")
             links = [x[1] for x in WIKI_WORD_PATTERN.findall(tutorial_data[domain][tutorial]["text"])]
             tutorial_data[domain][tutorial]["links"] = links
 
@@ -72,6 +72,7 @@ def init_tutorials():
             else:
                 tutorial_data[domain][tutorial]["page_title"] = ""
                 tutorial_data[domain][tutorial]["text"] = wikify(tutorial_data[domain][tutorial]["text"])
+                tutorial_data[domain][tutorial]["code"] = constants.DOMAIN_DATA[domain]["default_code"]
 
             for link in links:
                 if not link in tutorial_data[domain]:
@@ -95,12 +96,14 @@ init_tutorials()
 
 
 def get_domain_data():
-    DEVELOPMENT = request.host == "localhost:5000"
-    return constants.DOMAIN_DATA[request.host] if not DEVELOPMENT else constants.DOMAIN_DATA[constants.LEARNPYTHON_DOMAIN]
+    host = request.host[4:] if request.host.startswith("www.") else request.host
+    DEVELOPMENT = host in ["localhost:5000", "192.241.245.44"]
+    return constants.DOMAIN_DATA[host] if not DEVELOPMENT else constants.DOMAIN_DATA[constants.LEARNPYTHON_DOMAIN]
 
 def get_tutorial_data(tutorial_id):
-    DEVELOPMENT = request.host == "localhost:5000"
-    return tutorial_data[request.host][tutorial_id] if not DEVELOPMENT else tutorial_data["learnpython.org"][tutorial_id]
+    host = request.host[4:] if request.host.startswith("www.") else request.host
+    DEVELOPMENT = host in ["localhost:5000", "192.241.245.44"]
+    return tutorial_data[host][tutorial_id] if not DEVELOPMENT else tutorial_data[constants.LEARNPYTHON_DOMAIN][tutorial_id]
 
 def get_tutorial(tutorial_id):
     tutorial_data = get_tutorial_data(tutorial_id)
@@ -116,7 +119,7 @@ def get_tutorial(tutorial_id):
 #app.add_url_rule('/favicon.ico', redirect_to=url_for('static/img/favicons', filename=get_domain_data()["favicon"]))
 @app.route("/favicon.ico")
 def favicon():
-    return open("static/img/favicons/" + get_domain_data()["favicon"], "rb").read()
+    return open(os.path.join(os.path.dirname(__file__), "static/img/favicons/" + get_domain_data()["favicon"]), "rb").read()
 
 @app.route("/")
 def default_index():

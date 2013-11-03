@@ -1,21 +1,21 @@
 import os
 from flask import request
 
-LEARNPYTHON_DOMAIN = "www.learnpython.org"
-LEARNJAVA_DOMAIN = "www.learnjavaonline.org"
-LEARNC_DOMAIN = "www.learn-c.org"
-LEARNJS_DOMAIN = "www.learn-js.org"
-LEARNRUBY_DOMAIN = "www.learnrubyonline.org"
-LEARNSHELL_DOMAIN = "www.learnshell.org"
-LEARNPHP_DOMAIN = "www.learn-php.org"
-LEARNPERL_DOMAIN = "www.learn-perl.org"
+LEARNPYTHON_DOMAIN = "learnpython.org"
+LEARNJAVA_DOMAIN = "learnjavaonline.org"
+LEARNC_DOMAIN = "learn-c.org"
+LEARNJS_DOMAIN = "learn-js.org"
+LEARNRUBY_DOMAIN = "learnrubyonline.org"
+LEARNSHELL_DOMAIN = "learnshell.org"
+LEARNPHP_DOMAIN = "learn-php.org"
+LEARNPERL_DOMAIN = "learn-perl.org"
 
 DOMAIN_DATA = {
 	LEARNPYTHON_DOMAIN : {
 		"language" : "python",
 		"analytics" : "UA-22741967-1",
         "namespace" : "learnpython.org",
-		"full_url" : "http://www.learnpython.org",
+		"full_url" : "http://learnpython.org",
 		"sender" : "LearnPython.org <admin@learnpython.org>",
 		"styled_domain" : "LearnPython.org",
 		"contact_email" : "admin@learnpython.org",
@@ -37,7 +37,7 @@ print "Hello, World!"
 		"language" : "c",
 		"analytics" : "UA-22741967-3",
         "namespace" : "learn-c.org",
-		"full_url" : "http://www.learn-c.org",
+		"full_url" : "http://learn-c.org",
 		"sender" : "Learn-C.org <admin@learn-c.org>",
 		"styled_domain" : "Learn-C.org",
 		"contact_email" : "admin@learn-c.org",
@@ -64,7 +64,7 @@ int main() {
 		"language" : "java",
 		"analytics" : "UA-22741967-4",
         "namespace" : "learnjavaonline.org",
-		"full_url" : "http://www.learnjavaonline.org",
+		"full_url" : "http://learnjavaonline.org",
 		"sender" : "LearnJavaOnline.org <admin@learnjavaonline.org>",
 		"styled_domain" : "LearnJavaOnline.org",
 		"contact_email" : "admin@learnjavaonline.org",
@@ -95,7 +95,7 @@ public class Main {
 		"language" : "javascript",
 		"analytics" : "UA-22741967-5",
         "namespace" : "learn-js.org",
-		"full_url" : "http://www.learn-js.org",
+		"full_url" : "http://learn-js.org",
 		"sender" : "Learn-JS.org <admin@learn-js.org>",
 		"styled_domain" : "Learn-JS.org",
 		"contact_email" : "admin@learn-js.org",
@@ -117,7 +117,7 @@ console.log("Hello, World!");
 		"language" : "ruby",
 		"analytics" : "UA-22741967-6",
         "namespace" : "learnrubyonline.org",
-		"full_url" : "http://www.learnrubyonline.org",
+		"full_url" : "http://learnrubyonline.org",
 		"sender" : "Learn-JS.org <admin@learnrubyonline.org>",
 		"styled_domain" : "LearnRubyOnline.org",
 		"contact_email" : "admin@learnrubyonline.org",
@@ -139,7 +139,7 @@ puts 'Hello, World!'
 		"language" : "bash",
 		"analytics" : "UA-22741967-7",
         "namespace" : "learnshell.org",
-		"full_url" : "http://www.learnshell.org",
+		"full_url" : "http://learnshell.org",
 		"sender" : "LearnShell.org <admin@learnshell.org>",
 		"styled_domain" : "LearnShell.org",
 		"contact_email" : "admin@learnshell.org",
@@ -163,7 +163,7 @@ echo "Hello, World!";
 		"language" : "php",
 		"analytics" : "UA-22741967-7",
         "namespace" : "learn-php.org",
-		"full_url" : "http://www.learn-php.org",
+		"full_url" : "http://learn-php.org",
 		"sender" : "Learn-PHP.org <admin@learn-php.org>",
 		"styled_domain" : "Learn-PHP.org",
 		"contact_email" : "admin@learn-php.org",
@@ -187,7 +187,7 @@ print('Hello, World!');
 		"language" : "perl",
 		"analytics" : "UA-22741967-8",
         "namespace" : "learn-perl.org",
-		"full_url" : "http://www.learn-perl.org",
+		"full_url" : "http://learn-perl.org",
 		"sender" : "Learn-Perl.org <admin@learn-perl.org>",
 		"styled_domain" : "Learn-Perl.org",
 		"contact_email" : "admin@learn-perl.org",
