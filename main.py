@@ -127,7 +127,11 @@ def default_index():
 
 @app.route("/about")
 def about():
-    return make_response(render_template("about.html"))
+    return make_response(render_template(
+        "about.html",
+        domain_data = get_domain_data(),
+        domain_data_json = json.dumps(get_domain_data()),
+    ))
 
 @app.route("/<title>")
 def index(title):
