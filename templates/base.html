@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="{{ domain_data.styled_domain }} is a free interactive {{ domain_data.language_uppercase }} tutorial for people who want to learn {{ domain_data.language_uppercase }}, fast." />
+    <meta name="keywords" content="Learn,{{ domain_data.language_uppercase }},Tutorial,Interactive,Free" />
+    <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
+
+    <meta property="og:title" content="{% block ogtitle %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{% block ogurl %}{{ domain_data.full_url }}{% endblock %}" />
+    <meta property="og:image" content="{{ domain_data.full_url }}{{ domain_data.logo }}" />
+
+    <link rel="stylesheet" href="/static/css/codemirror.css">
+    <link rel="stylesheet" href="/static/css/theme/monokai.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/learnpython.css"/>
+</head>
+<body>
+
+<div class="navbar navbar-static-top" style="margin-bottom: 10px">
+    <div class="navbar-inner">
+        <div class="container">
+        <a class="brand" href="/" style="padding: 4px 10px"><img src="{{ domain_data.logo }}" style="height: 32px;"/></a>
+        <div class="social" style="margin-top: 10px; display: inline-block">
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style " style="width: 400px; margin-left: 20px">
+                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                    <a class="addthis_button_tweet"></a>
+                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                    <a class="addthis_counter addthis_pill_style"></a>
+                </div>
+
+                <script type="text/javascript">
+                    var addthis_config = {"data_track_clickback":true};
+                    var addthis_share = {"url": "{{ domain_data.full_url }}" };
+                </script>
+                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dafdfe6039782b1"></script>
+                <!-- AddThis Button END -->
+
+                <!--
+                <div style="float: right; padding-left: 10px">
+                    <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="{{ domain_data.full_url }}"></a>
+                </div>
+                -->
+            </div>
+        <ul class="nav pull-right">
+            <li><a href="/">Tutorial</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/Contributing_Tutorials">Contribute</a></li>
+        </ul>
+
+        </div>
+    </div>
+</div>
+
+{% block content %}{% endblock %}
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/codemirror/codemirror.js"></script>
+<script src="/static/js/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="/static/js/codemirror/mode/clike/clike.js"></script>
+<script src="/static/js/codemirror/mode/python/python.js"></script>
+<script src="/static/js/codemirror/mode/javascript/javascript.js"></script>
+<script src="/static/js/codemirror/mode/ruby/ruby.js"></script>
+<script src="/static/js/codemirror/mode/shell/shell.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/bootbox.min.js"></script>
+<script src="http://s.univide.com/t.js?pid=1"></script>
+{% if domain_data.language == "javascript" %}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{{ domain_data.analytics }}', '{{ domain_data.namespace }}');
+  ga('send', 'pageview');
+
+</script>
+{% else %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ domain_data.analytics }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endif %}
+
+{% block head %}{% endblock %}
+
+
+</body>
+</html>

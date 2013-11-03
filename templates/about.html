@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h1>About</h1>
+    <img src="/static/img/code.jpg" style="float: right">
+    <p><b>{{ domain_data.styled_domain }}</b> is a free interactive {{ domain_data.language_uppercase }} tutorial.</p>
+    <p>Our vision is to teach {{ domain_data.language_uppercase }} in the browser using short and effective exercises. By running real {{ domain_data.language_uppercase }} code directly from the web browser, students are able to try out {{ domain_data.language_uppercase }} without installing it. This creates a more efficient learning process, because students focus on the important stuff - learning how to program.</p>
+    <p>This website and its may be used freely and without charge, and it will always be free.</p>
+    <p>For any comments and suggestions, please send your feedback to <a href="mailto:{{ domain_data.support_email }}">{{ domain_data.support_email }}</a>.</p>
+
+</div>
+{% include "small-footer.html" %}
+{% endblock %}

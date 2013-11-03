@@ -1,0 +1,12 @@
+/**
+ * Fix inline blocks, thanks to googars@gmail.com.
+ */
+
+#tabs li {
+  zoom: 1;
+  *display: inline;
+}
+#page .categories {
+  zoom :1;
+  *display: inline;
+}

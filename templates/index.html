@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% block head %}
+    {% autoescape off %}
+    <script>
+        var domainData = {{ domain_data_json }};
+        var nextChapter = "/{{ next_chapter }}";
+        var previousChapter = "/{{ previous_chapter }}";
+        var backChapter = "/{{ back_chapter }}";
+    </script>
+    {% endautoescape %}
+    <script src="/static/js/learnpython.js"></script>
+{% endblock %}
+
+{% block title %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
+{% block ogtitle %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
+{% block ogurl %}{{ domain_data.full_url }}{% if tutorial_page %}/{{ path }}{% endif %}{% endblock %}
+
+{% block content %}
+<div class="container" id="main">
+    <div class="row">
+        <div class="span10">
+            {% if page_title %}
+            <ul class="breadcrumb" style="margin-top: 10px">
+              {% if back_chapter %}
+              <li><a href="/{{ back_chapter }}">{{ back_chapter }}</a> <span class="divider">/</span></li>
+              {% endif %}
+              <li class="active">{{ page_title }}</li>
+            </ul>
+            {% endif %}
+
+            <div>
+                <script type="text/javascript"><!--
+                    google_ad_client = "ca-pub-3723950136133694";
+                    /* Learn Python Bottom */
+                    google_ad_slot = "7782329453";
+                    google_ad_width = 728;
+                    google_ad_height = 90;
+                    //-->
+                </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            </div>
+
+
+            <span id="inner-text">{% autoescape off %}
+                {% if page_title %}
+                <h1>{{ page_title }}</h1>
+                {% endif %}
+                {{ text }}
+            {% endautoescape %}</span>
+            {% if wiki_user %}
+            <small style="color: gray; margin-top: 10px">This page was last edited by {{ wiki_user }}</small>
+            {% endif %}
+            <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if previous_chapter %}
+                <a class="btn btn-primary pull-left" href="/{{ previous_chapter }}">Previous Tutorial</a>
+                {% endif %}
+                {% if next_chapter %}
+                <a class="btn btn-primary pull-right" href="/{{ next_chapter }}">Next Tutorial</a>
+                {% endif %}
+            </div>
+
+            <!--
+            <div>
+                <script type="text/javascript">
+                    google_ad_client = "ca-pub-3723950136133694";
+                    /* Learn Python Top Links */
+                    google_ad_slot = "7304541053";
+                    google_ad_width = 728;
+                    google_ad_height = 15;
+                </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            </div>
+            -->
+
+            {% if domain_data.language == "python" %}
+            <!-- SKILLFEED -->
+            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=python&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
+            <!-- END SKILLFEED -->
+            {% endif %}
+            {% if domain_data.language == "java" %}
+            <!-- SKILLFEED -->
+            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=java%20-javascript&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
+            <!-- END SKILLFEED -->
+            {% endif %}
+            {% if domain_data.language == "c" %}
+            <!-- SKILLFEED -->
+            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=c%20programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
+            <!-- END SKILLFEED -->
+            {% endif %}
+            {% if domain_data.language == "javascript" %}
+            <!-- SKILLFEED -->
+            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=javascript+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
+            <!-- END SKILLFEED -->
+            {% endif %}
+            <div>
+                <script type="text/javascript"><!--
+                    google_ad_client = "ca-pub-3723950136133694";
+                    /* Learn Python Bottom */
+                    // google_ad_slot = "7782329453";
+
+                    /* Learn Python Long Bottom */
+                    google_ad_slot = "7062365450";
+                    google_ad_width = 728;
+                    google_ad_height = 90;
+                    //-->
+                </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            </div>
+        </div>
+        <div class="span2">
+            <div id="google-ad-right">
+                <!--
+                <div style="margin-bottom: 10px">
+                    <a href="http://www.dreamhost.com/r.cgi?1502972"><img alt="DreamHost" src="http://images.dreamhost.com/rewards/300x250-Sunny.png" style="width: 160px; max-width: 160px"/></a>
+                </div>
+                -->
+                {% if domain_data.language != "javascript" %}
+                <div style="margin-bottom: 10px">
+                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'Learn-JS');return false;" href="http://www.learn-js.org">
+                        <img src="/static/learn-js-banner.png" style="width: 160px; max-width: 160px"/>
+                    </a>
+                </div>
+                {% endif %}
+
+                <div style="margin-bottom: 10px">
+                    <script>
+                        google_ad_client = "ca-pub-3723950136133694";
+                        google_ad_slot = "6624688330";
+                        google_ad_width = 160;
+                        google_ad_height = 600;
+                    </script>
+
+                    <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                </div>
+
+                {% if domain_data.language == "python" %}
+                <div style="margin-bottom: 10px">
+                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
+                        <img src="/static/pycharm.png" style="width: 160px; max-width: 160px"/>
+                    </a>
+                </div>
+                {% endif %}
+                <!--
+                <div style="margin-bottom: 10px">
+                    <script>
+                        google_ad_client = "ca-pub-3723950136133694";
+                        google_ad_slot = "6624688330";
+                        google_ad_width = 160;
+                        google_ad_height = 600;
+                    </script>
+
+                    <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                </div>
+                -->
+                {% if domain_data.language == "python" %}
+                <!--
+                <div style="margin-bottom: 10px">
+                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'LearnC');return false;" href="http://www.learn-c.org">
+                        <img src="/static/learn-c-banner.png" style="width: 160px"/>
+                    </a>
+                </div>
+                <div style="margin-bottom: 10px">
+                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'LearnJava');return false;" href="http://www.learnjavaonline.org">
+                        <img src="/static/learnjavaonline-banner.png" style="width: 160px"/>
+                    </a>
+                </div>
+                -->
+                {% endif %}
+                <!--
+                <div style="margin-bottom: 10px">
+                    <IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=160 HEIGHT=600 SRC="http://ad.tblamnetwork.com/st?ad_type=iframe&ad_size=160x600&section=4633617&pub_url=${PUB_URL}"></IFRAME>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+
+    <div class="row">
+
+	<div class="span6">
+        <h5 style="line-height: 28px">
+            Code Window
+            <span style="float: right;">
+                <a class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>Run</a>
+                <a onclick="reset()" class="btn btn-primary">Reset</a>
+            </span>
+        </h5>
+
+
+<textarea id="code" style="width: 100%; height: 210px">{{ code }}</textarea>
+
+    </div>
+
+	<div class="span6">
+		<div style="width: 100%; height: 100%">
+            <h5 style="line-height: 28px">
+                Output Window
+                <span style="float: right">
+                    <a class="btn btn-primary" onclick="showExpected()">Expected Output</a>
+                </span>
+            </h5>
+            <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
+            <textarea id="output" style="width: 475px; height: 210px"></textarea>
+            <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
+                Code execution service by <a target="_blank" href="http://ideone.com">ideone.com</a>
+            </div>
+		</div>
+	</div>
+
+
+    </div> <!-- row -->
+
+    </div> <!-- container -->
+
+    <div class="row">
+        <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
+    </div>
+
+	<div id="about" style="display: none">
+
+	</div>
+	</div>
+</footer>
+<div id="expected-output" style="display: none">{{ output }}</div>
+{% endblock %}

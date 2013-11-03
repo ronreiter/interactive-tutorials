@@ -1,0 +1,215 @@
+.container {
+	width: 960px;
+}
+
+.CodeMirror {
+	font-family: monospace;
+	height: 200px;
+}
+
+header {
+    background: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+    height: 110px;
+}
+
+h1.logo {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 45px;
+  margin: 0;
+  text-decoration: none;
+  line-height: 80px;
+}
+
+pre {
+  font-family: Courier New, monospaced;
+}
+
+.grey {
+  font-size: 2em;
+  padding: .5em 1em;
+  line-height: 1.2em;
+  margin-top: .5em;
+  position: relative;
+}
+
+img.logo {
+  position: absolute;
+  right: -25px;
+  bottom: 4px;
+}
+
+.quasilink {
+  color: #df0019;
+  cursor: pointer;
+}
+
+.quasilink:hover {
+  color: #800004;
+}
+
+h1 a:link, h1 a:visited, h1 a:hover {
+  color: black;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.rel {
+  margin-bottom: 0;
+}
+
+.rel-note {
+  color: #777;
+  font-size: .9em;
+  margin-top: .1em;
+}
+
+.logo-braces {
+  color: #df0019;
+  position: relative;
+  top: -4px;
+}
+
+.blk {
+  float: left;
+}
+
+.left {
+  width: 37em;
+  padding-right: 6.53em;
+  padding-bottom: 1em;
+}
+
+.left1 {
+  width: 15.24em;
+  padding-right: 6.45em;
+}
+
+.left2 {
+  width: 15.24em;
+}
+
+.right {
+  width: 20.68em;
+}
+
+.leftbig {
+  width: 42.44em;
+  padding-right: 6.53em;
+}
+
+.rightsmall {
+  width: 15.24em;
+}
+
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clear { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clear { height: 1%; }
+.clear { display: block; }
+/* close commented backslash hack */
+
+.copyright {
+  font-size: 1em;
+  color: gray;
+  text-align: center;
+  margin: 5px 0;
+
+}
+
+#side {
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: auto;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f8f8f8;
+    border-top: 1px solid #ccc;
+}
+
+.sidebar {
+    width: 160px;
+    float: right;
+    padding-left: 5px;
+}
+
+.sidebar h3 {
+    border-bottom: 1px solid #ddd;
+}
+
+.post-job {
+    text-align: center;
+    background: #58c;
+    border: 1px solid #36a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.post-job:hover {
+    background: #69d;
+}
+
+.post-job h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.post-job p {
+    margin: 0;
+    font-size: 10px;
+
+}
+
+.icon-briefcase {
+    padding-right: 5px;
+}
+
+.small-link {
+    color: #58c !important;
+    font-size: 11px;
+}
+
+textarea {
+    cursor: default;
+}
+
+#main {
+    margin-bottom: 300px;
+}
+
+.breadcrumb .active {
+    font-weight: bold;
+    color: black;
+}
+
+.title {
+    margin: 20px 0;
+}
+
+.company-logo {
+    max-width: 100%;
+    max-height:100px;
+}
+
+.recaptchatable * {
+    border: 0 !important;
+    line-height: normal !important;
+}
