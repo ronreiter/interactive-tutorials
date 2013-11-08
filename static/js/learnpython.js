@@ -250,6 +250,24 @@ function load() {
 				theme: "monokai"
 			});
 			break;
+		case "perl":
+			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				lineNumbers: true,
+				matchBrackets: true,
+				mode: "text/x-perl",
+				theme: "monokai"
+			});
+			break;
+
+		case "php":
+			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				lineNumbers: true,
+				matchBrackets: true,
+				mode: "text/x-php",
+				theme: "monokai"
+			});
+			break;
+
 
 
 
