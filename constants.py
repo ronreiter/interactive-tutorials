@@ -201,7 +201,7 @@ print('Hello, World!');
 		"default_code" : """# Welcome to the Interactive Perl Tutorial.
 # Start by choosing a chapter and write your code in this window.
 
-echo 'Hello, World!';
+print 'Hello, World!';
 """},
 
 }
