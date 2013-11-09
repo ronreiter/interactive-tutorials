@@ -1,6 +1,3 @@
-import os
-from flask import request
-
 LEARNPYTHON_DOMAIN = "learnpython.org"
 LEARNJAVA_DOMAIN = "learnjavaonline.org"
 LEARNC_DOMAIN = "learn-c.org"

@@ -5,8 +5,8 @@ var canvasWidth;
 var canvasHeight;
 var paper;
 var canvasInitNeeded = true;
+var loading;
 
-// xdr.js?
 (function( jQuery ) {
 
 if ( window.XDomainRequest ) {
@@ -105,6 +105,7 @@ function eval_console(code) {
 function execute() {
 	//$('#output').css('color', '#bbbbbb');
 	//$('#output').css('background-color', '#eeeeee');
+	loading.show();
 	output.setValue("Executing... Please wait.");
 	//$('#output').text('');
 
@@ -114,25 +115,6 @@ function execute() {
 		} catch(err) {
 			print(err.message);
 		}
-		/*
-	} else if (window.domainData.language == "c" || window.domainData.language == "java") {
-		$.ajax({
-			url: "http://jail-242231381.us-east-1.elb.amazonaws.com",
-			type : "post",
-			data : JSON.stringify({
-				"code" : editor.getValue(),
-				"language" : window.domainData.language
-			}),
-			processData: false,
-			crossDomain: true,
-			beforeSend: function(xhr) {
-				 xhr.setRequestHeader('content-type', 'application/json');
-			},
-			success : execDone,
-			error : handleError,
-			dataType: "json"
-		});
-		*/
 	} else {
 		$.ajax({
 			url: "http://4.learnpythonjail.appspot.com",
@@ -150,6 +132,7 @@ function execute() {
 }
 
 function execDone(data) {
+	loading.hide();
 	//$('#output').css('background-color', 'white');
 	if (data["output"] == "exception") {
 		//$('#output').css('color', 'red');
@@ -197,6 +180,7 @@ function print(text) {
 }
 
 function load() {
+	loading = $("#loading");
 	switch (window.domainData.language) {
 		case "python":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -267,10 +251,6 @@ function load() {
 				theme: "monokai"
 			});
 			break;
-
-
-
-
 	}
 
 	output = CodeMirror.fromTextArea(document.getElementById("output"), {

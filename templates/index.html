@@ -216,8 +216,9 @@
             </h5>
             <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
             <textarea id="output" style="width: 475px; height: 210px"></textarea>
+            <div id="loading" style="display:none; opacity: 0.5; margin-top: -200px; position: relative; z-index: 10; width: 100%; height: 200px; background: url(/static/img/se-logo-anim.gif)"></div>
             <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
-                Code execution service by <a target="_blank" href="http://ideone.com">ideone.com</a>
+                Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine</a>
             </div>
 		</div>
 	</div>
@@ -236,5 +237,6 @@
 	</div>
 	</div>
 </footer>
+
 <div id="expected-output" style="display: none">{{ output }}</div>
 {% endblock %}

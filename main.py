@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
+DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
 
 tutorial_data = {}
 
@@ -94,16 +95,17 @@ def init_tutorials():
 
 init_tutorials()
 
+def get_host():
+    return request.host[4:] if request.host.startswith("www.") else request.host
+
+def is_development_mode():
+    return get_host() in ["localhost:5000", "192.241.245.44"]
 
 def get_domain_data():
-    host = request.host[4:] if request.host.startswith("www.") else request.host
-    DEVELOPMENT = host in ["localhost:5000", "192.241.245.44"]
-    return constants.DOMAIN_DATA[host] if not DEVELOPMENT else constants.DOMAIN_DATA[constants.LEARNPYTHON_DOMAIN]
+    return constants.DOMAIN_DATA[get_host()] if not is_development_mode() else constants.DOMAIN_DATA[DEFAULT_DOMAIN]
 
 def get_tutorial_data(tutorial_id):
-    host = request.host[4:] if request.host.startswith("www.") else request.host
-    DEVELOPMENT = host in ["localhost:5000", "192.241.245.44"]
-    return tutorial_data[host][tutorial_id] if not DEVELOPMENT else tutorial_data[constants.LEARNPYTHON_DOMAIN][tutorial_id]
+    return tutorial_data[get_host()][tutorial_id] if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN][tutorial_id]
 
 def get_tutorial(tutorial_id):
     tutorial_data = get_tutorial_data(tutorial_id)
@@ -126,9 +128,11 @@ def default_index():
     return index("Welcome")
 
 @app.route("/about")
-def about():
+@app.route("/privacy")
+@app.route("/tos")
+def static_file():
     return make_response(render_template(
-        "about.html",
+        request.path.strip("/") + ".html",
         domain_data = get_domain_data(),
         domain_data_json = json.dumps(get_domain_data()),
     ))
