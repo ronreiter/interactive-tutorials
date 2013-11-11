@@ -27,7 +27,7 @@ The `break` directive halts a loop after ten loops, even though the while loop n
     int n = 0;
     while (1) {
         n++;
-        if (n = 10) {
+        if (n == 10) {
             break;
         }
     }
