@@ -148,5 +148,9 @@ def index(title):
         **tutorial_data
     ))
 
+@app.route("/robots.txt")
+def robots():
+    return make_response("User-agent: *\nAllow: /")
+
 if __name__ == "__main__":
     app.run(debug=True)
