@@ -113,9 +113,6 @@
                 </script>
                 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
-            <div>
-                <a href="http://www.dmca.com/Protection/Status.aspx?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c" title="DMCA"> <img src ="http://images.dmca.com/Badges/dmca_protected_sml_120ad.png?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c"  alt="DMCA.com" /></a>
-            </div>
         </div>
         <div class="span2">
             <div id="google-ad-right">
@@ -124,14 +121,6 @@
                     <a href="http://www.dreamhost.com/r.cgi?1502972"><img alt="DreamHost" src="http://images.dreamhost.com/rewards/300x250-Sunny.png" style="width: 160px; max-width: 160px"/></a>
                 </div>
                 -->
-                {% if domain_data.language != "javascript" %}
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'Learn-JS');return false;" href="http://www.learn-js.org">
-                        <img src="/static/learn-js-banner.png" style="width: 160px; max-width: 160px"/>
-                    </a>
-                </div>
-                {% endif %}
-
                 <div style="margin-bottom: 10px">
                     <script>
                         google_ad_client = "ca-pub-3723950136133694";
@@ -144,6 +133,14 @@
                     </script>
                 </div>
 
+                {% if domain_data.language != "javascript" %}
+                <div style="margin-bottom: 10px">
+                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'Learn-JS');return false;" href="http://www.learn-js.org">
+                        <img src="/static/learn-js-banner.png" style="width: 160px; max-width: 160px"/>
+                    </a>
+                </div>
+                {% endif %}
+
                 {% if domain_data.language == "python" %}
                 <div style="margin-bottom: 10px">
                     <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
@@ -151,6 +148,10 @@
                     </a>
                 </div>
                 {% endif %}
+                <div>
+                    <a href="https://digitalocean.com/"><img src="https://digitalocean.com/assets/v2/badges/digitalocean-badge-blue.png"></a>
+                </div>
+
                 <!--
                 <div style="margin-bottom: 10px">
                     <script>
@@ -230,11 +231,19 @@
 
     </div> <!-- container -->
 
-    <div class="row">
-        <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
-    </div>
+    <div class="container">
 
-	<div id="about" style="display: none">
+        <div class="row">
+            <div class="span12">
+                <div class="pull-right" style="padding-top: 3px">
+                    <a href="http://www.dmca.com/Protection/Status.aspx?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c" title="DMCA"> <img src ="http://images.dmca.com/Badges/dmca_protected_sml_120ad.png?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c"  alt="DMCA.com" /></a>
+                </div>
+
+                <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
+            </div>
+        </div>
+
+    </div>
 
 	</div>
 	</div>
