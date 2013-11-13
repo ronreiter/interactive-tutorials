@@ -48,14 +48,14 @@ Table of Contents
 - [[Spanish]]
 - [[Polski]]
 
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]
-
 ### Other Python Tutorials
 
 - Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
 - [Python Facts](http://facts.learnpython.org)
+
+### Contributing Tutorials
+
+Read more here: [[Contributing Tutorials]]
 
 ### Other Programming Languages
 

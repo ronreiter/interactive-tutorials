@@ -6,6 +6,7 @@ LEARNRUBY_DOMAIN = "learnrubyonline.org"
 LEARNSHELL_DOMAIN = "learnshell.org"
 LEARNPHP_DOMAIN = "learn-php.org"
 LEARNPERL_DOMAIN = "learn-perl.org"
+LEARNCS_DOMAIN = "learncs.org"
 
 DOMAIN_DATA = {
 	LEARNPYTHON_DOMAIN : {
@@ -17,8 +18,7 @@ DOMAIN_DATA = {
 		"styled_domain" : "LearnPython.org",
 		"contact_email" : "admin@learnpython.org",
 		"support_email" : "support@learnpython.org",
-		"logo" : "/static/img/learnpython.png",
-		"jobs_logo" : "/static/img/learnpython-jobs.png",
+		"logo" : "/static/img/logos/learnpython.png",
 		"language_uppercase" : "Python",
 		"twitter" : "@learnpython",
         "favicon" : "favicon-learnpython.ico",
@@ -39,8 +39,7 @@ print "Hello, World!"
 		"styled_domain" : "Learn-C.org",
 		"contact_email" : "admin@learn-c.org",
 		"support_email" : "support@learn-c.org",
-		"logo" : "/static/img/learn-c.png",
-		"jobs_logo" : "/static/img/learn-c-jobs.png",
+		"logo" : "/static/img/logos/learn-c.png",
 		"language_uppercase" : "C",
 		"twitter" : "@learnc",
         "favicon" : "favicon-learn-c.ico",
@@ -66,8 +65,7 @@ int main() {
 		"styled_domain" : "LearnJavaOnline.org",
 		"contact_email" : "admin@learnjavaonline.org",
 		"support_email" : "support@learnjavaonline.org",
-		"logo" : "/static/img/learnjavaonline.png",
-		"jobs_logo" : "/static/img/learnjavaonline-jobs.png",
+		"logo" : "/static/img/logos/learnjavaonline.png",
 		"language_uppercase" : "Java",
 		"twitter" : "@learnjava",
         "favicon" : "favicon-learnjava.ico",
@@ -97,8 +95,7 @@ public class Main {
 		"styled_domain" : "Learn-JS.org",
 		"contact_email" : "admin@learn-js.org",
 		"support_email" : "support@learn-js.org",
-		"logo" : "/static/img/learn-js.png",
-		"jobs_logo" : "/static/img/learn-js-jobs.png",
+		"logo" : "/static/img/logos/learn-js.png",
 		"language_uppercase" : "JavaScript",
 		"twitter" : "@learnjs",
         "favicon" : "favicon-learn-js.ico",
@@ -119,8 +116,7 @@ console.log("Hello, World!");
 		"styled_domain" : "LearnRubyOnline.org",
 		"contact_email" : "admin@learnrubyonline.org",
 		"support_email" : "support@learnrubyonline.org",
-		"logo" : "/static/img/learnrubyonline.png",
-		"jobs_logo" : "/static/img/learnrubyonline-jobs.png",
+		"logo" : "/static/img/logos/learnrubyonline.png",
 		"language_uppercase" : "Ruby",
 		"twitter" : "@learnruby",
         "favicon" : "favicon-ruby.ico",
@@ -141,8 +137,7 @@ puts 'Hello, World!'
 		"styled_domain" : "LearnShell.org",
 		"contact_email" : "admin@learnshell.org",
 		"support_email" : "support@learnshell.org",
-		"logo" : "/static/img/learnshell.png",
-		"jobs_logo" : "/static/img/learnshell-jobs.png",
+		"logo" : "/static/img/logos/learnshell.png",
 		"language_uppercase" : "Shell Programming",
 		"twitter" : "@learnshell",
         "favicon" : "favicon-shell.ico",
@@ -165,8 +160,7 @@ echo "Hello, World!";
 		"styled_domain" : "Learn-PHP.org",
 		"contact_email" : "admin@learn-php.org",
 		"support_email" : "support@learn-php.org",
-		"logo" : "/static/img/learn-php.png",
-		"jobs_logo" : "/static/img/learn-php-jobs.png",
+		"logo" : "/static/img/logos/learn-php.png",
 		"language_uppercase" : "PHP",
 		"twitter" : "@learnphp",
         "favicon" : "favicon-learn-php.ico",
@@ -189,8 +183,7 @@ print('Hello, World!');
 		"styled_domain" : "Learn-Perl.org",
 		"contact_email" : "admin@learn-perl.org",
 		"support_email" : "support@learn-perl.org",
-		"logo" : "/static/img/learn-perl.png",
-		"jobs_logo" : "/static/img/learn-perl-jobs.png",
+		"logo" : "/static/img/logos/learn-perl.png",
 		"language_uppercase" : "Perl",
 		"twitter" : "@learnperl",
         "favicon" : "favicon-learn-perl.ico",
@@ -201,4 +194,32 @@ print('Hello, World!');
 print 'Hello, World!';
 """},
 
+
+    LEARNCS_DOMAIN : {
+		"language" : "c#",
+		"analytics" : "UA-22741967-9",
+        "namespace" : "learncs.org",
+		"full_url" : "http://learncs.org",
+		"sender" : "LearnCS.org <admin@learncs.org>",
+		"styled_domain" : "LearnCS.org",
+		"contact_email" : "admin@learncs.org",
+		"support_email" : "support@learncs.org",
+		"logo" : "/static/img/logos/learncs.png",
+		"language_uppercase" : "C#",
+		"twitter" : "@learncs",
+        "favicon" : "favicon-learncs.ico",
+		"copyright" : "Copyright &copy; LearnCS.org.",
+		"default_code" : """// Welcome to the Interactive C# Tutorial.
+// Start by choosing a chapter and write your code in this window.
+
+using System;
+
+public class Hello1
+{
+   public static void Main()
+   {
+      Console.WriteLine("Hello, World!");
+   }
+}
+"""},
 }

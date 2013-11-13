@@ -6,6 +6,15 @@ import markdown
 import os
 import cgi
 import urllib
+import redis
+import hashlib
+from ideone import Ideone
+import time
+
+IDEONE_USERNAME = "ronreiter"
+IDEONE_PASSWORD = "runmycode"
+i = Ideone(IDEONE_USERNAME, IDEONE_PASSWORD)
+r = redis.Redis(host="direct.learnpython.org")
 
 app = Flask(__name__)
 
@@ -14,6 +23,32 @@ WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
 
 tutorial_data = {}
+
+def run_code(code, language):
+    code = i.create_submission(code, language_name=language, std_input="1 2 3")["link"]
+    result = None
+
+    while True:
+        time.sleep(1)
+        result = i.submission_details(code)
+        if result["status"] in [1,3]:
+            continue
+
+        break
+
+    data = { "code" : code }
+    if result["stderr"] or result["cmpinfo"]:
+        data["output"] = "exception"
+        if result["cmpinfo"]:
+            data["text"] = result["cmpinfo"]
+        elif result["stderr"]:
+            data["text"] = result["stderr"]
+    else:
+        data["output"] = "text"
+        data["text"] = result["output"]
+
+    return data
+
 
 def pageurl(value):
     if type(value) == unicode:
@@ -152,5 +187,23 @@ def index(title):
 def robots():
     return make_response("User-agent: *\nAllow: /")
 
+@app.route("/execute", methods=["POST"])
+def execute():
+    request_hash = "%s_%s" % (hashlib.md5(request.json["code"]).hexdigest(), request.json["language"])
+
+    cached_request = r.get(request_hash)
+
+    if cached_request is not None:
+        data = json.loads(cached_request)
+    else:
+        data = run_code(request.json["code"], request.json["language"])
+
+        # ha, guess why this check is done :)
+        if data["output"] and "import random" not in data["output"]:
+            r.set(request_hash, json.dumps(data))
+
+    return make_response(json.dumps(data))
+
 if __name__ == "__main__":
     app.run(debug=True)
+

@@ -1,10 +1,6 @@
 var editor;
 var output;
 var originalCode;
-var canvasWidth;
-var canvasHeight;
-var paper;
-var canvasInitNeeded = true;
 var loading;
 
 (function( jQuery ) {
@@ -57,36 +53,6 @@ function recordOutboundLink(link, category, action) {
 	setTimeout('document.location = "' + link.href + '"', 100);
 }
 
-function initCanvas(container, width, height) {
-	canvasWidth = width;
-	canvasHeight = height;
-	paper = Raphael(container, canvasWidth, canvasHeight);
-
-}
-
-function drawTurtle(data) {
-	var moves = data["moves"];
-	var angle = data["angle"];
-
-	var middle_x = canvasWidth / 2;
-	var middle_y = canvasHeight / 2;
-
-	paper.clear();
-
-	paper.circle(middle_x, middle_y, 5).attr({"fill": "green", "stroke": "green"});
-	var x = middle_x;
-	var y = middle_y;
-	path = "M " + middle_x + " " + middle_y;
-	for (var move in moves) {
-		x = x + moves[move][0];
-		y = y + moves[move][1];
-		path = path + "L " + x + " " + y;
-	}
-	paper.path(path).attr({"stroke-width": "3px","stroke": "green"});
-	turtle = paper.image("/static/turtle.png", x-16, y-16, 32, 32);
-	turtle.rotate(angle);
-}
-
 function reset() {
 	editor.setValue(originalCode);
 }
@@ -117,12 +83,13 @@ function execute() {
 		}
 	} else {
 		$.ajax({
-			url: "http://4.learnpythonjail.appspot.com",
+			url: "/execute",
 			type : "post",
 			data : JSON.stringify({
 				"code" : editor.getValue(),
 				"language" : window.domainData.language
 			}),
+			contentType : "application/json",
 			success : execDone,
 			error : handleError,
 			dataType: "json"
@@ -143,18 +110,6 @@ function execDone(data) {
 		//$("#output").show();
 		//$("#canvas_container").hide();
 		print(data["text"]);
-	}
-
-	if (data["output"] == "turtle") {
-		//$("#canvas_container").show();
-		//$("#output").hide();
-
-		if (canvasInitNeeded) {
-			initCanvas("canvas_container", $("#canvas_container").width(), $("#canvas_container").height());
-			canvasInitNeeded = false;
-		}
-
-		drawTurtle(data);
 	}
 }
 
@@ -248,6 +203,15 @@ function load() {
 				lineNumbers: true,
 				matchBrackets: true,
 				mode: "application/x-httpd-php",
+				theme: "monokai"
+			});
+			break;
+
+		case "c#":
+			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				lineNumbers: true,
+				matchBrackets: true,
+				mode: "text/x-csharp",
 				theme: "monokai"
 			});
 			break;

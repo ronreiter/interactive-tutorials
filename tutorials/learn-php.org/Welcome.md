@@ -6,7 +6,7 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 There is no need to download anything - Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-learn-php.org is still under construction - If you wish to contribute tutorials, please contact support@learn-php.org.
+learn-php.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
 
 Table of Contents
 -----------------

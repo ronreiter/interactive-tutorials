@@ -33,6 +33,10 @@ Table of Contents - Shell Programming
 - [[Regular Expressions]]
 - [[Special Commands  sed,awk,grep,sort]]
 
+### Contributing Tutorials
+
+Read more here: [[Contributing Tutorials]]
+
 ### Other Programming Languages
 
 - [Learn Python - Free Interactive Python Tutorial](http://learnpython.org)

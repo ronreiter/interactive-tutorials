@@ -97,6 +97,11 @@
             {% if domain_data.language == "ruby" %}
             <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=ruby+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
             {% endif %}
+            <!--
+            {% if domain_data.language == "c#" %}
+            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=c%23+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
+            {% endif %}
+            -->
             <!-- END SKILLFEED -->
 
             <div>
@@ -136,7 +141,7 @@
                 {% if domain_data.language != "javascript" %}
                 <div style="margin-bottom: 10px">
                     <a onClick="recordOutboundLink(this, 'Outbound Links', 'Learn-JS');return false;" href="http://www.learn-js.org">
-                        <img src="/static/learn-js-banner.png" style="width: 160px; max-width: 160px"/>
+                        <img src="/static/img/banners/learn-js-banner.png" style="width: 160px; max-width: 160px"/>
                     </a>
                 </div>
                 {% endif %}
@@ -144,7 +149,7 @@
                 {% if domain_data.language == "python" %}
                 <div style="margin-bottom: 10px">
                     <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
-                        <img src="/static/pycharm.png" style="width: 160px; max-width: 160px"/>
+                        <img src="/static/img/banners/pycharm.png" style="width: 160px; max-width: 160px"/>
                     </a>
                 </div>
                 {% endif %}

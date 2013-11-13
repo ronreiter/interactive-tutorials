@@ -6,7 +6,7 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 There is no need to download anything - Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-learn-c.org is still under construction - If you wish to contribute tutorials, please contact support@learn-c.org.
+learn-c.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
 
 Table of Contents
 -----------------
@@ -35,6 +35,10 @@ Table of Contents
 
 ### Other languages:
 - [[Polski]]
+
+### Contributing Tutorials
+
+Read more here: [[Contributing Tutorials]]
 
 ### Other Programming Languages
 

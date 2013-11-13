@@ -6,7 +6,7 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 There is no need to download anything - Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-learn-perl.org is still under construction - If you wish to contribute tutorials, please contact support@learn-perl.org.
+learn-perl.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
 
 Table of Contents
 -----------------
@@ -21,3 +21,6 @@ Table of Contents
 - [[While loops]]
 - [[Functions]]
 
+### Contributing Tutorials
+
+Read more here: [[Contributing Tutorials]]

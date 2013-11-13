@@ -32,6 +32,10 @@ Table of Contents
 - [[Generic Types]]
 - [[IO Streams]]
 
+### Contributing Tutorials
+
+Read more here: [[Contributing Tutorials]]
+
 ### Other Programming Languages
 
 - [Learn JavaScript - Free Interactive JavaScript Tutorial](http://learn-js.org)
