@@ -84,7 +84,7 @@ Every comparison operator in java will return the type `boolean` that not like o
     
 ### Exercise
 
-Create all the the primitives with different values. Concat them into a string and print it to the screen so it will print:
+Create all the the primitives with different values. Concatenate them into a string and print it to the screen so it will print:
 H3110 w0r1d 2.0 true
 
 Tutorial Code
@@ -101,4 +101,4 @@ public class Main {
 Expected Output
 ---------------
 
-	H31110 w0r1d 2.0 true
+	H3110 w0r1d 2.0 true
