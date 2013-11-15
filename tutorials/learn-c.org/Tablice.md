@@ -1,8 +1,6 @@
-Tablice
-=======
-
 Tutorial
 --------
+
 Tablice to bardzo sympatyczne narzędzie. Mianowicie tablicy możemy przechowywać wiele wartości jednego typu. Aby zadeklarować tablicę musisz podać typ danych jakie ma przechowywać, jej nazwę oraz rozmiar podany w nawiasach kwadratowych.
 	
 	double Tablica[10]; /*oto tablica 10 zmiennych*/

@@ -1,6 +1,3 @@
-Objects
--------
-
 Tutorial
 --------
 

@@ -1,6 +1,3 @@
-Functions
----------
-
 Tutorial
 --------
 

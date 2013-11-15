@@ -51,11 +51,10 @@ def run_code(code, language):
 
 
 def pageurl(value):
-    if type(value) == unicode:
-        value = value.encode('utf-8')
-    elif type(value) != str:
-        value = str(value)
-    return '/' + urllib.quote(value.replace(' ', '_'))
+    if value.startswith("http"):
+        return value
+    else:
+        return urllib.quote("/%s" % value.replace(' ', '_'))
 
 def _wikify_one(pat):
     """
@@ -68,12 +67,13 @@ def _wikify_one(pat):
         page_name = page_title
 
     # interwiki
-    if ':' in page_name:
+    if ':' in page_name and not page_name.startswith("http"):
         parts = page_name.split(':', 2)
         if page_name == page_title:
             page_title = parts[1]
 
-    return '<a class="int" href="%s">%s</a>' % (pageurl(page_name), page_title)
+    link = "<a href='%s'>%s</a>" % (pageurl(page_name), page_title)
+    return link
 
 
 def wikify(text):

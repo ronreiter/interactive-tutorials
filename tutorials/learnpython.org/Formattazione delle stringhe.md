@@ -1,6 +1,3 @@
-# Formattazione delle stringhe
------------------
-
 Tutorial
 --------
 

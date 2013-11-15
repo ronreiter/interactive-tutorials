@@ -1,5 +1,3 @@
-Decorators
-----------
 Tutorial
 --------
 

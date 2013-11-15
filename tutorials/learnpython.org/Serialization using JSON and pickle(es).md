@@ -1,7 +1,6 @@
-# Serialization using JSON and pickle(es)
-
-Tutoriales
+Tutorial
 --------
+
 Python provee librerias nativas a JSON para codificar y decodificar a JSON.
 
 En Python 2.5, el modulo simplejson es usado, mientras que en Python 2.7, el modulo json es usado. Ya que este interprete usa Python 2.5, usaremos simplejson.
@@ -23,13 +22,15 @@ La puedes usar exactamente de la misma manera.
 
 En este ejercicio, deberás codigificar las variables de "salarios" a JSON, y mostrar el resultado.
 
-Código del tutorial
+Tutorial Code
 -------------
+
 salarios = {
     "Alfredo" : 300,
     "Jane" : 301,
 }
 
-Salida esperada
+Expected Output
 ---------------
+
 {"Jane": 301, "Alfredo": 300}

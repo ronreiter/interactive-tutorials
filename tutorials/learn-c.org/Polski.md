@@ -1,6 +1,3 @@
-Polski
-------
-
 Tutorial
 --------
 

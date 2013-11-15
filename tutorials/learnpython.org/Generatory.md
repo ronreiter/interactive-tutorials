@@ -1,6 +1,3 @@
-Generatory
-----------
-
 Tutorial
 --------
 

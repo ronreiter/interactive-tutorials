@@ -1,8 +1,6 @@
-Basic String Operations
------------------------
-
 Tutorial
 --------
+
 The shell allows some common string operations which can be very useful for script writing.
 
 ### String Length

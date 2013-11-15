@@ -1,5 +1,3 @@
-#Functions(es)
-
 Tutorial
 --------
 ###Que son las funciones?

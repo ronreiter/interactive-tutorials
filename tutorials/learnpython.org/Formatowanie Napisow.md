@@ -1,6 +1,3 @@
-Formatowanie Napisów
--------------------
-
 Tutorial
 --------
 

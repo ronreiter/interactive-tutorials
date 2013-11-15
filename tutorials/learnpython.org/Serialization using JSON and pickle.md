@@ -1,7 +1,6 @@
-# Serialization using JSON and pickle
-
 Tutorial
 --------
+
 Python provides built-in JSON libraries to encode and decode JSON.
 
 In Python 2.5, the simplejson module is used, whereas in Python 2.7, the json module is used. Since this interpreter uses Python 2.7, we'll be using json.

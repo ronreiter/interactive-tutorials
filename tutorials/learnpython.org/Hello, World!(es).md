@@ -1,6 +1,3 @@
-Hello, World!(es)   
--------------
-
 Tutorial
 --------
 

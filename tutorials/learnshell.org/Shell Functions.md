@@ -1,8 +1,6 @@
-Shell Functions
----------------
-
 Tutorial
 --------
+
 Like other programming languages, the shell may have functions. A function is a subroutine that implements a set of commands and operations. It is useful for repated tasks.
 
 	# basic construct

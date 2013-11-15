@@ -1,6 +1,3 @@
-Pointers
---------
-
 Tutorial
 --------
 

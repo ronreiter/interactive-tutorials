@@ -1,7 +1,6 @@
-# Regular Expressions(es)
-
-Tutoriales
+Tutorial
 --------
+
 Expresiones regulares (sometimes shortened to regexp, regex, or re) are a
 tool for matching patterns in text. In Python, we have the re module.
 The applications for regular expressions are wide-spread, but they are
@@ -32,8 +31,9 @@ docs](http://docs.python.org/library/re.html#regular-expression-syntax
 As an example of a "proper" email-matching regex (like the one in the
 exercise), see [this](http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html)
 
-Código de ejemplo
+Tutorial Code
 -------------
+
 	# Example
 	import re
 	pattern = re.compile(r"\[(on|off)\]") # Slight optimization
@@ -57,7 +57,7 @@ Código de ejemplo
 	pattern = r"" # Your pattern here!
 	test_email(pattern)
 
-Salida esperada
+Expected Output
 ---------------
 	Pass
 	Pass

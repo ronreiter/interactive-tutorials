@@ -1,6 +1,3 @@
-Code Introspection
-------------------
-
 Tutorial
 --------
 

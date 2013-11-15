@@ -1,5 +1,3 @@
-Classes and Objects
------------------
 Tutorial
 -----------------
 

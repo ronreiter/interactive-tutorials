@@ -1,6 +1,3 @@
-While loops
------------
-
 Tutorial
 --------
 

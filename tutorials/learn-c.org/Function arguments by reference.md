@@ -1,6 +1,3 @@
-Function arguments by reference
--------------------------------
-
 Tutorial
 --------
 

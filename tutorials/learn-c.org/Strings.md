@@ -1,6 +1,3 @@
-Strings
--------
-
 Tutorial
 --------
 

@@ -1,5 +1,3 @@
-# Exception Handling
-
 Tutorial
 --------
 When programming, errors happen. It's just a fact of life.

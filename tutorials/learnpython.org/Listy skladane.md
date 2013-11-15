@@ -1,6 +1,3 @@
-Listy składane
---------------
-
 Tutorial
 --------
 

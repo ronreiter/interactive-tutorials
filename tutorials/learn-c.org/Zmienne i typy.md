@@ -1,6 +1,3 @@
-Zmienne i typy
---------------
-
 Tutorial
 --------
 

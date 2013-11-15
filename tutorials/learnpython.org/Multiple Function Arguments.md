@@ -1,6 +1,3 @@
-Multiple Function Arguments
----------------------------
-
 Tutorial
 --------
 

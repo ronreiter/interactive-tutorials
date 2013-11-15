@@ -1,6 +1,3 @@
-Basic Operators
----------------
-
 Tutorial
 --------
 Arithmetic Operators

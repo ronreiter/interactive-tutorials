@@ -1,6 +1,3 @@
-Clases y objetos
------------------
-
 Tutorial
 --------
 

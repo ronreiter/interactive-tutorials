@@ -1,6 +1,3 @@
-Operadores Básicos
----------------  
-
 Tutorial
 --------
 

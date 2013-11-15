@@ -1,8 +1,6 @@
-Loops
------
-
 Tutorial
 --------
+
 ### bash for loop
 
 	# basic construct

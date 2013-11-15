@@ -1,6 +1,3 @@
-Variables and Types
--------------------
-
 Tutorial
 --------
 

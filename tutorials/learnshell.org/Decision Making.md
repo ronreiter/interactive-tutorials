@@ -1,8 +1,6 @@
-Decision Making
----------------
-
 Tutorial
 --------
+
 As in popular programming languages, the shell also supports logical decision making.
 
 The basic conditional decision making construct is:

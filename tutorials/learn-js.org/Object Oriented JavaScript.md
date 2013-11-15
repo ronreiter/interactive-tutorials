@@ -1,5 +1,3 @@
-# Object Oriented JavaScript
-
 Tutorial
 --------
 

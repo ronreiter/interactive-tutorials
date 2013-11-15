@@ -1,6 +1,3 @@
-#Funzioni con Argomenti Multipli
----------------------------
-
 Tutorial
 --------
 

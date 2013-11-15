@@ -1,5 +1,3 @@
-# Inheritance
-
 Tutorial
 --------
 

@@ -1,6 +1,3 @@
-List Comprehensions
--------------------
-
 Tutorial
 --------
 

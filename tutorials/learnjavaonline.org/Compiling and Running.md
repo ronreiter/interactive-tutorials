@@ -1,6 +1,3 @@
-Compiling and Running with Arguments
-------------------------------------
-
 Tutorial
 --------
 

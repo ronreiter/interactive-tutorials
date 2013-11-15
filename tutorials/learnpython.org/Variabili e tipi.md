@@ -1,6 +1,3 @@
-# Variabili e tipi
--------------------
-
 Tutorial
 --------
 

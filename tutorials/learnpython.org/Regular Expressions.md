@@ -1,7 +1,6 @@
-# Regular Expressions
-
 Tutorial
 --------
+
 Regular Expressions (sometimes shortened to regexp, regex, or re) are a
 tool for matching patterns in text. In Python, we have the re module.
 The applications for regular expressions are wide-spread, but they are

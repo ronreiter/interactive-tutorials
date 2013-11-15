@@ -1,7 +1,5 @@
-#Operatori Base
-
-Tutorial 
-########
+Tutorial
+--------
 
 # Questa sezione spiega l'uso degli operatori base in Python
 ###Operatori Aritmetici

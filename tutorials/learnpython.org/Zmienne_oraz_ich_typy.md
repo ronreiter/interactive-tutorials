@@ -1,6 +1,3 @@
-Zmienne_oraz_ich_typy
-=====================
-
 Tutorial
 --------
 

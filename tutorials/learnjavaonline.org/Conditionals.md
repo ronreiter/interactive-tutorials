@@ -1,6 +1,3 @@
-Conditionals
-------------
-
 Tutorial
 --------
 

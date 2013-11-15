@@ -1,8 +1,5 @@
-Basic String Operations
------------------------
-
 Tutorial
------------------------
+--------
 
 Strings are bits of text. They can be defined as anything between quotes:
 

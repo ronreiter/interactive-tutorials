@@ -1,6 +1,3 @@
-Moduły i pakiety
-----------------
-
 Tutorial
 --------
 

@@ -1,5 +1,3 @@
-# Arrays
-
 Tutorial
 --------
 

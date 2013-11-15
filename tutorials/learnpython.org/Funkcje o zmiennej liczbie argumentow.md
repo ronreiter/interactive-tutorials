@@ -1,6 +1,3 @@
-Funkcje o zmiennej liczbie argumentów
--------------------------------------
-
 Tutorial
 --------
 

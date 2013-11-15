@@ -1,5 +1,3 @@
-# Function Context
-
 Tutorial
 --------
 

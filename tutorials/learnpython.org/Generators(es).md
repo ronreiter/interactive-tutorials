@@ -1,6 +1,3 @@
-Generators (es) 
-----------
-
 Tutorial
 --------
 

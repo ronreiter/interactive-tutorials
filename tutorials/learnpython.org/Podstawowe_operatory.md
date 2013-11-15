@@ -1,7 +1,3 @@
-#Podstawowe_operatory
-Podstawowe_operatory
---------------------
-
 Tutorial
 --------
 

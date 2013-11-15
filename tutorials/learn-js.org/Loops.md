@@ -1,5 +1,3 @@
-# Loops
-
 Tutorial
 --------
 

@@ -1,6 +1,3 @@
-Operaciones básicas de cadenas
------------------------
-
 Tutorial
 --------
 

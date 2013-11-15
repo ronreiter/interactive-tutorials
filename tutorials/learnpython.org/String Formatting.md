@@ -1,6 +1,3 @@
-String Formatting
------------------
-
 Tutorial
 --------
 

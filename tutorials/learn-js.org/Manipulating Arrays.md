@@ -1,5 +1,3 @@
-# Manipulating Arrays
-
 Tutorial
 --------
 

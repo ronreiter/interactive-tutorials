@@ -1,6 +1,3 @@
-Słowniki
---------
-
 Tutorial
 --------
 

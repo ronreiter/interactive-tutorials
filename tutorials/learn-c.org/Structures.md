@@ -1,6 +1,3 @@
-Structures
-----------
-
 Tutorial
 --------
 

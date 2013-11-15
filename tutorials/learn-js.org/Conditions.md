@@ -1,5 +1,3 @@
-# Conditions
-
 Tutorial
 --------
 

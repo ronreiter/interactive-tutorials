@@ -1,6 +1,3 @@
-Diccionarios
-------------
-
 Tutorial
 --------
 

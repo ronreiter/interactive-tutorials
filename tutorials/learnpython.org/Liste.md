@@ -1,8 +1,5 @@
-# Liste
------
-
-**_AIUTO_**
-----------
+Tutorial
+--------
 
 Le liste sono un insieme di variabili contenute tra 2 parentesi quadre. Possono contenere variabili diverse  anche  per tipo per esempio possono<br>
 contenere tutti i tipi di numeri le stringhe e le liste medesime . Si avete capito bene ecco un esempio **a** = [ 1,2,"alto","cane",2.0] oppure
@@ -47,8 +44,9 @@ Create una lista alla quale diamo nome "strings" che deve contenere "hello" e "w
 
 Proviamo a far uso della funzione append()per completare l'esercizio
 
-Codice di verifica
+Tutorial Code
 -------------
+
 	# Modifica questo codice
 	numbers = []     # creiamo la lista 
 	strings = []     # creiamo la lista
@@ -59,6 +57,8 @@ Codice di verifica
 	print strings    #  dovremmo vedere il risultato della nostra lista strings
 
 Questo è il risultato del nostro esercizio: Ovviamente se avete prepararto il quadro di sinistra vedrete i risultati su quello di destra
+
+Expected Output
 ---------------
 	[1, 2, 3]
 	['hello', 'world']

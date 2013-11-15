@@ -1,5 +1,3 @@
-# Functions
-
 Tutorial
 --------
 

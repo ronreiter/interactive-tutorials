@@ -1,6 +1,3 @@
-Dynamic allocation
-------------------
-
 Tutorial
 --------
 

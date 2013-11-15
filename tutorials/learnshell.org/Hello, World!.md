@@ -1,6 +1,3 @@
-Hello, World!
-----------------
-
 Tutorial
 --------
 The tutorial discusses shell programming in general with focus on **Bash** ("Bourne Again Shell") shell as the main shell interpreter. Shell programming using other common shells such as sh, csh, tcsh, will also be referenced, as they sometime differ from bash.

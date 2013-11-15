@@ -1,6 +1,3 @@
-Dictionaries
-------------
-
 Tutorial
 --------
 

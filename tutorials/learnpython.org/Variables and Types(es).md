@@ -1,8 +1,3 @@
-# Variables and Types(es)
-
-Tipos y Variables
--------------------
-
 Tutorial
 --------
 

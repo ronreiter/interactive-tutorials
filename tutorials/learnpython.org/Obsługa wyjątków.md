@@ -1,8 +1,6 @@
-Obsługa wyjątków
-================
-
 Tutorial
 --------
+
 Podczas programowania błędy zdarzają się co jakiś czas. Jest to po prostu część życia programisty.
 Czasami użytkownik może podać na złe dane. Zasoby sieciowe mogą być niedostępne. Może zabraknąć pamięci dla programu. W końcu programista mógł się nawet pomylić!
 

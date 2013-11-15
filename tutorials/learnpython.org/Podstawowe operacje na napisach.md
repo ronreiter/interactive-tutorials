@@ -1,8 +1,5 @@
-Podstawowe operacje na napisach
--------------------------------
-
 Tutorial
------------------------
+--------
 
 Napisy są fragmentami tekstu. W sumie jest nim każdy ciąg znaków, który ujeliśmy w cudzysłów lub apostrofy:
 

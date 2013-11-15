@@ -1,6 +1,3 @@
-Partial functions
------------------
-
 Tutorial
 --------
 

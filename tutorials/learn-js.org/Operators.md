@@ -1,5 +1,3 @@
-# Operators
-
 Tutorial
 --------
 

@@ -1,5 +1,3 @@
-# Zmienne_i_typy
-
 Tutorial
 --------
 

@@ -1,6 +1,3 @@
-Pętla while
------------
-
 Tutorial
 --------
 

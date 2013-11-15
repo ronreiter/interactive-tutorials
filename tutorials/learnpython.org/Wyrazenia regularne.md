@@ -1,6 +1,3 @@
-Wyrażenia regularne
--------------------
-
 Tutorial
 --------
 

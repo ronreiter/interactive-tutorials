@@ -1,6 +1,3 @@
-Zbiory
-======
-
 Tutorial
 --------
 

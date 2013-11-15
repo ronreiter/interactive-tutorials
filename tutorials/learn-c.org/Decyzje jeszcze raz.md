@@ -1,6 +1,3 @@
-Decyzje jeszcze raz
-==================
-
 Tutorial
 --------
 Na warsztat weźmiemy tym razem instrukcję switch. Za jej pomocą sprawdzamy, czy w danej zmiennej są zapisane konkretne wartość. Najpierw przykład:

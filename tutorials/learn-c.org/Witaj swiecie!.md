@@ -1,6 +1,3 @@
-Witaj świecie!
--------------
-
 Tutorial
 --------
 
