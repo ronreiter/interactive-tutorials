@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
+DEFAULT_DOMAIN = constants.LEARNPHP_DOMAIN
 
 tutorial_data = {}
 

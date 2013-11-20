@@ -136,6 +136,7 @@ function print(text) {
 
 function load() {
 	loading = $("#loading");
+
 	switch (window.domainData.language) {
 		case "python":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -224,6 +225,14 @@ function load() {
 		readOnly : true,
 		theme: "monokai"
 	});
+
+    originalCode = editor.getValue();
+
+    $("#inner-text pre").after(
+        $("<a>").addClass("btn btn-small btn-success").css("margin-bottom", "10px").text("Execute Code").click(function() {
+            editor.setValue($(this).prev().text()); execute()
+        })
+    );
 }
 
 function showExpected() {
