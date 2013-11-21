@@ -151,29 +151,6 @@ echo "Hello, World!";
 """
 	},
 
-    LEARNPHP_DOMAIN : {
-		"language" : "php",
-		"analytics" : "UA-22741967-7",
-        "namespace" : "learn-php.org",
-		"full_url" : "http://learn-php.org",
-		"sender" : "Learn-PHP.org <admin@learn-php.org>",
-		"styled_domain" : "Learn-PHP.org",
-		"contact_email" : "admin@learn-php.org",
-		"support_email" : "support@learn-php.org",
-		"logo" : "/static/img/logos/learn-php.png",
-		"language_uppercase" : "PHP",
-		"twitter" : "@learnphp",
-        "favicon" : "favicon-learn-php.ico",
-		"copyright" : "Copyright &copy; Learn-PHP.org.",
-		"default_code" : """<?php
-// Welcome to the Interactive PHP Tutorial.
-// Start by choosing a chapter and
-// write your code in this window.
-
-print('Hello, World!');
-?>
-"""},
-
     LEARNPERL_DOMAIN : {
 		"language" : "perl",
 		"analytics" : "UA-22741967-8",
@@ -194,10 +171,32 @@ print('Hello, World!');
 print 'Hello, World!';
 """},
 
+    LEARNPHP_DOMAIN : {
+		"language" : "php",
+		"analytics" : "UA-22741967-9",
+        "namespace" : "learn-php.org",
+		"full_url" : "http://learn-php.org",
+		"sender" : "Learn-PHP.org <admin@learn-php.org>",
+		"styled_domain" : "Learn-PHP.org",
+		"contact_email" : "admin@learn-php.org",
+		"support_email" : "support@learn-php.org",
+		"logo" : "/static/img/logos/learn-php.png",
+		"language_uppercase" : "PHP",
+		"twitter" : "@learnphp",
+        "favicon" : "favicon-learn-php.ico",
+		"copyright" : "Copyright &copy; Learn-PHP.org.",
+		"default_code" : """<?php
+// Welcome to the Interactive PHP Tutorial.
+// Start by choosing a chapter and
+// write your code in this window.
+
+print('Hello, World!');
+?>
+"""},
 
     LEARNCS_DOMAIN : {
 		"language" : "c#",
-		"analytics" : "UA-22741967-9",
+		"analytics" : "UA-22741967-10",
         "namespace" : "learncs.org",
 		"full_url" : "http://learncs.org",
 		"sender" : "LearnCS.org <admin@learncs.org>",
