@@ -1,10 +1,9 @@
 Tutorial
 --------
 
-This section explains a bit on how to use basic operators in Python. 
+This section explains how to use basic operators in Python.
 
 ### Arithmetic Operators       
-
 
 Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.<br> 
 
@@ -46,7 +45,10 @@ Just as in strings, Python supports forming new lists with a repeating sequence 
 Exercise
 --------
 
-The target of this exercise is to create two lists called x_list and y_list, which contain 10 instances of the variables x and y, respectively. You are also required to create a list called "big_list", which contains the variables "x" and "y", 10 times each, by concatenating the two lists you have created.
+The target of this exercise is to create two lists called `x_list` and `y_list`,
+which contain 10 instances of the variables `x` and `y`, respectively.
+You are also required to create a list called `big_list`, which contains
+the variables `x` and `y`, 10 times each, by concatenating the two lists you have created.
 
 Tutorial Code
 -------------
@@ -54,7 +56,7 @@ Tutorial Code
 x = object()
 y = object()
 
-# change this code
+# TODO: change this code
 x_list = [x]
 y_list = [y]
 big_list = []
@@ -84,7 +86,7 @@ Solution
 x = object()
 y = object()
 
-# change this code
+# TODO: change this code
 x_list = [x] * 10
 y_list = [y] * 10
 big_list = x_list + y_list

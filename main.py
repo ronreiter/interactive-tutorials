@@ -178,13 +178,13 @@ def index(title):
     tutorial = title.replace("_", " ").encode("utf-8")
     tutorial_data = get_tutorial(tutorial)
     domain_data = get_domain_data()
-    title_suffix = "Learn %s - Free Interactive %s Tutorial" % (title, domain_data["language_uppercase"])
-    html_title = "%s - %s" % (title, title_suffix) if title else title_suffix
+    title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
+    html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title else title_suffix
     return make_response(render_template(
         "index.html",
         domain_data = domain_data,
         domain_data_json = json.dumps(domain_data),
-        title = html_title,
+        html_title = html_title,
         **tutorial_data
     ))
 
