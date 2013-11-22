@@ -20,4 +20,8 @@ There is no need to download anything - just click on the chapter you wish to be
 - [[For loops]]
 - [[While loops]]
 - [[Functions]]
+- [[Objects]]
 
+### Contributing Tutorials
+
+Read more here: [[Contributing Tutorials]]

@@ -11,6 +11,16 @@ using a changing index. For example, let's say we have a list of odd numbers. To
 out, we need to refer to each item individually. The code we write in the for loop can use
 the index `i`, which changes in every iteration of the for loop.
 
+
+    <?php
+    $odd_numbers = [1,3,5,7,9];
+    for ($i = 0; $i < count($odd_numbers); $i=$i+1) {
+        $odd_number = $odd_numbers[$i];
+        echo $odd_number . "\n";
+    }
+    ?>
+
+
 The first line of the for loop defines 3 parts:
 
 * The initialization statement - in our case, we initialize the iterator variable `$i` to 0.
@@ -21,12 +31,7 @@ than the length of the array.
 variable by the needed amount. Usually, we will increase `$i` by 1. There are two shorter
 ways of increasing a variable by 1 as well. We can use `$i+=1` or `$i++` as well.
 
-    <?php
-    $odd_numbers = [1,3,5,7,9];
-    for ($i = 0; $i < array_len($odd_numbers); $i=$i+1) {
-        $odd_number = $odd_numbers[i];
-        echo $odd_number . "\n";
-    }
+
 
 ### Foreach loop
 
@@ -46,16 +51,34 @@ variable.
     }
     ?>
 
+When iterating over arrays with keys, we can use the following syntax:
+
+
+    <?php
+    $phone_numbers = [
+      "Alex" => "415-235-8573",
+      "Jessica" => "415-492-4856",
+    ];
+
+    foreach ($phone_numbers as $name => $number) {
+      echo "$name's number is $number.\n";
+    }
+    ?>
+
+
 Exercise
 --------
 
-Print out all numbers inside the array, one by one.
+Print out all numbers inside the array, one by one,
+using the `\n` newline character sequence to separate between results.
 
 Tutorial Code
 -------------
 
+<?php
 $even_numbers = [2,4,6,8,10,12,14,16,18,20];
 
+?>
 
 Expected Output
 ---------------
@@ -74,3 +97,9 @@ Expected Output
 Solution
 --------
 
+<?php
+$even_numbers = [2,4,6,8,10,12,14,16,18,20];
+foreach ($even_numbers as $even_number) {
+  echo $even_number . "\n";
+}
+?>
