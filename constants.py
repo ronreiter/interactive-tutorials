@@ -183,14 +183,14 @@ print 'Hello, World!';
         "logo" : "/static/img/logos/learn-php.png",
         "language_uppercase" : "PHP",
         "twitter" : "@learnphp",
-            "favicon" : "favicon-learn-php.ico",
+        "favicon" : "favicon-learn-php.ico",
         "copyright" : "Copyright &copy; Learn-PHP.org.",
         "default_code" : """<?php
 // Welcome to the Interactive PHP Tutorial.
 // Start by choosing a chapter and
 // write your code in this window.
 
-print('Hello, World!');
+echo "Hello, World!";
 ?>
 """},
 
