@@ -35,7 +35,7 @@ Table of Contents
 - [[Regular Expressions]]
 - [[Exception Handling]]
 - [[Sets]]
-- [[Serialization using JSON and pickle]]
+- [[Serialization]]
 - [[Partial functions]]
 - [[Code Introspection]]
 - [[Compression]]

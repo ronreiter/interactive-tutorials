@@ -19,7 +19,6 @@ To encode a data structure to JSON, use the "dumps" method.  This method takes a
 
     json_string = json.dumps([1, 2, 3, "a", "b", "c"])
 
-
 Python supports a Python proprietary data serialization method called pickle (and a faster alternative called cPickle).
 
 You can use it exactly the same way.
@@ -33,20 +32,46 @@ The aim of this exercise is to print out the JSON string with key-value pair "Me
 Tutorial Code
 -------------
 
-#Exercise fix this function, so it adds the given name and salary pair to the json it returns
-def add_employee(jsonSalaries, name, salary): 
+import json
+
+# fix this function, so it adds the given name
+# and salary pair to salaries_json, and return it
+def add_employee(salaries_json, name, salary):
     # Add your code here
 
-    return jsonSalaries 
+    return salaries_json
 
-#Test code - shouldn't need to be modified
-originalJsonSalaries = '{"Alfred" : 300, "Jane" : 301 }'
-newJsonSalaries = add_employee(originalJsonSalaries, "Me", 800)
-print(newJsonSalaries)
+# test code
+salaries = '{"Alfred" : 300, "Jane" : 400 }'
+new_salaries = add_employee(salaries, "Me", 800)
+decoded_salaries = json.loads(new_salaries)
+print decoded_salaries["Alfred"]
+print decoded_salaries["Jane"]
+print decoded_salaries["Me"]
 
 Expected Output
 ---------------
-{"Jane": 301, "Me": 800, "Alfred": 300}
+300
+400
+800
 
 Solution
 --------
+
+import json
+
+# fix this function, so it adds the given name
+# and salary pair to salaries_json, and return it
+def add_employee(salaries_json, name, salary):
+    salaries = json.loads(salaries_json)
+    salaries[name] = salary
+
+    return json.dumps(salaries)
+
+# test code
+salaries = '{"Alfred" : 300, "Jane" : 400 }'
+new_salaries = add_employee(salaries, "Me", 800)
+decoded_salaries = json.loads(new_salaries)
+print decoded_salaries["Alfred"]
+print decoded_salaries["Jane"]
+print decoded_salaries["Me"]
