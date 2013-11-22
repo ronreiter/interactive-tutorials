@@ -38,8 +38,6 @@ Table of Contents
 - [[Serialization]]
 - [[Partial functions]]
 - [[Code Introspection]]
-- [[Compression]]
-- [[Encoding and Decoding]]
 - [[Decorators]]
 
 ### Other languages are available here:
