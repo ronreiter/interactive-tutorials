@@ -18,9 +18,9 @@ r = redis.Redis(host="direct.learnpython.org")
 
 app = Flask(__name__)
 
-sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n+(.*)\n*", re.MULTILINE | re.DOTALL)
+sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNPHP_DOMAIN
+DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
 
 tutorial_data = {}
 
@@ -177,10 +177,14 @@ def static_file():
 def index(title):
     tutorial = title.replace("_", " ").encode("utf-8")
     tutorial_data = get_tutorial(tutorial)
+    domain_data = get_domain_data()
+    title_suffix = "Learn %s - Free Interactive %s Tutorial" % (title, domain_data["language_uppercase"])
+    html_title = "%s - %s" % (title, title_suffix) if title else title_suffix
     return make_response(render_template(
         "index.html",
-        domain_data = get_domain_data(),
-        domain_data_json = json.dumps(get_domain_data()),
+        domain_data = domain_data,
+        domain_data_json = json.dumps(domain_data),
+        title = html_title,
         **tutorial_data
     ))
 

@@ -26,7 +26,7 @@ Strings are defined either with a single quote or a double quotes.
 
 The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
 
-        mystring = "Don't worry about apostrophes"
+    mystring = "Don't worry about apostrophes"
 
 There are additional variations on defining strings that make it easier to include things such as carriage returns, backslashes and Unicode characters. These are beyond the scope of this tutorial, but are covered in the [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial"). 
 
@@ -78,3 +78,16 @@ Integer: 20
 
 Solution
 --------
+
+# change this code
+mystring = "hello"
+myfloat = 10.0
+myint = 20
+
+# testing code
+if mystring == "hello":
+    print "String: %s" % mystring
+if isinstance(myfloat, float) and myfloat == 10.0:
+    print "Float: %d" % myfloat
+if isinstance(myint, int) and myint == 20:
+    print "Integer: %d" % myint
