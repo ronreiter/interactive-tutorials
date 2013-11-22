@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to learnshell.org's interactive Shell Programming tutorial.
+Welcome to the learnshell.org interactive Shell Programming tutorial.
 
 Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn programming with Unix/Linux shell interpreters.
 

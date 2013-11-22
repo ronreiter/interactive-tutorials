@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to learnpython.org's interactive Python tutorial. 
+Welcome to the LearnPython.org interactive Python tutorial.
 
 Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language.<br>
 
