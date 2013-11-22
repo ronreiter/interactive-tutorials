@@ -5,41 +5,41 @@ W Pythonie formatujemy prawie tak samo jak w C. Po komendzie print umieszczasz n
 
 Powiedzmy, że masz zmienną o nazwie "imie" z zawarta w niej nazwą któregoś użytkownika oraz chciałbyś wypisać właśnie dla niego tekst powitalny.
 
-	imie = "Marek"
-	print "Witaj, %s!" % imie
-	imie = "Dorota"
-	print "Witaj, %s!" % imie
+    imie = "Marek"
+    print "Witaj, %s!" % imie
+    imie = "Dorota"
+    print "Witaj, %s!" % imie
 
 Umieszczając symbol %s w formatowanym napisie informujemy komputer, że chcemy, aby odczytał zapisaną zmienną jako string.
 Jeśli chcemy wyświetlić liczbę całkowitą, używamy symbolu %d.
 
-	# To wypisze "Marek ma 23 lata."
-	imie = "Marek"
-	wiek = 23
-	print "%s ma %d lata." % (imie, wiek)
+    # To wypisze "Marek ma 23 lata."
+    imie = "Marek"
+    wiek = 23
+    print "%s ma %d lata." % (imie, wiek)
 
 Jeżeli użyjesz symbolu `%s` na obiekcie, który nie jest tablicą, to zostanie automatycznie wywołana metoda "repr". Pozwala na wyświetlenie zawartości obiektu.
 
-	# To wypisze: Tablica: [1, 2, 3]
-	MojaTab = [1,2,3]
-	print "Tablica: %s" % MojaTab
-	
+    # To wypisze: Tablica: [1, 2, 3]
+    MojaTab = [1,2,3]
+    print "Tablica: %s" % MojaTab
+
 Jeżeli zaś będziesz chciał odczytać napis jako np. liczbę całkowitą to otrzymasz w efekcie błąd.
-	
-	imie = "Jacek"
-	liczba = 4
-	print "liczba = %d" % liczba
-	print "imie = %s" % imie
-	print "imie = %d" % imie
-	# powyzsza linijka spowoduje blad wykonania
-	
+
+    imie = "Jacek"
+    liczba = 4
+    print "liczba = %d" % liczba
+    print "imie = %s" % imie
+    print "imie = %d" % imie
+    # powyzsza linijka spowoduje blad wykonania
+
 Zestaw danych, które mają być wypisane, może być zapisany wcześniej w swego rodzaju uporządkowanej tablicy, którą będziemy nazywać krotką (ang. nazwa to "tuple").
-	
-	# tak tworzymy 'krotke'
-	dane = ("Dorota", 5, 32)
-	
-	print "%s mieszka w bloku nr %d w mieszkaniu %d" % dane
-	
+
+    # tak tworzymy 'krotke'
+    dane = ("Dorota", 5, 32)
+
+    print "%s mieszka w bloku nr %d w mieszkaniu %d" % dane
+
 Poniżej znajduje się kilka podstawowych specyfikatorów, których znaczenie powinieneś zapamiętać:
 
 - %s - Napis (lub każdy inny obiekt, który ma reprezentację w formie napisu, np. liczba, tablica)
@@ -50,30 +50,33 @@ Poniżej znajduje się kilka podstawowych specyfikatorów, których znaczenie po
 
 
 Poniżej garść przykładów. Warto, abyś wkleił je do okna i zobaczył jak się zachowa program.
-	
-	rzeczywista_1 = 4.34
-	rzeczywista_2 = 54.432
-	calkowita = 16
-	
-	print "rzeczywista_1 = %f" % rzeczywista_1
-	print "rzeczywista_2 = %f" % rzeczywista_2
-	print "rzeczywista_2 = %f.1" % rzeczywista_2
-	print "W systemie szesnastkowym %d ma postac %X" % (calkowita, calkowita)
-	
+
+    rzeczywista_1 = 4.34
+    rzeczywista_2 = 54.432
+    calkowita = 16
+
+    print "rzeczywista_1 = %f" % rzeczywista_1
+    print "rzeczywista_2 = %f" % rzeczywista_2
+    print "rzeczywista_2 = %f.1" % rzeczywista_2
+    print "W systemie szesnastkowym %d ma postac %X" % (calkowita, calkowita)
+
 ### Ćwiczenie
 
 Za pomocą formatowania musisz uzyskać na wyjściu następujący tekst:
-	Czesc Jacek i Darek. Temperatura na zewnatrz wynosi 44.4 stopnie Celcjusza.
+    Czesc Jacek i Darek. Temperatura na zewnatrz wynosi 44.4 stopnie Celcjusza.
 
 Tutorial Code
 -------------
 
-	dane = ("Jacek", "Darek", 44.4)
-	formatowany_napis = "Czesc"
-	
-	print formatowany_napis % dane
+dane = ("Jacek", "Darek", 44.4)
+formatowany_napis = "Czesc"
+
+print formatowany_napis % dane
 
 Expected Output
 ---------------
 
-	Czesc Jacek i Darek. Temperatura na zewnatrz wynosi 44.4 stopnie Celcjusza.
+Czesc Jacek i Darek. Temperatura na zewnatrz wynosi 44.4 stopnie Celcjusza.
+
+Solution
+--------

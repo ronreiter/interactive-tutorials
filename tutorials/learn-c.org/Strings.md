@@ -49,7 +49,8 @@ called `strcmp`, but it is not recommended to use it. For example:
         printf("You are not John. Go away.\n");
     }
 
-### Exercise
+Exercise
+--------
 
 Define the string `first_name` with the value `John` using the pointer notation, and define the string `last_name` with the value `Doe`
 using the local array notation.
@@ -57,29 +58,30 @@ using the local array notation.
 Tutorial Code
 -------------
 
-	#include <stdio.h>
-	
-	int main() {
-	  /* define first_name */
-	  /* define last_name */
-	  char name[100];
+#include <stdio.h>
 
-	  /* testing code */
-	  if (strncmp(first_name, "John") != 0) return 1;
-	  if (strncmp(last_name, "Doe") != 0) return 1;
+int main() {
+  /* define first_name */
+  /* define last_name */
+  char name[100];
 
-	  last_name[0] = 'B';
-	  sprintf(name, "%s %s", first_name, last_name);
-	  if (strncmp(name, "John Boe", 100) == 0) {
-	      printf("Done!\n");
-	  }
+  /* testing code */
+  if (strncmp(first_name, "John") != 0) return 1;
+  if (strncmp(last_name, "Doe") != 0) return 1;
 
-	  return 0;
-	}
+  last_name[0] = 'B';
+  sprintf(name, "%s %s", first_name, last_name);
+  if (strncmp(name, "John Boe", 100) == 0) {
+      printf("Done!\n");
+  }
+
+  return 0;
+}
 
 
 Expected Output
 ---------------
-	Done!
+Done!
 
-
+Solution
+--------

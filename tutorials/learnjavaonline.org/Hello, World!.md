@@ -40,7 +40,8 @@ The arguments we get inside the method are the arguments that we will get when r
 * `out` is a static variable within System that represents the output of your program (stdout).
 * `println` is a method of out that can be used to print a line.
 
-### Exercise
+Exercise
+--------
 
 Print "Hello, World!" to the console.
 
@@ -60,4 +61,7 @@ public class Main {
 Expected Output
 ---------------
 
-	Hello, World!
+Hello, World!
+
+Solution
+--------

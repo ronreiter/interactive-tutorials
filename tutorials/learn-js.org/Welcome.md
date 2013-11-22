@@ -33,8 +33,3 @@ Table of Contents
 
 Read more here: [[Contributing Tutorials]]
 
-### Other Programming Languages
-
-- [Learn C - Free Interactive C Tutorial](http://learn-c.org)
-- [Learn Java - Free Interactive Java Tutorial](http://learnjavaonline.org)
-- [Learn Python - Free Interactive Python Tutorial](http://learnpython.org)

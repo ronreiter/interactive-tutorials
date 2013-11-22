@@ -62,28 +62,33 @@ We then referred to it using the dereferencing operator. We can also change the 
     /* will print out 3 */
     printf("The value of a is now %d\n", a);
 
-### Exercise
+Exercise
+--------
 
 Create a pointer to the local variable `n` called `pointer_to_n`, and use it to increase the value of `n` by one.
 
 Tutorial Code
 -------------
-	#include <stdio.h>
 
-	int main() {
-	  int n = 10;
-	  
-	  /* your code goes here */
+#include <stdio.h>
 
-	  /* testing code */
-	  if (pointer_to_n != &n) return 1;
-	  if (*pointer_to_n != 11) return 1;
-	  
-	  printf("Done!\n");
-	  return 0;
-	}
+int main() {
+  int n = 10;
+
+  /* your code goes here */
+
+  /* testing code */
+  if (pointer_to_n != &n) return 1;
+  if (*pointer_to_n != 11) return 1;
+
+  printf("Done!\n");
+  return 0;
+}
 
 Expected Output
 ---------------
 
-	Done!
+Done!
+
+Solution
+--------

@@ -31,34 +31,39 @@ After we are done using the dynamically allocated struct, we can release it usin
 
 Note that the free does not delete the `myperson` variable itself, it simply releases the data that it points to. The `myperson` variable will still point to somewhere in the memory - but after calling `myperson` we are not allowed to access that area anymore. We must not use that pointer again until we allocate new data using it.
 
-### Exercise
+Exercise
+--------
 
 Use `malloc` to dynamically allocate a point structure.
 
 Tutorial Code
 -------------
 
-	#include <stdio.h>
+#include <stdio.h>
 
-	typedef struct {
-	  int x;
-	  int y;
-	} point;
+typedef struct {
+  int x;
+  int y;
+} point;
 
-	int main() {
-	  point * mypoint;
+int main() {
+  point * mypoint;
 
-	  /* Dynamically allocate a new point
-	     struct which mypoint points to here */
+  /* Dynamically allocate a new point
+     struct which mypoint points to here */
 
-	  mypoint->x = 10;
-	  mypoint->y =5 ;
-	  printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
+  mypoint->x = 10;
+  mypoint->y =5 ;
+  printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
 
-	  free(mypoint);
-	  return 0;
-	}
+  free(mypoint);
+  return 0;
+}
 
 Expected Output
 ---------------
-	mypoint coordinates: 10, 5
+
+mypoint coordinates: 10, 5
+
+Solution
+--------

@@ -9,19 +9,19 @@ All standard functions in the browser run under the Window context. Functions de
 
 To bind a function to an object and make it an object method, we can use the `bind` function. Here is a simple example:
 
-	var person = {
-	    name : "John"
-	};
-	
-	function printName() 
-	{
-	    console.log(this.name);
-	}
+    var person = {
+        name : "John"
+    };
+
+    function printName()
+    {
+        console.log(this.name);
+    }
 
 Obviously, we are not able to call `printName()` without associating the function with the object `person`. To do this we must create a bound method of the function printName to person, using the following code:
 
-	var boundPrintName = printName.bind(person);
-	boundPrintName();    // prints out "John"
+    var boundPrintName = printName.bind(person);
+    boundPrintName();    // prints out "John"
 
 ### Calling a function with a different context
 
@@ -29,40 +29,44 @@ We can use the `call` and `apply` functions to call a function as if it was boun
 
 For example, let's call `printName` with `person` as the context using the `call` method:
 
-	printName.call(person);      // prints out "John"
+    printName.call(person);      // prints out "John"
 
-### Exercise
+Exercise
+--------
 
 Create bound copies of printFullName to printDetails to person called boundPrintFullName and boundPrintDetails.
 
 Tutorial Code
 -------------
 
-	var person = {
-	    firstName : "John",
-	    lastName : "Smith",
-	    age : 23
-	};
+var person = {
+    firstName : "John",
+    lastName : "Smith",
+    age : 23
+};
 
-	function printFullName()
-	{
-	    console.log(this.firstName + " " + this.lastName);
-	}
+function printFullName()
+{
+    console.log(this.firstName + " " + this.lastName);
+}
 
-	function printDetails()
-	{
-	    console.log(this.firstName + " is " + this.age + " years old");
-	}
+function printDetails()
+{
+    console.log(this.firstName + " is " + this.age + " years old");
+}
 
-	// TODO: create bound copies of printFullName and printDetails.	
-	var boundPrintFullName;
-	var boundPrintDetails;
+// TODO: create bound copies of printFullName and printDetails.
+var boundPrintFullName;
+var boundPrintDetails;
 
-	boundPrintFullName();
-	boundPrintDetails();
+boundPrintFullName();
+boundPrintDetails();
 
 Expected Output
 ---------------
 
-	John Smith
-	John is 23 years old
+John Smith
+John is 23 years old
+
+Solution
+--------

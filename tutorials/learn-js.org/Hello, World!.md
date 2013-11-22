@@ -7,16 +7,20 @@ JavaScript is a very powerful language. It can be used both within any browser i
 
 When using JavaScript inside the browser, we can change how the page looks like and how it behaves. In this tutorial, we will only focus on learning the language itself, and therefore we will only use one function to print out our results called "console.log".
 
-### Exercise
+Exercise
+--------
 
 You must print out to the console the sentence "Hello, World!".
 
 Tutorial Code
 -------------
 
-	console.log("Goodbye, World!");
+console.log("Goodbye, World!");
 
 Expected Output
 ---------------
 
-	Hello, World!
+Hello, World!
+
+Solution
+--------

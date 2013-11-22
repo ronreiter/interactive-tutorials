@@ -18,7 +18,7 @@ r = redis.Redis(host="direct.learnpython.org")
 
 app = Flask(__name__)
 
-sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*", re.MULTILINE | re.DOTALL)
+sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n+(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 DEFAULT_DOMAIN = constants.LEARNPHP_DOMAIN
 
@@ -100,11 +100,12 @@ def init_tutorials():
 
             tutorial_sections = sections.findall(tutorial_data[domain][tutorial]["text"])
             if tutorial_sections:
-                text, code, output = tutorial_sections[0]
+                text, code, output, solution = tutorial_sections[0]
                 tutorial_data[domain][tutorial]["page_title"] = tutorial
                 tutorial_data[domain][tutorial]["text"] = wikify(text)
-                tutorial_data[domain][tutorial]["code"] = code.replace("\t", "").strip()
-                tutorial_data[domain][tutorial]["output"] = output.replace("\t", "").strip()
+                tutorial_data[domain][tutorial]["code"] = code.strip("\n")
+                tutorial_data[domain][tutorial]["output"] = output.strip("\n")
+                tutorial_data[domain][tutorial]["solution"] = solution.strip("\n")
             else:
                 tutorial_data[domain][tutorial]["page_title"] = ""
                 tutorial_data[domain][tutorial]["text"] = wikify(tutorial_data[domain][tutorial]["text"])
@@ -123,10 +124,10 @@ def init_tutorials():
                 page_index = links.index(link)
                 if page_index > 0:
                     if not "previous_chapter" in tutorial_data[domain][link]:
-                        tutorial_data[domain][link]["previous_chapter"] = links[page_index - 1].decode("utf-8")
+                        tutorial_data[domain][link]["previous_chapter"] = links[page_index - 1].decode("utf-8").replace(" ", "_")
                 if page_index < (num_links - 1):
                     if not "next_chapter" in tutorial_data[domain][link]:
-                        tutorial_data[domain][link]["next_chapter"] = links[page_index + 1].decode("utf-8")
+                        tutorial_data[domain][link]["next_chapter"] = links[page_index + 1].decode("utf-8").replace(" ", "_")
 
 init_tutorials()
 

@@ -3,9 +3,11 @@ Tutorial
 
 To define a variable, simply use the following syntax:
 
-	$x = 1;
-	$y = "foo";
-	$z = True;
+    <?php
+    $x = 1;
+    $y = "foo";
+    $z = True;
+    ?>
 
 We have just defined a variable named `x` with the number 1, a variable
 named `y` with the string "foo" and a variable name `z` with the boolean
@@ -29,20 +31,24 @@ We can also print out PHP variables using the `echo` command (you can try it out
 For example, let's sum up two numbers, put the result in a new variable, and
 print out the result.
 
-	$x = 1;
-	$y = 2;
-	$sum = $x + $y;
-	echo $sum;	   // prints out 3
+    <?php
+    $x = 1;
+    $y = 2;
+    $sum = $x + $y;
+    echo $sum;       // prints out 3
+    ?>
 
-### Variables in strings
+### String formatting
 
 Like Perl, PHP double quoted strings can format strings using defined variables. For example:
 
-	$name = "Jake";
-	echo "Your name is $name";	// prints out Your name is Jake
+    <?php
+    $name = "Jake";
+    echo "Your name is $name";    // prints out Your name is Jake
+    ?>
 
-
-### Exercise
+Exercise
+--------
 
 #### Part 1
 
@@ -61,21 +67,36 @@ Sum up the variables x and y and put the result in the sum variable.
 Tutorial Code
 -------------
 
-	<?php
-	// Part 1: add the name and age variables.
-	echo "Hello $name. You are $age years old.\n";
+<?php
+// Part 1: add the name and age variables.
+echo "Hello $name. You are $age years old.\n";
 
-	// Part 2: sum up the variables x and y and
-	// put the result in the sum variable.
-	$x = 195793;
-	$y = 256836;
-	$sum = NULL;
+// Part 2: sum up the variables x and y and
+// put the result in the sum variable.
+$x = 195793;
+$y = 256836;
+$sum = NULL;
 
-	echo "The sum of $x and $y is $sum."
-	?>
+echo "The sum of $x and $y is $sum."
+?>
 
 Expected Output
 ---------------
 
-	Hello Jake. You are 20 years old.
-	The sum of 195793 and 256836 is 452629.
+Hello Jake. You are 20 years old.
+The sum of 195793 and 256836 is 452629.
+
+Solution
+--------
+
+<?php
+$name = "Jake";
+$age = 20;
+echo "Hello $name. You are $age years old.\n";
+
+$x = 195793;
+$y = 256836;
+$sum = $x + $y;
+
+echo "The sum of $x and $y is $sum."
+?>

@@ -94,7 +94,8 @@ Non static methods can access and alter the field of the object.
 - Static methods belong to a class while non-static methods belong to objects
 - All parameters to functions are passed by value, primitives content is copied, while objects are not copied and some would say 'passed by reference'
 
-### Exercise
+Exercise
+--------
 
 Write the method `printFullName` of student which prints the full name of a student.
 
@@ -130,3 +131,6 @@ Expected Output
 Morgan Freeman
 Brad Pitt
 Kevin Spacey
+
+Solution
+--------

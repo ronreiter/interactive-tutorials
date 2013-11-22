@@ -25,7 +25,8 @@ We can also create an array with values in the same line:
 
 Don't try to print the array without a loop, it will print something nasty like [I@f7e6a96.
 
-### Exercise
+Exercise
+--------
 
 Change the values in numbers so it will not raise an error.
 
@@ -46,3 +47,6 @@ Expected Output
 ---------------
 
 Done!
+
+Solution
+--------

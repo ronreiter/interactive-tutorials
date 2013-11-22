@@ -64,11 +64,14 @@ W tym ćwiczeniu musisz wypisać posortowaną alfabetycznie listę wszystkich fu
 Tutorial Code
 -------------
 
-	import re
-	
-	# Miejsce na twoj kod
+import re
+
+# Miejsce na twoj kod
 
 Expected Output
 ---------------
 
-	['findall', 'finditer']
+['findall', 'finditer']
+
+Solution
+--------

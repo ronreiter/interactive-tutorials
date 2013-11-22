@@ -45,7 +45,8 @@ In the following code, the `continue` directive causes the `printf` command to b
         printf("The number %d is even.\n", n);
     }
 
-### Exercise
+Exercise
+--------
 
 The `array` variable consists of a sequence of ten numbers. Inside the while loop, you must write two `if` conditions, 
 which change the flow of the loop in the following manner (without changing the `printf` command):
@@ -58,26 +59,29 @@ Notice that if you do not advance the iterator variable `i` and use the `continu
 Tutorial Code
 -------------
 
-	#include <stdio.h>
-	
-	int main() {
-	  int array[] = {1, 7, 4, 5, 9, 3, 5, 11, 6, 3, 4};
-	  int i = 0;
+#include <stdio.h>
 
-	  while (i < 10) {
-	    /* your code goes here */
+int main() {
+  int array[] = {1, 7, 4, 5, 9, 3, 5, 11, 6, 3, 4};
+  int i = 0;
 
-	    printf("%d\n", array[i]);
-	    i++;
-	  }
+  while (i < 10) {
+    /* your code goes here */
 
-	  return 0;
-	}
+    printf("%d\n", array[i]);
+    i++;
+  }
+
+  return 0;
+}
 
 Expected Output
 ---------------
 
-	7
-	5
-	9
-	5
+7
+5
+9
+5
+
+Solution
+--------

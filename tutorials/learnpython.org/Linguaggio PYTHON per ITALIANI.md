@@ -19,17 +19,17 @@ Il nostro amico Python ci risponderà facendo comparire sul video appunto la scr
 
 In questo tutorial Python ora **_AMICO_** vedrete due riquadri: in quello di sinistra è possibile inserire il codice che prepariamo per il nostro amico Python, mentre su quello di destra se clicchiamo sulla parola **Rum** o **Esegui** otteniamo la risposta alla nostra preparazione. Se invece clicchiamo sulla frase che segue **Rum**  e cioè **Mostra Output previsto** Python ci farà vedere ugualmente quello che avremmo voluto ma che non sarebbe stato possibile a seguito di qualche errore commesso nello scrivere il nostro codice nel riquadro di sinistra.
 
- L'obiettivo di questo esercizio è quello di ottenere la stampa del codice della finestra di input in quella di output Esattamente questo codice:	
+ L'obiettivo di questo esercizio è quello di ottenere la stampa del codice della finestra di input in quella di output Esattamente questo codice:
 
-	"Ciao, Mondo!"			 
+    "Ciao, Mondo!"
 
  
-#Nel riquadro di sinistra scriviamo:	
-	# Questo codice deve stampare "Ciao, Mondo!"
-        print "Ciao, Mondo!"					
+#Nel riquadro di sinistra scriviamo:
+    # Questo codice deve stampare "Ciao, Mondo!"
+        print "Ciao, Mondo!"
 
 #Nel riquadro di destra dopo aver cliccato su Run
 
-	Ciao, Mondo!	
-	
+    Ciao, Mondo!
+
 Mi preme ricordare che le righe di codice precedute dal segno '#' o cancelletto per il nostro amico Python sono solo righe di commento che servono a noi umani per ricordare meglio che cosa stavamo facendo. Troveremo utilissimi questi commenti se rivedremo il nostro codice dopo diverso tempo e ricorderemo meglio le nostre intenzioni; se stiamo esaminando  il codice di altri programmatori per capire meglio che cosa volevano codificare.Spero che questa precisazione meriti l'attenzione che io metto sempre per le cose che faccio.

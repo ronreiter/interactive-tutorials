@@ -54,23 +54,26 @@ Tenemos una clase definida para vehículo. Crea dos nuevos vehículos llamados M
 Tutorial Code
 -------------
 
-	#define the Vehicle class
-	class Vehicle:
-	    name = ""
-	    kind = "carro"
-	    color = ""
-	    value = 100.00 
-	    def description(self):
-	        desc_str = "%s es un %s %s con valor de $%.2f." % (self.name, self.color, self.kind, self.value)
-	        return desc_str
-	#your code goes here	
-	
-	#checking code
-	print MiCarro1.description()
-	print MiCarro2.description()
+#define the Vehicle class
+class Vehicle:
+    name = ""
+    kind = "carro"
+    color = ""
+    value = 100.00
+    def description(self):
+        desc_str = "%s es un %s %s con valor de $%.2f." % (self.name, self.color, self.kind, self.value)
+        return desc_str
+#your code goes here
+
+#checking code
+print MiCarro1.description()
+print MiCarro2.description()
 
 Expected Output
 ---------------
 
-	Fer es un convertible rojo con valor de $60000.00.
-	Jump es una van azul con valor de $10000.00.
+Fer es un convertible rojo con valor de $60000.00.
+Jump es una van azul con valor de $10000.00.
+
+Solution
+--------

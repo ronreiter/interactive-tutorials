@@ -57,18 +57,22 @@ The `__init__.py` file can also decide which modules the package exports as the 
 
     __all__ = ["bar"]
 
-### Exercise
+Exercise
+--------
 
 In this exercise, you will need to print an alphabetically sorted list of all functions in the `re` module, which contain the word `find`.
 
 Tutorial Code
 -------------
 
-	import re
-	
-	# Your code goes here
+import re
+
+# Your code goes here
 
 Expected Output
 ---------------
 
-	['findall', 'finditer']
+['findall', 'finditer']
+
+Solution
+--------

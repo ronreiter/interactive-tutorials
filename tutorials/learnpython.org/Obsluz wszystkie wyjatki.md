@@ -44,3 +44,6 @@ Expected Output
 ---------------
 Wszystkie wyjatki obsluzone! Dobra robota!
 Nazwisko aktora brzmi Fronczewski
+
+Solution
+--------

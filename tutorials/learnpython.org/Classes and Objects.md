@@ -47,30 +47,34 @@ The above would print out the message, "This is a message inside the class."
 
 
 
-### Exercise
+Exercise
+--------
 
 We have a class defined for vehicles. Create two new vehicles called MyCar1 and MyCar2. Set MyCar1 to be a red convertible worth $60,000 with a name of Fer, and MyCar2 to be a blue van named Jump worth $10,000.
 
 Tutorial Code
 -------------
 
-	#define the Vehicle class
-	class Vehicle:
-	    name = ""
-	    kind = "car"
-	    color = ""
-	    value = 100.00 
-	    def description(self):
-	        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
-	        return desc_str
-	#your code goes here	
-	
-	#checking code
-	print MyCar1.description()
-	print MyCar2.description()
+#define the Vehicle class
+class Vehicle:
+    name = ""
+    kind = "car"
+    color = ""
+    value = 100.00
+    def description(self):
+        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
+        return desc_str
+#your code goes here
+
+#checking code
+print MyCar1.description()
+print MyCar2.description()
 
 Expected Output
 ---------------
 
-	Fer is a red convertible worth $60000.00.
-	Jump is a blue van worth $10000.00.
+Fer is a red convertible worth $60000.00.
+Jump is a blue van worth $10000.00.
+
+Solution
+--------

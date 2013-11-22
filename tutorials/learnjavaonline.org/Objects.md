@@ -73,7 +73,8 @@ Although we'll talk about modifiers later on, it's important to understand the d
 
 When using the keyword `private` before a variable or a method, it means only the class itself can access the variable or method, when we're using `public` it means everybody can access it. We usually see constructors defined as public, variables defined as private and methods are separated, some public and some private.
 
-### Exercise
+Exercise
+--------
 
 Write a new method in Point called `scale`, that will make the point closer by 2 to (0,0). So for example, point (8, 4) after scale will be (4, 2).
 
@@ -110,3 +111,6 @@ Expected Output
 (4.0,4.0)
 (2.0,2.0)
 (1.0,1.0)
+
+Solution
+--------

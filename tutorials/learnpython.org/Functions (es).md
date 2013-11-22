@@ -59,20 +59,23 @@ En este ejercicio estaras usando una funcion existente, crearas una propia forma
 Tutorial Code
 -------------
 
-	#Agrega una funcion aqui (antes de la funcion existente) 	
+#Agrega una funcion aqui (antes de la funcion existente)
 
-	def name_the_benefits_of_functions():
-	    list_of_benefits = list_benefits()
-	    for benefit in list_of_benefits:
-	        print build_sentence(benefit)
+def name_the_benefits_of_functions():
+    list_of_benefits = list_benefits()
+    for benefit in list_of_benefits:
+        print build_sentence(benefit)
 
-	name_the_benefits_of_functions()
+name_the_benefits_of_functions()
 
 
 Expected Output
 ---------------
 
-	More organized code is a benefit of functions!
-	More readable code is a benefit of functions!
-	Easier code reuse is a benefit of functions!
-	Allowing programmers to share and connect code together is a benefit of functions!
+More organized code is a benefit of functions!
+More readable code is a benefit of functions!
+Easier code reuse is a benefit of functions!
+Allowing programmers to share and connect code together is a benefit of functions!
+
+Solution
+--------

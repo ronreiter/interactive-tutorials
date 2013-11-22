@@ -5,31 +5,31 @@ Listy składane są potężne narzędzie, które tworzy nową tablicę na podsta
 
 Przykładowo powiedzmy, że potrzebujemy stworzyć nową tablicę liczb całkowitych, które określają długość każdego słowa w pewnym napisie, ale pod warunkiem, że nie jest to słowo 'nad'.
 
-	napis = 'Odwazny rudy lis przeskoczyl nad spiacym wilczurem'
-	slowa = napis.split() # tworzymy tablice ze slowami zawartymi w napisie
-	dlugosc_slow = []
-	for slowo in slowa:
-	    if slowo != 'nad':
-	        dlugosc_slow.append(len(slowo))
-	
-	print dlugosc_slow
+    napis = 'Odwazny rudy lis przeskoczyl nad spiacym wilczurem'
+    slowa = napis.split() # tworzymy tablice ze slowami zawartymi w napisie
+    dlugosc_slow = []
+    for slowo in slowa:
+        if slowo != 'nad':
+            dlugosc_slow.append(len(slowo))
+
+    print dlugosc_slow
 
 Za pomocą listy składanej możemy uprościć cały zapis:
 
-	napis = 'Odwazny rudy lis przeskoczyl nad spiacym wilczurem'
-	slowa = napis.split()
-	dlugosc_slow = [len(slowo) for slowo in slowa if slowo != 'nad']
-	
-	print dlugosc_slow
+    napis = 'Odwazny rudy lis przeskoczyl nad spiacym wilczurem'
+    slowa = napis.split()
+    dlugosc_slow = [len(slowo) for slowo in slowa if slowo != 'nad']
+
+    print dlugosc_slow
 
 Jeśli chcemy, to możemy pominąć część z `if`, dzięki czemu operacja będzie przeprowadzona dla wszystkich obiektów.
 
-	napis = 'Odwazny rudy lis przeskoczyl nad spiacym wilczurem'
-	slowa = napis.split()
-	dlugosc_slow = [len(slowo) for slowo in slowa]
-	
-	print dlugosc_slow
-	
+    napis = 'Odwazny rudy lis przeskoczyl nad spiacym wilczurem'
+    slowa = napis.split()
+    dlugosc_slow = [len(slowo) for slowo in slowa]
+
+    print dlugosc_slow
+
 ### Ćwiczenie
 
 Za pomocą listy składanej stwórz nową tablicę 'nowa' na podstawie tablicy 'liczby'. 'nowa' ma się składać z całkowitych części nieujemnych liczb tablicy 'liczby'. Wskazówka: liczbę rzeczywistą możemy zaokrąglić do całkowitej za pomocą `int()`: int(4.3)
@@ -45,3 +45,6 @@ print nowa
 Expected Output
 ---------------
 [34, 44, 68, 44, 12]
+
+Solution
+--------

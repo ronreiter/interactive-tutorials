@@ -14,7 +14,8 @@ There is no need to download anything - just click on the chapter you wish to be
 
 - [[Hello, World!]]
 - [[Variables and Types]]
-- [[Arrays]]
+- [[Simple arrays]]
+- [[Arrays with keys]]
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]

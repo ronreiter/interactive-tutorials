@@ -202,8 +202,9 @@
         <h5 style="line-height: 28px">
             Code Window
             <span style="float: right;">
-                <a class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>Run</a>
-                <a onclick="reset()" class="btn btn-primary">Reset</a>
+                <button id="run-button" class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>Run</button>
+                <button id="reset-button" onclick="reset()" class="btn btn-primary">Reset</button>
+                <button id="solution-button" onclick="showSolution()" class="btn btn-primary">Solution</button>
             </span>
         </h5>
 
@@ -217,7 +218,7 @@
             <h5 style="line-height: 28px">
                 Output Window
                 <span style="float: right">
-                    <a class="btn btn-primary" onclick="showExpected()">Expected Output</a>
+                    <button id="expected-output-button" class="btn btn-primary" onclick="showExpected()">Expected Output</button>
                 </span>
             </h5>
             <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
@@ -255,4 +256,5 @@
 </footer>
 
 <div id="expected-output" style="display: none">{{ output }}</div>
+<div id="solution" style="display: none">{{ solution }}</div>
 {% endblock %}

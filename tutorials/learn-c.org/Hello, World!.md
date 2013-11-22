@@ -42,20 +42,25 @@ Notice that every line in C must end with a semicolon, so that the compiler know
 
 Last but not least, we will need to call the function `printf` to print our sentence.
 
-### Exercise
+Exercise
+--------
 
 Change the program in the bottom in a way so that it prints to the output "Hello, world!". 
 
 Tutorial Code
 -------------
 
-	#include <stdio.h>
-    
-	int main() {
-	  printf("Goodbye, World!");
-	  return 0;
-	}
+#include <stdio.h>
+
+int main() {
+  printf("Goodbye, World!");
+  return 0;
+}
 
 Expected Output
 ---------------
-	Hello, World!
+
+Hello, World!
+
+Solution
+--------

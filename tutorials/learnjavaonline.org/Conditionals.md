@@ -94,7 +94,8 @@ When we are using objects and want to check if they are equal, the operator `==`
     boolean r2 = a.equals(b); // This is true, since a and b are logically equals
     boolean r3 = a == sameA; // This is true, since a and b are really the same object
 
-### Exercise
+Exercise
+--------
 
 Change the variables in the first section, so that each if statement resolves as true.
 
@@ -122,3 +123,6 @@ Expected Output
 ---------------
 
 Success!
+
+Solution
+--------

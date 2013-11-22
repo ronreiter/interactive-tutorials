@@ -72,7 +72,8 @@ cause the number 9 to be not printed in this example.
     }
     ?>
 
-### Exercise
+Exercise
+--------
 
 Use a `while` loop to write a function which prints all **odd** numbers in an array. Remember - you
 will need to use the `\n` character sequence at the end of the echo statement to move to the next line.
@@ -80,53 +81,57 @@ will need to use the `\n` character sequence at the end of the echo statement to
 Tutorial Code
 -------------
 
-    // TODO: Fill this function
-	function print_odd_numbers($numbers) {
+// TODO: Fill this function
+function print_odd_numbers($numbers) {
 
 
-	}
+}
 
-    // Testing code
-	print_odd_numbers(56, 65, 26, 86, 66, 34, 78, 74, 67, 18, 34, 73, 45, 67, 75, 10, 60, 80, 74, 16, 86, 34, 12, 23, 42, 72, 36, 3, 73, 9, 92, 81, 94, 54, 97, 74, 45, 55, 70, 94, 96, 81, 86, 86, 84, 4, 32, 8, 96, 86, 87, 18, 84, 87, 59, 48, 32, 90, 17, 22, 82, 79, 66, 28, 17, 14, 80, 83, 66, 36, 21, 89, 68, 2, 51, 65, 20, 87, 48, 5, 1, 16, 60, 53, 84, 90, 16, 2, 37, 73, 57, 70, 57, 69, 68, 1, 24, 40, 72, 97]);
+// Testing code
+print_odd_numbers(56, 65, 26, 86, 66, 34, 78, 74, 67, 18, 34, 73, 45, 67, 75, 10, 60, 80, 74, 16, 86, 34, 12, 23, 42, 72, 36, 3, 73, 9, 92, 81, 94, 54, 97, 74, 45, 55, 70, 94, 96, 81, 86, 86, 84, 4, 32, 8, 96, 86, 87, 18, 84, 87, 59, 48, 32, 90, 17, 22, 82, 79, 66, 28, 17, 14, 80, 83, 66, 36, 21, 89, 68, 2, 51, 65, 20, 87, 48, 5, 1, 16, 60, 53, 84, 90, 16, 2, 37, 73, 57, 70, 57, 69, 68, 1, 24, 40, 72, 97]);
 
 
 Expected Output
 ---------------
 
-	65
-    67
-    73
-    45
-    67
-    75
-    23
-    3
-    73
-    9
-    81
-    97
-    45
-    55
-    81
-    87
-    87
-    59
-    17
-    79
-    17
-    83
-    21
-    89
-    51
-    65
-    87
-    5
-    1
-    53
-    37
-    73
-    57
-    57
-    69
-    1
-    97
+65
+67
+73
+45
+67
+75
+23
+3
+73
+9
+81
+97
+45
+55
+81
+87
+87
+59
+17
+79
+17
+83
+21
+89
+51
+65
+87
+5
+1
+53
+37
+73
+57
+57
+69
+1
+97
+
+Solution
+--------
+

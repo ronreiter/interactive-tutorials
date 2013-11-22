@@ -40,9 +40,3 @@ Table of Contents
 
 Read more here: [[Contributing Tutorials]]
 
-### Other Programming Languages
-
-- [Learn JavaScript - Free Interactive JavaScript Tutorial](http://learn-js.org)
-- [Learn Java - Free Interactive Java Tutorial](http://learnjavaonline.org)
-- [Learn Python - Free Interactive Python Tutorial](http://learnpython.org)
-

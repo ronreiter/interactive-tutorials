@@ -39,27 +39,31 @@ in the following notation, and assign a new value to `a`:
     a = b - c + d * e;
     printf("%d", a); /* will print 1-2+3*4 = 11 */
 
-### Exercise
+Exercise
+--------
 
 In the next exercise, you will need to create a program which prints out the sum of the numbers `a`, `b`, and `c`.
 
 Tutorial Code
 -------------
 
-	#include <stdio.h>
+    #include <stdio.h>
 
-	int main() {
-	  int a = 3;
-	  float b = 4.5;
-	  double c = 5.25;
-	  double sum;
+    int main() {
+      int a = 3;
+      float b = 4.5;
+      double c = 5.25;
+      double sum;
 
-	  /* Your code goes here */
+      /* Your code goes here */
 
-	  printf("The sum of a, b, and c is %f.", sum);
-	  return 0;
-	}
+      printf("The sum of a, b, and c is %f.", sum);
+      return 0;
+    }
 
 Expected Output
 ---------------
-	The sum of a, b, and c is 12.750000.
+    The sum of a, b, and c is 12.750000.
+
+Solution
+--------

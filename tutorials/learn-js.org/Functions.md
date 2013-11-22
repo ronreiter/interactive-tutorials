@@ -7,42 +7,46 @@ There are two ways to define functions in JavaScript - named functions and anony
 
 To define a named function, we use the `function` statement as follows:
 
-	function greet(name)
-	{
-	    return "Hello " + name + "!";
-	}
+    function greet(name)
+    {
+        return "Hello " + name + "!";
+    }
 
-	console.log(greet("Eric"));      // prints out Hello Eric!
+    console.log(greet("Eric"));      // prints out Hello Eric!
 
 In this function, the `name` argument to the `greet` function is used inside the function to construct a new string and return it using the `return` statement.
 
 To define an anonymous function, we can alternatively use the following syntax:
 
-	var greet = function(name)
-	{
-	    return "Hello " + name + "!";
-	}
+    var greet = function(name)
+    {
+        return "Hello " + name + "!";
+    }
 
-	console.log(greet("Eric"));      // prints out Hello Eric!
+    console.log(greet("Eric"));      // prints out Hello Eric!
 
-### Exercise
+Exercise
+--------
 
 Define a function called `multiplyFive` which accepts a number and returns that number multiplied by 5.
 
 Tutorial Code
 -------------
 
-	// TODO: define the function multiplyFive here
-	
-	console.log(multiplyFive(3));
-	console.log(multiplyFive(4));
-	console.log(multiplyFive(5));
-	console.log(multiplyFive(6));
+// TODO: define the function multiplyFive here
+
+console.log(multiplyFive(3));
+console.log(multiplyFive(4));
+console.log(multiplyFive(5));
+console.log(multiplyFive(6));
 
 Expected Output
 ---------------
 
-	15
-	20
-	25
-	30
+15
+20
+25
+30
+
+Solution
+--------

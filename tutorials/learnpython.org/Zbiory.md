@@ -54,3 +54,6 @@ Expected Output
 set(['Zuza', 'Ewa', 'Maciek', 'Jacek', 'Mateusz', 'Magda', 'Ula', 'Olek', 'Anna', 'Ola', 'Paulina', 'Tomek', 'Karolina', 'Marzena', 'Anastazja', 'Joanna', 'Bartosz', 'Monika', 'Bartek', 'Dawid', 'Kacper', 'Kuba'])
 set(['Ewa'])
 set(['Zuza', 'Dawid', 'Maciek', 'Jacek', 'Mateusz', 'Magda', 'Ula', 'Olek', 'Ola', 'Paulina', 'Tomek', 'Marzena', 'Anastazja', 'Joanna', 'Bartosz', 'Bartek', 'Kacper', 'Kuba'])
+
+Solution
+--------

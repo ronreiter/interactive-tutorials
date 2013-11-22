@@ -30,24 +30,29 @@ For example, this function will perform multiplication by recursively adding :
     }
  
  
-### Exercise
+Exercise
+--------
  
 Define a new function that will computer the factorial function (5! = 5x4x3x2x1).
  
 Tutorial Code
 -------------
- 
-    #include <stdio.h>
-    
-    int main() {
-      /* testing code */
-      printf("1! = %i", factorial(1));
-      printf("3! = %i", factorial(3));
-      printf("5! = %i", factorial(5));
-    }
- 
+
+#include <stdio.h>
+
+int main() {
+  /* testing code */
+  printf("1! = %i", factorial(1));
+  printf("3! = %i", factorial(3));
+  printf("5! = %i", factorial(5));
+}
+
 Expected Output
 ---------------
-        1! = 1
-        3! = 6
-        5! = 120
+
+1! = 1
+3! = 6
+5! = 120
+
+Solution
+--------

@@ -55,7 +55,8 @@ For example, lets call the functions written above (in the previous example):
     x = sum_two_numbers(1,2)  
 
  
-### Exercise
+Exercise
+--------
  
 In this exercise you'll use an existing function, and while adding your own to create a fully functional program.
  
@@ -91,3 +92,6 @@ More organized code is a benefit of functions!
 More readable code is a benefit of functions!
 Easier code reuse is a benefit of functions!
 Allowing programmers to share and connect code together is a benefit of functions!
+
+Solution
+--------

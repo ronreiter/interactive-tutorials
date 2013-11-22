@@ -22,9 +22,9 @@ W C istnieje kilka typów danych. Poniżej opisano te podstawowe:
 Za pomocą dodatkowych kwalifikatorów **signed** i **unsigned** możemy określić czy chcemy pracować z liczbami dodatnimi i ujemnyni, czy tylko nieujemnymi (ang. unsigned - bez znaku). Jeśli sami nie postawimy tych kwalifikatorów to kompilator uzna, że chodzi o signed.
 
 Po nazwie typu trzeba podać nazwę naszej zmiennej. Wszystkie zmienne deklarujemy zawsze na samym początku funkcji.
-	
-	unsigned short int zmienna;
-	
+
+    unsigned short int zmienna;
+
 Do powyższej zmiennej 'zmienna' można zapisać liczbę całkowitą nieujemną.
 Jeśli chcesz wiedzieć ile miejsca w konkretnym komputerze zajmuje dany typ, użyj instrukcji printf("%d\n", sizeof(nazwa_typu));
 Zamiast nazwy typu możesz użyć nazwy zadeklarowanej wcześniej zmiennej.
@@ -39,32 +39,32 @@ W tym ćwiczeniu muszą zostać wydrukowana suma zmiennych a, b i c.
 
 Tutorial Code
 -------------
-	
-	#include <stdio.h>
-	
-	int main(){
-	  short int a = 1;
-	  int b = 45;
-	  int c = 4;
-	  int suma = 0;
-	
-	  /*Ponizej umiesc swoj kod*/
-	
-	
-		
-	  /*ponizej nic nie zmieniaj*/
-	  printf("Suma zmiennych a, b, i c wynosi %d\n\n", suma);
-	  printf("Ponizej mozesz zobaczyc ile bajtow\n");
-	  printf("zajmuja poszczegolne typy danych\n");
-	  printf("char %d\n", sizeof(char));
-	  printf("short int %d\n", sizeof(short int));
-	  printf("int %d\n", sizeof(int));
-	  printf("long int %d\n", sizeof(long int));
-	  printf("float %d\n", sizeof(float));
-	  printf("double %d\n", sizeof(double));
-	
-	  return 0;
-	}
+
+#include <stdio.h>
+
+int main(){
+  short int a = 1;
+  int b = 45;
+  int c = 4;
+  int suma = 0;
+
+  /*Ponizej umiesc swoj kod*/
+
+
+
+  /*ponizej nic nie zmieniaj*/
+  printf("Suma zmiennych a, b, i c wynosi %d\n\n", suma);
+  printf("Ponizej mozesz zobaczyc ile bajtow\n");
+  printf("zajmuja poszczegolne typy danych\n");
+  printf("char %d\n", sizeof(char));
+  printf("short int %d\n", sizeof(short int));
+  printf("int %d\n", sizeof(int));
+  printf("long int %d\n", sizeof(long int));
+  printf("float %d\n", sizeof(float));
+  printf("double %d\n", sizeof(double));
+
+  return 0;
+}
 
 Expected Output
 ---------------
@@ -78,3 +78,6 @@ int 4
 long int 4
 float 4
 double 8
+
+Solution
+--------

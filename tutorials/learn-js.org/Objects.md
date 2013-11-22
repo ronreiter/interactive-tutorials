@@ -5,11 +5,11 @@ JavaScript is a functional language, and for object oriented programming it uses
 
 To initialize an object, use curly braces:
 
-	var emptyObject = {};
-	var personObject = {
-	    firstName : "John",
-	    lastName : "Smith"
-	}
+    var emptyObject = {};
+    var personObject = {
+        firstName : "John",
+        lastName : "Smith"
+    }
 
 ### Member addressing
 
@@ -17,35 +17,36 @@ Members of objects can be addressed using the brackets operator `[]`, very much 
 
 For example, we can continue to fill the person object with more details:
 
-	var personObject = {
-	    firstName : "John",
-	    lastName : "Smith"
-	}
-	personObject.age = 23;
-	personObject["salary"] = 14000
+    var personObject = {
+        firstName : "John",
+        lastName : "Smith"
+    }
+    personObject.age = 23;
+    personObject["salary"] = 14000
 
 ### Iteration
 
 Iterating over members of a dictionary is not a trivial task, since iterating over objects can also yield members who don't actually belong to an object. Therefore, we must use the `hasOwnProperty` method to check that the member in fact belongs to the object.
 
-	for (var member in personObject)
-	{
-	    if (personObject.hasOwnProperty(member))
-	    {
-	        console.log("the member " + member + " of personObject is " + personObject[member])
-	    }
-	}
+    for (var member in personObject)
+    {
+        if (personObject.hasOwnProperty(member))
+        {
+            console.log("the member " + member + " of personObject is " + personObject[member])
+        }
+    }
 
 This will eventually print out
 
-	the member firstName of personObject is John
-	the member lastName of personObject is Smith
-	the member age of personObject is 23
-	the member salary of personObject is 14000
+    the member firstName of personObject is John
+    the member lastName of personObject is Smith
+    the member age of personObject is 23
+    the member salary of personObject is 14000
 
 Note that methods of objects in JavaScript have a fixed order, like arrays.
 
-### Exercise
+Exercise
+--------
 
 You must define an object called `person` with the following members:
 
@@ -57,18 +58,21 @@ You must define an object called `person` with the following members:
 Tutorial Code
 -------------
 
-	// TODO: change this code
-	var person;
+// TODO: change this code
+var person;
 
-	console.log(person.firstName);
-	console.log(person.lastName);
-	console.log(person.age);
-	console.log(person.employed);
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.age);
+console.log(person.employed);
 
 Expected Output
 ---------------
 
-	Jack
-	Smith
-	19
-	true
+Jack
+Smith
+19
+true
+
+Solution
+--------

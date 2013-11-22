@@ -12,21 +12,21 @@ Jeśli się w tym wszystkim pogubiłeś, to na razie nic się nie martw. W tym t
 ### Nasz pierwszy program
 
 Każdy program napisany w języku C korzysta z tzw. bibliotek, czyli plików zawierających niezbędne funkcje (małe podprogramy). Aby wyświetlić na ekranie tekst potrzebna jest funkcja **printf**, która znajduje się w bibliotece stdio.h. Aby dołączyć tą bibliotekę na samym początku programu umieść komendę
-	
-	#include <stdio.h>
-	
+
+    #include <stdio.h>
+
 W drugiej części naszego programu znajduje się funkcja main (ang. główna), w której zapisane jest to, co robi nasz program.
-	
-	int main(){
-	  tutaj umieszczamy polecenia dla komputera
-	}
-	
+
+    int main(){
+      tutaj umieszczamy polecenia dla komputera
+    }
+
 Słowo **int** oznacza, że main zwraca liczbę całkowitą. Funkcja główna zwraca ten rezultat systemowi operacyjnemy. Zgodnie z powszechnie przyjętą wśród programistów zasadą program powinien zwracać 0, gdy zakończył się powodzeniem. Jeśli napotkał błąd, to powinien zwrócić liczbę różną od zera. Już niedługo będziesz mógł tworzyć własne funkjce, które będą zwracały również liczby rzeczywiste, znaki, wskaźniki a nawet... nic.
 
 W tym kursie również przyjmiemy, że program zwarca zero, gdy wszystko poszło dobrze
-	
-	return 0;
-	
+
+    return 0;
+
 Pamiętaj, że każda komenda musi się kończyć średnikiem. Jest to informacja dla kompilatora, że tu kończy się pojedyńcza instrukcja.
 Ta zasada nie dotyczy tylko instrukcji zaczynających się znakiem **#**, ale o nich porozmawiamy później. W końcu musimy wywołać komendę printf, aby wipisać tekst na ekran.
 
@@ -42,18 +42,22 @@ Zmień kod programu tak, aby na ekranie zostało wypisany tekst 'Witaj Swiecie'
 
 Tutorial Code
 -------------
-	
-	#include <stdio.h>
-	
-	/*oto przykladowy
-	komentarz w programie*/
-	/*Uwaga! komentarzy nie mozna zagniezdzac*/
-	
-	int main(){
-	  printf("Zegnaj Swiecie");
-	  return 0;
-	}
-	
+
+#include <stdio.h>
+
+/*oto przykladowy
+komentarz w programie*/
+/*Uwaga! komentarzy nie mozna zagniezdzac*/
+
+int main(){
+  printf("Zegnaj Swiecie");
+  return 0;
+}
+
 Expected Output
 ---------------
+
 Witaj Swiecie
+
+Solution
+--------

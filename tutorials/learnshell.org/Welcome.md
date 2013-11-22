@@ -36,10 +36,3 @@ Table of Contents - Shell Programming
 ### Contributing Tutorials
 
 Read more here: [[Contributing Tutorials]]
-
-### Other Programming Languages
-
-- [Learn Python - Free Interactive Python Tutorial](http://learnpython.org)
-- [Learn JavaScript - Free Interactive JavaScript Tutorial](http://learn-js.org)
-- [Learn C - Free Interactive C Tutorial](http://learn-c.org)
-- [Learn Java - Free Interactive Java Tutorial](http://learnjavaonline.org)

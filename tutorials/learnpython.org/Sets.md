@@ -48,3 +48,6 @@ b = ["John", "Jill"]
 Expected Output
 ---------------
 set(['Jake', 'Eric'])
+
+Solution
+--------

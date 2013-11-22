@@ -64,19 +64,22 @@ and returns a sentence starting with the given string and ending with the string
 Código del tutorial
 -------------
 
-	#Add your functions here (before the existing functions) 	
+#Add your functions here (before the existing functions)
 
-	def name_the_benefits_of_functions():
-	    list_of_benefits = list_benefits()
-	    for benefit in list_of_benefits:
-	        print build_sentence(benefit)
+def name_the_benefits_of_functions():
+    list_of_benefits = list_benefits()
+    for benefit in list_of_benefits:
+        print build_sentence(benefit)
 
-	name_the_benefits_of_functions()
+name_the_benefits_of_functions()
 
 
 Salida esperada
 ---------------
-	More organized code is a benefit of functions!
-	More readable code is a benefit of functions!
-	Easier code reuse is a benefit of functions!
-	Allowing programmers to share and connect code together is a benefit of functions!
+More organized code is a benefit of functions!
+More readable code is a benefit of functions!
+Easier code reuse is a benefit of functions!
+Allowing programmers to share and connect code together is a benefit of functions!
+
+Solution
+--------

@@ -24,7 +24,8 @@ defined an array of size 10, then the array cells 0 through 9 (inclusive) are de
 Arrays can only have one type of variable, because they are implemented as a sequence of values in the computer's memory.
 Because of that, accessing a random array cell is very efficient.
 
-### Exercise
+Exercise
+--------
 
 * The code below does not compile, because the `grades` variable is missing. 
 * One of the grades is missing. Can you define it so the grade average will be 85?
@@ -32,23 +33,27 @@ Because of that, accessing a random array cell is very efficient.
 Tutorial Code
 -------------
 
-	#include <stdio.h>
-    
-	int main() {
-	  /* TODO: define the grades variable here */
-	  int average;
+#include <stdio.h>
 
-	  grades[0] = 80;
-	  /* TODO: define the missing grade 
-	     so that the average will sum to 85. */
-	  grades[2] = 90;
+int main() {
+  /* TODO: define the grades variable here */
+  int average;
 
-	  average = (grades[0] + grades[1] + grades[2]) / 3;
-	  printf("The average of the 3 grades is: %d", average);
+  grades[0] = 80;
+  /* TODO: define the missing grade
+     so that the average will sum to 85. */
+  grades[2] = 90;
 
-	  return 0;
-	}
+  average = (grades[0] + grades[1] + grades[2]) / 3;
+  printf("The average of the 3 grades is: %d", average);
+
+  return 0;
+}
 
 Expected Output
 ---------------
-	The average of the 3 grades is: 85
+
+The average of the 3 grades is: 85
+
+Solution
+--------

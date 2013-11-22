@@ -1,15 +1,19 @@
 Tutorial
 --------
 
-### Exercise
+Exercise
+--------
 
 Print "Hello, World!" to the console.
 
 Tutorial Code
 -------------
 
-
 Expected Output
 ---------------
 
-	Hello, World!
+Hello, World!
+
+Solution
+--------
+

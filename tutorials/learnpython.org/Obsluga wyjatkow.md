@@ -27,21 +27,24 @@ To nie było zbyt trudne! Możesz to zrobić z każdym wyjątkiem. Aby dowiedzie
 
 Tutorial Code
 -------------
-	
-	#Setup
-	aktor = {"imie": "Piotr Fronczewski", "opinia": "swietny"}
-	
-	#Musisz ta funkcje zmodyfikowac tak, aby zwracala nazwisko aktora.
-	# W razie potrzeby przypomnij sobie poprzednie lekcje
-	def zwroc_nazwisko():
-	    return aktor["nazwisko"]
-	
-	#Test kodu
-	zwroc_nazwisko()
-	print "Wszystkie wyjatki obsluzone! Dobra robota!"
-	print "Nazwisko aktora brzmi %s" % zwroc_nazwisko()
-	
+
+#Setup
+aktor = {"imie": "Piotr Fronczewski", "opinia": "swietny"}
+
+#Musisz ta funkcje zmodyfikowac tak, aby zwracala nazwisko aktora.
+# W razie potrzeby przypomnij sobie poprzednie lekcje
+def zwroc_nazwisko():
+    return aktor["nazwisko"]
+
+#Test kodu
+zwroc_nazwisko()
+print "Wszystkie wyjatki obsluzone! Dobra robota!"
+print "Nazwisko aktora brzmi %s" % zwroc_nazwisko()
+
 Expected Output
 ---------------
 Wszystkie wyjatki obsluzone! Dobra robota!
 Nazwisko aktora brzmi Fronczewski
+
+Solution
+--------

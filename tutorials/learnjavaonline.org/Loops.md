@@ -111,7 +111,8 @@ These two keywords help us control the loop from within it.
     // Yuhu
     // 3
 
-### Exercise
+Exercise
+--------
 
 Loop through and print out all even numbers from the numbers list in the same order they are received. Don't print any numbers that come after 237 in the sequence.
 
@@ -137,3 +138,6 @@ Expected Output
 ---------------
 
 402 984 360 408 980 544 390 984 592 236 942 386 462 418 344 236 566 978 328 162 758 918
+
+Solution
+--------

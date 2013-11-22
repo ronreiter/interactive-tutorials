@@ -10,19 +10,19 @@ Python supports two types of numbers - integers and floating point numbers. (It 
 
 To define an integer, use the following syntax:
 
-	myint = 7
+    myint = 7
 
 To define a floating point number, you may use one of the following notations:
 
-	myfloat = 7.0
-	myfloat = float(7)
+    myfloat = 7.0
+    myfloat = float(7)
 
 ### Strings
 
 Strings are defined either with a single quote or a double quotes.
 
-	mystring = 'hello'
-	mystring = "hello"
+    mystring = 'hello'
+    mystring = "hello"
 
 The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
 
@@ -32,45 +32,49 @@ There are additional variations on defining strings that make it easier to inclu
 
 Simple operators can be executed on numbers and strings:
 
-	one = 1
-	two = 2
-	three = one + two
+    one = 1
+    two = 2
+    three = one + two
 
-	hello = "hello"
-	world = "world"
-	helloworld = hello + " " + world
+    hello = "hello"
+    world = "world"
+    helloworld = hello + " " + world
 
 Assignments can be done on more than one variable "simultaneously" on the same line like this
 
-	a, b = 3, 4
+    a, b = 3, 4
 
 Mixing operators between numbers and strings is not supported:
 
-	# This will not work!
-	print one + two + hello
+    # This will not work!
+    print one + two + hello
 
 
-### Exercise
+Exercise
+--------
 
 The target of this exercise is to create a string, an integer, and a floating point number. The string should be named mystring and should contain the word "hello". The floating point number should be named myfloat and should contain the number 10, and the integer should be named myint and should contain the number 20. 
 
 Tutorial Code
 -------------
-	# change this code
-	mystring = None
-	myfloat = None
-	myint = None
+# change this code
+mystring = None
+myfloat = None
+myint = None
 
-	# testing code
-	if mystring == "hello":
-	    print "String: %s" % mystring
-	if isinstance(myfloat, float) and myfloat == 10.0:
-	    print "Float: %d" % myfloat
-	if isinstance(myint, int) and myint == 20:
-	    print "Integer: %d" % myint
+# testing code
+if mystring == "hello":
+    print "String: %s" % mystring
+if isinstance(myfloat, float) and myfloat == 10.0:
+    print "Float: %d" % myfloat
+if isinstance(myint, int) and myint == 20:
+    print "Integer: %d" % myint
 
 Expected Output
 ---------------
-	String: hello
-	Float: 10
-	Integer: 20
+String: hello
+Float: 10
+Integer: 20
+
+Solution
+--------

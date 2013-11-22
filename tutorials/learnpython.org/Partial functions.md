@@ -7,16 +7,16 @@ Partial functions allow one to derive a function with x parameters to a function
 
 Import required:
 
-	from functools import partial
+    from functools import partial
 
 Example:
 
-	def multiply(x,y):
-	    return x * y
+    def multiply(x,y):
+        return x * y
 
-	# create a new function that multiplies by 2
-	dbl = partial(multiply,2)
-	print dbl(4)
+    # create a new function that multiplies by 2
+    dbl = partial(multiply,2)
+    print dbl(4)
 
 This code will return 8.  
 
@@ -27,14 +27,17 @@ y will equal 4 when dbl(4) is called.  It does not make a difference in this exa
 Tutorial Code
 -------------
 
-	from functools import partial
-	def func(u,v,w,x):
-	    return u*4 + v*3 + w*2 + x
-	
-	p = partial(func,5,6,7)
-	print p(8)
+from functools import partial
+def func(u,v,w,x):
+    return u*4 + v*3 + w*2 + x
+
+p = partial(func,5,6,7)
+print p(8)
 
 Expected Output
 ---------------
 
-	60
+60
+
+Solution
+--------

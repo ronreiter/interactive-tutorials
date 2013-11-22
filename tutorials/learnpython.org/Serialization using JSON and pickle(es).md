@@ -34,3 +34,6 @@ Expected Output
 ---------------
 
 {"Jane": 301, "Alfredo": 300}
+
+Solution
+--------

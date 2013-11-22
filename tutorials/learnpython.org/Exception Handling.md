@@ -36,6 +36,7 @@ more details on handling exceptions, look no further than [here](http://docs.pyt
 
 Tutorial Code
 -------------
+
 # Handle all the exceptions!
 #Setup
 actor = {"name": "John Cleese", "rank": "awesome"}
@@ -51,5 +52,9 @@ print "The actor's last name is %s" % get_last_name()
 
 Expected Output
 ---------------
+
 All exceptions caught! Good job!
 The actor's last name is Cleese
+
+Solution
+--------

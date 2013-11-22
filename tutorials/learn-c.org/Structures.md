@@ -57,26 +57,31 @@ Since brand is a char pointer, the vehicle type can contain a string (which, in 
     mycar.brand = "Ford";
     mycar.model = 2007;
 
-### Exercise
+Exercise
+--------
 
 Define a new data structure, named "person", which contains a string (pointer to char) called `name`, and an integer called `age`.
 
 Tutorial Code
 -------------
 
-	#include <stdio.h>
-	
-	/* define the person struct here using the typedef syntax */
+#include <stdio.h>
 
-	int main() {
-	  person john;
+/* define the person struct here using the typedef syntax */
 
-	  /* testing code */
-	  john.name = "John";
-	  john.age = 27;
-	  printf("%s is %d years old.", john.name, john.age);
-	}
+int main() {
+  person john;
+
+  /* testing code */
+  john.name = "John";
+  john.age = 27;
+  printf("%s is %d years old.", john.name, john.age);
+}
 
 Expected Output
 ---------------
-	John is 27 years old.
+
+John is 27 years old.
+
+Solution
+--------

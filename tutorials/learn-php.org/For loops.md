@@ -46,26 +46,31 @@ variable.
     }
     ?>
 
-### Exercise
+Exercise
+--------
 
 Print out all numbers inside the array, one by one.
 
 Tutorial Code
 -------------
 
-	$even_numbers = [2,4,6,8,10,12,14,16,18,20];
+$even_numbers = [2,4,6,8,10,12,14,16,18,20];
 
 
 Expected Output
 ---------------
 
-	2
-	4
-	6
-	8
-	10
-	12
-	14
-	16
-	18
-	20
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+Solution
+--------
+

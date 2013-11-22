@@ -10,16 +10,22 @@ This tutorial uses Python 2.X, which allows you to print a line without parenthe
 
 To print a line, simply write:
 
-	print "This line will be printed."
+    print "This line will be printed."
 
-### Exercise
+Exercise
+--------
 
 Use the "print" command to print the line "Hello, World!".
 
 Tutorial Code
 -------------
-	print "Goodbye, World!"
+
+print "Goodbye, World!"
 
 Expected Output
 ---------------
-	Hello, World!
+
+Hello, World!
+
+Solution
+--------

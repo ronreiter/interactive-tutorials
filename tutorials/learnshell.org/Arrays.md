@@ -3,22 +3,22 @@ Tutorial
 An array can hold several values under one name. Array naming is the same as variables naming.
 An array is initialized by assign space-delimited values enclosed in ()
 
-	my_array=(apple banana "Fruit Basket"  orange)
-	new_array[2]=apricot
+    my_array=(apple banana "Fruit Basket"  orange)
+    new_array[2]=apricot
 
 Array members need not be consecutive or contiguous. Some members of the array can be left uninitialized.
 
 The total number of elements in the array is referenced by ${#arrayname[@]}
 
-	echo  ${#my_array[@]}			# 4
+    echo  ${#my_array[@]}            # 4
 
 The array elements can be accessed with their numeric index. The index of the first element is 0.
 
-	echo ${my_array[3]}			# orange - note that curly brackets are needed
-	# adding another array element
-	my_array[4]="carrot"			# value assignment without a $ and curly brackets
-	echo ${#my_array[@]}			# 5
-	echo ${my_array[${#my_array[@]}-1]}    # carrot
+    echo ${my_array[3]}            # orange - note that curly brackets are needed
+    # adding another array element
+    my_array[4]="carrot"            # value assignment without a $ and curly brackets
+    echo ${#my_array[@]}            # 5
+    echo ${my_array[${#my_array[@]}-1]}    # carrot
 
 Exercise
 --------
@@ -28,32 +28,30 @@ You will also have to correct the values of the variable NumberOfNames and the v
 
 Tutorial Code
 -------------
-	#!/bin/bash
-	NAMES=( John Eric Jessica )
-	
-	# write your code here
-	NUMBERS=()
-	STRINGS=()
-	NumberOfNames=0
-	second_name='Vladimir'
+#!/bin/bash
+NAMES=( John Eric Jessica )
 
+# write your code here
+NUMBERS=()
+STRINGS=()
+NumberOfNames=0
+second_name='Vladimir'
 
+# Testing Code
 
-
-
-
-	# Testing Code
-
-	# this code should write out the filled arrays, the number of names (3) 
-	# and the second name in the NAMES array (Eric).
-	echo ${NUMBERS[@]}
-	echo ${STRINGS[@]}
-	echo "The number of names listed in the NAMES array: $NumberOfNames"
-	echo "The second name on the NAMES list is:" ${second_name}
+# this code should write out the filled arrays, the number of names (3)
+# and the second name in the NAMES array (Eric).
+echo ${NUMBERS[@]}
+echo ${STRINGS[@]}
+echo "The number of names listed in the NAMES array: $NumberOfNames"
+echo "The second name on the NAMES list is:" ${second_name}
 
 Expected Output
 ---------------
-	1 2 3
-	hello world
-	The number of names listed in the NAMES array: 3
-	The second name on the NAMES list is: Eric
+1 2 3
+hello world
+The number of names listed in the NAMES array: 3
+The second name on the NAMES list is: Eric
+
+Solution
+--------

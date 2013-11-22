@@ -5,23 +5,24 @@ Callbacks in JavaScript are functions that are passed as arguments to other func
 
 For example:
 
-	var callback = function() {
-		console.log("Done!");
-	}
+    var callback = function() {
+        console.log("Done!");
+    }
 
-	setTimeout(callback, 5000);
+    setTimeout(callback, 5000);
 
 This code waits 5 seconds and prints out "Done!" when the 5 seconds are up. Note that this code will not work in the interpreter because it is not designed for handling callbacks.
 
 It is also possible to define callbacks as anonymous functions, like so:
 
-	setTimeout(function() {
-	    console.log("Done!");
-	}, 5000);
+    setTimeout(function() {
+        console.log("Done!");
+    }, 5000);
 
 Like regular functions, callbacks can receive arguments and be executed more than once.
 
-### Exercise
+Exercise
+--------
 
 Define a function called `callback` which receives an argument and prints it out.
 
@@ -30,9 +31,9 @@ Tutorial Code
 
 function useCallback(callback)
 {
-	callback(1);
-	callback(2);
-	callback(3);
+    callback(1);
+    callback(2);
+    callback(3);
 }
 
 function callback(sentence) {
@@ -43,6 +44,9 @@ function callback(sentence) {
 
 Expected Output
 ---------------
-	1
-	2
-	3
+1
+2
+3
+
+Solution
+--------

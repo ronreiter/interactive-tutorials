@@ -57,12 +57,6 @@ Table of Contents
 
 Read more here: [[Contributing Tutorials]]
 
-### Other Programming Languages
-
-- [Learn JavaScript - Free Interactive JavaScript Tutorial](http://learn-js.org)
-- [Learn C - Free Interactive C Tutorial](http://learn-c.org)
-- [Learn Java - Free Interactive Java Tutorial](http://learnjavaonline.org)
-
 ### Paid Tutorials
 
 - Take [Learn Python the Hard Way](http://ude.my/87d5) course from Zed Shaw

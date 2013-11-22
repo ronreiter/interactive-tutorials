@@ -47,3 +47,6 @@ print(newJsonSalaries)
 Expected Output
 ---------------
 {"Jane": 301, "Me": 800, "Alfred": 300}
+
+Solution
+--------

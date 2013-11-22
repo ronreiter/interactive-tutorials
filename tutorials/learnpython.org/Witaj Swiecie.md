@@ -12,9 +12,9 @@ W tym samouczku jest używany Python 2.X, któty pozwala wypisać wiersz bez naw
 
 Aby wypisać wiersz po prostu napisz:
 
-	print "Ta linijka tekstu zostanie wypisana."
+    print "Ta linijka tekstu zostanie wypisana."
 
-	
+
 
 ### Ćwiczenie
 
@@ -22,8 +22,11 @@ Używając instrukcji "print" do wypisaznia tekstu "Witaj Swiecie!"
 
 Tutorial Code
 -------------
-	print "Do widzenia Swiecie!"
+print "Do widzenia Swiecie!"
 
 Expected Output
 ---------------
-	Witaj Swiecie! page explains.
+Witaj Swiecie! page explains.
+
+Solution
+--------

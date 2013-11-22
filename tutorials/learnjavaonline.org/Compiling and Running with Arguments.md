@@ -49,19 +49,20 @@ And o run it with arguments:
     javac Arguments.java
     java Arguments arg0 arg1 arg2
 
-### Exercise
+Exercise
+--------
 
 Create a program that prints the arguments of our program. Write one argument per line.
 
 Tutorial Code
 -------------
 
-	public class Main {
-	    public static void main(String[] args) {
-	        // write your code here
+public class Main {
+    public static void main(String[] args) {
+        // write your code here
 
-	    }
-	}
+    }
+}
 
 Expected Output
 ---------------

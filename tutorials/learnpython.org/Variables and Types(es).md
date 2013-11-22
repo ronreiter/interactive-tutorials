@@ -14,19 +14,19 @@ Python soporta dos tipos de números - integrales y numeros de punto flotante. (
 
 Para definir un integral, usa la siguiente sintaxis:
 
-	myint = 7
+    myint = 7
 
 Para definir un número de punto flotante, debes usar una de las siguientes notaciones:
 
-	midecimal = 7.0
-	midecimal = float(7)
+    midecimal = 7.0
+    midecimal = float(7)
 
 ### Cadenas
 
 Las cadenas están definidas con comillas sencillas o compuestas.
 
-	micadena = 'Hola'
-	micadena = "Hola"
+    micadena = 'Hola'
+    micadena = "Hola"
 
 La diferencia ente las dos es que usando doble comillas lo hace mas facil de incluir los apostofres (de lo contrario concluirira la cadena si se usa doble comillas)
 
@@ -36,22 +36,22 @@ There are additional variations on defining strings that make it easier to inclu
 
 Operadores sencillos pueden ser ejecutados en números o cadenas:
 
-	uno = 1
-	dos = 2
-	tres = uno + dos
+    uno = 1
+    dos = 2
+    tres = uno + dos
 
-	hola = "hola"
-	mundo = "mundo"
-	holamundo = hola + " " + mundo
+    hola = "hola"
+    mundo = "mundo"
+    holamundo = hola + " " + mundo
 
 Se puede asignar a mas de una variable simultaneamente en la misma linea, como se muestra aquí
 
-	a, b = 3, 4
+    a, b = 3, 4
 
 Mezclando operadores entre los numeros y cadenas que no son soportadas:
 
-	# Esto no funcionará!
-	print uno + dos + hola
+    # Esto no funcionará!
+    print uno + dos + hola
 
 
 ### Ejercicio
@@ -60,19 +60,22 @@ The target of this exercise is to create a string, an integer, and a floating po
 
 Tutorial Code
 -------------
-	# Escribe tu propio codigo aqui
-	
-	
-	# probando el codigo
-	if micadena == "hola":
-	    print "Cadena: %s" % micadena
-	if isinstance(miflotante, float) and miflotante == 10.0:
-	    print "Flotante: %d" % miflotante
-	if isinstance(miIntegral, int) and miIntegral == 20:
-	    print "Integral: %d" % miIntegral
+# Escribe tu propio codigo aqui
+
+
+# probando el codigo
+if micadena == "hola":
+    print "Cadena: %s" % micadena
+if isinstance(miflotante, float) and miflotante == 10.0:
+    print "Flotante: %d" % miflotante
+if isinstance(miIntegral, int) and miIntegral == 20:
+    print "Integral: %d" % miIntegral
 
 Expected Output
 ---------------
-	Cadena: hola
-	Flotante: 10
-	Integral: 20
+Cadena: hola
+Flotante: 10
+Integral: 20
+
+Solution
+--------

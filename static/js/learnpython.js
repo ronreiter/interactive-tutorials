@@ -53,10 +53,6 @@ function recordOutboundLink(link, category, action) {
 	setTimeout('document.location = "' + link.href + '"', 100);
 }
 
-function reset() {
-	editor.setValue(originalCode);
-}
-
 function eval_console(code) {
 	var original_log = console.log;
 	var text = "";
@@ -223,7 +219,8 @@ function load() {
 		matchBrackets: false,
 		textWrapping: true,
 		readOnly : true,
-		theme: "monokai"
+		theme: "monokai",
+        mode: "text/plain"
 	});
 
     originalCode = editor.getValue();
@@ -238,6 +235,22 @@ function load() {
 function showExpected() {
 	output.setValue($("#expected-output").text());
 }
+
+function showSolution() {
+    var solutionText = $("#solution").text();
+    if (solutionText) {
+    	editor.setValue(solutionText);
+    } else {
+        editor.setValue("There is currently no solution to this exercise.\nPlease contribute your solution on GitHub.\n\nhttp://github.com/ronreiter/interactive-tutorials");
+        $("#run-button").prop("disabled", true);
+    }
+}
+
+function reset() {
+    $("#run-button").prop("disabled", false);
+	editor.setValue(originalCode);
+}
+
 
 $(function() {
 	load();
