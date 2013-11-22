@@ -213,7 +213,7 @@ echo "Hello, World!";
 
 using System;
 
-public class Hello1
+public class Hello
 {
    public static void Main()
    {
