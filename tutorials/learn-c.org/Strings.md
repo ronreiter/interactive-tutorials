@@ -43,6 +43,8 @@ The function `strncmp` compares between two strings, returning the number 0 if t
 The arguments are the two strings to be compared, and the maximum comparison length. There is also an unsafe version of this function
 called `strcmp`, but it is not recommended to use it. For example:
 
+    char * name = "John";
+
     if (strncmp(name, "John", 4) == 0) {
         printf("Hello, John!\n");
     } else {

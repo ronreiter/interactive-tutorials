@@ -5,14 +5,12 @@ While loops are simple blocks that execute repeatedly until the while loop condi
 
 Here is an example of a loop that is executed a total of 10 times:
 
-    <?php
     $counter = 0;
 
     while ($counter < 10) {
         $counter += 1;
         echo "Executing - counter is $counter.\n";
     }
-    ?>
 
 The main difference between for loops and while loops is that for loops are used to iterate over
 an array or an object, and a while loop will execute an unknown amount of times, depending on
@@ -30,8 +28,6 @@ if the loop condition is met as well.
 Let's use the previous example, but this time let's add a check to see if the number is even.
 If it is, we will skip it, so that only odd numbers will be printed out.
 
-
-    <?php
     $counter = 0;
 
     while ($counter < 10) {
@@ -44,7 +40,6 @@ If it is, we will skip it, so that only odd numbers will be printed out.
 
         echo "Executing - counter is $counter.\n";
     }
-    ?>
 
 #### The break statement
 
@@ -52,7 +47,6 @@ Let's assume we want to add another test that checks if the counter variable
 is no larger than 8. If it is, we would like to stop the loop. This will
 cause the number 9 to be not printed in this example.
 
-    <?php
     $counter = 0;
 
     while ($counter < 10) {
@@ -70,7 +64,6 @@ cause the number 9 to be not printed in this example.
 
         echo "Executing - counter is $counter.\n";
     }
-    ?>
 
 Exercise
 --------

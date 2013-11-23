@@ -10,8 +10,6 @@ class you can create many objects.
 
 For example, let's define a class of a student.
 
-    <?php
-
     class Student {
         // constructor
         function Student($first_name, $last_name) {
@@ -26,8 +24,6 @@ For example, let's define a class of a student.
 
     $alex = new Student("Alex", "Jones");
     $alex->say_name();
-
-    ?>
 
 Let's analyze the code. Notice that the `Student` class has a constructor function, which is executed
 when the object is created. The constructor receives arguments which are later provided when
@@ -52,9 +48,6 @@ Here are some important definitions related to objects:
 The most important feature of object oriented programming is inheritance. This feature allows us to reuse
 code we've written and extend it. For example, let's say we want to be able to define a math student, which
 also knows how to sum two numbers.
-
-
-    <?php
 
     class Student {
         // constructor
@@ -82,8 +75,6 @@ also knows how to sum two numbers.
     $eric->say_name();
     $eric->sum_numbers(3,5);
 
-    ?>
-
 Notice that Eric's object also has the same constructor and the `say_name` function,
 in addition to a new method called `sum_numbers`, which causes Eric to calculate the
 sum of two numbers. Also notice that the new function has access to the same members
@@ -96,7 +87,6 @@ can be accessed from outside the object or not, for encapsulation purposes. This
 allows to better define how objects should be used, to separate between functions
 which are used for internal use, as opposed to an external interface.
 
-    <?php
     class Student {
         // constructor should be public
         public function Student($first_name, $last_name) {
@@ -121,8 +111,6 @@ which are used for internal use, as opposed to an external interface.
 
     // this will not work
     // echo $alex->full_name();
-
-    ?>
 
 Exercise
 --------

@@ -11,11 +11,14 @@ code inside a document. So for example, you may start with a simple HTML page wh
     <head></head>
     <body>
     Hello!
+    <?php ?>
     </body>
     </html>
 
-And later on add a PHP section which executes PHP code, and writes the output as HTML. Let's try adding the name
-of the user's name.
+And later on add a PHP section which executes PHP code, and writes the output as HTML. Notice that the PHP line
+disappeared when executing, since the PHP code is replaced by the output.
+
+Let's try adding the name of the user's name.
 
     <?php $user = "John"; ?>
     <html>

@@ -12,7 +12,7 @@ DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
         "language" : "python",
         "analytics" : "UA-22741967-1",
-            "namespace" : "learnpython.org",
+        "namespace" : "learnpython.org",
         "full_url" : "http://learnpython.org",
         "sender" : "LearnPython.org <admin@learnpython.org>",
         "styled_domain" : "LearnPython.org",
@@ -21,7 +21,7 @@ DOMAIN_DATA = {
         "logo" : "/static/img/logos/learnpython.png",
         "language_uppercase" : "Python",
         "twitter" : "@learnpython",
-            "favicon" : "favicon-learnpython.ico",
+        "favicon" : "favicon-learnpython.ico",
         "copyright" : "Copyright &copy; LearnPython.org.",
         "default_code" : """# Welcome to the Interactive Python Tutorial.
 # Start by choosing a chapter and
@@ -33,7 +33,7 @@ print "Hello, World!"
     LEARNC_DOMAIN : {
         "language" : "c",
         "analytics" : "UA-22741967-3",
-            "namespace" : "learn-c.org",
+        "namespace" : "learn-c.org",
         "full_url" : "http://learn-c.org",
         "sender" : "Learn-C.org <admin@learn-c.org>",
         "styled_domain" : "Learn-C.org",
@@ -42,7 +42,7 @@ print "Hello, World!"
         "logo" : "/static/img/logos/learn-c.png",
         "language_uppercase" : "C",
         "twitter" : "@learnc",
-            "favicon" : "favicon-learn-c.ico",
+        "favicon" : "favicon-learn-c.ico",
         "copyright" : "Copyright &copy; Learn-C.org. ",
         "default_code" : """/* Welcome to the Interactive C Tutorial.
 Start by choosing a chapter and
@@ -51,15 +51,24 @@ write your code in this window. */
 #include <stdio.h>
 
 int main() {
-  printf("Hello, World!");
-  return 0;
+    printf("Hello, World!");
+    return 0;
 }
-    """
+    """,
+        "container_word" : "main()",
+        "container_indent" : "    ",
+        "container" : """#include <stdio.h>
+
+int main() {
+{code}
+return 0;
+}
+"""
     },
     LEARNJAVA_DOMAIN : {
         "language" : "java",
         "analytics" : "UA-22741967-4",
-            "namespace" : "learnjavaonline.org",
+        "namespace" : "learnjavaonline.org",
         "full_url" : "http://learnjavaonline.org",
         "sender" : "LearnJavaOnline.org <admin@learnjavaonline.org>",
         "styled_domain" : "LearnJavaOnline.org",
@@ -68,7 +77,7 @@ int main() {
         "logo" : "/static/img/logos/learnjavaonline.png",
         "language_uppercase" : "Java",
         "twitter" : "@learnjava",
-            "favicon" : "favicon-learnjava.ico",
+        "favicon" : "favicon-learnjava.ico",
         "copyright" : "Copyright &copy; LearnJavaOnline.org.",
         "default_code" : """// Welcome to the Interactive Java Tutorial.
 // Start by choosing a chapter and
@@ -76,12 +85,20 @@ int main() {
 
 public class Main {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    System.out.println("Hello, World!");
+        System.out.println("Hello, World!");
 
   }
 
+}
+""",
+        "container_word" : "class",
+        "container_indent" : "        ",
+        "container" : """public class Main {
+    public static void main(String[] args) {
+{code}
+    }
 }
 """
 
@@ -89,7 +106,7 @@ public class Main {
     LEARNJS_DOMAIN : {
         "language" : "javascript",
         "analytics" : "UA-22741967-5",
-            "namespace" : "learn-js.org",
+        "namespace" : "learn-js.org",
         "full_url" : "http://learn-js.org",
         "sender" : "Learn-JS.org <admin@learn-js.org>",
         "styled_domain" : "Learn-JS.org",
@@ -98,7 +115,7 @@ public class Main {
         "logo" : "/static/img/logos/learn-js.png",
         "language_uppercase" : "JavaScript",
         "twitter" : "@learnjs",
-            "favicon" : "favicon-learn-js.ico",
+        "favicon" : "favicon-learn-js.ico",
         "copyright" : "Copyright &copy; Learn-JS.org.",
         "default_code" : """// Welcome to the Interactive JavaScript Tutorial.
 // Start by choosing a chapter and
@@ -119,7 +136,7 @@ console.log("Hello, World!");
         "logo" : "/static/img/logos/learnrubyonline.png",
         "language_uppercase" : "Ruby",
         "twitter" : "@learnruby",
-            "favicon" : "favicon-ruby.ico",
+        "favicon" : "favicon-ruby.ico",
         "copyright" : "Copyright &copy; LearnRubyOnline.org.",
         "default_code" : """# Welcome to the Interactive Ruby Tutorial.
 # Start by choosing a chapter and
@@ -140,7 +157,7 @@ puts 'Hello, World!'
         "logo" : "/static/img/logos/learnshell.png",
         "language_uppercase" : "Shell Programming",
         "twitter" : "@learnshell",
-            "favicon" : "favicon-shell.ico",
+        "favicon" : "favicon-shell.ico",
         "copyright" : "Copyright &copy; LearnShell.org.",
         "default_code" : """#!/bin/bash
 # Welcome to the Interactive Shell Tutorial.
@@ -163,7 +180,7 @@ echo "Hello, World!";
         "logo" : "/static/img/logos/learn-perl.png",
         "language_uppercase" : "Perl",
         "twitter" : "@learnperl",
-            "favicon" : "favicon-learn-perl.ico",
+        "favicon" : "favicon-learn-perl.ico",
         "copyright" : "Copyright &copy; Learn-Perl.org.",
         "default_code" : """# Welcome to the Interactive Perl Tutorial.
 # Start by choosing a chapter and write your code in this window.
@@ -192,12 +209,18 @@ print 'Hello, World!';
 
 echo "Hello, World!";
 ?>
-"""},
+""",
+        "container_word" : "<?",
+        "container_indent" : "",
+        "container" : """<?php
+{code}
+?>""",
+    },
 
     LEARNCS_DOMAIN : {
         "language" : "c#",
         "analytics" : "UA-22741967-10",
-            "namespace" : "learncs.org",
+        "namespace" : "learncs.org",
         "full_url" : "http://learncs.org",
         "sender" : "LearnCS.org <admin@learncs.org>",
         "styled_domain" : "LearnCS.org",
@@ -206,7 +229,7 @@ echo "Hello, World!";
         "logo" : "/static/img/logos/learncs.png",
         "language_uppercase" : "C#",
         "twitter" : "@learncs",
-            "favicon" : "favicon-learncs.ico",
+        "favicon" : "favicon-learncs.ico",
         "copyright" : "Copyright &copy; LearnCS.org.",
         "default_code" : """// Welcome to the Interactive C# Tutorial.
 // Start by choosing a chapter and write your code in this window.
@@ -215,10 +238,24 @@ using System;
 
 public class Hello
 {
-   public static void Main()
-   {
-      Console.WriteLine("Hello, World!");
-   }
+    public static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
 }
-"""},
+""",
+        "container_word" : "class",
+        "container_indent" : "        ",
+        "container" : """using System;
+using System.Collections.Generic;
+
+public class Hello
+{
+    public static void Main()
+    {
+{code}
+    }
+}
+""",
+        },
 }

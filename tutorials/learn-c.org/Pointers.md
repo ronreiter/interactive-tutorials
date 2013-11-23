@@ -53,6 +53,9 @@ Notice that we used the `&` operator to point at the variable `a`, which we have
 
 We then referred to it using the dereferencing operator. We can also change the contents of the dereferenced variable:
 
+    int a = 1;
+    int * pointer_to_a = &a;
+
     /* let's change the variable a */
     a += 1;
 

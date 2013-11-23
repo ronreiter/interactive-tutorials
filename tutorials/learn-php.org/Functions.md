@@ -12,7 +12,6 @@ A function receives a list of arguments separated by commas. Every argument only
 the context of the function, meaning that they become variables inside the function block,
 but are not defined outside of that function block.
 
-    <?php
     // define a function called `sum` that will
     // receive a list of numbers as an argument.
     function sum($numbers) {
@@ -31,21 +30,15 @@ but are not defined outside of that function block.
     // Example usage of sum
     echo sum([1,2,3,4,5,6,7,8,9,10]);
 
-    ?>
-
 After defining functions, you may load other PHP files into one another, so you may define
 all your functions in one file, and load them for another. Let's say that we have defined
 the `sum` function inside a file called `sum.php`. We can now create another file, say
 `index.php` and use the `sum` function by including `sum.php` as follows:
 
-    <?php
-
     include("sum.php");
 
     // Example usage of sum
     echo sum([1,2,3,4,5,6,7,8,9,10]);
-
-    ?>
 
 (This code will not run because there are no modules defined in the PHP environment).
 

@@ -9,7 +9,6 @@ which is added to the array increments the next index by 1.
 A good example for using arrays with keys is a phone book. Let's say we want to
 save the phone numbers of people in a class.
 
-    <?php
     $phone_numbers = [
       "Alex" => "415-235-8573",
       "Jessica" => "415-492-4856",
@@ -19,11 +18,7 @@ save the phone numbers of people in a class.
     echo "Alex's phone number is " . $phone_numbers["Alex"] . "\n";
     echo "Jessica's phone number is " . $phone_numbers["Jessica"] . "\n";
 
-    ?>
-
 To add an item to an array using a key, we use the brackets operator, as you would expect.
-
-    <?php
 
     $phone_numbers = [
       "Alex" => "415-235-8573",
@@ -34,11 +29,8 @@ To add an item to an array using a key, we use the brackets operator, as you wou
 
     print_r($phone_numbers);
 
-    ?>
-
 To check if a key exists within an array, we can use the `array_key_exists` function:
 
-    <?php
     $phone_numbers = [
       "Alex" => "415-235-8573",
       "Jessica" => "415-492-4856",
@@ -58,26 +50,21 @@ To check if a key exists within an array, we can use the `array_key_exists` func
 
 If we want to extract only the keys of the array (the names), we can use the `array_keys` function.
 
-    <?php
     $phone_numbers = [
       "Alex" => "415-235-8573",
       "Jessica" => "415-492-4856",
     ];
 
     print_r(array_keys($phone_numbers));
-    ?>
 
 Alternatively, to get only the values of an array (the phone numbers), we can use the `array_values` function.
 
-    <?php
     $phone_numbers = [
       "Alex" => "415-235-8573",
       "Jessica" => "415-492-4856",
     ];
 
     print_r(array_values($phone_numbers));
-    ?>
-
 
 Exercise
 --------

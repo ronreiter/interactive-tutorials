@@ -16,6 +16,8 @@ Table of Contents
 - [[Hello, World!]]
 - [[Variables and Types]]
 - [[Arrays]]
+- [[Lists]]
+- [[Dictionaries]]
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]

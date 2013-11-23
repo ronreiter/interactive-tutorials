@@ -3,11 +3,9 @@ Tutorial
 
 To define a variable, simply use the following syntax:
 
-    <?php
     $x = 1;
     $y = "foo";
     $z = True;
-    ?>
 
 We have just defined a variable named `x` with the number 1, a variable
 named `y` with the string "foo" and a variable name `z` with the boolean
@@ -31,21 +29,17 @@ We can also print out PHP variables using the `echo` command (you can try it out
 For example, let's sum up two numbers, put the result in a new variable, and
 print out the result.
 
-    <?php
     $x = 1;
     $y = 2;
     $sum = $x + $y;
     echo $sum;       // prints out 3
-    ?>
 
 ### String formatting
 
 Like Perl, PHP double quoted strings can format strings using defined variables. For example:
 
-    <?php
     $name = "Jake";
     echo "Your name is $name";    // prints out Your name is Jake
-    ?>
 
 Exercise
 --------

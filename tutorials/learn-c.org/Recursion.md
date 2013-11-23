@@ -11,7 +11,9 @@ Common examples of where recursion is used :
 Recursion always consists of two main parts. A terminating case that indicates when the recursion will finish and a call to itself that must make progress towards the terminating case.
  
 For example, this function will perform multiplication by recursively adding :
- 
+
+    #include <stdio.h>
+
     unsigned int multiply(unsigned int x, unsigned int y)
     {
         if (x == 1)
@@ -28,7 +30,11 @@ For example, this function will perform multiplication by recursively adding :
         /* Catch scenario when x is zero */
         return 0;
     }
- 
+
+    int main() {
+        printf("3 times 5 is %d", multiply(3, 5));
+        return 0;
+    }
  
 Exercise
 --------

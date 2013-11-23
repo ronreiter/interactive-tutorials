@@ -11,9 +11,13 @@ the function. To do that, we must use pointers, which are taught later on.
 
 Functions are defined using the following syntax:
 
-    int foo(int bar) {
+    int foo(int n) {
         /* do something */
-        return bar * 2;
+        return n * 2;
+    }
+
+    int main() {
+        foo(1);
     }
 
 The function `foo` we defined receives one argument, which is `bar`. The function receives an integer, multiplies it by two, and returns the result. 
@@ -36,13 +40,17 @@ The correct way to use functions is as follows:
     }
 
     int foo(int bar) {
-        /* implementation of the function foo */
+        return bar + 1;
     }
 
 We can also create functions that do not return a value by using the keyword `void`:
 
     void moo() {
         /* do something and don't return a value */
+    }
+
+    int main() {
+        moo();
     }
 
 Exercise

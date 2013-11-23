@@ -142,14 +142,14 @@ function load() {
 				lineNumbers: true,
 				indentUnit: 4,
 				tabMode: "shift",
-				matchBrackets: true,
 				theme: "monokai"
 			});
 			break;
 		case "java":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "text/x-java",
 				theme: "monokai"
 			});
@@ -157,7 +157,8 @@ function load() {
 		case "c":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "text/x-csrc",
 				theme: "monokai"
 			});
@@ -165,7 +166,8 @@ function load() {
 		case "javascript":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "text/javascript",
 				theme: "monokai"
 			});
@@ -173,7 +175,8 @@ function load() {
 		case "ruby":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "text/x-ruby",
 				theme: "monokai"
 			});
@@ -181,7 +184,8 @@ function load() {
 		case "bash":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "text/x-sh",
 				theme: "monokai"
 			});
@@ -189,7 +193,8 @@ function load() {
 		case "perl":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "text/x-perl",
 				theme: "monokai"
 			});
@@ -198,7 +203,8 @@ function load() {
 		case "php":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "application/x-httpd-php",
 				theme: "monokai"
 			});
@@ -207,7 +213,8 @@ function load() {
 		case "c#":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
-				matchBrackets: true,
+				indentUnit: 4,
+				tabMode: "shift",
 				mode: "text/x-csharp",
 				theme: "monokai"
 			});
@@ -216,7 +223,6 @@ function load() {
 
 	output = CodeMirror.fromTextArea(document.getElementById("output"), {
 		lineNumbers: false,
-		matchBrackets: false,
 		textWrapping: true,
 		readOnly : true,
 		theme: "monokai",
@@ -227,7 +233,17 @@ function load() {
 
     $("#inner-text pre").after(
         $("<a>").addClass("btn btn-small btn-success").css("margin-bottom", "10px").text("Execute Code").click(function() {
-            editor.setValue($(this).prev().text()); execute()
+            var text = $(this).prev().text();
+            if (window.domainData.container_word && text.indexOf(window.domainData.container_word) == -1) {
+                var lines = text.split("\n");
+                var indentedText = "";
+                for (var i = 0; i < lines.length; i++) {
+                    indentedText += window.domainData.container_indent + lines[i] + "\n";
+                }
+                text = window.domainData.container.replace("{code}", indentedText);
+
+            }
+            editor.setValue(text); execute()
         })
     );
 }
