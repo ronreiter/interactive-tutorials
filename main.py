@@ -183,6 +183,7 @@ def index(title):
     return make_response(render_template(
         "index.html",
         domain_data = domain_data,
+        tutorial_data_json = json.dumps(tutorial_data),
         domain_data_json = json.dumps(domain_data),
         html_title = html_title,
         **tutorial_data

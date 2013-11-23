@@ -7,6 +7,7 @@
         var nextChapter = "/{{ next_chapter }}";
         var previousChapter = "/{{ previous_chapter }}";
         var backChapter = "/{{ back_chapter }}";
+        var tutorialData = {{ tutorial_data_json }};
     </script>
     {% endautoescape %}
     <script src="/static/js/learnpython.js"></script>
@@ -257,7 +258,4 @@
 	</div>
 	</div>
 </footer>
-
-<div id="expected-output" style="display: none">{{ output }}</div>
-<div id="solution" style="display: none">{{ solution }}</div>
 {% endblock %}

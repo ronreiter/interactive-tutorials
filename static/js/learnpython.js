@@ -121,7 +121,7 @@ function handleError(data) {
 
 function print(text) {
 	output.setValue(text);
-	if ($.trim($("#expected-output").text()) != '' && $.trim($("#expected-output").text()) == $.trim(text)) {
+	if ($.trim(tutorialData.output) != '' && $.trim(tutorialData.output) == $.trim(text)) {
 		bootbox.confirm("Correct! Click OK to move on to the next chapter.", function(success) {
 			if (success) {
 				document.location.href = nextChapter;
@@ -249,11 +249,11 @@ function load() {
 }
 
 function showExpected() {
-	output.setValue($("#expected-output").text());
+	output.setValue(tutorialData.output);
 }
 
 function showSolution() {
-    var solutionText = $("#solution").text();
+    var solutionText = tutorialData.solution;
     if (solutionText) {
     	editor.setValue(solutionText);
     } else {
