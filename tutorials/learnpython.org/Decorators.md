@@ -77,22 +77,22 @@ Make a decorator factory which returns a decorator that decorates functions with
 
 Tutorial Code
 -------------
-def Type_Check(correct_type):
+def type_check(correct_type):
     #put code here
 
-@Type_Check(int)
-def Times2(num):
+@type_check(int)
+def times2(num):
     return num*2
 
-print Times2(2)
-Times2('Not A Number')
+print times2(2)
+times2('Not A Number')
 
-@Type_Check(str)
-def First_Letter(word):
+@type_check(str)
+def first_letter(word):
     return word[0]
 
-print First_Letter('Hello World')
-First_Letter(['Not', 'A', 'String'])
+print first_letter('Hello World')
+first_letter(['Not', 'A', 'String'])
 
 
 Expected Output
@@ -105,26 +105,26 @@ Bad Type
 Solution
 --------
 
-def Type_Check(correct_type):
-    def Check(old_function):
+def type_check(correct_type):
+    def check(old_function):
         def new_function(arg):
             if (isinstance(arg, correct_type)):
                 return old_function(arg)
             else:
                 print "Bad Type"
         return new_function
-    return Check
+    return check
 
-@Type_Check(int)
-def Times2(num):
+@type_check(int)
+def times2(num):
     return num*2
 
-print Times2(2)
-Times2('Not A Number')
+print times2(2)
+times2('Not A Number')
 
-@Type_Check(str)
-def First_Letter(word):
+@type_check(str)
+def first_letter(word):
     return word[0]
 
-print First_Letter('Hello World')
-First_Letter(['Not', 'A', 'String'])
+print first_letter('Hello World')
+first_letter(['Not', 'A', 'String'])
