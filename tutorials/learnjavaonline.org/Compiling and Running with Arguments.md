@@ -1,9 +1,9 @@
-Tutorial
---------
+Compiling and Running with Arguments
+------------------------------------
 
 This section is used for you to use Java at home and understand the basics of how things are done.
 
-After creating a simple application that prints something to the screen, you need to compile your code an run it.
+After creating a simple application that prints something to the screen, you need to compile your code and run it.
 
 It shouldn't really matter if you use Linux, Mac or Windows. You need to have a console and you need to have the following commands available in order to compile and run Java.
 
@@ -16,7 +16,7 @@ If we take the code from the previous lesson and put it in a file called MyFirst
 
     javac MyFirstClass.java
 
-This is create a file called MyFirstClass.class that holds the compiled java code.
+This will create a file called MyFirstClass.class that holds the compiled java code.
 
 To run it, we need to run java with the name of the class as the argument (Not the file!)
 
@@ -44,7 +44,7 @@ We can go over the arguments with a simple for
         }
     }
 
-And o run it with arguments:
+And to compile and run it with arguments:
 
     javac Arguments.java
     java Arguments arg0 arg1 arg2
@@ -57,7 +57,7 @@ Create a program that prints the arguments of our program. Write one argument pe
 Tutorial Code
 -------------
 
-public class Main {
+public class Arguments {
     public static void main(String[] args) {
         // write your code here
 
@@ -66,3 +66,20 @@ public class Main {
 
 Expected Output
 ---------------
+
+The following is sample terminal output that displays the contents of the .java file we have written (uses the cat command), compiles and runs it with arguments.
+
+$ cat Arguments.java
+public class Arguments {
+    public static void main(String[] args) {
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(args[i]);
+        }
+    }
+}
+$ javac Arguments.java
+$ java Arguments arg0 arg1 arg2 
+arg0
+arg1
+arg2
+$ 
