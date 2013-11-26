@@ -37,7 +37,7 @@ The while construct tests for a condition, and if true, executes commands. It ke
 	COUNT=4
 	while [ $COUNT -gt 0 ]; do
 	  echo Value of count is: $COUNT
-	  $COUNT=$(($COUNT - 1))
+	  COUNT=$(($COUNT - 1))
 	done 
 
 ### bash until loop
@@ -53,7 +53,7 @@ The until construct tests for a condition, and if false, executes commands. It k
 	COUNT=1
 	until [ $COUNT -gt 5 ]; do
 	  echo Value of count is: $COUNT
-	  $COUNT=$(($COUNT + 1))
+	  COUNT=$(($COUNT + 1))
 	done
 
 ### "break" and "continue" statements
