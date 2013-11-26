@@ -104,3 +104,27 @@ Bad Type
 
 Solution
 --------
+
+def Type_Check(correct_type):
+    def Check(old_function):
+        def new_function(arg):
+            if (isinstance(arg, correct_type)):
+                return old_function(arg)
+            else:
+                print "Bad Type"
+        return new_function
+    return Check
+
+@Type_Check(int)
+def Times2(num):
+    return num*2
+
+print Times2(2)
+Times2('Not A Number')
+
+@Type_Check(str)
+def First_Letter(word):
+    return word[0]
+
+print First_Letter('Hello World')
+First_Letter(['Not', 'A', 'String'])
