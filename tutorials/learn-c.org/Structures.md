@@ -48,7 +48,7 @@ Structures can also hold pointers - which allows them to hold strings, or pointe
 
     typedef struct {
         char * brand;
-        year model;
+        int model;
     } vehicle;
 
 Since brand is a char pointer, the vehicle type can contain a string (which, in this case, indicates the brand of the vehicle).
