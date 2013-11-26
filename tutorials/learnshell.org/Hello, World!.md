@@ -9,19 +9,23 @@ Shell programming can be accomplished by directly executing shell commands at th
 
 The first line of the shell script file begins with a "sha-bang" (#!) which is not read as a comment, followed by the full path where the shell interpreter is located. This path, tells the operating system that this file is a set of commands to be fed into the interpreter indicated. Note that if the path given at the "sha-bang" is incorrect, then an error message e.g. "Command not found.", may be the result of the script execution. It is common to name the shell script with the ".sh" extension. The first line may look like this:
 
-	#!/bin/bash
+**#!/bin/bash**
 
 Adding comments: any text following the "#" is considered a comment
 
-To find out what is currently active shell, and what is its path, type at the command prompt:
+To find out what is currently active shell, and what is its path, type the highlighted command at the shell prompt (sample responses follow):
 
-	$> ps | grep $$
-	  987 tty1      00:00:00 bash
+**ps | grep $$**
 
-	$> which bash
-	/bin/bash
+987 tty1      00:00:00 bash
 
-Make sure that the "sha-bang" line at the beginning of your script, matches the path of the shell on your system as indicated by the above 'which' command.
+This response shows that the shell you are using is of type 'bash'. next find out the full path of the shell interpreter
+
+**which bash**
+
+/bin/bash
+
+This response shows the full execution path of the shell interpreter. Make sure that the "sha-bang" line at the beginning of your script, matches this same execution path.
 
 Exercise
 -------------
