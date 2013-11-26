@@ -111,7 +111,7 @@ def Type_Check(correct_type):
             if (isinstance(arg, correct_type)):
                 return old_function(arg)
             else:
-                print "Wrong Type"
+                print "Bad Type"
         return new_function
     return Check
 
