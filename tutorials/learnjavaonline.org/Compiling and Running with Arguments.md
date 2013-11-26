@@ -1,5 +1,5 @@
-Compiling and Running with Arguments
-------------------------------------
+Tutorial
+--------
 
 This section is used for you to use Java at home and understand the basics of how things are done.
 
