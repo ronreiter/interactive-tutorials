@@ -12,7 +12,7 @@ For example, let's define a class of a student.
 
     class Student {
         // constructor
-        function Student($first_name, $last_name) {
+        function __construct($first_name, $last_name) {
             $this->first_name = $first_name;
             $this->last_name = $last_name;
         }
@@ -51,7 +51,7 @@ also knows how to sum two numbers.
 
     class Student {
         // constructor
-        function Student($first_name, $last_name) {
+        function __construct($first_name, $last_name) {
             $this->first_name = $first_name;
             $this->last_name = $last_name;
         }
@@ -89,7 +89,7 @@ which are used for internal use, as opposed to an external interface.
 
     class Student {
         // constructor should be public
-        public function Student($first_name, $last_name) {
+        public function __construct($first_name, $last_name) {
             $this->first_name = $first_name;
             $this->last_name = $last_name;
         }
