@@ -16,7 +16,7 @@ In order to create an instance of this class, we need to use the keyword `new`.
 
     Point p = new Point();
 
-In this case, we used a default constructor (constructor that doesn't get arguments) to create a Point. All classes that doesn't explicitly define a constructor has a default constructor that does nothing.
+In this case, we used a default constructor (constructor that doesn't get arguments) to create a Point. All classes that don't explicitly define a constructor has a default constructor that does nothing.
 
 We can define our own constructor:
 
@@ -28,7 +28,7 @@ We can define our own constructor:
             this.y = y;
         }
 
-This means we can not longer use the default constructor `new Point()`. we can now only use the defined constructor `new Point(4, 1)`.
+This means we can not longer use the default constructor `new Point()`. We can now only use the defined constructor `new Point(4, 1)`.
 
 We can define more than one constructor, so `Point` can be created in several ways. Let's define the default constructor again.
 
@@ -43,7 +43,7 @@ We can define more than one constructor, so `Point` can be created in several wa
             this.y = y;
         }
 
-Notice the usage of the `this` keyword here. We can use in within a constructor to call a different constructor (in order to avoid code duplication). It can only be the first line within the constructor.
+Notice the usage of the `this` keyword here. We can use it within a constructor to call a different constructor (in order to avoid code duplication). It can only be the first line within the constructor.
 
 We also used the `this` keyword as a reference of the current object we are running on.
 
@@ -76,7 +76,7 @@ When using the keyword `private` before a variable or a method, it means only th
 Exercise
 --------
 
-Write a new method in Point called `scale`, that will make the point closer by 2 to (0,0). So for example, point (8, 4) after scale will be (4, 2).
+Write a new method in Point called `scale`, that will make the point closer by half to (0,0). So for example, point (8, 4) after scale will be (4, 2).
 
 Tutorial Code
 -------------
@@ -114,3 +114,30 @@ Expected Output
 
 Solution
 --------
+
+class Point {
+    private double x;
+    private double y;
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+    public void print() {
+        System.out.println("(" + x + "," + y + ")");
+    }
+    
+    public void scale(){
+    	x = x/2;
+        y = y/2;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Point p = new Point(32, 32);
+        for (int i = 0; i < 5; i++) {
+            p.scale();
+            p.print();
+        }
+    }
+}
