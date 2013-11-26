@@ -20,8 +20,8 @@ For each pass through the loop, arg takes on the value of each successive value 
 	done
 
 	# loop on command output results
-	for f in $( ls /var/ ) ; do
-	  echo $f
+	for f in $( ls prog.sh /etc/localtime ) ; do
+	  echo "File is: $f"
 	done
 
 ### bash while loop
@@ -34,6 +34,7 @@ For each pass through the loop, arg takes on the value of each successive value 
 
 The while construct tests for a condition, and if true, executes commands. It keeps looping as long as the condition is true.
 
+	COUNT=4
 	while [ $COUNT -gt 0 ]; do
 	  echo Value of count is: $COUNT
 	  $COUNT=$(($COUNT - 1))
@@ -49,6 +50,7 @@ The while construct tests for a condition, and if true, executes commands. It ke
 
 The until construct tests for a condition, and if false, executes commands. It keeps looping as long as the condition is false (opposite of while construct)
 
+	COUNT=1
 	until [ $COUNT -gt 5 ]; do
 	  echo Value of count is: $COUNT
 	  $COUNT=$(($COUNT + 1))
