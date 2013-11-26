@@ -7,26 +7,36 @@ As in popular programming languages, the shell also supports logical decision ma
 
 The basic conditional decision making construct is:
 
-	if [ expression ]; then
-	  code if 'expression' is true
+**if [ expression ]; then**
+
+code if 'expression' is true
+
+**fi**
+
+	NAME="John"
+	if [ "$NAME" = "John" ]; then
+	  echo "True - my name is indeed John" 
 	fi
 
 It can be expanded with 'else'
 
-	if [ expression ]; then
-	  code if 'expression' is true
+	NAME="Bill"
+	if [ "$NAME" = "John" ]; then
+	  echo "True - my name is indeed John" 
 	else
-	  code if 'expression' is false
+	  echo "False"
+	  echo "You must mistaken me for $NAME"
 	fi
 
 It can be expanded with 'elif' (else-if)
 
-	if [ expression1 ]; then
-	  code if 'expression1' is true
-	elif [ expression2 ]; then
-	  code if 'expression2' is true
+	NAME="George"
+	if [ "$NAME" = "John" ]; then
+	  echo "George Harrison"
+	elif [ "$NAME" = "George" ]; then
+	  echo "John Lennon"
 	else
-	  code if both expression1 and expression2 are false
+	  echo "This leaves us with Paul and Ringo"
 	fi
 
 The expression used by the conditional construct is evaluated to either true or false.
@@ -61,23 +71,24 @@ if \[\[ $VAR_A -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
 
 ### case structure
 
-	case "$variable" in
+case "$variable" in
 	
-	 "$condition1" )
-	 command...
-	 ;;
+"$condition1" )
+command...
+;;
 	
-	 "$condition2" )
-	 command...
-	 ;; 
+"$condition2" )
+command...
+;; 
 
-	 esac
+esac
 
 ### simple case bash structure
 
 Note in this case $case is variable and does not have to be named case - this is just an example
 
-	case $case in
+	mycase=1
+	case $mycase in
 	    1) echo "You selected bash";;
 	    2) echo "You selected perl";;
 	    3) echo "You selected phyton";;
