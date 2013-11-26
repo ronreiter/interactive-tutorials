@@ -12,13 +12,13 @@ For example, let's define a class of a student.
 
     class Student {
         // constructor
-        function __construct($first_name, $last_name) {
+        public function __construct($first_name, $last_name) {
             $this->first_name = $first_name;
             $this->last_name = $last_name;
         }
 
-        function say_name() {
-            echo "My name is $this->first_name $this->last_name.\n";
+        public function say_name() {
+            echo "My name is " . $this->first_name . " " . $this->last_name . ".\n";
         }
     }
 
@@ -51,13 +51,13 @@ also knows how to sum two numbers.
 
     class Student {
         // constructor
-        function __construct($first_name, $last_name) {
+        public function __construct($first_name, $last_name) {
             $this->first_name = $first_name;
             $this->last_name = $last_name;
         }
 
-        function say_name() {
-            echo "My name is $this->first_name $this->last_name.\n";
+        public function say_name() {
+            echo "My name is " . $this->first_name . " " . $this->last_name . ".\n";
         }
     }
 
@@ -67,13 +67,13 @@ also knows how to sum two numbers.
     class MathStudent extends Student {
         function sum_numbers($first_number, $second_number) {
             $sum = $first_number + $second_number;
-            echo "$this->first_name says that $first_number + $second_number is $sum.";
+            echo $this->first_name . " says that " . $first_number . " + " . $second_number . " is " . $sum;
         }
     }
 
     $eric = new MathStudent("Eric", "Chang");
     $eric->say_name();
-    $eric->sum_numbers(3,5);
+    $eric->sum_numbers(3, 5);
 
 Notice that Eric's object also has the same constructor and the `say_name` function,
 in addition to a new method called `sum_numbers`, which causes Eric to calculate the
@@ -130,7 +130,6 @@ Tutorial Code
 
 $car = new Car("Toyota", 2006);
 $car->print_details();
-?>
 
 Expected Output
 ---------------
@@ -142,16 +141,15 @@ Solution
 
 <?php
 class Car {
-    function Car($brand, $year) {
+    public function __construct($brand, $year) {
         $this->brand = $brand;
         $this->year = $year;
     }
 
-    function print_details() {
-        echo "This car is a $this->year $this->brand.\n";
+    public function print_details() {
+        echo "This car is a " . $this->year . " " . $this->brand . ".\n";
     }
 }
 
 $car = new Car("Toyota", 2006);
 $car->print_details();
-?>
