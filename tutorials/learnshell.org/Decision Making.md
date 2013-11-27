@@ -1,31 +1,40 @@
 Tutorial
 --------
-
 As in popular programming languages, the shell also supports logical decision making.
 
 The basic conditional decision making construct is:
 
-    if [ expression ]; then
-      code if 'expression' is true
-    fi
+**if [ expression ]; then**
+
+code if 'expression' is true
+
+**fi**
+
+	NAME="John"
+	if [ "$NAME" = "John" ]; then
+	  echo "True - my name is indeed John" 
+	fi
 
 It can be expanded with 'else'
 
-    if [ expression ]; then
-      code if 'expression' is true
-    else
-      code if 'expression' is false
-    fi
+	NAME="Bill"
+	if [ "$NAME" = "John" ]; then
+	  echo "True - my name is indeed John" 
+	else
+	  echo "False"
+	  echo "You must mistaken me for $NAME"
+	fi
 
 It can be expanded with 'elif' (else-if)
 
-    if [ expression1 ]; then
-      code if 'expression1' is true
-    elif [ expression2 ]; then
-      code if 'expression2' is true
-    else
-      code if both expression1 and expression2 are false
-    fi
+	NAME="George"
+	if [ "$NAME" = "John" ]; then
+	  echo "George Harrison"
+	elif [ "$NAME" = "George" ]; then
+	  echo "John Lennon"
+	else
+	  echo "This leaves us with Paul and Ringo"
+	fi
 
 The expression used by the conditional construct is evaluated to either true or false.
 The expression can be a single string or variable. A empty string or a string consisting of spaces or an undefined variable name, are evaluated as false.
@@ -33,21 +42,21 @@ The expression can be a logical combination of comparisons: negation is denoted 
 
 ### Types of numeric comparisons
 
-    comparison    Evaluated to true when
-    $a -lt $b    $a < $b
-    $a -gt $b    $a > $b
-    $a -le $b    $a <= $b
-    $a -ge $b    $a >= $b
-    $a -eq $b    $a is equal to $b
-    $a -ne $b    $a is not equal to $b
+	comparison	Evaluated to true when
+	$a -lt $b	$a < $b
+	$a -gt $b	$a > $b
+	$a -le $b	$a <= $b
+	$a -ge $b	$a >= $b
+	$a -eq $b	$a is equal to $b
+	$a -ne $b	$a is not equal to $b
 
 ### Types of string comparisons
 
-    comparison    Evaluated to true when
-    "$a" = "$b"     $a is the same as $b
-    "$a" == "$b"    $a is the same as $b
-    "$a" != "$b"    $a is different from $b
-    -z "$a"         $a is empty
+	comparison	Evaluated to true when
+	"$a" = "$b"     $a is the same as $b
+	"$a" == "$b"    $a is the same as $b
+	"$a" != "$b"    $a is different from $b
+	-z "$a"         $a is empty
 
 - note1: whitespace around = is required
 
@@ -59,29 +68,30 @@ if \[\[ $VAR_A -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
 
 ### case structure
 
-    case "$variable" in
+case "$variable" in
+	
+"$condition1" )
+command...
+;;
+	
+"$condition2" )
+command...
+;; 
 
-     "$condition1" )
-     command...
-     ;;
-
-     "$condition2" )
-     command...
-     ;;
-
-     esac
+esac
 
 ### simple case bash structure
 
 Note in this case $case is variable and does not have to be named case - this is just an example
 
-    case $case in
-        1) echo "You selected bash";;
-        2) echo "You selected perl";;
-        3) echo "You selected phyton";;
-        4) echo "You selected c++";;
-        5) exit
-    esac
+	mycase=1
+	case $mycase in
+	    1) echo "You selected bash";;
+	    2) echo "You selected perl";;
+	    3) echo "You selected phyton";;
+	    4) echo "You selected c++";;
+	    5) exit
+	esac 
 
 Exercise
 --------
