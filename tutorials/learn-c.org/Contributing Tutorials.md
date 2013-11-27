@@ -39,5 +39,3 @@ Every tutorial must have the following structure:
     Solution
     --------
     Write the solution code to the problem.
-
-You are welcome to send donations in Bitcoin to `1LY5pJpHgzyVHjYqgjtGThU2jFvNhM4rtv` to show your support for writing tutorials.

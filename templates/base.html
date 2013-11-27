@@ -23,7 +23,7 @@
     <div class="navbar-inner">
         <div class="container">
         <a class="brand" href="/" style="padding: 4px 10px"><img src="{{ domain_data.logo }}" style="height: 32px;"/></a>
-        <div class="social" style="margin-top: 10px; display: inline-block">
+        <div class="social" style="margin-top: 10px; display: inline-block; float: left">
                 <!-- AddThis Button BEGIN -->
                 <div class="addthis_toolbox addthis_default_style " style="width: 400px; margin-left: 20px">
                     <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -44,9 +44,26 @@
                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="{{ domain_data.full_url }}"></a>
                 </div>
                 -->
-            </div>
+        </div>
+        <div style="line-height: 38px; display: inline-block; float: left">
+            <script src="http://coinwidget.com/widget/coin.js"></script>
+            <script>
+            CoinWidgetCom.go({
+                wallet_address: "1LY5pJpHgzyVHjYqgjtGThU2jFvNhM4rtv"
+                , currency: "bitcoin"
+                , counter: "count"
+                , alignment: "bl"
+                , qrcode: true
+                , auto_show: false
+                , lbl_button: "Donate"
+                , lbl_address: "My Bitcoin Address:"
+                , lbl_count: "donations"
+                , lbl_amount: "BTC"
+            });
+            </script>
+        </div>
+
         <ul class="nav pull-right">
-            <li><a href="/">Tutorial</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/Contributing_Tutorials">Contribute</a></li>
         </ul>
