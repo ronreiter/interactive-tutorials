@@ -1,0 +1,55 @@
+# New to GitHub, but here's my version of http://www.learnpython.org/Lists
+
+numbers = []
+strings = []
+names = ["John", "Eric", "Jessica"]
+
+# write your code here
+second_name = names[1] + "."	# 0-index so [1]=2
+numbers.extend([1, 2, 3])		# compact and powerful!
+strings.extend(["hello", "world"])
+
+# this code should write out the filled arrays and the second name in the names list (Eric).
+print str(numbers)
+print str(strings)
+print ("The second name on\nthe 'names' list is %s" % second_name)
+
+#-------------------------------#
+# alternative method by innoprog#
+#-------------------------------#
+
+print "\n"
+"""
+define empty lists and exciting, extended version
+of the 'names' list, now a list of chores.
+"""
+hp = []				# formerly 'numbers'
+achievements = []	# formerly 'strings'
+mission = ["Find the castle.\n", "Design a trap for the prince!\n", "Make your way upstairs to hide...\n", "Face and defeat the Evil Prince!\n"]
+# append numbers, strings, and ID the second item
+hp.append('1')
+hp.append('2')
+hp.append('3')
+hp.append('4')
+hp.append('5')
+achievements.append('Archer!')
+achievements.append('Chemist!')
+achievements.append('Boxer!')
+achievements.append('Resourceful!')
+achievements.append('Magician!')
+print "Your HP: ", hp[1]	# 1 = 2
+print "Possible HP: ", hp
+print "Achievements Earned: ", achievements[2:4]
+print "Achievements Possible: ", achievements
+print "Mission: ", mission[1]	# 1 still = 2
+
+"""
+this is just another way to do it.
+longer, and not really any more useful,
+but it's always good to know multiple ways!
+and i guess one makes you LOOK smarter,
+and one makes you FEEL smarter :)
+
+	PS: >>> import this
+
+"""
