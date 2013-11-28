@@ -51,3 +51,10 @@ set(['Jake', 'Eric'])
 
 Solution
 --------
+a = ["Jake", "John", "Eric"]
+b = ["John", "Jill"]
+
+A = set(a)
+B = set(b)
+
+print A.difference(B)
