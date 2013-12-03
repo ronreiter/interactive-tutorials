@@ -1,4 +1,4 @@
-Spanish
+Español
 -------
 
 Bienvenidos a los tutoriales de learnpython.org sobre Python. 
@@ -17,7 +17,7 @@ Si quieres unirte al grupo de <a href="http://www.facebook.com/groups/1807080153
 Indice
 -----------------
 
-### Learn the Basics
+### Aprende las bases
 
 - Hola Mundo - [[Hello, World!(es)]]
 - Variables y Tipos de datos - [[Variables and Types(es)]]
@@ -30,5 +30,17 @@ Indice
 - Funciones - [[Functions (es)]]
 - Clases y objetos - [[Classes and Objects(es)]]
 - Diccionarios - [[Dictionaries(es)]]
+
+
+### Tutoriales Avanzados
+
 - Generadores - [[Generators(es)]]
 - Expresiones regulares [[Regular Expressions(es)]]
+- Compresiones de listas
+- Funciones de argumentos multiples
+- Manejo de Excepciones
+- Sets
+- Serialización
+- Funciones parciales
+- Instrospección del códgo
+- Decoratores
