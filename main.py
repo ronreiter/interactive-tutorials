@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, make_response
+from flask import Flask, render_template, request, url_for, make_response, session
 import json
 import constants
 import re
@@ -17,6 +17,7 @@ i = Ideone(IDEONE_USERNAME, IDEONE_PASSWORD)
 r = redis.Redis(host="direct.learnpython.org")
 
 app = Flask(__name__)
+app.secret_key = "this is a secret. really."
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
@@ -180,12 +181,19 @@ def index(title):
     domain_data = get_domain_data()
     title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
     html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title else title_suffix
+
+    if not "uid" in session:
+        session["uid"] = os.urandom(16).encode("hex")
+
+    uid = session["uid"]
+
     return make_response(render_template(
         "index.html",
         domain_data = domain_data,
         tutorial_data_json = json.dumps(tutorial_data),
         domain_data_json = json.dumps(domain_data),
         html_title = html_title,
+        uid = uid,
         **tutorial_data
     ))
 
