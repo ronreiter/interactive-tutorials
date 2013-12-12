@@ -110,7 +110,11 @@ def init_tutorials():
 
                 tutorial_dict = tutorial_data[domain][language][tutorial]
 
-                tutorial_dict["text"] = open(os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)).read().replace("\r\n", "\n")
+                try:
+                    tutorial_dict["text"] = open(os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)).read().replace("\r\n", "\n")
+                except Exception, e:
+                    tutorial_data["text"] = "There was an error reading the tutorial. Exception: %s" % e.message
+
                 links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(tutorial_dict["text"])]
                 tutorial_dict["links"] = links
 
