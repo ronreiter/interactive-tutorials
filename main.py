@@ -10,6 +10,7 @@ import redis
 import hashlib
 from ideone import Ideone
 import time
+import functools
 
 IDEONE_USERNAME = "ronreiter"
 IDEONE_PASSWORD = "runmycode"
@@ -21,7 +22,15 @@ app.secret_key = "this is a secret. really."
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
+DEFAULT_DOMAIN = constants.LEARNJS_DOMAIN
+
+LANGUAGES = {
+    "en" : "English",
+    "pl" : "Polish",
+    "fa" : "Persian",
+    "es" : "Spanish",
+    "it" : "Italian",
+}
 
 tutorial_data = {}
 
@@ -51,13 +60,13 @@ def run_code(code, language):
     return data
 
 
-def pageurl(value):
+def pageurl(value, language):
     if value.startswith("http"):
         return value
     else:
-        return urllib.quote("/%s" % value.replace(' ', '_'))
+        return urllib.quote("/%s/%s" % (language, value.replace(' ', '_')))
 
-def _wikify_one(pat):
+def _wikify_one(language, pat):
     """
     Wikifies one link.
     """
@@ -73,12 +82,12 @@ def _wikify_one(pat):
         if page_name == page_title:
             page_title = parts[1]
 
-    link = "<a href='%s'>%s</a>" % (pageurl(page_name), page_title)
+    link = "<a href='%s'>%s</a>" % (pageurl(page_name, language), page_title)
     return link
 
 
-def wikify(text):
-    text, count = WIKI_WORD_PATTERN.subn(_wikify_one, text)
+def wikify(text, language):
+    text, count = WIKI_WORD_PATTERN.subn(functools.partial(_wikify_one, language), text)
     return markdown.markdown(text.decode("utf-8")).strip()
 
 def init_tutorials():
@@ -87,50 +96,62 @@ def init_tutorials():
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             continue
 
-        for tutorial_file in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
-            if not tutorial_file.endswith(".md"):
-                continue
+        for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
+            tutorial_data[domain][language] = {}
 
-            tutorial = tutorial_file[:-3]
-            if not tutorial in tutorial_data[domain]:
-                tutorial_data[domain][tutorial] = {}
+            for tutorial_file in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+                if not tutorial_file.endswith(".md"):
+                    continue
 
-            tutorial_data[domain][tutorial]["text"] = open(os.path.join(os.path.dirname(__file__), "tutorials", domain, tutorial_file)).read().replace("\r\n", "\n")
-            links = [x[1] for x in WIKI_WORD_PATTERN.findall(tutorial_data[domain][tutorial]["text"])]
-            tutorial_data[domain][tutorial]["links"] = links
+                tutorial = tutorial_file[:-3]
 
-            tutorial_sections = sections.findall(tutorial_data[domain][tutorial]["text"])
-            if tutorial_sections:
-                text, code, output, solution = tutorial_sections[0]
-                tutorial_data[domain][tutorial]["page_title"] = tutorial
-                tutorial_data[domain][tutorial]["text"] = wikify(text)
-                tutorial_data[domain][tutorial]["code"] = code.strip("\n")
-                tutorial_data[domain][tutorial]["output"] = output.strip("\n")
-                tutorial_data[domain][tutorial]["solution"] = solution.strip("\n")
-            else:
-                tutorial_data[domain][tutorial]["page_title"] = ""
-                tutorial_data[domain][tutorial]["text"] = wikify(tutorial_data[domain][tutorial]["text"])
-                tutorial_data[domain][tutorial]["code"] = constants.DOMAIN_DATA[domain]["default_code"]
+                if not tutorial in tutorial_data[domain][language]:
+                    tutorial_data[domain][language][tutorial] = {}
 
-            for link in links:
-                if not link in tutorial_data[domain]:
-                    tutorial_data[domain][link] = {}
+                tutorial_dict = tutorial_data[domain][language][tutorial]
 
-                if not "back_chapter" in tutorial_data[domain][link]:
-                    tutorial_data[domain][link]["back_chapter"] = tutorial.decode("utf-8")
+                tutorial_dict["text"] = open(os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)).read().replace("\r\n", "\n")
+                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(tutorial_dict["text"])]
+                tutorial_dict["links"] = links
+
+                tutorial_sections = sections.findall(tutorial_dict["text"])
+                if tutorial_sections:
+                    text, code, output, solution = tutorial_sections[0]
+                    tutorial_dict["page_title"] = tutorial.decode("utf8")
+                    tutorial_dict["text"] = wikify(text, language)
+                    tutorial_dict["code"] = code.strip("\n")
+                    tutorial_dict["output"] = output.strip("\n")
+                    tutorial_dict["solution"] = solution.strip("\n")
                 else:
-                    print "Warning! duplicate links to tutorial %s" % link
+                    tutorial_dict["page_title"] = ""
+                    tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
+                    tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
 
-                num_links = len(links)
-                page_index = links.index(link)
-                if page_index > 0:
-                    if not "previous_chapter" in tutorial_data[domain][link]:
-                        tutorial_data[domain][link]["previous_chapter"] = links[page_index - 1].decode("utf-8").replace(" ", "_")
-                if page_index < (num_links - 1):
-                    if not "next_chapter" in tutorial_data[domain][link]:
-                        tutorial_data[domain][link]["next_chapter"] = links[page_index + 1].decode("utf-8").replace(" ", "_")
+                for link in links:
+                    if not link in tutorial_data[domain][language]:
+                        tutorial_data[domain][language][link] = {
+                            "page_title" : link.decode("utf8"),
+                            "text" : "You can contribute this page by forking the repository at: <a href='https://github.com/ronreiter/interactive-tutorials'>https://github.com/ronreiter/interactive-tutorials</a>."
+                        }
+
+                    if not "back_chapter" in tutorial_data[domain][language][link]:
+                        tutorial_data[domain][language][link]["back_chapter"] = tutorial.decode("utf-8").replace(" ", "_")
+                    else:
+                        print "Warning! duplicate links to tutorial %s" % link
+
+                    num_links = len(links)
+                    page_index = links.index(link)
+                    if page_index > 0:
+                        if not "previous_chapter" in tutorial_data[domain][language][link]:
+                            tutorial_data[domain][language][link]["previous_chapter"] = links[page_index - 1].decode("utf-8").replace(" ", "_")
+                    if page_index < (num_links - 1):
+                        if not "next_chapter" in tutorial_data[domain][language][link]:
+                            tutorial_data[domain][language][link]["next_chapter"] = links[page_index + 1].decode("utf-8").replace(" ", "_")
 
 init_tutorials()
+
+def get_languages():
+    return sorted(tutorial_data[get_host()].keys() if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN].keys())
 
 def get_host():
     return request.host[4:] if request.host.startswith("www.") else request.host
@@ -141,19 +162,19 @@ def is_development_mode():
 def get_domain_data():
     return constants.DOMAIN_DATA[get_host()] if not is_development_mode() else constants.DOMAIN_DATA[DEFAULT_DOMAIN]
 
-def get_tutorial_data(tutorial_id):
-    return tutorial_data[get_host()][tutorial_id] if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN][tutorial_id]
+def get_tutorial_data(tutorial_id, language="en"):
+    return tutorial_data[get_host()][language][tutorial_id] if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN][language][tutorial_id]
 
-def get_tutorial(tutorial_id):
-    tutorial_data = get_tutorial_data(tutorial_id)
+def get_tutorial(tutorial_id, language="en"):
+    td = get_tutorial_data(tutorial_id, language)
 
-    if not tutorial_data:
+    if not td:
         return {
             "page_title" : cgi.escape(tutorial_id),
             "text" : "Page not found."
         }
     else:
-        return tutorial_data
+        return td
 
 #app.add_url_rule('/favicon.ico', redirect_to=url_for('static/img/favicons', filename=get_domain_data()["favicon"]))
 @app.route("/favicon.ico")
@@ -161,8 +182,9 @@ def favicon():
     return open(os.path.join(os.path.dirname(__file__), "static/img/favicons/" + get_domain_data()["favicon"]), "rb").read()
 
 @app.route("/")
-def default_index():
-    return index("Welcome")
+@app.route("/<language>/")
+def default_index(language="en"):
+    return index("Welcome", language)
 
 @app.route("/about")
 @app.route("/privacy")
@@ -175,9 +197,10 @@ def static_file():
     ))
 
 @app.route("/<title>")
-def index(title):
+@app.route("/<language>/<title>")
+def index(title, language="en"):
     tutorial = title.replace("_", " ").encode("utf-8")
-    tutorial_data = get_tutorial(tutorial)
+    tutorial_data = get_tutorial(tutorial, language)
     domain_data = get_domain_data()
     title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
     html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title else title_suffix
@@ -193,6 +216,9 @@ def index(title):
         tutorial_data_json = json.dumps(tutorial_data),
         domain_data_json = json.dumps(domain_data),
         html_title = html_title,
+        language_code = language,
+        language_name = LANGUAGES[language],
+        languages = get_languages(),
         uid = uid,
         **tutorial_data
     ))

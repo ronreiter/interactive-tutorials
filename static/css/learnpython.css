@@ -54,7 +54,7 @@ h1 a:link, h1 a:visited, h1 a:hover {
 
 ul {
   margin: 0;
-  padding-left: 1.2em;
+  padding-left: 0;
 }
 
 .rel {

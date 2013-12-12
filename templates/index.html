@@ -4,9 +4,9 @@
     {% autoescape off %}
     <script>
         var domainData = {{ domain_data_json }};
-        var nextChapter = "/{{ next_chapter }}";
-        var previousChapter = "/{{ previous_chapter }}";
-        var backChapter = "/{{ back_chapter }}";
+        var nextChapter = "/{{ language_code }}/{{ next_chapter }}";
+        var previousChapter = "/{{ language_code }}/{{ previous_chapter }}";
+        var backChapter = "/{{ language_code }}/{{ back_chapter }}";
         var tutorialData = {{ tutorial_data_json }};
     </script>
     {% endautoescape %}
@@ -20,15 +20,8 @@
 {% block content %}
 <div class="container" id="main">
     <div class="row">
+
         <div class="span10">
-            {% if page_title %}
-            <ul class="breadcrumb" style="margin-top: 10px">
-              {% if back_chapter %}
-              <li><a href="/{{ back_chapter }}">{{ back_chapter }}</a> <span class="divider">/</span></li>
-              {% endif %}
-              <li class="active">{{ page_title }}</li>
-            </ul>
-            {% endif %}
 
             <div>
                 <script type="text/javascript"><!--
@@ -42,6 +35,23 @@
                 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
 
+            {% if page_title %}
+            <ul class="breadcrumb" style="margin-top: 10px">
+              {% if back_chapter %}
+              <li><a href="/{{ language_code }}/{{ back_chapter }}">{{ back_chapter }}</a> <span class="divider">/</span></li>
+              {% endif %}
+              <li class="active">{{ page_title }}</li>
+            </ul>
+            {% endif %}
+
+            <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if previous_chapter %}
+                <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
+                {% endif %}
+                {% if next_chapter %}
+                <a class="btn pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial <i class="icon-chevron-right"></i></a>
+                {% endif %}
+            </div>
 
             <span id="inner-text">{% autoescape off %}
                 {% if page_title %}
@@ -54,10 +64,10 @@
             {% endif %}
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if previous_chapter %}
-                <a class="btn btn-primary pull-left" href="/{{ previous_chapter }}">Previous Tutorial</a>
+                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
                 {% endif %}
                 {% if next_chapter %}
-                <a class="btn btn-primary pull-right" href="/{{ next_chapter }}">Next Tutorial</a>
+                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial  <i class="icon-chevron-right icon-white"></i></a>
                 {% endif %}
             </div>
 
