@@ -138,6 +138,15 @@
                     <a href="http://www.dreamhost.com/r.cgi?1502972"><img alt="DreamHost" src="http://images.dreamhost.com/rewards/300x250-Sunny.png" style="width: 160px; max-width: 160px"/></a>
                 </div>
                 -->
+
+                {% if domain_data.language == "python" %}
+                <div style="margin-bottom: 10px">
+                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'Udemy');return false;" href="http://ude.my/87d5">
+                        <img src="/static/img/banners/learnpythonthehardway.jpg" style="width: 160px; max-width: 160px"/>
+                    </a>
+                </div>
+                {% endif %}
+
                 <div style="margin-bottom: 10px">
                     <script>
                         google_ad_client = "ca-pub-3723950136133694";
@@ -149,16 +158,6 @@
                     <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                     </script>
                 </div>
-
-                {% if domain_data.language != "javascript" %}
-                <!--
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'Learn-JS');return false;" href="http://www.learn-js.org">
-                        <img src="/static/img/banners/learn-js-banner.png" style="width: 160px; max-width: 160px"/>
-                    </a>
-                </div>
-                -->
-                {% endif %}
 
                 {% if domain_data.language == "python" %}
                 <div style="margin-bottom: 10px">

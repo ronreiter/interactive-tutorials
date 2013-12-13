@@ -140,6 +140,7 @@ To pop a variable, we will need to reverse this action:
 2. Free the head item
 3. Set the head to be the next item that we've stored on the side
 
+Here is the code:
 
     int pop(node_t ** head) {
         int retval = -1;
