@@ -22,7 +22,7 @@ app.secret_key = "this is a secret. really."
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNJS_DOMAIN
+DEFAULT_DOMAIN = constants.LEARNC_DOMAIN
 
 LANGUAGES = {
     "en" : "English",

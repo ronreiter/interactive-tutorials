@@ -68,7 +68,7 @@ function execute() {
 	//$('#output').css('color', '#bbbbbb');
 	//$('#output').css('background-color', '#eeeeee');
 	loading.show();
-	output.setValue("Executing... Please wait.");
+	output.setValue("");
 	//$('#output').text('');
 
 	if (window.domainData.language == "javascript") {
@@ -246,6 +246,17 @@ function load() {
             editor.setValue(text); execute()
         })
     );
+
+    $("footer").click(function() {
+        $("#main").css("margin-bottom", 500);
+        $(".CodeMirror").height(400);
+    });
+
+    $("#main").click(function() {
+        $("#main").css("margin-bottom", 300);
+        $(".CodeMirror").height(200);
+    });
+
 }
 
 function showExpected() {

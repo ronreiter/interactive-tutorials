@@ -5,6 +5,10 @@
 .CodeMirror {
 	font-family: monospace;
 	height: 200px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 header {
