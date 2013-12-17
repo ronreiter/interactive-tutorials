@@ -81,7 +81,7 @@ To push a member to the end of an array, use the `array_push` function:
     // print the new array
     print_r($numbers);
 
-To pop a member from the beginning of an array, use the `array_pop` function:
+To pop a member from the end of an array, use the `array_pop` function:
 
     $numbers = [1,2,3,4];
     array_pop($numbers); // now array is [1,2,3];
