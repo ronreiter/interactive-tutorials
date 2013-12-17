@@ -64,21 +64,20 @@ The expression can be a logical combination of comparisons: negation is denoted 
 
 ### Logical combinations
 
-if \[\[ $VAR_A -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
+	if [[ $VAR_A -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
+		command...
+	fi
 
 ### case structure
 
-case "$variable" in
-	
-"$condition1" )
-command...
-;;
-	
-"$condition2" )
-command...
-;; 
-
-esac
+	case "$variable" in
+		"$condition1" )
+			command...
+		;;
+		"$condition2" )
+			command...
+		;; 
+	esac
 
 ### simple case bash structure
 
