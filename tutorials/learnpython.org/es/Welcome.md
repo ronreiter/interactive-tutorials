@@ -19,23 +19,23 @@ Indice
 
 ### Aprende las bases
 
-- Hola Mundo - [[Hello, World!]]
-- Variables y Tipos de datos - [[Variables and Types]]
-- Listas - [[Lists]]
-- Operadores basicos - [[Basic Operators]]
-- Formato de texto - [[String Formatting]]
-- Operaciones basicas con texto - [[Basic String Operations]]
-- Condicionales - [[Conditions]]
-- Bucles - [[Loops]]
-- Funciones - [[Functions ]]
-- Clases y objetos - [[Classes and Objects]]
-- Diccionarios - [[Dictionaries]]
+- [Hola Mundo](Hello, World!)
+- [Variables y Tipos de datos](Variables and Types)
+- [Listas](Lists)
+- [Operadores basicos](Basic Operators)
+- [Formato de texto](String Formatting)
+- [Operaciones basicas con texto](Basic String Operations)
+- [Condicionales](Conditions)
+- [Bucles](Loops)
+- [Funciones](Functions)
+- [Clases y objetos](Classes and Objects)
+- [Diccionarios](Dictionaries)
 
 
 ### Tutoriales Avanzados
 
-- Generadores - [[Generators]]
-- Expresiones regulares [[Regular Expressions]]
+- [Generadores](Generators)
+- [Expresiones regulares](Regular Expressions)
 - Compresiones de listas
 - Funciones de argumentos multiples
 - Manejo de Excepciones
