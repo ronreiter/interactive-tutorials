@@ -25,6 +25,43 @@ for( int i = 0, i < 10, i++)
 For loops are used to allow you to repeat sections of code a fixed, or variable amount of times.
 This allows you to make your code more compact and clean.
 
+There are several statements you can use to control a loop:
+
+break:
+
+This allows you to exit a loop without finishing the loop.
+
+E.G
+
+for(int i = 0; i < 16; i++)
+{
+
+    if(i == 12)
+    {
+        break;    
+    }
+}
+
+Exit the loop when i is 12, not when the loop would usually finish
+
+continue:
+
+This allows you to skip straight to the next iteration
+
+for(int i = 0; i < 16; i++)
+{
+    
+    if(i % 2 == 1)
+    {
+        continue;
+    }
+    
+    Console.WriteLine(i);
+    
+}
+
+Print only the even numbers by skipping the interations where i is odd.
+
 Exercise
 --------
 
