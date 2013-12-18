@@ -3,7 +3,7 @@ Tutorial
 
 For loops are very similar to for loops in C, They are defined like this:
 
-for( [variable to count iterations] , [conditions checked for, [code to execute every loop)
+for( [variable to count iterations] , [conditions checked for], [code to execute every loop])
 {
 
 }
