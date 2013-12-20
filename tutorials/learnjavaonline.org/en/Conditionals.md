@@ -90,9 +90,9 @@ When we are using objects and want to check if they are equal, the operator `==`
     String b = new String("Wow");
     String sameA = a;
     
-    boolean r1 = a == b; // This is false, since a and be are not the same object
+    boolean r1 = a == b;      // This is false, since a and b are not the same object
     boolean r2 = a.equals(b); // This is true, since a and b are logically equals
-    boolean r3 = a == sameA; // This is true, since a and b are really the same object
+    boolean r3 = a == sameA;  // This is true, since a and sameA are really the same object
 
 Exercise
 --------
