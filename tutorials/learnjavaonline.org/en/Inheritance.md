@@ -55,15 +55,11 @@ Tutorial Code
 
 
 class Circle extends Shape {                 // class declaration
-
     Circle (double diameter) {                  // constructor
 	this.diameter = diameter;
     }
-
     private static final double PI = Math.PI;   // constant
-
     private double diameter;                    // instance variable
-
     public double area () {                     // dynamic method
 	double radius = diameter / 2.0;
 	return PI * radius * radius;
@@ -108,11 +104,8 @@ Solution
     Circle (double diameter) {                  // constructor
 	    this.diameter = diameter;
     }
-
     private static final double PI = Math.PI;   // constant
-
     private double diameter;                    // instance variable
-
     public double area () {                     
 	    double radius = diameter / 2.0;
 	    return PI * radius * radius;
@@ -125,16 +118,13 @@ Solution
 	    this.side1 = side1;
 	    this.side2 = side2;
     }
-
     private double side1;        // length of one side
     private double side2;        // length of the other side
-
     public double area () {
 	    return side1 * side2;
     }
 
 }
-
 
 public class Main {
     public static void main(String[] args) {
