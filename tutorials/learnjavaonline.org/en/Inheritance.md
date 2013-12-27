@@ -80,8 +80,6 @@ public class Main {
 	Shape s2 = new Rectangle (5.0, 4.0);
 	System.out.println (s1.area());
 	System.out.println (s2.area());
-       
-        
     }
 }
 
@@ -108,7 +106,6 @@ Solution
 	    double radius = diameter / 2.0;
 	    return PI * radius * radius;
     }
-
 }
 
   class Rectangle extends Shape {
@@ -130,7 +127,5 @@ public class Main {
 	Shape s2 = new Rectangle (5.0, 4.0);
 	System.out.println (s1.area());
 	System.out.println (s2.area());
-       
-        
     }
 }
