@@ -24,7 +24,7 @@ Consider a class called Shape, Shape is the base class which is inherited by sha
   
   
   Class `Shape` is inherited by Circle which is a Shape
-  The method area is defined in the base class and has been inherited in the circle class and method `area` is available with the cicrle class which is redefined specific to circle
+  The method area is defined in the base class and has been inherited in the circle class and method `area` is available with the circle class which is redefined specific to circle
   
   
   class Circle extends Shape{
