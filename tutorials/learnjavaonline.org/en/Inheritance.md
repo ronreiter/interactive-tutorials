@@ -76,10 +76,8 @@ class Rectangle extends Shape {
 
 public class Main {
     public static void main(String[] args) {
-       
        	Shape s1 = new Circle (5.0);
 	Shape s2 = new Rectangle (5.0, 4.0);
-
 	System.out.println (s1.area());
 	System.out.println (s2.area());
        
@@ -130,7 +128,6 @@ public class Main {
     public static void main(String[] args) {
        	Shape s1 = new Circle (5.0);
 	Shape s2 = new Rectangle (5.0, 4.0);
-
 	System.out.println (s1.area());
 	System.out.println (s2.area());
        
