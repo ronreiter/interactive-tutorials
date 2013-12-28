@@ -1,2 +1,4 @@
 Flask
 redis
+fpdf
+pymongo

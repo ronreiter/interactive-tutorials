@@ -79,7 +79,6 @@ function execute() {
 		}
 	} else {
 		$.ajax({
-			url: "/execute",
 			type : "post",
 			data : JSON.stringify({
 				"code" : editor.getValue(),

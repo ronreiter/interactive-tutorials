@@ -1,46 +1,55 @@
-from flask import Flask, render_template, request, url_for, make_response, session
 import json
-import constants
 import re
 import markdown
 import os
 import cgi
 import urllib
-import redis
 import hashlib
-from ideone import Ideone
 import time
 import functools
 
-IDEONE_USERNAME = "ronreiter"
-IDEONE_PASSWORD = "runmycode"
-i = Ideone(IDEONE_USERNAME, IDEONE_PASSWORD)
-r = redis.Redis(host="direct.learnpython.org")
+from flask import Flask, render_template, request, make_response, session
+import fpdf
+import pymongo
+import redis
 
+from ideone import Ideone
+
+import constants
+
+ideone_api = Ideone(constants.IDEONE_USERNAME, constants.IDEONE_PASSWORD)
+cache = redis.Redis(host=constants.CACHE_HOST)
+
+# mongo connection
+client = pymongo.MongoClient(host=constants.DB_HOST)
+users = client.tutorials.users
+
+# Flask app
 app = Flask(__name__)
-app.secret_key = "this is a secret. really."
+app.secret_key = constants.SECRET_KEY
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
 
 LANGUAGES = {
-    "en" : "English",
-    "pl" : "Polish",
-    "fa" : "Persian",
-    "es" : "Spanish",
-    "it" : "Italian",
+    "en": "English",
+    "pl": "Polish",
+    "fa": "Persian",
+    "es": "Spanish",
+    "it": "Italian",
 }
 
 tutorial_data = {}
 
+
 def run_code(code, language):
-    code = i.create_submission(code, language_name=language, std_input="1 2 3")["link"]
+    code = ideone_api.create_submission(code, language_name=language, std_input="1 2 3")["link"]
     result = None
 
     while True:
         time.sleep(1)
-        result = i.submission_details(code)
+        result = ideone_api.submission_details(code)
         if result["status"] in [1,3]:
             continue
 
@@ -66,6 +75,7 @@ def pageurl(value, language):
     else:
         return urllib.quote("/%s/%s" % (language, value.replace(' ', '_')))
 
+
 def _wikify_one(language, pat):
     """
     Wikifies one link.
@@ -89,6 +99,7 @@ def _wikify_one(language, pat):
 def wikify(text, language):
     text, count = WIKI_WORD_PATTERN.subn(functools.partial(_wikify_one, language), text)
     return markdown.markdown(text.decode("utf-8")).strip()
+
 
 def init_tutorials():
     for domain in os.listdir("tutorials"):
@@ -126,10 +137,12 @@ def init_tutorials():
                     tutorial_dict["code"] = code.strip("\n")
                     tutorial_dict["output"] = output.strip("\n")
                     tutorial_dict["solution"] = solution.strip("\n")
+                    tutorial_dict["is_tutorial"] = True
                 else:
                     tutorial_dict["page_title"] = ""
                     tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
                     tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
+                    tutorial_dict["is_tutorial"] = False
 
                 for link in links:
                     if not link in tutorial_data[domain][language]:
@@ -154,20 +167,26 @@ def init_tutorials():
 
 init_tutorials()
 
+
 def get_languages():
     return sorted(tutorial_data[get_host()].keys() if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN].keys())
+
 
 def get_host():
     return request.host[4:] if request.host.startswith("www.") else request.host
 
+
 def is_development_mode():
     return get_host() in ["localhost:5000", "192.241.245.44"]
+
 
 def get_domain_data():
     return constants.DOMAIN_DATA[get_host()] if not is_development_mode() else constants.DOMAIN_DATA[DEFAULT_DOMAIN]
 
+
 def get_tutorial_data(tutorial_id, language="en"):
     return tutorial_data[get_host()][language][tutorial_id] if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN][language][tutorial_id]
+
 
 def get_tutorial(tutorial_id, language="en"):
     td = get_tutorial_data(tutorial_id, language)
@@ -196,12 +215,53 @@ def default_index(language="en"):
 def static_file():
     return make_response(render_template(
         request.path.strip("/") + ".html",
-        domain_data = get_domain_data(),
-        domain_data_json = json.dumps(get_domain_data()),
+        domain_data=get_domain_data(),
+        domain_data_json=json.dumps(get_domain_data()),
+        language_code="en",
     ))
 
-@app.route("/<title>")
-@app.route("/<language>/<title>")
+@app.route("/signin")
+def signin():
+    email = request.args.get("email", None)
+    password = request.args.get("password", None)
+    user = users.findOne({"email": email})
+
+    if user:
+        session["user_id"] = str(user._id)
+        return make_response(json.dumps({"status": "error", "error": "no_user"}))
+
+@app.route("/signup")
+def signup():
+    email = request.args.get("email", None)
+    password = request.args.get("password", None)
+    confirm = request.args.get("confirm", None)
+
+    if not email or not password or not confirm:
+        return make_response(json.dumps({"status": "error", "error": "missing_field"}))
+
+    if not re.findall("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", email):
+        return make_response(json.dumps({"status": "error", "error": "invalid_email"}))
+
+    if password != confirm:
+        return make_response(json.dumps({"status": "error", "error": "passwords_dont_match"}))
+
+    id = users.insert({
+        "email": email,
+        "password": password,
+    })
+
+    session["user_id"] = str(id)
+
+
+@app.route("/<language>/progress")
+def progress(language):
+    return make_response(render_template(
+        "progress.html",
+        domain_data=get_domain_data(),
+    ))
+
+@app.route("/<title>", methods=["GET"])
+@app.route("/<language>/<title>", methods=["GET"])
 def index(title, language="en"):
     tutorial = title.replace("_", " ").encode("utf-8")
     tutorial_data = get_tutorial(tutorial, language)
@@ -216,26 +276,26 @@ def index(title, language="en"):
 
     return make_response(render_template(
         "index.html",
-        domain_data = domain_data,
-        tutorial_data_json = json.dumps(tutorial_data),
-        domain_data_json = json.dumps(domain_data),
-        html_title = html_title,
-        language_code = language,
-        language_name = LANGUAGES[language],
-        languages = get_languages(),
-        uid = uid,
+        domain_data=domain_data,
+        tutorial_data_json=json.dumps(tutorial_data),
+        domain_data_json=json.dumps(domain_data),
+        html_title=html_title,
+        language_code=language,
+        language_name=LANGUAGES[language],
+        languages=get_languages(),
+        uid=uid,
         **tutorial_data
     ))
 
-@app.route("/robots.txt")
-def robots():
-    return make_response("User-agent: *\nAllow: /")
 
-@app.route("/execute", methods=["POST"])
-def execute():
+@app.route("/<title>", methods=["POST"])
+@app.route("/<language>/<title>", methods=["POST"])
+def execute(title, language="en"):
+    tutorial = title.replace("_", " ").encode("utf-8")
+    tutorial_data = get_tutorial(tutorial, language)
     request_hash = "%s_%s" % (hashlib.md5(request.json["code"]).hexdigest(), request.json["language"])
 
-    cached_request = r.get(request_hash)
+    cached_request = cache.get(request_hash)
 
     if cached_request is not None:
         data = json.loads(cached_request)
@@ -244,9 +304,32 @@ def execute():
 
         # ha, guess why this check is done :)
         if data["output"] and "import random" not in data["output"]:
-            r.set(request_hash, json.dumps(data))
+            cache.set(request_hash, json.dumps(data))
+
+    if tutorial_data["output"] == data["output"]:
+        data["solved"] = True
+
+        if "user_id" in session:
+            user_data = users.findOne({"_id": session["user_id"]})
+            if not "tutorials_solved" in user_data:
+                user_data["tutorials_solved"] = {}
+
+            if not language in user_data["tutorials_solved"]:
+                user_data["tutorials_solved"][language] = {}
+
+            user_data["tutorials_solved"][language][title] = True
+
+            users.insert(user_data)
+
+    else:
+        data["solved"] = False
 
     return make_response(json.dumps(data))
+
+
+@app.route("/robots.txt")
+def robots():
+    return make_response("User-agent: *\nAllow: /")
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block page_title %}Learning Progress{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Learning Progress</h1>
+    <p>This page shows how many tutorials were completed successfully, and will enable you to receive a certificate for successfully completing all of the tutorials.</p>
+    {% if user %}
+    {% else %}
+    <p>You must sign in using the form on the top right menu to see your progress.</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -46,27 +46,27 @@
                 -->
         </div>
 
-        <div style="line-height: 38px; display: inline-block; float: left">
-            <script src="/static/js/coin.js"></script>
-            <script>
-            CoinWidgetCom.go({
-                wallet_address: "1FPdVZk9ae9f4kj4U2rzCUan9qN9gb4u81"
-                , currency: "bitcoin"
-                , counter: "count"
-                , alignment: "bl"
-                , qrcode: true
-                , auto_show: false
-                , lbl_button: "Donate"
-                , lbl_address: "My Bitcoin Address:"
-                , lbl_count: "donations"
-                , lbl_amount: "BTC"
-            });
-            </script>
-        </div>
-
         <ul class="nav pull-right">
             <li><a href="/about">About</a></li>
-            <li><a href="/Contributing_Tutorials">Contribute</a></li>
+            <!--
+            <li><a href="/{{ language_code }}/progress">Progress</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+                <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                    <div id="status" style="color: red"></div>
+                    <form method="post" accept-charset="UTF-8">
+                        <input style="margin-bottom: 15px;" type="email" placeholder="E-mail" id="email" name="email">
+                        <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+                        <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+                        <label class="string optional" for="user_remember_me"> Remember me</label>
+                        <button class="btn btn-primary btn-block" id="sign-in">Sign In</button>
+                        <label style="text-align:center;margin-top:5px">or</label>
+                        <input style="margin-bottom: 15px;" type="password" placeholder="Confirm Password" id="confirm" name="confirm">
+                        <button class="btn btn-primary btn-block" id="sign-up">Sign Up</button>
+                    </form>
+                </div>
+            </li>
+            -->
         </ul>
 
         </div>
@@ -140,6 +140,33 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+</script>
+<script>
+    $(function() {
+        $("#sign-in").click(function() {
+            var email = $("#email").val();
+            var password = $("#password").val();
+
+            $.ajax({
+                url: "/signin",
+                data: {
+                    email: email,
+                    password: password
+                },
+                success: function(data) {
+                    if (data.status == "success") {
+                        document.location.refresh();
+                    } else {
+                        $("#status").text("E-mail or password combination invalid.")
+                    }
+                }
+            })
+        });
+
+        $("#sign-up").click(function() {
+
+        });
+    });
 </script>
 {% endif %}
 

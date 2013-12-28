@@ -1,3 +1,9 @@
+IDEONE_USERNAME = "ronreiter"
+IDEONE_PASSWORD = "runmycode"
+CACHE_HOST = "direct.learnpython.org"
+DB_HOST = "direct.learnpython.org"
+SECRET_KEY = "this is a secret. really."
+
 LEARNPYTHON_DOMAIN = "learnpython.org"
 LEARNJAVA_DOMAIN = "learnjavaonline.org"
 LEARNC_DOMAIN = "learn-c.org"
