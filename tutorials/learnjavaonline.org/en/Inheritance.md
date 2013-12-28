@@ -53,8 +53,8 @@ Create a rectangle class which inherits the Shape class and finds the area
 Tutorial Code
 -------------
 
-public class Shape{
-    double area ();
+public abstract class Shape{  //ignore abstract right now it will be dealt later
+  abstract  double area ();
 }
 
 
@@ -90,14 +90,14 @@ public class Main {
 Expected Output
 ---------------
 
-78.571
-20.000
+19.634954084936208
+20.0
 
 Solution
 --------
 
-public class Shape{
-    double area ();
+public abstract class Shape{    //ignore abstract right now it will be dealt later
+    abstract double area ();
 }
 
 class Circle extends Shape {                 // class declaration
