@@ -9,8 +9,8 @@ import time
 import functools
 
 from flask import Flask, render_template, request, make_response, session
-import fpdf
-import pymongo
+#import fpdf
+#import pymongo
 import redis
 
 from ideone import Ideone
@@ -21,8 +21,8 @@ ideone_api = Ideone(constants.IDEONE_USERNAME, constants.IDEONE_PASSWORD)
 cache = redis.Redis(host=constants.CACHE_HOST)
 
 # mongo connection
-client = pymongo.MongoClient(host=constants.DB_HOST)
-users = client.tutorials.users
+#client = pymongo.MongoClient(host=constants.DB_HOST)
+#users = client.tutorials.users
 
 # Flask app
 app = Flask(__name__)
@@ -204,8 +204,8 @@ def get_tutorial(tutorial_id, language="en"):
 def favicon():
     return open(os.path.join(os.path.dirname(__file__), "static/img/favicons/" + get_domain_data()["favicon"]), "rb").read()
 
-@app.route("/")
-@app.route("/<language>/")
+@app.route("/", methods=["GET", "POST"])
+@app.route("/<language>/", methods=["GET", "POST"])
 def default_index(language="en"):
     return index("Welcome", language)
 
@@ -260,39 +260,36 @@ def progress(language):
         domain_data=get_domain_data(),
     ))
 
-@app.route("/<title>", methods=["GET"])
-@app.route("/<language>/<title>", methods=["GET"])
+@app.route("/<title>", methods=["GET", "POST"])
+@app.route("/<language>/<title>", methods=["GET", "POST"])
 def index(title, language="en"):
     tutorial = title.replace("_", " ").encode("utf-8")
-    tutorial_data = get_tutorial(tutorial, language)
+    current_tutorial_data = get_tutorial(tutorial, language)
     domain_data = get_domain_data()
-    title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
-    html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title else title_suffix
 
-    if not "uid" in session:
-        session["uid"] = os.urandom(16).encode("hex")
+    if request.method == "GET":
+        title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
+        html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title else title_suffix
 
-    uid = session["uid"]
+        if not "uid" in session:
+            session["uid"] = os.urandom(16).encode("hex")
 
-    return make_response(render_template(
-        "index.html",
-        domain_data=domain_data,
-        tutorial_data_json=json.dumps(tutorial_data),
-        domain_data_json=json.dumps(domain_data),
-        html_title=html_title,
-        language_code=language,
-        language_name=LANGUAGES[language],
-        languages=get_languages(),
-        uid=uid,
-        **tutorial_data
-    ))
+        uid = session["uid"]
 
+        return make_response(render_template(
+            "index.html",
+            domain_data=domain_data,
+            tutorial_data_json=json.dumps(current_tutorial_data),
+            domain_data_json=json.dumps(domain_data),
+            html_title=html_title,
+            language_code=language,
+            language_name=LANGUAGES[language],
+            languages=get_languages(),
+            uid=uid,
+            **current_tutorial_data
+        ))
 
-@app.route("/<title>", methods=["POST"])
-@app.route("/<language>/<title>", methods=["POST"])
-def execute(title, language="en"):
-    tutorial = title.replace("_", " ").encode("utf-8")
-    tutorial_data = get_tutorial(tutorial, language)
+    # POST method handling
     request_hash = "%s_%s" % (hashlib.md5(request.json["code"]).hexdigest(), request.json["language"])
 
     cached_request = cache.get(request_hash)
@@ -306,20 +303,20 @@ def execute(title, language="en"):
         if data["output"] and "import random" not in data["output"]:
             cache.set(request_hash, json.dumps(data))
 
-    if tutorial_data["output"] == data["output"]:
+    if "output" in current_tutorial_data and current_tutorial_data["output"] == data["output"]:
         data["solved"] = True
 
-        if "user_id" in session:
-            user_data = users.findOne({"_id": session["user_id"]})
-            if not "tutorials_solved" in user_data:
-                user_data["tutorials_solved"] = {}
-
-            if not language in user_data["tutorials_solved"]:
-                user_data["tutorials_solved"][language] = {}
-
-            user_data["tutorials_solved"][language][title] = True
-
-            users.insert(user_data)
+        # if "user_id" in session:
+        #     user_data = users.findOne({"_id": session["user_id"]})
+        #     if not "tutorials_solved" in user_data:
+        #         user_data["tutorials_solved"] = {}
+        #
+        #     if not language in user_data["tutorials_solved"]:
+        #         user_data["tutorials_solved"][language] = {}
+        #
+        #     user_data["tutorials_solved"][language][title] = True
+        #
+        #     users.insert(user_data)
 
     else:
         data["solved"] = False
