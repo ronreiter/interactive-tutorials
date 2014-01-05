@@ -82,12 +82,12 @@ These two keywords help us control the loop from within it.
         if (i >= 2) {
             break;
         }
-        System.out.println("Yuhu")
+        System.out.println("Yuhu");
     }
     System.out.println(i);
     // Output:
-    // Yuho
-    // Yuho
+    // Yuhu
+    // Yuhu
     // 2
 
 `continue` will stop the current iteration and will move to the next one. Notice that inside a for loop, it will still run the third section.
