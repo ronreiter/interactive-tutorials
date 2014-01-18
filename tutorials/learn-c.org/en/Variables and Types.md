@@ -6,7 +6,7 @@ Tutorial
 C has several types of variables, but there are a few basic types:
 
 * Integers - whole numbers which can be both positive and negative. Defined using `char`, `int`, `short`, `long` or `long long`.
-* Unsigned integers - whole numbers which can only be positive. Defined using `unsigned char`, `unsigned int`, `unsigned short`, `unsigned long` or `ungisnged long long`.
+* Unsigned integers - whole numbers which can only be positive. Defined using `unsigned char`, `unsigned int`, `unsigned short`, `unsigned long` or `unsigned long long`.
 * Floating point numbers - real numbers (numbers with fractions). Defined using `float` and `double`.
 * Structures - will be explained later, in the Structures section.
 

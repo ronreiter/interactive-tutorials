@@ -13,7 +13,11 @@ To initialize an object, use curly braces:
 
 ### Member addressing
 
-Members of objects can be addressed using the brackets operator `[]`, very much like arrays, but just like many other object oriented languages, the period `.` operator can also be used. They are very similar, except for the fact that brackets return a member by using a string, in contrast to the period operator, which requires the member to be a simple word (the word should not contain spaces, start with a letter or use illegal characters).
+Members of objects can be addressed using the brackets operator `[]`, very much like arrays, but just like many
+other object oriented languages, the period `.` operator can also be used. They are very similar, except for
+the fact that brackets return a member by using a string, in contrast to the period operator,
+which requires the member to be a simple word (the word should not contain spaces,
+start with a letter or use illegal characters).
 
 For example, we can continue to fill the person object with more details:
 
@@ -22,7 +26,7 @@ For example, we can continue to fill the person object with more details:
         lastName : "Smith"
     }
     personObject.age = 23;
-    personObject["salary"] = 14000
+    personObject["salary"] = 14000;
 
 ### Iteration
 
