@@ -102,22 +102,22 @@ Change the variables in the first section, so that each if statement resolves as
 Tutorial Code
 -------------
 
-public class Main {
-    public static void main(String[] args) {
-        String a = new String("Wow");
-        String b = "Wow";
-        String c = a;
-        String d = c;
+    public class Main {
+        public static void main(String[] args) {
+            String a = new String("Wow");
+            String b = "Wow";
+            String c = a;
+            String d = c;
 
-        boolean b1 = a == b;
-        boolean b2 = b.equals(b + "!");
-        boolean b3 = !c.equals(a);
+            boolean b1 = a == b;
+            boolean b2 = b.equals(b + "!");
+            boolean b3 = !c.equals(a);
 
-        if (b1 && b2 && b3) {
-            System.out.println("Success!");
+            if (b1 && b2 && b3) {
+                System.out.println("Success!");
+            }
         }
     }
-}
 
 Expected Output
 ---------------
@@ -126,3 +126,23 @@ Success!
 
 Solution
 --------
+
+    public class Main {
+        public static void main(String[] args) {
+            String a = new String("Wow!");
+            String b = "Wow!";
+            //c can be anything except a or "Wow!"
+            String c = "";
+            String d = c;
+
+            boolean b1 = a == b;
+            boolean b2 = b.equals(b + "!");
+            boolean b3 = !c.equals(a);
+
+            if (b1 && b2 && b3) {
+                System.out.println("Success!");
+            }
+        }
+    }
+
+
