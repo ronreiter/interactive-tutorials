@@ -29,6 +29,7 @@ Table of Contents
 - [[Collections]]
 - [[Wrappers and Autoboxing]]
 - [[Exceptions]]
+- [[Try and Catch]]
 - [[Generic Types]]
 - [[IO Streams]]
 
