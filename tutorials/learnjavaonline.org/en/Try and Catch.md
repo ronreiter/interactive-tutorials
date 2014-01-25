@@ -18,11 +18,11 @@ That's the purpose of try/catch! This is the syntax for try/catch:
 
 			
 	  try {
-			//Code here
-		} catch (ExceptionHere name) {
+		//Code here
+	  } catch (ExceptionHere name) {
 			//Replace ExceptionHere with your exception and name with the name of your exception.
 			//Code if exception "ExceptionHere" is thrown.
-		}
+	  }
 	
 	
 The code after the try block will be attempted to be run. If the exception in the catch statement is thrown during the
