@@ -25,7 +25,7 @@ Table of Contents
 - [[Inheritance]]
 - [[Try and Catch]]
 - [[Abstract Classes]]
-- [[Interaces]]
+- [[Interfaces]]
 - [[Using Generics]]
 - [[Collections]]
 - [[Wrappers and Autoboxing]]
