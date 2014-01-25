@@ -23,13 +23,13 @@ Table of Contents
 ### Advanced Topics (Under Construction)
 
 - [[Inheritance]]
+- [[Try and Catch]]
 - [[Abstract Classes]]
 - [[Interaces]]
 - [[Using Generics]]
 - [[Collections]]
 - [[Wrappers and Autoboxing]]
 - [[Exceptions]]
-- [[Try and Catch]]
 - [[Generic Types]]
 - [[IO Streams]]
 
