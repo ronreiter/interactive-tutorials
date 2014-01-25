@@ -6,7 +6,7 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 There is no need to download anything - Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-learn-perl.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
+learn-perl.org is still under construction - If you wish to contribute tutorials, please contact support@learn-perl.org.
 
 Table of Contents
 -----------------
@@ -15,12 +15,12 @@ Table of Contents
 
 - [[Hello, World!]]
 - [[Variables and Types]]
+- [[Scalars]]
 - [[Arrays]]
-- [[Strings]]
-- [[For loops]]
-- [[While loops]]
-- [[Functions]]
-
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]
+- [[Hashes]]
+- [[Conditional Decisions]]
+- [[Loops]]
+- [[Operators]]
+- [[Subroutines]]
+- [[Regular Expressions]]
+- [[References]]
