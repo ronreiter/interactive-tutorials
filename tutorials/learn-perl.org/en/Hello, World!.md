@@ -11,14 +11,14 @@ Use the print command to print the line "Hello, World!". Note that the new line 
 
 Tutorial Code
 -------------
-	#!/bin/bash
-	# Text to the right of a '#' is treated as a comment - below is the perl command
-	print "Goodbye, World!\n";
+    #!/bin/bash
+    # Text to the right of a '#' is treated as a comment - below is the perl command
+    print "Goodbye, World!\n";
 
 Expected Output
 ---------------
-	Hello, World!
+    Hello, World!
 
 Solution
 ---------------
-print "Hello, World!\n";
+    print "Hello, World!\n";

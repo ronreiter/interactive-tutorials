@@ -94,12 +94,12 @@ int main() {
 
   while (i < 10) {
     if(array[i] < 5){
-	i++;
-	continue;
+      i++;
+      continue;
     }
 
     if(array[i] > 10){
-	break;
+        break;
     }
 
     printf("%d\n", array[i]);

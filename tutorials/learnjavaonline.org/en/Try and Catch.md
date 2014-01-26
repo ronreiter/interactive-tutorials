@@ -16,15 +16,15 @@ But, how can you handle exceptions, when you're unsure if an error will occur.
 
 That's the purpose of try/catch! This is the syntax for try/catch:
 
-			
-	  try {
-		//Code here
-	  } catch (ExceptionHere name) {
-			//Replace ExceptionHere with your exception and name with the name of your exception.
-			//Code if exception "ExceptionHere" is thrown.
-	  }
-	
-	
+            
+      try {
+        //Code here
+      } catch (ExceptionHere name) {
+            //Replace ExceptionHere with your exception and name with the name of your exception.
+            //Code if exception "ExceptionHere" is thrown.
+      }
+    
+    
 The code after the try block will be attempted to be run. If the exception in the catch statement is thrown during the
 code in the try block is run, run the code in the catch block.
 
@@ -42,25 +42,25 @@ NOTE: Use ArrayIndexOutOfBoundsException as exception, or Exception as the excep
 
 Tutorial Code
 -------------
-	public class Main {
-		public static void main(String[] args) {
-			int[] arr = new int[10];
-			System.out.println(arr[9001]);
-		}
-	}
+    public class Main {
+        public static void main(String[] args) {
+            int[] arr = new int[10];
+            System.out.println(arr[9001]);
+        }
+    }
 Expected Output
 ---------------
 Problem with code detected
 
 Solution
 --------
-	public class Main {
-		public static void main(String[] args) {
-			int[] arr = new int[10];
-			try {
-				System.out.println(arr[9001]);
-			} catch (ArrayIndexOutOfBoundsException ex) {
-				System.out.println("Problem with code detected");
-			}
-		}
-	}
+    public class Main {
+        public static void main(String[] args) {
+            int[] arr = new int[10];
+            try {
+                System.out.println(arr[9001]);
+            } catch (ArrayIndexOutOfBoundsException ex) {
+                System.out.println("Problem with code detected");
+            }
+        }
+    }

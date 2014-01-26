@@ -15,7 +15,7 @@ The variable $0 references to the current script. In the following example, the 
 
 The variable $# holds the number of arguments passed to the script
 
-**echo $#			   --> results with: 6**
+**echo $#               --> results with: 6**
 
 The variable $@ holds a space delimited string of all arguments passed to the script
 
@@ -45,7 +45,7 @@ Solution
 
 
 
-	echo continue
+    echo continue
 
 Expected Output
 ---------------

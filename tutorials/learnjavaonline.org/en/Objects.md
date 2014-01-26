@@ -127,7 +127,7 @@ class Point {
     }
     
     public void scale(){
-    	x = x/2;
+        x = x/2;
         y = y/2;
     }
 }
