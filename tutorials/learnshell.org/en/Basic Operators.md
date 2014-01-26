@@ -4,8 +4,8 @@ Arithmetic Operators
 
 Simple arithmetics on variables can be done using the arithmetic expression: $((expression))
 
-	A=3
-	B=$((100 * $A + 5)) # 305
+    A=3
+    B=$((100 * $A + 5)) # 305
 
 The basic operators are:
 

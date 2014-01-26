@@ -105,8 +105,8 @@ int main() {
 }
 
 int print_big(int number){
-	if(number > 10){
-		printf("%d is big\n",number);	
-	}
+    if(number > 10){
+        printf("%d is big\n",number);
+    }
 }
 

@@ -152,15 +152,15 @@ public class Main {
             815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 
             958, 609, 842, 451, 688, 753, 854, 685, 93, 857, 440, 380, 126, 721, 328, 753, 470, 
             743, 527};
-		
+        
         
         for (int i=0; i < numbers.length; i++) {
-    	
+        
             int el = numbers[i];
             if (el == 237) break;
             if (el % 2 == 0)           // using the remainder operator %
             System.out.print(el+" ");  // the Expected Output likes it like this!
-		}
+        }
         
     }
 }

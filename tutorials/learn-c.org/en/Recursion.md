@@ -78,7 +78,7 @@ int factorial(int number){
     int f = number;
     
     if(number > 1){
-    	f *= factorial(number-1);
+        f *= factorial(number-1);
     }
     return f;
 }

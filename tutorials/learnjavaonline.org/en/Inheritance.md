@@ -22,12 +22,12 @@ Consider a class called Shape, Shape is the base class which is inherited by sha
 
     public class Shape {
         public double area ()
-		{
-			return 0; 	// Since this is just a generic "Shape" we will assume the area as zero.
-						// The actual area of a shape must be overridden by a subclass, as we see below.
-						// You will learn later that there is a way to force a subclass to override a method,
-						// but for this simple example we will ignore that.
-		}
+        {
+            return 0;     // Since this is just a generic "Shape" we will assume the area as zero.
+                        // The actual area of a shape must be overridden by a subclass, as we see below.
+                        // You will learn later that there is a way to force a subclass to override a method,
+                        // but for this simple example we will ignore that.
+        }
     }
   
   
@@ -37,10 +37,10 @@ The method area is defined in the base class and has been inherited in the circl
 method `area` is available with the circle class which is redefined specific to circle.
 
   
-    class Circle extends Shape {					// The "extends" keyword is what we use to tell java that Circle inherits the functionality of Shape.
+    class Circle extends Shape {                    // The "extends" keyword is what we use to tell java that Circle inherits the functionality of Shape.
   
         private static final double PI = Math.PI;   // constant
-        private double diameter;					// This could be any number, representing the diameter of this circle.
+        private double diameter;                    // This could be any number, representing the diameter of this circle.
     
         public double area () {
             double radius = diameter / 2.0;
@@ -51,22 +51,22 @@ method `area` is available with the circle class which is redefined specific to 
   
 The advantage of using inheritance is that you can write code that can apply to a number of classes that extend a more general class.  In the below example we have a method that takes the larger area from the two shapes:
 
-	public class Main {
-		public static void main(String[] args) {
-			Shape s1 = new Circle (5.0);
-			Shape s2 = new Rectangle (5.0, 4.0);
-			Shape larger = getLargerShape(s1,s2);
-			
-			System.out.println("The area of the larger shape is: "+larger.area());
-		}
-		
-		public static Shape getLargerShape(Shape s1, Shape s2) {
-			if(s1.area() > s2.area())
-				return s1;
-			else
-				return s2;
-		}
-	}
+    public class Main {
+        public static void main(String[] args) {
+            Shape s1 = new Circle (5.0);
+            Shape s2 = new Rectangle (5.0, 4.0);
+            Shape larger = getLargerShape(s1,s2);
+            
+            System.out.println("The area of the larger shape is: "+larger.area());
+        }
+        
+        public static Shape getLargerShape(Shape s1, Shape s2) {
+            if(s1.area() > s2.area())
+                return s1;
+            else
+                return s2;
+        }
+    }
 
 As you can see, `getLargerShape()` doesn't require the programmer to input a specific type of shape for its 2 parameters.  You could use an instance of any class that inherits the type `Shape` as any of the two parameters
 for this method.  You could use an instance of type `Circle`, `Rectangle`, `Triangle`, `Trapezoid`, etc. - as long as they `extend Shape`.
@@ -81,45 +81,45 @@ Tutorial Code
 
     class Shape {
         public double area ()
-		{
-			return 0; 	// Since this is just a generic "Shape" we will assume the area as zero.
-						// The actual area of a shape must be overridden by a subclass, as we see below.
-						// You will learn later that there is a way to force a subclass to override a method,
-						// but for this simple example we will ignore that.
-		}
+        {
+            return 0;     // Since this is just a generic "Shape" we will assume the area as zero.
+                        // The actual area of a shape must be overridden by a subclass, as we see below.
+                        // You will learn later that there is a way to force a subclass to override a method,
+                        // but for this simple example we will ignore that.
+        }
     }
 
 
-	class Circle extends Shape {					// class declaration
-		Circle (double diameter) {                  // constructor
-			this.diameter = diameter;
-		}
-		private static final double PI = Math.PI;   // constant
-		private double diameter;                    // instance variable
-		
-		public double area () {                     // dynamic method
-			double radius = diameter / 2.0;
-			return PI * radius * radius;
-		}
+    class Circle extends Shape {                    // class declaration
+        Circle (double diameter) {                  // constructor
+            this.diameter = diameter;
+        }
+        private static final double PI = Math.PI;   // constant
+        private double diameter;                    // instance variable
+        
+        public double area () {                     // dynamic method
+            double radius = diameter / 2.0;
+            return PI * radius * radius;
+        }
 
-	}
-
-
-	class Rectangle extends Shape {
-		// Your code goes here
-
-	}
+    }
 
 
-	public class Main {
-		public static void main(String[] args) {
-			Shape s1 = new Circle (2.5);
-			Shape s2 = new Rectangle (5.0, 4.0);
-			
-			System.out.println (s1.area());
-			System.out.println (s2.area());
-		}
-	}
+    class Rectangle extends Shape {
+        // Your code goes here
+
+    }
+
+
+    public class Main {
+        public static void main(String[] args) {
+            Shape s1 = new Circle (2.5);
+            Shape s2 = new Rectangle (5.0, 4.0);
+            
+            System.out.println (s1.area());
+            System.out.println (s2.area());
+        }
+    }
 
 Expected Output
 ---------------
@@ -130,51 +130,51 @@ Expected Output
 Solution
 --------
 
-	class Shape {
+    class Shape {
         public double area ()
-		{
-			return 0; 	// Since this is just a generic "Shape" we will assume the area as zero.
-						// The actual area of a shape must be overridden by a subclass, as we see below.
-						// You will learn later that there is a way to force a subclass to override a method,
-						// but for this simple example we will ignore that.
-		}
+        {
+            return 0;     // Since this is just a generic "Shape" we will assume the area as zero.
+                        // The actual area of a shape must be overridden by a subclass, as we see below.
+                        // You will learn later that there is a way to force a subclass to override a method,
+                        // but for this simple example we will ignore that.
+        }
     }
 
-	class Circle extends Shape {					// class declaration
-		Circle (double diameter) {                  // constructor
-			this.diameter = diameter;
-		}
-		private static final double PI = Math.PI;   // constant
-		private double diameter;                    // instance variable
-		
-		public double area () {                     // dynamic method
-			double radius = diameter / 2.0;
-			return PI * radius * radius;
-		}
+    class Circle extends Shape {                    // class declaration
+        Circle (double diameter) {                  // constructor
+            this.diameter = diameter;
+        }
+        private static final double PI = Math.PI;   // constant
+        private double diameter;                    // instance variable
+        
+        public double area () {                     // dynamic method
+            double radius = diameter / 2.0;
+            return PI * radius * radius;
+        }
 
-	}
+    }
 
-	class Rectangle extends Shape {
-		Rectangle (double width, double height) {
-			this.width = width;
-			this.height = height;
-		}
-		
-		private double width;		// length of one side
-		private double height;		// length of the other side
-		
-		public double area () {
-			return width * height;
-		}
+    class Rectangle extends Shape {
+        Rectangle (double width, double height) {
+            this.width = width;
+            this.height = height;
+        }
+        
+        private double width;        // length of one side
+        private double height;        // length of the other side
+        
+        public double area () {
+            return width * height;
+        }
 
-	}
+    }
 
-	public class Main {
-		public static void main(String[] args) {
-			Shape s1 = new Circle (2.5);
-			Shape s2 = new Rectangle (5.0, 4.0);
-			
-			System.out.println (s1.area());
-			System.out.println (s2.area());
-		}
-	}
+    public class Main {
+        public static void main(String[] args) {
+            Shape s1 = new Circle (2.5);
+            Shape s2 = new Rectangle (5.0, 4.0);
+            
+            System.out.println (s1.area());
+            System.out.println (s2.area());
+        }
+    }
