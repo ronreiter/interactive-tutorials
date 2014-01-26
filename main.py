@@ -101,6 +101,14 @@ def wikify(text, language):
     return markdown.markdown(text.decode("utf-8")).strip()
 
 
+def untab(text):
+    lines = text.strip("\n").split("\n")
+    if not all([x.startswith("    ") or x == "" for x in lines]):
+        return "\n".join(lines)
+
+    return "\n".join([x[4:] if len(x) >= 4 else "" for x in lines])
+
+
 def init_tutorials():
     for domain in os.listdir("tutorials"):
         tutorial_data[domain] = {}
@@ -132,11 +140,13 @@ def init_tutorials():
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
                     text, code, output, solution = tutorial_sections[0]
+                    if tutorial == "Basic Operators":
+                        pass
                     tutorial_dict["page_title"] = tutorial.decode("utf8")
                     tutorial_dict["text"] = wikify(text, language)
-                    tutorial_dict["code"] = code.strip("\n")
-                    tutorial_dict["output"] = output.strip("\n")
-                    tutorial_dict["solution"] = solution.strip("\n")
+                    tutorial_dict["code"] = untab(code)
+                    tutorial_dict["output"] = untab(output)
+                    tutorial_dict["solution"] = untab(solution)
                     tutorial_dict["is_tutorial"] = True
                 else:
                     tutorial_dict["page_title"] = ""
