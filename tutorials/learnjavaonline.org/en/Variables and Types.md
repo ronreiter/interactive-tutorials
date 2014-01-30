@@ -30,11 +30,15 @@ Or you can combine them:
 To define a floating point number, use the following syntax:
 
     double d = 4.5;
-    d = 3;
+    d = 3.0;
 
 If you want to use float, you will have to cast:
 
     float f = (float) 4.5;
+    
+Or, You can use this:
+	
+    float f = 4.5f (f is a shorter way of casting float)
 
 ### Characters and Strings
 
@@ -50,7 +54,7 @@ Here are some ways to use a string:
     String s1 = new String("Who let the dogs out?");
     // Just using "" creates a string, so no need to write it the previous way.
     String s2 = "Who who who who!";
-    // Java defined the operator + on strings
+    // Java defined the operator + on strings to concatenate:
     String s3 = s1 + s2;
 
 There is no operator overloading in Java! The operator `+` is only defined for strings, you will never see it with other objects, only primitives.
@@ -58,7 +62,7 @@ There is no operator overloading in Java! The operator `+` is only defined for s
 You can also concat string to primitives:
 
     int num = 5;
-    String s = "I have " + num + " cookies";
+    String s = "I have " + num + " cookies"; //Be sure not to use "" with primitives.
 
 ### boolean
 
