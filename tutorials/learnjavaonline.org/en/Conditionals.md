@@ -129,7 +129,7 @@ Solution
 
     public class Main {
         public static void main(String[] args) {
-            String a = new String("Wow!");
+            String a = "Wow!"
             String b = "Wow!";
             //c can be anything except a or "Wow!"
             String c = "";
