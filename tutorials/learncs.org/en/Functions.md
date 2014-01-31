@@ -71,7 +71,7 @@ void foo()
 Exercise
 --------
 
-Write a function that divides two numbers (provided as parameters).
+Write a function that divides two numbers (provided as parameters). Tip: you will need to use the modifiers `public` and `static`.
 
 Tutorial Code
 -------------
@@ -117,7 +117,7 @@ public class Functions
         
     }
     
-    int foo(int x,int y)
+    public static int foo(int x,int y)
     {
         return x / y;
     }
