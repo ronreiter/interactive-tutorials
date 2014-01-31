@@ -124,7 +124,7 @@ Tutorial Code
 Expected Output
 ---------------
 
-19.634954084936208
+4.908738521234052
 20.0
 
 Solution
