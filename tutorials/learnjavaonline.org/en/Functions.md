@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-In Java, all function definitions must inside classes. We also call functions methods. Let's look at an example method
+In Java, all function definitions must be inside classes. We also call functions methods. Let's look at an example method
 
     public class Main {
         public static void foo() {
