@@ -39,46 +39,47 @@ For example, this function will perform multiplication by recursively adding :
 Exercise
 --------
  
-Define a new function that will computer the factorial function (5! = 5x4x3x2x1).
+Define a new function called `factorial()` that will compute the factorial by recursive multiplication (5! = 5 x 4 x 3 x 2 x 1).
  
 Tutorial Code
 -------------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-  /* testing code */
-  printf("1! = %i", factorial(1));
-  printf("3! = %i", factorial(3));
-  printf("5! = %i", factorial(5));
-}
+    int main() {
+        /* testing code */
+        printf("1! = %i\n", factorial(1));
+        printf("3! = %i\n", factorial(3));
+        printf("5! = %i\n", factorial(5));
+    }
+    
+    /* define your function here (don't forget to declare it) */
 
 Expected Output
 ---------------
 
-1! = 1
-3! = 6
-5! = 120
+    1! = 1
+    3! = 6
+    5! = 120
 
 Solution
 --------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int factorial(int number);
+    int factorial(int number);
 
-int main() {
-  /* testing code */
-  printf("1! = %i\n", factorial(1));
-  printf("3! = %i\n", factorial(3));
-  printf("5! = %i\n", factorial(5));
-}
-
-int factorial(int number){
-    int f = number;
-    
-    if(number > 1){
-        f *= factorial(number-1);
+    int main() {
+        /* testing code */
+        printf("1! = %i\n", factorial(1));
+        printf("3! = %i\n", factorial(3));
+        printf("5! = %i\n", factorial(5));
     }
+
+    int factorial(int number){
+        int f = number;
+        if(number > 1){
+            f *= factorial(number-1);
+        }
     return f;
-}
+    }
