@@ -65,39 +65,39 @@ Define a new data structure, named "person", which contains a string (pointer to
 Tutorial Code
 -------------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-/* define the person struct here using the typedef syntax */
+    /* define the person struct here using the typedef syntax */
 
-int main() {
-  person john;
+    int main() {
+        person john;
 
-  /* testing code */
-  john.name = "John";
-  john.age = 27;
-  printf("%s is %d years old.", john.name, john.age);
-}
+        /* testing code */
+        john.name = "John";
+        john.age = 27;
+        printf("%s is %d years old.", john.name, john.age);
+    }
 
 Expected Output
 ---------------
 
-John is 27 years old.
+    John is 27 years old.
 
 Solution
 --------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-typedef struct {
-    char * name;
-    int age;
-} person;
+    typedef struct {
+        char * name;
+        int age;
+    } person;
 
-int main() {
-  person john;
+    int main() {
+        person john;
 
-  /* testing code */
-  john.name = "John";
-  john.age = 27;
-  printf("%s is %d years old.", john.name, john.age);
-}
+        /* testing code */
+        john.name = "John";
+        john.age = 27;
+        printf("%s is %d years old.", john.name, john.age);
+    }

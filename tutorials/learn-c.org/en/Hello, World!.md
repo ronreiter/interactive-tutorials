@@ -52,22 +52,22 @@ Tutorial Code
 
 #include <stdio.h>
 
-int main() {
-  printf("Goodbye, World!");
-  return 0;
-}
+    int main() {
+      printf("Goodbye, World!");
+      return 0;
+    }
 
 Expected Output
 ---------------
 
-Hello, World!
+    Hello, World!
 
 Solution
 --------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-  printf("Hello, World!");
-  return 0;
-}
+    int main() {
+      printf("Hello, World!");
+      return 0;
+    }

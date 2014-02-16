@@ -236,143 +236,143 @@ item in the list which has the value `val`.
 Tutorial Code
 -------------
 
-#include <stdio.h>
-#include <stdlib.h>
+    #include <stdio.h>
+    #include <stdlib.h>
 
-typedef struct node {
-    int val;
-    struct node * next;
-} node_t;
+    typedef struct node {
+        int val;
+        struct node * next;
+    } node_t;
 
-void print_list(node_t * head) {
-    node_t * current = head;
+    void print_list(node_t * head) {
+        node_t * current = head;
 
-    while (current != NULL) {
-        printf("%d\n", current->val);
-        current = current->next;
-    }
-}
-
-int pop(node_t ** head) {
-    int retval = -1;
-    node_t * next_node = NULL;
-
-    if (*head == NULL) {
-        return -1;
+        while (current != NULL) {
+            printf("%d\n", current->val);
+            current = current->next;
+        }
     }
 
-    next_node = (*head)->next;
-    retval = (*head)->val;
-    free(*head);
-    *head = next_node;
+    int pop(node_t ** head) {
+        int retval = -1;
+        node_t * next_node = NULL;
 
-    return retval;
-}
+        if (*head == NULL) {
+            return -1;
+        }
 
-int remove_by_value(node_t ** head, int val) {
-    /* TODO: fill in your code here */
-}
+        next_node = (*head)->next;
+        retval = (*head)->val;
+        free(*head);
+        *head = next_node;
 
-int main() {
+        return retval;
+    }
 
-    node_t * test_list = malloc(sizeof(node_t));
-    test_list->val = 1;
-    test_list->next = malloc(sizeof(node_t));
-    test_list->next->val = 2;
-    test_list->next->next = malloc(sizeof(node_t));
-    test_list->next->next->val = 3;
-    test_list->next->next->next = malloc(sizeof(node_t));
-    test_list->next->next->next->val = 4;
-    test_list->next->next->next->next = NULL;
+    int remove_by_value(node_t ** head, int val) {
+        /* TODO: fill in your code here */
+    }
 
-    remove_by_value(&test_list, 3);
+    int main() {
 
-    print_list(test_list);
-}
+        node_t * test_list = malloc(sizeof(node_t));
+        test_list->val = 1;
+        test_list->next = malloc(sizeof(node_t));
+        test_list->next->val = 2;
+        test_list->next->next = malloc(sizeof(node_t));
+        test_list->next->next->val = 3;
+        test_list->next->next->next = malloc(sizeof(node_t));
+        test_list->next->next->next->val = 4;
+        test_list->next->next->next->next = NULL;
+
+        remove_by_value(&test_list, 3);
+
+        print_list(test_list);
+    }
 
 Expected Output
 ---------------
 
-1
-2
-4
+    1
+    2
+    4
 
 Solution
 --------
 
-#include <stdio.h>
-#include <stdlib.h>
+    #include <stdio.h>
+    #include <stdlib.h>
 
-typedef struct node {
-    int val;
-    struct node * next;
-} node_t;
+    typedef struct node {
+        int val;
+        struct node * next;
+    } node_t;
 
-void print_list(node_t * head) {
-    node_t * current = head;
+    void print_list(node_t * head) {
+        node_t * current = head;
 
-    while (current != NULL) {
-        printf("%d\n", current->val);
-        current = current->next;
-    }
-}
-
-int pop(node_t ** head) {
-    int retval = -1;
-    node_t * next_node = NULL;
-
-    if (*head == NULL) {
-        return -1;
+        while (current != NULL) {
+            printf("%d\n", current->val);
+            current = current->next;
+        }
     }
 
-    next_node = (*head)->next;
-    retval = (*head)->val;
-    free(*head);
-    *head = next_node;
+    int pop(node_t ** head) {
+        int retval = -1;
+        node_t * next_node = NULL;
 
-    return retval;
-}
-
-int remove_by_value(node_t ** head, int val) {
-    int i = 0;
-    int retval = -1;
-    node_t * current = *head;
-    node_t * temp_node = NULL;
-
-
-    if ((*head)->val == val) {
-        return pop(head);
-    }
-
-    while (current->next->val != val) {
-        if (current->next == NULL) {
+        if (*head == NULL) {
             return -1;
         }
-        current = current->next;
+
+        next_node = (*head)->next;
+        retval = (*head)->val;
+        free(*head);
+        *head = next_node;
+
+        return retval;
     }
 
-    temp_node = current->next;
-    retval = temp_node->val;
-    current->next = temp_node->next;
-    free(temp_node);
+    int remove_by_value(node_t ** head, int val) {
+        int i = 0;
+        int retval = -1;
+        node_t * current = *head;
+        node_t * temp_node = NULL;
 
-    return retval;
 
-}
+        if ((*head)->val == val) {
+            return pop(head);
+        }
 
-int main() {
+        while (current->next->val != val) {
+            if (current->next == NULL) {
+                return -1;
+            }
+            current = current->next;
+        }
 
-    node_t * test_list = malloc(sizeof(node_t));
-    test_list->val = 1;
-    test_list->next = malloc(sizeof(node_t));
-    test_list->next->val = 2;
-    test_list->next->next = malloc(sizeof(node_t));
-    test_list->next->next->val = 3;
-    test_list->next->next->next = malloc(sizeof(node_t));
-    test_list->next->next->next->val = 4;
-    test_list->next->next->next->next = NULL;
+        temp_node = current->next;
+        retval = temp_node->val;
+        current->next = temp_node->next;
+        free(temp_node);
 
-    remove_by_value(&test_list, 3);
+        return retval;
 
-    print_list(test_list);
-}
+    }
+
+    int main() {
+
+        node_t * test_list = malloc(sizeof(node_t));
+        test_list->val = 1;
+        test_list->next = malloc(sizeof(node_t));
+        test_list->next->val = 2;
+        test_list->next->next = malloc(sizeof(node_t));
+        test_list->next->next->val = 3;
+        test_list->next->next->next = malloc(sizeof(node_t));
+        test_list->next->next->next->val = 4;
+        test_list->next->next->next->next = NULL;
+
+        remove_by_value(&test_list, 3);
+
+        print_list(test_list);
+    }
