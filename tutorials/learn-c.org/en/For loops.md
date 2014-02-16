@@ -31,6 +31,7 @@ the iterator `i` as an the array index:
     }
 
     /* sum now contains a[0] + a[1] + ... + a[9] */
+    printf("Sum of the array is %d\n", sum);
 
 Exercise
 --------
