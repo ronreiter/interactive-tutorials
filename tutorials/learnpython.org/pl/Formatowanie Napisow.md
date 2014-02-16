@@ -57,7 +57,7 @@ Poniżej garść przykładów. Warto, abyś wkleił je do okna i zobaczył jak s
 
     print "rzeczywista_1 = %f" % rzeczywista_1
     print "rzeczywista_2 = %f" % rzeczywista_2
-    print "rzeczywista_2 = %f.1" % rzeczywista_2
+    print "rzeczywista_2 = %.1f" % rzeczywista_2
     print "W systemie szesnastkowym %d ma postac %X" % (calkowita, calkowita)
 
 ### Ćwiczenie
