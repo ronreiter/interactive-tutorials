@@ -9,9 +9,9 @@ import time
 import functools
 
 from flask import Flask, render_template, request, make_response, session
-#import fpdf
 #import pymongo
 import redis
+import sys
 
 from ideone import Ideone
 
@@ -30,7 +30,7 @@ app.secret_key = constants.SECRET_KEY
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
+DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN if not len(sys.argv) > 1 else sys.argv[1]
 
 LANGUAGES = {
     "en": "English",

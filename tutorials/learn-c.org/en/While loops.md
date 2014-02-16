@@ -59,52 +59,52 @@ Notice that if you do not advance the iterator variable `i` and use the `continu
 Tutorial Code
 -------------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-  int array[] = {1, 7, 4, 5, 9, 3, 5, 11, 6, 3, 4};
-  int i = 0;
+    int main() {
+        int array[] = {1, 7, 4, 5, 9, 3, 5, 11, 6, 3, 4};
+        int i = 0;
 
-  while (i < 10) {
-    /* your code goes here */
+        while (i < 10) {
+            /* your code goes here */
 
-    printf("%d\n", array[i]);
-    i++;
-  }
+            printf("%d\n", array[i]);
+            i++;
+        }
 
-  return 0;
-}
+        return 0;
+    }
 
 Expected Output
 ---------------
 
-7
-5
-9
-5
+    7
+    5
+    9
+    5
 
 Solution
 --------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-  int array[] = {1, 7, 4, 5, 9, 3, 5, 11, 6, 3, 4};
-  int i = 0;
+    int main() {
+        int array[] = {1, 7, 4, 5, 9, 3, 5, 11, 6, 3, 4};
+        int i = 0;
 
-  while (i < 10) {
-    if(array[i] < 5){
-      i++;
-      continue;
+        while (i < 10) {
+            if(array[i] < 5){
+                i++;
+                continue;
+            }
+
+            if(array[i] > 10){
+                break;
+            }
+
+            printf("%d\n", array[i]);
+            i++;
+        }
+
+        return 0;
     }
-
-    if(array[i] > 10){
-        break;
-    }
-
-    printf("%d\n", array[i]);
-    i++;
-  }
-
-  return 0;
-}

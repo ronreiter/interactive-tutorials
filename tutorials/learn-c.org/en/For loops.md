@@ -42,35 +42,35 @@ Tutorial Code
 
 #include <stdio.h>
 
-int main() {
-  int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-  int factorial = 1;
-  int i;
+    int main() {
+      int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+      int factorial = 1;
+      int i;
 
-  /* calculate the factorial using a for loop  here*/
+      /* calculate the factorial using a for loop  here*/
 
-  printf("10! is %d.\n", factorial);
-}
+      printf("10! is %d.\n", factorial);
+    }
 
 Expected Output
 ---------------
 
-10! is 3628800.
+    10! is 3628800.
 
 Solution
 --------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-int main() {
-  int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-  int factorial = 1;
+    int main() {
+      int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+      int factorial = 1;
 
-  int i;
+      int i;
 
-  for(i=0;i<10;i++){
-    factorial *= array[i];
-  }
+      for(i=0;i<10;i++){
+        factorial *= array[i];
+      }
 
-  printf("10! is %d.\n", factorial);
-}
+      printf("10! is %d.\n", factorial);
+    }

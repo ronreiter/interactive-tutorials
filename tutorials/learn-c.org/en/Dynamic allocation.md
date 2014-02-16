@@ -39,51 +39,51 @@ Use `malloc` to dynamically allocate a point structure.
 Tutorial Code
 -------------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-typedef struct {
-  int x;
-  int y;
-} point;
+    typedef struct {
+      int x;
+      int y;
+    } point;
 
-int main() {
-  point * mypoint;
+    int main() {
+      point * mypoint;
 
-  /* Dynamically allocate a new point
-     struct which mypoint points to here */
+      /* Dynamically allocate a new point
+         struct which mypoint points to here */
 
-  mypoint->x = 10;
-  mypoint->y =5 ;
-  printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
+      mypoint->x = 10;
+      mypoint->y =5 ;
+      printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
 
-  free(mypoint);
-  return 0;
-}
+      free(mypoint);
+      return 0;
+    }
 
 Expected Output
 ---------------
 
-mypoint coordinates: 10, 5
+    mypoint coordinates: 10, 5
 
 Solution
 --------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-typedef struct {
-  int x;
-  int y;
-} point;
+    typedef struct {
+      int x;
+      int y;
+    } point;
 
-int main() {
-  point * mypoint;
+    int main() {
+      point * mypoint;
 
-  mypoint = malloc(sizeof(point));
+      mypoint = malloc(sizeof(point));
 
-  mypoint->x = 10;
-  mypoint->y =5 ;
-  printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
+      mypoint->x = 10;
+      mypoint->y =5 ;
+      printf("mypoint coordinates: %d, %d\n", mypoint->x, mypoint->y);
 
-  free(mypoint);
-  return 0;
-}
+      free(mypoint);
+      return 0;
+    }
