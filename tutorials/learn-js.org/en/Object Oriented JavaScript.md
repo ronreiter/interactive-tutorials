@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-JavaScript uses functions as classes to created objects using the `new` keyword. Here is an example:
+JavaScript uses functions as classes to create objects using the `new` keyword. Here is an example:
 
     function Person(firstName, lastName) {
         // construct the object using the arguments
@@ -55,3 +55,16 @@ Jill, 24 years old
 
 Solution
 --------
+
+// TODO: create the Person class using a function
+var Person = function(name, age){
+    this.name=name;
+    this.age=age;
+    this.describe = function(){
+        return this.name + ", " + this.age + " years old";
+    }
+}
+var jack = new Person("Jack", 25);
+var jill = new Person("Jill", 24);
+console.log(jack.describe());
+console.log(jill.describe());
