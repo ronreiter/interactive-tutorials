@@ -3,7 +3,7 @@ Tutorial
 
 ### Pushing and popping
 
-Arrays can also function as a stack. The `push` and `pop` variables insert and remove variables from end end of an array.
+Arrays can also function as a stack. The `push` and `pop` methods insert and remove variables from end end of an array.
 
 For example, let's create an empty array and push a few variables.
 
