@@ -24,3 +24,5 @@ Hello, World!
 
 Solution
 --------
+
+console.log("Hello, World");
