@@ -34,6 +34,9 @@ JavaScript supports the modulus operator (`%`) which calculates the remainder of
 
     console.log(5 % 3);     // outputs 2
 
+Instead of typing something like myNumber=myNumber*2, you can use myNumber*=2.
+There are the following shortcuts like that: *= -= += /=
+
 JavaScript also has a `Math` module which contains more advanced functions:
 
 * `Math.abs` calculates the absolute value of a number
