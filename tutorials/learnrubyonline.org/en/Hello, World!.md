@@ -8,7 +8,7 @@ Exercise
 
 Tutorial Code
 -------------
-#Fix this!
+=begin Fix This! =end
 puts 'Goodbye, World!'
 
 Expected Output
@@ -17,5 +17,5 @@ Hello, World!
 
 Solution
 --------
-#Fix this!
+=begin Fix This! =end
 puts 'Hello, World!'
