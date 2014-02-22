@@ -13,22 +13,28 @@ There are many things you can do with strings, using methods.
 and .downcase will make a string all lowercase.
     "Hi!".downcase #is hi!
 There are many more methods, but I am not going to list them all.
+You can also use many methods at once. They are solved from left to right.
+    "Hi!".downcase.reverse #is !ih
 
 Exercise
 --------
-Here you will need to write the purpose of the exercise. Finishing the exercise correctly
-must be accomplished using the new feature that you are explaning.
+Take the given string and use methods to make the code print out "!edoc ma i !ih".
 
 Tutorial Code
 -------------
-Write a code block that will appear on the interpreter window. For example, you may
-write an empty function, which the user must complete in order to finish the exercise.
+
+myString = "Hi! I am code!" #In the next line, use methods to change it.
+myNewString = myString
+puts myNewString
 
 Expected Output
 ---------------
-Write a code block that will describe the exact output expected from the modified code,
-if it has been modified correctly.
+
+!edoc ma i !ih
 
 Solution
 --------
-Write the solution code to the problem.
+
+myString = "Hi! I am code!" #In the next lines, use methods to change it.
+myNewString = myString.reverse.downcase
+puts myNewString
