@@ -19,25 +19,34 @@ While statements will keep doing what's in the loop, until the condition is fals
 Until statements are the opposite of while statements. Here is their syntax.
 ```ruby
     until condition
-        #comething to do
+        #something to do
     end
 ```
-#Important!
+###Important!
 Make sure that you don't make an **infinite loop**. An infinite loop is a while or until statement that does not end, because the condition never changes to what will stop the loop.
 Exercise
 --------
-
+Make a while or until statement from scratch that will ```puts``` "I'm looping!" to the console 7 times.
 
 Tutorial Code
 -------------
-Write a code block that will appear on the interpreter window. For example, you may
-write an empty function, which the user must complete in order to finish the exercise.
+   #Make your loop below!
 
 Expected Output
 ---------------
-Write a code block that will describe the exact output expected from the modified code,
-if it has been modified correctly.
+I'm looping!
+I'm looping!
+I'm looping!
+I'm looping!
+I'm looping!
+I'm looping!
+I'm looping!
 
 Solution
 --------
-Write the solution code to the problem.
+   #Make your loop below!
+condition = 0
+while condition<=6
+    puts "I'm looping!
+    condition = condition + 1
+end
