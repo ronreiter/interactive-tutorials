@@ -7,6 +7,8 @@ The unless statement syntax is almost the same as if statement syntax.
     end
 ```
 
+It is basically the reverse of the if statement, because if statements will only be done if the condition is true, but the unless statement will only be done if the condition is false. Unless statements can also be used with else statements like the if statements.
+
 Exercise
 --------
 Here you will need to write the purpose of the exercise. Finishing the exercise correctly
