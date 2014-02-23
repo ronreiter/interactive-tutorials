@@ -1,7 +1,7 @@
 Tutorial
 --------
 Variables are defined like this
-```
+```ruby
     myFirstVariable = "I made a variable!"
 ```
 There are three major types of data you can set variables to.
