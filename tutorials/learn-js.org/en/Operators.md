@@ -43,6 +43,7 @@ JavaScript also has a `Math` module which contains more advanced functions:
 * `Math.exp` calculates __e__ to the power of a number
 * `Math.pow(x,y)` calculates the result of __x__ to the power of __y__
 * `Math.floor` removes the fraction part from a number
+* `Math.random()` will give a random number `x` and 0<=x<1
 
 And many more mathematical functions.
 
