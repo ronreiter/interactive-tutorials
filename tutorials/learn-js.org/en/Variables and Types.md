@@ -24,7 +24,7 @@ Atop of that, there are two special types called `undefined` and `null`.
 When a variable is used without first defining a value for it, it is equal to undefined. For example:
 
     var newVariable;
-    console.log(newVariable);
+    console.log(newVariable); //prints undefined
 
 However, the `null` value is a different type of value, and is used when a variable should be marked as empty. `undefined` can be used for this purpose, but it should not be used.
 
@@ -32,7 +32,7 @@ However, the `null` value is a different type of value, and is used when a varia
     console.log(emptyVariable);
 
 
-will print out `undefined`
+will print out `null`
 
 Exercise
 --------
