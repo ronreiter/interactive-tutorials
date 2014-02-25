@@ -264,33 +264,5 @@
 
     </div>
 </footer>
-<!--
-<script>
-    function randomString() {
-        var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
-        var string_length = 32;
-        var randomString = "";
-        for (var i = 0; i < string_length; i++) {
-            var rnum = Math.floor(Math.random() * chars.length);
-            randomString += chars.substring(rnum,rnum+1);
-        }
-        return randomString;
-    }
-
-    var uidClient;
-    if (document.cookie.indexOf("uid_client") == -1) {
-        uidClient = randomString();
-        document.cookie = "uid_client=" + uidClient + "; path=/";
-    } else {
-        uidClient = new RegExp("uid_client=(\\w+)").exec(document.cookie)[1];
-    }
-
-
-    var uidScript = document.createElement("script");
-    uidScript.src = "http://s.univide.com/t.js?pid=5&pcid=" + uidClient;
-    document.getElementsByTagName("head")[0].appendChild(uidScript);
-</script>
--->
-<img src="http://p.univide.com/t.gif?pid=1&puid={{ uid }}"/>
 <script src="http://s.univide.com/t.js?pid=1&pcid={{ uid }}"></script>
 {% endblock %}
