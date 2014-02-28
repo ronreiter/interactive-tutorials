@@ -1,7 +1,7 @@
 Tutorial
 --------
 The unless statement syntax is almost the same as if statement syntax.
-```ruby
+```
     unless condition
       #thing to be done if the condition is false
     end
@@ -10,14 +10,14 @@ The unless statement syntax is almost the same as if statement syntax.
 It is basically the reverse of the if statement, because if statements will only be done if the condition is true, but the unless statement will only be done if the condition is false. Unless statements can also be used with else statements like the if statements.
 
 Here is while statement syntax.
-```ruby
+```
     while condition
         #something to do
     end
 ```
 While statements will keep doing what's in the loop, until the condition is false.
 Until statements are the opposite of while statements. Here is their syntax.
-```ruby
+```
     until condition
         #something to do
     end

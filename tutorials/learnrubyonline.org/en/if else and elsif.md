@@ -1,14 +1,14 @@
 Tutorial
 --------
 Here is if statement syntax.
-```ruby
+```
     if condition
       something to be done
     end
 ```
 In the above example, condition is a boolean, or something that, when evaluated, will be a boolean, and between the condition and "end", you type what you want to happen.
 Here is if/else statement syntax.
-```ruby
+```
     if condition
       something to be done
     else
@@ -17,7 +17,7 @@ Here is if/else statement syntax.
 ```
 The else will only be executed if the if statement isn't run, so they will never both be executed.
 Here is if/elsif/else statement syntax.
-```ruby
+```
     if condition
       something to be done
     elsif different condition
@@ -28,7 +28,7 @@ Here is if/elsif/else statement syntax.
 ```
 Still only one of the code blocks will be done, because if the if statement is executed, it skips through all the elsif and else statements that go with it.
 Here is an actual example.
-```ruby
+```
     booleanOne = true
     randomCode = "Hi!"
     if booleanOne
