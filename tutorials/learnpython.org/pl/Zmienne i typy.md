@@ -31,7 +31,7 @@ Liczby rzeczywiste zazwyczaj zapisuje się w pamięci komputera za pomocą tzw. 
 Istnieje również technika tzw. stałego przecinka, ale jest używana rzadziej i w komputerach o małej mocy obliczeniowej.
 
 ### Napisy
-Napis (z ang. strig) jest inicjowany za pomocą pojedyńczego lub podwójnego cudzysłowu.
+Napis (z ang. string) jest inicjowany za pomocą pojedyńczego lub podwójnego cudzysłowu.
 
     napis = 'witaj'
     napis = "witaj"
