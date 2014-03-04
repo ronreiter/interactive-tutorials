@@ -1,6 +1,6 @@
 Tutorial
 --------
-Arrays are similar to variables. They are defined in a similar way. ```myArray = []``` The former example is an empty array.
+Arrays are similar to variables. They are defined in a similar way, ```myArray = []```  is an empty array.
 To put items in your array, use ```myArray = [1, 2, 3]``` or 
 
 ```
