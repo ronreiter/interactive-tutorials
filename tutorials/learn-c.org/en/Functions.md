@@ -11,9 +11,9 @@ the function. To do that, we must use pointers, which are taught later on.
 
 Functions are defined using the following syntax:
 
-    int foo(int n) {
+    int foo(int bar) {
         /* do something */
-        return n * 2;
+        return bar * 2;
     }
 
     int main() {
