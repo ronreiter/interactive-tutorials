@@ -3,22 +3,22 @@ Tutorial
 
 While loops are very similar to For loops, They are defined like this:
 
-while([conditions to be checked)
-{
-[Code to execute]
-}
+    while([conditions to be checked)
+    {
+    [Code to execute]
+    }
 
 This allows you to continously repeat a section of code while a condition is satisfied.
 
 E.G:
 
-int n = 0;
+    int n = 0;
 
-while( n == 0)
-{
-    Console.WriteLine("N is 0");
-    n++;
-}
+    while( n == 0)
+    {
+        Console.WriteLine("N is 0");
+        n++;
+    }
 
 This would execute once as N is changed from zero the first time it runs.
 Unlike for loops, while loops do not allow you to declare or assign the variable used in the conditions.
