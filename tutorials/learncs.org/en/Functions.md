@@ -7,66 +7,66 @@ In C# functions can be in the main program or can be in libraries, which are ext
 
 Functions in C# are defined like this:
 
-[Modifiers (E.G public or static)] [Type of output] [Name] ( [parameter 1],[parameter 2] ...)
-{
+    [Modifiers (E.G public or static)] [Type of output] [Name] ( [parameter 1],[parameter 2] ...)
+    {
 
 
 
-}
+    }
 
 E.G:
 
-public static int multiply(int a, int b)
-{
+    public static int multiply(int a, int b)
+    {
 
-    return a * b;
+        return a * b;
     
-}
+    }
 
 This function has been passed two parameters, integer a and integer b, this is how you provide input for a subroutine (function). 
 
 The return statement stops the subroutine and (depending on the output type) can output a value of the same type as the output type you put at the top E.G:
 
 
-//int is the output type
+    //int is the output type
 
-int foo()
-{
+    int foo()
+    {
 
-    //So you return an integer
-    return 0;
+        //So you return an integer
+        return 0;
     
-}
+    }
 
 That is how you can recieve output from a subroutine.
 But in some cases you do not need to return a value, for instance:
 
 
-void foo()
-{
+    void foo()
+    {
 
-    //the output type is void, so you don't return a value
-    return;
+        //the output type is void, so you don't return a value
+        return;
     
-}
+    }
 
 In this case the return statement simply stops the subroutine and does not give any output, so if you assigned a variable to the output of a void, the variables value would be null, E.G:
 
 
-public static int main(string[] args)
-{
+    public static int main(string[] args)
+    {
 
-    // a = null
-    int a = foo();
+        // a = null
+        int a = foo();
     
-}
+    }
 
-void foo()
-{
+    void foo()
+    {
 
-    return;
+        return;
     
-}
+    }
 
 Exercise
 --------
