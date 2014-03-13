@@ -15,9 +15,12 @@ Table of Contents
 
 - [[Hello, World!]]
 - [[Variables and Types]]
+- [[Scalars]]
 - [[Arrays]]
-- [[Strings]]
-- [[For loops]]
-- [[While loops]]
-- [[Functions]]
-
+- [[Hashes]]
+- [[Conditional Decisions]]
+- [[Loops]]
+- [[Operators]]
+- [[Subroutines]]
+- [[Regular Expressions]]
+- [[References]]
