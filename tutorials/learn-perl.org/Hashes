@@ -50,13 +50,13 @@ Removing an existing key/value pair, can be done using the 'delete' function ope
         # add a couple of name/age pairs
 	$names_and_ages{'Brad'} = 49;
 	$names_and_ages{'Angela'} = 48;
-  @names = keys %names_and_ages;
-  $hashsize = @names;
+  	@names = keys %names_and_ages;
+  	$hashsize = @names;
 	print "2. number of names is: $hashsize\n";	# 5
 	# delete one name/age pair
 	delete $names_and_ages{'Tom'};
-  @names = keys %names_and_ages;
-  $hashsize = @names;
+  	@names = keys %names_and_ages;
+  	$hashsize = @names;
 	print "3. number of names is: $hashsize\n";	# 4
 
 
