@@ -14,12 +14,13 @@ Table of Contents
 ### Learn the Basics
 
 - [[Hello, World!]]
+- [[comments]]
 - [[Variables and Types]]
-- [[Arrays]]
+- [[Math]]
 - [[Strings]]
-- [[For loops]]
-- [[While loops]]
-- [[Functions]]
+- [[Arrays]]
+- [[if else and elsif]]
+- [[unless until while]]
 
 ### Contributing Tutorials
 
