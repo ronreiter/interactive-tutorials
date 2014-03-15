@@ -18,7 +18,7 @@ Table of Contents
 - [[Math]]
 - [[Strings]]
 - [[Arrays]]
-- [[Consitional Statements]]
+- [[Conditional Statements]]
 - [[Unless, Until, and While]]
 
 ### Contributing Tutorials
