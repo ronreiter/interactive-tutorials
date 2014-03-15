@@ -45,45 +45,45 @@ Define an array called `fruits` that holds the following strings: "apple", "bana
 Tutorial Code
 -------------
 
-using System;
+    using System;
 
-public class Tutorial
-{
-   public static void Main()
-   {
-      // write your code here
+    public class Tutorial
+    {
+       public static void Main()
+       {
+          // write your code here
 
-      // test code
-      Console.WriteLine(fruits[0]);
-      Console.WriteLine(fruits[1]);
-      Console.WriteLine(fruits[2]);
-   }
-}
+          // test code
+          Console.WriteLine(fruits[0]);
+          Console.WriteLine(fruits[1]);
+          Console.WriteLine(fruits[2]);
+       }
+    }
 
 Expected Output
 ---------------
 
-apple
-banana
-orange
+    apple
+    banana
+    orange
 
 Solution
 --------
 
-using System;
+    using System;
 
-public class Tutorial
-{
-   public static void Main()
-   {
-      // write your code here
-      string[] fruits = new string[] { "apple", "banana", "orange" };
+    public class Tutorial
+    {
+       public static void Main()
+       {
+          // write your code here
+          string[] fruits = new string[] { "apple", "banana", "orange" };
 
-      // test code
-      Console.WriteLine(fruits[0]);
-      Console.WriteLine(fruits[1]);
-      Console.WriteLine(fruits[2]);
-   }
-}
+          // test code
+          Console.WriteLine(fruits[0]);
+          Console.WriteLine(fruits[1]);
+          Console.WriteLine(fruits[2]);
+       }
+    }
 
 

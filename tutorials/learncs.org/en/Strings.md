@@ -76,46 +76,46 @@ the following sentence into the string `sentence`:
 Tutorial Code
 -------------
 
-using System;
+    using System;
 
-public class Hello
-{
-    public static void Main()
+    public class Hello
     {
-        string firstName = "John";
-        string lastName = "Doe";
-        int age = 27;
+        public static void Main()
+        {
+            string firstName = "John";
+            string lastName = "Doe";
+            int age = 27;
 
-        // TODO: change this
-        string sentence;
+            // TODO: change this
+            string sentence;
 
-        Console.WriteLine(sentence);
+            Console.WriteLine(sentence);
 
+        }
     }
-}
 
 Expected Output
 ---------------
 
-John Doe is 27 years old.
+    John Doe is 27 years old.
 
 Solution
 --------
 
-using System;
+    using System;
 
-public class Hello
-{
-    public static void Main()
+    public class Hello
     {
-        string firstName = "John";
-        string lastName = "Doe";
-        int age = 27;
+        public static void Main()
+        {
+            string firstName = "John";
+            string lastName = "Doe";
+            int age = 27;
 
-        string sentence = String.Format("{0} {1} is {2} years old.",
-            firstName, lastName, age);
+            string sentence = String.Format("{0} {1} is {2} years old.",
+                firstName, lastName, age);
 
-        Console.WriteLine(sentence);
+            Console.WriteLine(sentence);
 
+        }
     }
-}

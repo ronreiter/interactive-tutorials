@@ -53,48 +53,48 @@ Define three variables:
 Tutorial Code
 -------------
 
-using System;
+    using System;
 
-public class Tutorial
-{
-   public static void Main()
-   {
-      // write your code here
+    public class Tutorial
+    {
+       public static void Main()
+       {
+          // write your code here
 
-      // test code
-      Console.WriteLine("productName: " + productName);
-      Console.WriteLine("productYear: " + productYear);
-      Console.WriteLine("productPrice: " + productPrice);
+          // test code
+          Console.WriteLine("productName: " + productName);
+          Console.WriteLine("productYear: " + productYear);
+          Console.WriteLine("productPrice: " + productPrice);
 
-   }
-}
+       }
+    }
 
 
 Expected Output
 ---------------
 
-productName: TV
-productYear: 2012
-productPrice: 279.99
+    productName: TV
+    productYear: 2012
+    productPrice: 279.99
 
 Solution
 --------
 
-using System;
+    using System;
 
-public class Tutorial
-{
-   public static void Main()
-   {
-      // write your code here
-      string productName = "TV";
-      int productYear = 2012;
-      float productPrice = 279.99f;
+    public class Tutorial
+    {
+       public static void Main()
+       {
+          // write your code here
+          string productName = "TV";
+          int productYear = 2012;
+          float productPrice = 279.99f;
 
-      // test code
-      Console.WriteLine("productName: " + productName);
-      Console.WriteLine("productYear: " + productYear);
-      Console.WriteLine("productPrice: " + productPrice);
-   }
-}
+          // test code
+          Console.WriteLine("productName: " + productName);
+          Console.WriteLine("productYear: " + productYear);
+          Console.WriteLine("productPrice: " + productPrice);
+       }
+    }
 
