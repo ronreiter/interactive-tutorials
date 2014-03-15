@@ -28,7 +28,6 @@ Table of Contents
 - [[Dynamic allocation]]
 - [[Recursion]]
 - [[Linked lists]]
-- [[Binary trees]]
 - [[Unions]]
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
