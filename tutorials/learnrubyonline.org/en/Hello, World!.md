@@ -2,9 +2,9 @@ Tutorial
 --------
 
 To print things to the console, use "puts", like this
-```
+
     puts 'I will be printed to the console!'
-```
+
 Everything between the '' will be printed to the console.
 
 

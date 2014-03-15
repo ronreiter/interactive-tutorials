@@ -1,11 +1,11 @@
 Tutorial
 --------
 Variables are defined like this
-```
+
     myFirstVariable = "I made a variable!"
-```
+
 There are three major types of data you can set variables to.
-```
+
     =begin
     in order,
     a string,
@@ -15,7 +15,7 @@ There are three major types of data you can set variables to.
     aString = "I'm a string!"
     aBoolean = true
     aNumber = 42
-```
+
 
 Exercise
 --------

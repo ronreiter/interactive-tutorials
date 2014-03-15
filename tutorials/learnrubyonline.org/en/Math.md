@@ -2,11 +2,10 @@ Tutorial
 --------
 Math in Ruby is mostly what you would expect. + does addition, - does subtraction, * does multiplication, and / does division.
 Two other ones you might not know about are 2 asterisks, and %. 2 asterisks are for exponents. 5**2 is 5 to the power of 2, which is 25. % is a little weird. In Ruby, it isn't percent, it is modulo. Modulo is like division, but it gives you the remainder of the division problem.
-```
+
     moduloAnswer=5%2 #moduloAnswer=1
     exponentAnswer=2**3 #exponentAnswer=8
 
-```
 Exercise
 --------
 Use math operations to turn old variables into new ones that the if statement will print true to the console when run.
