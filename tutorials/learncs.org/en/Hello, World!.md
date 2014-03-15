@@ -21,30 +21,30 @@ Print "Hello, World!" to the console.
 Tutorial Code
 -------------
 
-using System;
+    using System;
 
-public class Hello
-{
-    public static void Main()
+    public class Hello
     {
-        System.Console.WriteLine("Goodbye, World!");
+        public static void Main()
+        {
+            System.Console.WriteLine("Goodbye, World!");
+        }
     }
-}
 
 Expected Output
 ---------------
 
-Hello, World!
+    Hello, World!
 
 Solution
 --------
 
-using System;
+    using System;
 
-public class Hello
-{
-    public static void Main()
+    public class Hello
     {
-        System.Console.WriteLine("Hello, World!");
+        public static void Main()
+        {
+            System.Console.WriteLine("Hello, World!");
+        }
     }
-}

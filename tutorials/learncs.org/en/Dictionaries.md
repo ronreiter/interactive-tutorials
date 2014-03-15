@@ -50,48 +50,48 @@ Here is the inventory specification:
 Tutorial Code
 -------------
 
-using System;
-using System.Collections.Generic;
+    using System;
+    using System.Collections.Generic;
 
-public class Hello
-{
-    public static void Main()
+    public class Hello
     {
-        // TODO: add the inventory dictionary here
+        public static void Main()
+        {
+            // TODO: add the inventory dictionary here
 
-        Console.WriteLine(inventory["apple"]);
-        Console.WriteLine(inventory["orange"]);
-        Console.WriteLine(inventory["banana"]);
+            Console.WriteLine(inventory["apple"]);
+            Console.WriteLine(inventory["orange"]);
+            Console.WriteLine(inventory["banana"]);
 
+        }
     }
-}
 
 
 Expected Output
 ---------------
 
-3
-5
-2
+    3
+    5
+    2
 
 Solution
 --------
 
-using System;
-using System.Collections.Generic;
+    using System;
+    using System.Collections.Generic;
 
-public class Hello
-{
-    public static void Main()
+    public class Hello
     {
-        Dictionary<string, int> inventory = new Dictionary<string, int>();
-        inventory["apple"] = 3;
-        inventory["orange"] = 5;
-        inventory["banana"] = 2;
+        public static void Main()
+        {
+            Dictionary<string, int> inventory = new Dictionary<string, int>();
+            inventory["apple"] = 3;
+            inventory["orange"] = 5;
+            inventory["banana"] = 2;
 
-        Console.WriteLine(inventory["apple"]);
-        Console.WriteLine(inventory["orange"]);
-        Console.WriteLine(inventory["banana"]);
+            Console.WriteLine(inventory["apple"]);
+            Console.WriteLine(inventory["orange"]);
+            Console.WriteLine(inventory["banana"]);
 
+        }
     }
-}

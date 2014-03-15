@@ -33,51 +33,51 @@ Print X to the console N time using a while loop
 Tutorial Code
 -------------
 
-using System;
+    using System;
 
-public class Functions
-{
-    public static void Main()
+    public class Functions
     {
-        string x = "HI";
-        int n = 10;
-        
-        //write while loop here
+        public static void Main()
+        {
+            string x = "Hi";
+            int n = 10;
+
+            //write while loop here
+        }
+
     }
-    
-}
 
 
 Expected Output
 ---------------
 
-HI
-HI
-HI
-HI
-HI
-HI
-HI
-HI
-HI
-HI
+    Hi
+    Hi
+    Hi
+    Hi
+    Hi
+    Hi
+    Hi
+    Hi
+    Hi
+    Hi
 
 Solution
 --------
 
-public class Functions
-{
-    public static void Main()
+    public class Functions
     {
-        string x = "HI";
-        int n = 10;
-        
-        int i = 0;
-        
-        while(i < n)
+        public static void Main()
         {
-            Console.WriteLine(x);
+            string x = "Hi";
+            int n = 10;
+
+            int i = 0;
+
+            while(i < n)
+            {
+                Console.WriteLine(x);
+            }
         }
+
     }
-    
-}

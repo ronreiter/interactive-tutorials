@@ -76,50 +76,48 @@ Write a function that divides two numbers (provided as parameters). Tip: you wil
 Tutorial Code
 -------------
 
+    using System;
 
-using System;
-
-public class Functions
-{
-    public static void Main()
+    public class Functions
     {
-    
-        int x = 2;
-        int y = 2;
-        int a = foo(x,y);
-        Console.WriteLine(a);
-        
+        public static void Main()
+        {
+
+            int x = 2;
+            int y = 2;
+            int a = foo(x,y);
+            Console.WriteLine(a);
+
+        }
+
+        //write function foo here
     }
-    
-    //write function foo here
-}
 
 Expected Output
 ---------------
 
-1
+    1
 
 Solution
 --------
 
+    using System;
 
-using System;
+    public class Functions
+    {
+        public static void Main()
+        {
 
-public class Functions
-{
-    public static void Main()
-    {
-    
-        int x = 2;
-        int y = 2;
-        int a = foo(x,y);
-        Console.WriteLine(a);
-        
+            int x = 2;
+            int y = 2;
+            int a = foo(x,y);
+            Console.WriteLine(a);
+
+        }
+
+        public static int foo(int x,int y)
+        {
+            return x / y;
+        }
     }
-    
-    public static int foo(int x,int y)
-    {
-        return x / y;
-    }
-}
 
