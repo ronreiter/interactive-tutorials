@@ -18,6 +18,7 @@ Table of Contents
 - [[Math]]
 - [[Strings]]
 - [[Arrays]]
+- [[Hashes]]
 - [[Conditional Statements]]
 - [[Unless, Until, and While]]
 
