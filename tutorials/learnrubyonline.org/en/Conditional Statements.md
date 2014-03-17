@@ -47,9 +47,9 @@ Change the language value so that the elsif statement is the only thing executed
 Tutorial Code
 -------------
 language = "English"
-if language == "English"
+if language === "English"
   puts "Hello!"
-elsif language == "Spanish"
+elsif language === "Spanish"
   puts "Hola!"
 else
   puts "I don't know that language!"
@@ -63,9 +63,9 @@ Solution
 --------
 
 language = "Spanish"
-if language == "English"
+if language === "English"
   puts "Hello!"
-elsif language == "Spanish"
+elsif language === "Spanish"
   puts "Hola!"
 else
   puts "I don't know that language!"
