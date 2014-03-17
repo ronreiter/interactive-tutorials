@@ -22,6 +22,7 @@ Table of Contents
 - [[Loops]]
 - [[Objects]]
 - [[Functions]]
+- [[Pop-up Boxes]]
 - [[Callbacks]]
 
 ### Advanced tutorials
