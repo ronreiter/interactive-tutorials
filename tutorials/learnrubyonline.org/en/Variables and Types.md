@@ -20,7 +20,7 @@ There are three major types of data you can set variables to.
 Exercise
 --------
 
-Define three variables, myString, myBoolean, and myNumber, and set them to "I'm programming!", "true", and "5".
+Define three variables, `myString`, `myBoolean`, and `myNumber`, and set them to "I'm programming!", "true", and "5".
 
 Tutorial Code
 -------------
