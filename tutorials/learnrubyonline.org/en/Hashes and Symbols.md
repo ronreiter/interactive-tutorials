@@ -19,7 +19,7 @@ Another way to make a hash, is
     myHash["Key"]="value"
     myHash["Key2"]="value2"
     puts myHash["Key"] # puts value
-Instead of using a string as the key, you can use symbol, like this
+Instead of using a string as the key, you can use a symbol, like this
 
     myHash=Hash.new()
     myHash[:Key]="value"
