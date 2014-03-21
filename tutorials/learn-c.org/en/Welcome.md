@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the learn-c.org free interactive C tutorial. 
+Welcome to the learn-c.org free interactive C tutorial.
 
 Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the C programming language.
 
@@ -21,13 +21,14 @@ Table of Contents
 - [[While loops]]
 - [[Functions]]
 
-### Advanced 
+### Advanced
 - [[Pointers]]
 - [[Structures]]
 - [[Function arguments by reference]]
 - [[Dynamic allocation]]
 - [[Recursion]]
 - [[Linked lists]]
+- [[Binary trees]]
 - [[Unions]]
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
