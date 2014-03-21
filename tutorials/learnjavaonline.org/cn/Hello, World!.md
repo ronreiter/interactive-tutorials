@@ -1,7 +1,7 @@
-Tutorial
+ï»¿Tutorial
 --------
 
-JavaÊÇÒ»¸öÃæÏò¶ÔÏóµÄÓïÑÔ (OOP). ¶ÔÏóÔÚJavaÖĞ½Ğ×ö "classes" Àà.
+Javaæ˜¯ä¸€ä¸ªé¢å‘å¯¹è±¡çš„è¯­è¨€ (OOP). å¯¹è±¡åœ¨Javaä¸­æˆ‘ä»¬æŠŠå®ƒå«åš "classes" ç±».
 
 Let's go over the Hello world program, which simply prints "Hello, World!" to the screen.
 
