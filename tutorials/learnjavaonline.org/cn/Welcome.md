@@ -1,6 +1,6 @@
 ﻿# 欢迎来到Java的世界
 
-欢迎来到LearnJavaOnline.org学习Java交互式教程。
+欢迎来到LearnJavaOnline.org交互式学习Java之旅。
 
 无论你是有经验的程序员与否，本网站是为大家谁愿意为您提供学习Java编程语言之门。
 
