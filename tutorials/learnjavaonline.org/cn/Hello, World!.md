@@ -3,7 +3,7 @@
 
 Java是一个面向对象的语言 (OOP). 对象在Java中我们把它叫做 "classes" 类.
 
-Let's go over the Hello world program, which simply prints "Hello, World!" to the screen.
+我们看一下下方Hello world的程序, 用来在屏幕打印 "Hello, World!" .
 
     public class Main {
         public static void main(String[] args) {
@@ -11,39 +11,39 @@ Let's go over the Hello world program, which simply prints "Hello, World!" to th
         }
     }
 
-The first line defines a class called Main.
+第一行定义了一个叫 Main 的类.
 
     public class Main {
 
-In Java, every line of code that can actually run needs to be inside a class. This line declares a class named `Main`, which is `public`, that means that any other class can access it. This is not important for now, so don't worry. For now, we'll just write our code in a class called Main, and talk about objects later on.
+在Java中,每一行实际运行的代码，都必须包含在类的内部。这行声明了一个名为类。这行声明了一个名为类 `Main`,它是 `public` 公共的, 这意味着其他任何类都可以访问它。这不是现在关心的，所以不用担心。现在，我们只写一个类名叫Main的代码，再以后再谈什么是对象。
 
-Notice that when we declare a public class, we must declare it inside a file with the same name (Main.java), otherwise we'll get an error when compiling.
+请注意，当我们声明一个public类，我们必须使用相同的名称（Main.java文件）的文件中声明它，否则编译时，我们会得到一个错误。
 
-When running the examples on the site, we will not use the public keyword, since we write all our code in one file.
+当我们运行网站的示例时，我们没有使用关键字public的原因是我们都是写在一个类里面的。
 
-The next line is:
+下一行代码是:
 
     public static void main(String[] args) {
 
-This is the entry point of our Java program. the main method has to have this exact signature in order to be able to run our program.
+这是我们的Java程序的入口点。 main方法有这个确切的签名 main，以便能够运行我们的程序。
 
-* `public` again means that anyone can access it. 
-* `static` means that you can run this method without creating an instance of `Main`.
-* `void` means that this method doesn't return any value.
-* `main` is the name of the method.
+* `public` 意味着任何人都可以访问它. 
+* `static` 意味着你可以不创建实例运行此 `Main` 方法.
+* `void` 意味着此方法不返回任何值。
+* `main` 方法的名称。
 
-The arguments we get inside the method are the arguments that we will get when running the program with parameters. It's an array of strings. We will use it in our next lesson, so don't worry if you don't understand it all now.
+String[] args 运行程序的参数。这是一个字符串数组。我们将在下一课讲，所以如果你不明白这一切现在不用担心了。
 
     System.out.println("Hello, World!");
 
-* `System` is a pre-defined class that Java provides us and it holds some useful methods and variables.
-* `out` is a static variable within System that represents the output of your program (stdout).
-* `println` is a method of out that can be used to print a line.
+* `System` 是一个预先定义的类，Java为我们提供，它拥有一些有用的方法和变量
+* `out` 是系统类 `System` 中的静态变量，可以提供打印输出。
+* `println` 是出一种方法，可用于打印一行。
 
 Exercise
 --------
 
-Print "Hello, World!" to the console.
+在控制台打印 "Hello, World!" .
 
 Tutorial Code
 -------------
@@ -52,7 +52,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Goodbye, World!");
+        System.out.println("Hello, World!");
 
     }
 
