@@ -162,7 +162,7 @@ Here is the code:
 ### Removing the last item of the list
 
 Removing the last item from a list is very similar to adding it to the end of the list, but with one big exception -
-we since we have to change one item before the last item, we actually have to look two items ahead and see if the next
+since we have to change one item before the last item, we actually have to look two items ahead and see if the next
 item is the last one in the list:
 
 
