@@ -3,7 +3,7 @@ Tutorial
 
 While loops are very similar to For loops, They are defined like this:
 
-    while([conditions to be checked)
+    while([conditions to be checked])
     {
     [Code to execute]
     }
