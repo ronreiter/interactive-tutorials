@@ -162,6 +162,15 @@ function load() {
 				theme: "monokai"
 			});
 			break;
+		case "c++11":
+			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				lineNumbers: true,
+				indentUnit: 4,
+				tabMode: "shift",
+				mode: "text/x-csrc",
+				theme: "monokai"
+			});
+			break;
 		case "javascript":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
 				lineNumbers: true,
@@ -246,6 +255,7 @@ function load() {
         })
     );
 
+    /*
     $("footer").click(function() {
         $("#main").css("margin-bottom", 500);
         $(".CodeMirror").height(400);
@@ -255,6 +265,7 @@ function load() {
         $("#main").css("margin-bottom", 300);
         $(".CodeMirror").height(200);
     });
+    */
 
 }
 

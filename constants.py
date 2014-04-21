@@ -1,5 +1,5 @@
 IDEONE_USERNAME = "ronreiter"
-IDEONE_PASSWORD = "runmycode"
+IDEONE_PASSWORD = "learn"
 CACHE_HOST = "direct.learnpython.org"
 DB_HOST = "direct.learnpython.org"
 SECRET_KEY = "this is a secret. really."
@@ -7,6 +7,7 @@ SECRET_KEY = "this is a secret. really."
 LEARNPYTHON_DOMAIN = "learnpython.org"
 LEARNJAVA_DOMAIN = "learnjavaonline.org"
 LEARNC_DOMAIN = "learn-c.org"
+LEARNCPP_DOMAIN = "learn-cpp.org"
 LEARNJS_DOMAIN = "learn-js.org"
 LEARNRUBY_DOMAIN = "learnrubyonline.org"
 LEARNSHELL_DOMAIN = "learnshell.org"
@@ -64,6 +65,43 @@ int main() {
         "container_word" : "main()",
         "container_indent" : "    ",
         "container" : """#include <stdio.h>
+
+int main() {
+{code}
+return 0;
+}
+"""
+    },
+    LEARNCPP_DOMAIN : {
+        "language" : "c++11",
+        "analytics" : "UA-22741967-3",
+        "namespace" : "learn-cpp.org",
+        "full_url" : "http://learn-cpp.org",
+        "sender" : "Learn-cpp.org <admin@learn-cpp.org>",
+        "styled_domain" : "Learn-cpp.org",
+        "contact_email" : "admin@learn-cpp.org",
+        "support_email" : "support@learn-cpp.org",
+        "logo" : "/static/img/logos/learn-cpp.png",
+        "language_uppercase" : "C++",
+        "twitter" : "@learncpp",
+        "favicon" : "favicon-learn-cpp.ico",
+        "copyright" : "Copyright &copy; Learn-cpp.org. ",
+        "default_code" : """// Welcome to the Interactive C++ Tutorial.
+// Start by choosing a chapter and
+// write your code in this window.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+    """,
+        "container_word" : "main()",
+        "container_indent" : "    ",
+        "container" : """#include <iostream>
+using namespace std;
 
 int main() {
 {code}

@@ -30,7 +30,7 @@ app.secret_key = constants.SECRET_KEY
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN if not len(sys.argv) > 1 else sys.argv[1]
+DEFAULT_DOMAIN = constants.LEARNCPP_DOMAIN if not len(sys.argv) > 1 else sys.argv[1]
 
 LANGUAGES = {
     "en": "English",
@@ -110,7 +110,7 @@ def untab(text):
 
 
 def init_tutorials():
-    for domain in os.listdir("tutorials"):
+    for domain in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials")):
         tutorial_data[domain] = {}
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             continue
@@ -118,11 +118,15 @@ def init_tutorials():
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             tutorial_data[domain][language] = {}
 
+            if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+                continue
+
             for tutorial_file in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
                 if not tutorial_file.endswith(".md"):
                     continue
 
                 tutorial = tutorial_file[:-3]
+                print "loading tutorial %s" % tutorial
 
                 if not tutorial in tutorial_data[domain][language]:
                     tutorial_data[domain][language][tutorial] = {}
