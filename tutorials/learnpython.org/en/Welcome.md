@@ -43,7 +43,6 @@ Table of Contents
 ### Other Python Tutorials
 
 - Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
-- [Python Facts](http://facts.learnpython.org)
 
 ### Contributing Tutorials
 

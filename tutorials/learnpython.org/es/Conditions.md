@@ -89,7 +89,7 @@ Cambia las variables de la primera sección, tanto que el código en la sección
 Tutorial Code
 -------------
 
-    # cambia este código
+    # cambia este codigo
     number = 10
     second_number = 10
     first_array = []
