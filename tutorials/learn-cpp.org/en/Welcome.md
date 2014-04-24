@@ -28,6 +28,7 @@ We will cover them in a spiral and integrated manner so as to maximize learning 
 
 - [[World!, Hello]]
 - [[Generic Programming]]
+- [[Inheritance]]
 
 ### Advanced
 - [[Pointers]]
