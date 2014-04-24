@@ -21,6 +21,10 @@ Table of Contents
 - [[While loops]]
 - [[Functions]]
 
+### Integrated and Spiral Learning
+- [[World!, Hello]]
+- [[Generic Programming]]
+
 ### Advanced
 - [[Pointers]]
 - [[Structures]]
