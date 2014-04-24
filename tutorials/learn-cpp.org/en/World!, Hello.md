@@ -18,20 +18,20 @@ Tutorial Code
 
     #include <iostream>
     using namespace std;
+    
+    template<typename T>
+    void Swap(T &a, T&b)  {
+    // your code goes here
+    
+    }
 
-	template<typename T>
-	void Swap(T &a, T&b)
-	{
-		// your code goes here
-	}
-	
     int main() {
-      string hello = "world!", 
-             world = "Hello, ";
-	  Swap( world, hello );
-	  cout << hello << world << endl; //Output is "Hello, world!"
-	  
-	  return 0;
+        string hello = "world!", 
+        world = "Hello, ";
+        Swap( world, hello );
+        cout << hello << world << endl; //Output is "Hello, world!"
+  
+        return 0;
     }
 
 Expected Output
@@ -42,23 +42,21 @@ Expected Output
 Solution
 --------
 
-	#include <iostream>
-	using namespace std;
-	
-	template<typename T>
-	void Swap(T & a, T & b) //"&" passes parameters by reference
-	{
-	   T temp = b;
-	   b = a;
-	   a = temp;
-	}
-	
+    #include <iostream>
+    using namespace std;
+    template<typename T>
+    void Swap(T & a, T & b) {
+       T temp = b;
+       b = a;
+       a = temp;
+    }
 
-	int main() {
-		// your code goes here
-		
-		string hello = "world!", world = "Hello, ";
-		Swap( world, hello );
-		cout << hello << world << endl; //Output is "Hello, world!"	
-		return 0;
-	}
+
+    int main() {
+      // your code goes here
+
+      string hello = "world!", world = "Hello, ";
+      Swap( world, hello );
+      cout << hello << world << endl; //Output is "Hello, world!"	
+      return 0;
+    }

@@ -22,6 +22,10 @@ Table of Contents
 - [[Functions]]
 
 ### Integrated and Spiral Learning
+
+This set of problems will cover templates, operator overloading (polymorphism), inheritance, friend functions, etc. 
+We will cover them in a spiral and integrated manner so as to maximize learning and minimize cognitive load.
+
 - [[World!, Hello]]
 - [[Generic Programming]]
 
