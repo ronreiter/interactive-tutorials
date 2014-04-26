@@ -127,7 +127,7 @@ pass a pointer to the pointer variable (a double pointer) so we will be able to 
         new_node = malloc(sizeof(node_t));
 
         new_node->val = val;
-        new_node->head = *head;
+        new_node->next = *head;
         *head = new_node;
     }
 
