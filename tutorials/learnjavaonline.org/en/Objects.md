@@ -87,7 +87,7 @@ Write a new method in Point called `scale`, that will make the point closer by h
 
 Tutorial Code
 -------------
-class Point {
+public class Point {
     private double x;
     private double y;
     
@@ -125,7 +125,7 @@ Expected Output
 Solution
 --------
 
-class Point {
+public class Point {
     private double x;
     private double y;
     
