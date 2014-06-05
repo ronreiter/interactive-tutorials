@@ -137,17 +137,24 @@ a|b	Matches either a or b.
 
 Exercise
 -------------
-Use the print command to print the line "Hello, World!". Note that the new line character "\n" should be used in order to print a new line.
+You are given a scalar value $my_text. Assign the value of a regular expression to scalar $match_my_text to be used to match the string "express".
 
 Tutorial Code
 -------------
-	#!/bin/bash
-	# Text to the right of a '#' is treated as a comment - below is the perl command
-	print 'Goodbye, World!\n'
+
+	# Initialization
+	$my_text = "You should try to use regular expressions while drinking an Espresso"; 
+	# Matching text
+	$match_my_text = "FILL VALUE HERE";
+	if ($my_text =~ m/$match_my_text/) {
+	  print "Match FOUND\n";
+	} else {
+	  print "Match NOT FOUND - Incorrect REGEXP\n";
+	}
 
 Expected Output
 ---------------
-	Hello, World!
+Match FOUND
 
 Solution
 --------
