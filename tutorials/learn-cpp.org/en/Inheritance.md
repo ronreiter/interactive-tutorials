@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Let's extend the `class Point` from the previous tutorial to handle Complex numbers. The real and imaginary numbers will be defined as private integer references to coordinates of the Point object. 
+Let's extend the `class Point` from the previous tutorial to handle __Complex__ numbers. The `real` and `imaginary` numbers will be defined as `private` integer `references` to coordinates of the Point `object`. 
 
     #include <iostream>
     using namespace std;
