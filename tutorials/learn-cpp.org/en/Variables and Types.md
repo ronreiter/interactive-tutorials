@@ -5,7 +5,6 @@ Tutorial
 
 C++ provides a rich set of built-in as well as user defined data types. Following table lists down seven basic C++ data types:
 
-C++ has several types of variables, but there are a few basic types:
 #### Built-in
 * Boolean - `boolean` - either `true` or `false`
 * Integers - whole numbers which can be both positive and negative. Defined using `char`, `int`.
