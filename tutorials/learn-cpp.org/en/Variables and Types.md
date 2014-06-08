@@ -27,7 +27,7 @@ The above types can be modified using the following type modifiers:
 C++ allows an array of characters to define strings. It also provides an extensive `string` library for manipulating strings and will be explained in the Strings section.
 
 #### Typdefs
-Typedefs allow for creating new names (aliases) for existing types. Following is the simple syntax to define a new type using typedef:
+Typedefs allow for creating new names (think of them as aliases) for existing types. Following is the simple syntax to define a new type using typedef:
 
     typedef int counter;
     counter tick_c = 100;  // tick_c is a valid integer variable
