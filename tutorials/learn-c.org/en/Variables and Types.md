@@ -12,7 +12,7 @@ C has several types of variables, but there are a few basic types:
 
 The different types of variables define their bounds. A `char` can range only from -128 to 127, whereas a `long` can range from -2,147,483,648 to 2,147,483,647.
 
-Note that C does not have a boolean type. usually, it is defined using the following notation:
+Note that C does _not_ have a boolean type. Usually, it is defined using the following notation:
 
     #define BOOL char
     #define FALSE 0
