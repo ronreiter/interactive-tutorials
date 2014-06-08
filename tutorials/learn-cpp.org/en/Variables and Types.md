@@ -24,18 +24,25 @@ The above types can be modified using the following type modifiers:
 * Structures - `struct` will be explained later, in the Structures section.
 * Classes - `class` will be covered later, in the Classes section 
 
-C++ uses arrays of characters to define strings, and will be explained in the Strings section.
+C++ allows an array of characters to define strings. It also provides an extensive `string` library for manipulating strings and will be explained in the Strings section.
 
 #### Typdefs
+Typedefs allow for creating new names (aliases) for existing types. Following is the simple syntax to define a new type using typedef:
 
     typedef int counter;
-    counter ticket_counter;`  // perfectly legal, ticket_counter is a valid integer variable
+    counter tick_c = 100;  // tick_c is a valid integer variable
 
 #### Enumerated types
 
-    enum enum-name { list of names } var-list;
-    enum color { red, green, blue} a_color;
+To create an enumeration requires the use of the keyword enum. The general form of an enumeration type is:
 
+    enum enum-name { list of names } var-list;
+Above, the enum-name is the enumeration's type name. The list of names is comma separated. 
+
+For example, the following code defines an enumeration of colors called colors and the variable `a_colour` of type color. Finally, `a_colour` is assigned the value "green".
+
+    enum colour {red, green, blue} a_colour, another_colour;
+    a_colour = green;  // a_colour will be assigned value of '1'
 
 ### Defining variables
 
