@@ -36,19 +36,42 @@ Finally, we write out the value of `test` using the dot operator on the instance
         
 Exercise
 --------
-Here you will need to write the purpose of the exercise. Finishing the exercise correctly
-must be accomplished using the new feature that you are explaning.
+Make a class `car` with the properties `numTires = 4`, `year = 2000`, and `runs = true`, and create three instances of it: `car1`, `car2`, and `car3`.
 
 Tutorial Code
 -------------
-Write a code block that will appear on the interpreter window. For example, you may
-write an empty function, which the user must complete in order to finish the exercise.
-
+using System;
+public class Main{
+    public static void Main(){
+        
+        // Test code
+        Console.WriteLine(car1.numTires);
+        Console.WriteLine(car2.year);
+        Console.WriteLine(car3.runs);
+    }
+}
 Expected Output
 ---------------
-Write a code block that will describe the exact output expected from the modified code,
-if it has been modified correctly.
+4
+2000
+true
 
 Solution
 --------
-Write the solution code to the problem.
+using System;
+class car{
+    public int numTires = 4;
+    public int year = 2000;
+    public bool runs = true;
+}
+public class Main{
+    public static void Main(){
+        car car1 = new car();
+        car car2 = new car();
+        car car3 = new car();
+        // Test code
+        Console.WriteLine(car1.numTires);
+        Console.WriteLine(car2.year);
+        Console.WriteLine(car3.runs);
+    }
+}
