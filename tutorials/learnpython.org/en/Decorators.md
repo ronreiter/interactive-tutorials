@@ -52,7 +52,7 @@ and do checking.
         def new_function(arg):
             if arg<0: raise ValueError, "Negative Argument" #This causes an error, which is better than it doing the wrong thing
             old_function(arg)
-        return new_function(arg)
+        return new_function
 
 Let's say you want to multiply the output by a variable amount. You could do
 
