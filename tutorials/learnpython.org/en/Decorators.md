@@ -61,11 +61,11 @@ Let's say you want to multiply the output by a variable amount. You could do
             def new_function(*args, **kwds):
                 return multiplier*old_function(*args, **kwds)
             return new_function
-        return Mutliply_Generator #it returns the new generator
+        return Multiply_Generator #it returns the new generator
 
 Now, you could do
 
-    @Mutliply(3) #Multiply is not a generator, but Multiply(3) is
+    @Multiply(3) #Multiply is not a generator, but Multiply(3) is
     def Num(num):
         return num
 
