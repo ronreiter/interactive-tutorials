@@ -75,5 +75,5 @@ def test_email(your_pattern):
         else:
             print "Pass"
 # Your pattern here!
-pattern = re.compile(r"^(john|python|wha.t.)")
+pattern = re.compile(r".*?@.*?(.com|.org)")
 test_email(pattern)
