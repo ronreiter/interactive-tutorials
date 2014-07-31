@@ -1,12 +1,14 @@
 Tutorial
 --------
 
-Pointers are a very important part of the C programming language. They are used for several reasons, such as:
+Pointers are also variables and play a very important role in C programming language. They are used for several reasons, such as:
 
 * Strings
 * Dynamic memory allocation
 * Sending function arguments by reference 
 * Building complicated data structures
+* Pointing to functions
+* Building special data strcutures (i.e. Tree, Tries, etc...)
 
 And many more.
 
@@ -18,7 +20,7 @@ The computer's memory is a sequential store of data, and a pointer points to a s
 
 ### Strings as pointers
 
-We've already discussed strings, but now we can dive in a bit deeper and understand what strings in C really are. 
+We've already discussed strings, but now we can dive in a bit deeper and understand what strings in C really are (which are called C-Strings to diffrentiate them from other strings when mixed with C++) 
 
 The following line:
 
