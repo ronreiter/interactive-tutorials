@@ -53,3 +53,8 @@ Hola Juan Perez. Tu balance es de 53.44$.
 
 Solution
 --------
+
+datos = ("Juan", "Perez", 53.44)
+format_string = "Hola %s %s. Tu balance es de %.2f$."
+
+print format_string % datos
