@@ -18,7 +18,7 @@ As you may have seen, a decorator is just another function which takes a functio
     def repeater(old_function):
         def new_function(*args, **kwds): #See learnpython.org/page/Multiple%20Function%20Arguments for how *args and **kwds works
             old_function(*args, **kwds) #we run the old function
-             old_function(*args, **kwds) #we do it twice
+            old_function(*args, **kwds) #we do it twice
         return new_function #we have to return the new_function, or it wouldn't reassign it to the value
 
 This would make a function repeat twice.
@@ -52,7 +52,7 @@ and do checking.
         def new_function(arg):
             if arg<0: raise ValueError, "Negative Argument" #This causes an error, which is better than it doing the wrong thing
             old_function(arg)
-        return new_function(arg)
+        return new_function
 
 Let's say you want to multiply the output by a variable amount. You could do
 
@@ -61,11 +61,11 @@ Let's say you want to multiply the output by a variable amount. You could do
             def new_function(*args, **kwds):
                 return multiplier*old_function(*args, **kwds)
             return new_function
-        return Mutliply_Generator #it returns the new generator
+        return Multiply_Generator #it returns the new generator
 
 Now, you could do
 
-    @Mutliply(3) #Multiply is not a generator, but Multiply(3) is
+    @Multiply(3) #Multiply is not a generator, but Multiply(3) is
     def Num(num):
         return num
 
