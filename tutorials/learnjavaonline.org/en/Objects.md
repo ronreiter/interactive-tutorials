@@ -23,10 +23,12 @@ We can define our own constructor:
     class Point {
         int x;
         int y;
+        
         Point(int x, int y) {
             this.x = x;
             this.y = y;
         }
+    }
 
 This means we can not longer use the default constructor `new Point()`. We can now only use the defined constructor `new Point(4, 1)`.
 
@@ -35,13 +37,16 @@ We can define more than one constructor, so `Point` can be created in several wa
     class Point {
         int x;
         int y;
+        
         Point() {
             this(0, 0);
         }
+        
         Point(int x, int y) {
             this.x = x;
             this.y = y;
         }
+    }
 
 Notice the usage of the `this` keyword here. We can use it within a constructor to call a different constructor (in order to avoid code duplication). It can only be the first line within the constructor.
 
@@ -61,11 +66,13 @@ We can now define methods on `Point`.
         void printPoint() {
             System.out.println("(" + x + "," + y + ")");
         }
+        
         Point center(Point other) {
             // Returns the center between this point the other point
             // Notice we are using integer, we wan't get an accurate value
             return new Point((x + other.x) / 2, (y + other.y) / 2);
         }
+    }
 
 ### Public and Private
 
@@ -80,17 +87,20 @@ Write a new method in Point called `scale`, that will make the point closer by h
 
 Tutorial Code
 -------------
-class Point {
+public class Point {
     private double x;
     private double y;
+    
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
+    
     public void print() {
         System.out.println("(" + x + "," + y + ")");
     }
-    // You code goes here
+    
+    // Your code goes here
 }
 
 public class Main {
@@ -115,13 +125,15 @@ Expected Output
 Solution
 --------
 
-class Point {
+public class Point {
     private double x;
     private double y;
+    
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
+    
     public void print() {
         System.out.println("(" + x + "," + y + ")");
     }
