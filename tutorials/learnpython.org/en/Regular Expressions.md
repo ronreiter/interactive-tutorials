@@ -75,5 +75,5 @@ def test_email(your_pattern):
         else:
             print "Pass"
 # Your pattern here!
-pattern = re.compile(r"^(john|python|wha.t.)")
+pattern = r"\"?([-a-zA-Z0-9.`?{}]+@\w+\.\w+)\"?"
 test_email(pattern)
