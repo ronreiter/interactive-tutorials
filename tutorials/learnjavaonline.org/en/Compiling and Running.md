@@ -57,19 +57,27 @@ Create a program that prints the arguments of our program. Write one argument pe
 Tutorial Code
 -------------
 
-public class Main {
-    public static void main(String[] args) {
-        // write your code here
-
+    public class Main {
+        public static void main(String[] args) {
+            // write your code here
+        }
     }
-}
 
 Expected Output
 ---------------
 
-1
-2
-3
+    1
+    2
+    3
 
 Solution
 --------
+
+    public class Main {
+        public static void main(String[] args) {
+            for (int i = 0; i < args.length; i++) {
+                System.out.println(args[i]);
+            }
+        }
+    }
+    
