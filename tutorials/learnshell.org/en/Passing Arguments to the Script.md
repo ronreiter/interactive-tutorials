@@ -1,4 +1,4 @@
-Tutorial
+Passing Arguments to the Script
 --------
 Arguments can be passed to the script when it is executed, by writing them as a space-delimited list following the script file name.
 
@@ -25,29 +25,18 @@ There is no exercise for this section. You may proceed.
 
 Tutorial Code
 -------------
-#!/bin/bash
-# There is no exercise for this section.
-# You may proceed.
+    #!/bin/bash
+    # There is no exercise for this section.
+    # You may proceed.
 
 Solution
 --------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    echo continue
+    #!/bin/bash
+    # There is no exercise for this section.
+    # You may proceed.
 
 Expected Output
 ---------------
-continue
->>>>>>> 942200503a56a64e19d52a902ea27ad73861e4e9
+    #!/bin/bash
+    # There is no exercise for this section.
+    # You may proceed.
