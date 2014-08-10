@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Decorators allow you to make simple modifications to callable objects (like [functions](http://www.learnpython.org/page/Functions ""), [methods, or classes](http://www.learnpython.org/page/Classes%20and%20Objects "")). We shall deal with functions for this tutorial. The syntax
+Decorators allow you to make simple modifications to callable objects like [functions](http://www.learnpython.org/en/Functions ""), [methods, or classes](http://www.learnpython.org/en/Classes%20and%20Objects ""). We shall deal with functions for this tutorial. The syntax
 
     @decorator
     def functions(arg):
