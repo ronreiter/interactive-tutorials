@@ -19,7 +19,7 @@ The basic operators are:
 
 **a % b**  modulo (the integer remainder of a divided by b)
 
-**a ** b** exponentiation (a to the power of b)
+**a** ****** **b** exponentiation (a to the power of b)
 
 Exercise
 --------

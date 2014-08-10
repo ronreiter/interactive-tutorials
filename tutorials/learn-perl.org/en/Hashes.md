@@ -17,7 +17,7 @@ Values to hash pairs can be created by using a list as shown above, where the fi
 
 	%names_and_ages = ('John' => 25, 'Mary' => 45, 'Tom' => 12);
 
-Another method for assigning a value to a named key, one by one, is via direct assignment:
+Another method for assigning a value to a named key, one by one, is via a direct assignment:
 
 	$names_and_ages{'Brad'} = 49;
 	$names_and_ages{'Angela'} = 48;

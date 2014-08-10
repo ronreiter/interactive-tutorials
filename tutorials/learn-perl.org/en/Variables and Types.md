@@ -9,7 +9,7 @@ The simplest way to print text to the screen is using the 'print' command.
 
 	print "this is a text line\n";
 
-The newline (\n) needs to be explicitly defined, is required.
+The newline (\\n) needs to be explicitly defined, is required.
 
 The double-quotes ("") used to encapsulate a string to be printed allows replacement of variable values inside the string. The single-quote ('') prevents variable value replacement.
 
@@ -40,7 +40,8 @@ For example some assignments to array variables. To refer to a single element of
 For example some assignments to hash variables. To refer to a single element of an array, the variable name must start with a $ followed by the key of the requested element in curly brackets ({}).
 
 	%item_catalog = ("Apple", 5 , "Banana" , 8 , "Mushroom" , 24);
-	print "The price of one Apple is $item_catalog{"Apple"} gold coins.\n";
+	# note the required backslash to escape the double-quotes around the key string Apple
+	print "The price of one Apple is $item_catalog{\"Apple\"} gold coins.\n";
         $item_name = "Banana";
 	print "The price of one $item_name is $item_catalog{$item_name} gold coins.\n";
 	@item_name_list = ("Apple", "Banana", "Mushroom");
