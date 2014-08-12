@@ -21,7 +21,7 @@ Table of Contents
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]
-- [[Functions]]
+- [[Methods]]
 
 ### Contributing Tutorials
 

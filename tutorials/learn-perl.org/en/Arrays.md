@@ -5,11 +5,11 @@ Perl array variable stores an ordered list of scalar values. The array variable 
 Assigning values to array elements example
 
 	@array1 = (25, "John", "Mary", -45.34);
-        $array1[5] = "Tom";
+	$array1[5] = "Tom";
 	@array_from_text = qw/Perl is a great scripting language/;
-        print "$array1[1]\n";            # John
-        print "$array_from_text[0]\n";   # Perl
-        print "$array_from_text[-3]\n";  # great
+	print "$array1[1]\n";            # John
+	print "$array_from_text[0]\n";   # Perl
+	print "$array_from_text[-3]\n";  # great
 
 The first example is multiple elements value assignment, which creates an array with four elements, some numeric and some string.
 The second example is a direct assignment of an element with a specific index.
@@ -20,7 +20,7 @@ Accessing array elements can be done with a negative index. This will select ele
 Perl supports a shortcut for sequential letters or numbers. Use the range operator (..) to assign sequential values to array elements. For example:
 
 	@month_numbers = (0..12);    # 0 1 2 3 4 5 6 7 8 9 10 11 12
-        print "number of month 2 is $month_numbers[2]\n";
+	print "number of month 2 is $month_numbers[2]\n";
 
 The size of the array can be evaluated by the scalar context of the array or by using the scalar variable value of the last array element. The scalar context is refered to by 'scalar @<array_name>'. The last array element is refered to by '$#<array_name>'. If @array is empty, the value of $#array is -1.
 
@@ -31,8 +31,11 @@ The size of the array can be evaluated by the scalar context of the array or by 
 Perl offers many useful functions to manipulate arrays and their elements.
 
 push    - push element or elements into the end of the array
+
 pop     - pop off the last element of the array
+
 shift   - pop off the first element of the array
+
 unshift - push element or elements into the beginning of the array
 
 Example
@@ -72,20 +75,20 @@ You can use the join() function to rejoin elements of an array into a long scala
 Example
 
 	$Months = 'Jan,Feb,Mar,apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec';
-        @array_of_month_names = split(',' , @Months);
-        $dash_delimited_monthlist = join('-' , @array_of_month_names);
-        $very_long_message = join(' is followed by ' , @array_of_month_names);
-        print "$Months\n";
-        print "@array_of_month_names\n";
-        print "$dash_delimited_monthlist\n";
-        print "$very_long_message\n";
+	@array_of_month_names = split(',' , $Months);
+	$dash_delimited_monthlist = join('-' , @array_of_month_names);
+	$very_long_message = join(' is followed by ' , @array_of_month_names);
+	print "$Months\n";
+	print "@array_of_month_names\n";
+	print "$dash_delimited_monthlist\n";
+	print "$very_long_message\n";
 
 Merging arrays - Since as an array is a comma-delimited list of values you can easily combine two arrays. For example:
 
 	@group1 = ('John','Steve','Mary');
 	@group2 = ('Bill','Barack');
-  @combined_group = (@group1 , @group2, 'Jeff', 'Tom');
-  print "@combined_group\n";
+	@combined_group = (@group1 , @group2, 'Jeff', 'Tom');
+	print "@combined_group\n";
 
 Exercise
 -------------

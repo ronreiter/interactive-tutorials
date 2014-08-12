@@ -34,7 +34,7 @@ For this tutorial, we will return 0 to indicate that our program was successful:
 
 Notice that every line in C++ must end with a semicolon, so that the compiler knows that a new line has started.
 
-Last but not least, we will need to call the function `printf` to print our sentence.
+Last but not least, we will need to use redirection to the `cout` stream to print our sentence.
 
 Exercise
 --------

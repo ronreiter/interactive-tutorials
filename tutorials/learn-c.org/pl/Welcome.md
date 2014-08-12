@@ -18,8 +18,8 @@ Abyś mógł się komunikować z administratorem strony, potrzebna jest podstawo
 - [[Decyzje jeszcze raz]]
 - [[Tablice]]
 - [[Napisy]]
-- [[Pętla while]]
-- [[Pętla for]]
+- [[Petla while]]
+- [[Petla for]]
 - [[Funkcje]]
 
 Tutorial Code

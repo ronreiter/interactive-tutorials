@@ -19,7 +19,7 @@ The basic operators are:
 
 **a % b**  modulo (the integer remainder of a divided by b)
 
-**a ** b** exponentiation (a to the power of b)
+**a** ****** **b** exponentiation (a to the power of b)
 
 Exercise
 --------
@@ -41,3 +41,10 @@ Total Cost is 128
 
 Solution
 --------
+#!/bin/bash
+COST_PINEAPPLE=50
+COST_BANANA=4
+COST_WATERMELON=23
+COST_BASKET=1
+TOTAL=$(($COST_PINEAPPLE + $COST_BANANA + $COST_WATERMELON + $COST_BASKET))
+echo "Total Cost is $TOTAL"

@@ -10,7 +10,7 @@ import functools
 
 from flask import Flask, render_template, request, make_response, session
 #import pymongo
-import redis
+#import redis
 import sys
 
 from ideone import Ideone
@@ -18,7 +18,7 @@ from ideone import Ideone
 import constants
 
 ideone_api = Ideone(constants.IDEONE_USERNAME, constants.IDEONE_PASSWORD)
-cache = redis.Redis(host=constants.CACHE_HOST)
+#cache = redis.Redis(host=constants.CACHE_HOST)
 
 # mongo connection
 #client = pymongo.MongoClient(host=constants.DB_HOST)
@@ -304,18 +304,18 @@ def index(title, language="en"):
         ))
 
     # POST method handling
-    request_hash = "%s_%s" % (hashlib.md5(request.json["code"]).hexdigest(), request.json["language"])
+    data = run_code(request.json["code"], request.json["language"])
 
-    cached_request = cache.get(request_hash)
-
-    if cached_request is not None:
-        data = json.loads(cached_request)
-    else:
-        data = run_code(request.json["code"], request.json["language"])
-
-        # ha, guess why this check is done :)
-        if data["output"] and "import random" not in data["output"]:
-            cache.set(request_hash, json.dumps(data))
+    # request_hash = "%s_%s" % (hashlib.md5(request.json["code"]).hexdigest(), request.json["language"])
+    # cached_request = cache.get(request_hash)
+    # if cached_request is not None:
+    #     data = json.loads(cached_request)
+    # else:
+    #     data = run_code(request.json["code"], request.json["language"])
+    #
+    #     # ha, guess why this check is done :)
+    #     if data["output"] and "import random" not in data["output"]:
+    #         cache.set(request_hash, json.dumps(data))
 
     if "output" in current_tutorial_data and current_tutorial_data["output"] == data["output"]:
         data["solved"] = True

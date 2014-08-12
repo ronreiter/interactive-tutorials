@@ -3,22 +3,46 @@ Tutorial
 
 ### Data types
 
-C has several types of variables, but there are a few basic types:
+C++ provides a rich set of built-in as well as user defined data types. Following table lists down seven basic C++ data types:
 
-* Integers - whole numbers which can be both positive and negative. Defined using `char`, `int`, `short`, `long` or `long long`.
-* Unsigned integers - whole numbers which can only be positive. Defined using `unsigned char`, `unsigned int`, `unsigned short`, `unsigned long` or `unsigned long long`.
+#### Built-in
+* Boolean - `boolean` - either `true` or `false`
+* Integers - whole numbers which can be both positive and negative. Defined using `char`, `int`.
 * Floating point numbers - real numbers (numbers with fractions). Defined using `float` and `double`.
-* Structures - will be explained later, in the Structures section.
+* Valueless	 using the `void` keyword
+* Wide character using the `wchar_t` keyword
 
 The different types of variables define their bounds. A `char` can range only from -128 to 127, whereas a `long` can range from -2,147,483,648 to 2,147,483,647.
 
-Note that C does _not_ have a boolean type. Usually, it is defined using the following notation:
+#### Type Modifiers
 
-    #define BOOL char
-    #define FALSE 0
-    #define TRUE 1
+The above types can be modified using the following type modifiers:
+* `signed` and `unsigned`
+* `short` and `long`
 
-C uses arrays of characters to define strings, and will be explained in the Strings section.
+#### User defined
+* Structures - `struct` will be explained later, in the Structures section.
+* Classes - `class` will be covered later, in the Classes section 
+
+C++ allows an array of characters to define strings. It also provides an extensive `string` library for manipulating strings and will be explained in the Strings section.
+
+#### Typdefs
+Typedefs allow for creating new names (think of them as aliases) for existing types. Following is the simple syntax to define a new type using typedef:
+
+    typedef int counter;
+    counter tick_c = 100;  // tick_c is a valid integer variable
+
+#### Enumerated types
+
+To create an enumeration requires the use of the keyword enum. The general form of an enumeration type is:
+
+    enum enum-name { list of names } var-list;
+Above, the enum-name is the enumeration's type name. The list of names is comma separated. 
+
+For example, the following code defines an enumeration of colors called colors and the variable `a_colour` of type color. Finally, `a_colour` is assigned the value "green".
+
+    enum colour {red, green, blue} a_colour, another_colour;
+    a_colour = green;  // a_colour will be assigned value of '1'
 
 ### Defining variables
 
