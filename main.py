@@ -267,6 +267,12 @@ def signup():
     session["user_id"] = str(id)
 
 
+@app.route("/recruit-coders-jobs")
+def jobs():
+
+    return make_response(render_template("recruit-coders-jobs.html", domain_data=get_domain_data()))
+
+
 @app.route("/<language>/progress")
 def progress(language):
     return make_response(render_template(
