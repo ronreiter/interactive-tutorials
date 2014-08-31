@@ -5,12 +5,12 @@ An abstract class cannot be instanciated but can be inherited by another class. 
 
 For example:
 
-abstract class abstractClass { 
-    abstract void abstractMethod(); 
-    void concreteMethod() { // concrete methods are still allowed in abstract classes 
-        System.out.println("This is a concrete method."); 
-    } 
-}
+    abstract class abstractClass { 
+        abstract void abstractMethod(); 
+        void concreteMethod() { // concrete methods are still allowed in abstract classes 
+            System.out.println("This is a concrete method."); 
+        } 
+    }
 
 ### Abstract classes versus interface
 
@@ -20,13 +20,13 @@ When an abstract class implements an interface not all interface methods need to
 
 For example:
 
-abstract class X implements Y {
-  // implements all but one method of Y
-}
+    abstract class X implements Y {
+    // implements all but one method of Y
+    }
 
-class XX extends X {
-  // implements the remaining method in Y
-}
+    class XX extends X {
+    // implements the remaining method in Y
+    }
 
 Abstract classes can have `static` fields and `static` methods and works it would with normal classes. 
 
@@ -39,33 +39,33 @@ Create a subclass of the abstract class and implement the abstract method.
 Tutorial Code
 -------------
 
-abstract class abstractClass { 
-    abstract void abstractMethod(); 
-    void concreteMethod() { // concrete methods are still allowed in abstract classes 
-        System.out.println("This is a concrete method."); 
-    } 
-}
+    abstract class abstractClass { 
+        abstract void abstractMethod(); 
+        void concreteMethod() { // concrete methods are still allowed in abstract classes 
+            System.out.println("This is a concrete method."); 
+        } 
+    }
 
-class B extends abstractClass { 
-    void abstractMethod() { 
-      System.out.println("B's implementation of abstractMethod."); 
-    } 
-}
+    class B extends abstractClass { 
+        void abstractMethod() { 
+            System.out.println("B's implementation of abstractMethod."); 
+        } 
+    }
 
-class C extends abstractClass { 
-    // Your code goes here
-}
+    class C extends abstractClass { 
+        // Your code goes here
+    }
 
-public class Main { 
-    public static void main(String args[]) { 
-        B b = new B(); 
-        b.abstractMethod(); 
-        b.concreteMethod();
-        C c = new C(); 
-        c.abstractMethod(); 
-        c.concreteMethod();
-    } 
-}
+    public class Main { 
+        public static void main(String args[]) { 
+            B b = new B(); 
+            b.abstractMethod(); 
+            b.concreteMethod();
+            C c = new C(); 
+            c.abstractMethod(); 
+            c.concreteMethod();
+        } 
+    }
 
 Expected Output
 ---------------
@@ -79,32 +79,32 @@ This is a concrete method.
 Solution
 --------
 
-abstract class abstractClass { 
-    abstract void abstractMethod(); 
-    void concreteMethod() { // concrete methods are still allowed in abstract classes 
-        System.out.println("This is a concrete method."); 
-    } 
-}
+    abstract class abstractClass { 
+        abstract void abstractMethod(); 
+        void concreteMethod() { // concrete methods are still allowed in abstract classes 
+            System.out.println("This is a concrete method."); 
+        } 
+    }
 
-class B extends abstractClass { 
-    void abstractMethod() { 
-      System.out.println("B's implementation of abstractMethod."); 
-    } 
-}
+    class B extends abstractClass { 
+        void abstractMethod() { 
+            System.out.println("B's implementation of abstractMethod."); 
+        } 
+    }
 
-class C extends abstractClass { 
-    void abstractMethod() { 
-      System.out.println("C's implementation of abstractMethod."); 
-    } 
-}
+    class C extends abstractClass { 
+        void abstractMethod() { 
+            System.out.println("C's implementation of abstractMethod."); 
+        } 
+    }
 
-public class Main { 
-    public static void main(String args[]) { 
-        B b = new B(); 
-        b.abstractMethod(); 
-        b.concreteMethod();
-        C c = new C(); 
-        c.abstractMethod(); 
-        c.concreteMethod();
-    } 
-}
+    public class Main { 
+        public static void main(String args[]) { 
+            B b = new B(); 
+            b.abstractMethod(); 
+            b.concreteMethod();
+            C c = new C(); 
+            c.abstractMethod(); 
+            c.concreteMethod();
+        } 
+    }
