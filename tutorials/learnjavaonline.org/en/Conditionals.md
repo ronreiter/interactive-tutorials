@@ -6,6 +6,7 @@ For example:
 
     int a = 4;
     boolean b = a == 4;
+
     if (b) {
         System.out.println("It's true!");
     }
@@ -13,6 +14,7 @@ For example:
 Of course we don't normally assign a conditional expression to a boolean, we just use the short version:
 
     int a = 4;
+
     if (a == 4) {
         System.out.println("Ohhh! So a is 4!");
     }
@@ -70,9 +72,11 @@ There is a another way to write a one line if - else statement by using the oper
 
     int a = 4;
     int result = a == 4 ? 1 : 8;
+
     // result will be 1
     // This is equivalent to
     int result;
+
     if (a == 4) {
         result = 1;
     } else {
@@ -135,6 +139,7 @@ Solution
                     return true;
                 }
             };
+
             Main b = a;
 
             Main c = new Main() {
