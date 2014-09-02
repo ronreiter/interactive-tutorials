@@ -54,11 +54,6 @@ And we can also add an else statement after an if, to do something if the condit
 
 The if - else statements doesn't have to be in several lines with {}, if can be used in one line, or without the {}, for a single line statment.
 
-    if (a == b) System.out.println("Yeah!");
-    else System.out.println("Ohhh...");
-
-Or
-
     if (a == b)
         System.out.println("Another line Wow!");
     else
