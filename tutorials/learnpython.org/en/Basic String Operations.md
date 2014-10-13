@@ -95,7 +95,7 @@ The first occurrence of the letter a = 8
 a occurs 2 times
 The first five characters are 'Strin'
 The next five characters are 'gs ar'
-The twelfth character is 'a'
+The thirteenth character is 'a'
 The last five characters are 'some!'
 String in uppercase: STRINGS ARE AWESOME!
 String in lowercase: strings are awesome!
@@ -120,7 +120,7 @@ print "a occurs %d times" % s.count("a")
 # Slicing the string into bits
 print "The first five characters are '%s'" % s[:5] # Start to 5
 print "The next five characters are '%s'" % s[5:10] # 5 to 10
-print "The twelfth character is '%s'" % s[12] # Just number 12
+print "The thirteenth character is '%s'" % s[12] # Just number 12
 
 print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
 
