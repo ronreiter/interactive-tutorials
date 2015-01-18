@@ -19,11 +19,11 @@ Let's combine this operation with an array in our example:
 	        printf("intarray[%d] has value: %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
-	    int *intpointer = &intarray[3]; //point to the 3rd element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 3rd element
+	    int *intpointer = &intarray[3]; //point to the 4th element in the array
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 4th element
 	    
-	    intpointer++; //now increase the point's address so it points to the 4th elemnt in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 4th element
+	    intpointer++; //now increase the point's address so it points to the 5th elemnt in the array
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
 	    
 	    return 0;
 	}
@@ -44,11 +44,11 @@ Just like in our previous example we increased the pointer's pointed-to address 
 	        printf("intarray[%d] has value: %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
-	    int *intpointer = &intarray[4]; //point to the 3rd element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 4th element
+	    int *intpointer = &intarray[4]; //point to the 5th element in the array
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
 	    
-	    intpointer--; //now decrese the point's address so it points to the 3rd elemnt in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 3rd element
+	    intpointer--; //now decrese the point's address so it points to the 4th elemnt in the array
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 4th element
 	    
 	    return 0;
 	}
@@ -68,9 +68,9 @@ We previously increased a pointer's pointed-to address by one. We can also incre
 	    
 	    
 	    int *intpointer = &intarray[1]; //point to the 2nd element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 4th element
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 2nd element
 	    
-	    intpointer += 2; //now shift by two the point's address so it points to the 4th elemnt in the array
+	    intpointer += 2; //now shift by two the point's address so it points to the 4th element in the array
 	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 4th element
 	    
 	    return 0;
@@ -95,11 +95,11 @@ Similiarly we can substract:
 	        printf("intarray[%d] has value: %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
-	    int *intpointer = &intarray[4]; //point to the 4th element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 4th element
+	    int *intpointer = &intarray[4]; //point to the 5th element in the array
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
 	    
-	    intpointer -= 2; //now shift by two the point's address so it points to the 2nd elemnt in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 2nd element
+	    intpointer -= 2; //now shift by two the point's address so it points to the 3rd element in the array
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 3rd element
 	    
 	    return 0;
 	}
