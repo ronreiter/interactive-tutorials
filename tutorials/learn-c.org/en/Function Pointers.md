@@ -1,31 +1,31 @@
 Tutorial
 --------
 
-Remeber pointers? We used to point to an array of chars then make a string out of them.
-Then things got more intersting when we learned how to control these pointers.
-Now it is time to do something even more intersting with pointers where we point them to functions then call these functions using a pointer.
+Remember pointers? We used to point to an array of chars then make a string out of them.
+Then things got more interesting when we learned how to control these pointers.
+Now it is time to do something even more interesting with pointers where we point them to functions then call these functions using a pointer.
 
-### Why Pointing to a Function?
+### Why point to a function?
 
-The first question that may come to your mind is why would we use pointers to call a function when we can simply call a function by its name: `function();` - that's a great questions! Now imagine the `sort` function where you need to sort an array. Sometimes you want to order array elements in an accending order or decending order. How would you choose? Function Pointers!
+The first question that may come to your mind is why would we use pointers to call a function when we can simply call a function by its name: `function();` - that's a great question! Now imagine the `sort` function where you need to sort an array. Sometimes you want to order array elements in an accending order or decending order. How would you choose? Function pointers!
 
 
-### Function Pointers Syntax
+### Function Pointer Syntax
 
     void (*pf)(int);
 
-I agree with you. This definetly is very, or so you may think. Let's re-read that code and try to understand it point by point. Read it inside-out. `*pf` is the pointer to a function. `void` is the return type of that function, and finally `int` is the argument type of that function. Got it? Good.
+I agree with you. This definitely is very complicated, or so you may think. Let's re-read that code and try to understand it point by point. Read it inside-out. `*pf` is the pointer to a function. `void` is the return type of that function, and finally `int` is the argument type of that function. Got it? Good.
 
 Let's insert pointers into the function pointer and try to read it again:
 
     char* (*pf)(int*)
 
-again:
+Again:
 1. `*pf` is the function pointer.
 2. `char*` is the return type of that function.
 3. `int*` is the type of the argument.
 
-Ok enough with theory. Let's get ours hands dirty with some real code.
+Ok enough with theory. Let's get our hands dirty with some real code.
 See this example:
 
     #include <stdio.h>
@@ -44,8 +44,8 @@ See this example:
 		printf("Wow that was cool. Back to main now!\n\n");
     }
 
-Remeber `sort()` we talked about earlier? We can do the same with it.
-Instead of ordering a set in an accending way we can do the opposite using our own comparison function as follow:
+Remember `sort()` we talked about earlier? We can do the same with it.
+Instead of ordering a set in an accending way we can do the opposite using our own comparison function as follows:
 
     #include <stdio.h>
 	#include <stdlib.h> //for qsort()
@@ -71,8 +71,8 @@ Instead of ordering a set in an accending way we can do the opposite using our o
 		}
     }
 
-Let's remeber again. Why do we use function pointers?
-1. To allow programmer to use libraries for different usages -> "Flexibility"
+Let's remember again. Why do we use function pointers?
+1. To allow programmers to use libraries for different usages -> "Flexibility"
 
 
 Exercise
