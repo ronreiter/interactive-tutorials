@@ -101,12 +101,17 @@ Tutorial Code
 
     int main()
     {
-		void (........) = {.......};
+                /* define an array full of function pointers 
+                to the above functions, that take an `int` as 
+                their only argument */
+
 
 		int c = 0;
 		while(c < 3)
 		{
-			.......
+                        /* call the functions using the function pointers
+                        of the array at index `c` with `c` as an argument */
+
 			++c;
 		}
 
