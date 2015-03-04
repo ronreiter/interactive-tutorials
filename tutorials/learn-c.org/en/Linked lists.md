@@ -186,7 +186,7 @@ item is the last one in the list:
 
 ### Removing a specific item
 
-To remove a specific from the list, either by its index from the beginning of the list or by its value, we will
+To remove a specific item from the list, either by its index from the beginning of the list or by its value, we will
 need to go over all the items, continuously looking ahead to find out if we've reached the node before the item
 we wish to remove. This is because we need to change the location to where the previous node points to as well.
 
