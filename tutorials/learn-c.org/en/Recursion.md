@@ -5,7 +5,7 @@ Recursion occurs when a function contains within it a call to itself. Recursion 
  
 Common examples of where recursion is used :
  
-* Walking recursive data structures such as linked lists, binary tres, etc.
+* Walking recursive data structures such as linked lists, binary trees, etc.
 * Exploring possible scenarios in games such as chess
  
 Recursion always consists of two main parts. A terminating case that indicates when the recursion will finish and a call to itself that must make progress towards the terminating case.
