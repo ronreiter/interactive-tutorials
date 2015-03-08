@@ -1,6 +1,6 @@
 Tutorial
 --------
-Shell variables are created once they are assigned a value. a variable can contain a number, a character or a string of characters. Variable name is case sensitive and can consist of a combination of letters and the underscore "_". 
+Shell variables are created once they are assigned a value. A variable can contain a number, a character or a string of characters. Variable name is case sensitive and can consist of a combination of letters and the underscore "_". 
 Value assignment is done using the "=" sign. Note that no space permitted on either side of = sign when initializing variables.
 
     PRICE_PER_APPLE=5
@@ -22,7 +22,7 @@ Encapsulating the variable name with ${} is used to avoid ambiguity
 Encapsulating the variable name with "" will preserve any white space values
    
     greeting='Hello        world!'
-    echo $greeting now with spaces: "$greeting"
+    echo $greeting" now with spaces: $greeting"
 
 Variables can be assigned with the value of a command output. This is referred to as substitution. Substitution can be done by encapsulating the command with `` (known as back-ticks) or with $()
 
@@ -39,60 +39,60 @@ The target of this exercise is to create a string, an integer, and a complex var
 
 Tutorial Code
 -------------
-#!/bin/bash
-# Change this code
-BIRTHDATE=None
-Presents=None
-BIRTHDAY=None
-
-
-# Testing code - do not change it
-
-if [ "$BIRTHDATE" == "Jan 1 2000" ] ; then
-    echo BIRTHDATE is correct, it is $BIRTHDATE
-else
-    echo "BIRTHDATE is incorrect - please retry"
-fi
-if [ $Presents == 10 ] ; then
-    echo I have received $Presents presents
-else
-    echo "Presents is incorrect - please retry"
-fi
-if [ "$BIRTHDAY" == "Saturday" ] ; then
-    echo I was born on a $BIRTHDAY
-else
-    echo "BIRTHDAY is incorrect - please retry"
-fi
+    #!/bin/bash
+    # Change this code
+    BIRTHDATE=
+    Presents=
+    BIRTHDAY=
+    
+    
+    # Testing code - do not change it
+    
+    if [ "$BIRTHDATE" == "Jan 1 2000" ] ; then
+        echo "BIRTHDATE is correct, it is $BIRTHDATE"
+    else
+        echo "BIRTHDATE is incorrect - please retry"
+    fi
+    if [ $Presents == 10 ] ; then
+        echo "I have received $Presents presents"
+    else
+        echo "Presents is incorrect - please retry"
+    fi
+    if [ "$BIRTHDAY" == "Saturday" ] ; then
+        echo "I was born on a $BIRTHDAY"
+    else
+        echo "BIRTHDAY is incorrect - please retry"
+    fi
 
 Expected Output
 ---------------
-BIRTHDATE is correct, it is Jan 1, 2000
-I have received 10 presents
-I was born on a Saturday
+    BIRTHDATE is correct, it is Jan 1, 2000
+    I have received 10 presents
+    I was born on a Saturday
 
 Solution
 --------
-#!/bin/bash
-# Change this code
-BIRTHDATE="Jan 1 2000"
-Presents=10
-BIRTHDAY=`date -d "$BIRTHDATE" +%A`
-
-
-# Testing code - do not change it
-
-if [ "$BIRTHDATE" == "Jan 1 2000" ] ; then
-    echo BIRTHDATE is correct, it is $BIRTHDATE
-else
-    echo "BIRTHDATE is incorrect - please retry"
-fi
-if [ $Presents == 10 ] ; then
-    echo I have received $Presents presents
-else
-    echo "Presents is incorrect - please retry"
-fi
-if [ "$BIRTHDAY" == "Saturday" ] ; then
-    echo I was born on a $BIRTHDAY
-else
-    echo "BIRTHDAY is incorrect - please retry"
-fi
+    #!/bin/bash
+    # Change this code
+    BIRTHDATE="Jan 1 2000"
+    Presents=10
+    BIRTHDAY=`date -d "$BIRTHDATE" +%A`
+    
+    
+    # Testing code - do not change it
+    
+    if [ "$BIRTHDATE" == "Jan 1 2000" ] ; then
+        echo "BIRTHDATE is correct, it is $BIRTHDATE"
+    else
+        echo "BIRTHDATE is incorrect - please retry"
+    fi
+    if [ $Presents == 10 ] ; then
+        echo "I have received $Presents presents"
+    else
+        echo "Presents is incorrect - please retry"
+    fi
+    if [ "$BIRTHDAY" == "Saturday" ] ; then
+        echo "I was born on a $BIRTHDAY"
+    else
+        echo "BIRTHDAY is incorrect - please retry"
+    fi
