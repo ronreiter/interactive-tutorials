@@ -59,8 +59,13 @@
                 {% endif %}
                 {{ text }}
             {% endautoescape %}</span>
-            {% if wiki_user %}
-            <small style="color: gray; margin-top: 10px">This page was last edited by {{ wiki_user }}</small>
+            {% if tutorial_page %}
+            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true)"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
+            <script>
+                $(function(){
+                    toggleMinimize();
+                })
+            </script>
             {% endif %}
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if previous_chapter %}
@@ -222,8 +227,6 @@
         </h5>
 
 
-<textarea id="code" style="width: 100%; height: 210px">{{ code }}</textarea>
-
     </div>
 
 	<div class="span6">
@@ -232,8 +235,20 @@
                 Output Window
                 <span style="float: right">
                     <button id="expected-output-button" class="btn btn-primary" onclick="showExpected()">Expected Output</button>
+                    <button id="minimize-button" class="btn" onclick="toggleMinimize()">Minimize Code Window</button>
                 </span>
             </h5>
+		</div>
+	</div>
+
+
+    </div> <!-- row -->
+
+    <div class="row" id="footer-toggle">
+        <div class="span6">
+            <textarea id="code" style="width: 100%; height: 210px">{{ code }}</textarea>
+        </div>
+        <div class="span6">
             <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
             <div id="loading" style="padding: 0 4px; box-sizing: border-box; color: #A6E22C; font-family: monospace; display:none; margin-bottom: -200px; position: relative; z-index: 10; width: 100%; height: 200px; background: url(/static/img/se-logo-anim.gif)">
                 Executing, please wait...
@@ -242,11 +257,8 @@
             <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
                 Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
             </div>
-		</div>
-	</div>
-
-
-    </div> <!-- row -->
+        </div>
+    </div>
 
     </div> <!-- container -->
 

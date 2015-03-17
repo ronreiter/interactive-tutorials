@@ -2,6 +2,7 @@ var editor;
 var output;
 var originalCode;
 var loading;
+var minimized = false;
 
 (function( jQuery ) {
 
@@ -65,6 +66,7 @@ function eval_console(code) {
 }
 
 function execute() {
+	toggleMinimize(true);
 	//$('#output').css('color', '#bbbbbb');
 	//$('#output').css('background-color', '#eeeeee');
 	loading.show();
@@ -270,10 +272,12 @@ function load() {
 }
 
 function showExpected() {
+	toggleMinimize(true);
 	output.setValue(tutorialData.output);
 }
 
 function showSolution() {
+	toggleMinimize(true);
     var solutionText = tutorialData.solution;
     if (solutionText) {
     	editor.setValue(solutionText);
@@ -284,10 +288,24 @@ function showSolution() {
 }
 
 function reset() {
+	toggleMinimize(true);
     $("#run-button").prop("disabled", false);
 	editor.setValue(originalCode);
 }
 
+function toggleMinimize(maximizeOnly) {
+	if (maximizeOnly && !minimized) return;
+	if (minimized) {
+		$("#footer-toggle").show();
+		$("#minimize-button").text("Minimize Code Window").removeClass("btn-success");
+	} else {
+		$("#footer-toggle").hide();
+		$("#minimize-button").text("Show Code Window").addClass("btn-success");
+	}
+
+	minimized = !minimized;
+
+}
 
 $(function() {
 	load();

@@ -292,7 +292,7 @@ def index(title, language="en"):
 
     if request.method == "GET":
         title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
-        html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title else title_suffix
+        html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title != "Welcome" else title_suffix
 
         if not "uid" in session:
             session["uid"] = os.urandom(16).encode("hex")
@@ -301,6 +301,7 @@ def index(title, language="en"):
 
         return make_response(render_template(
             "index.html",
+            tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
             tutorial_data_json=json.dumps(current_tutorial_data),
             domain_data_json=json.dumps(domain_data),
