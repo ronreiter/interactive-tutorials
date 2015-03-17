@@ -45,12 +45,12 @@ Last but not least, we will need to call the function `printf` to print our sent
 Exercise
 --------
 
-Change the program in the bottom in a way so that it prints to the output "Hello, world!". 
+Change the program in the bottom in a way so that it prints to the output "Hello, World!". 
 
 Tutorial Code
 -------------
 
-#include <stdio.h>
+    #include <stdio.h>
 
     int main() {
       printf("Goodbye, World!");

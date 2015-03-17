@@ -20,7 +20,7 @@ The computer's memory is a sequential store of data, and a pointer points to a s
 
 ### Strings as pointers
 
-We've already discussed strings, but now we can dive in a bit deeper and understand what strings in C really are (which are called C-Strings to diffrentiate them from other strings when mixed with C++) 
+We've already discussed strings, but now we can dive in a bit deeper and understand what strings in C really are (which are called C-Strings to differentiate them from other strings when mixed with C++) 
 
 The following line:
 

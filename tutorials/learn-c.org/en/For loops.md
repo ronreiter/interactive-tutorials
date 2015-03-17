@@ -41,7 +41,7 @@ Calculate the factorial (multiplication of all items `array[0]` to `array[9]`, i
 Tutorial Code
 -------------
 
-#include <stdio.h>
+    #include <stdio.h>
 
     int main() {
       int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };

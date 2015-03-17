@@ -1,7 +1,7 @@
 Tutorial
 --------
-You previously learned what is a pointer and how to manipulate pointers. In this tutorial you will be learning the arthematic operations on pointers.
-There are mutiple arthematic operations that can be applied on C pointers: ++, --, -, +
+You previously learned what is a pointer and how to manipulate pointers. In this tutorial you will be learning the arithmetic operations on pointers.
+There are multiple arithmetic operations that can be applied on C pointers: ++, --, -, +
 
 ### Incrementing a Pointer with (++)
 
@@ -16,13 +16,13 @@ Let's combine this operation with an array in our example:
 	    
 	    int i;
 	    for(i = 0; i < 5; i++)
-	        printf("intarray[%d] has value: %d - and address @ %x\n", i, intarray[i], &intarray[i]);
+	        printf("intarray[%d] has value %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
 	    int *intpointer = &intarray[3]; //point to the 4th element in the array
 	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 4th element
 	    
-	    intpointer++; //now increase the point's address so it points to the 5th elemnt in the array
+	    intpointer++; //now increase the pointer's address so it points to the 5th elemnt in the array
 	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
 	    
 	    return 0;
@@ -41,13 +41,13 @@ Just like in our previous example we increased the pointer's pointed-to address 
 	    
 	    int i;
 	    for(i = 0; i < 5; i++)
-	        printf("intarray[%d] has value: %d - and address @ %x\n", i, intarray[i], &intarray[i]);
+	        printf("intarray[%d] has value %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
 	    int *intpointer = &intarray[4]; //point to the 5th element in the array
 	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
 	    
-	    intpointer--; //now decrese the point's address so it points to the 4th elemnt in the array
+	    intpointer--; //now decrease the point's address so it points to the 4th element in the array
 	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 4th element
 	    
 	    return 0;
@@ -76,9 +76,9 @@ We previously increased a pointer's pointed-to address by one. We can also incre
 	    return 0;
 	}
 
-Not how in the output the address shifted by 8 steps in the memory. You might be wondering why?
+Note how in the output the address shifted by 8 steps in the memory. You might be wondering why?
 The answer is simple: Because our pointer is an int-pointer and the size of an int variable is 4 bytes the memory is shift-able by 4 blocks.
-In our code we shifted by 2 (added +2) to the initial address so that makes them 2 x 4byte = 8.
+In our code we shifted by 2 (added +2) to the initial address so that makes them 2 x 4 byte = 8.
 
 ### Subtracting Pointers with (-)
 
