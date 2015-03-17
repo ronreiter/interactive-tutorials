@@ -64,7 +64,8 @@ Expected Output
 
 Solution
 --------
-
+    using System;
+    
     public class Functions
     {
         public static void Main()
@@ -77,6 +78,7 @@ Solution
             while(i < n)
             {
                 Console.WriteLine(x);
+                i++;
             }
         }
 
