@@ -26,11 +26,10 @@ class Ideone(object):
 
     ERROR_OK = 'OK'
 
-    def __init__(self, user, password):
+    def __init__(self, user, password, api_url=None):
         self.user = user
         self.password = password
-
-        self.api_url = 'https://ideone.com/api/1/service.wsdl'
+        self.api_url = api_url if api_url else 'https://ideone.com/api/1/service.wsdl'
         self._import = Import('http://schemas.xmlsoap.org/soap/encoding/')
         self._doctor = ImportDoctor(self._import)
         self.client = Client(self.api_url, doctor=self._doctor)

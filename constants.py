@@ -1,5 +1,5 @@
 IDEONE_USERNAME = "ronreiter"
-IDEONE_PASSWORD = "learn"
+IDEONE_PASSWORD = "18132ce2b97e"
 CACHE_HOST = "direct.learnpython.org"
 DB_HOST = "direct.learnpython.org"
 SECRET_KEY = "this is a secret. really."

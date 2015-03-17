@@ -17,7 +17,10 @@ from ideone import Ideone
 
 import constants
 
-ideone_api = Ideone(constants.IDEONE_USERNAME, constants.IDEONE_PASSWORD)
+ideone_api = Ideone(
+    constants.IDEONE_USERNAME,
+    constants.IDEONE_PASSWORD,
+    api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
 #cache = redis.Redis(host=constants.CACHE_HOST)
 
 # mongo connection
