@@ -297,6 +297,7 @@ function toggleMinimize(maximizeOnly) {
 	if (maximizeOnly && !minimized) return;
 	if (minimized) {
 		$("#footer-toggle").show();
+		editor.setValue(originalCode);
 		$("#minimize-button").text("Minimize Code Window").removeClass("btn-success");
 	} else {
 		$("#footer-toggle").hide();
