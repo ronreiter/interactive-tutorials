@@ -76,6 +76,11 @@
                 {% endif %}
             </div>
 
+            {% if domain_data.language == "python" %}
+                <h3>Video Tutorials</h3>
+                <iframe style="width: 780px; border: none; height:480px;" src="http://urish.github.io/learnpython/frame.html"></iframe>
+            {% endif %}
+
             <!--
             <div>
                 <script type="text/javascript">
@@ -161,13 +166,13 @@
                 </div>
 
                 {% if domain_data.language == "python" %}
-                <div style="margin-bottom: 10px">
+                <div style="margin-bottom: 10px; margin-left: 5px;">
                     <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
                         <img src="/static/img/banners/pycharm.png" style="width: 160px; max-width: 160px"/>
                     </a>
                 </div>
                 {% endif %}
-                <div>
+                <div style="margin-left: 5px;">
                     <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png"></a>
                 </div>
 
