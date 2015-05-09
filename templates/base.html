@@ -6,7 +6,7 @@
     <meta name="description" content="{{ domain_data.styled_domain }} is a free interactive {{ domain_data.language_uppercase }} tutorial for people who want to learn {{ domain_data.language_uppercase }}, fast." />
     <meta name="keywords" content="Learn,{{ domain_data.language_uppercase }},Tutorial,Interactive,Free" />
     <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="{% block ogtitle %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{% block ogurl %}{{ domain_data.full_url }}{% endblock %}" />
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/static/css/codemirror.css">
     <link rel="stylesheet" href="/static/css/theme/monokai.css">
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-responsive.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/learnpython.css"/>
     <script src="/static/js/jquery.min.js"></script>
 
@@ -25,7 +26,7 @@
     <div class="navbar-inner">
         <div class="container">
         <a class="brand" href="/" style="padding: 4px 10px"><img src="{{ domain_data.logo }}" style="height: 32px;"/></a>
-        <div class="social" style="margin-top: 10px; display: inline-block; float: left">
+        <div class="social hidden-phone" style="margin-top: 10px; display: inline-block; float: left">
                 <!-- AddThis Button BEGIN -->
                 <div class="addthis_toolbox addthis_default_style " style="width: 400px; margin-left: 20px">
                     <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>

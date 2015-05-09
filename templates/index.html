@@ -67,6 +67,7 @@
                 })
             </script>
             {% endif %}
+            <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
@@ -76,10 +77,9 @@
                 {% endif %}
             </div>
 
-            {% if domain_data.language == "python" %}
-                <h3>Video Tutorials</h3>
-                <iframe style="width: 780px; border: none; height:480px;" src="http://urish.github.io/learnpython/frame.html"></iframe>
-            {% endif %}
+            <hr/>
+
+            <div class="hidden-phone">
 
             <!--
             <div>
@@ -126,6 +126,11 @@
             -->
             <!-- END SKILLFEED -->
 
+            {% if domain_data.language == "python" %}
+                <h3>Video Tutorials</h3>
+                <iframe style="width: 780px; border: none; height:480px;" src="http://urish.github.io/learnpython/frame.html"></iframe>
+            {% endif %}
+
             <div>
                 <script type="text/javascript"><!--
                     google_ad_client = "ca-pub-3723950136133694";
@@ -140,8 +145,13 @@
                 </script>
                 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
+
+            <script type="text/javascript" src="https://www.spoj.com/banner.js"></script>
+
+            </div>
+
         </div>
-        <div class="span2" style="margin-left: 0">
+        <div class="span2 hidden-phone" style="margin-left: 0">
             <div id="google-ad-right">
                 <!--
                 <div style="margin-bottom: 10px">
@@ -251,7 +261,7 @@
         </div>
         <div class="span6">
             <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
-            <div id="loading" style="padding: 0 4px; box-sizing: border-box; color: #A6E22C; font-family: monospace; display:none; margin-bottom: -200px; position: relative; z-index: 10; width: 100%; height: 200px; background: url(/static/img/se-logo-anim.gif)">
+            <div id="loading" style="">
                 Executing, please wait...
             </div>
             <textarea id="output" style="width: 475px; height: 210px"></textarea>
