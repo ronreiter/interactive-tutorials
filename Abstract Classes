@@ -45,12 +45,11 @@ public abstract class Employee
    {
      return number;
    }
+   public abstract logData();
 }
 
 
-The class is now abstract, but it still has three fields, few methods, and one constructor.
-This means the class can't directlt creat object of its type. But can help an inherited class to create object.
-Thus the class's functionality totallt abstracted from outside.
+The class is now abstract, but it still has three fields, few methods, and one constructor. The method logData is declared Abstract, which means that if the class Employee is extended, the extending class must create its own functionality for the logData method. This is a useful feature of OOP that enables one class to design a template for other classes that can implement their own functionality. The Employee class can't directly create object of its type. But can help an inherited class to create object. Thus the class's functionality totally abstracted from outside.
 
 /* File name : Salary.java */
 public class Salary extends Employee
@@ -83,9 +82,13 @@ public class Salary extends Employee
       System.out.println("Computing salary pay for " + getName());
       return salary/52;
    }
+   public void logData() //Difining abstract method
+   {
+      System.out.println("Data: " + name + ", " + salary);
+   }
 }
 
 
 Here, we cannot instantiate a new Employee, but if we instantiate a new Salary object, 
-the Salary object will inherit the three fields and seven methods from Employee.
+the Salary object will inherit the three fields and seven methods from Employee. We can then add more statements to the abstract method logData()
 
