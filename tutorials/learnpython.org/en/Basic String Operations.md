@@ -4,8 +4,10 @@ Tutorial
 Strings are bits of text. They can be defined as anything between quotes:
 
     astring = "Hello world!"
-
+    astring2 = 'Hello world!'
+    
 As you can see, the first thing you learned was printing a simple sentence. This sentence was stored by Python as a string. However, instead of immediately printing strings out, we will explore the various things you can do to them.
+You can also use single quotes to assing a string. However, you will face problems if the value to be assigned itself contains single quotes. Please see exercise below to get more clarity.
 
     print len(astring)
 
@@ -28,6 +30,21 @@ This prints a slice of the string, starting at index 3, and ending at index 6. B
 If you just have one number in the brackets, it will give you the single character at that index. If you leave out the first number but keep the colon, it will give you a slice from the start to the number you left in. If you leave out the second number, if will give you a slice from the first number to the end.
 
 You can even put negative numbers inside the brackets. They are an easy way of starting at the end of the string instead of the beginning. This way, -3 means "3rd character from the end".
+
+    print astring[3:7:2]
+
+This prints the characters of string from 3 to 7 skipping one character. This is extended slice syntax. The general form is [begin:end:step].
+
+    print astring[3:7]
+    print astring[3:7:1]
+
+Note that both of them produce same output
+
+There is no function like strrev in C to reverse a string. But with the above mentioned type of slice syntax you can easily reverse a string like this
+
+    print astring[::-1]
+
+This
 
     print astring.upper()
     print astring.lower()
@@ -107,7 +124,8 @@ Solution
 --------
 
 s = "Strings are awesome!"
-
+s2= "Strings 'are' awesome!"
+#s2='Strings 'are' awesome!' results in compilation error
 # Length should be 20
 print "Length of s = %d" % len(s)
 
@@ -121,7 +139,7 @@ print "a occurs %d times" % s.count("a")
 print "The first five characters are '%s'" % s[:5] # Start to 5
 print "The next five characters are '%s'" % s[5:10] # 5 to 10
 print "The thirteenth character is '%s'" % s[12] # Just number 12
-
+print "The characters whose index is odd are '%s'" % s[1::2] #(0-based)indexing
 print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
 
 # Convert everything to uppercase
