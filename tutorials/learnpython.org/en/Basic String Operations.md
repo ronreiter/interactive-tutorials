@@ -7,8 +7,9 @@ Strings are bits of text. They can be defined as anything between quotes:
     astring2 = 'Hello world!'
     
 As you can see, the first thing you learned was printing a simple sentence. This sentence was stored by Python as a string. However, instead of immediately printing strings out, we will explore the various things you can do to them.
-You can also use single quotes to assing a string. However, you will face problems if the value to be assigned itself contains single quotes. Please see exercise below to get more clarity.
+You can also use single quotes to assing a string. However, you will face problems if the value to be assigned itself contains single quotes.For example to assign the string in these bracket(single quotes are ' ') you need to use double quotes only like this
 
+    print "single quotes are ' '"
     print len(astring)
 
 That prints out 12, because "Hello world!" is 12 characters long, including punctuation and spaces.
@@ -33,7 +34,7 @@ You can even put negative numbers inside the brackets. They are an easy way of s
 
     print astring[3:7:2]
 
-This prints the characters of string from 3 to 7 skipping one character. This is extended slice syntax. The general form is [begin:end:step].
+This prints the characters of string from 3 to 7 skipping one character. This is extended slice syntax. The general form is [start:stop:step].
 
     print astring[3:7]
     print astring[3:7:1]
@@ -69,7 +70,6 @@ Tutorial Code
 -------------
 
 s = "Hey there! what should this string be?"
-
 # Length should be 20
 print "Length of s = %d" % len(s)
 
@@ -83,7 +83,7 @@ print "a occurs %d times" % s.count("a")
 print "The first five characters are '%s'" % s[:5] # Start to 5
 print "The next five characters are '%s'" % s[5:10] # 5 to 10
 print "The twelfth character is '%s'" % s[12] # Just number 12
-
+print "The characters with odd index are '%s' " %s[1::2] #(0-based indexing)
 print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
 
 # Convert everything to uppercase
@@ -113,6 +113,8 @@ a occurs 2 times
 The first five characters are 'Strin'
 The next five characters are 'gs ar'
 The thirteenth character is 'a'
+The characters with odd index are 
+The characters with odd index are tig r wsm!
 The last five characters are 'some!'
 String in uppercase: STRINGS ARE AWESOME!
 String in lowercase: strings are awesome!
@@ -124,8 +126,6 @@ Solution
 --------
 
 s = "Strings are awesome!"
-s2= "Strings 'are' awesome!"
-#s2='Strings 'are' awesome!' results in compilation error
 # Length should be 20
 print "Length of s = %d" % len(s)
 
@@ -139,7 +139,7 @@ print "a occurs %d times" % s.count("a")
 print "The first five characters are '%s'" % s[:5] # Start to 5
 print "The next five characters are '%s'" % s[5:10] # 5 to 10
 print "The thirteenth character is '%s'" % s[12] # Just number 12
-print "The characters whose index is odd are '%s'" % s[1::2] #(0-based)indexing
+print "The characters with odd index are '%s' " %s[1::2] #(0-based indexing)
 print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
 
 # Convert everything to uppercase
