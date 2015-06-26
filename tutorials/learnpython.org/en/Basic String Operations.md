@@ -10,6 +10,7 @@ As you can see, the first thing you learned was printing a simple sentence. This
 You can also use single quotes to assing a string. However, you will face problems if the value to be assigned itself contains single quotes.For example to assign the string in these bracket(single quotes are ' ') you need to use double quotes only like this
 
     print "single quotes are ' '"
+    
     print len(astring)
 
 That prints out 12, because "Hello world!" is 12 characters long, including punctuation and spaces.
