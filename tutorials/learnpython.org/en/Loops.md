@@ -56,6 +56,31 @@ While loops repeat as long as a certain boolean condition is met. For example:
             continue
         print x
 
+### can we use "else" clause for loops?
+
+unlike languages like C,CPP.. we can use **else** for loops. When the loop condition of "for" or "while" statement fails then code part in "else" is executed. If **break** statement is executed inside for loop then the "else" part is skipped.
+Note that "else" part is executed even if there is a **continue** statement.
+
+Here are a few examples:
+
+    # Prints out 0,1,2,3,4 and then it prints "count value reached 5"
+    
+    count=0
+    while(count<5):
+        print count
+        count +=1
+    else:
+        print "count value reached %d" %(count)
+    
+    # Prints out 1,2,3,4
+    for i in xrange(1,10):
+        if(i%5==0):
+            break
+        print i
+    else:
+        print "this is not printed because for loop is terminated because of break but not due to fail in condition"
+
+
 Exercise
 --------
 
