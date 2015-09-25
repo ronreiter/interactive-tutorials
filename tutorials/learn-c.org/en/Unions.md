@@ -27,8 +27,8 @@ To access the sample's variables, we use the dot `.` operator. To illustrate, tr
     int main() {
         union sample data;
         
-        data.i = 1;
-        data.f = 1.5;
+        data.x = 1;
+        data.y = 1.5;
         strcpy(data.str, "This is from a Union");
         
         return 0;
@@ -39,7 +39,7 @@ Unions may have other complex datatypes such as structures and pointers as their
 Exercise
 --------
 
-Define a union with three members: Age, FirstName (length: 20), and LastName (length: 20). Use the defined union to print a person's details. Take note of the union's defining characteristic: can store multiple datatypes in the same memory location.
+Define a union with three members: age, firstName (length: 20), and lastName (length: 20). Use the defined union to print a person's details. Take note of the union's defining characteristic: can store multiple datatypes in the same memory location.
 
 Tutorial Code
 -------------
@@ -47,14 +47,14 @@ Tutorial Code
     #include <stdio.h>
     #include <string.h>
     
-    union Person
+    union person
     {
         /* complete this area */
     };
     
     int main()
     {
-        union Person person;
+        union samplePerson person;
         /* complete this area */
         
         return 0;
@@ -73,23 +73,23 @@ Solution
     #include <stdio.h>
     #include <string.h>
     
-    union Person
+    union person
     {
-        int Age;
-        char FirstName[20];
-        char LastName[20];
+        int age;
+        char firstName[20];
+        char lastName[20];
     };
     
     int main()
     {
-        union Person person;
+        union samplePerson person;
         
-        strcpy(person.FirstName, "John")
-        printf("First Name: %s\n", person.FirstName)
-        strcpy(person.LastName, "Nash")
-        printf("Last Name: %s\n", person.LastName)
-        person.Age = 27;
-        printf("First Name: %d\n", person.Age)
+        strcpy(samplePerson.firstName, "John")
+        printf("First Name: %s\n", samplePerson.firstName)
+        strcpy(samplePerson.lastName, "Nash")
+        printf("Last Name: %s\n", samplePerson.lastName)
+        samplePerson.age = 27;
+        printf("Age: %d\n", samplePerson.age)
         
         return 0;
     }
