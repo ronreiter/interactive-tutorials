@@ -27,6 +27,7 @@ Numeric values operators
 Operator	Description
 ==      true if the value of the left operand is equal to the value of right operand, else false
 !=	true if the value of the left operand is not equal to the value of right operand, else false
+!	negates the boolean value of whatever comes after this in a conditional expression
 <=>	Compares the values of two numeric values and returns -1, 0, or 1 if the left argument is numerically less than, equal to, or greater than the right argument, respectively
 >	true if the value of the left operand is greater than the value of right operand, else false
 <	true if the value of the left operand is lower than the value of right operand, else false
@@ -89,3 +90,5 @@ Expected Output
 
 Solution
 --------
+	
+	
