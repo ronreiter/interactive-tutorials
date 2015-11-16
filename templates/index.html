@@ -77,8 +77,6 @@
                 {% endif %}
             </div>
 
-            <hr/>
-
             <div class="hidden-phone">
 
             <!--
@@ -125,11 +123,6 @@
             {% endif %}
             -->
             <!-- END SKILLFEED -->
-
-            {% if domain_data.language == "python" %}
-                <h3>Video Tutorials</h3>
-                <iframe style="width: 780px; border: none; height:480px;" src="http://urish.github.io/learnpython/frame.html"></iframe>
-            {% endif %}
 
             <div>
                 <script type="text/javascript"><!--
@@ -179,6 +172,12 @@
                 <div style="margin-bottom: 10px; margin-left: 5px;">
                     <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
                         <img src="/static/img/banners/pycharm.png" style="width: 160px; max-width: 160px"/>
+                    </a>
+                </div>
+                {% elif domain_data.language == "java" %}
+                <div style="margin-bottom: 10px; margin-left: 5px;">
+                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'IntelliJ');return false;" href="https://www.jetbrains.com/idea/specials/idea/idea-forge.jsp?utm_source=learnjavaonline&utm_medium=banner&utm_content=ideage&utm_campaign=idea">
+                        <img src="/static/img/banners/intellij.png" style="width: 160px; max-width: 160px"/>
                     </a>
                 </div>
                 {% endif %}

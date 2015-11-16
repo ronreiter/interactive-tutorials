@@ -10,7 +10,7 @@ but arr only goes up to arr[4]).
 
 ArithmeticError is thrown if an illegal arithmetic operation is done (e.g: 42/0, division by zero)
 
-There are lots of exceptions that Java than throw (more than the above).
+There are lots of exceptions that Java can throw (more than the above).
 
 But, how can you handle exceptions, when you're unsure if an error will occur.
 
