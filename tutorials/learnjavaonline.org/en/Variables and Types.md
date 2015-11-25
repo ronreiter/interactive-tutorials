@@ -27,7 +27,7 @@ Or you can combine them:
 
     int myNumber = 5;
 
-To define a floating point number, use the following syntax:
+To define a double floating point number, use the following syntax:
 
     double d = 4.5;
     d = 3.0;
@@ -86,7 +86,7 @@ Every comparison operator in java will return the type `boolean` that not like o
 Exercise
 --------
 
-Create all the the primitives with different values. Concatenate them into a string and print it to the screen so it will print:
+Create all of the primitives (except long and double) with different values. Concatenate them into a string and print it to the screen so it will print:
 H3110 w0r1d 2.0 true
 
 Tutorial Code
