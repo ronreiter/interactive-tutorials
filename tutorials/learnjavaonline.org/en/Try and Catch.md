@@ -1,14 +1,10 @@
 Tutorial
 --------
 
-Before going into try/catch statements, let's talk about Exceptions. Exceptions are thrown every time an error occurs.
-
-Examples:
-
-ArrayIndexOutOfBounds is thrown if the index that does not exist in an array is accessed (e.g: Trying to access arr[5],
-but arr only goes up to arr[4]).
-
-ArithmeticError is thrown if an illegal arithmetic operation is done (e.g: 42/0, division by zero)
+Before going into try/catch statements, let's talk about Exceptions. Exceptions are thrown every time an error occurs. Some examples:
+* ArrayIndexOutOfBounds is thrown if the index that does not exist in an array is accessed (e.g: Trying to access arr[5],
+but arr only goes up to arr[4])
+* ArithmeticError is thrown if an illegal arithmetic operation is done (e.g: 42/0, division by zero)
 
 There are lots of exceptions that Java can throw (more than the above).
 
