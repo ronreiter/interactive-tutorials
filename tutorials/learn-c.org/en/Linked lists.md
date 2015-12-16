@@ -300,79 +300,96 @@ Expected Output
 Solution
 --------
 
-    #include <stdio.h>
-    #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-    typedef struct node {
-        int val;
-        struct node * next;
-    } node_t;
+typedef struct node {
+    int val;
+    struct node * next;
+} node_t;
 
-    void print_list(node_t * head) {
-        node_t * current = head;
+void print_list(node_t * head) {
+    node_t * current = head;
 
-        while (current != NULL) {
-            printf("%d\n", current->val);
-            current = current->next;
-        }
+    while (current != NULL) {
+        printf("%d\n", current->val);
+        current = current->next;
+    }
+}
+
+int pop(node_t ** head) {
+    int retval = -1;
+    node_t * next_node = NULL;
+
+    if (*head == NULL) {
+        return -1;
     }
 
-    int pop(node_t ** head) {
-        int retval = -1;
-        node_t * next_node = NULL;
+    next_node = (*head)->next;
+    retval = (*head)->val;
+    free(*head);
+    *head = next_node;
 
-        if (*head == NULL) {
-            return -1;
+    return retval;
+}
+
+int remove_by_value(node_t ** head, int val) {
+    node_t	*current  = *head,
+			*previous = *head;
+
+	if (*head == NULL) {
+		return -1;
+	}
+
+    while (current) {
+        if (current->val == val) {
+			previous->next = current->next;
+			if (current == *head) {
+				free(*head);
+				if (current->next == NULL) {
+					*head = NULL;
+				} else {
+					*head = current->next;
+				}
+			} else {
+				free(current);
+			}
+			return val;
         }
 
-        next_node = (*head)->next;
-        retval = (*head)->val;
-        free(*head);
-        *head = next_node;
-
-        return retval;
+		previous = current;
+        current  = current->next;
     }
+    return -1;
+}
 
-    int remove_by_value(node_t ** head, int val) {
-        int i = 0;
-        int retval = -1;
-        node_t * current = *head;
-        node_t * temp_node = NULL;
+void delete_list(node_t *head) {
+	node_t  *current = head, 
+			*next = head;
 
+	while (current) {
+		next = current->next;
+		free(current);
+		current = next;
+	}
+}
 
-        if ((*head)->val == val) {
-            return pop(head);
-        }
+int main(void) {
+    node_t * test_list = malloc(sizeof(node_t));
 
-        while (current->next->val != val) {
-            if (current->next == NULL) {
-                return -1;
-            }
-            current = current->next;
-        }
+    test_list->val = 1;
+    test_list->next = malloc(sizeof(node_t));
+    test_list->next->val = 2;
+    test_list->next->next = malloc(sizeof(node_t));
+    test_list->next->next->val = 3;
+    test_list->next->next->next = malloc(sizeof(node_t));
+    test_list->next->next->next->val = 4;
+    test_list->next->next->next->next = NULL;
 
-        temp_node = current->next;
-        retval = temp_node->val;
-        current->next = temp_node->next;
-        free(temp_node);
+    remove_by_value(&test_list, 3);
 
-        return retval;
+    print_list(test_list);
+	delete_list(test_list);
 
-    }
-
-    int main() {
-
-        node_t * test_list = malloc(sizeof(node_t));
-        test_list->val = 1;
-        test_list->next = malloc(sizeof(node_t));
-        test_list->next->val = 2;
-        test_list->next->next = malloc(sizeof(node_t));
-        test_list->next->next->val = 3;
-        test_list->next->next->next = malloc(sizeof(node_t));
-        test_list->next->next->next->val = 4;
-        test_list->next->next->next->next = NULL;
-
-        remove_by_value(&test_list, 3);
-
-        print_list(test_list);
-    }
+	return EXIT_SUCCESS;
+}
