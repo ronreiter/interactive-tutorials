@@ -1,7 +1,7 @@
 Tutorial
 -----------------
 
-Objects are an encapsulation of variables and functions into a single entity.  Objects get their variables and functions from classes.  Classes are essentially a template to create your objects. 
+Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects. 
 
 A very basic class would look something like this:
 
@@ -19,7 +19,7 @@ Now the variable "myobjectx" holds an object of the class "MyClass" that contain
 
 ### Accessing Object Variables
 
-To access the variable inside of the newly created object "MyObject" you would do the following:
+To access the variable inside of the newly created object "myobjectx" you would do the following:
 
     myobjectx.variable
 
