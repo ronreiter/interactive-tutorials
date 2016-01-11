@@ -1,6 +1,6 @@
 #!/bin/bash
 # change these variables
-# The values of the variables have been chnaged  to make all of the below conditions True!
+# The values of the variables have been changed  to make all of the below conditions True!
 NUMBER=16 
 APPLES=16
 KING=LUIS
