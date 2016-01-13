@@ -68,7 +68,7 @@ We can use `AddRange` to join between lists.
 Exercise
 --------
 
-Construct a list of the first 5 prime numbers (1, 2, 3, 5, 7) called `primeNumbers`.
+Construct a list of the first 5 prime numbers (2, 3, 5, 7, 11) called `primeNumbers`.
 
 Tutorial Code
 -------------
@@ -97,11 +97,11 @@ Expected Output
 ---------------
 
     5
-    1
     2
     3
     5
     7
+    11
 
 Solution
 --------
@@ -115,11 +115,11 @@ Solution
         {
             // TODO: add your code here
             List<int> primeNumbers = new List<int>();
-            primeNumbers.Add(1);
             primeNumbers.Add(2);
             primeNumbers.Add(3);
             primeNumbers.Add(5);
             primeNumbers.Add(7);
+            primeNumbers.Add(11);
 
             // test code
             Console.WriteLine(primeNumbers.Count);
