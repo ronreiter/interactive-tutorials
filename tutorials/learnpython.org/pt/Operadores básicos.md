@@ -17,7 +17,7 @@ Outro operador disponível é o operador de módulo (%), que retorna o número q
 
 Usar dois símbolos de multiplicação forma um relacionamento de potenciação.
 
-    cuadrado = 7 ** 2
+    quadrado = 7 ** 2
     cubo = 2 ** 3
 
 ### Usando Operadores Com Strings
