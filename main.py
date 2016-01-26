@@ -17,10 +17,6 @@ from ideone import Ideone
 
 import constants
 
-ideone_api = Ideone(
-    constants.IDEONE_USERNAME,
-    constants.IDEONE_PASSWORD,
-    api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
 #cache = redis.Redis(host=constants.CACHE_HOST)
 
 # mongo connection
@@ -49,6 +45,11 @@ tutorial_data = {}
 
 
 def run_code(code, language):
+    ideone_api = Ideone(
+        constants.IDEONE_USERNAME,
+        constants.IDEONE_PASSWORD,
+        api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
+
     code = ideone_api.create_submission(code, language_name=language, std_input="1 2 3")["link"]
     result = None
 
