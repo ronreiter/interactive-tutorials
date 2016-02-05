@@ -62,7 +62,7 @@ print "Tamanho de s = %d" % len(s)
 print "A primeira ocorrência da letra a = %d" % s.index("a")
 
 
-# Existirão 2 a`s
+# Existirão 2 "a"s
 print "a ocorre %d veze(s)" % s.count("a")
 
 # Partindo a string em pedaços
