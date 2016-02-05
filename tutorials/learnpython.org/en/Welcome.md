@@ -49,6 +49,3 @@ Table of Contents
 
 Read more here: [[Contributing Tutorials]]
 
-### Paid Tutorials
-
-- Take [Learn Python the Hard Way](http://ude.my/87d5) course from Zed Shaw
