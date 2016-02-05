@@ -56,7 +56,7 @@ Create a program that prints the arguments of our program. Write one argument pe
 Tutorial Code
 -------------
 
-public class Arguments {
+public class Main {
     public static void main(String[] args) {
         // write your code here
 
