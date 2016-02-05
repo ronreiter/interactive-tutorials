@@ -93,10 +93,10 @@ Parenthesised patterns have a useful property.  When pattern matching is success
 
 	$number = "Telephone:   1234-5678";
 	if ($number =~ m/^Telephone:\s*(\d{4}-\d{4})$/) {
-	  print "The telephone number extracted is "$1"\n";
+	  print "The telephone number extracted is $1\n";
 	}
 	$date = "Date:    2014-jun-01";
-	if ($$date =~ m/^Date:\s*([\d]+)-([a-z]+)-([\d]+)$/) {
+	if ($date =~ m/^Date:\s*([\d]+)-([a-z]+)-([\d]+)$/) {
 	  print "The year is $1, the month is $2, the day is $3\n";
 	}
 
