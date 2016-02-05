@@ -4,12 +4,11 @@ import markdown
 import os
 import cgi
 import urllib
-import hashlib
 import time
 import functools
+import logging
 
 from flask import Flask, render_template, request, make_response, session
-#import pymongo
 #import redis
 import sys
 
@@ -19,17 +18,15 @@ import constants
 
 #cache = redis.Redis(host=constants.CACHE_HOST)
 
-# mongo connection
-#client = pymongo.MongoClient(host=constants.DB_HOST)
-#users = client.tutorials.users
-
 # Flask app
 app = Flask(__name__)
 app.secret_key = constants.SECRET_KEY
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNJAVA_DOMAIN if not len(sys.argv) > 1 else sys.argv[1]
+
+DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
+
 
 LANGUAGES = {
     "en": "English",
@@ -132,7 +129,7 @@ def init_tutorials():
                     continue
 
                 tutorial = tutorial_file[:-3]
-                print "loading tutorial %s" % tutorial
+                logging.debug("loading tutorial %s" % tutorial)
 
                 if not tutorial in tutorial_data[domain][language]:
                     tutorial_data[domain][language][tutorial] = {}
@@ -168,13 +165,16 @@ def init_tutorials():
                     if not link in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
                             "page_title" : link.decode("utf8"),
-                            "text" : "You can contribute this page by forking the repository at: <a href='https://github.com/ronreiter/interactive-tutorials'>https://github.com/ronreiter/interactive-tutorials</a>."
+                            "text" : "You can contribute this page by forking the repository at: " +
+                                     "<a href='https://github.com/ronreiter/interactive-tutorials'>" +
+                                     "https://github.com/ronreiter/interactive-tutorials" +
+                                     "</a>."
                         }
 
                     if not "back_chapter" in tutorial_data[domain][language][link]:
                         tutorial_data[domain][language][link]["back_chapter"] = tutorial.decode("utf-8").replace(" ", "_")
                     else:
-                        print "Warning! duplicate links to tutorial %s" % link
+                        logging.warn("Warning! duplicate links to tutorial %s from tutorial %s/%s", link, language, tutorial)
 
                     num_links = len(links)
                     page_index = links.index(link)
@@ -213,8 +213,8 @@ def get_tutorial(tutorial_id, language="en"):
 
     if not td:
         return {
-            "page_title" : cgi.escape(tutorial_id),
-            "text" : "Page not found."
+            "page_title": cgi.escape(tutorial_id),
+            "text": "Page not found."
         }
     else:
         return td
@@ -319,31 +319,9 @@ def index(title, language="en"):
     # POST method handling
     data = run_code(request.json["code"], request.json["language"])
 
-    # request_hash = "%s_%s" % (hashlib.md5(request.json["code"]).hexdigest(), request.json["language"])
-    # cached_request = cache.get(request_hash)
-    # if cached_request is not None:
-    #     data = json.loads(cached_request)
-    # else:
-    #     data = run_code(request.json["code"], request.json["language"])
-    #
-    #     # ha, guess why this check is done :)
-    #     if data["output"] and "import random" not in data["output"]:
-    #         cache.set(request_hash, json.dumps(data))
-
     if "output" in current_tutorial_data and current_tutorial_data["output"] == data["output"]:
         data["solved"] = True
 
-        # if "user_id" in session:
-        #     user_data = users.findOne({"_id": session["user_id"]})
-        #     if not "tutorials_solved" in user_data:
-        #         user_data["tutorials_solved"] = {}
-        #
-        #     if not language in user_data["tutorials_solved"]:
-        #         user_data["tutorials_solved"][language] = {}
-        #
-        #     user_data["tutorials_solved"][language][title] = True
-        #
-        #     users.insert(user_data)
 
     else:
         data["solved"] = False
@@ -356,5 +334,22 @@ def robots():
     return make_response("User-agent: *\nAllow: /")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-d",
+        "--domain",
+        help="Default domain when running in development mode",
+        # default=constants.LEARNPYTHON_DOMAIN,
+        required=True,
+        choices=constants.DOMAIN_DATA.keys()
+    )
+
+    parser.add_argument("-p", "--port", help="port to listen to", default=5000, type=int)
+
+    args = parser.parse_args()
+    DEFAULT_DOMAIN = args.domain
+
+    logging.info("listening on port %s", args.port)
+    app.run(debug=True, port=args.port)
 

@@ -109,6 +109,20 @@
 
             <script type="text/javascript" src="https://www.spoj.com/banner.js"></script>
 
+            {% if domain_data.language == "java" %}
+            <!-- Insticator API Embed Code -->
+            <div id="insticator-container">
+            <link rel="stylesheet" href="https://embed.insticator.com/embedstylesettings/getembedstyle?embedUUID=313360e4-8449-4846-814d-e8ec2acce8e7">
+            <div id="div-insticator-ad-1"><script type="text/javascript">Insticator.ad.loadAd("div-insticator-ad-1");</script></div>
+            <div id="insticator-embed">
+            <div id='insticator-api-iframe-div'><script>(function (d) {var id='313360e4-8449-4846-814d-e8ec2acce8e7',cof = 1000 * 60 * 10,cbt = new Date(Math.floor(new Date().getTime() / cof) * cof).getTime(),js = 'https://embed.insticator.com/assets/javascripts/embed/insticator-api.js?cbt='+cbt, f = d.getElementById("insticator-api-iframe-div").appendChild(d.createElement('iframe')),doc = f.contentWindow.document;f.setAttribute("id","insticatorIframe"); f.setAttribute("frameborder","0"); doc.open().write('<script>var insticator_embedUUID = \''+id+'\'; var insticatorAsync = true;<\/script><body onload="var d = document;d.getElementsByTagName(\'head\')[0].appendChild(d.createElement(\'script\')).src=\'' + js + '\'" >');doc.close(); })(document);</script><noscript><a href="https://embed.insticator.com">Please enable JavaScript.</a></noscript></div>
+            </div>
+            <div id="div-insticator-ad-2"><script type="text/javascript">Insticator.ad.loadAd("div-insticator-ad-2");</script></div>
+            </div>
+            <!-- End Insticator API Embed Code -->
+
+            {% endif %}
+
             </div>
 
         </div>
