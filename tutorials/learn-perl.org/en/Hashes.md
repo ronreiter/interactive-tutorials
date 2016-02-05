@@ -87,3 +87,11 @@ Expected Output
 
 Solution
 --------
+@family = ('Homer', 'Marge', 'Maggie');
+	%shoe_color = ('Lisa' => 'red', 'Homer' => 'brown', 'Maggie' => 'pink', 'Marge' => 'blue', 'Bart' => 'yellow');
+	%shoe_size = ('Marge' => 10, 'Lisa' => 7, 'Homer' => 12, 'Bart' => 8, 'Maggie' => 4);
+	# start your code here
+    
+    	print "$family[0] wears @shoe_color{'Homer'} shoes size @shoe_size{'Homer'}\n";
+    	print "$family[1] wears @shoe_color{'Marge'} shoes size @shoe_size{'Marge'}\n";
+    	print "$family[2] wears @shoe_color{'Maggie'} shoes size @shoe_size{'Maggie'}\n";
