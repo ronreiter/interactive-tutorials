@@ -4,9 +4,13 @@ Tutorial
 Strings are bits of text. They can be defined as anything between quotes:
 
     astring = "Hello world!"
-
+    astring2 = 'Hello world!'
+    
 As you can see, the first thing you learned was printing a simple sentence. This sentence was stored by Python as a string. However, instead of immediately printing strings out, we will explore the various things you can do to them.
+You can also use single quotes to assing a string. However, you will face problems if the value to be assigned itself contains single quotes.For example to assign the string in these bracket(single quotes are ' ') you need to use double quotes only like this
 
+    print "single quotes are ' '"
+    
     print len(astring)
 
 That prints out 12, because "Hello world!" is 12 characters long, including punctuation and spaces.
@@ -28,6 +32,21 @@ This prints a slice of the string, starting at index 3, and ending at index 6. B
 If you just have one number in the brackets, it will give you the single character at that index. If you leave out the first number but keep the colon, it will give you a slice from the start to the number you left in. If you leave out the second number, if will give you a slice from the first number to the end.
 
 You can even put negative numbers inside the brackets. They are an easy way of starting at the end of the string instead of the beginning. This way, -3 means "3rd character from the end".
+
+    print astring[3:7:2]
+
+This prints the characters of string from 3 to 7 skipping one character. This is extended slice syntax. The general form is [start:stop:step].
+
+    print astring[3:7]
+    print astring[3:7:1]
+
+Note that both of them produce same output
+
+There is no function like strrev in C to reverse a string. But with the above mentioned type of slice syntax you can easily reverse a string like this
+
+    print astring[::-1]
+
+This
 
     print astring.upper()
     print astring.lower()
@@ -52,7 +71,6 @@ Tutorial Code
 -------------
 
 s = "Hey there! what should this string be?"
-
 # Length should be 20
 print "Length of s = %d" % len(s)
 
@@ -66,7 +84,7 @@ print "a occurs %d times" % s.count("a")
 print "The first five characters are '%s'" % s[:5] # Start to 5
 print "The next five characters are '%s'" % s[5:10] # 5 to 10
 print "The twelfth character is '%s'" % s[12] # Just number 12
-
+print "The characters with odd index are '%s' " %s[1::2] #(0-based indexing)
 print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
 
 # Convert everything to uppercase
@@ -96,6 +114,8 @@ a occurs 2 times
 The first five characters are 'Strin'
 The next five characters are 'gs ar'
 The thirteenth character is 'a'
+The characters with odd index are 
+The characters with odd index are tig r wsm!
 The last five characters are 'some!'
 String in uppercase: STRINGS ARE AWESOME!
 String in lowercase: strings are awesome!
@@ -107,7 +127,6 @@ Solution
 --------
 
 s = "Strings are awesome!"
-
 # Length should be 20
 print "Length of s = %d" % len(s)
 
@@ -121,7 +140,7 @@ print "a occurs %d times" % s.count("a")
 print "The first five characters are '%s'" % s[:5] # Start to 5
 print "The next five characters are '%s'" % s[5:10] # 5 to 10
 print "The thirteenth character is '%s'" % s[12] # Just number 12
-
+print "The characters with odd index are '%s' " %s[1::2] #(0-based indexing)
 print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
 
 # Convert everything to uppercase
