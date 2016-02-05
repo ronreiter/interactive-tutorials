@@ -7,7 +7,7 @@ Now it is time to do something even more interesting with pointers where we poin
 
 ### Why point to a function?
 
-The first question that may come to your mind is why would we use pointers to call a function when we can simply call a function by its name: `function();` - that's a great question! Now imagine the `sort` function where you need to sort an array. Sometimes you want to order array elements in an accending order or decending order. How would you choose? Function pointers!
+The first question that may come to your mind is why would we use pointers to call a function when we can simply call a function by its name: `function();` - that's a great question! Now imagine the `sort` function where you need to sort an array. Sometimes you want to order array elements in an ascending order or decending order. How would you choose? Function pointers!
 
 
 ### Function Pointer Syntax
@@ -45,7 +45,7 @@ See this example:
     }
 
 Remember `sort()` we talked about earlier? We can do the same with it.
-Instead of ordering a set in an accending way we can do the opposite using our own comparison function as follows:
+Instead of ordering a set in an ascending way we can do the opposite using our own comparison function as follows:
 
     #include <stdio.h>
 	#include <stdlib.h> //for qsort()
