@@ -38,6 +38,7 @@ Table of Contents
 - [[Serialization]]
 - [[Partial functions]]
 - [[Code Introspection]]
+- [[Closures]]
 - [[Decorators]]
 
 ### Other Python Tutorials
