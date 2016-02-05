@@ -125,7 +125,7 @@ Expected Output
 Solution
 --------
 
-public class Point {
+class Point {
     private double x;
     private double y;
     
