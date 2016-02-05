@@ -24,7 +24,7 @@ accesses the first element). Also, as an example, an array of size 5 will only g
 
     int[] arr = new int[5]
     //accesses and sets the first element
-    arr[4] = 4;
+    arr[0] = 4;
 
 We can also create an array with values in the same line:
 
