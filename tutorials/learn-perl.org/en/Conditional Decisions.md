@@ -45,24 +45,40 @@ le	true if the left argument is stringwise less than or equal to the right argum
 cmp	-1, 0, or 1 depending on whether the left argument is stringwise less than, equal to, or greater than the right argument, respectively
 
 Example
-
 	$x = 5;
 	$y = 10;
-        # if
-	if ($x == 5) print "x is indeed 5\n";
-        # if ... else
-	if ($y == 5) print "y is indeed 5\n" else print "y is not 5\n";
-        # if ... else using the ? : operator
+    # if
+	if ($x == 5) 
+	{
+     	    print "x is indeed 5\n"; 
+	} 
+    # if ... else
+	if ($y == 5)
+	{ 
+	   print "y is indeed 5\n"
+	}
+	else
+	{
+	   print "y is not 5\n";
+	} 
+   # if ... else using the ? : operator
 	$my_result = ($y == 5) ? "y is indeed 5" : "y is not 5";
-	print "My result is: $my_result\n";
-        # if ... elsif ... else with multiple statements
-	if ($x > $y) {
+	{
+	    print "My result is: $my_result\n";
+	}
+   # if ... elsif ... else with multiple statements
+	if ($x > $y) 
+	{
 	  print "Result is:\n";
 	  print "x ($x) is greater than y ($y)\n";
-	} elsif ($my_result eq "y is not 5") {
+	} 
+	elsif ($my_result eq "y is not 5") 
+	{
 	  print "Result is:\n";
 	  print "I know that $my_result\n";
-	} else {
+	} 
+	else 
+	{
 	  print "Result is:\n";
 	  print "x ($x) is not greater than y ($y)\n";
 	}
