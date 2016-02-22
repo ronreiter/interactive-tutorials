@@ -73,7 +73,7 @@ Here are a few examples:
         print "count value reached %d" %(count)
     
     # Prints out 1,2,3,4
-    for i in xrange(1,10):
+    for i in xrange(1, 10):
         if(i%5==0):
             break
         print i
