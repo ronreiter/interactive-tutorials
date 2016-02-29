@@ -37,6 +37,13 @@ We can use the `printf` command to format a string together with other strings, 
 
 Notice that when printing strings, we must add a newline (`\n`) character so that our next `printf` statement will print in a new line.
 
+### String Length
+
+The function 'strlen' returns the length of the string which has to be passed as an argument
+
+    char * name = "Nikhil";
+    printf("%d"\n",strlen(name));
+    
 ### String comparison
 
 The function `strncmp` compares between two strings, returning the number 0 if they are equal, or a different number if they are different.
@@ -61,7 +68,7 @@ Tutorial Code
 -------------
 
     #include <stdio.h>
-
+    #include <string.h>
     int main() {
       /* define first_name */
       /* define last_name */
@@ -76,7 +83,7 @@ Tutorial Code
       if (strncmp(name, "John Boe", 100) == 0) {
           printf("Done!\n");
       }
-
+      printf("%d",srlen(first_name));    
       return 0;
     }
 
@@ -85,10 +92,13 @@ Expected Output
 ---------------
 
     Done!
+    4
 
 Solution
 --------
 
+    #include <stdio.h>
+    #include <string.h>
     int main() {
       char first_name[] = "John";
       char last_name[] = "Doe";
@@ -103,6 +113,7 @@ Solution
       if (strncmp(name, "John Boe", 100) == 0) {
           printf("Done!\n");
       }
+      printf("%d",srlen(first_name));    
 
       return 0;
     }
