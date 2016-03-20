@@ -97,7 +97,7 @@ Solution
       printDFS(test_list);}
 
     void insert(node_t * tree,int val){
-      if(tree->val==NULL)tree->val=val;
+      if(tree->val=='\0')tree->val=val;
       else if(val<tree->val)
         if(tree->left!=NULL)insert(tree->left,val);
         else{
