@@ -49,8 +49,8 @@ public abstract class Employee
 
 
 The class is now abstract, but it still has three fields, few methods, and one constructor.
-This means the class can't directlt creat object of its type. But can help an inherited class to create object.
-Thus the class's functionality totallt abstracted from outside.
+This means the class can't directly create objects of its type. But can help an inherited class to create objects.
+Thus the class's functionality totally abstracted from outside.
 
 /* File name : Salary.java */
 public class Salary extends Employee
