@@ -131,7 +131,7 @@ Tutorial Code
 Expected Output
 ---------------
 
-    [I,  , u, n, d, e, r, s, t, a, n, d,  , U, n, i, o, n, s, !]
+    [I, , u, n, d, e, r, s, t, a, n, d, , U, n, i, o, n, s, !]
     I understand Unions!
 
 Solution
