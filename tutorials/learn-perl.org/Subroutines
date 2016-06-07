@@ -125,3 +125,32 @@ Expected Output
 Solution
 --------
 
+    my @car_prices = (100, 250, 95, 1300, 4534, 102, 100, 97);
+    my @flight_prices = (85.20, 79.99, 45.30, 130, 45.34, 110.25, 100, 917);
+    # define subroutines
+    sub min {
+        my $current_min = $_[0];
+        foreach my $number (@_) {
+            if ($number < $current_min) {
+                $current_min = $number;
+            }
+        }
+        return($current_min);
+    }
+    sub max {
+        my $current_max = $_[0];
+            foreach my $number (@_) {
+                if ($number > $current_max) {
+                    $current_max = $number;
+                }
+            }
+        return($current_max);
+    }
+    sub range {
+        my $max = max(@_);
+        my $min = min(@_);
+        return($max - $min);
+    }
+    # write code below
+    print range(@car_prices)."\n";
+    print range(@flight_prices)."\n";
