@@ -1,6 +1,6 @@
 Tutorial
 --------
-A subroutine (or sometimes refered to as function or method) is a group of statements that work together to perform a task. Usually a repeated task which can be invoked several times. 
+A subroutine (or sometimes refered to as function or method) is a group of statements that work together to perform a task. Usually a repeated task which can be invoked several times.
 
 The general form of a subroutine definition in perl is:
 
@@ -14,7 +14,7 @@ The typical way of calling that Perl subroutine is as follows:
 
     subroutine_name( list of arguments );
 
-Example 
+Example
 
 	# Subroutine definition
 	sub Hello{
@@ -42,7 +42,7 @@ Inside the subroutine, these arguments are accessible using the special array @_
         # calc and print average
         $average = $sum / $total_args;
         print "Average of list [ @_ ] is: $average\n";
-     }    
+     }
 
      # subroutine call
      print "We are calling the subroutine calc_average() now\n";
@@ -93,7 +93,7 @@ A value can be returned from a subroutine by using the return() function. When t
         # calc and print average
         $average = $sum / $total_args;
         return ($average);
-     }    
+     }
 
      # subroutine call
      $a = calc_average(10, 20, 30);
@@ -111,16 +111,42 @@ Tutorial Code
 	@car_prices = (100, 250, 95, 1300, 4534, 102, 100, 97);
 	@flight_prices = (85.20, 79.99, 45.30, 130, 45.34, 110.25, 100, 917);
 	# define subroutines
-	sub min() {
+	sub min {
 	}
-	sub max() {
+	sub max {
 	}
 	# write code below
 
 Expected Output
 ---------------
-	4439
-	871.7
+	Car difference: 4439
+	Flight difference: 871.7
 
 Solution
 --------
+@car_prices = (100, 250, 95, 1300, 4534, 102, 100, 97);
+@flight_prices = (85.20, 79.99, 45.30, 130, 45.34, 110.25, 100, 917);
+
+sub min {
+    $lowest = @_[0];
+    foreach my $val (@_) {
+        if($lowest > $val) {
+          $lowest = $val;
+        }
+    }
+      return ($lowest);
+}
+sub max {
+    $highest = @_[0];
+      foreach my $val (@_) {
+          if ($highest < $val) {
+              $highest = $val;
+          }
+      }
+    return $highest;
+}
+
+$car_diff = max(@car_prices) - min(@car_prices);
+$flight_diff = max(@flight_prices) - min(@flight_prices);
+print("Car difference: $car_diff\n");
+print("Flight difference: $flight_diff\n");
