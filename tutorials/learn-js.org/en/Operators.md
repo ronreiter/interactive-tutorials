@@ -36,11 +36,11 @@ JavaScript supports the modulus operator (`%`) which calculates the remainder of
 
 JavaScript also supports combined assignment and operation operators. So, instead of typing `myNumber = myNumber / 2`, you can type `myNumber /= 2`. Here is a list of all these operators:
 
-* /=
-* *=
-* -=
-* +=
-* %=
+* `/=`
+* `*=`
+* `-=`
+* `+=`
+* `%=`
 
 JavaScript also has a `Math` module which contains more advanced functions:
 
