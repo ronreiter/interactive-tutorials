@@ -19,7 +19,7 @@ There are two more advanced types in JavaScript. An array, and an object. We wil
     var myArray = [];                    // an array
     var myObject = {};                  // an object
 
-Atop of that, there are two special types called `undefined` and `null`.
+On top of that, there are two special types called `undefined` and `null`.
 
 When a variable is used without first defining a value for it, it is equal to undefined. For example:
 

@@ -3,7 +3,7 @@ Tutorial
 
 ### Pushing and popping
 
-Arrays can also function as a stack. The `push` and `pop` methods insert and remove variables from end end of an array.
+Arrays can also function as a stack. The `push` and `pop` methods insert and remove variables from the end of an array.
 
 For example, let's create an empty array and push a few variables.
 
@@ -17,7 +17,7 @@ This will print out:
 
     1,2,3
 
-After pushing variables to the array, we can then pop variables out from the end.
+After pushing variables to the array, we can then pop variables off from the end.
 
     console.log(myStack.pop());
     console.log(myStack);
@@ -46,7 +46,7 @@ The `shift` keyword will remove the variables of the array in the exact order th
     2
     3
 
-The `unshift` method is used to insert a variable from the beginning of an array. For example:
+The `unshift` method is used to insert a variable at the beginning of an array. For example:
 
     var myArray = [1,2,3];
     myArray.unshift(0);
@@ -62,7 +62,7 @@ Splicing arrays in JavaScript removes a certain part from an array to create a n
     console.log(splice);        // will print out 3,4,5,6,7
     console.log(myArray);       // will print out 0,1,2,8,9
 
-After splicing the array, it will only contain the part before and after the splicing. The splice is equal to all the variables between 3 and 7 (including), and the remainder of the array, which contains all variables between 0 and 2 (including), and 8 to 9 (including).
+After splicing the array, it will only contain the part before and after the splicing. The splice is equal to all the variables between 3 and 7 (inclusive), and the remainder of the array, which contains all variables between 0 and 2 (inclusive), and 8 to 9 (inclusive).
 
 Exercise
 --------
