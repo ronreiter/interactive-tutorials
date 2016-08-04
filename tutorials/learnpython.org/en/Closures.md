@@ -45,7 +45,7 @@ Even though the execution of the **transmit_to_space()** was completed, the mess
 
 **Advantage** : Closures can avoid use of global variables and provides some form of data hiding. Also, when there are one or two methods in a class, one can use closures instead (The exercise illustrates this best). Also, Decorators in Python make extensive use of closures.
 
-EXERCISE
+Exercise
 ---------
 
 Make a nested function and a python closure to make functions to get multiple multiplication functions using closures. That is using closures, one could make functions to create multiply_with_5() or multiply_with_4() functions using closures.
@@ -62,12 +62,12 @@ Tutorial Code
 	multiplywith5 = multiplier_of(5) #return a multiplier function to 5
 	multiplywith5(9) #multiplying 5 and 9 
 
-EXPECTED OUTPUT
+Expected Output
 ---------------
 
 45
 
-SOLUTION CODE 
+Solution
 -------------
 
 	def multipier_of(n):
