@@ -45,35 +45,32 @@ And we call the function as follows:
 Even though the execution of the "transmit_to_space()" was completed, the message was rather preserved. This technique by which the data is attached to some code even after end of those other original functions is called as closures in python
 
 ADVANTAGE : Closures can avoid use of global variables and provides some form of data hiding.(Eg. When there are few methods in a class, use closures instead)
-			Also, Decorators in Python make extensive use of closures.			
-EXERCISE
+			Also, Decorators in Python make extensive use of closures.
+			
+Exercise
 ---------
 
 Make a nested loop and a python closure to make functions to get multiple multiplication functions using closures. That is using closures, one could make functions to create multiply_with_5() or multiply_with_4() functions using closures.
 
 Tutorial Code
 -------------
-/*your code goes here*/
+# your code goes here
 
->>>multiplywith5 = multiplier_of(5)
->>>multiplywith5(9)
+multiplywith5 = multiplier_of(5)
+multiplywith5(9)
 
-EXPECTED OUTPUT
+Expected Output
 ---------------
-
 45
 
-SOLUTION CODE 
+Solution
 -------------
 
-	def multipier_of(n):
-		def multipler(number):
-			return number*n
-		return multiplier
+def multiplier_of(n):
+    def multiplier(number):
+        return number*n
+    return multiplier
 
-
->>>multiplywith5 = multiplier_of(5)
->>>multiplywith5(9)
-45
-
+multiplywith5 = multiplier_of(5)
+print multiplywith5(9)
 	
