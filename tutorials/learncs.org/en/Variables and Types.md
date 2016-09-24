@@ -10,6 +10,7 @@ To define a variable in C#, we use the following syntax, which is similar to C /
     bool myBoolean = true;
     string myName = "John";
     char myChar = 'a';
+    double myDouble = 1.75;
 
 Notice that defining a floating point number requires an explicit `f` letter after the number.
 
@@ -48,7 +49,7 @@ Define three variables:
 
 * A string called `productName` equal to `TV`.
 * An integer called `productYear` equal to 2012.
-* A floating point number called `productPrice` equal to 279.99.
+* A double number called `productPrice` equal to 279.99.
 
 Tutorial Code
 -------------
