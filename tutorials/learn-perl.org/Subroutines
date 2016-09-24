@@ -1,6 +1,6 @@
 Tutorial
 --------
-A subroutine (or sometimes refered to as function or method) is a group of statements that work together to perform a task. Usually a repeated task which can be invoked several times.
+A subroutine (or sometimes referred to as function or method) is a group of statements that work together to perform a task. Usually a repeated task which can be invoked several times.
 
 The general form of a subroutine definition in perl is:
 
@@ -14,7 +14,7 @@ The typical way of calling that Perl subroutine is as follows:
 
     subroutine_name( list of arguments );
 
-Example
+### Example:
 
     # Subroutine definition
     sub Hello{
