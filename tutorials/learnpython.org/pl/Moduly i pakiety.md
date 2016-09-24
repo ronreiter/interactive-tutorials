@@ -49,9 +49,9 @@ albo:
 
     from foo import bar
 
-W pierwszym przypadku będziemy musieli używać przedrostka 'foo' za każdym razem, gdy będziemy chcieli posłużyć się funkcją oferowaną przea 'bar'. W drukim przypadku nie musimy, ponieważ, zaimportowaliśmy moduł do naszej przestrzeni nazw modułów.
+W pierwszym przypadku będziemy musieli używać przedrostka 'foo' za każdym razem, gdy będziemy chcieli posłużyć się funkcją oferowaną przez 'bar'. W drugim przypadku nie musimy, ponieważ, zaimportowaliśmy moduł do naszej przestrzeni nazw modułów.
 
-W rozbudowanych pakietach część modułów pełni rolę pomocniczą i nie są bezpośrednio potrzebne osobie, która korzysta z pakietów. Modyfikując plik `__init__.py` możemy zdecydować, które moduły mogą być widoczne z zewnątrz, Aby moduł był niewidzialny na zewnątrz, musimy nadpisać zmienną `__all__`:
+W rozbudowanych pakietach część modułów pełni rolę pomocniczą i nie są bezpośrednio potrzebne osobie, która korzysta z pakietów. Modyfikując plik `__init__.py` możemy zdecydować, które moduły mogą być widoczne z zewnątrz. Aby moduł był niewidzialny na zewnątrz, musimy nadpisać zmienną `__all__`:
 
     __init__.py:
 
