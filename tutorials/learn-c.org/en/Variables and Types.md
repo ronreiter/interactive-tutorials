@@ -10,7 +10,7 @@ C has several types of variables, but there are a few basic types:
 * Floating point numbers - real numbers (numbers with fractions). Defined using `float` and `double`.
 * Structures - will be explained later, in the Structures section.
 
-The different types of variables define their bounds. A `char` can range only from -128 to 127, whereas a `long` can range from -2,147,483,648 to 2,147,483,647.
+The different types of variables define their bounds. A `char` can range only from -128 to 127, whereas a `long` can range from -2,147,483,648 to 2,147,483,647 (`long` and other numeric data types may have another range on different computers, for example - from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 on 64-bit computer).
 
 Note that C does _not_ have a boolean type. Usually, it is defined using the following notation:
 
@@ -23,7 +23,7 @@ C uses arrays of characters to define strings, and will be explained in the Stri
 ### Defining variables
 
 For numbers, we will usually use the type `int`, which an integer in the size of a "word" the default number size of the machine which your program is
-compiled on. On most computers today, it is a 32-bit number, which means the number can range from -2,147,483,648 to 2,147,483,647 (same as `long`).
+compiled on. On most computers today, it is a 32-bit number, which means the number can range from -2,147,483,648 to 2,147,483,647.
 
 To define the variables `foo` and `bar`, we need to use the following syntax:
 
