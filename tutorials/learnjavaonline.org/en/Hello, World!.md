@@ -65,12 +65,13 @@ Hello, World!
 
 Solution
 --------
-Currently, we have:
 
-`System.out.println("Goodbye, World!");`
+public class Main {
 
-Instead of having the console print out "Goodbye, World!" We need to change it to say "Hello, World!", so change "Goodbye" to "Hello". It should look like this:
+    public static void main(String[] args) {
 
-`System.out.println("Hello, World!");`
+        System.out.println("Hello, World!");
 
+    }
 
+}
