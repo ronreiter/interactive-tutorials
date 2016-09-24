@@ -3,7 +3,7 @@ Tutorial
 
 Functions in JavaScript run in a specific context, and using the `this` variable we have access to it. 
 
-All standard functions in the browser run under the Window context. Functions defined under an object or a class (another function) will use the context of the object it was created in. However, we can also change the context of a function on runtime, both before or while executing the function.
+All standard functions in the browser run under the Window context. Functions defined under an object or a class (another function) will use the context of the object it was created in. However, we can also change the context of a function at runtime, either before or while executing the function.
 
 ### Binding a method to an object
 
@@ -34,7 +34,7 @@ For example, let's call `printName` with `person` as the context using the `call
 Exercise
 --------
 
-Create bound copies of printFullName to printDetails to person called boundPrintFullName and boundPrintDetails.
+Create bound copies of printFullName and printDetails to person called boundPrintFullName and boundPrintDetails.
 
 Tutorial Code
 -------------

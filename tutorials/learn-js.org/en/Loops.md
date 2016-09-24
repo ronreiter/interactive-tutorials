@@ -20,7 +20,7 @@ This will print out the following:
 The `for` statement in JavaScript has the same syntax as in Java and C. It has three parts:
 
 1. __Initialization__ - Initializes the iterator variable `i`. In this example, we initialize `i` to 0.
-2. __Condition__ - As long as the condition is met, the loop continues to execute. In this example, we check that `i` was not increased 
+2. __Condition__ - As long as the condition is met, the loop continues to execute. In this example, we check that `i` is less than 3.
 3. __Increment__ - A directive which increments the iterator. In our case, we increment it by 1 on every loop.
 
 We can also write a shorter notation for the statement by inserting the variable definition inside the `for` loop and incrementing using the `++` operator.
