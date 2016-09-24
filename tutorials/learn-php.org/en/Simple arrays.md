@@ -131,7 +131,7 @@ For example, if we want to discard the first 3 elements of an array, we can do t
     $numbers = [1,2,3,4,5,6];
     print_r(array_slice($numbers, 3));
 
-We can also decide to take a slide of a specific length. For example, if we want to take only two items, we can
+We can also decide to take a slice of a specific length. For example, if we want to take only two items, we can
 add another argument to the function:
 
     $numbers = [1,2,3,4,5,6];
