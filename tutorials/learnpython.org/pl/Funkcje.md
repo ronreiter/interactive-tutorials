@@ -109,4 +109,22 @@ Latwiejsze wielokrotne uzycie kodu jest zaleta funkcji!
 Mozliwosc dzielenia sie kodem i laczenia go w calosc przez rozne osoby jest zaleta funkcji!
 
 Solution
---------
+# Ta funkcja powinna zwracac tablice napisow, ktore wymieniono w punkcie 1.
+def lista_korzysci():
+    return tablica
+tablica = ["Lepiej zorganizowany kod", "Wieksza czytelnosc kodu",
+               "Latwiejsze wielokrotne uzycie kodu", 
+               "Mozliwosc dzielenia sie kodem i laczenia go w calosc przez rozne osoby"]
+    
+
+# Funkcja powinna dolaczyc do kazdej korzysci - " jest zaleta funkcji!"
+def buduj_zdanie(korzysc):
+    return korzysc + " jest zaleta funkcji!"
+    
+
+def nazwij_korzysci_z_funkcji():
+    tabela = lista_korzysci()
+    for korzysc in tabela:
+        print buduj_zdanie(korzysc)
+
+nazwij_korzysci_z_funkcji()
