@@ -51,6 +51,18 @@ called `strcmp`, but it is not recommended to use it. For example:
         printf("You are not John. Go away.\n");
     }
 
+### String Concatenation
+
+The function 'strncat' appends first n characters of src string string to the destination string where n is min(n,length(src));
+The arguments passed are destination string, source string, and n - maximum number of characters to be appended.For Example:
+
+    char dest[20]="Hello";
+    char src[20]="World";
+    strncat(dest,src,3);
+    printf("%s\n",dest);
+    strncat(dest,src,20);
+    printf("%s\n",dest);
+
 Exercise
 --------
 
@@ -61,22 +73,21 @@ Tutorial Code
 -------------
 
     #include <stdio.h>
-
+    #include <string.h>
     int main() {
       /* define first_name */
       /* define last_name */
       char name[100];
-
-      /* testing code */
-      if (strncmp(first_name, "John") != 0) return 1;
-      if (strncmp(last_name, "Doe") != 0) return 1;
 
       last_name[0] = 'B';
       sprintf(name, "%s %s", first_name, last_name);
       if (strncmp(name, "John Boe", 100) == 0) {
           printf("Done!\n");
       }
-
+      name[0]='\0';
+      strncat(name,first_name,4);
+      strncat(name,last_name,20);
+      printf("%s\n",name);
       return 0;
     }
 
@@ -85,24 +96,26 @@ Expected Output
 ---------------
 
     Done!
+    JohnBoe
 
 Solution
 --------
 
+    #include <stdio.h>
+    #include <string.h>
     int main() {
       char first_name[] = "John";
       char last_name[] = "Doe";
       char name[100];
-
-      /* testing code */
-      if (strncmp(first_name, "John") != 0) return 1;
-      if (strncmp(last_name, "Doe") != 0) return 1;
 
       last_name[0] = 'B';
       sprintf(name, "%s %s", first_name, last_name);
       if (strncmp(name, "John Boe", 100) == 0) {
           printf("Done!\n");
       }
-
+      name[0]='\0';
+      strncat(name,first_name,4);
+      strncat(name,last_name,20);
+      printf("%s\n",name);
       return 0;
     }
