@@ -64,6 +64,7 @@ Pass
 Solution
 --------
 # Exercise: make a regular expression that will match an email
+import re
 def test_email(your_pattern):
     pattern = re.compile(your_pattern)
     emails = ["john@example.com", "python-list@python.org", "wha.t.`1an?ug{}ly@email.com"]
