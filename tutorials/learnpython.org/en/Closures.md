@@ -3,7 +3,7 @@ Tutorial
 
 A Closure is a function object that remembers values in enclosing scopes even if they are not present in memory. Let us get to it step by step
 
-Firstly, a **Nested Function** is a function defined inside another function. Its very important to note that the nested functions can access the variables of the enclosing scope. However, at least in python, they are only readonly. However, one can use the "nonlocal" keyword explicitly with these variables in order to modify them.
+Firstly, a **Nested Function** is a function defined inside another function. It's very important to note that the nested functions can access the variables of the enclosing scope. However, at least in python, they are only readonly. However, one can use the "nonlocal" keyword explicitly with these variables in order to modify them.
 
 For example:
 
@@ -27,9 +27,9 @@ This works well as the 'data_transmitter' function can access the 'message'. To 
 		print (number)
 	print_msg(9)
 
-Without the nonlocal keyword, the output would be 3, however, with its usage, we get 3, that is the value of the "number" variable gets modified.
-												  9         						 3
-Now, how about we return the function object rather than calling the nested function within. (Remember that functions are even objects(Its Python))
+Without the nonlocal keyword, the output would be "3 9", however, with its usage, we get "3 3", that is the value of the "number" variable gets modified.
+
+Now, how about we return the function object rather than calling the nested function within. (Remember that even functions are objects. (It's Python.))
 
 	def transmit_to_space(message):
 	    "This is the enclosing function"
