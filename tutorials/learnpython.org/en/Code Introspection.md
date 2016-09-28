@@ -17,10 +17,23 @@ Python provides several functions and utilities for code introspection.
     __doc__
     __name__
 
+Often the most important one is the help function, since you can use it to find what other functions do.
+
+Exercise
+--------
+
+Print a list of all attributes of the given Vehicle object.
+
 Tutorial Code
 -------------
 
-##define the Vehicle class
+# Use the help function to see what each function does.
+# Delete this when you are done.
+help(dir)
+help(hasattr)
+help(id)
+
+# Define the Vehicle class.
 class Vehicle:
     name = ""
     kind = "car"
@@ -30,7 +43,9 @@ class Vehicle:
         desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
         return desc_str
 
-print dir(Vehicle)
+# Print a list of all attributes of the Vehicle class.
+# Your code goes here
+
 
 Expected Output
 ---------------
@@ -39,3 +54,16 @@ Expected Output
 
 Solution
 --------
+
+# Define the Vehicle class
+class Vehicle:
+    name = ""
+    kind = "car"
+    color = ""
+    value = 100.00
+    def description(self):
+        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
+        return desc_str
+
+# Print a list of all attributes of the Vehicle class.
+print dir(Vehicle)
