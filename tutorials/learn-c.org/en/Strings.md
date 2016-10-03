@@ -42,7 +42,7 @@ Notice that when printing strings, we must add a newline (`\n`) character so tha
 The function 'strlen' returns the length of the string which has to be passed as an argument:
 
     char * name = "Nikhil";
-    printf("%d"\n",strlen(name));        
+    printf("%d\n",strlen(name));        
 
 ### String comparison
 
