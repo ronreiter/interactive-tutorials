@@ -170,7 +170,7 @@ item is the last one in the list:
         int retval = 0;
         /* if there is only one item in the list, remove it */
         if (head->next == NULL) {
-            head->val
+            retval = head->val;
             free(head);
             head = NULL;
             return retval;
