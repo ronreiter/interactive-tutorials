@@ -66,6 +66,16 @@ function eval_console(code) {
 }
 
 function execute() {
+	if (window.domainData.language == "html") {
+		$("#html-output").show();
+		$("#text-output").hide();
+
+		var c = $("#html-output").contents()[0];
+		c.write(editor.getValue());
+		c.close();
+		return;
+	}
+
 	toggleMinimize(true);
 	//$('#output').css('color', '#bbbbbb');
 	//$('#output').css('background-color', '#eeeeee');
@@ -226,6 +236,16 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-csharp",
+				theme: "monokai"
+			});
+			break;
+
+		case "html":
+			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				lineNumbers: true,
+				indentUnit: 4,
+				tabMode: "shift",
+				mode: "text/html",
 				theme: "monokai"
 			});
 			break;

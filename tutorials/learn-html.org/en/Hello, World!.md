@@ -1,32 +1,42 @@
+Tutorial
+--------
+
 Welcome to *Learn HTML*, the easiest way to learn HTML & CSS online, interactively.
+    
+Learning HTML & CSS is essential for any web developer, and does not require to know how to program using JavaScript.
+ 
+Before you begin, I would recommend that you start out by downloading an HTML & CSS IDE. My personal preference
+is to use an IDE by JetBrains. You can download the PyCharm Community Edition for free, which has really good HTML, 
+CSS and JavaScript development support built-in, along with all the goodies that a good IDE provides - source code
+integration, code refactoring, automatic indentation, syntax highlighting, comparison tool, etc. 
 
-Learning HTML & CSS is essential for any web developer, and does not require to know how to program using JavaScript. 
+**Here is a list of HTML & CSS editors you can choose from:**
 
-Over the years, many CSS & JavaScript libraries have been introduced. The CSS libraries ease the process of creating a 
-beautiful website with little effort, and requires only very basic CSS knowledge to use. Since mastering CSS is a very
-hard task, the libraries enabled millions of developers to start creating websites easily, without previous knowledge
-in designing websites at all.
+* JetBrains PyCharm Community Edition (free) - https://www.jetbrains.com/pycharm/download/
+* JetBrains WebStorm (Commercial) - https://www.jetbrains.com/webstorm/
+* Atom (Free) - https://atom.io/
+* Sublime Text (Commercial) - https://www.sublimetext.com/
+* Brackets - http://brackets.io/
+* Notepad++ (Windows only) - https://notepad-plus-plus.org/download/v7.html
 
-Here are a few examples of CSS libraries that were recently introduced and are ranking high on Google:
+In this tutorial you won't actually need an IDE, because all coding is done online.
 
-* Bootstrap, by Twitter
-* Foundation, by Zurb
-* Pure CSS, by Yahoo
-* Bulma (based on the new CSS3 Flexbox specification)
+In this tutorial, we will be using a CSS framework called Bootstrap by Twitter, the most common CSS library out there 
+today. The basic principles of a CSS library is pretty much the same - they are all based on the "grid system", 
+which is an easy way to define the layout of an HTML page - a methodology that was developed over the years in web 
+development.
 
-In this tutorial, we will be using Bootstrap, the most common CSS library out there, but the basic concept of a CSS 
-library is pretty much the same - it is based on the "grid system", which is an easy way to define the layout of an 
-HTML page that was developed over the years.
+### Your first HTML Page
 
 Let's start by creating a simple HTML page. An HTML page has the following basic layout:
 
     <!DOCTYPE html>
     <html>
         <head>
-            ... head definitions go here ...
+            <!-- head definitions go here -->
         </head>
         <body>
-            ... the content goes here ...
+            <!-- the content goes here -->
         </body>
     </html>
 
@@ -43,3 +53,44 @@ a title - that thing that shows up in the title of the tab in your browser.
         </body>
     </html>
 
+Exercise
+--------
+1. Add an HTML &lt;title&gt; tag with the text "Hello, World!"
+2. Add a paragraph to the body with the text "Hello, World!"
+ 
+Tutorial Code
+-------------
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+        </head>
+        <body>
+        </body>
+    </html>
+    
+Expected Output
+---------------
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Hello, World!</title>
+        </head>
+        <body>
+            <p>Hello, World!</p>
+        </body>
+    </html>
+
+Solution
+--------
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Hello, World!</title>
+        </head>
+        <body>
+            <p>Hello, World!</p>
+        </body>
+    </html>
