@@ -141,14 +141,14 @@ def init_tutorials():
                 except Exception, e:
                     tutorial_dict["text"] = "There was an error reading the tutorial. Exception: %s" % e.message
 
-                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(tutorial_dict["text"])]
+                # create links by looking at all lines that are not code lines
+                stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
+                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(stripped_text)]
                 tutorial_dict["links"] = links
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
                     text, code, output, solution = tutorial_sections[0]
-                    if tutorial == "Basic Operators":
-                        pass
                     tutorial_dict["page_title"] = tutorial.decode("utf8")
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)

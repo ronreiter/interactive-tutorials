@@ -98,50 +98,50 @@ Beachte, dass in diesem Fall `$case` eine Variable ist und nicht 'case' heißen 
 
 Tutorial Code
 -------------
-#!/bin/bash
-# aendere diese Variablen
-NUMBER=10
-APPLES=12
-KING=GEORGE
-# um alle Bedingungen unter WAHR zu machen
-if [ $NUMBER -gt 15 ] ; then
-  echo 1
-fi
-if [ $NUMBER -eq $APPLES ] ; then
-  echo 2
-fi
-if [[ ($APPLES -eq 12) || ("$KING" = "LUIS") ]] ; then
-  echo 3
-fi
-if [[ $(($NUMBER + $APPLES)) -le 32 ]] ; then
-  echo 4
-fi
+    #!/bin/bash
+    # aendere diese Variablen
+    NUMBER=10
+    APPLES=12
+    KING=GEORGE
+    # um alle Bedingungen unter WAHR zu machen
+    if [ $NUMBER -gt 15 ] ; then
+      echo 1
+    fi
+    if [ $NUMBER -eq $APPLES ] ; then
+      echo 2
+    fi
+    if [[ ($APPLES -eq 12) || ("$KING" = "LUIS") ]] ; then
+      echo 3
+    fi
+    if [[ $(($NUMBER + $APPLES)) -le 32 ]] ; then
+      echo 4
+    fi
 
 Erwartete Ausgabe
 -----------------
-1
-2
-3
-4
+    1
+    2
+    3
+    4
 
 Lösung
 ------
 
-#!/bin/bash
-# aendere diese Variablen
-NUMBER=16
-APPLES=16
-KING=LUIS
-# um alle Bedingungen unten WAHR zu machen
-if [ $NUMBER -gt 15 ] ; then
-  echo 1
-fi
-if [ $NUMBER -eq $APPLES ] ; then
-  echo 2
-fi
-if [[ ($APPLES -eq 12) || ("$KING" = "LUIS") ]] ; then
-  echo 3
-fi
-if [[ $(($NUMBER + $APPLES)) -le 32 ]] ; then
-  echo 4
-fi
+    #!/bin/bash
+    # aendere diese Variablen
+    NUMBER=16
+    APPLES=16
+    KING=LUIS
+    # um alle Bedingungen unten WAHR zu machen
+    if [ $NUMBER -gt 15 ] ; then
+      echo 1
+    fi
+    if [ $NUMBER -eq $APPLES ] ; then
+      echo 2
+    fi
+    if [[ ($APPLES -eq 12) || ("$KING" = "LUIS") ]] ; then
+      echo 3
+    fi
+    if [[ $(($NUMBER + $APPLES)) -le 32 ]] ; then
+      echo 4
+    fi

@@ -14,6 +14,8 @@ LEARNSHELL_DOMAIN = "learnshell.org"
 LEARNPHP_DOMAIN = "learn-php.org"
 LEARNPERL_DOMAIN = "learn-perl.org"
 LEARNCS_DOMAIN = "learncs.org"
+LEARNHTML_DOMAIN = "learn-html.org"
+
 
 DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
@@ -37,6 +39,36 @@ DOMAIN_DATA = {
 print "Hello, World!"
     """
     },
+    LEARNHTML_DOMAIN : {
+        "language" : "html",
+        "analytics" : "UA-22741967-10",
+        "namespace" : "learn-html.org",
+        "full_url" : "http://learn-html.org",
+        "sender" : "Learn-HTML.org <admin@learnhtml.org>",
+        "styled_domain" : "LearnHTML.org",
+        "contact_email" : "admin@learn-html.org",
+        "support_email" : "support@learn-html.org",
+        "logo" : "/static/img/logos/learnhtml.png",
+        "language_uppercase" : "HTML",
+        "twitter" : "@learnhtml",
+        "favicon" : "favicon-learnhtml.ico",
+        "copyright" : "Copyright &copy; Learn-HTML.org.",
+        "default_code" : """<!-- Welcome to the Interactive HTML & CSS Tutorial.
+Start by choosing a chapter and
+write your code in this window.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello, World!</title>
+    </head>
+    <body>
+        <p>Hello, World!</p>
+    </body>
+</html>
+"""
+    },
+
     LEARNC_DOMAIN : {
         "language" : "c",
         "analytics" : "UA-22741967-3",
