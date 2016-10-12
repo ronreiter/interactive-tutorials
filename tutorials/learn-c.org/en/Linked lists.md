@@ -170,17 +170,23 @@ item is the last one in the list:
         int retval = 0;
         /* if there is only one item in the list, remove it */
         if (head->next == NULL) {
-            head->val
+            retval = head->val;
             free(head);
-            head = NULL;
             return retval;
         }
 
+        /* get to the last node in the list */
         node_t * current = head;
-
         while (current->next->next != NULL) {
             current = current->next;
         }
+        
+        /* now current points to the last item of the list, so let's remove current->next */
+        retval = current->next->val;
+        free(current->next);
+        current->next = NULL;
+        return retval;
+        
     }
 
 
