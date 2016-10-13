@@ -65,14 +65,66 @@ function eval_console(code) {
 	return text;
 }
 
+function compareHTML(a, b) {
+	// TODO - check CSS
+	// TODO - check head
+
+	if (a.children.length != b.children.length) {
+		return false;
+	}
+
+	for (var i = 0; i < a.children.length; i++) {
+		// first check that the tag name is similar
+		if (a.children[i].tagName != b.children[i].tagName) {
+			return false;
+		}
+
+		// check attributes - TODO
+		if (a.children[i].attributes != b.children[i].attributes) {
+			return false;
+		}
+
+		// check style - TODO
+		if (a.children[i].style != b.children[i].style) {
+			return false;
+		}
+
+		if (a.children[i].children.length == 0) {
+			if (a.children[i].innerHTML != b.children[i].innerHTML) {
+				return false;
+			}
+		} else {
+			if (!compareHTML(a.children[i], b.children[i])) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
 function execute() {
 	if (window.domainData.language == "html") {
 		$("#html-output").show();
 		$("#text-output").hide();
 
-		var c = $("#html-output").contents()[0];
-		c.write(editor.getValue());
-		c.close();
+		var a = $("#expected-output").contents()[0];
+		a.write(tutorialData.output);
+		a.close();
+
+		var b = $("#html-output").contents()[0];
+		b.write(editor.getValue());
+		b.close();
+
+		// now, let's compare A and B
+		if (compareHTML(a.body, b.body)) {
+			correct();
+		}
+
+
+
+
+
 		return;
 	}
 
@@ -130,14 +182,18 @@ function handleError(data) {
 	}
 }
 
+function correct() {
+	bootbox.confirm("Correct! Click OK to move on to the next chapter.", function(success) {
+		if (success) {
+			document.location.href = nextChapter;
+		}
+	});
+}
+
 function print(text) {
 	output.setValue(text);
 	if ($.trim(tutorialData.output) != '' && $.trim(tutorialData.output) == $.trim(text)) {
-		bootbox.confirm("Correct! Click OK to move on to the next chapter.", function(success) {
-			if (success) {
-				document.location.href = nextChapter;
-			};
-		});
+		correct();
 	}
 }
 

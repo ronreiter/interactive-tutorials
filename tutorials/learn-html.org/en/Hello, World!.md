@@ -53,11 +53,16 @@ a title - that thing that shows up in the title of the tab in your browser.
         </body>
     </html>
 
+You may also copy and paste this code into a new file in your text editor or IDE, and save the file as "index.html". The
+"index.html" file is the default file that a web server will look for when accessing a website.
+
+Now that we know the basic structure of an HTML page, let's try it out. 
+
 Exercise
 --------
 1. Add an HTML &lt;title&gt; tag with the text "Hello, World!"
 2. Add a paragraph to the body with the text "Hello, World!"
- 
+
 Tutorial Code
 -------------
 
