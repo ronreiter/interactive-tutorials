@@ -1,3 +1,5 @@
+This site generously supported by [DataCamp](https://www.datacamp.com). DataCamp offers online interactive [Python Tutorials](https://www.datacamp.com/courses) for Data Science. Join **575,000** other learners and get started learning Python for data science today!
+
 # Welcome
 
 Welcome to the LearnPython.org interactive Python tutorial.
@@ -27,6 +29,11 @@ Table of Contents
 - [[Dictionaries]]
 - [[Modules and Packages]]
 
+### Data Science Tutorials
+- [Numpy Arrays](https://www.datacamp.com)
+- [Matplotlib Introduction](https://www.datacamp.com)
+- [Pandas Basics](https://www.datacamp.com)
+
 ### Advanced Tutorials
 
 - [[Generators]]
@@ -43,9 +50,9 @@ Table of Contents
 
 ### Other Python Tutorials
 
+- [DataCamp](https://www.datacamp.com) has tons of great interactive [Python Tutorials](https://www.datacamp.com/courses) covering data manipulation, data visualization, statistics, machine learning, and more
 - Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
 
 ### Contributing Tutorials
 
 Read more here: [[Contributing Tutorials]]
-
