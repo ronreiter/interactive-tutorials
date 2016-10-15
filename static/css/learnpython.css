@@ -21,6 +21,11 @@ h1.logo {
   line-height: 80px;
 }
 
+p, li {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
 pre {
   font-family: Courier New, monospaced;
 }
@@ -38,15 +43,6 @@ img.logo {
 
 .quasilink:hover {
   color: #800004;
-}
-
-h1 a:link, h1 a:visited, h1 a:hover {
-  color: black;
-}
-
-ul {
-  margin: 0;
-  padding-left: 0;
 }
 
 .copyright {
