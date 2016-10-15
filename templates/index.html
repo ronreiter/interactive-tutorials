@@ -23,6 +23,7 @@
 
         <div class="span10" style="padding-right: 10px; box-sizing: border-box;">
 
+            {% if domain_data.language != "python" %}
             <div>
                 <script type="text/javascript"><!--
                     google_ad_client = "ca-pub-3723950136133694";
@@ -34,6 +35,7 @@
                 </script>
                 <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
+            {% endif %}
 
             {% if page_title %}
             <ul class="breadcrumb" style="margin-top: 10px">
@@ -93,6 +95,7 @@
             </div>
             -->
 
+            {% if domain_data.language != "python" %}
             <div>
                 <script type="text/javascript"><!--
                     google_ad_client = "ca-pub-3723950136133694";
@@ -107,8 +110,8 @@
                 </script>
                 <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
-
             <script type="text/javascript" src="https://www.spoj.com/banner.js"></script>
+            {% endif %}
 
             {% if domain_data.language == "java" %}
             <!-- Insticator API Embed Code -->
@@ -134,7 +137,7 @@
                     <a href="http://www.dreamhost.com/r.cgi?1502972"><img alt="DreamHost" src="http://images.dreamhost.com/rewards/300x250-Sunny.png" style="width: 160px; max-width: 160px"/></a>
                 </div>
                 -->
-
+                {% if domain_data.language != "python" %}
                 <div style="margin-bottom: 10px">
                     <script>
                         google_ad_client = "ca-pub-3723950136133694";
@@ -146,10 +149,10 @@
                     <script src="//pagead2.googlesyndication.com/pagead/show_ads.js">
                     </script>
                 </div>
-
                 <div style="margin-bottom: 10px">
                     <script type="text/javascript" src="//ap.lijit.com/www/delivery/fpi.js?z=283190&u=learnpython&width=160&height=600"></script>
                 </div>
+                {% endif %}
 
                 {% if domain_data.language == "python" %}
                 <div style="margin-bottom: 10px; margin-left: 5px;">
