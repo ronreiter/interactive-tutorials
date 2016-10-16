@@ -5,7 +5,7 @@ This section explains how to use basic operators in Python.
 
 ### Arithmetic Operators       
 
-Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.<br> 
+Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.<br>
 
     number = 1 + 2 * 3 / 4.0
 
@@ -49,6 +49,9 @@ The target of this exercise is to create two lists called `x_list` and `y_list`,
 which contain 10 instances of the variables `x` and `y`, respectively.
 You are also required to create a list called `big_list`, which contains
 the variables `x` and `y`, 10 times each, by concatenating the two lists you have created.
+
+<div data-datacamp-exercise data-lang="python" data-height="400" data-encoded="true">eyJwcmVfZXhlcmNpc2VfY29kZSI6IiMgbm8gcGVjIiwic2N0IjoidGVzdF9vYmplY3QoXCJhXCIpXG50ZXN0X2Z1bmN0aW9uKFwicHJpbnRcIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQgam9iIVwiKSIsInNvbHV0aW9uIjoiIyBDcmVhdGUgYSB2YXJpYWJsZSBhLCBlcXVhbCB0byA1XG5hID0gNVxuXG4jIFByaW50IG91dCBhXG5wcmludChhKSIsImhpbnQiOiJVc2UgdGhlIGFzc2lnbm1lbnQgb3BlcmF0b3IgKDxjb2RlPj08L2NvZGU%2BKSB0byBjcmVhdGUgdGhlIHZhcmlhYmxlIDxjb2RlPmE8L2NvZGU%2BLiIsInNhbXBsZSI6IiMgQ3JlYXRlIGEgdmFyaWFibGUgYSwgZXF1YWwgdG8gNVxuXG5cbiMgUHJpbnQgb3V0IGFcblxuXG4jIE1vcmUgY29tbWVudHNcblxuXG4jIE1vcmUgd2hpdGVzcGFjZVxuXG5cbiMgTW9yZSBldmVyeXRoaW5nXG5cbiIsImxhbmd1YWdlIjoicHl0aG9uIn0%3D</div>
+
 
 Tutorial Code
 -------------

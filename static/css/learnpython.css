@@ -158,3 +158,10 @@ textarea {
     background-image: url(/static/img/se-logo-anim.gif);
     background-repeat: no-repeat;
 }
+
+.container div.powered-by-datacamp a {
+	font-size: 0.8rem;
+}
+.container div.powered-by-datacamp .logo {
+	vertical-align: middle;
+}

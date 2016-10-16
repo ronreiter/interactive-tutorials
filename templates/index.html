@@ -64,7 +64,7 @@
                 {% endif %}
                 {{ text }}
             {% endautoescape %}</span>
-            {% if tutorial_page %}
+            {% if tutorial_page and (domain_data.language != "python" or language_code != "en") %}
             <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true)"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>
                 $(function(){
@@ -72,6 +72,7 @@
                 })
             </script>
             {% endif %}
+
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if page_title %}
@@ -214,6 +215,7 @@
     </div>
 </div>
 <footer>
+    {% if domain_data.language != "python" or language_code != "en" %}
     <div class="container">
 
     <div class="row">
@@ -267,6 +269,7 @@
     </div>
 
     </div> <!-- container -->
+    {% endif %}
 
     <div class="container">
 
