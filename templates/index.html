@@ -47,6 +47,9 @@
             {% endif %}
 
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if page_title %}
+                <p>Get started learning Python with DataCamp's free Intro to Python tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. Start Now!</p>
+                {% endif %}
                 {% if previous_chapter %}
                 <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
                 {% endif %}
@@ -72,6 +75,9 @@
             {% endif %}
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if page_title %}
+                <p>Get started learning Python with DataCamp's free Intro to Python tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. Start Now!</p>
+                {% endif %}
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
                 {% endif %}
@@ -155,7 +161,7 @@
                 {% endif %}
 
                 {% if domain_data.language == "python" %}
-                <iframe src="http://localhost:3000/?page={{page_title}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; margin-left: 5px; border: 0;"></iframe>
+                <iframe src="http://localhost:3000/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; margin-left: 5px; border: 0;"></iframe>
                 <div style="margin-bottom: 10px; margin-left: 5px;">
                     <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
                         <img src="/static/img/banners/pycharm.png" style="width: 160px; max-width: 160px"/>
