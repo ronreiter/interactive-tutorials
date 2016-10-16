@@ -65,7 +65,7 @@
                 {% endif %}
                 {{ text }}
             {% endautoescape %}</span>
-            {% if tutorial_page %}
+            {% if tutorial_page and (domain_data.language != "python" or language_code != "en") %}
             <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>
                 $(function(){
@@ -73,6 +73,7 @@
                 })
             </script>
             {% endif %}
+
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if page_title %}
@@ -215,6 +216,7 @@
     </div>
 </div>
 <footer>
+    {% if domain_data.language != "python" or language_code != "en" %}
     <div class="container">
 
     <div class="row">
@@ -260,16 +262,3 @@
             <iframe id="expected-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
         </div>
 	</div>
-
-
-    </div> <!-- row -->
-
-    <div class="row">
-        <div class="span12">
-            <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
-        </div>
-    </div>
-
-    </div>
-</footer>
-{% endblock %}

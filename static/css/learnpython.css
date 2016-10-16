@@ -204,3 +204,10 @@ textarea {
         visibility: hidden;
     }
 }
+
+.container div.powered-by-datacamp a {
+	font-size: 0.8rem;
+}
+.container div.powered-by-datacamp .logo {
+	vertical-align: middle;
+}
