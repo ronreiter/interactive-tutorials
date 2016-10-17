@@ -47,7 +47,7 @@
             {% endif %}
 
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
-                {% if page_title %}
+                {% if page_title and domain_data.language == "python" %}
                 <p>Get started learning Python with DataCamp's free Intro to Python tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. Start Now!</p>
                 {% endif %}
                 {% if previous_chapter %}
@@ -76,7 +76,7 @@
 
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
-                {% if page_title %}
+                {% if page_title and domain_data.language == "python" %}
                 <p>Get started learning Python with DataCamp's free Intro to Python tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. Start Now!</p>
                 {% endif %}
                 {% if previous_chapter %}
