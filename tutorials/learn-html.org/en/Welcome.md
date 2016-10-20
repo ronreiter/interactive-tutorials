@@ -15,18 +15,32 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 - [[Links]]
 - [[Lists]]
 - [[Images]]
-- [[CSS Styles]]
-- [[CSS Classes]]
-- [[Span and Div Elements]]
+- [[Styles]]
+- [[Classes]]
+- [[Selectors]]
+- [[State Selectors]]
 - [[UI Libraries]]
 - [[Bootstrap]]
 - [[Grid Layout]]
+- [[JavaScript]]
+- [[Colors]]
+- [[Display]]
+- [[Box Model]]
+- [[Icons]]
+
+### Bootstrap Elements
+- [[Buttons]]
+- [[Navigation Bar]]
+- [[Dropdowns]]
+- [[Tooltips]]
+- [[List Design]]
+- [[Table Design]]
+- [[Form Design]]
 
 ### Advanced HTML Tutorials
 
-- [[Formatting]]
+- [[Text Formatting]]
 - [[Tables]]
-- [[Blocks]]
 - [[Iframes]]
 - [[Forms]]
 - [[Canvas]]
@@ -41,20 +55,15 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 
 ### Advanced CSS Tutorials
 
-- [[Colors]]
-- [[Selectors]]
-- [[State Selectors]]
-- [[Display]]
 - [[Height and Width]]
 - [[Responsive Web Design]]
-- [[Box Model]]
 - [[Box Sizing]]
 - [[Outline]]
 - [[Fonts]]
-- [[Icons]]
 - [[Text Effects]]
 - [[Link Design]]
 - [[Position]]
+- [[Negative Margins]]
 - [[Overflow]]
 - [[Float]]
 - [[Text Alignment]]
@@ -68,15 +77,6 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 - [[Transitions]]
 - [[Media Queries]]
 - [[Filters]]
-
-### Bootstrap Elements
-- [[Buttons]]
-- [[Navigation Bar]]
-- [[Dropdowns]]
-- [[Tooltips]]
-- [[List Design]]
-- [[Table Design]]
-- [[Form Design]]
 
 ### Expert CSS Tutorials
 - [[Animations]]

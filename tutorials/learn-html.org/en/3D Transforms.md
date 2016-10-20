@@ -1,11 +1,17 @@
 Tutorial
 --------
 
-foo
+This page is empty. You are welcome to contribute the content by sending me a pull request:
+
+[[https://github.com/ronreiter/interactive-tutorials]]
 
 Exercise
 --------
-foo
+
+This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
+
+[[https://github.com/ronreiter/interactive-tutorials]]
+
 
 Tutorial Code
 -------------

@@ -173,7 +173,7 @@ def init_tutorials():
 
                     if not "back_chapter" in tutorial_data[domain][language][link]:
                         tutorial_data[domain][language][link]["back_chapter"] = tutorial.decode("utf-8").replace(" ", "_")
-                    else:
+                    elif not link.startswith("http"):
                         logging.warn("Warning! duplicate links to tutorial %s from tutorial %s/%s", link, language, tutorial)
 
                     num_links = len(links)

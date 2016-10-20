@@ -10,14 +10,14 @@ is to use an IDE by JetBrains. You can download the PyCharm Community Edition fo
 CSS and JavaScript development support built-in, along with all the goodies that a good IDE provides - source code
 integration, code refactoring, automatic indentation, syntax highlighting, comparison tool, etc. 
 
-**Here is a list of HTML & CSS editors you can choose from:**
+**Here is a list of HTML, CSS and JavaScript editors you can choose from:**
 
-* JetBrains PyCharm Community Edition (free) - https://www.jetbrains.com/pycharm/download/
-* JetBrains WebStorm (Commercial) - https://www.jetbrains.com/webstorm/
-* Atom (Free) - https://atom.io/
-* Sublime Text (Commercial) - https://www.sublimetext.com/
-* Brackets - http://brackets.io/
-* Notepad++ (Windows only) - https://notepad-plus-plus.org/download/v7.html
+* JetBrains PyCharm Community Edition (free) - [[https://www.jetbrains.com/pycharm/download/]]
+* JetBrains WebStorm (Commercial) - [[https://www.jetbrains.com/webstorm/]]
+* Atom (Free) - [[https://atom.io/]]
+* Sublime Text (Commercial) - [[https://www.sublimetext.com/]]
+* Brackets - [[http://brackets.io/]]
+* Notepad++ (Windows only) - [[https://notepad-plus-plus.org/download/v7.html]]
 
 In this tutorial you won't actually need an IDE, because all coding is done online.
 

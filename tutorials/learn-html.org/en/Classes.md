@@ -1,0 +1,69 @@
+Tutorial
+--------
+
+CSS classes are commonly used to define a set of CSS styles and then apply them on an HTML element using selectors.
+To define a class within a CSS stylesheet, use the dot selector, as follows:
+
+    <style>
+    .nice {
+        font-family: sans-serif;
+    }
+    </style>
+    
+Each HTML element can have a set of classes, ordered in a specific order. Each class will potentially add a set of 
+CSS definitions according to the styles that were defined in the page. In this piece of code we have defined a CSS 
+rule that will be applied to every element that contains the "nice" class. This means that once this piece of code
+has been defined inside the HTML page, the following HTML paragraph will have the style applied to it:
+
+    <style>
+    .nice {
+        font-family: sans-serif;
+    }
+    </style>
+    <p class="nice">This is a short sentence.</p>
+
+
+Exercise
+--------
+
+This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
+
+[[https://github.com/ronreiter/interactive-tutorials]]
+
+
+Tutorial Code
+-------------
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+        </head>
+        <body>
+        </body>
+    </html>
+    
+Expected Output
+---------------
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Hello, World!</title>
+        </head>
+        <body>
+            <p>Hello, World!</p>
+        </body>
+    </html>
+
+Solution
+--------
+
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Hello, World!</title>
+        </head>
+        <body>
+            <p>Hello, World!</p>
+        </body>
+    </html>

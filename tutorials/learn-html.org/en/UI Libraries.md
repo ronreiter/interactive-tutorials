@@ -18,9 +18,11 @@ Here are a few examples of CSS libraries that were recently introduced and are r
 
 Exercise
 --------
-1. Include
-2. Load
- 
+
+This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
+
+[[https://github.com/ronreiter/interactive-tutorials]]
+
 Tutorial Code
 -------------
 

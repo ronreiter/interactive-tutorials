@@ -128,11 +128,10 @@ function execute() {
 		// links should not redirect us out of here.
 		var links = b.querySelectorAll("a");
 		for (var i = 0; i < links.length; i++) {
-			links[i].target = "_blank";
+			if (links[i].href.indexOf("#") == -1) {
+				links[i].target = "_blank";
+			}
 		}
-
-
-
 
 		return;
 	}

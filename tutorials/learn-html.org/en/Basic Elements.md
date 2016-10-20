@@ -65,7 +65,11 @@ A horizontal ruler `<hr>` tag acts as a simple separator between page sections.
 
 Exercise
 --------
-TODO
+
+This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
+
+[[https://github.com/ronreiter/interactive-tutorials]]
+
 
 Tutorial Code
 -------------
