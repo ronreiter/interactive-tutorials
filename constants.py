@@ -41,7 +41,7 @@ print "Hello, World!"
     },
     LEARNHTML_DOMAIN : {
         "language" : "html",
-        "analytics" : "UA-22741967-10",
+        "analytics" : "UA-22741967-11",
         "namespace" : "learn-html.org",
         "full_url" : "http://learn-html.org",
         "sender" : "Learn-HTML.org <admin@learnhtml.org>",
