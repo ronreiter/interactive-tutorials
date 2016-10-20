@@ -25,7 +25,7 @@ the percentage unit.
 
 ### Defining CSS
 
-CSS can be defined using three methods:
+CSS can be defined using four methods:
  
 #### 1. Inline
 
@@ -100,6 +100,27 @@ The link tag should be positioned inside the `<head>` section of the HTML page, 
 
     </body>
 
+### 4. Programmatic access
+
+HTML elements have the `style` attribute which you can use to add styles programmatically.
+ 
+For example:
+
+    <!DOCTYPE html>
+    <body>
+        <p id="serif-text">This is the default serif font. It is commonly used in 
+        printed media for better readability, since letters
+        are more distinct in serif fonts.</p>
+    
+        <p class="nice" id="sans-serif-text">This is a sans-serif font. 
+        It is commonly used in screens because it is hard
+        for screens to render letters with such great detail.</p>
+        
+        <script>
+            var sansSerifText = document.getElementById("sans-serif-text");
+            sansSerifText.style.fontFamily = "sans-serif";
+        </script>
+    </body>    
 
 Exercise
 --------

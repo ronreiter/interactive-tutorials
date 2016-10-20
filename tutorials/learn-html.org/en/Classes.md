@@ -23,6 +23,39 @@ has been defined inside the HTML page, the following HTML paragraph will have th
     <p class="nice">This is a short sentence.</p>
 
 
+### HTML5 classList API
+
+HTML5 introduced a new way to edit the class list of an element using the `classList` collection. Each HTML element
+returns the collection by accessing the `element.classList` member. The class list allows to add, remove, toggle
+and to check if an element contains a specific class.
+
+Let's see an example:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        .nice {
+            font-family: sans-serif;
+        }
+        </style>
+    </head>
+    <body>
+        <p id="mytext">My text</p>
+        <script>
+            var el = document.getElementById("mytext");
+            el.classList.add("nice");    // adds the nice class to the paragraph
+            el.classList.remove("nice"); // removes the nice class from the paragraph
+            el.classList.toggle("nice"); // adds the nice class to the paragraph again, since it does not currently
+                                         // contain the nice class.
+                                         
+            if (el.classList.contains("nice")) {
+                alert("The element contains the 'nice' class.");
+            }
+        </script>
+    </body>
+    </html>
+
 Exercise
 --------
 
