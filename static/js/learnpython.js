@@ -80,13 +80,15 @@ function compareHTML(a, b) {
 		}
 
 		// check attributes - TODO
-		if (a.children[i].attributes != b.children[i].attributes) {
+		if (a.children[i].attributes.length != b.children[i].attributes.length) {
 			return false;
 		}
 
-		// check style - TODO
-		if (a.children[i].style != b.children[i].style) {
-			return false;
+		for (var j = 0; j < a.children[i].attributes.length; j++) {
+			var attribute = a.children[i].attributes[j].name;
+			if (a.children[i].attributes[attribute].value != b.children[i].attributes[attribute].value) {
+				return false;
+			}
 		}
 
 		if (a.children[i].children.length == 0) {
@@ -104,6 +106,8 @@ function compareHTML(a, b) {
 }
 
 function execute() {
+	toggleMinimize(true);
+
 	if (window.domainData.language == "html") {
 		$("#html-output").show();
 		$("#text-output").hide();
@@ -121,6 +125,11 @@ function execute() {
 			correct();
 		}
 
+		// links should not redirect us out of here.
+		var links = b.querySelectorAll("a");
+		for (var i = 0; i < links.length; i++) {
+			links[i].target = "_blank";
+		}
 
 
 
@@ -128,7 +137,6 @@ function execute() {
 		return;
 	}
 
-	toggleMinimize(true);
 	//$('#output').css('color', '#bbbbbb');
 	//$('#output').css('background-color', '#eeeeee');
 	loading.show();
@@ -199,6 +207,8 @@ function print(text) {
 
 function load() {
 	loading = $("#loading");
+	var codeBlocks = $("code");
+	// TODO: make syntax highlighting generic by matching language codes with prism codes
 
 	switch (window.domainData.language) {
 		case "python":
@@ -211,6 +221,10 @@ function load() {
 				tabMode: "shift",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-python");
+			Prism.highlightAll();
+
 			break;
 		case "java":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -220,6 +234,10 @@ function load() {
 				mode: "text/x-java",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-java");
+			Prism.highlightAll();
+
 			break;
 		case "c":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -229,6 +247,10 @@ function load() {
 				mode: "text/x-csrc",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-c");
+			Prism.highlightAll();
+
 			break;
 		case "c++11":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -238,6 +260,10 @@ function load() {
 				mode: "text/x-csrc",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-cpp");
+			Prism.highlightAll();
+
 			break;
 		case "javascript":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -247,6 +273,10 @@ function load() {
 				mode: "text/javascript",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-javascript");
+			Prism.highlightAll();
+
 			break;
 		case "ruby":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -256,6 +286,10 @@ function load() {
 				mode: "text/x-ruby",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-ruby");
+			Prism.highlightAll();
+
 			break;
 		case "bash":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -265,6 +299,10 @@ function load() {
 				mode: "text/x-sh",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-bash");
+			Prism.highlightAll();
+
 			break;
 		case "perl":
 			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
@@ -274,6 +312,10 @@ function load() {
 				mode: "text/x-perl",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-perl");
+			Prism.highlightAll();
+
 			break;
 
 		case "php":
@@ -284,6 +326,10 @@ function load() {
 				mode: "application/x-httpd-php",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-php");
+			Prism.highlightAll();
+
 			break;
 
 		case "c#":
@@ -294,6 +340,10 @@ function load() {
 				mode: "text/x-csharp",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-csharp");
+			Prism.highlightAll();
+
 			break;
 
 		case "html":
@@ -304,6 +354,10 @@ function load() {
 				mode: "text/html",
 				theme: "monokai"
 			});
+
+			codeBlocks.addClass("language-html");
+			Prism.highlightAll();
+
 			break;
 	}
 
@@ -318,7 +372,7 @@ function load() {
     originalCode = editor.getValue();
 
     $("#inner-text pre").after(
-        $("<a>").addClass("btn btn-small btn-success").css("margin-bottom", "10px").text("Execute Code").click(function() {
+        $("<a>").addClass("btn btn-small btn-success execute-code").text("Execute Code").click(function() {
             var text = $(this).prev().text();
             if (window.domainData.container_word && text.indexOf(window.domainData.container_word) == -1) {
                 var lines = text.split("\n");
@@ -329,21 +383,11 @@ function load() {
                 text = window.domainData.container.replace("{code}", indentedText);
 
             }
-            editor.setValue(text); execute()
+			toggleMinimize(true);
+            editor.setValue(text);
+			execute();
         })
     );
-
-    /*
-    $("footer").click(function() {
-        $("#main").css("margin-bottom", 500);
-        $(".CodeMirror").height(400);
-    });
-
-    $("#main").click(function() {
-        $("#main").css("margin-bottom", 300);
-        $(".CodeMirror").height(200);
-    });
-    */
 
 }
 
@@ -372,15 +416,22 @@ function reset() {
 function toggleMinimize(maximizeOnly) {
 	if (maximizeOnly && !minimized) return;
 	if (minimized) {
-		$("#footer-toggle").show();
+		$(".footer-toggle").show();
 		editor.setValue(originalCode);
-		$("#minimize-button").text("Minimize Code Window").removeClass("btn-success");
+		$("#minimize-button").text("Minimize Window").removeClass("btn-success");
 	} else {
-		$("#footer-toggle").hide();
-		$("#minimize-button").text("Show Code Window").addClass("btn-success");
+		$(".footer-toggle").hide();
+		$("#minimize-button").text("Show Window").addClass("btn-success");
 	}
 
 	minimized = !minimized;
+	if (minimized) {
+		$("footer").addClass("minimized");
+		$("footer").removeClass("maximized");
+	} else {
+		$("footer").addClass("maximized");
+		$("footer").removeClass("minimized");
+	}
 
 }
 

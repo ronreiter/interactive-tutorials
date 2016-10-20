@@ -154,3 +154,49 @@ textarea {
     background-image: url(/static/img/se-logo-anim.gif);
     background-repeat: no-repeat;
 }
+
+.btn.execute-code {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    footer.minimized {
+
+    }
+
+    #macro-nav {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-height: 500px) {
+    footer.maximized {
+        top: 0;
+    }
+
+    footer.minimized .code-window {
+
+    }
+}
+
+
+@media screen and (max-width: 768px) and (max-height: 800px) {
+    .code-window, .output-window {
+        display: none;
+    }
+
+    #main {
+        margin-bottom: 30px;
+    }
+
+    .execute-code {
+        visibility: hidden;
+    }
+}

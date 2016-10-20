@@ -61,7 +61,7 @@
                 {{ text }}
             {% endautoescape %}</span>
             {% if tutorial_page %}
-            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true)"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
+            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>
                 $(function(){
                     toggleMinimize();
@@ -209,41 +209,35 @@
 
     <div class="row">
 
-	<div class="span6">
+	<div class="span6 code-window">
         <h5 style="line-height: 28px">
-            Code Window
+            Code
             <span style="float: right;">
                 <button id="run-button" class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>Run</button>
                 <button id="reset-button" onclick="reset()" class="btn btn-primary">Reset</button>
                 <button id="solution-button" onclick="showSolution()" class="btn btn-primary">Solution</button>
             </span>
         </h5>
+        <div class="footer-toggle">
+            <textarea id="code" style="width: 100%; height: 210px">{{ code }}</textarea>
+        </div>
 
 
     </div>
 
-	<div class="span6">
+	<div class="span6 output-window">
 		<div style="width: 100%; height: 100%">
             <h5 style="line-height: 28px">
-                Output Window
+                Output
                 <span style="float: right">
                     <button id="expected-output-button" class="btn btn-primary" onclick="showExpected()">Expected Output</button>
-                    <button id="minimize-button" class="btn" onclick="toggleMinimize()">Minimize Code Window</button>
+                    <button id="minimize-button" class="btn" onclick="toggleMinimize()">Minimize Window</button>
                 </span>
             </h5>
 		</div>
-	</div>
 
-
-    </div> <!-- row -->
-
-    <div class="row" id="footer-toggle">
-        <div class="span6">
-            <textarea id="code" style="width: 100%; height: 210px">{{ code }}</textarea>
-        </div>
-        <div class="span6">
-            <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
-            <div id="loading" style="">
+        <div class="footer-toggle">
+            <div id="loading">
                 Executing, please wait...
             </div>
             <div id="text-output">
@@ -255,23 +249,17 @@
             <iframe id="html-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
             <iframe id="expected-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
         </div>
-    </div>
+	</div>
 
-    </div> <!-- container -->
 
-    <div class="container">
+    </div> <!-- row -->
 
-        <div class="row">
-            <div class="span12">
-                <div class="pull-right" style="padding-top: 3px">
-                    <a href="http://www.dmca.com/Protection/Status.aspx?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c" title="DMCA"> <img src ="/static/img/dmca_protected_sml_120ad.png?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c"  alt="DMCA.com" /></a>
-                </div>
-
-                <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
-            </div>
+    <div class="row">
+        <div class="span12">
+            <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
         </div>
+    </div>
 
     </div>
 </footer>
-<script src="http://s.univide.com/t.js?pid=1&pcid={{ uid }}"></script>
 {% endblock %}
