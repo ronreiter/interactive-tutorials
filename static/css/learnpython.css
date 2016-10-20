@@ -159,6 +159,10 @@ textarea {
     margin-bottom: 10px;
 }
 
+#macro-nav {
+    font-size: 14px;
+}
+
 @media screen and (max-width: 768px) {
     footer {
         padding-left: 10px;
