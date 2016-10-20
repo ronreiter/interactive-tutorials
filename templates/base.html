@@ -85,7 +85,7 @@
 
 <div class="container">
     <div class="row" id="macro-nav">
-        <div class="span8">
+        <div class="span9">
             <ul class="nav nav-pills">
                 <li {% if domain_data.language == "python" %}class="active"{% endif %}><a href="https://www.learnpython.org">Python</a></li>
                 <li {% if domain_data.language == "java" %}class="active"{% endif %}><a href="https://www.learnjavaonline.org">Java</a></li>
@@ -102,7 +102,7 @@
             </ul>
 
         </div>
-        <div class="span4">
+        <div class="span3">
             <ul class="nav nav-pills pull-right">
             {% for language in languages %}
                 <li {% if language_code == language %}class="active"{% endif %}><a href="/{{ language }}/"><img src="/static/img/flags/{{ language }}.png"/></a></li>
