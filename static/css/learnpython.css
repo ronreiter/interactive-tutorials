@@ -159,9 +159,14 @@ textarea {
     background-repeat: no-repeat;
 }
 
+/* DataCamp */
 .container div.powered-by-datacamp a {
 	font-size: 0.8rem;
 }
 .container div.powered-by-datacamp .logo {
 	vertical-align: middle;
+}
+
+.container div.datacamp-exercise {
+	min-height: 150px;
 }

@@ -10,84 +10,53 @@ Python supports two types of numbers - integers and floating point numbers. (It 
 
 To define an integer, use the following syntax:
 
-    myint = 7
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibXlpbnQgPSA3Iiwic29sdXRpb24iOiJteWludCA9IDciLCJzY3QiOiIifQ==
+</div>
 
 To define a floating point number, you may use one of the following notations:
 
-    myfloat = 7.0
-    myfloat = float(7)
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5teWZsb2F0ID0gNy4wXG5teWZsb2F0ID0gZmxvYXQoNylcbiIsInNvbHV0aW9uIjoiICBcbm15ZmxvYXQgPSA3LjBcbm15ZmxvYXQgPSBmbG9hdCg3KVxuIiwic2N0IjoiIn0=
+</div>
 
 ### Strings
 
 Strings are defined either with a single quote or a double quotes.
 
-    mystring = 'hello'
-    mystring = "hello"
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5teXN0cmluZyA9ICdoZWxsbydcbm15c3RyaW5nID0gXCJoZWxsb1wiXG4iLCJzb2x1dGlvbiI6IiAgXG5teXN0cmluZyA9ICdoZWxsbydcbm15c3RyaW5nID0gXCJoZWxsb1wiXG4iLCJzY3QiOiIifQ==
+</div>
 
 The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
 
-    mystring = "Don't worry about apostrophes"
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5teXN0cmluZyA9IFwiRG9uJ3Qgd29ycnkgYWJvdXQgYXBvc3Ryb3BoZXNcIlxuIiwic29sdXRpb24iOiIgIFxubXlzdHJpbmcgPSBcIkRvbid0IHdvcnJ5IGFib3V0IGFwb3N0cm9waGVzXCJcbiIsInNjdCI6IiJ9
+</div>
 
 There are additional variations on defining strings that make it easier to include things such as carriage returns, backslashes and Unicode characters. These are beyond the scope of this tutorial, but are covered in the [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial"). 
 
 Simple operators can be executed on numbers and strings:
 
-    one = 1
-    two = 2
-    three = one + two
-
-    hello = "hello"
-    world = "world"
-    helloworld = hello + " " + world
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5vbmUgPSAxXG50d28gPSAyXG50aHJlZSA9IG9uZSArIHR3b1xuXG5oZWxsbyA9IFwiaGVsbG9cIlxud29ybGQgPSBcIndvcmxkXCJcbmhlbGxvd29ybGQgPSBoZWxsbyArIFwiIFwiICsgd29ybGRcbiIsInNvbHV0aW9uIjoiICBcbm9uZSA9IDFcbnR3byA9IDJcbnRocmVlID0gb25lICsgdHdvXG5cbmhlbGxvID0gXCJoZWxsb1wiXG53b3JsZCA9IFwid29ybGRcIlxuaGVsbG93b3JsZCA9IGhlbGxvICsgXCIgXCIgKyB3b3JsZFxuIiwic2N0IjoiIn0=
+</div>
 
 Assignments can be done on more than one variable "simultaneously" on the same line like this
 
-    a, b = 3, 4
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5hLCBiID0gMywgNFxuIiwic29sdXRpb24iOiIgIFxuYSwgYiA9IDMsIDRcbiIsInNjdCI6IiJ9
+</div>
 
 Mixing operators between numbers and strings is not supported:
-
-    # This will not work!
-    print one + two + hello
-
 
 Exercise
 --------
 
 The target of this exercise is to create a string, an integer, and a floating point number. The string should be named mystring and should contain the word "hello". The floating point number should be named myfloat and should contain the number 10, and the integer should be named myint and should contain the number 20. 
 
-Tutorial Code
--------------
-# change this code
-mystring = None
-myfloat = None
-myint = None
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG4jIGNoYW5nZSB0aGlzIGNvZGVcbm15c3RyaW5nID0gTm9uZVxubXlmbG9hdCA9IE5vbmVcbm15aW50ID0gTm9uZVxuXG4jIHRlc3RpbmcgY29kZVxuaWYgbXlzdHJpbmcgPT0gXCJoZWxsb1wiOlxuICAgIHByaW50KFwiU3RyaW5nOiAlc1wiICUgbXlzdHJpbmcpXG5pZiBpc2luc3RhbmNlKG15ZmxvYXQsIGZsb2F0KSBhbmQgbXlmbG9hdCA9PSAxMC4wOlxuICAgIHByaW50KFwiRmxvYXQ6ICVkXCIgJSBteWZsb2F0KVxuaWYgaXNpbnN0YW5jZShteWludCwgaW50KSBhbmQgbXlpbnQgPT0gMjA6XG4gICAgcHJpbnQoXCJJbnRlZ2VyOiAlZFwiICUgbXlpbnQpXG4iLCJzb2x1dGlvbiI6IiAgXG4jIGNoYW5nZSB0aGlzIGNvZGVcbm15c3RyaW5nID0gXCJoZWxsb1wiXG5teWZsb2F0ID0gMTBcbm15aW50ID0gMjBcblxuIyB0ZXN0aW5nIGNvZGVcbmlmIG15c3RyaW5nID09IFwiaGVsbG9cIjpcbiAgICBwcmludChcIlN0cmluZzogJXNcIiAlIG15c3RyaW5nKVxuaWYgaXNpbnN0YW5jZShteWZsb2F0LCBmbG9hdCkgYW5kIG15ZmxvYXQgPT0gMTAuMDpcbiAgICBwcmludChcIkZsb2F0OiAlZFwiICUgbXlmbG9hdClcbmlmIGlzaW5zdGFuY2UobXlpbnQsIGludCkgYW5kIG15aW50ID09IDIwOlxuICAgIHByaW50KFwiSW50ZWdlcjogJWRcIiAlIG15aW50KVxuIiwic2N0IjoidGVzdF9vYmplY3QoJ215c3RyaW5nJywgaW5jb3JyZWN0X21zZz1cIkRvbid0IGZvcmdldCB0byBjaGFuZ2UgYG15c3RyaW5nYCB0byB0aGUgY29ycmVjdCB2YWx1ZSBmcm9tIHRoZSBleGVyY2lzZSBkZXNjcmlwdGlvbi5cIilcbnRlc3Rfb2JqZWN0KCdteWZsb2F0JywgaW5jb3JyZWN0X21zZz1cIkRvbid0IGZvcmdldCB0byBjaGFuZ2UgYG15ZmxvYXRgIHRvIHRoZSBjb3JyZWN0IHZhbHVlIGZyb20gdGhlIGV4ZXJjaXNlIGRlc2NyaXB0aW9uLlwiKVxudGVzdF9vYmplY3QoJ215aW50JywgaW5jb3JyZWN0X21zZz1cIkRvbid0IGZvcmdldCB0byBjaGFuZ2UgYG15aW50YCB0byB0aGUgY29ycmVjdCB2YWx1ZSBmcm9tIHRoZSBleGVyY2lzZSBkZXNjcmlwdGlvbi5cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibXlzdHJpbmcgPSAnaGVsbG8nXCIsbm9fb3V0cHV0X21zZz0gXCJNYWtlIHN1cmUgeW91ciBzdHJpbmcsIGZsb2F0IGFuZCBpbnRlZ2VyIG1hdGNoIGV4YWN0bHkgdG8gdGhlIGV4ZXJjaXNlIGRlc2NpcHRpb24uXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIm15ZmxvYXQgPSAxMC4wXCIsbm9fb3V0cHV0X21zZz0gXCJNYWtlIHN1cmUgeW91ciBzdHJpbmcsIGZsb2F0IGFuZCBpbnRlZ2VyIG1hdGNoIGV4YWN0bHkgdG8gdGhlIGV4ZXJjaXNlIGRlc2NpcHRpb24uXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIm15aW50ID0gMjBcIixub19vdXRwdXRfbXNnPSBcIk1ha2Ugc3VyZSB5b3VyIHN0cmluZywgZmxvYXQgYW5kIGludGVnZXIgbWF0Y2ggZXhhY3RseSB0byB0aGUgZXhlcmNpc2UgZGVzY2lwdGlvbi5cIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQgam9iIVwiKSJ9
+</div>
 
-# testing code
-if mystring == "hello":
-    print "String: %s" % mystring
-if isinstance(myfloat, float) and myfloat == 10.0:
-    print "Float: %d" % myfloat
-if isinstance(myint, int) and myint == 20:
-    print "Integer: %d" % myint
 
-Expected Output
----------------
-String: hello
-Float: 10
-Integer: 20
-
-Solution
---------
-
-# change this code
-mystring = "hello"
-myfloat = 10.0
-myint = 20
-
-# testing code
-if mystring == "hello":
-    print "String: %s" % mystring
-if isinstance(myfloat, float) and myfloat == 10.0:
-    print "Float: %d" % myfloat
-if isinstance(myint, int) and myint == 20:
-    print "Integer: %d" % myint

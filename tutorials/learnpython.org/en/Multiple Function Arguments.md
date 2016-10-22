@@ -3,41 +3,34 @@ Tutorial
 
 Every function in Python receives a predefined number of arguments, if declared normally, like this:
 
-    def myfunction(first, second, third):
-        # do something with the 3 variables
-        ...
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIG15ZnVuY3Rpb24oZmlyc3QsIHNlY29uZCwgdGhpcmQpOlxuICAgICMgZG8gc29tZXRoaW5nIHdpdGggdGhlIDMgdmFyaWFibGVzXG4gICAgLi4uIiwic29sdXRpb24iOiJkZWYgbXlmdW5jdGlvbihmaXJzdCwgc2Vjb25kLCB0aGlyZCk6XG4gICAgIyBkbyBzb21ldGhpbmcgd2l0aCB0aGUgMyB2YXJpYWJsZXNcbiAgICAuLi4iLCJzY3QiOiIifQ==
+</div>
 
 It is possible to declare functions which receive a variable number of arguments, using the following syntax:
 
-    def foo(first, second, third, *therest):
-        print "First: %s" % first
-        print "Second: %s" % second
-        print "Third: %s" % third
-        print "And all the rest... %s" % list(therest)
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIGZvbyhmaXJzdCwgc2Vjb25kLCB0aGlyZCwgKnRoZXJlc3QpOlxuICAgIHByaW50KFwiRmlyc3Q6ICVzXCIgJShmaXJzdCkpXG4gICAgcHJpbnQoXCJTZWNvbmQ6ICVzXCIgJShzZWNvbmQpKVxuICAgIHByaW50KFwiVGhpcmQ6ICVzXCIgJSh0aGlyZCkpXG4gICAgcHJpbnQoXCJBbmQgYWxsIHRoZSByZXN0Li4uICVzXCIgJShsaXN0KHRoZXJlc3QpKSlcbiAgICAuLi4iLCJzb2x1dGlvbiI6ImRlZiBmb28oZmlyc3QsIHNlY29uZCwgdGhpcmQsICp0aGVyZXN0KTpcbiAgICBwcmludChcIkZpcnN0OiAlc1wiICUoZmlyc3QpKVxuICAgIHByaW50KFwiU2Vjb25kOiAlc1wiICUoc2Vjb25kKSlcbiAgICBwcmludChcIlRoaXJkOiAlc1wiICUodGhpcmQpKVxuICAgIHByaW50KFwiQW5kIGFsbCB0aGUgcmVzdC4uLiAlc1wiICUobGlzdCh0aGVyZXN0KSkpXG4gICAgLi4uIiwic2N0IjoiIn0=
+</div>
 
 The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling foo(1,2,3,4,5) will print out:
 
-    First: 1
-    Second: 2
-    Third: 3
-    And all the rest... [4, 5]
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiZGVmIGZvbyhmaXJzdCwgc2Vjb25kLCB0aGlyZCwgKnRoZXJlc3QpOlxuICAgIHByaW50KFwiRmlyc3Q6ICVzXCIgJShmaXJzdCkpXG4gICAgcHJpbnQoXCJTZWNvbmQ6ICVzXCIgJShzZWNvbmQpKVxuICAgIHByaW50KFwiVGhpcmQ6ICVzXCIgJSh0aGlyZCkpXG4gICAgcHJpbnQoXCJBbmQgYWxsIHRoZSByZXN0Li4uICVzXCIgJShsaXN0KHRoZXJlc3QpKSkiLCJzYW1wbGUiOiJcbmZvbygxLDIsMyw0LDUpXG4gICAgIiwic29sdXRpb24iOiJcbmZvbygxLDIsMyw0LDUpXG4gICAgLi4uIiwic2N0IjoiIn0=
+</div>
 
 It is also possible to send functions arguments by keyword, so that the order of the argument does not matter, using the following syntax:
 
-    def bar(first, second, third, **options):
-        if options.get("action") == "sum":
-            print "The sum is: %d" % (first + second + third)
-
-        if options.get("number") == "first":
-            return first
-
-    result = bar(1, 2, 3, action = "sum", number = "first")
-    print "Result: %d" % result
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIGJhcihmaXJzdCwgc2Vjb25kLCB0aGlyZCwgKipvcHRpb25zKTpcbiAgICBpZiBvcHRpb25zLmdldChcImFjdGlvblwiKSA9PSBcInN1bVwiOlxuICAgICAgICBwcmludChcIlRoZSBzdW0gaXM6ICVkXCIgJShmaXJzdCArIHNlY29uZCArIHRoaXJkKSlcblxuICAgIGlmIG9wdGlvbnMuZ2V0KFwibnVtYmVyXCIpID09IFwiZmlyc3RcIjpcbiAgICAgICAgcmV0dXJuIGZpcnN0XG5cbnJlc3VsdCA9IGJhcigxLCAyLCAzLCBhY3Rpb24gPSBcInN1bVwiLCBudW1iZXIgPSBcImZpcnN0XCIpXG5wcmludChcIlJlc3VsdDogJWRcIiAlKHJlc3VsdCkpXG4gICAgIiwic29sdXRpb24iOiJcbmRlZiBiYXIoZmlyc3QsIHNlY29uZCwgdGhpcmQsICoqb3B0aW9ucyk6XG4gICAgaWYgb3B0aW9ucy5nZXQoXCJhY3Rpb25cIikgPT0gXCJzdW1cIjpcbiAgICAgICAgcHJpbnQoXCJUaGUgc3VtIGlzOiAlZFwiICUoZmlyc3QgKyBzZWNvbmQgKyB0aGlyZCkpXG5cbiAgICBpZiBvcHRpb25zLmdldChcIm51bWJlclwiKSA9PSBcImZpcnN0XCI6XG4gICAgICAgIHJldHVybiBmaXJzdFxuXG5yZXN1bHQgPSBiYXIoMSwgMiwgMywgYWN0aW9uID0gXCJzdW1cIiwgbnVtYmVyID0gXCJmaXJzdFwiKVxucHJpbnQoXCJSZXN1bHQ6ICVkXCIgJShyZXN1bHQpKSIsInNjdCI6IiJ9
+</div>
 
 The following code yields the following output:
 
-    The sum is: 6
-    Result: 1
+
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiZGVmIGJhcihmaXJzdCwgc2Vjb25kLCB0aGlyZCwgKipvcHRpb25zKTpcbiAgICBpZiBvcHRpb25zLmdldChcImFjdGlvblwiKSA9PSBcInN1bVwiOlxuICAgICAgICBwcmludChcIlRoZSBzdW0gaXM6ICVkXCIgJShmaXJzdCArIHNlY29uZCArIHRoaXJkKSlcblxuICAgIGlmIG9wdGlvbnMuZ2V0KFwibnVtYmVyXCIpID09IFwiZmlyc3RcIjpcbiAgICAgICAgcmV0dXJuIGZpcnN0XG5cbnJlc3VsdCA9IGJhcigxLCAyLCAzLCBhY3Rpb24gPSBcInN1bVwiLCBudW1iZXIgPSBcImZpcnN0XCIpXG5wcmludChcIlJlc3VsdDogJWRcIiAlKHJlc3VsdCkpIiwic2FtcGxlIjoiXG5zdW0gPSA2XG5SZXN1bHQgPSAxXG4gICAgIiwic29sdXRpb24iOiJzdW0gPSA2XG5SZXN1bHQgPSAxIiwic2N0IjoiIn0=
+</div>
 
 The "bar" function receives 3 arguments. If an additional "action" argument is received, and it instructs on summing up the numbers, then the sum is printed out. Alternatively, the function also knows it must return the first argument, if a "return" argument is received which instructs it.
 
@@ -48,50 +41,6 @@ Fill in the `foo` and `bar` functions so they can receive a variable amount of a
 The `foo` function must return the amount of extra arguments received.
 The `bar` must return `True` if the argument with the keyword `magicnumber` is worth 7, and `False` otherwise.
 
-Tutorial Code
--------------
-
-# edit the functions prototype and implementation
-def foo(a, b, c):
-    pass
-
-def bar(a, b, c):
-    pass
-
-
-# test code
-if foo(1,2,3,4) == 1:
-    print "Good."
-if foo(1,2,3,4,5) == 2:
-    print "Better."
-if bar(1,2,3,magicnumber = 6) == False:
-    print "Great."
-if bar(1,2,3,magicnumber = 7) == True:
-    print "Awesome!"
-
-Expected Output
----------------
-Good.
-Better.
-Great.
-Awesome!
-
-Solution
---------
-# edit the functions prototype and implementation
-def foo(a, b, c, *args):
-    return len(args)
-
-def bar(a, b, c, **kwargs):
-    return kwargs["magicnumber"] == 7
-
-
-# test code
-if foo(1,2,3,4) == 1:
-    print "Good."
-if foo(1,2,3,4,5) == 2:
-    print "Better."
-if bar(1,2,3,magicnumber = 6) == False:
-    print "Great."
-if bar(1,2,3,magicnumber = 7) == True:
-    print "Awesome!"
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBlZGl0IHRoZSBmdW5jdGlvbnMgcHJvdG90eXBlIGFuZCBpbXBsZW1lbnRhdGlvblxuZGVmIGZvbyhhLCBiLCBjKTpcbiAgICBwYXNzXG5cbmRlZiBiYXIoYSwgYiwgYyk6XG4gICAgcGFzc1xuXG5cbiMgdGVzdCBjb2RlXG5pZiBmb28oMSwyLDMsNCkgPT0gMTpcbiAgICBwcmludChcIkdvb2QuXCIpXG5pZiBmb28oMSwyLDMsNCw1KSA9PSAyOlxuICAgIHByaW50KFwiQmV0dGVyLlwiKVxuaWYgYmFyKDEsMiwzLG1hZ2ljbnVtYmVyID0gNikgPT0gRmFsc2U6XG4gICAgcHJpbnQoXCJHcmVhdC5cIilcbmlmIGJhcigxLDIsMyxtYWdpY251bWJlciA9IDcpID09IFRydWU6XG4gICAgcHJpbnQoXCJBd2Vzb21lIVwiKVxuICAgICIsInNvbHV0aW9uIjoiIyBlZGl0IHRoZSBmdW5jdGlvbnMgcHJvdG90eXBlIGFuZCBpbXBsZW1lbnRhdGlvblxuZGVmIGZvbyhhLCBiLCBjLCAqYXJncyk6XG4gICAgcmV0dXJuIGxlbihhcmdzKVxuXG5kZWYgYmFyKGEsIGIsIGMsICoqa3dhcmdzKTpcbiAgICByZXR1cm4ga3dhcmdzW1wibWFnaWNudW1iZXJcIl0gPT0gN1xuXG5cbiMgdGVzdCBjb2RlXG5pZiBmb28oMSwyLDMsNCkgPT0gMTpcbiAgICBwcmludChcIkdvb2QuXCIpXG5pZiBmb28oMSwyLDMsNCw1KSA9PSAyOlxuICAgIHByaW50KFwiQmV0dGVyLlwiKVxuaWYgYmFyKDEsMiwzLG1hZ2ljbnVtYmVyID0gNikgPT0gRmFsc2U6XG4gICAgcHJpbnQoXCJHcmVhdC5cIilcbmlmIGJhcigxLDIsMyxtYWdpY251bWJlciA9IDcpID09IFRydWU6XG4gICAgcHJpbnQoXCJBd2Vzb21lIVwiKVxuIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJHb29kLlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJCZXR0ZXIuXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIkdyZWF0LlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJBd2Vzb21lIVwiKVxuc3VjY2Vzc19tc2coXCJHcmVhdCB3b3JrIVwiKSJ9
+</div>

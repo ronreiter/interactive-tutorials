@@ -30,51 +30,7 @@ docs](http://docs.python.org/library/re.html#regular-expression-syntax
 As an example of a "proper" email-matching regex (like the one in the
 exercise), see [this](http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html)
 
-Tutorial Code
--------------
-# Example: 
-import re
-pattern = re.compile(r"\[(on|off)\]") # Slight optimization
-print re.search(pattern, "Mono: Playback 65 [75%] [-16.50dB] [on]")
-# Returns a Match object!
-print re.search(pattern, "Nada...:-(")
-# Doesn't return anything.
-# End Example
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBFeGFtcGxlOiBcbmltcG9ydCByZVxucGF0dGVybiA9IHJlLmNvbXBpbGUoclwiXFxbKG9ufG9mZilcXF1cIikgIyBTbGlnaHQgb3B0aW1pemF0aW9uXG5wcmludChyZS5zZWFyY2gocGF0dGVybiwgXCJNb25vOiBQbGF5YmFjayA2NSBbNzUlXSBbLTE2LjUwZEJdIFtvbl1cIikpXG4jIFJldHVybnMgYSBNYXRjaCBvYmplY3QhXG5wcmludChyZS5zZWFyY2gocGF0dGVybiwgXCJOYWRhLi4uOi0oXCIpKVxuIyBEb2Vzbid0IHJldHVybiBhbnl0aGluZy5cbiMgRW5kIEV4YW1wbGVcblxuIyBFeGVyY2lzZTogbWFrZSBhIHJlZ3VsYXIgZXhwcmVzc2lvbiB0aGF0IHdpbGwgbWF0Y2ggYW4gZW1haWxcbmRlZiB0ZXN0X2VtYWlsKHlvdXJfcGF0dGVybik6XG4gICAgcGF0dGVybiA9IHJlLmNvbXBpbGUoeW91cl9wYXR0ZXJuKVxuICAgIGVtYWlscyA9IFtcImpvaG5AZXhhbXBsZS5jb21cIiwgXCJweXRob24tbGlzdEBweXRob24ub3JnXCIsIFwid2hhLnQuYDFhbj91Z3t9bHlAZW1haWwuY29tXCJdXG4gICAgZm9yIGVtYWlsIGluIGVtYWlsczpcbiAgICAgICAgaWYgbm90IHJlLm1hdGNoKHBhdHRlcm4sIGVtYWlsKTpcbiAgICAgICAgICAgIHByaW50KFwiWW91IGZhaWxlZCB0byBtYXRjaCAlc1wiICUgKGVtYWlsKSlcbiAgICAgICAgZWxpZiBub3QgeW91cl9wYXR0ZXJuOlxuICAgICAgICAgICAgcHJpbnQoXCJGb3Jnb3QgdG8gZW50ZXIgYSBwYXR0ZXJuIVwiKVxuICAgICAgICBlbHNlOlxuICAgICAgICAgICAgcHJpbnQoXCJQYXNzXCIpXG5wYXR0ZXJuID0gclwiXCIgIyBZb3VyIHBhdHRlcm4gaGVyZSFcbnRlc3RfZW1haWwocGF0dGVybilcbiAgICAiLCJzb2x1dGlvbiI6IiMgRXhlcmNpc2U6IG1ha2UgYSByZWd1bGFyIGV4cHJlc3Npb24gdGhhdCB3aWxsIG1hdGNoIGFuIGVtYWlsXG5pbXBvcnQgcmVcbmRlZiB0ZXN0X2VtYWlsKHlvdXJfcGF0dGVybik6XG4gICAgcGF0dGVybiA9IHJlLmNvbXBpbGUoeW91cl9wYXR0ZXJuKVxuICAgIGVtYWlscyA9IFtcImpvaG5AZXhhbXBsZS5jb21cIiwgXCJweXRob24tbGlzdEBweXRob24ub3JnXCIsIFwid2hhLnQuYDFhbj91Z3t9bHlAZW1haWwuY29tXCJdXG4gICAgZm9yIGVtYWlsIGluIGVtYWlsczpcbiAgICAgICAgaWYgbm90IHJlLm1hdGNoKHBhdHRlcm4sIGVtYWlsKTpcbiAgICAgICAgICAgIHByaW50KFwiWW91IGZhaWxlZCB0byBtYXRjaCAlc1wiICUoZW1haWwpKVxuICAgICAgICBlbGlmIG5vdCB5b3VyX3BhdHRlcm46XG4gICAgICAgICAgICBwcmludChcIkZvcmdvdCB0byBlbnRlciBhIHBhdHRlcm4hXCIpXG4gICAgICAgIGVsc2U6XG4gICAgICAgICAgICBwcmludChcIlBhc3NcIilcbiMgWW91ciBwYXR0ZXJuIGhlcmUhXG5wYXR0ZXJuID0gclwiXFxcIj8oWy1hLXpBLVowLTkuYD97fV0rQFxcdytcXC5cXHcrKVxcXCI/XCJcbnRlc3RfZW1haWwocGF0dGVybikiLCJzY3QiOiJ0ZXN0X291dHB1dF9jb250YWlucyhcIlBhc3NcIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQgd29yayFcIikifQ==
+</div>
 
-# Exercise: make a regular expression that will match an email
-def test_email(your_pattern):
-    pattern = re.compile(your_pattern)
-    emails = ["john@example.com", "python-list@python.org", "wha.t.`1an?ug{}ly@email.com"]
-    for email in emails:
-        if not re.match(pattern, email):
-            print "You failed to match %s" % (email)
-        elif not your_pattern:
-            print "Forgot to enter a pattern!"
-        else:
-            print "Pass"
-pattern = r"" # Your pattern here!
-test_email(pattern)
-
-Expected Output
----------------
-Pass
-Pass
-Pass
-
-Solution
---------
-# Exercise: make a regular expression that will match an email
-import re
-def test_email(your_pattern):
-    pattern = re.compile(your_pattern)
-    emails = ["john@example.com", "python-list@python.org", "wha.t.`1an?ug{}ly@email.com"]
-    for email in emails:
-        if not re.match(pattern, email):
-            print "You failed to match %s" % (email)
-        elif not your_pattern:
-            print "Forgot to enter a pattern!"
-        else:
-            print "Pass"
-# Your pattern here!
-pattern = r"\"?([-a-zA-Z0-9.`?{}]+@\w+\.\w+)\"?"
-test_email(pattern)
