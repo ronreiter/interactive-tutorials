@@ -114,6 +114,7 @@ def untab(text):
 
 def init_tutorials():
     for domain in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials")):
+        logging.warning("loading data for domain: %s", domain)
         tutorial_data[domain] = {}
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             continue
@@ -121,10 +122,16 @@ def init_tutorials():
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             tutorial_data[domain][language] = {}
 
-            if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+            tutorials_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language)
+            if not os.path.isdir(tutorials_path):
                 continue
 
-            for tutorial_file in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+            tutorials = os.listdir(tutorials_path)
+
+            # place the index file first
+            tutorials.remove("Welcome.md")
+            tutorials = ["Welcome.md"] + tutorials
+            for tutorial_file in tutorials:
                 if not tutorial_file.endswith(".md"):
                     continue
 

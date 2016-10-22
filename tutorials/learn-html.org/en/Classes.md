@@ -56,6 +56,9 @@ Let's see an example:
     </body>
     </html>
 
+Since HTML5 is a relatively new standard, it is not supported on all browsers. It is safe enough to use today though.
+Here is the compatibility table for the feature: [[http://caniuse.com/#search=classlist]]
+
 Exercise
 --------
 

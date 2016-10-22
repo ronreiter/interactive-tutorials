@@ -18,6 +18,7 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 - [[Styles]]
 - [[Classes]]
 - [[Selectors]]
+- [[Pseudo-classes]]
 - [[State Selectors]]
 - [[UI Libraries]]
 - [[Bootstrap]]
@@ -76,6 +77,7 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 - [[Transforms]]
 - [[Transitions]]
 - [[Media Queries]]
+- [[Advanced Selectors]]
 - [[Filters]]
 
 ### Expert CSS Tutorials
@@ -85,7 +87,7 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 - [[Columns]]
 - [[CSS Variables]]
 - [[3D Transforms]]
-- [[Pseudo-classes]]
+- [[Input Pseudo-classes]]
 - [[Pseudo-elements]]
 
 

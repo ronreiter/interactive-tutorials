@@ -55,7 +55,27 @@ We can repeat the same process but this time adding an ID selector instead of th
     <p class="example">I am green now</p>
     <p id="last" class="example">And now I am red</p>
 
-### Child Selectors
+CSS selectors also support the comma tag, for applying the same style block to a number of elements. 
+This example colors `h1`, `h2` and `h3` in blue and `h4`, `h5` and `h6` in red.
+
+    <style>
+    h1, h2, h3 {
+        color: blue;
+    }
+   
+    h4, h5, h6 {
+        color: red;
+    }
+    </style>
+    <h1>h1 title</h1>
+    <h2>h2 title</h2>
+    <h3>h3 title</h3>
+    <h4>h4 title</h4>
+    <h5>h5 title</h5>
+    <h6>h6 title</h6>
+
+
+### Descendant & Child Selectors
 
 Apart from specifying an element type, an ID and/or a class name, we can also create selectors that select 
 a specific child only if it is contained in a specific hierarchy. For example, let's say we want to color all
@@ -80,6 +100,17 @@ a direct child selector:
     </style>
     <p>This is the <strong>first</strong> sentence.</p>
     <p class="strongblue">This is the <strong>second</strong> sentence.</p>
+
+If the `<strong>` element would have been encapsulated within a link, then this selector will not work since it 
+relies on a direct parent-child relationship between `.strongblue` and the `strong` element.
+
+    <style>
+    .strongblue > strong {
+        color: blue;    
+    }
+    </style>
+    <p>This is the <strong>first</strong> sentence.</p>
+    <p class="strongblue">This is the <a><strong>second</strong></a> sentence.</p>
 
 
 ### querySelector and querySelectorAll methods
