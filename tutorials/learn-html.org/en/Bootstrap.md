@@ -1,9 +1,15 @@
 Tutorial
 --------
 
-This page is empty. You are welcome to contribute the content by sending me a pull request:
+Web developers have been choosing Twitter Bootstrap as the leading framework for desining UI. As you might have
+noticed, the default HTML styles are not appealing as the websites we see around every day. The Bootstrap framework
+allows us to write plain HTML that looks much more modern and useful than the default HTML stylesheet.
 
-[[https://github.com/ronreiter/interactive-tutorials]]
+To load Bootstrap, we would need to load it from somewhere. We can load the Bootstrap library from a CDN by running
+the following `<link>` tag:
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 Exercise
 --------

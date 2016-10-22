@@ -19,7 +19,6 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 - [[Classes]]
 - [[Selectors]]
 - [[Pseudo-classes]]
-- [[State Selectors]]
 - [[UI Libraries]]
 - [[Bootstrap]]
 - [[Grid Layout]]

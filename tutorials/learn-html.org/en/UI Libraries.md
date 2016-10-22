@@ -8,12 +8,12 @@ in designing websites at all.
 
 Here are a few examples of CSS libraries that were recently introduced and are ranking high on Google:
 
-* Bootstrap, by Twitter (http://getbootstrap.com/)
-* Foundation, by Zurb (http://foundation.zurb.com/)
-* Pure CSS, by Yahoo (http://purecss.io/)
-* Bulma (based on the new CSS3 Flexbox specification - http://bulma.io/)
-* Skeleton (http://getskeleton.com/)
-* Semantic UI (http://semantic-ui.com/)
+* Bootstrap, by Twitter ([[http://getbootstrap.com/]])
+* Foundation, by Zurb ([[http://foundation.zurb.com/]])
+* Pure CSS, by Yahoo ([[http://purecss.io/]])
+* Bulma (based on the new CSS3 Flexbox specification - [[http://bulma.io/]])
+* Skeleton ([[http://getskeleton.com/]])
+* Semantic UI ([[http://semantic-ui.com/]])
 
 
 Exercise
