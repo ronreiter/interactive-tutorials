@@ -23,37 +23,32 @@ Block keywords you already know are "if", "for", and "while".
 Functions in python are defined using the block keyword "def", followed with the function's name as the block's name.
 For example: 
 
-    def my_function():
-        print "Hello From My Function!"
-
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIG15X2Z1bmN0aW9uKCk6XG4gICAgcHJpbnQoXCJIZWxsbyBGcm9tIE15IEZ1bmN0aW9uIVwiKSIsInNvbHV0aW9uIjoiZGVmIG15X2Z1bmN0aW9uKCk6XG4gICAgcHJpbnQoXCJIZWxsbyBGcm9tIE15IEZ1bmN0aW9uIVwiKSIsInNjdCI6IiJ9
+</div>
  
 Functions may also receive arguments (variables passed from the caller to the function). 
 For example:
-    
-    def my_function_with_args(username, greeting):
-        print "Hello, %s , From My Function!, I wish you %s"%(username, greeting) 
 
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIG15X2Z1bmN0aW9uX3dpdGhfYXJncyh1c2VybmFtZSwgZ3JlZXRpbmcpOlxuICAgIHByaW50IChcIkhlbGxvLCAlcyAsIEZyb20gTXkgRnVuY3Rpb24hLCBJIHdpc2ggeW91ICVzXCIgJSh1c2VybmFtZSwgZ3JlZXRpbmcpKVxuIiwic29sdXRpb24iOiJkZWYgbXlfZnVuY3Rpb25fd2l0aF9hcmdzKHVzZXJuYW1lLCBncmVldGluZyk6XG4gICAgcHJpbnQgKFwiSGVsbG8sICVzICwgRnJvbSBNeSBGdW5jdGlvbiEsIEkgd2lzaCB5b3UgJXNcIiAlKHVzZXJuYW1lLCBncmVldGluZykpXG4iLCJzY3QiOiIifQ==
+</div>
  
 Functions may return a value to the caller, using the keyword- 'return' .
 For example: 
 
-    def sum_two_numbers(a, b):
-        return a + b 
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIHN1bV90d29fbnVtYmVycyhhLCBiKTpcbiAgICByZXR1cm4oYSArIGIpIiwic29sdXRpb24iOiJkZWYgc3VtX3R3b19udW1iZXJzKGEsIGIpOlxuICAgIHJldHVybihhICsgYikiLCJzY3QiOiIifQ==
+</div>
 
 ### How do you call functions in Python?
 
 Simply write the function's name followed by (), placing any required arguments within the brackets.
 For example, lets call the functions written above (in the previous example): 
 
-    # print a simple greeting 
-    my_function() 
-   
-    #prints - "Hello, John Doe, From My Function!, I wish you a great year!"
-    my_function_with_args("John Doe", "a great year!") 
-    
-    # after this line x will hold the value 3!
-    x = sum_two_numbers(1,2)  
-
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiZGVmIG15X2Z1bmN0aW9uKCk6XG4gICAgcHJpbnQoXCJIZWxsbyBGcm9tIE15IEZ1bmN0aW9uIVwiKVxuICAgIFxuZGVmIG15X2Z1bmN0aW9uX3dpdGhfYXJncyh1c2VybmFtZSwgZ3JlZXRpbmcpOlxuICAgIHByaW50IChcIkhlbGxvLCAlcyAsIEZyb20gTXkgRnVuY3Rpb24hLCBJIHdpc2ggeW91ICVzXCIgJSh1c2VybmFtZSwgZ3JlZXRpbmcpKVxuXG5kZWYgc3VtX3R3b19udW1iZXJzKGEsIGIpOlxuICAgIHJldHVybihhICsgYikiLCJzYW1wbGUiOiIjIHByaW50IGEgc2ltcGxlIGdyZWV0aW5nIFxubXlfZnVuY3Rpb24oKSBcbiAgIFxuI3ByaW50cyAtIFwiSGVsbG8sIEpvaG4gRG9lLCBGcm9tIE15IEZ1bmN0aW9uISwgSSB3aXNoIHlvdSBhIGdyZWF0IHllYXIhXCJcbm15X2Z1bmN0aW9uX3dpdGhfYXJncyhcIkpvaG4gRG9lXCIsIFwiYSBncmVhdCB5ZWFyIVwiKSBcbiAgICBcbiMgYWZ0ZXIgdGhpcyBsaW5lIHggd2lsbCBob2xkIHRoZSB2YWx1ZSAzIVxueCA9IHN1bV90d29fbnVtYmVycygxLDIpICAiLCJzb2x1dGlvbiI6IiMgcHJpbnQgYSBzaW1wbGUgZ3JlZXRpbmcgXG5teV9mdW5jdGlvbigpIFxuICAgXG4jcHJpbnRzIC0gXCJIZWxsbywgSm9obiBEb2UsIEZyb20gTXkgRnVuY3Rpb24hLCBJIHdpc2ggeW91IGEgZ3JlYXQgeWVhciFcIlxubXlfZnVuY3Rpb25fd2l0aF9hcmdzKFwiSm9obiBEb2VcIiwgXCJhIGdyZWF0IHllYXIhXCIpIFxuICAgIFxuIyBhZnRlciB0aGlzIGxpbmUgeCB3aWxsIGhvbGQgdGhlIHZhbHVlIDMhXG54ID0gc3VtX3R3b19udW1iZXJzKDEsMikgIiwic2N0IjoiIn0=
+</div>
  
 Exercise
 --------
@@ -65,50 +60,8 @@ In this exercise you'll use an existing function, and while adding your own to c
 2. Add a function named `build_sentence(info)` which receives a single argument containing a string and returns a sentence starting with the given string and ending with the string " is a benefit of functions!"
  
 3. Run and see all the functions work together!
+
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG4jIE1vZGlmeSB0aGlzIGZ1bmN0aW9uIHRvIHJldHVybiBhIGxpc3Qgb2Ygc3RyaW5ncyBhcyBkZWZpbmVkIGFib3ZlXG5kZWYgbGlzdF9iZW5lZml0cygpOlxuICAgIHBhc3NcblxuIyBNb2RpZnkgdGhpcyBmdW5jdGlvbiB0byBjb25jYXRlbmF0ZSB0byBlYWNoIGJlbmVmaXQgLSBcIiBpcyBhIGJlbmVmaXQgb2YgZnVuY3Rpb25zIVwiXG5kZWYgYnVpbGRfc2VudGVuY2UoYmVuZWZpdCk6XG4gICAgcGFzc1xuXG5kZWYgbmFtZV90aGVfYmVuZWZpdHNfb2ZfZnVuY3Rpb25zKCk6XG4gICAgbGlzdF9vZl9iZW5lZml0cyA9IGxpc3RfYmVuZWZpdHMoKVxuICAgIGZvciBiZW5lZml0IGluIGxpc3Rfb2ZfYmVuZWZpdHM6XG4gICAgICAgIHByaW50KGJ1aWxkX3NlbnRlbmNlKGJlbmVmaXQpKVxuXG5uYW1lX3RoZV9iZW5lZml0c19vZl9mdW5jdGlvbnMoKSIsInNvbHV0aW9uIjoiZGVmIGxpc3RfYmVuZWZpdHMoKTpcbiAgICByZXR1cm4oXCJNb3JlIG9yZ2FuaXplZCBjb2RlXCIsIFwiTW9yZSByZWFkYWJsZSBjb2RlXCIsIFwiRWFzaWVyIGNvZGUgcmV1c2VcIiwgXCJBbGxvd2luZyBwcm9ncmFtbWVycyB0byBzaGFyZSBhbmQgY29ubmVjdCBjb2RlIHRvZ2V0aGVyXCIpXG5cbiMgTW9kaWZ5IHRoaXMgZnVuY3Rpb24gdG8gY29uY2F0ZW5hdGUgdG8gZWFjaCBiZW5lZml0IC0gXCIgaXMgYSBiZW5lZml0IG9mIGZ1bmN0aW9ucyFcIlxuZGVmIGJ1aWxkX3NlbnRlbmNlKGJlbmVmaXQpOlxuICAgIHJldHVybihcIiVzIGlzIGEgYmVuZWZpdCBvZiBmdW5jdGlvbnMhXCIgJShiZW5lZml0KSlcblxuXG5kZWYgbmFtZV90aGVfYmVuZWZpdHNfb2ZfZnVuY3Rpb25zKCk6XG4gICAgbGlzdF9vZl9iZW5lZml0cyA9IGxpc3RfYmVuZWZpdHMoKVxuICAgIGZvciBiZW5lZml0IGluIGxpc3Rfb2ZfYmVuZWZpdHM6XG4gICAgICAgIHByaW50KGJ1aWxkX3NlbnRlbmNlKGJlbmVmaXQpKVxuXG5uYW1lX3RoZV9iZW5lZml0c19vZl9mdW5jdGlvbnMoKSIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiTW9yZSBvcmdhbml6ZWQgY29kZSBpcyBhIGJlbmVmaXQgb2YgZnVuY3Rpb25zIVwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJNb3JlIHJlYWRhYmxlIGNvZGUgaXMgYSBiZW5lZml0IG9mIGZ1bmN0aW9ucyFcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiRWFzaWVyIGNvZGUgcmV1c2UgaXMgYSBiZW5lZml0IG9mIGZ1bmN0aW9ucyFcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiQWxsb3dpbmcgcHJvZ3JhbW1lcnMgdG8gc2hhcmUgYW5kIGNvbm5lY3QgY29kZSB0b2dldGhlciBpcyBhIGJlbmVmaXQgb2YgZnVuY3Rpb25zIVwiKVxuc3VjY2Vzc19tc2coXCJOaWNlIHdvcmshXCIpIn0=
+</div>
  
-Tutorial Code
--------------
-
-# Modify this function to return a list of strings as defined above
-def list_benefits():
-    pass
-
-# Modify this function to concatenate to each benefit - " is a benefit of functions!"
-def build_sentence(benefit):
-    pass
-
-def name_the_benefits_of_functions():
-    list_of_benefits = list_benefits()
-    for benefit in list_of_benefits:
-        print build_sentence(benefit)
-
-name_the_benefits_of_functions()
-
- 
-Expected Output
----------------
-
-More organized code is a benefit of functions!
-More readable code is a benefit of functions!
-Easier code reuse is a benefit of functions!
-Allowing programmers to share and connect code together is a benefit of functions!
-
-Solution
---------
-
-# Modify this function to return a list of strings as defined above
-def list_benefits():
-    return "More organized code", "More readable code", "Easier code reuse", "Allowing programmers to share and connect code together"
-
-# Modify this function to concatenate to each benefit - " is a benefit of functions!"
-def build_sentence(benefit):
-    return "%s is a benefit of functions!" % benefit
-
-
-def name_the_benefits_of_functions():
-    list_of_benefits = list_benefits()
-    for benefit in list_of_benefits:
-        print build_sentence(benefit)
-
-name_the_benefits_of_functions()
-

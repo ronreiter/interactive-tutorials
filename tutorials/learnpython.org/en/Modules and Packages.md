@@ -9,11 +9,9 @@ The first time a module is loaded into a running Python script, it is initialize
 
 If we want to import the module `urllib`, which enables us to create read data from URLs, we simply `import` the module:
 
-    # import the library
-    import urllib
-
-    # use it
-    urllib.urlopen(...)
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBpbXBvcnQgdGhlIGxpYnJhcnlcbmltcG9ydCB1cmxsaWIucmVxdWVzdFxuXG4jIHVzZSBpdFxuIyB1cmxsaWIucmVxdWVzdC51cmxvcGVuKC4uLikiLCJzb2x1dGlvbiI6IiMgaW1wb3J0IHRoZSBsaWJyYXJ5XG5pbXBvcnQgdXJsbGliLnJlcXVlc3RcblxuIyB1c2UgaXRcbiMgdXJsbGliLnJlcXVlc3QudXJsb3BlbiguLi4pIiwic2N0IjoiIn0=
+</div>
 
 ### Exploring built-in modules
 
@@ -21,13 +19,15 @@ Two very important functions come in handy when exploring modules in Python - th
 
 We can look for which functions are implemented in each module by using the `dir` function:
 
-    >>> import urllib
-    >>> dir(urllib)
-    ['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', '_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', '_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', '_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', 'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', 'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', 'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', 'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', 'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', 'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 'urlopen', 'urlretrieve']
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0IHVybGxpYi5yZXF1ZXN0XG5kaXIodXJsbGliLnJlcXVlc3QpXG5bJ0NvbnRlbnRUb29TaG9ydEVycm9yJywgJ0ZhbmN5VVJMb3BlbmVyJywgJ01BWEZUUENBQ0hFJywgJ1VSTG9wZW5lcicsICdfX2FsbF9fJywgJ19fYnVpbHRpbnNfXycsICdfX2RvY19fJywgJ19fZmlsZV9fJywgJ19fbmFtZV9fJywgJ19fcGFja2FnZV9fJywgJ19fdmVyc2lvbl9fJywgJ19mdHBlcnJvcnMnLCAnX2dldF9wcm94aWVzJywgJ19nZXRfcHJveHlfc2V0dGluZ3MnLCAnX2hhdmVfc3NsJywgJ19oZXhkaWcnLCAnX2hleHRvY2hyJywgJ19ob3N0cHJvZycsICdfaXNfdW5pY29kZScsICdfbG9jYWxob3N0JywgJ19ub2hlYWRlcnMnLCAnX25wb3J0cHJvZycsICdfcGFzc3dkcHJvZycsICdfcG9ydHByb2cnLCAnX3F1ZXJ5cHJvZycsICdfc2FmZV9tYXAnLCAnX3NhZmVfcXVvdGVycycsICdfdGFncHJvZycsICdfdGhpc2hvc3QnLCAnX3R5cGVwcm9nJywgJ191cmxvcGVuZXInLCAnX3VzZXJwcm9nJywgJ192YWx1ZXByb2cnLCAnYWRkYmFzZScsICdhZGRjbG9zZWhvb2snLCAnYWRkaW5mbycsICdhZGRpbmZvdXJsJywgJ2Fsd2F5c19zYWZlJywgJ2Jhc2Vqb2luJywgJ2MnLCAnZnRwY2FjaGUnLCAnZnRwZXJyb3JzJywgJ2Z0cHdyYXBwZXInLCAnZ2V0cHJveGllcycsICdnZXRwcm94aWVzX2Vudmlyb25tZW50JywgJ2dldHByb3hpZXNfbWFjb3N4X3N5c2NvbmYnLCAnaScsICdsb2NhbGhvc3QnLCAnbWFpbicsICdub2hlYWRlcnMnLCAnb3MnLCAncGF0aG5hbWUydXJsJywgJ3Byb3h5X2J5cGFzcycsICdwcm94eV9ieXBhc3NfZW52aXJvbm1lbnQnLCAncHJveHlfYnlwYXNzX21hY29zeF9zeXNjb25mJywgJ3F1b3RlJywgJ3F1b3RlX3BsdXMnLCAncmVwb3J0aG9vaycsICdzb2NrZXQnLCAnc3BsaXRhdHRyJywgJ3NwbGl0aG9zdCcsICdzcGxpdG5wb3J0JywgJ3NwbGl0cGFzc3dkJywgJ3NwbGl0cG9ydCcsICdzcGxpdHF1ZXJ5JywgJ3NwbGl0dGFnJywgJ3NwbGl0dHlwZScsICdzcGxpdHVzZXInLCAnc3BsaXR2YWx1ZScsICdzc2wnLCAnc3RyaW5nJywgJ3N5cycsICd0ZXN0JywgJ3Rlc3QxJywgJ3RoaXNob3N0JywgJ3RpbWUnLCAndG9CeXRlcycsICd1bnF1b3RlJywgJ3VucXVvdGVfcGx1cycsICd1bndyYXAnLCAndXJsMnBhdGhuYW1lJywgJ3VybGNsZWFudXAnLCAndXJsZW5jb2RlJywgJ3VybG9wZW4nLCAndXJscmV0cmlldmUnXSIsInNvbHV0aW9uIjoiaW1wb3J0IHVybGxpYi5yZXF1ZXN0XG5kaXIodXJsbGliLnJlcXVlc3QpXG5bJ0NvbnRlbnRUb29TaG9ydEVycm9yJywgJ0ZhbmN5VVJMb3BlbmVyJywgJ01BWEZUUENBQ0hFJywgJ1VSTG9wZW5lcicsICdfX2FsbF9fJywgJ19fYnVpbHRpbnNfXycsICdfX2RvY19fJywgJ19fZmlsZV9fJywgJ19fbmFtZV9fJywgJ19fcGFja2FnZV9fJywgJ19fdmVyc2lvbl9fJywgJ19mdHBlcnJvcnMnLCAnX2dldF9wcm94aWVzJywgJ19nZXRfcHJveHlfc2V0dGluZ3MnLCAnX2hhdmVfc3NsJywgJ19oZXhkaWcnLCAnX2hleHRvY2hyJywgJ19ob3N0cHJvZycsICdfaXNfdW5pY29kZScsICdfbG9jYWxob3N0JywgJ19ub2hlYWRlcnMnLCAnX25wb3J0cHJvZycsICdfcGFzc3dkcHJvZycsICdfcG9ydHByb2cnLCAnX3F1ZXJ5cHJvZycsICdfc2FmZV9tYXAnLCAnX3NhZmVfcXVvdGVycycsICdfdGFncHJvZycsICdfdGhpc2hvc3QnLCAnX3R5cGVwcm9nJywgJ191cmxvcGVuZXInLCAnX3VzZXJwcm9nJywgJ192YWx1ZXByb2cnLCAnYWRkYmFzZScsICdhZGRjbG9zZWhvb2snLCAnYWRkaW5mbycsICdhZGRpbmZvdXJsJywgJ2Fsd2F5c19zYWZlJywgJ2Jhc2Vqb2luJywgJ2MnLCAnZnRwY2FjaGUnLCAnZnRwZXJyb3JzJywgJ2Z0cHdyYXBwZXInLCAnZ2V0cHJveGllcycsICdnZXRwcm94aWVzX2Vudmlyb25tZW50JywgJ2dldHByb3hpZXNfbWFjb3N4X3N5c2NvbmYnLCAnaScsICdsb2NhbGhvc3QnLCAnbWFpbicsICdub2hlYWRlcnMnLCAnb3MnLCAncGF0aG5hbWUydXJsJywgJ3Byb3h5X2J5cGFzcycsICdwcm94eV9ieXBhc3NfZW52aXJvbm1lbnQnLCAncHJveHlfYnlwYXNzX21hY29zeF9zeXNjb25mJywgJ3F1b3RlJywgJ3F1b3RlX3BsdXMnLCAncmVwb3J0aG9vaycsICdzb2NrZXQnLCAnc3BsaXRhdHRyJywgJ3NwbGl0aG9zdCcsICdzcGxpdG5wb3J0JywgJ3NwbGl0cGFzc3dkJywgJ3NwbGl0cG9ydCcsICdzcGxpdHF1ZXJ5JywgJ3NwbGl0dGFnJywgJ3NwbGl0dHlwZScsICdzcGxpdHVzZXInLCAnc3BsaXR2YWx1ZScsICdzc2wnLCAnc3RyaW5nJywgJ3N5cycsICd0ZXN0JywgJ3Rlc3QxJywgJ3RoaXNob3N0JywgJ3RpbWUnLCAndG9CeXRlcycsICd1bnF1b3RlJywgJ3VucXVvdGVfcGx1cycsICd1bndyYXAnLCAndXJsMnBhdGhuYW1lJywgJ3VybGNsZWFudXAnLCAndXJsZW5jb2RlJywgJ3VybG9wZW4nLCAndXJscmV0cmlldmUnXSIsInNjdCI6IiJ9
+</div>
 
 When we find the function in the module we want to use, we can read about it more using the `help` function, inside the Python interpreter:
 
-    help(urllib.urlopen)
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiaW1wb3J0IHVybGxpYi5yZXF1ZXN0Iiwic2FtcGxlIjoiaGVscCh1cmxsaWIucmVxdWVzdC51cmxvcGVuKSIsInNvbHV0aW9uIjoiaGVscCh1cmxsaWIucmVxdWVzdC51cmxvcGVuKSIsInNjdCI6IiJ9
+</div>
 
 ### Writing modules
 
@@ -43,46 +43,29 @@ If we create a directory called `foo`, which marks the package name, we can then
 
 To use the module `bar`, we can import it in two ways:
 
-    import foo.bar
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0IGZvby5iYXIiLCJzb2x1dGlvbiI6ImltcG9ydCBmb28uYmFyIiwic2N0IjoiIn0=
+</div>
 
 or:
 
-    from foo import bar
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZnJvbSBmb28gaW1wb3J0IGJhciIsInNvbHV0aW9uIjoiZnJvbSBmb28gaW1wb3J0IGJhciIsInNjdCI6IiJ9
+</div>
 
 In the first method, we must use the `foo` prefix whenever we access the module `bar`. In the second method, we don't, because we import the module to our module's namespace.
 
 The `__init__.py` file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the `__all__` variable, like so:
 
-    __init__.py:
-
-    __all__ = ["bar"]
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiX19pbml0X18ucHk6XG5cbl9fYWxsX18gPSBbXCJiYXJcIl0iLCJzb2x1dGlvbiI6Il9faW5pdF9fLnB5OlxuXG5fX2FsbF9fID0gW1wiYmFyXCJdIiwic2N0IjoiIn0=
+</div>
 
 Exercise
 --------
 
 In this exercise, you will need to print an alphabetically sorted list of all functions in the `re` module, which contain the word `find`.
 
-Tutorial Code
--------------
-
-import re
-
-# Your code goes here
-
-Expected Output
----------------
-
-['findall', 'finditer']
-
-Solution
---------
-
-import re
-
-# Your code goes here
-find_members = []
-for member in dir(re):
-    if "find" in member:
-        find_members.append(member)
-
-print sorted(find_members)
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0IHJlXG5cbiMgWW91ciBjb2RlIGdvZXMgaGVyZVxuXG4iLCJzb2x1dGlvbiI6ImltcG9ydCByZVxuXG4jIFlvdXIgY29kZSBnb2VzIGhlcmVcbmZpbmRfbWVtYmVycyA9IFtdXG5mb3IgbWVtYmVyIGluIGRpcihyZSk6XG4gICAgaWYgXCJmaW5kXCIgaW4gbWVtYmVyOlxuICAgICAgICBmaW5kX21lbWJlcnMuYXBwZW5kKG1lbWJlcilcblxucHJpbnQoc29ydGVkKGZpbmRfbWVtYmVycykpIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJbJ2ZpbmRhbGwnLCAnZmluZGl0ZXInXVwiKSJ9
+</div>
