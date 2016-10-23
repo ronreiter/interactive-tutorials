@@ -13,7 +13,7 @@ exception before.
       File "<stdin>", line 1, in <module>
     NameError: name 'a' is not defined
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="150" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQoYSlcbiIsInNvbHV0aW9uIjoicHJpbnQoYSlcbiIsInNjdCI6IiJ9
 </div>
 

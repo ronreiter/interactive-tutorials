@@ -17,7 +17,7 @@ with parentheses.
 
 To print a string, just write:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQgXCJUaGlzIGxpbmUgd2lsbCBiZSBwcmludGVkLlwiXG4iLCJzb2x1dGlvbiI6InByaW50IFwiVGhpcyBsaW5lIHdpbGwgYmUgcHJpbnRlZC5cIiIsInNjdCI6IiJ9
 </div>
 
@@ -26,7 +26,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQg
 Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard
 indentation requires standard Python code to use four spaces. For example:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiICAgIHggPSAxXG4gICAgaWYgeCA9PSAxOlxuICAgICAgICAjIGluZGVudGVkIGZvdXIgc3BhY2VzXG4gICAgICAgIHByaW50IFwieCBpcyAxLlwiXG4iLCJzb2x1dGlvbiI6IiAgICB4ID0gMVxuICAgIGlmIHggPT0gMTpcbiAgICAgICAgIyBpbmRlbnRlZCBmb3VyIHNwYWNlc1xuICAgICAgICBwcmludCBcInggaXMgMS5cIiIsInNjdCI6IiJ9
 </div>
 
@@ -35,6 +35,6 @@ Exercise
 
 Use the "print" command to print the line "Hello, World!".
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQgXCJHb29kYnllLCBXb3JsZCFcIlxuIiwic29sdXRpb24iOiJwcmludCBcIkhlbGxvLCBXb3JsZCFcIiIsInNjdCI6IiJ9
 </div>
