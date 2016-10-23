@@ -10,13 +10,13 @@ Python supports two types of numbers - integers and floating point numbers. (It 
 
 To define an integer, use the following syntax:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibXlpbnQgPSA3Iiwic29sdXRpb24iOiJteWludCA9IDciLCJzY3QiOiIifQ==
 </div>
 
 To define a floating point number, you may use one of the following notations:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5teWZsb2F0ID0gNy4wXG5teWZsb2F0ID0gZmxvYXQoNylcbiIsInNvbHV0aW9uIjoiICBcbm15ZmxvYXQgPSA3LjBcbm15ZmxvYXQgPSBmbG9hdCg3KVxuIiwic2N0IjoiIn0=
 </div>
 
@@ -24,13 +24,13 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5teWZs
 
 Strings are defined either with a single quote or a double quotes.
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5teXN0cmluZyA9ICdoZWxsbydcbm15c3RyaW5nID0gXCJoZWxsb1wiXG4iLCJzb2x1dGlvbiI6IiAgXG5teXN0cmluZyA9ICdoZWxsbydcbm15c3RyaW5nID0gXCJoZWxsb1wiXG4iLCJzY3QiOiIifQ==
 </div>
 
 The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5teXN0cmluZyA9IFwiRG9uJ3Qgd29ycnkgYWJvdXQgYXBvc3Ryb3BoZXNcIlxuIiwic29sdXRpb24iOiIgIFxubXlzdHJpbmcgPSBcIkRvbid0IHdvcnJ5IGFib3V0IGFwb3N0cm9waGVzXCJcbiIsInNjdCI6IiJ9
 </div>
 
@@ -38,13 +38,13 @@ There are additional variations on defining strings that make it easier to inclu
 
 Simple operators can be executed on numbers and strings:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5vbmUgPSAxXG50d28gPSAyXG50aHJlZSA9IG9uZSArIHR3b1xuXG5oZWxsbyA9IFwiaGVsbG9cIlxud29ybGQgPSBcIndvcmxkXCJcbmhlbGxvd29ybGQgPSBoZWxsbyArIFwiIFwiICsgd29ybGRcbiIsInNvbHV0aW9uIjoiICBcbm9uZSA9IDFcbnR3byA9IDJcbnRocmVlID0gb25lICsgdHdvXG5cbmhlbGxvID0gXCJoZWxsb1wiXG53b3JsZCA9IFwid29ybGRcIlxuaGVsbG93b3JsZCA9IGhlbGxvICsgXCIgXCIgKyB3b3JsZFxuIiwic2N0IjoiIn0=
 </div>
 
 Assignments can be done on more than one variable "simultaneously" on the same line like this
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiXG5hLCBiID0gMywgNFxuIiwic29sdXRpb24iOiIgIFxuYSwgYiA9IDMsIDRcbiIsInNjdCI6IiJ9
 </div>
 

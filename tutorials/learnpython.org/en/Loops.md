@@ -7,7 +7,7 @@ There are two types of loops in Python, for and while.
 
 For loops iterate over a given sequence. Here is an example:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbWVzID0gWzIsIDMsIDUsIDddXG5mb3IgcHJpbWUgaW4gcHJpbWVzOlxuICAgICAgcHJpbnQocHJpbWUpIiwic29sdXRpb24iOiJwcmltZXMgPSBbMiwgMywgNSwgN11cbmZvciBwcmltZSBpbiBwcmltZXM6XG4gICAgICBwcmludChwcmltZSkiLCJzY3QiOiIifQ==
 </div>
 
@@ -21,7 +21,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBQcmlu
 
 While loops repeat as long as a certain boolean condition is met. For example:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBQcmludHMgb3V0IDAsMSwyLDMsNFxuY291bnQgPSAwXG53aGlsZSBjb3VudCA8IDU6XG4gICAgICAgIHByaW50KGNvdW50KVxuICAgICAgICBjb3VudCArPSAxICAjIFRoaXMgaXMgdGhlIHNhbWUgYXMgY291bnQgPSBjb3VudCArIDFcbiAgICAgICAgIiwic29sdXRpb24iOiIjIFByaW50cyBvdXQgMCwxLDIsMyw0XG5jb3VudCA9IDBcbndoaWxlIGNvdW50IDwgNTpcbiAgICAgICAgcHJpbnQoY291bnQpXG4gICAgICAgIGNvdW50ICs9IDEgICMgVGhpcyBpcyB0aGUgc2FtZSBhcyBjb3VudCA9IGNvdW50ICsgMSIsInNjdCI6IiJ9
 </div>
 

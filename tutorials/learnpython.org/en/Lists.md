@@ -9,7 +9,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibXlsaXN0
 
 Accessing an index which does not exist generates an exception (an error).
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibXlsaXN0ID0gWzEsMiwzXVxucHJpbnQobXlsaXN0WzEwXSlcbiIsInNvbHV0aW9uIjoibXlsaXN0ID0gWzEsMiwzXVxucHJpbnQobXlsaXN0WzEwXSlcbiIsInNjdCI6IiJ9
 </div>
 

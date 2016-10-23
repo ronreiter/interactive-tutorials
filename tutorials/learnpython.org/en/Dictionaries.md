@@ -5,13 +5,13 @@ A dictionary is a data type similar to arrays, but works with keys and values in
 
 For example, a database of phone numbers could be stored using a dictionary like this:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicGhvbmVib29rID0ge31cbnBob25lYm9va1tcIkpvaG5cIl0gPSA5Mzg0Nzc1NjZcbnBob25lYm9va1tcIkphY2tcIl0gPSA5MzgzNzcyNjRcbnBob25lYm9va1tcIkppbGxcIl0gPSA5NDc2NjI3ODEiLCJzb2x1dGlvbiI6InBob25lYm9vayA9IHt9XG5waG9uZWJvb2tbXCJKb2huXCJdID0gOTM4NDc3NTY2XG5waG9uZWJvb2tbXCJKYWNrXCJdID0gOTM4Mzc3MjY0XG5waG9uZWJvb2tbXCJKaWxsXCJdID0gOTQ3NjYyNzgxIiwic2N0IjoiIn0=
 </div>
 
 Alternatively, a dictionary can be initialized with the same values in the following notation:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicGhvbmVib29rID0ge1xuICAgIFwiSm9oblwiIDogOTM4NDc3NTY2LFxuICAgIFwiSmFja1wiIDogOTM4Mzc3MjY0LFxuICAgIFwiSmlsbFwiIDogOTQ3NjYyNzgxfSIsInNvbHV0aW9uIjoicGhvbmVib29rID0ge1xuICAgIFwiSm9oblwiIDogOTM4NDc3NTY2LFxuICAgIFwiSmFja1wiIDogOTM4Mzc3MjY0LFxuICAgIFwiSmlsbFwiIDogOTQ3NjYyNzgxfSIsInNjdCI6IiJ9
 </div>
 
@@ -19,7 +19,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicGhvbmVi
 
 Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoicGhvbmVib29rID0ge1xuICAgIFwiSm9oblwiIDogOTM4NDc3NTY2LFxuICAgIFwiSmFja1wiIDogOTM4Mzc3MjY0LFxuICAgIFwiSmlsbFwiIDogOTQ3NjYyNzgxfSIsInNhbXBsZSI6ImZvciBuYW1lLCBudW1iZXIgaW4gcGhvbmVib29rLml0ZW1zKCk6XG4gICAgcHJpbnQoXCJQaG9uZSBudW1iZXIgb2YgJXMgaXMgJWRcIiAlKG5hbWUsIG51bWJlcikpIiwic29sdXRpb24iOiJmb3IgbmFtZSwgbnVtYmVyIGluIHBob25lYm9vay5pdGVtcygpOlxuICAgIHByaW50KFwiUGhvbmUgbnVtYmVyIG9mICVzIGlzICVkXCIgJShuYW1lLCBudW1iZXIpKSIsInNjdCI6IiJ9
 </div>
 
@@ -27,13 +27,13 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoicGhvbmVib29rID0ge1xuICAg
 
 To remove a specified index, use either one of the following notations:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoicGhvbmVib29rID0ge1xuICAgIFwiSm9oblwiIDogOTM4NDc3NTY2LFxuICAgIFwiSmFja1wiIDogOTM4Mzc3MjY0LFxuICAgIFwiSmlsbFwiIDogOTQ3NjYyNzgxfSIsInNhbXBsZSI6ImRlbCBwaG9uZWJvb2tbXCJKb2huXCJdXG5wcmludChwaG9uZWJvb2spIiwic29sdXRpb24iOiJkZWwgcGhvbmVib29rW1wiSm9oblwiXVxucHJpbnQocGhvbmVib29rKSIsInNjdCI6IiJ9
 </div>
 
 or:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoicGhvbmVib29rID0ge1xuICAgIFwiSm9oblwiIDogOTM4NDc3NTY2LFxuICAgIFwiSmFja1wiIDogOTM4Mzc3MjY0LFxuICAgIFwiSmlsbFwiIDogOTQ3NjYyNzgxfSIsInNhbXBsZSI6InBob25lYm9vay5wb3AoXCJKb2huXCIpXG5wcmludChwaG9uZWJvb2spIiwic29sdXRpb24iOiJwaG9uZWJvb2sucG9wKFwiSm9oblwiKVxucHJpbnQocGhvbmVib29rKSIsInNjdCI6IiJ9
 </div>
 
