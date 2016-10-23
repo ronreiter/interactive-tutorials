@@ -5,13 +5,13 @@ Objects are an encapsulation of variables and functions into a single entity. Ob
 
 A very basic class would look something like this:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiY2xhc3MgTXlDbGFzczpcbiAgICB2YXJpYWJsZSA9IFwiYmxhaFwiXG5cbmRlZiBmdW5jdGlvbihzZWxmKTpcbiAgICBwcmludChcIlRoaXMgaXMgYSBtZXNzYWdlIGluc2lkZSB0aGUgY2xhc3MuXCIpIiwic29sdXRpb24iOiJjbGFzcyBNeUNsYXNzOlxuICAgIHZhcmlhYmxlID0gXCJibGFoXCJcblxuZGVmIGZ1bmN0aW9uKHNlbGYpOlxuICAgIHByaW50KFwiVGhpcyBpcyBhIG1lc3NhZ2UgaW5zaWRlIHRoZSBjbGFzcy5cIikiLCJzY3QiOiIifQ==
 </div>
 
 We'll explain why you have to include that "self" as a parameter a little bit later.  First, to assign the above class(template) to an object you would do the following:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="150" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiY2xhc3MgTXlDbGFzczpcbiAgICB2YXJpYWJsZSA9IFwiYmxhaFwiXG5cbmRlZiBmdW5jdGlvbihzZWxmKTpcbiAgICBwcmludChcIlRoaXMgaXMgYSBtZXNzYWdlIGluc2lkZSB0aGUgY2xhc3MuXCIpIiwic2FtcGxlIjoibXlvYmplY3R4ID0gTXlDbGFzcygpIiwic29sdXRpb24iOiJteW9iamVjdHggPSBNeUNsYXNzKCkiLCJzY3QiOiIifQ==
 </div>
 
@@ -21,26 +21,26 @@ Now the variable "myobjectx" holds an object of the class "MyClass" that contain
 
 To access the variable inside of the newly created object "myobjectx" you would do the following:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="150" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiY2xhc3MgTXlDbGFzczpcbiAgICB2YXJpYWJsZSA9IFwiYmxhaFwiXG5cbmRlZiBmdW5jdGlvbihzZWxmKTpcbiAgICBwcmludChcIlRoaXMgaXMgYSBtZXNzYWdlIGluc2lkZSB0aGUgY2xhc3MuXCIpXG5cbm15b2JqZWN0eCA9IE15Q2xhc3MoKSIsInNhbXBsZSI6Im15b2JqZWN0eC52YXJpYWJsZSIsInNvbHV0aW9uIjoibXlvYmplY3R4LnZhcmlhYmxlIiwic2N0IjoiIn0=
 </div>
 
 So for instance the below would output the string "blah":
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="150" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiY2xhc3MgTXlDbGFzczpcbiAgICB2YXJpYWJsZSA9IFwiYmxhaFwiXG5cbmRlZiBmdW5jdGlvbihzZWxmKTpcbiAgICBwcmludChcIlRoaXMgaXMgYSBtZXNzYWdlIGluc2lkZSB0aGUgY2xhc3MuXCIpXG5teW9iamVjdHggPSBNeUNsYXNzKClcbm15b2JqZWN0eC52YXJpYWJsZSIsInNhbXBsZSI6InByaW50KG15b2JqZWN0eC52YXJpYWJsZSkiLCJzb2x1dGlvbiI6InByaW50KG15b2JqZWN0eC52YXJpYWJsZSkiLCJzY3QiOiIifQ==
 </div>
 
 You can create multiple different objects that are of the same class(have the same variables and functions defined).  However, each object contains independent copies of the variables defined in the class.  For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="150" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiY2xhc3MgTXlDbGFzczpcbiAgICB2YXJpYWJsZSA9IFwiYmxhaFwiXG5cbmRlZiBmdW5jdGlvbihzZWxmKTpcbiAgICBwcmludChcIlRoaXMgaXMgYSBtZXNzYWdlIGluc2lkZSB0aGUgY2xhc3MuXCIpXG5teW9iamVjdHggPSBNeUNsYXNzKClcbm15b2JqZWN0eC52YXJpYWJsZSIsInNhbXBsZSI6Im15b2JqZWN0eSA9IE15Q2xhc3MoKVxubXlvYmplY3R5LnZhcmlhYmxlID0gXCJ5YWNraXR5XCIiLCJzb2x1dGlvbiI6Im15b2JqZWN0eSA9IE15Q2xhc3MoKVxubXlvYmplY3R5LnZhcmlhYmxlID0gXCJ5YWNraXR5XCIiLCJzY3QiOiIifQ==
 </div>
 
 Then print out both values:
 
 print myobjecty.variable   # This would print &quot;yackity&quot;.</code></pre>
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiY2xhc3MgTXlDbGFzczpcbiAgICB2YXJpYWJsZSA9IFwiYmxhaFwiXG5cbmRlZiBmdW5jdGlvbihzZWxmKTpcbiAgICBwcmludChcIlRoaXMgaXMgYSBtZXNzYWdlIGluc2lkZSB0aGUgY2xhc3MuXCIpXG5teW9iamVjdHggPSBNeUNsYXNzKClcbm15b2JqZWN0eC52YXJpYWJsZVxubXlvYmplY3R5ID0gTXlDbGFzcygpXG5teW9iamVjdHkudmFyaWFibGUgPSBcInlhY2tpdHlcIiIsInNhbXBsZSI6InByaW50KG15b2JqZWN0eC52YXJpYWJsZSkgICAjIFRoaXMgd291bGQgcHJpbnQgXCJibGFoXCIuXG5wcmludChteW9iamVjdHkudmFyaWFibGUpICAgIyBUaGlzIHdvdWxkIHByaW50IFwieWFja2l0eVwiLiIsInNvbHV0aW9uIjoicHJpbnQobXlvYmplY3R4LnZhcmlhYmxlKSAgICMgVGhpcyB3b3VsZCBwcmludCBcImJsYWhcIi5cbnByaW50KG15b2JqZWN0eS52YXJpYWJsZSkgICAjIFRoaXMgd291bGQgcHJpbnQgXCJ5YWNraXR5XCIuIiwic2N0IjoiIn0=
 </div>
 
@@ -48,7 +48,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiY2xhc3MgTXlDbGFzczpcbiAg
 
 To access a function inside of an object you use notation similar to accessing a variable:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiY2xhc3MgTXlDbGFzczpcbiAgICB2YXJpYWJsZSA9IFwiYmxhaFwiXG4gICAgZGVmIGZ1bmN0aW9uKHNlbGYpOlxuICAgICAgcHJpbnQoXCJUaGlzIGlzIGEgbWVzc2FnZSBpbnNpZGUgdGhlIGNsYXNzLlwiKVxuICAgICAgICBcbm15b2JqZWN0eCA9IE15Q2xhc3MoKSIsInNhbXBsZSI6Im15b2JqZWN0eC5mdW5jdGlvbigpIiwic29sdXRpb24iOiJteW9iamVjdHguZnVuY3Rpb24oKSIsInNjdCI6IiJ9
 </div>
 
@@ -62,6 +62,6 @@ We have a class defined for vehicles. Create two new vehicles called car1 and ca
 Set car1 to be a red convertible worth $60,000 with a name of Fer,
 and car2 to be a blue van named Jump worth $10,000.
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="400" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBkZWZpbmUgdGhlIFZlaGljbGUgY2xhc3NcbmNsYXNzIFZlaGljbGU6XG4gICAgbmFtZSA9IFwiXCJcbiAgICBraW5kID0gXCJjYXJcIlxuICAgIGNvbG9yID0gXCJcIlxuICAgIHZhbHVlID0gMTAwLjAwXG4gICAgZGVmIGRlc2NyaXB0aW9uKHNlbGYpOlxuICAgICAgICBkZXNjX3N0ciA9IChcIiVzIGlzIGEgJXMgJXMgd29ydGggJCUuMmYuXCIgJSAoc2VsZi5uYW1lLCBzZWxmLmNvbG9yLCBzZWxmLmtpbmQsIHNlbGYudmFsdWUpKVxuICAgICAgICByZXR1cm4oZGVzY19zdHIpXG4jIHlvdXIgY29kZSBnb2VzIGhlcmVcbmNhcjEgPSBfX19cbmNhcjEubmFtZSA9IF9fX1xuY2FyMS5jb2xvciA9IF9fX1xuY2FyMS5raW5kID0gX19fXG5jYXIxLnZhbHVlID0gX19fXG5cbmNhcjIgPSBfX19cbmNhcjIubmFtZSA9IF9fX1xuY2FyMi5jb2xvciA9IF9fX1xuY2FyMi5raW5kID0gX19fXG5jYXIyLnZhbHVlID0gX19fXG5cbiMgdGVzdCBjb2RlXG5wcmludChjYXIxLmRlc2NyaXB0aW9uKCkpXG5wcmludChjYXIyLmRlc2NyaXB0aW9uKCkpIiwic29sdXRpb24iOiIjIGRlZmluZSB0aGUgVmVoaWNsZSBjbGFzc1xuY2xhc3MgVmVoaWNsZTpcbiAgICBuYW1lID0gXCJcIlxuICAgIGtpbmQgPSBcImNhclwiXG4gICAgY29sb3IgPSBcIlwiXG4gICAgdmFsdWUgPSAxMDAuMDBcbiAgICBkZWYgZGVzY3JpcHRpb24oc2VsZik6XG4gICAgICAgIGRlc2Nfc3RyID0gKFwiJXMgaXMgYSAlcyAlcyB3b3J0aCAkJS4yZi5cIiAlIChzZWxmLm5hbWUsIHNlbGYuY29sb3IsIHNlbGYua2luZCwgc2VsZi52YWx1ZSkpXG4gICAgICAgIHJldHVybihkZXNjX3N0cilcblxuIyB5b3VyIGNvZGUgZ29lcyBoZXJlXG5jYXIxID0gVmVoaWNsZSgpXG5jYXIxLm5hbWUgPSBcIkZlclwiXG5jYXIxLmNvbG9yID0gXCJyZWRcIlxuY2FyMS5raW5kID0gXCJjb252ZXJ0aWJsZVwiXG5jYXIxLnZhbHVlID0gNjAwMDAuMDBcblxuY2FyMiA9IFZlaGljbGUoKVxuY2FyMi5uYW1lID0gXCJKdW1wXCJcbmNhcjIuY29sb3IgPSBcImJsdWVcIlxuY2FyMi5raW5kID0gXCJ2YW5cIlxuY2FyMi52YWx1ZSA9IDEwMDAwLjAwXG5cbiMgdGVzdCBjb2RlXG5wcmludChjYXIxLmRlc2NyaXB0aW9uKCkpXG5wcmludChjYXIyLmRlc2NyaXB0aW9uKCkpXG4iLCJzY3QiOiJcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQgam9iIVwiKSJ9
 </div>

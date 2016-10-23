@@ -9,7 +9,7 @@ The first time a module is loaded into a running Python script, it is initialize
 
 If we want to import the module `urllib`, which enables us to create read data from URLs, we simply `import` the module:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBpbXBvcnQgdGhlIGxpYnJhcnlcbmltcG9ydCB1cmxsaWIucmVxdWVzdFxuXG4jIHVzZSBpdFxuIyB1cmxsaWIucmVxdWVzdC51cmxvcGVuKC4uLikiLCJzb2x1dGlvbiI6IiMgaW1wb3J0IHRoZSBsaWJyYXJ5XG5pbXBvcnQgdXJsbGliLnJlcXVlc3RcblxuIyB1c2UgaXRcbiMgdXJsbGliLnJlcXVlc3QudXJsb3BlbiguLi4pIiwic2N0IjoiIn0=
 </div>
 
@@ -25,7 +25,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0
 
 When we find the function in the module we want to use, we can read about it more using the `help` function, inside the Python interpreter:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiaW1wb3J0IHVybGxpYi5yZXF1ZXN0Iiwic2FtcGxlIjoiaGVscCh1cmxsaWIucmVxdWVzdC51cmxvcGVuKSIsInNvbHV0aW9uIjoiaGVscCh1cmxsaWIucmVxdWVzdC51cmxvcGVuKSIsInNjdCI6IiJ9
 </div>
 
@@ -43,13 +43,13 @@ If we create a directory called `foo`, which marks the package name, we can then
 
 To use the module `bar`, we can import it in two ways:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0IGZvby5iYXIiLCJzb2x1dGlvbiI6ImltcG9ydCBmb28uYmFyIiwic2N0IjoiIn0=
 </div>
 
 or:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZnJvbSBmb28gaW1wb3J0IGJhciIsInNvbHV0aW9uIjoiZnJvbSBmb28gaW1wb3J0IGJhciIsInNjdCI6IiJ9
 </div>
 
@@ -57,7 +57,7 @@ In the first method, we must use the `foo` prefix whenever we access the module 
 
 The `__init__.py` file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the `__all__` variable, like so:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiX19pbml0X18ucHk6XG5cbl9fYWxsX18gPSBbXCJiYXJcIl0iLCJzb2x1dGlvbiI6Il9faW5pdF9fLnB5OlxuXG5fX2FsbF9fID0gW1wiYmFyXCJdIiwic2N0IjoiIn0=
 </div>
 
@@ -66,6 +66,6 @@ Exercise
 
 In this exercise, you will need to print an alphabetically sorted list of all functions in the `re` module, which contain the word `find`.
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0IHJlXG5cbiMgWW91ciBjb2RlIGdvZXMgaGVyZVxuXG4iLCJzb2x1dGlvbiI6ImltcG9ydCByZVxuXG4jIFlvdXIgY29kZSBnb2VzIGhlcmVcbmZpbmRfbWVtYmVycyA9IFtdXG5mb3IgbWVtYmVyIGluIGRpcihyZSk6XG4gICAgaWYgXCJmaW5kXCIgaW4gbWVtYmVyOlxuICAgICAgICBmaW5kX21lbWJlcnMuYXBwZW5kKG1lbWJlcilcblxucHJpbnQoc29ydGVkKGZpbmRfbWVtYmVycykpIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJbJ2ZpbmRhbGwnLCAnZmluZGl0ZXInXVwiKSJ9
 </div>
