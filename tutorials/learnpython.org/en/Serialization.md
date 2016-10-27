@@ -7,7 +7,7 @@ In Python 2.5, the simplejson module is used, whereas in Python 2.7, the json mo
 
 In order to use the json module, it must first be imported:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0IGpzb24iLCJzb2x1dGlvbiI6ImltcG9ydCBqc29uIiwic2N0IjoiIn0=
 </div>
 
@@ -15,13 +15,13 @@ There are two basic formats for JSON data.  Either in a string or the object dat
 
 To load JSON back to a data structure, use the "loads" method.  This method takes a string and turns it back into the json object datastructure:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiaW1wb3J0IGpzb24iLCJzYW1wbGUiOiJwcmludChqc29uLmxvYWRzKGpzb25fc3RyaW5nKSkiLCJzb2x1dGlvbiI6InByaW50KGpzb24ubG9hZHMoanNvbl9zdHJpbmcpKSIsInNjdCI6IiJ9
 </div>
 
 To encode a data structure to JSON, use the "dumps" method.  This method takes an object and returns a String:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiaW1wb3J0IGpzb24iLCJzYW1wbGUiOiJqc29uX3N0cmluZyA9IGpzb24uZHVtcHMoWzEsIDIsIDMsIFwiYVwiLCBcImJcIiwgXCJjXCJdKSIsInNvbHV0aW9uIjoianNvbl9zdHJpbmcgPSBqc29uLmR1bXBzKFsxLCAyLCAzLCBcImFcIiwgXCJiXCIsIFwiY1wiXSkiLCJzY3QiOiIifQ==
 </div>
 
@@ -29,7 +29,7 @@ Python supports a Python proprietary data serialization method called pickle (an
 
 You can use it exactly the same way.
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiaW1wb3J0ICBwaWNrbGUiLCJzYW1wbGUiOiJpbXBvcnQgcGlja2xlXG5waWNrbGVkX3N0cmluZyA9IHBpY2tsZS5kdW1wcyhbMSwgMiwgMywgXCJhXCIsIFwiYlwiLCBcImNcIl0pXG5wcmludChwaWNrbGUubG9hZHMocGlja2xlZF9zdHJpbmcpKSIsInNvbHV0aW9uIjoiaW1wb3J0cFBpY2tsZVxucGlja2xlZF9zdHJpbmcgPSBwaWNrbGUuZHVtcHMoWzEsIDIsIDMsIFwiYVwiLCBcImJcIiwgXCJjXCJdKVxucHJpbnQocGlja2xlLmxvYWRzKHBpY2tsZWRfc3RyaW5nKSkiLCJzY3QiOiIifQ==
 </div>
 

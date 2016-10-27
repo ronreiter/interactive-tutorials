@@ -3,19 +3,19 @@ Tutorial
 
 Every function in Python receives a predefined number of arguments, if declared normally, like this:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIG15ZnVuY3Rpb24oZmlyc3QsIHNlY29uZCwgdGhpcmQpOlxuICAgICMgZG8gc29tZXRoaW5nIHdpdGggdGhlIDMgdmFyaWFibGVzXG4gICAgLi4uIiwic29sdXRpb24iOiJkZWYgbXlmdW5jdGlvbihmaXJzdCwgc2Vjb25kLCB0aGlyZCk6XG4gICAgIyBkbyBzb21ldGhpbmcgd2l0aCB0aGUgMyB2YXJpYWJsZXNcbiAgICAuLi4iLCJzY3QiOiIifQ==
 </div>
 
 It is possible to declare functions which receive a variable number of arguments, using the following syntax:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIGZvbyhmaXJzdCwgc2Vjb25kLCB0aGlyZCwgKnRoZXJlc3QpOlxuICAgIHByaW50KFwiRmlyc3Q6ICVzXCIgJShmaXJzdCkpXG4gICAgcHJpbnQoXCJTZWNvbmQ6ICVzXCIgJShzZWNvbmQpKVxuICAgIHByaW50KFwiVGhpcmQ6ICVzXCIgJSh0aGlyZCkpXG4gICAgcHJpbnQoXCJBbmQgYWxsIHRoZSByZXN0Li4uICVzXCIgJShsaXN0KHRoZXJlc3QpKSlcbiAgICAuLi4iLCJzb2x1dGlvbiI6ImRlZiBmb28oZmlyc3QsIHNlY29uZCwgdGhpcmQsICp0aGVyZXN0KTpcbiAgICBwcmludChcIkZpcnN0OiAlc1wiICUoZmlyc3QpKVxuICAgIHByaW50KFwiU2Vjb25kOiAlc1wiICUoc2Vjb25kKSlcbiAgICBwcmludChcIlRoaXJkOiAlc1wiICUodGhpcmQpKVxuICAgIHByaW50KFwiQW5kIGFsbCB0aGUgcmVzdC4uLiAlc1wiICUobGlzdCh0aGVyZXN0KSkpXG4gICAgLi4uIiwic2N0IjoiIn0=
 </div>
 
 The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling foo(1,2,3,4,5) will print out:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiZGVmIGZvbyhmaXJzdCwgc2Vjb25kLCB0aGlyZCwgKnRoZXJlc3QpOlxuICAgIHByaW50KFwiRmlyc3Q6ICVzXCIgJShmaXJzdCkpXG4gICAgcHJpbnQoXCJTZWNvbmQ6ICVzXCIgJShzZWNvbmQpKVxuICAgIHByaW50KFwiVGhpcmQ6ICVzXCIgJSh0aGlyZCkpXG4gICAgcHJpbnQoXCJBbmQgYWxsIHRoZSByZXN0Li4uICVzXCIgJShsaXN0KHRoZXJlc3QpKSkiLCJzYW1wbGUiOiJcbmZvbygxLDIsMyw0LDUpXG4gICAgIiwic29sdXRpb24iOiJcbmZvbygxLDIsMyw0LDUpXG4gICAgLi4uIiwic2N0IjoiIn0=
 </div>
 
@@ -28,7 +28,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIGJh
 The following code yields the following output:
 
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+<div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiZGVmIGJhcihmaXJzdCwgc2Vjb25kLCB0aGlyZCwgKipvcHRpb25zKTpcbiAgICBpZiBvcHRpb25zLmdldChcImFjdGlvblwiKSA9PSBcInN1bVwiOlxuICAgICAgICBwcmludChcIlRoZSBzdW0gaXM6ICVkXCIgJShmaXJzdCArIHNlY29uZCArIHRoaXJkKSlcblxuICAgIGlmIG9wdGlvbnMuZ2V0KFwibnVtYmVyXCIpID09IFwiZmlyc3RcIjpcbiAgICAgICAgcmV0dXJuIGZpcnN0XG5cbnJlc3VsdCA9IGJhcigxLCAyLCAzLCBhY3Rpb24gPSBcInN1bVwiLCBudW1iZXIgPSBcImZpcnN0XCIpXG5wcmludChcIlJlc3VsdDogJWRcIiAlKHJlc3VsdCkpIiwic2FtcGxlIjoiXG5zdW0gPSA2XG5SZXN1bHQgPSAxXG4gICAgIiwic29sdXRpb24iOiJzdW0gPSA2XG5SZXN1bHQgPSAxIiwic2N0IjoiIn0=
 </div>
 
