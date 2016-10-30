@@ -47,8 +47,8 @@
             {% endif %}
 
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
-                {% if page_title and domain_data.language == "python" %}
-                <p>Get started learning Python with DataCamp's free Intro to Python tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. Start Now!</p>
+                {% if domain_data.language == "python" and tutorial_page %}
+                <p>Get started learning Python with <a href="https://www.datacamp.com">DataCamp's</a> free <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science">Start Now</a>!</p>
                 {% endif %}
                 {% if previous_chapter %}
                 <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
@@ -75,8 +75,8 @@
 
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
-                {% if page_title and domain_data.language == "python" %}
-                <p>Get started learning Python with DataCamp's free Intro to Python tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. Start Now!</p>
+                {% if domain_data.language == "python" and tutorial_page %}
+                <p>This site generously supported by <a href="https://www.datacamp.com">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses">Python Tutorials</a> for Data Science. Join <b>575,000</b> other learners and get started learning Python for data science today!</p>
                 {% endif %}
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>

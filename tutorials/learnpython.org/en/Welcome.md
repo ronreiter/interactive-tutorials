@@ -31,7 +31,6 @@ Table of Contents
 
 ### Data Science Tutorials
 - [Numpy Arrays](https://www.datacamp.com)
-- [Matplotlib Introduction](https://www.datacamp.com)
 - [Pandas Basics](https://www.datacamp.com)
 
 ### Advanced Tutorials
