@@ -5,7 +5,7 @@ Tutorial
 
 Numpy arrays are great alternatives to Python Lists. Some of the key advantages of Numpy arrays are that they are fast, easy to work with, and give users the opportunity to perform calculations across entire arrays.
 
-In the following example, you will first create two Python lists. Then, you will import the numpy package and create numpy arrays out of the newly created lists. 
+In the following example, you will first create two Python lists. Then, you will import the numpy package and create numpy arrays out of the newly created lists.
 
 <div data-datacamp-exercise data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBDcmVhdGUgMiBuZXcgbGlzdHMgaGVpZ2h0IGFuZCB3ZWlnaHRcbmhlaWdodCA9IFsxLjg3LCAgMS44NywgMS44MiwgMS45MSwgMS45MCwgMS44NV1cbndlaWdodCA9IFs4MS42NSwgOTcuNTIsIDk1LjI1LCA5Mi45OCwgODYuMTgsIDg4LjQ1XVxuXG4jIEltcG9ydCB0aGUgbnVtcHkgcGFja2FnZSBhcyBucFxuaW1wb3J0IG51bXB5IGFzIG5wXG5cbiMgQ3JlYXRlIDIgbnVtcHkgYXJyYXlzIGZyb20gaGVpZ2h0IGFuZCB3ZWlnaHRcbm5wX2hlaWdodCA9IG5wLmFycmF5KGhlaWdodClcbm5wX3dlaWdodCA9IG5wLmFycmF5KHdlaWdodClcblxuIyBQcmludCBvdXQgdGhlIHR5cGUgb2YgbnBfaGVpZ2h0XG5wcmludCh0eXBlKG5wX2hlaWdodCkpIiwic29sdXRpb24iOiIjIENyZWF0ZSAyIG5ldyBsaXN0cyBoZWlnaHQgYW5kIHdlaWdodFxuaGVpZ2h0ID0gWzEuODcsICAxLjg3LCAxLjgyLCAxLjkxLCAxLjkwLCAxLjg1XVxud2VpZ2h0ID0gWzgxLjY1LCA5Ny41MiwgOTUuMjUsIDkyLjk4LCA4Ni4xOCwgODguNDVdXG5cbiMgSW1wb3J0IHRoZSBudW1weSBwYWNrYWdlIGFzIG5wXG5pbXBvcnQgbnVtcHkgYXMgbnBcblxuIyBDcmVhdGUgMiBudW1weSBhcnJheXMgZnJvbSBoZWlnaHQgYW5kIHdlaWdodFxubnBfaGVpZ2h0ID0gbnAuYXJyYXkoaGVpZ2h0KVxubnBfd2VpZ2h0ID0gbnAuYXJyYXkod2VpZ2h0KVxuXG4jIFByaW50IG91dCB0aGUgdHlwZSBvZiBucF9oZWlnaHRcbnByaW50KHR5cGUobnBfaGVpZ2h0KSkiLCJzY3QiOiJzdWNjZXNzX21zZyhcIkdyZWF0IGpvYiFcIikifQ==
@@ -13,7 +13,7 @@ eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBDcmVh
 
 ### Element-wise calculations
 
-Now we can perform element-wise calculations on height and weight. For example, you could take all 6 of the height and weight observations above, and calculate the BMI for each observation with a single equation. These operations are very fast and computationally efficient. They are particularly helpful when you have 1000s of observations in your data. 
+Now we can perform element-wise calculations on height and weight. For example, you could take all 6 of the height and weight observations above, and calculate the BMI for each observation with a single equation. These operations are very fast and computationally efficient. They are particularly helpful when you have 1000s of observations in your data.
 
 <div data-datacamp-exercise data-height="225" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBDYWxjdWxhdGUgYm1pXG5ibWkgPSBucF93ZWlnaHQgLyBucF9oZWlnaHQgKiogMlxuXG4jIFByaW50IHRoZSByZXN1bHRcbnByaW50KGJtaSkiLCJzb2x1dGlvbiI6IiMgQ2FsY3VsYXRlIGJtaVxuYm1pID0gbnBfd2VpZ2h0IC8gbnBfaGVpZ2h0ICoqIDJcblxuIyBQcmludCB0aGUgcmVzdWx0XG5wcmludChibWkpIiwic2N0Ijoic3VjY2Vzc19tc2coXCJHcmVhdCBqb2IhXCIpIn0=
@@ -35,3 +35,12 @@ First, convert the list of weights from a list to a Numpy array. Then, convert a
 <div data-datacamp-exercise data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoid2VpZ2h0X2tnID0gWzgxLjY1LCA5Ny41MiwgOTUuMjUsIDkyLjk4LCA4Ni4xOCwgODguNDVdXG5cbmltcG9ydCBudW1weSBhcyBucFxuXG4jIENyZWF0ZSBhIG51bXB5IGFycmF5IG5wX3dlaWdodF9rZyBmcm9tIHdlaWdodF9rZ1xuICAgIFxuXG4jIENyZWF0ZSBucF93ZWlnaHRfbGJzIGZyb20gbnBfd2VpZ2h0X2tnXG5cbiMgUHJpbnQgb3V0IG5wX3dlaWdodF9sYnMiLCJzb2x1dGlvbiI6IndlaWdodF9rZyA9IFs4MS42NSwgOTcuNTIsIDk1LjI1LCA5Mi45OCwgODYuMTgsIDg4LjQ1XVxuXG5pbXBvcnQgbnVtcHkgYXMgbnBcblxuIyBDcmVhdGUgYSBudW1weSBhcnJheSBucF93ZWlnaHRfa2cgZnJvbSB3ZWlnaHRfa2dcbm5wX3dlaWdodF9rZyA9IG5wLmFycmF5KHdlaWdodF9rZylcblxuIyBDcmVhdGUgbnBfd2VpZ2h0X2xicyBmcm9tIG5wX3dlaWdodF9rZ1xubnBfd2VpZ2h0X2xicyA9IG5wX3dlaWdodF9rZyAqIDIuMlxuXG4jIFByaW50IG91dCBucF93ZWlnaHRfbGJzXG5wcmludChucF93ZWlnaHRfbGJzKSIsInNjdCI6InN1Y2Nlc3NfbXNnKFwiR3JlYXQgam9iIVwiKSJ9
 </div>
+
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------

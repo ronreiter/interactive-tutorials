@@ -45,3 +45,11 @@ In the exercise below, use the given lists to print out a set containing all the
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiYSA9IFtcIkpha2VcIiwgXCJKb2huXCIsIFwiRXJpY1wiXVxuYiA9IFtcIkpvaG5cIiwgXCJKaWxsXCJdIiwic2FtcGxlIjoiYSA9IFtcIkpha2VcIiwgXCJKb2huXCIsIFwiRXJpY1wiXVxuYiA9IFtcIkpvaG5cIiwgXCJKaWxsXCJdIiwic29sdXRpb24iOiJhID0gW1wiSmFrZVwiLCBcIkpvaG5cIiwgXCJFcmljXCJdXG5iID0gW1wiSm9oblwiLCBcIkppbGxcIl1cblxuQSA9IHNldChhKVxuQiA9IHNldChiKVxuXG5wcmludChBLmRpZmZlcmVuY2UoQikpIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJbJ0pha2UnLCAnRXJpYyddXCIpXG5zdWNjZXNzX21zZyhcIk5pY2Ugd29yayFcIikifQ==
 </div>
 
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------

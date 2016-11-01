@@ -38,3 +38,12 @@ Use the "print" command to print the line "Hello, World!".
 <div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQoXCJHb29kYnllLCBXb3JsZCFcIilcbiIsInNvbHV0aW9uIjoicHJpbnQoXCJIZWxsbywgV29ybGQhXCIpIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJIZWxsbywgV29ybGQhXCIsIG5vX291dHB1dF9tc2c9XCJNYWtlIHN1cmUgeW91IGNoYW5nZSAnR29vZGJ5ZScgdG8gJ0hlbGxvJy5cIikifQ==
 </div>
+
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------

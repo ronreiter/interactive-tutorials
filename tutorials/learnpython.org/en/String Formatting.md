@@ -38,3 +38,12 @@ You will need to write a format string which prints out the data using the follo
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBBZGQgdGhlIGFwcHJvcHJhaXRlICVzIHRvIHRoZSBmb3JtYXRfc3RyaW5nIHRvIHByaW50IG91dCB0aGUgc3RyaW5nIGluIHRoZSBleGVyY2lzZSBkZXNjcmlwdGlvblxuZGF0YSA9IChcIkpvaG5cIiwgXCJEb2VcIiwgNTMuNDQpXG5mb3JtYXRfc3RyaW5nID0gXCJIZWxsb1wiXG5cbnByaW50KGZvcm1hdF9zdHJpbmcgJShkYXRhKSlcbiIsInNvbHV0aW9uIjoiZGF0YSA9IChcIkpvaG5cIiwgXCJEb2VcIiwgNTMuNDQpXG5mb3JtYXRfc3RyaW5nID0gXCJIZWxsbyAlcyAlcy4gWW91ciBjdXJyZW50IGJhbGFuY2UgaXMgJXMkLlwiXG5cbnByaW50KGZvcm1hdF9zdHJpbmcgJShkYXRhKSlcbiIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiSGVsbG8gSm9obiBEb2UuIFlvdXIgY3VycmVudCBiYWxhbmNlIGlzIDUzLjQ0JC5cIiwgbm9fb3V0cHV0X21zZz0gXCJNYWtlIHN1cmUgeW91IGFkZCB0aGUgYCVzYCBpbiB0aGUgY29ycmVjdCBzcGFjZXMgdG8gdGhlIGBmb3JtYXRfc3RyaW5nYCB0byBtZWVldCB0aGUgZXhlcmNpc2UgZ29hbHMhXCIpIn0=
 </div>
+
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------

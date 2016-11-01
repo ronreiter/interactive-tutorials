@@ -63,3 +63,12 @@ the variables `x` and `y`, 10 times each, by concatenating the two lists you hav
 
 <div data-datacamp-exercise data-lang="python" data-height="310" data-encoded="true">eyJwcmVfZXhlcmNpc2VfY29kZSI6IiMgbm8gcGVjIiwic2N0IjoidGVzdF9vYmplY3QoXCJhXCIpXG50ZXN0X2Z1bmN0aW9uKFwicHJpbnRcIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQgam9iIVwiKSIsInNvbHV0aW9uIjoiIyBDcmVhdGUgYSB2YXJpYWJsZSBhLCBlcXVhbCB0byA1XG5hID0gNVxuXG4jIFByaW50IG91dCBhXG5wcmludChhKSIsImhpbnQiOiJVc2UgdGhlIGFzc2lnbm1lbnQgb3BlcmF0b3IgKDxjb2RlPj08L2NvZGU%2BKSB0byBjcmVhdGUgdGhlIHZhcmlhYmxlIDxjb2RlPmE8L2NvZGU%2BLiIsInNhbXBsZSI6IiMgQ3JlYXRlIGEgdmFyaWFibGUgYSwgZXF1YWwgdG8gNVxuXG5cbiMgUHJpbnQgb3V0IGFcblxuXG4jIE1vcmUgY29tbWVudHNcblxuXG4jIE1vcmUgd2hpdGVzcGFjZVxuXG5cbiMgTW9yZSBldmVyeXRoaW5nXG5cbiIsImxhbmd1YWdlIjoicHl0aG9uIn0%3D</div>
 
+
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------

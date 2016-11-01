@@ -34,7 +34,7 @@ The difference between the two is that using double quotes makes it easy to incl
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibXlzdHJpbmcgPSBcIkRvbid0IHdvcnJ5IGFib3V0IGFwb3N0cm9waGVzXCJcbnByaW50KG15c3RyaW5nKSJ9
 </div>
 
-There are additional variations on defining strings that make it easier to include things such as carriage returns, backslashes and Unicode characters. These are beyond the scope of this tutorial, but are covered in the [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial"). 
+There are additional variations on defining strings that make it easier to include things such as carriage returns, backslashes and Unicode characters. These are beyond the scope of this tutorial, but are covered in the [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial").
 
 Simple operators can be executed on numbers and strings:
 
@@ -53,10 +53,17 @@ Mixing operators between numbers and strings is not supported:
 Exercise
 --------
 
-The target of this exercise is to create a string, an integer, and a floating point number. The string should be named mystring and should contain the word "hello". The floating point number should be named myfloat and should contain the number 10, and the integer should be named myint and should contain the number 20. 
+The target of this exercise is to create a string, an integer, and a floating point number. The string should be named mystring and should contain the word "hello". The floating point number should be named myfloat and should contain the number 10, and the integer should be named myint and should contain the number 20.
 
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBjaGFuZ2UgdGhpcyBjb2RlXG5teXN0cmluZyA9IE5vbmVcbm15ZmxvYXQgPSBOb25lXG5teWludCA9IE5vbmVcblxuIyB0ZXN0aW5nIGNvZGVcbmlmIG15c3RyaW5nID09IFwiaGVsbG9cIjpcbiAgICBwcmludChcIlN0cmluZzogJXNcIiAlIG15c3RyaW5nKVxuaWYgaXNpbnN0YW5jZShteWZsb2F0LCBmbG9hdCkgYW5kIG15ZmxvYXQgPT0gMTAuMDpcbiAgICBwcmludChcIkZsb2F0OiAlZFwiICUgbXlmbG9hdClcbmlmIGlzaW5zdGFuY2UobXlpbnQsIGludCkgYW5kIG15aW50ID09IDIwOlxuICAgIHByaW50KFwiSW50ZWdlcjogJWRcIiAlIG15aW50KVxuIiwic29sdXRpb24iOiIjIGNoYW5nZSB0aGlzIGNvZGVcbm15c3RyaW5nID0gXCJoZWxsb1wiXG5teWZsb2F0ID0gMTBcbm15aW50ID0gMjBcblxuIyB0ZXN0aW5nIGNvZGVcbmlmIG15c3RyaW5nID09IFwiaGVsbG9cIjpcbiAgICBwcmludChcIlN0cmluZzogJXNcIiAlIG15c3RyaW5nKVxuaWYgaXNpbnN0YW5jZShteWZsb2F0LCBmbG9hdCkgYW5kIG15ZmxvYXQgPT0gMTAuMDpcbiAgICBwcmludChcIkZsb2F0OiAlZFwiICUgbXlmbG9hdClcbmlmIGlzaW5zdGFuY2UobXlpbnQsIGludCkgYW5kIG15aW50ID09IDIwOlxuICAgIHByaW50KFwiSW50ZWdlcjogJWRcIiAlIG15aW50KVxuIiwic2N0IjoidGVzdF9vYmplY3QoJ215c3RyaW5nJywgaW5jb3JyZWN0X21zZz1cIkRvbid0IGZvcmdldCB0byBjaGFuZ2UgYG15c3RyaW5nYCB0byB0aGUgY29ycmVjdCB2YWx1ZSBmcm9tIHRoZSBleGVyY2lzZSBkZXNjcmlwdGlvbi5cIilcbnRlc3Rfb2JqZWN0KCdteWZsb2F0JywgaW5jb3JyZWN0X21zZz1cIkRvbid0IGZvcmdldCB0byBjaGFuZ2UgYG15ZmxvYXRgIHRvIHRoZSBjb3JyZWN0IHZhbHVlIGZyb20gdGhlIGV4ZXJjaXNlIGRlc2NyaXB0aW9uLlwiKVxudGVzdF9vYmplY3QoJ215aW50JywgaW5jb3JyZWN0X21zZz1cIkRvbid0IGZvcmdldCB0byBjaGFuZ2UgYG15aW50YCB0byB0aGUgY29ycmVjdCB2YWx1ZSBmcm9tIHRoZSBleGVyY2lzZSBkZXNjcmlwdGlvbi5cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibXlzdHJpbmcgPSAnaGVsbG8nXCIsbm9fb3V0cHV0X21zZz0gXCJNYWtlIHN1cmUgeW91ciBzdHJpbmcsIGZsb2F0IGFuZCBpbnRlZ2VyIG1hdGNoIGV4YWN0bHkgdG8gdGhlIGV4ZXJjaXNlIGRlc2NpcHRpb24uXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIm15ZmxvYXQgPSAxMC4wXCIsbm9fb3V0cHV0X21zZz0gXCJNYWtlIHN1cmUgeW91ciBzdHJpbmcsIGZsb2F0IGFuZCBpbnRlZ2VyIG1hdGNoIGV4YWN0bHkgdG8gdGhlIGV4ZXJjaXNlIGRlc2NpcHRpb24uXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIm15aW50ID0gMjBcIixub19vdXRwdXRfbXNnPSBcIk1ha2Ugc3VyZSB5b3VyIHN0cmluZywgZmxvYXQgYW5kIGludGVnZXIgbWF0Y2ggZXhhY3RseSB0byB0aGUgZXhlcmNpc2UgZGVzY2lwdGlvbi5cIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQgam9iIVwiKSJ9
 </div>
 
+Tutorial Code
+-------------
 
+Expected Output
+---------------
+
+Solution
+--------

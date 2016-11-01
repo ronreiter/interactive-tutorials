@@ -11,7 +11,7 @@ For example:
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIHRyYW5zbWl0X3RvX3NwYWNlKG1lc3NhZ2UpOlxuICAgIFwiVGhpcyBpcyB0aGUgZW5jbG9zaW5nIGZ1bmN0aW9uXCJcbiAgICBkZWYgZGF0YV90cmFuc21pdHRlcigpOlxuICAgICAgICBcIlRoZSBuZXN0ZWQgZnVuY3Rpb25cIlxuICAgICAgICBwcmludChtZXNzYWdlKVxuXG4gICAgZGF0YV90cmFuc21pdHRlcigpIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
 </div>
 
-This works well as the 'data_transmitter' function can access the 'message'. To demonstrate the use of the "nonlocal" keyword, consider this 
+This works well as the 'data_transmitter' function can access the 'message'. To demonstrate the use of the "nonlocal" keyword, consider this
 
 <div data-datacamp-exercise="" data-height="250" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIHByaW50X21zZyhudW1iZXIpOlxuICAgIGRlZiBwcmludGVyKCk6XG4gICAgICAgIFwiSGVyZSB3ZSBhcmUgdXNpbmcgdGhlIG5vbmxvY2FsIGtleXdvcmRcIlxuICAgICAgICBub25sb2NhbCBudW1iZXJcbiAgICAgICAgbnVtYmVyPTNcbiAgICAgICAgcHJpbnQobnVtYmVyKVxuICAgIHByaW50ZXIoKVxuICAgIHByaW50KG51bWJlcilcblxucHJpbnRfbXNnKDkpIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
@@ -37,7 +37,7 @@ Even though the execution of the "transmit_to_space()" was completed, the messag
 ADVANTAGE : Closures can avoid use of global variables and provides some form of data hiding.(Eg. When there are few methods in a class, use closures instead).
 
 Also, Decorators in Python make extensive use of closures.
-			
+
 Exercise
 --------
 
@@ -46,3 +46,12 @@ Make a nested loop and a python closure to make functions to get multiple multip
 <div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyB5b3VyIGNvZGUgZ29lcyBoZXJlXG5cbm11bHRpcGx5d2l0aDUgPSBtdWx0aXBsaWVyX29mKDUpXG5tdWx0aXBseXdpdGg1KDkpIiwic29sdXRpb24iOiJkZWYgbXVsdGlwbGllcl9vZihuKTpcbiAgICBkZWYgbXVsdGlwbGllcihudW1iZXIpOlxuICAgICAgICByZXR1cm4gbnVtYmVyKm5cbiAgICByZXR1cm4gbXVsdGlwbGllclxuXG5tdWx0aXBseXdpdGg1ID0gbXVsdGlwbGllcl9vZig1KVxucHJpbnQobXVsdGlwbHl3aXRoNSg5KSkiLCJzY3QiOiJ0ZXN0X291dHB1dF9jb250YWlucyhcIjQ1XCIpXG5zdWNjZXNzX21zZyhcIkdyZWF0IHdvcmshXCIpIn0=
 </div>
+
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------

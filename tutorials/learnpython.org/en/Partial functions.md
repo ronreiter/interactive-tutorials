@@ -29,3 +29,11 @@ Edit the function provided by calling partial() and replacing the first three va
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiZnJvbSBmdW5jdG9vbHMgaW1wb3J0IHBhcnRpYWwiLCJzYW1wbGUiOiIjRm9sbG93aW5nIGlzIHRoZSBleGVyY2lzZSwgZnVuY3Rpb24gcHJvdmlkZWQ6XG5mcm9tIGZ1bmN0b29scyBpbXBvcnQgcGFydGlhbFxuZGVmIGZ1bmModSx2LHcseCk6XG4gICAgcmV0dXJuIHUqNCArIHYqMyArIHcqMiArIHhcbiNFbnRlciB5b3VyIGNvZGUgaGVyZSB0byBjcmVhdGUgYW5kIHByaW50IHdpdGggeW91ciBwYXJ0aWFsIGZ1bmN0aW9uXG4iLCJzb2x1dGlvbiI6ImZyb20gZnVuY3Rvb2xzIGltcG9ydCBwYXJ0aWFsXG5kZWYgZnVuYyh1LHYsdyx4KTpcbiAgICByZXR1cm4gdSo0ICsgdiozICsgdyoyICsgeFxuXG5wID0gcGFydGlhbChmdW5jLDUsNiw3KVxucHJpbnQocCg4KSkiLCJzY3QiOiJ0ZXN0X291dHB1dF9jb250YWlucyhcIjYwXCIpXG5zdWNjZXNzX21zZyhcIk5pY2Ugd29yayFcIikifQ==
 </div>
 
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------

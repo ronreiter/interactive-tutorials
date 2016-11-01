@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-List Comprehensions is a very powerful tool, which creates a new list based on another list, in a single, readable line. 
+List Comprehensions is a very powerful tool, which creates a new list based on another list, in a single, readable line.
 
 For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 
@@ -23,3 +23,12 @@ Using a list comprehension, create a new list called "newlist" out of the list "
 <div data-datacamp-exercise="" data-height="200" data-encoded="true">
 eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibnVtYmVycyA9IFszNC42LCAtMjAzLjQsIDQ0LjksIDY4LjMsIC0xMi4yLCA0NC42LCAxMi43XVxubmV3bGlzdCA9IFtfX19dXG5wcmludChuZXdsaXN0KVxuXG4iLCJzb2x1dGlvbiI6Im51bWJlcnMgPSBbMzQuNiwgLTIwMy40LCA0NC45LCA2OC4zLCAtMTIuMiwgNDQuNiwgMTIuN11cbm5ld2xpc3QgPSBbaW50KHgpIGZvciB4IGluIG51bWJlcnMgaWYgeCA+IDBdXG5wcmludChuZXdsaXN0KSIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiWzM0LCA0NCwgNjgsIDQ0LCAxMl1cIilcbnN1Y2Nlc3NfbXNnKFwiVmVyeSBuaWNlIVwiKSJ9
 </div>
+
+Tutorial Code
+-------------
+
+Expected Output
+---------------
+
+Solution
+--------
