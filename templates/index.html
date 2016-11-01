@@ -216,9 +216,9 @@
     </div>
 </div>
 <footer>
-    {% if domain_data.language != "python" or language_code != "en" %}
     <div class="container">
 
+    {% if domain_data.language != "python" or language_code != "en" %}
     <div class="row">
 
 	<div class="span6 code-window">
@@ -262,3 +262,16 @@
             <iframe id="expected-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
         </div>
 	</div>
+  {% endif %}
+
+    </div> <!-- row -->
+
+    <div class="row">
+        <div class="span12">
+            <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
+        </div>
+    </div>
+
+    </div>
+</footer>
+{% endblock %}
