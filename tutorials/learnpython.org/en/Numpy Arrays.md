@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-### Numpy Arrays
+### Getting started
 
 Numpy arrays are great alternatives to Python Lists. Some of the key advantages of Numpy arrays are that they are fast, easy to work with, and give users the opportunity to perform calculations across entire arrays.
 
