@@ -50,7 +50,7 @@ class Vehicle:
 Expected Output
 ---------------
 
-['__doc__', '__module__', 'color', 'description', 'kind', 'name', 'value']
+test_object(x)
 
 Solution
 --------
@@ -66,4 +66,4 @@ class Vehicle:
         return desc_str
 
 # Print a list of all attributes of the Vehicle class.
-print dir(Vehicle)
+print(dir(Vehicle))

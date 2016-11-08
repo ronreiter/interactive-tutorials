@@ -3,7 +3,7 @@ Tutorial
 
 Sets are lists with no duplicate entries. Let's say you want to collect a list of words used in a paragraph:
 
-    print set("my name is Eric and Eric is my name".split())
+    print(set("my name is Eric and Eric is my name".split()))
 
 This will print out a list containing "my", "name", "is", "Eric", and finally "and". Since the rest of the sentence uses words which are already in the set, they are not inserted twice.
 
@@ -47,7 +47,7 @@ b = ["John", "Jill"]
 
 Expected Output
 ---------------
-set(['Jake', 'Eric'])
+test_object(x)
 
 Solution
 --------
@@ -57,4 +57,4 @@ b = ["John", "Jill"]
 A = set(a)
 B = set(b)
 
-print A.difference(B)
+print(A.difference(B))

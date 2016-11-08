@@ -23,7 +23,7 @@ Alternatively, a dictionary can be initialized with the same values in the follo
 Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:
 
     for name, number in phonebook.iteritems():
-        print "Phone number of %s is %d" % (name, number)
+        print("Phone number of %s is %d" % (name, number))
 
 ### Removing a value
 
@@ -54,15 +54,14 @@ phonebook = {
 
 # testing code
 if "Jake" in phonebook:
-    print "Jake is listed in the phonebook."
+    print("Jake is listed in the phonebook.")
 if "Jill" not in phonebook:
-    print "Jill is not listed in the phonebook."
+    print("Jill is not listed in the phonebook.")
 
 Expected Output
 ---------------
 
-Jake is listed in the phonebook.
-Jill is not listed in the phonebook.
+test_object(x)
 
 Solution
 --------
@@ -79,6 +78,6 @@ del phonebook["Jill"]
 
 # testing code
 if "Jake" in phonebook:
-    print "Jake is listed in the phonebook."
+    print("Jake is listed in the phonebook.")
 if "Jill" not in phonebook:
-    print "Jill is not listed in the phonebook."
+    print("Jill is not listed in the phonebook.")

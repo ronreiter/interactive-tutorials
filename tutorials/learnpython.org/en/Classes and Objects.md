@@ -1,7 +1,7 @@
 Tutorial
 -----------------
 
-Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects. 
+Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects.
 
 A very basic class would look something like this:
 
@@ -9,7 +9,7 @@ A very basic class would look something like this:
         variable = "blah"
 
         def function(self):
-            print "This is a message inside the class."
+            print("This is a message inside the class.")
 
 We'll explain why you have to include that "self" as a parameter a little bit later.  First, to assign the above class(template) to an object you would do the following:
 
@@ -25,7 +25,7 @@ To access the variable inside of the newly created object "myobjectx" you would 
 
 So for instance the below would output the string "blah":
 
-    print myobjectx.variable
+    print(myobjectx.variable)
 
 You can create multiple different objects that are of the same class(have the same variables and functions defined).  However, each object contains independent copies of the variables defined in the class.  For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:
 
@@ -33,9 +33,9 @@ You can create multiple different objects that are of the same class(have the sa
     myobjecty.variable = "yackity"
 
 Then print out both values:
-     
-    print myobjectx.variable   # This would print "blah".
-    print myobjecty.variable   # This would print "yackity".
+
+    print(myobjectx.variable)   # This would print "blah".
+    print(myobjecty.variable)   # This would print "yackity".
 
 ### Accessing Object Functions
 
@@ -68,14 +68,13 @@ class Vehicle:
 # your code goes here
 
 # test code
-print car1.description()
-print car2.description()
+print(car1.description())
+print(car2.description())
 
 Expected Output
 ---------------
 
-Fer is a red convertible worth $60000.00.
-Jump is a blue van worth $10000.00.
+test_object(x)
 
 Solution
 --------
@@ -104,5 +103,5 @@ car2.kind = "van"
 car2.value = 10000.00
 
 # test code
-print car1.description()
-print car2.description()
+print(car1.description())
+print(car2.description())

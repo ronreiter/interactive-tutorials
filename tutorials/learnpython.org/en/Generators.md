@@ -20,7 +20,7 @@ Here is a simple example of a generator function which returns 7 random integers
         yield random.randint(1,15)
 
     for random_number in lottery():
-        print "And the next number is... %d!" % random_number
+        print("And the next number is... %d!" % random_number)
 
 This function decides how to generate the random numbers on its own, and executes the yield statements one at a time, pausing in between to yield execution back to the main for loop.
 
@@ -46,11 +46,11 @@ def fib():
 # testing code
 import types
 if type(fib()) == types.GeneratorType:
-    print "Good, The fib function is a generator."
+    print("Good, The fib function is a generator.")
 
     counter = 0
     for n in fib():
-        print n
+        print(n)
         counter += 1
         if counter == 10:
             break
@@ -60,17 +60,7 @@ if type(fib()) == types.GeneratorType:
 Expected Output
 ---------------
 
-Good, The fib function is a generator.
-1
-1
-2
-3
-5
-8
-13
-21
-34
-55
+test_object(x)
 
 Solution
 --------
@@ -85,12 +75,11 @@ def fib():
 # testing code
 import types
 if type(fib()) == types.GeneratorType:
-    print "Good, The fib function is a generator."
+    print("Good, The fib function is a generator.")
 
     counter = 0
     for n in fib():
-        print n
+        print(n)
         counter += 1
         if counter == 10:
             break
-

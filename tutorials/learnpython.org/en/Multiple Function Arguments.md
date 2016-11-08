@@ -10,10 +10,10 @@ Every function in Python receives a predefined number of arguments, if declared 
 It is possible to declare functions which receive a variable number of arguments, using the following syntax:
 
     def foo(first, second, third, *therest):
-        print "First: %s" % first
-        print "Second: %s" % second
-        print "Third: %s" % third
-        print "And all the rest... %s" % list(therest)
+        print("First: %s" % first)
+        print("Second: %s" % second)
+        print("Third: %s" % third)
+        print("And all the rest... %s" % list(therest))
 
 The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling foo(1,2,3,4,5) will print out:
 
@@ -26,13 +26,13 @@ It is also possible to send functions arguments by keyword, so that the order of
 
     def bar(first, second, third, **options):
         if options.get("action") == "sum":
-            print "The sum is: %d" % (first + second + third)
+            print("The sum is: %d" % (first + second + third))
 
         if options.get("number") == "first":
             return first
 
     result = bar(1, 2, 3, action = "sum", number = "first")
-    print "Result: %d" % result
+    print("Result: %d" % result)
 
 The following code yields the following output:
 
@@ -61,20 +61,17 @@ def bar(a, b, c):
 
 # test code
 if foo(1,2,3,4) == 1:
-    print "Good."
+    print("Good.")
 if foo(1,2,3,4,5) == 2:
-    print "Better."
+    print("Better.")
 if bar(1,2,3,magicnumber = 6) == False:
-    print "Great."
+    print("Great.")
 if bar(1,2,3,magicnumber = 7) == True:
-    print "Awesome!"
+    print("Awesome!")
 
 Expected Output
 ---------------
-Good.
-Better.
-Great.
-Awesome!
+test_object(x)
 
 Solution
 --------
@@ -88,10 +85,10 @@ def bar(a, b, c, **kwargs):
 
 # test code
 if foo(1,2,3,4) == 1:
-    print "Good."
+    print("Good.")
 if foo(1,2,3,4,5) == 2:
-    print "Better."
+    print("Better.")
 if bar(1,2,3,magicnumber = 6) == False:
-    print "Great."
+    print("Great.")
 if bar(1,2,3,magicnumber = 7) == True:
-    print "Awesome!"
+    print("Awesome!")

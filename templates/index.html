@@ -67,7 +67,7 @@
             {% endautoescape %}</span>
 
             <!-- DataCamp-Light exercise -->
-            {% if domain_data.language == "python" and language_code == "en" %}
+            {% if domain_data.language == "python" and language_code == "en" and page_title %}
             <div data-datacamp-exercise data-lang="python" data-height="400">
               <code data-type="pre-exercise-code"></code>
               <code data-type="sample-code">{{tutorial_data.code}}</code>

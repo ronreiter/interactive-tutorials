@@ -17,7 +17,7 @@ with parentheses.
 
 To print a string, just write:
 
-    print "This line will be printed."
+    print("This line will be printed.")
 
 ### Indentation
 
@@ -27,7 +27,7 @@ indentation requires standard Python code to use four spaces. For example:
     x = 1
     if x == 1:
         # indented four spaces
-        print "x is 1."
+        print("x is 1.")
 
 Exercise
 --------
@@ -37,14 +37,14 @@ Use the "print" command to print the line "Hello, World!".
 Tutorial Code
 -------------
 
-print "Goodbye, World!"
+print("Goodbye, World!")
 
 Expected Output
 ---------------
 
-Hello, World!
+test_object(x)
 
 Solution
 --------
 
-print "Hello, World!"
+print("Hello, World!")

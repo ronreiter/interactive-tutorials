@@ -28,7 +28,7 @@ The difference between the two is that using double quotes makes it easy to incl
 
     mystring = "Don't worry about apostrophes"
 
-There are additional variations on defining strings that make it easier to include things such as carriage returns, backslashes and Unicode characters. These are beyond the scope of this tutorial, but are covered in the [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial"). 
+There are additional variations on defining strings that make it easier to include things such as carriage returns, backslashes and Unicode characters. These are beyond the scope of this tutorial, but are covered in the [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial").
 
 Simple operators can be executed on numbers and strings:
 
@@ -47,13 +47,13 @@ Assignments can be done on more than one variable "simultaneously" on the same l
 Mixing operators between numbers and strings is not supported:
 
     # This will not work!
-    print one + two + hello
+    print(one + two + hello)
 
 
 Exercise
 --------
 
-The target of this exercise is to create a string, an integer, and a floating point number. The string should be named mystring and should contain the word "hello". The floating point number should be named myfloat and should contain the number 10, and the integer should be named myint and should contain the number 20. 
+The target of this exercise is to create a string, an integer, and a floating point number. The string should be named mystring and should contain the word "hello". The floating point number should be named myfloat and should contain the number 10, and the integer should be named myint and should contain the number 20.
 
 Tutorial Code
 -------------
@@ -64,17 +64,15 @@ myint = None
 
 # testing code
 if mystring == "hello":
-    print "String: %s" % mystring
+    print("String: %s" % mystring)
 if isinstance(myfloat, float) and myfloat == 10.0:
-    print "Float: %d" % myfloat
+    print("Float: %d" % myfloat)
 if isinstance(myint, int) and myint == 20:
-    print "Integer: %d" % myint
+    print("Integer: %d" % myint)
 
 Expected Output
 ---------------
-String: hello
-Float: 10
-Integer: 20
+test_object(x)
 
 Solution
 --------
@@ -86,8 +84,8 @@ myint = 20
 
 # testing code
 if mystring == "hello":
-    print "String: %s" % mystring
+    print("String: %s" % mystring)
 if isinstance(myfloat, float) and myfloat == 10.0:
-    print "Float: %d" % myfloat
+    print("Float: %d" % myfloat)
 if isinstance(myint, int) and myint == 20:
-    print "Integer: %d" % myint
+    print("Integer: %d" % myint)

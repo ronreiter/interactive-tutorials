@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-List Comprehensions is a very powerful tool, which creates a new list based on another list, in a single, readable line. 
+List Comprehensions is a very powerful tool, which creates a new list based on another list, in a single, readable line.
 
 For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 
@@ -33,7 +33,7 @@ print newlist
 
 Expected Output
 ---------------
-[34, 44, 68, 44, 12]
+test_object(x)
 
 Solution
 --------

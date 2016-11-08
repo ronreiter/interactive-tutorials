@@ -15,7 +15,7 @@ For example:
 
 	    data_transmitter()
 
-This works well as the 'data_transmitter' function can access the 'message'. To demonstrate the use of the "nonlocal" keyword, consider this 
+This works well as the 'data_transmitter' function can access the 'message'. To demonstrate the use of the "nonlocal" keyword, consider this
 
 	def print_msg(number)
 		def printer():
@@ -49,7 +49,7 @@ Even though the execution of the "transmit_to_space()" was completed, the messag
 ADVANTAGE : Closures can avoid use of global variables and provides some form of data hiding.(Eg. When there are few methods in a class, use closures instead).
 
 Also, Decorators in Python make extensive use of closures.
-			
+
 Exercise
 --------
 
@@ -66,7 +66,7 @@ multiplywith5(9)
 Expected Output
 ---------------
 
-45
+test_object(x)
 
 Solution
 --------
@@ -77,5 +77,4 @@ def multiplier_of(n):
     return multiplier
 
 multiplywith5 = multiplier_of(5)
-print multiplywith5(9)
-	
+print(multiplywith5(9))
