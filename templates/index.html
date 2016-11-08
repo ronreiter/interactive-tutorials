@@ -65,6 +65,17 @@
                 {% endif %}
                 {{ text }}
             {% endautoescape %}</span>
+
+            <!-- DataCamp-Light exercise -->
+            {% if domain_data.language == "python" and language_code == "en" %}
+            <div data-datacamp-exercise data-lang="python" data-height="400">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">{{tutorial_data.code}}</code>
+              <code data-type="solution">{{tutorial_data.solution}}</code>
+              <code data-type="sct">{{tutorial_data.output}}</code>
+            </div>
+            {% endif %}
+
             {% if tutorial_page and (domain_data.language != "python" or language_code != "en") %}
             <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>

@@ -299,6 +299,7 @@ def index(title, language="en"):
     tutorial = title.replace("_", " ").encode("utf-8")
     current_tutorial_data = get_tutorial(tutorial, language)
     domain_data = get_domain_data()
+    domain_data["language_code"] = language
 
     if request.method == "GET":
         title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
@@ -313,6 +314,7 @@ def index(title, language="en"):
             "index.html",
             tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
+            tutorial_data=current_tutorial_data,
             tutorial_data_json=json.dumps(current_tutorial_data),
             domain_data_json=json.dumps(domain_data),
             html_title=html_title,
@@ -359,4 +361,3 @@ if __name__ == "__main__":
 
     logging.info("listening on port %s", args.port)
     app.run(debug=True, port=args.port)
-
