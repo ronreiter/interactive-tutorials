@@ -73,7 +73,7 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
 
 Expected Output
 ---------------
-test_object(x)
+test_object('x')
 
 Solution
 --------
