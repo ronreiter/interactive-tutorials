@@ -108,7 +108,8 @@ print("Split the words of the string: %s" % s.split(" "))
 Expected Output
 ---------------
 
-test_object(x)
+test_object("s", incorrect_msg="Make sure you change the string assigned to `s` to match the exercise instructions.")
+success_msg("Great work!")
 
 Solution
 --------

@@ -72,7 +72,14 @@ if isinstance(myint, int) and myint == 20:
 
 Expected Output
 ---------------
-test_object(x)
+
+test_object('mystring', incorrect_msg="Don't forget to change `mystring` to the correct value from the exercise description.")
+test_object('myfloat', incorrect_msg="Don't forget to change `myfloat` to the correct value from the exercise description.")
+test_object('myint', incorrect_msg="Don't forget to change `myint` to the correct value from the exercise description.")
+test_output_contains("mystring = 'hello'",no_output_msg= "Make sure your string, float and integer match exactly to the exercise desciption.")
+test_output_contains("myfloat = 10.0",no_output_msg= "Make sure your string, float and integer match exactly to the exercise desciption.")
+test_output_contains("myint = 20",no_output_msg= "Make sure your string, float and integer match exactly to the exercise desciption.")
+success_msg("Great job!")
 
 Solution
 --------

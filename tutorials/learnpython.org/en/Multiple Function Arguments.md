@@ -71,7 +71,12 @@ if bar(1,2,3,magicnumber = 7) == True:
 
 Expected Output
 ---------------
-test_object(x)
+
+test_output_contains("Good.")
+test_output_contains("Better.")
+test_output_contains("Great.")
+test_output_contains("Awesome!")
+success_msg("Great work!")
 
 Solution
 --------

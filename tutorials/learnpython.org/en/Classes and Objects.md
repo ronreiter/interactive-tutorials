@@ -74,7 +74,8 @@ print(car2.description())
 Expected Output
 ---------------
 
-test_object(x)
+test_object('car')
+success_msg("Great job!")
 
 Solution
 --------

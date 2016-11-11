@@ -44,7 +44,11 @@ print("The second name on the names list is %s" % second_name)
 
 Expected Output
 ---------------
-test_object(x)
+
+test_output_contains("[1,2,3]", no_output_msg= "Make sure that you have printed the `numbers` list.")
+test_output_contains("['hello', 'world']", no_output_msg= "Make sure that you have printed the `strings` list.")
+test_output_contains("The second name on the names list is Eric", no_output_msg= "Did you fill in the variable `second_name` with the second name in the names list?")
+success_msg("Great Job!")
 
 Solution
 --------

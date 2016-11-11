@@ -71,7 +71,9 @@ import re
 
 Expected Output
 ---------------
-test_object(x)
+
+test_object('find_members')
+success_msg('Great work!')
 
 Solution
 --------

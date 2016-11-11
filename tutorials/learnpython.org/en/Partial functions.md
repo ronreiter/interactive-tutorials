@@ -38,7 +38,8 @@ def func(u,v,w,x):
 
 Expected Output
 ---------------
-test_object(x)
+test_object('p')
+success_msg('Good job!')
 
 Solution
 --------

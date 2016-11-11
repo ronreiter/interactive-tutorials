@@ -33,7 +33,9 @@ print newlist
 
 Expected Output
 ---------------
-test_object(x)
+
+test_output_contains("[34, 44, 68, 44, 12]")
+success_msg("Very nice!")
 
 Solution
 --------

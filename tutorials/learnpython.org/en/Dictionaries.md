@@ -61,7 +61,9 @@ if "Jill" not in phonebook:
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("Jake is listed in the phonebook.")
+test_output_contains("Jill is not listed in the phonebook.")
+success_msg("Nice work!")
 
 Solution
 --------

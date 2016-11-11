@@ -102,7 +102,9 @@ numbers = [
 
 Expected Output
 ---------------
-test_object(x)
+
+test_object("number", undefined_msg="Define a object `number` using the code from the tutorial to print just the desired numbers from the exercise description.",incorrect_msg="Your `number` object is not correct, You should use an `if` statement and a `break` statement to accomplish your goal.")
+success_msg("Great work!")
 
 Solution
 --------

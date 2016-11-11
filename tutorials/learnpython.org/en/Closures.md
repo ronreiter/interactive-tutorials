@@ -66,7 +66,8 @@ multiplywith5(9)
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("45")
+success_msg("Great work!")
 
 Solution
 --------

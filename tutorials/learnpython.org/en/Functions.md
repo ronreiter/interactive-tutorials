@@ -88,7 +88,11 @@ name_the_benefits_of_functions()
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("More organized code is a benefit of functions!")
+test_output_contains("More readable code is a benefit of functions!")
+test_output_contains("Easier code reuse is a benefit of functions!")
+test_output_contains("Allowing programmers to share and connect code together is a benefit of functions!")
+success_msg("Nice work!")
 
 Solution
 --------

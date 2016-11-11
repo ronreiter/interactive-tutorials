@@ -42,7 +42,8 @@ print("Goodbye, World!")
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("Hello, World!")
+success_msg('Great job!')
 
 Solution
 --------

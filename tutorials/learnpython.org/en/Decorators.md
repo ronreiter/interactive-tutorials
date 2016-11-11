@@ -98,7 +98,11 @@ first_letter(['Not', 'A', 'String'])
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("4")
+test_output_contains("Bad Type")
+test_output_contains("H")
+test_output_contains("Bad Type")
+success_msg("Good job!")
 
 Solution
 --------

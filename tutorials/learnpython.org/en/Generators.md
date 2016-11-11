@@ -60,7 +60,8 @@ if type(fib()) == types.GeneratorType:
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("Good, The fib function is a generator.")
+success_msg('Good work!')
 
 Solution
 --------

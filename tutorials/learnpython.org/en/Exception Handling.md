@@ -58,7 +58,10 @@ print("The actor's last name is %s" % get_last_name())
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("Cleese")
+test_output_contains("All exceptions caught! Good job!")
+test_output_contains("The actor's last name is Cleese")
+success_msg("Great work!")
 
 Solution
 --------

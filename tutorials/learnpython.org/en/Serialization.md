@@ -51,7 +51,11 @@ print(decoded_salaries["Me"])
 
 Expected Output
 ---------------
-test_object(x)
+
+test_output_contains("300")
+test_output_contains("400")
+test_output_contains("800")
+success_msg("Great work!")
 
 Solution
 --------

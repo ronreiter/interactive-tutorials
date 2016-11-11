@@ -115,7 +115,13 @@ if not second_number:
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("1", no_output_msg= "Did you print out 1 if `number` is greater than 15?")
+test_output_contains("2", no_output_msg= "Did you print out 2 if there exists a list `first_array`?")
+test_output_contains("3", no_output_msg= "Did you print out 3 if the length of `second_array` is 2?")
+test_output_contains("4", no_output_msg= "Did you print out 4 if len(first_array) + len(second_array) == 5?")
+test_output_contains("5", no_output_msg= "Did you print out 5 if first_array and first_array[0] == 1?")
+test_output_contains("6", no_output_msg= "Did you print out 6 if not second_number?")
+success_msg("Great Work!")
 
 Solution
 --------

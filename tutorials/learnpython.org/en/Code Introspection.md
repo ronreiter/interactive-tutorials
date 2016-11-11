@@ -50,7 +50,8 @@ class Vehicle:
 Expected Output
 ---------------
 
-test_object(x)
+test_output_contains("['__doc__', '__module__', 'color', 'description', 'kind', 'name', 'value']")
+success_msg("Very nice!")
 
 Solution
 --------
