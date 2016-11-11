@@ -11,18 +11,18 @@ For loops iterate over a given sequence. Here is an example:
     for prime in primes:
         print(prime)
 
-For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the xrange function is zero based.
+For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the range function is zero based.
 
     # Prints out the numbers 0,1,2,3,4
-    for x in xrange(5): # or range(5)
+    for x in range(5):
         print(x)
 
     # Prints out 3,4,5
-    for x in xrange(3, 6): # or range(3, 6)
+    for x in range(3, 6):
         print(x)
 
     # Prints out 3,5,7
-    for x in xrange(3, 8, 2): # or range(3, 8, 2)
+    for x in range(3, 8, 2):
         print(x)
 
 ### "while" loops
@@ -50,7 +50,7 @@ While loops repeat as long as a certain boolean condition is met. For example:
             break
 
     # Prints out only odd numbers - 1,3,5,7,9
-    for x in xrange(10):
+    for x in range(10):
         # Check if x is even
         if x % 2 == 0:
             continue
@@ -73,7 +73,7 @@ Here are a few examples:
         print("count value reached %d" %(count))
 
     # Prints out 1,2,3,4
-    for i in xrange(1, 10):
+    for i in range(1, 10):
         if(i%5==0):
             break
         print(i)

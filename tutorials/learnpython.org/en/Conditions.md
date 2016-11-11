@@ -26,6 +26,7 @@ The "and" and "or" boolean operators allow building complex boolean expressions,
 
 The "in" operator could be used to check if a specified object exists within an iterable object container, such as a list:
 
+    name = "John"
     if name in ["John", "Rick"]:
         print("Your name is either John or Rick.")
 
@@ -70,15 +71,15 @@ Unlike the double equals operator "==", the "is" operator does not match the val
 
     x = [1,2,3]
     y = [1,2,3]
-    print(x == y # Prints out True)
-    print(x is y # Prints out False)
+    print(x == y) # Prints out True
+    print(x is y) # Prints out False
 
 ### The "not" operator
 
 Using "not" before a boolean expression inverts it:
 
-    print(not False # Prints out True)
-    print((not False) == (False) # Prints out False)
+    print(not False) # Prints out True
+    print((not False) == (False)) # Prints out False
 
 Exercise
 --------

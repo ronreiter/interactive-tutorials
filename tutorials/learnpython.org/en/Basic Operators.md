@@ -8,12 +8,14 @@ This section explains how to use basic operators in Python.
 Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.<br>
 
     number = 1 + 2 * 3 / 4.0
+    print(number)
 
 Try to predict what the answer will be.  Does python follow order of operations?
 
 Another operator available is the modulo (%) operator, which returns the integer remainder of the division. dividend % divisor = remainder.
 
     remainder = 11 % 3
+    print(remainder)
 
 Using two multiplication symbols makes a power relationship.
 
@@ -25,10 +27,12 @@ Using two multiplication symbols makes a power relationship.
 Python supports concatenating strings using the addition operator:
 
     helloworld = "hello" + " " + "world"
+    print(helloworld)
 
 Python also supports multiplying strings to form a string with a repeating sequence:
 
     lotsofhellos = "hello" * 10
+    print(lotsofhellos)
 
 ### Using Operators with Lists
 
