@@ -32,7 +32,7 @@ exercise), see [this](http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html)
 
 Tutorial Code
 -------------
-# Example:
+# Example: 
 import re
 pattern = re.compile(r"\[(on|off)\]") # Slight optimization
 print(re.search(pattern, "Mono: Playback 65 [75%] [-16.50dB] [on]"))
@@ -54,10 +54,12 @@ def test_email(your_pattern):
             print("Pass")
 pattern = r"" # Your pattern here!
 test_email(pattern)
+    
 
 Expected Output
 ---------------
-test_object(x)
+test_output_contains("Pass")
+success_msg("Great work!")
 
 Solution
 --------

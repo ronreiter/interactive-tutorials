@@ -9,18 +9,18 @@ When an iteration over a set of item starts using the for statement, the generat
 
 Here is a simple example of a generator function which returns 7 random integers:
 
-    import random
-
-    def lottery():
-        # returns 6 numbers between 1 and 40
-        for i in xrange(6):
-            yield random.randint(1, 40)
-
-        # returns a 7th number between 1 and 15
-        yield random.randint(1,15)
-
-    for random_number in lottery():
-        print("And the next number is... %d!" % random_number)
+      import random
+      
+      def lottery():
+          # returns 6 numbers between 1 and 40
+        for i in range(6):
+          yield random.randint(1, 40)
+      
+          # returns a 7th number between 1 and 15
+          yield random.randint(1,15)
+      
+      for random_number in lottery():
+             print("And the next number is... %d!" %(random_number))
 
 This function decides how to generate the random numbers on its own, and executes the yield statements one at a time, pausing in between to yield execution back to the main for loop.
 
@@ -33,6 +33,7 @@ Hint: Can you use only two variables in the generator function? Remember that as
     a = 1
     b = 2
     a, b = b, a
+    print(a,b)
 
 will simultaneously switch the values of a and b.
 
