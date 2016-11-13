@@ -7,30 +7,52 @@ Firstly, a **Nested Function** is a function defined inside another function. It
 
 For example:
 
-<div data-datacamp-exercise="" data-height="250" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIHRyYW5zbWl0X3RvX3NwYWNlKG1lc3NhZ2UpOlxuICAgIFwiVGhpcyBpcyB0aGUgZW5jbG9zaW5nIGZ1bmN0aW9uXCJcbiAgICBkZWYgZGF0YV90cmFuc21pdHRlcigpOlxuICAgICAgICBcIlRoZSBuZXN0ZWQgZnVuY3Rpb25cIlxuICAgICAgICBwcmludChtZXNzYWdlKVxuXG4gICAgZGF0YV90cmFuc21pdHRlcigpIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    def transmit_to_space(message):
+        "This is the enclosing function"
+        def data_transmitter():
+            "The nested function"
+            print(message)
+    
+        data_transmitter()
+    
+    print(transmit_to_space("Test message"))
 
 This works well as the 'data_transmitter' function can access the 'message'. To demonstrate the use of the "nonlocal" keyword, consider this
 
-<div data-datacamp-exercise="" data-height="250" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIHByaW50X21zZyhudW1iZXIpOlxuICAgIGRlZiBwcmludGVyKCk6XG4gICAgICAgIFwiSGVyZSB3ZSBhcmUgdXNpbmcgdGhlIG5vbmxvY2FsIGtleXdvcmRcIlxuICAgICAgICBub25sb2NhbCBudW1iZXJcbiAgICAgICAgbnVtYmVyPTNcbiAgICAgICAgcHJpbnQobnVtYmVyKVxuICAgIHByaW50ZXIoKVxuICAgIHByaW50KG51bWJlcilcblxucHJpbnRfbXNnKDkpIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    def print_msg(number):
+        def printer():
+            "Here we are using the nonlocal keyword"
+            nonlocal number
+            number=3
+            print(number)
+        printer()
+        print(number)
+    
+    print_msg(9)
 
 Without the nonlocal keyword, the output would be "3 9", however, with its usage, we get "3 3", that is the value of the "number" variable gets modified.
 
 Now, how about we return the function object rather than calling the nested function within. (Remember that even functions are objects. (It's Python.))
 
-
-<div data-datacamp-exercise="" data-height="250" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZGVmIHRyYW5zbWl0X3RvX3NwYWNlKG1lc3NhZ2UpOlxuICAgIFwiVGhpcyBpcyB0aGUgZW5jbG9zaW5nIGZ1bmN0aW9uXCJcbiAgICBkZWYgZGF0YV90cmFuc21pdHRlcigpOlxuICAgICAgICBcIlRoZSBuZXN0ZWQgZnVuY3Rpb25cIlxuICAgICAgICBwcmludChtZXNzYWdlKVxuICAgIHJldHVybiBkYXRhX3RyYW5zbWl0dGVyIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    def transmit_to_space(message):
+        "This is the enclosing function"
+        def data_transmitter():
+            "The nested function"
+            print(message)
+        return data_transmitter
 
 And we call the function as follows:
 
-<div data-datacamp-exercise="" data-height="200" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiZGVmIHRyYW5zbWl0X3RvX3NwYWNlKG1lc3NhZ2UpOlxuICAgIFwiVGhpcyBpcyB0aGUgZW5jbG9zaW5nIGZ1bmN0aW9uXCJcbiAgICBkZWYgZGF0YV90cmFuc21pdHRlcigpOlxuICAgICAgICBcIlRoZSBuZXN0ZWQgZnVuY3Rpb25cIlxuICAgICAgICBwcmludChtZXNzYWdlKVxuICAgIHJldHVybiBkYXRhX3RyYW5zbWl0dGVyIiwic2FtcGxlIjoiZnVuMiA9IHRyYW5zbWl0X3RvX3NwYWNlKFwiQnVybiB0aGUgU3VuIVwiKVxuZnVuMigpXG4iLCJzb2x1dGlvbiI6IiIsInNjdCI6IiJ9
-</div>
+
+      def transmit_to_space(message):
+        "This is the enclosing function"
+        def data_transmitter():
+            "The nested function"
+            print(message)
+        return data_transmitter
+        
+  	  fun2 = transmit_to_space("Burn the Sun!")
+  	  fun2()
 
 Even though the execution of the "transmit_to_space()" was completed, the message was rather preserved. This technique by which the data is attached to some code even after end of those other original functions is called as closures in python
 
@@ -43,15 +65,27 @@ Exercise
 
 Make a nested loop and a python closure to make functions to get multiple multiplication functions using closures. That is using closures, one could make functions to create multiply_with_5() or multiply_with_4() functions using closures.
 
-<div data-datacamp-exercise="" data-height="200" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyB5b3VyIGNvZGUgZ29lcyBoZXJlXG5cbm11bHRpcGx5d2l0aDUgPSBtdWx0aXBsaWVyX29mKDUpXG5tdWx0aXBseXdpdGg1KDkpIiwic29sdXRpb24iOiJkZWYgbXVsdGlwbGllcl9vZihuKTpcbiAgICBkZWYgbXVsdGlwbGllcihudW1iZXIpOlxuICAgICAgICByZXR1cm4gbnVtYmVyKm5cbiAgICByZXR1cm4gbXVsdGlwbGllclxuXG5tdWx0aXBseXdpdGg1ID0gbXVsdGlwbGllcl9vZig1KVxucHJpbnQobXVsdGlwbHl3aXRoNSg5KSkiLCJzY3QiOiJ0ZXN0X291dHB1dF9jb250YWlucyhcIjQ1XCIpXG5zdWNjZXNzX21zZyhcIkdyZWF0IHdvcmshXCIpIn0=
-</div>
-
 Tutorial Code
 -------------
+
+# your code goes here
+
+multiplywith5 = multiplier_of(5)
+multiplywith5(9)
 
 Expected Output
 ---------------
 
+test_output_contains("45")
+success_msg("Great work!")
+
 Solution
 --------
+
+def multiplier_of(n):
+    def multiplier(number):
+        return number*n
+    return multiplier
+
+multiplywith5 = multiplier_of(5)
+print(multiplywith5(9))

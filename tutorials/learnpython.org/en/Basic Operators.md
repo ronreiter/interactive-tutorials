@@ -7,51 +7,44 @@ This section explains how to use basic operators in Python.
 
 Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.<br>
 
-<div data-datacamp-exercise="" data-height="210" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibnVtYmVyID0gMSArIDIgKiAzIC8gNC4wXG5wcmludChudW1iZXIpIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    number = 1 + 2 * 3 / 4.0
+    print(number)
 
 Try to predict what the answer will be.  Does python follow order of operations?
 
 Another operator available is the modulo (%) operator, which returns the integer remainder of the division. dividend % divisor = remainder.
 
-<div data-datacamp-exercise="" data-height="210" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicmVtYWluZGVyID0gMTEgJSAzXG5wcmludChyZW1haW5kZXIpIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    remainder = 11 % 3
+    print(remainder)
 
 Using two multiplication symbols makes a power relationship.
 
-<div data-datacamp-exercise="" data-height="270" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoic3F1YXJlZCA9IDcgKiogMlxucHJpbnQoc3F1YXJlZClcblxuY3ViZWQgPSAyICoqIDNcbnByaW50KGN1YmVkKSIsInNvbHV0aW9uIjoiIiwic2N0IjoiIn0=
-</div>
+    squared = 7 ** 2
+    cubed = 2 ** 3
 
 ### Using Operators with Strings
 
 Python supports concatenating strings using the addition operator:
 
-<div data-datacamp-exercise="" data-height="210" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaGVsbG93b3JsZCA9IFwiaGVsbG9cIiArIFwiIFwiICsgXCJ3b3JsZFwiXG5wcmludChoZWxsb3dvcmxkKVxuIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    helloworld = "hello" + " " + "world"
+    print(helloworld)
 
 Python also supports multiplying strings to form a string with a repeating sequence:
 
-<div data-datacamp-exercise="" data-height="210" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoibG90c29maGVsbG9zID0gXCJoZWxsb1wiICogMTBcbnByaW50KGxvdHNvZmhlbGxvcylcbiIsInNvbHV0aW9uIjoiIiwic2N0IjoiIn0=
-</div>
+    lotsofhellos = "hello" * 10
+    print(lotsofhellos)
 
 ### Using Operators with Lists
 
 Lists can be joined with the addition operators:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiZXZlbl9udW1iZXJzID0gWzIsNCw2LDhdXG5wcmludChldmVuX251bWJlcnMpXG5cbm9kZF9udW1iZXJzID0gWzEsMyw1LDddXG5wcmludChvZGRfbnVtYmVycylcblxuYWxsX251bWJlcnMgPSBvZGRfbnVtYmVycyArIGV2ZW5fbnVtYmVyc1xucHJpbnQoYWxsX251bWJlcnMpXG4iLCJzb2x1dGlvbiI6IiIsInNjdCI6IiJ9
-</div>
+    even_numbers = [2,4,6,8]
+    odd_numbers = [1,3,5,7]
+    all_numbers = odd_numbers + even_numbers
 
 Just as in strings, Python supports forming new lists with a repeating sequence using the multiplication operator:
 
-<div data-datacamp-exercise="" data-height="210" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQoWzEsMiwzXSAqIDMpIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    print([1,2,3] * 3)
 
 Exercise
 --------
@@ -61,14 +54,51 @@ which contain 10 instances of the variables `x` and `y`, respectively.
 You are also required to create a list called `big_list`, which contains
 the variables `x` and `y`, 10 times each, by concatenating the two lists you have created.
 
-<div data-datacamp-exercise data-lang="python" data-height="310" data-encoded="true">eyJwcmVfZXhlcmNpc2VfY29kZSI6IiMgbm8gcGVjIiwic2N0IjoidGVzdF9vYmplY3QoXCJhXCIpXG50ZXN0X2Z1bmN0aW9uKFwicHJpbnRcIilcbnN1Y2Nlc3NfbXNnKFwiR3JlYXQgam9iIVwiKSIsInNvbHV0aW9uIjoiIyBDcmVhdGUgYSB2YXJpYWJsZSBhLCBlcXVhbCB0byA1XG5hID0gNVxuXG4jIFByaW50IG91dCBhXG5wcmludChhKSIsImhpbnQiOiJVc2UgdGhlIGFzc2lnbm1lbnQgb3BlcmF0b3IgKDxjb2RlPj08L2NvZGU%2BKSB0byBjcmVhdGUgdGhlIHZhcmlhYmxlIDxjb2RlPmE8L2NvZGU%2BLiIsInNhbXBsZSI6IiMgQ3JlYXRlIGEgdmFyaWFibGUgYSwgZXF1YWwgdG8gNVxuXG5cbiMgUHJpbnQgb3V0IGFcblxuXG4jIE1vcmUgY29tbWVudHNcblxuXG4jIE1vcmUgd2hpdGVzcGFjZVxuXG5cbiMgTW9yZSBldmVyeXRoaW5nXG5cbiIsImxhbmd1YWdlIjoicHl0aG9uIn0%3D</div>
-
-
 Tutorial Code
 -------------
+
+x = object()
+y = object()
+
+# TODO: change this code
+x_list = [x]
+y_list = [y]
+big_list = []
+
+print("x_list contains %d objects" % len(x_list))
+print("y_list contains %d objects" % len(y_list))
+print("big_list contains %d objects" % len(big_list))
+
+# testing code
+if x_list.count(x) == 10 and y_list.count(y) == 10:
+    print("Almost there...")
+if big_list.count(x) == 10 and big_list.count(y) == 10:
+    print("Great!")
 
 Expected Output
 ---------------
 
+test_object('x')
+test_object('y')
+success_msg('Good work!')
+
 Solution
 --------
+
+x = object()
+y = object()
+
+# TODO: change this code
+x_list = [x] * 10
+y_list = [y] * 10
+big_list = x_list + y_list
+
+print("x_list contains %d objects" % len(x_list))
+print("y_list contains %d objects" % len(y_list))
+print("big_list contains %d objects" % len(big_list))
+
+# testing code
+if x_list.count(x) == 10 and y_list.count(y) == 10:
+    print("Almost there...")
+if big_list.count(x) == 10 and big_list.count(y) == 10:
+    print("Great!")

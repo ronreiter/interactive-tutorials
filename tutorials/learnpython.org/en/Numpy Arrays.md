@@ -7,9 +7,19 @@ Numpy arrays are great alternatives to Python Lists. Some of the key advantages 
 
 In the following example, you will first create two Python lists. Then, you will import the numpy package and create numpy arrays out of the newly created lists.
 
-<div data-datacamp-exercise data-height="300" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBDcmVhdGUgMiBuZXcgbGlzdHMgaGVpZ2h0IGFuZCB3ZWlnaHRcbmhlaWdodCA9IFsxLjg3LCAgMS44NywgMS44MiwgMS45MSwgMS45MCwgMS44NV1cbndlaWdodCA9IFs4MS42NSwgOTcuNTIsIDk1LjI1LCA5Mi45OCwgODYuMTgsIDg4LjQ1XVxuXG4jIEltcG9ydCB0aGUgbnVtcHkgcGFja2FnZSBhcyBucFxuaW1wb3J0IG51bXB5IGFzIG5wXG5cbiMgQ3JlYXRlIDIgbnVtcHkgYXJyYXlzIGZyb20gaGVpZ2h0IGFuZCB3ZWlnaHRcbm5wX2hlaWdodCA9IG5wLmFycmF5KGhlaWdodClcbm5wX3dlaWdodCA9IG5wLmFycmF5KHdlaWdodClcblxuIyBQcmludCBvdXQgdGhlIHR5cGUgb2YgbnBfaGVpZ2h0XG5wcmludCh0eXBlKG5wX2hlaWdodCkpIiwic29sdXRpb24iOiIjIENyZWF0ZSAyIG5ldyBsaXN0cyBoZWlnaHQgYW5kIHdlaWdodFxuaGVpZ2h0ID0gWzEuODcsICAxLjg3LCAxLjgyLCAxLjkxLCAxLjkwLCAxLjg1XVxud2VpZ2h0ID0gWzgxLjY1LCA5Ny41MiwgOTUuMjUsIDkyLjk4LCA4Ni4xOCwgODguNDVdXG5cbiMgSW1wb3J0IHRoZSBudW1weSBwYWNrYWdlIGFzIG5wXG5pbXBvcnQgbnVtcHkgYXMgbnBcblxuIyBDcmVhdGUgMiBudW1weSBhcnJheXMgZnJvbSBoZWlnaHQgYW5kIHdlaWdodFxubnBfaGVpZ2h0ID0gbnAuYXJyYXkoaGVpZ2h0KVxubnBfd2VpZ2h0ID0gbnAuYXJyYXkod2VpZ2h0KVxuXG4jIFByaW50IG91dCB0aGUgdHlwZSBvZiBucF9oZWlnaHRcbnByaW50KHR5cGUobnBfaGVpZ2h0KSkiLCJzY3QiOiJzdWNjZXNzX21zZyhcIkdyZWF0IGpvYiFcIikifQ==
-</div>
+	# Create 2 new lists height and weight
+	height = [1.87,  1.87, 1.82, 1.91, 1.90, 1.85]
+	weight = [81.65, 97.52, 95.25, 92.98, 86.18, 88.45]
+
+	# Import the numpy package as np
+	import numpy as np
+
+	# Create 2 numpy arrays from height and weight
+	np_height = np.array(height)
+	np_weight = np.array(weight)
+
+# Print out the type of np_height
+print(type(np_height))
 
 ### Element-wise calculations
 

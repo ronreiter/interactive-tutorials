@@ -17,33 +17,36 @@ with parentheses.
 
 To print a string, just write:
 
-<div data-datacamp-exercise="" data-height="200" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQoXCJUaGlzIGxpbmUgd2lsbCBiZSBwcmludGVkLlwiKVxuIiwic29sdXRpb24iOiIiLCJzY3QiOiIifQ==
-</div>
+    print("This line will be printed.")
 
 ### Indentation
 
 Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard
 indentation requires standard Python code to use four spaces. For example:
 
-<div data-datacamp-exercise="" data-height="250" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoieCA9IDFcbmlmIHggPT0gMTpcbiAgIyBpbmRlbnRlZCBmb3VyIHNwYWNlc1xuICBwcmludCAoXCJ4IGlzIDEuXCIpXG4iLCJzb2x1dGlvbiI6IiIsInNjdCI6IiJ9
-</div>
+    x = 1
+    if x == 1:
+        # indented four spaces
+        print("x is 1.")
 
 Exercise
 --------
 
 Use the "print" command to print the line "Hello, World!".
 
-<div data-datacamp-exercise="" data-height="200" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoicHJpbnQoXCJHb29kYnllLCBXb3JsZCFcIilcbiIsInNvbHV0aW9uIjoicHJpbnQoXCJIZWxsbywgV29ybGQhXCIpIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJIZWxsbywgV29ybGQhXCIsIG5vX291dHB1dF9tc2c9XCJNYWtlIHN1cmUgeW91IGNoYW5nZSAnR29vZGJ5ZScgdG8gJ0hlbGxvJy5cIikifQ==
-</div>
-
 Tutorial Code
 -------------
 
+print("Goodbye, World!")
+
 Expected Output
 ---------------
+test_output_contains("Hello, World!")
+success_msg('Great job!')
 
 Solution
 --------
+
+print("Hello, World!")
+
+

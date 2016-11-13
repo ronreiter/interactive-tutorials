@@ -9,9 +9,18 @@ When an iteration over a set of item starts using the for statement, the generat
 
 Here is a simple example of a generator function which returns 7 random integers:
 
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiaW1wb3J0IHJhbmRvbVxuXG5kZWYgbG90dGVyeSgpOlxuICAgICMgcmV0dXJucyA2IG51bWJlcnMgYmV0d2VlbiAxIGFuZCA0MFxuICBmb3IgaSBpbiByYW5nZSg2KTpcbiAgICB5aWVsZCByYW5kb20ucmFuZGludCgxLCA0MClcblxuICAgICMgcmV0dXJucyBhIDd0aCBudW1iZXIgYmV0d2VlbiAxIGFuZCAxNVxuICAgIHlpZWxkIHJhbmRvbS5yYW5kaW50KDEsMTUpXG5cbmZvciByYW5kb21fbnVtYmVyIGluIGxvdHRlcnkoKTpcbiAgICAgICBwcmludChcIkFuZCB0aGUgbmV4dCBudW1iZXIgaXMuLi4gJWQhXCIgJShyYW5kb21fbnVtYmVyKSkiLCJzb2x1dGlvbiI6IiIsInNjdCI6IiJ9
-</div>
+      import random
+      
+      def lottery():
+          # returns 6 numbers between 1 and 40
+        for i in range(6):
+          yield random.randint(1, 40)
+      
+          # returns a 7th number between 1 and 15
+          yield random.randint(1,15)
+      
+      for random_number in lottery():
+             print("And the next number is... %d!" %(random_number))
 
 This function decides how to generate the random numbers on its own, and executes the yield statements one at a time, pausing in between to yield execution back to the main for loop.
 
@@ -24,18 +33,55 @@ Hint: Can you use only two variables in the generator function? Remember that as
     a = 1
     b = 2
     a, b = b, a
+    print(a,b)
 
 will simultaneously switch the values of a and b.
-
-<div data-datacamp-exercise="" data-height="300" data-encoded="true">
-eyJsYW5ndWFnZSI6InB5dGhvbiIsInByZV9leGVyY2lzZV9jb2RlIjoiIiwic2FtcGxlIjoiIyBmaWxsIGluIHRoaXMgZnVuY3Rpb25cbmRlZiBmaWIoKTpcbiAgICBwYXNzICN0aGlzIGlzIGEgbnVsbCBzdGF0ZW1lbnQgd2hpY2ggZG9lcyBub3RoaW5nIHdoZW4gZXhlY3V0ZWQsIHVzZWZ1bCBhcyBhIHBsYWNlaG9sZGVyLlxuXG4jIHRlc3RpbmcgY29kZVxuaW1wb3J0IHR5cGVzXG5pZiB0eXBlKGZpYigpKSA9PSB0eXBlcy5HZW5lcmF0b3JUeXBlOlxuICAgIHByaW50KFwiR29vZCwgVGhlIGZpYiBmdW5jdGlvbiBpcyBhIGdlbmVyYXRvci5cIilcblxuICAgIGNvdW50ZXIgPSAwXG4gICAgZm9yIG4gaW4gZmliKCk6XG4gICAgICAgIHByaW50KG4pXG4gICAgICAgIGNvdW50ZXIgKz0gMVxuICAgICAgICBpZiBjb3VudGVyID09IDEwOlxuICAgICAgICAgICAgYnJlYWsiLCJzb2x1dGlvbiI6IiMgZmlsbCBpbiB0aGlzIGZ1bmN0aW9uXG5kZWYgZmliKCk6XG4gICAgYSwgYiA9IDEsIDFcbiAgICB3aGlsZSAxOlxuICAgICAgICB5aWVsZCBhXG4gICAgICAgIGEsIGIgPSBiLCBhICsgYlxuXG4jIHRlc3RpbmcgY29kZVxuaW1wb3J0IHR5cGVzXG5pZiB0eXBlKGZpYigpKSA9PSB0eXBlcy5HZW5lcmF0b3JUeXBlOlxuICAgIHByaW50KFwiR29vZCwgVGhlIGZpYiBmdW5jdGlvbiBpcyBhIGdlbmVyYXRvci5cIilcblxuICAgIGNvdW50ZXIgPSAwXG4gICAgZm9yIG4gaW4gZmliKCk6XG4gICAgICAgIHByaW50KG4pXG4gICAgICAgIGNvdW50ZXIgKz0gMVxuICAgICAgICBpZiBjb3VudGVyID09IDEwOlxuICAgICAgICAgICAgYnJlYWsiLCJzY3QiOiIifQ==
-</div>
 
 Tutorial Code
 -------------
 
+# fill in this function
+def fib():
+    pass #this is a null statement which does nothing when executed, useful as a placeholder.
+
+# testing code
+import types
+if type(fib()) == types.GeneratorType:
+    print("Good, The fib function is a generator.")
+
+    counter = 0
+    for n in fib():
+        print(n)
+        counter += 1
+        if counter == 10:
+            break
+
+
+
 Expected Output
 ---------------
 
+test_output_contains("Good, The fib function is a generator.")
+success_msg('Good work!')
+
 Solution
 --------
+
+# fill in this function
+def fib():
+    a, b = 1, 1
+    while 1:
+        yield a
+        a, b = b, a + b
+
+# testing code
+import types
+if type(fib()) == types.GeneratorType:
+    print("Good, The fib function is a generator.")
+
+    counter = 0
+    for n in fib():
+        print(n)
+        counter += 1
+        if counter == 10:
+            break

@@ -65,6 +65,17 @@
                 {% endif %}
                 {{ text }}
             {% endautoescape %}</span>
+
+            <!-- DataCamp-Light exercise -->
+            {% if domain_data.language == "python" and language_code == "en" and page_title %}
+            <div data-datacamp-exercise data-lang="python" data-height="400">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">{{tutorial_data.code}}</code>
+              <code data-type="solution">{{tutorial_data.solution}}</code>
+              <code data-type="sct">{{tutorial_data.output}}</code>
+            </div>
+            {% endif %}
+
             {% if tutorial_page and (domain_data.language != "python" or language_code != "en") %}
             <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>
@@ -77,7 +88,7 @@
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if domain_data.language == "python" and tutorial_page %}
-                <p>This site generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>575,000</b> other learners and get started learning Python for data science today!</p>
+                <p>This site generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
                 {% endif %}
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
