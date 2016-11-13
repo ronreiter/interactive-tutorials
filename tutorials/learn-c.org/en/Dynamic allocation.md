@@ -9,7 +9,7 @@ Let's assume we want to dynamically allocate a person structure. The person is d
 
     typedef struct {
         char * name;
-        char age;
+        int age;
     } person;
 
 To allocate a new person in the `myperson` argument, we use the following syntax:
