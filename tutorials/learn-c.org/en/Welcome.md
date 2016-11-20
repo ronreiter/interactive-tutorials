@@ -32,6 +32,7 @@ Table of Contents
 - [[Unions]]
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
+- [[Multidimensional Arrays]]
 
 ### Contributing Tutorials
 
