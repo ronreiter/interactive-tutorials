@@ -16,6 +16,7 @@ Table of Contents
 - [[Hello, World!]]
 - [[Variables and Types]]
 - [[Arrays]]
+- [[Multidimensional Arrays]]
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]
@@ -26,13 +27,13 @@ Table of Contents
 - [[Structures]]
 - [[Function arguments by reference]]
 - [[Dynamic allocation]]
+- [[Arrays and Pointers]]
 - [[Recursion]]
 - [[Linked lists]]
 - [[Binary trees]]
 - [[Unions]]
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
-- [[Multidimensional Arrays]]
 
 ### Contributing Tutorials
 
