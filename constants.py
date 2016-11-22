@@ -20,6 +20,7 @@ LEARNHTML_DOMAIN = "learn-html.org"
 DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
         "language" : "python",
+        "RTL_LANG" : ["fa"],
         "analytics" : "UA-22741967-1",
         "namespace" : "learnpython.org",
         "full_url" : "http://learnpython.org",

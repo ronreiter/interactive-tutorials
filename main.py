@@ -8,7 +8,10 @@ import time
 import functools
 import logging
 
-from flask import Flask, render_template, request, make_response, session
+from flask import Flask, render_template, request, make_response, session, g
+from flask_babel import Babel, force_locale
+from flask_babel import lazy_gettext as _
+
 #import redis
 import sys
 
@@ -40,6 +43,19 @@ LANGUAGES = {
 
 tutorial_data = {}
 
+babel = Babel(app)
+
+@babel.localeselector
+def get_locale():
+     browser = request.accept_languages.best_match(LANGUAGES.keys())
+     return session["lang"]
+
+app.config['BABEL_DEFAULT_LOCALE'] = 'fa'
+
+sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
+WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
+
+DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
 
 def run_code(code, language):
     ideone_api = Ideone(
@@ -234,6 +250,7 @@ def favicon():
 @app.route("/", methods=["GET", "POST"])
 @app.route("/<language>/", methods=["GET", "POST"])
 def default_index(language="en"):
+    session["lang"] = language
     return index("Welcome", language)
 
 @app.route("/about")

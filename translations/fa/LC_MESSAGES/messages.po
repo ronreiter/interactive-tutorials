@@ -1,0 +1,64 @@
+# Persian translations for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-11-22 15:19+0330\n"
+"PO-Revision-Date: 2016-11-22 15:22+0330\n"
+"Language: fa\n"
+"Language-Team: fa <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: templates/index.html:55 templates/index.html:80
+msgid "Previous Tutorial"
+msgstr "آموزش قبلی"
+
+#: templates/index.html:58 templates/index.html:83
+msgid "Next Tutorial"
+msgstr "آموزش بعدی"
+
+#: templates/index.html:70
+msgid "Start Exercise"
+msgstr "شروع تمرین"
+
+#: templates/index.html:222
+msgid "Run"
+msgstr "اجرا"
+
+#: templates/index.html:223
+msgid "Reset"
+msgstr "پاک کردن"
+
+#: templates/index.html:224
+msgid "Solution"
+msgstr "راه‌حل"
+
+#: templates/index.html:239
+msgid "Expected Output"
+msgstr "خروجی مطلوب"
+
+#: templates/index.html:240
+msgid "Minimize Window"
+msgstr "کوچک کردن پنجره"
+
+#: templates/index.html:247
+msgid "Executing, please wait..."
+msgstr "در حال اجرا ..."
+
+#: templates/index.html:252
+msgid "Powered by"
+msgstr "قدرت گرفته از"
+
+#: templates/index.html:265
+msgid "Terms of Use</a> and <a href='/privacy'>Privacy Policy</a>"
+msgstr "شرایط استفاده </a> و <a href='/privacy'>سیاست حفظ حریم خصوصی</a>"

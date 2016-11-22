@@ -18,7 +18,12 @@
 {% block ogurl %}{{ domain_data.full_url }}{% if tutorial_page %}/{{ path }}{% endif %}{% endblock %}
 
 {% block content %}
+
+{% if language_code in domain_data.RTL_LANG %}
+<div class="container" id="main" dir="rtl">
+{% else %}
 <div class="container" id="main">
+{% endif %}
     <div class="row">
 
         <div class="span10" style="padding-right: 10px; box-sizing: border-box;">
@@ -44,12 +49,13 @@
             </ul>
             {% endif %}
 
+
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if previous_chapter %}
-                <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
+                <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i>{{ _('Previous Tutorial') }}</a>
                 {% endif %}
                 {% if next_chapter %}
-                <a class="btn pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial <i class="icon-chevron-right"></i></a>
+                <a class="btn pull-right" href="/{{ language_code }}/{{ next_chapter }}">{{ _('Next Tutorial') }} <i class="icon-chevron-right"></i></a>
                 {% endif %}
             </div>
 
@@ -61,7 +67,7 @@
                 {{ text }}
             {% endautoescape %}</span>
             {% if tutorial_page %}
-            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
+            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> {{ _('Start Exercise') }}</button>
             <script>
                 $(function(){
                     toggleMinimize();
@@ -71,10 +77,10 @@
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
                 {% if previous_chapter %}
-                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
+                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> {{ _('Previous Tutorial') }}</a>
                 {% endif %}
                 {% if next_chapter %}
-                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial  <i class="icon-chevron-right icon-white"></i></a>
+                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">{{ _('Next Tutorial') }}  <i class="icon-chevron-right icon-white"></i></a>
                 {% endif %}
             </div>
 
@@ -213,9 +219,9 @@
         <h5 style="line-height: 28px">
             Code
             <span style="float: right;">
-                <button id="run-button" class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>Run</button>
-                <button id="reset-button" onclick="reset()" class="btn btn-primary">Reset</button>
-                <button id="solution-button" onclick="showSolution()" class="btn btn-primary">Solution</button>
+                <button id="run-button" class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>{{ _('Run') }}</button>
+                <button id="reset-button" onclick="reset()" class="btn btn-primary">{{ _('Reset') }}</button>
+                <button id="solution-button" onclick="showSolution()" class="btn btn-primary">{{ _('Solution') }}</button>
             </span>
         </h5>
         <div class="footer-toggle">
@@ -230,20 +236,20 @@
             <h5 style="line-height: 28px">
                 Output
                 <span style="float: right">
-                    <button id="expected-output-button" class="btn btn-primary" onclick="showExpected()">Expected Output</button>
-                    <button id="minimize-button" class="btn" onclick="toggleMinimize()">Minimize Window</button>
+                    <button id="expected-output-button" class="btn btn-primary" onclick="showExpected()">{{ _('Expected Output') }}</button>
+                    <button id="minimize-button" class="btn" onclick="toggleMinimize()">{{ _('Minimize Window') }}</button>
                 </span>
             </h5>
 		</div>
 
         <div class="footer-toggle">
             <div id="loading">
-                Executing, please wait...
+                {{ _('Executing, please wait...') }}
             </div>
             <div id="text-output">
                 <textarea id="output" style="width: 475px; height: 210px"></textarea>
                 <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
-                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+                    {{ _('Powered by') }} <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
                 </div>
             </div>
             <iframe id="html-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
@@ -256,7 +262,7 @@
 
     <div class="row">
         <div class="span12">
-            <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
+            <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>{{ _("Terms of Use</a> and <a href='/privacy'>Privacy Policy</a>") }}</div>
         </div>
     </div>
 
