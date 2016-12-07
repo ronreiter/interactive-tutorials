@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the `import` command. 
+Modules in Python are simply Python files with the .py extension, which implement a set of functions. Modules are imported from other modules using the `import` command.
 
 To import a module, we use the `import` command. Check out the full list of built-in modules in the Python standard library [here](http://docs.python.org/2/library/).
 
@@ -37,7 +37,7 @@ Writing Python modules is very simple. To create a module of your own, simply cr
 
 Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.
 
-Each package in Python is a directory which **MUST** contain a special file called `__init__.py`. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported. 
+Each package in Python is a directory which **MUST** contain a special file called `__init__.py`. This file can be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same way a module can be imported.
 
 If we create a directory called `foo`, which marks the package name, we can then create a module inside that package called `bar`. We also must not forget to add the `__init__.py` file inside the `foo` directory.
 
@@ -72,7 +72,8 @@ import re
 Expected Output
 ---------------
 
-['findall', 'finditer']
+test_object('find_members')
+success_msg('Great work!')
 
 Solution
 --------
@@ -85,4 +86,4 @@ for member in dir(re):
     if "find" in member:
         find_members.append(member)
 
-print sorted(find_members)
+print(sorted(find_members))

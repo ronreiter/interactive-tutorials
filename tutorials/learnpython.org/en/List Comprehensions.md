@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-List Comprehensions is a very powerful tool, which creates a new list based on another list, in a single, readable line. 
+List Comprehensions is a very powerful tool, which creates a new list based on another list, in a single, readable line.
 
 For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 
@@ -9,15 +9,17 @@ For example, let's say we need to create a list of integers which specify the le
     words = sentence.split()
     word_lengths = []
     for word in words:
-        if word != "the":
-            word_lengths.append(len(word))
+          if word != "the":
+              word_lengths.append(len(word))
+    print(words)
 
 Using a list comprehension, we could simplify this process to this notation:
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
     word_lengths = [len(word) for word in words if word != "the"]
-
+    print(words)
+    
 Exercise
 --------
 
@@ -33,7 +35,9 @@ print newlist
 
 Expected Output
 ---------------
-[34, 44, 68, 44, 12]
+
+test_output_contains("[34, 44, 68, 44, 12]")
+success_msg("Very nice!")
 
 Solution
 --------

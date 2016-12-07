@@ -23,6 +23,7 @@
 
         <div class="span10" style="padding-right: 10px; box-sizing: border-box;">
 
+            {% if domain_data.language != "python" %}
             <div>
                 <script type="text/javascript"><!--
                     google_ad_client = "ca-pub-3723950136133694";
@@ -34,6 +35,7 @@
                 </script>
                 <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
+            {% endif %}
 
             {% if page_title %}
             <ul class="breadcrumb" style="margin-top: 10px">
@@ -45,6 +47,9 @@
             {% endif %}
 
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if domain_data.language == "python" and tutorial_page %}
+                <p>Get started learning Python with <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp's</a> free <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Start Now</a>!</p>
+                {% endif %}
                 {% if previous_chapter %}
                 <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
                 {% endif %}
@@ -60,7 +65,18 @@
                 {% endif %}
                 {{ text }}
             {% endautoescape %}</span>
-            {% if tutorial_page %}
+
+            <!-- DataCamp-Light exercise -->
+            {% if domain_data.language == "python" and language_code == "en" and page_title %}
+            <div data-datacamp-exercise data-lang="python" data-height="400">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">{{tutorial_data.code}}</code>
+              <code data-type="solution">{{tutorial_data.solution}}</code>
+              <code data-type="sct">{{tutorial_data.output}}</code>
+            </div>
+            {% endif %}
+
+            {% if tutorial_page and (domain_data.language != "python" or language_code != "en") %}
             <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>
                 $(function(){
@@ -68,8 +84,12 @@
                 })
             </script>
             {% endif %}
+
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if domain_data.language == "python" and tutorial_page %}
+                <p>This site generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+                {% endif %}
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
                 {% endif %}
@@ -93,6 +113,7 @@
             </div>
             -->
 
+            {% if domain_data.language != "python" %}
             <div>
                 <script type="text/javascript"><!--
                     google_ad_client = "ca-pub-3723950136133694";
@@ -107,8 +128,8 @@
                 </script>
                 <script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
-
             <script type="text/javascript" src="https://www.spoj.com/banner.js"></script>
+            {% endif %}
 
             {% if domain_data.language == "java" %}
             <!-- Insticator API Embed Code -->
@@ -134,7 +155,7 @@
                     <a href="http://www.dreamhost.com/r.cgi?1502972"><img alt="DreamHost" src="http://images.dreamhost.com/rewards/300x250-Sunny.png" style="width: 160px; max-width: 160px"/></a>
                 </div>
                 -->
-
+                {% if domain_data.language != "python" %}
                 <div style="margin-bottom: 10px">
                     <script>
                         google_ad_client = "ca-pub-3723950136133694";
@@ -146,12 +167,13 @@
                     <script src="//pagead2.googlesyndication.com/pagead/show_ads.js">
                     </script>
                 </div>
-
                 <div style="margin-bottom: 10px">
                     <script type="text/javascript" src="//ap.lijit.com/www/delivery/fpi.js?z=283190&u=learnpython&width=160&height=600"></script>
                 </div>
+                {% endif %}
 
                 {% if domain_data.language == "python" %}
+                <iframe src="https://learnpython-ads.datacamp.com/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; margin-left: 5px; border: 0;"></iframe>
                 <div style="margin-bottom: 10px; margin-left: 5px;">
                     <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
                         <img src="/static/img/banners/pycharm.png" style="width: 160px; max-width: 160px"/>
@@ -207,6 +229,7 @@
 <footer>
     <div class="container">
 
+    {% if domain_data.language != "python" or language_code != "en" %}
     <div class="row">
 
 	<div class="span6 code-window">
@@ -250,7 +273,7 @@
             <iframe id="expected-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
         </div>
 	</div>
-
+  {% endif %}
 
     </div> <!-- row -->
 

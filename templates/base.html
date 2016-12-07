@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/learnpython.css"/>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/prism.js"></script>
-
+    <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
     <!-- Insticator -->
     <script type='text/javascript'>(function(a,c){"Insticator"in a||(a.Insticator={ad:{},helper:{},client:{sid:"361f53d9-0236-472e-8223-ac276882d55b"},version:"1.0"},a.Insticator.ad.loadAd=function(b){a.Insticator.ad.q.push(b)},a.Insticator.ad.q=[]);var b=c.createElement("script"),cof=1000*60*10,cbt=new Date(Math.floor(new Date().getTime()/cof)*cof).getTime();b.src="//embed.insticator.com/advertisements/getheadertagforsite?id="+a.Insticator.client.sid+"&cbt="+cbt;b.async=!0;var d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)})(window,document);</script>
@@ -130,6 +130,11 @@
 <script src="/static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/bootbox.min.js"></script>
+
+{% if domain_data.language == "python" and domain_data.language_code == 'en'  %}
+<script src="/static/js/datacamp.js"></script>
+{% endif %}
+
 {% if domain_data.language == "javascript" %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

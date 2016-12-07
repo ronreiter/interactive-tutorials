@@ -6,16 +6,17 @@ Code introspection is the ability to examine classes, functions and keywords to 
 Python provides several functions and utilities for code introspection.
 
     help()
-    dir()
-    hasattr()
-    id()
-    type()
-    repr()
-    callable()
-    issubclass()
-    isinstance()
-    __doc__
-    __name__
+    dir() 
+    hasattr() 
+    id() 
+    type() 
+    repr() 
+    callable() 
+    issubclass() 
+    isinstance() 
+    __doc__ 
+    __name__ 
+    
 
 Often the most important one is the help function, since you can use it to find what other functions do.
 
@@ -50,7 +51,9 @@ class Vehicle:
 Expected Output
 ---------------
 
-['__doc__', '__module__', 'color', 'description', 'kind', 'name', 'value']
+test_output_contains("['__doc__', '__module__', 'color', 'description', 'kind', 'name', 'value']")
+test_student_typed("print")
+success_msg("Very nice!")
 
 Solution
 --------
@@ -66,4 +69,4 @@ class Vehicle:
         return desc_str
 
 # Print a list of all attributes of the Vehicle class.
-print dir(Vehicle)
+print(dir(Vehicle))
