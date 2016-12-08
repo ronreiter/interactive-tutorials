@@ -30,7 +30,7 @@
     $extension = substr($filename, strlen($filename) - 3);
     echo "The extension of the file is $extension";
 
-### الخاق و جداسازی
+### الحاق و جداسازی
 
 میتوانیم آرایه ها را به هم چسبانده و یک رشته بسازیم و یا یک رشته را تبدیل به آرایه ای از زیر رشته ها کنیم
 
