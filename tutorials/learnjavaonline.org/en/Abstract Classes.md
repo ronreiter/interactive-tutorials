@@ -14,7 +14,7 @@ For example:
 
 ### Abstract classes versus interface
 
-Abstract classes can contain fields which are not `final` and `static` and can contain implemented mthods as well but interfaces cannot. Abstract classes with only abstract methods should be defined as interfaces.
+Abstract classes can contain fields which are not `final` and `static` and can contain implemented methods as well but interfaces cannot. Abstract classes with only abstract methods should be defined as interfaces.
 
 When an abstract class implements an interface not all interface methods need to be implemented, if the class is not abstract all the interface methods should be implemented.
 
