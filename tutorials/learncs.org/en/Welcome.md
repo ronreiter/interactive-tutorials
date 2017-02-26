@@ -22,7 +22,6 @@ Table of Contents
 - [[For loops]]
 - [[While loops]]
 - [[Methods]]
-- [[adamtest]]
 
 ### Contributing Tutorials
 
