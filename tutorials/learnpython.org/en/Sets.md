@@ -19,39 +19,31 @@ To find out which members attended both events, you may use the "intersection" m
     a = set(["Jake", "John", "Eric"])
     b = set(["John", "Jill"])
     
-    set(['John'])
-    a.intersection(b)
-    set(['John'])
-    b.intersection(a)
-    set(['John'])
+    print(a.intersection(b))
+    print(b.intersection(a))
 
 To find out which members attended only one of the events, use the "symmetric_difference" method:
 
     a = set(["Jake", "John", "Eric"])
     b = set(["John", "Jill"])
     
-    a.symmetric_difference(b)
-    set(['Jill', 'Jake', 'Eric'])
-    b.symmetric_difference(a)
-    set(['Jill', 'Jake', 'Eric'])
+    print(a.symmetric_difference(b))
+    print(b.symmetric_difference(a))
 
 To find out which members attended only one event and not the other, use the "difference" method:
 
     a = set(["Jake", "John", "Eric"])
     b = set(["John", "Jill"])
     
-    a.difference(b)
-    set(['Jake', 'Eric'])
-    b.difference(a)
-    set(['Jill'])
+    print(a.difference(b))
+    print(b.difference(a))
 
 To receive a list of all participants, use the "union" method:
 
     a = set(["Jake", "John", "Eric"])
     b = set(["John", "Jill"])
     
-    a.union(b)
-    set(['Jill', 'Jake', 'John', 'Eric'])
+    print(a.union(b))
 
 In the exercise below, use the given lists to print out a set containing all the participants from event A which did not attend event B.
 
