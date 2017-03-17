@@ -13,8 +13,8 @@ Here is a simple example of a generator function which returns 7 random integers
       
       def lottery():
           # returns 6 numbers between 1 and 40
-        for i in range(6):
-          yield random.randint(1, 40)
+          for i in range(6):
+              yield random.randint(1, 40)
       
           # returns a 7th number between 1 and 15
           yield random.randint(1,15)
