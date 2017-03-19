@@ -92,7 +92,7 @@ We conclude this tutorial by looking at dynamic memory allocation for a two-dime
     int i, j;
 
     // Allocate memory for nrows pointers
-    char **pvowels = (char **) malloc(nrows * sizeof(char));
+    char **pvowels = (char **) malloc(nrows * sizeof(char *));
 
     // For each row, allocate memory for ncols elements
     pvowels[0] = (char *) malloc(ncols * sizeof(char));
