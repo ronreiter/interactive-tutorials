@@ -22,6 +22,7 @@ Table of Contents
 - [[Conditional Statements]]
 - [[Unless, Until, and While]]
 - [[Methods]]
+- [[Methods With Parameters]]
 
 ### Contributing Tutorials
 
