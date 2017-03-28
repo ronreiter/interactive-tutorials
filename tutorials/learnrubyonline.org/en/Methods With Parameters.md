@@ -29,6 +29,7 @@ Tutorial Code
 Expected Output
 ---------------
 4
+
 Solution
 --------
 def square(number)
