@@ -22,6 +22,7 @@ end
 Expected Output
 ---------------
 Hi!
+
 Solution
 --------
 def say_hi
