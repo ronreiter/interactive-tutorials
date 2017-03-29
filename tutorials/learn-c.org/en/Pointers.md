@@ -8,7 +8,7 @@ Pointers are also variables and play a very important role in C programming lang
 * Sending function arguments by reference 
 * Building complicated data structures
 * Pointing to functions
-* Building special data strcutures (i.e. Tree, Tries, etc...)
+* Building special data structures (i.e. Tree, Tries, etc...)
 
 And many more.
 
