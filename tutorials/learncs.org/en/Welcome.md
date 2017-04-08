@@ -22,6 +22,7 @@ Table of Contents
 - [[For loops]]
 - [[While loops]]
 - [[Methods]]
+- [[Basic Classes]]
 
 ### Contributing Tutorials
 
