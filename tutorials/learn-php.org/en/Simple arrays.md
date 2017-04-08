@@ -173,20 +173,20 @@ Expected Output
 
 Array
 (
-[0] => 2
-[1] => 4
-[2] => 6
-[3] => 8
-[4] => 10
+    [0] => 2
+    [1] => 4
+    [2] => 6
+    [3] => 8
+    [4] => 10
 )
 Array
 (
-[0] => Jake
-[1] => Eric
-[2] => John
-[3] => Jessica
-[4] => Beth
-[5] => Sandra
+    [0] => Jake
+    [1] => Eric
+    [2] => John
+    [3] => Jessica
+    [4] => Beth
+    [5] => Sandra
 )
 
 Solution
