@@ -1,4 +1,4 @@
-Ce site est généreusement soutenu par [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offre des [Tutoriels Python](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) en ligne interactifs pour la Science des Données. Rejoignez **575,000** autres apprenants et commencez à apprendre Python pour la Science des Données aujourd'hui&nbsp;!
+Ce site est généreusement soutenu par [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offre des [Tutoriels Python](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) en ligne interactifs pour la Science des Données. Rejoignez **575&nbsp;000** autres apprenants et commencez à apprendre Python pour la Science des Données aujourd'hui&nbsp;!
 
 # Bienvenue
 
@@ -17,17 +17,17 @@ Table des Matières
 ### Apprenez les Bases
 
 - [[Hello, World!]]
-- [[Variables et Types]]
-- [[Listes]]
-- [[Opérators de Base]]
-- [[Formatage de chaînes]]
-- [[Basic String Operations]]
+- [[Variables et Types]](Variables and Types)
+- [[Listes]](Lists)
+- [[Opérators de Base]](Basic Operators)
+- [[Formatage de chaînes]](String Formatting)
+- [[Opérations de base sur les chaînes]](Basic String Operations)
 - [[Conditions]]
-- [[Loops]]
-- [[Functions]]
-- [[Classes and Objects]]
-- [[Dictionaries]]
-- [[Modules and Packages]]
+- [[Boucles]](Loops)
+- [[Fonctions]](Functions)
+- [[Classes et Objets]](Classes and Objects)
+- [[Dictionnaires]](Dictionaries)
+- [[Modules et Paquetages]](Modules and Packages)
 
 ### Data Science Tutorials
 - [[Numpy Arrays]]
