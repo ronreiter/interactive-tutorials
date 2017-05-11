@@ -1,7 +1,7 @@
-Tutorial
---------
+Interfaces
+----------
 
-Interfaces are class templates. Although not strictly required, they are part of the organizational stucture of object-oriented programming. Interfaces define methods for classes by specifying the method name, the return type (or void) and the method arguments (by type and name). These method definitions are called signatures. Because this is a template, the method signatures contain no code. The code is entered into the **implementation** of an interface. Interfaces are used in the discipline of polymorphism.
+Interfaces are class templates. Although not strictly required, they are part of the organizational structure of object-oriented programming. Interfaces define methods for classes by specifying the method name, the return type (or void) and the method arguments (by type and name). These method definitions are called signatures. Because this is a template, the method signatures contain no code. The code is entered into the **implementation** of an interface. Interfaces are used in the discipline of polymorphism.
 
 Note these two important points about interfaces:
 
@@ -74,8 +74,7 @@ Exercise
 --------
 Create a gorilla class which implements the Animal interface.
 
-Tutorial Code
--------------
+### Tutorial Code
 
     interface Animal {
         bool feed(bool timeToEat)
@@ -83,13 +82,11 @@ Tutorial Code
         void pet()
     }
 
-  Expected Output
-  ---------------
+### Expected Output
 
   No visible output. However, the result should be a class, similar to the ones implemented above, for a gorilla that includes all of the interface methods.
 
-  Solution
-  --------
+### Solution
 
     class Gorilla implements Animal {
         bool feed(bool timeToEat) {
