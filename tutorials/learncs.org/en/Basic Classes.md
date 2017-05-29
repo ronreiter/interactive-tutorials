@@ -41,7 +41,7 @@ Make a class `car` with the properties `numTires = 4`, `year = 2000`, and `runs 
 Tutorial Code
 -------------
 using System;
-public class Main{
+public class MainClass{
     public static void Main(){
         
         // Test code
