@@ -23,6 +23,7 @@ Table of Contents
 - [[While loops]]
 - [[Methods]]
 - [[Basic Classes]]
+- [[Class Properties]]
 
 ### Contributing Tutorials
 
