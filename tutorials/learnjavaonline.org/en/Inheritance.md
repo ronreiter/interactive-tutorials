@@ -61,10 +61,11 @@ The advantage of using inheritance is that you can write code that can apply to 
         }
         
         public static Shape getLargerShape(Shape s1, Shape s2) {
-            if(s1.area() > s2.area())
+            if(s1.area() > s2.area()) {
                 return s1;
-            else
+            } else {
                 return s2;
+            }
         }
     }
 
