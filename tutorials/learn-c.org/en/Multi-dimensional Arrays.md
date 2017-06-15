@@ -22,17 +22,17 @@ char vowels[1][5] = {
 
 ## Two-dimensional Arrays
 
-The simplest form of multidimensional array is the two-dimensional array. A two-dimensional array is pretty much a list of one-dimensional arrays. To declare a two-dimensional integer array of size [x][y], you would write something like this −
+The simplest form of multidimensional array is the two-dimensional array. A two-dimensional array is pretty much a list of one-dimensional arrays. To declare a two-dimensional integer array of size [ x ][ y ], you would write something like this −
 
 ```c
-type arrayName [ x ][ y ];
+int arrayName [ x ][ y ];
 ```
 
 Where __type__ can be any C data type (int, char, long, long long, double, etc.) and __arrayName__ will be a valid C identifier, or variable. A two-dimensional array can be considered as a table which will have [x] number of rows and [y] number of columns. A two-dimensional array a, which contains three rows and four columns can be shown and thought about like this −
 
 ![Table 1A](https://www.tutorialspoint.com/cprogramming/images/two_dimensional_arrays.jpg)
 
-In this sense, every element in the array a is identified by an element name of the form __a[i][j]__, where 'a' is the name of the array, and 'i' and 'j' are the indexes that uniquely identify, or show, each element in 'a'.
+In this sense, every element in the array a is identified by an element name of the form __a[ i ][ j ]__, where 'a' is the name of the array, and 'i' and 'j' are the indexes that uniquely identify, or show, each element in 'a'.
 
 And honestly, you really don't have to put in a [x] value really, because if you did something like this -
 
