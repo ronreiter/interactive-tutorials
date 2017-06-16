@@ -25,3 +25,4 @@ requires that you specify the domain you are working on, e.g.:
 Contributors
 ============
 superreg
+JBoy Advance
