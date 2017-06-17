@@ -55,7 +55,7 @@ The until construct tests for a condition, and if false, executes commands. It k
 
 ### "break" and "continue" statements
 
-break and continue can be used to control the loop execution of for, while and until constructs. break is used to skip the rest of a particular loop iteration, whereas continue is used to skip the entire rest of loop. A few examples:
+break and continue can be used to control the loop execution of for, while and until constructs. continue is used to skip the rest of a particular loop iteration, whereas break is used to skip the entire rest of loop. A few examples:
 
     # Prints out 0,1,2,3,4
 
