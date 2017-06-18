@@ -118,6 +118,13 @@ int main() {
 }
 ```
 
+## Exercise Expected Output
+
+```c
+The average marks obtained in subject 0 is: 78.80
+The average marks obtained in subject 1 is: 82.80
+```
+
 ## Exercise Code Solution
 
 ```c
