@@ -41,7 +41,7 @@ Make a class `car` with the properties `numTires = 4`, `year = 2000`, and `runs 
 Tutorial Code
 -------------
 using System;
-public class Main{
+public class MainClass{
     public static void Main(){
         
         // Test code
@@ -54,7 +54,7 @@ Expected Output
 ---------------
 4
 2000
-true
+True
 
 Solution
 --------
@@ -64,7 +64,7 @@ class car{
     public int year = 2000;
     public bool runs = true;
 }
-public class Main{
+public class MainClass{
     public static void Main(){
         car car1 = new car();
         car car2 = new car();

@@ -19,9 +19,9 @@ An interface is generally used as a template for multiple classes. These classes
 An interface named Animal might have method defintions for feed, groom and pet. The feeding, grooming and petting of animals can be as different as the animals themselves.
 
     interface Animal {
-        bool feed(bool timeToEat)
-        void groom()
-        void pet()
+        bool feed(bool timeToEat);
+        void groom();
+        void pet();
     }
 
 A dog class, for instance, may be implemented in a somewhat predictable way.
@@ -29,7 +29,7 @@ A dog class, for instance, may be implemented in a somewhat predictable way.
     class Dog implements Animal {
         bool feed(bool timeToEat) {
           // pour food into bowl
-          return true
+          return true;
         }
         void groom() {
           // brush well
@@ -44,7 +44,7 @@ Other animal classes, may have specific needs.
     class Giraffe implements Animal {
         bool feed(bool timeToEat) {
           // point to the trees 
-          return true
+          return true;
         }
         void groom() {
           // get a ladder
@@ -77,9 +77,9 @@ Create a gorilla class which implements the Animal interface.
 ### Tutorial Code
 
     interface Animal {
-        bool feed(bool timeToEat)
-        void groom()
-        void pet()
+        bool feed(bool timeToEat);
+        void groom();
+        void pet();
     }
 
 ### Expected Output
@@ -91,7 +91,7 @@ Create a gorilla class which implements the Animal interface.
     class Gorilla implements Animal {
         bool feed(bool timeToEat) {
           // put gorilla food into cage
-          return true
+          return true;
         }
         void groom() {
           // lather, rinse, repeat
