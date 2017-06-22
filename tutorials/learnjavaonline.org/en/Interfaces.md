@@ -1,5 +1,5 @@
-Interfaces
-----------
+Tutorial
+--------
 
 Interfaces are class templates. Although not strictly required, they are part of the organizational structure of object-oriented programming. Interfaces define methods for classes by specifying the method name, the return type (or void) and the method arguments (by type and name). These method definitions are called signatures. Because this is a template, the method signatures contain no code. The code is entered into the **implementation** of an interface. Interfaces are used in the discipline of polymorphism.
 
