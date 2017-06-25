@@ -18,7 +18,7 @@ The above code defines a class named Shape with 4 different properties. In this 
     class Shape{
       public string Type;
       public int Sides;
-      public Sidelength;
+      public int Sidelength;
       public double Area;  
     }
 
@@ -27,7 +27,7 @@ Now to give those properties values we need to define something called a constru
     class Shape{
       public string Type;
       public int Sides;
-      public Sidelength;
+      public int Sidelength;
       public double Area;  
       public Shape(){} 
     }
