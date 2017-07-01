@@ -138,7 +138,6 @@ function execute() {
 
 	//$('#output').css('color', '#bbbbbb');
 	//$('#output').css('background-color', '#eeeeee');
-	loading.show();
 	output.setValue("");
 	//$('#output').text('');
 
@@ -149,6 +148,7 @@ function execute() {
 			print(err.message);
 		}
 	} else {
+		loading.show();
 		$.ajax({
 			type : "post",
 			data : JSON.stringify({
