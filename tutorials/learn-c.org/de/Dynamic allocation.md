@@ -41,6 +41,7 @@ Tutorial Code
 -------------
 
     #include <stdio.h>
+    #include <stdlib.h>
 
     typedef struct {
       int x;
@@ -70,6 +71,7 @@ Lösung
 ------
 
     #include <stdio.h>
+    #include <stdlib.h>
 
     typedef struct {
       int x;

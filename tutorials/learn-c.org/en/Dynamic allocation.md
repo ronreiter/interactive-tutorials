@@ -40,6 +40,7 @@ Tutorial Code
 -------------
 
     #include <stdio.h>
+    #include <stdlib.h>
 
     typedef struct {
       int x;
@@ -69,6 +70,7 @@ Solution
 --------
 
     #include <stdio.h>
+    #include <stdlib.h>
 
     typedef struct {
       int x;
