@@ -204,7 +204,7 @@ def get_host():
 
 
 def is_development_mode():
-    return get_host() in ["localhost:5000", "192.241.245.44"]
+    return "localhost" in get_host() or "127.0.0.1" in get_host()
 
 
 def get_domain_data():
