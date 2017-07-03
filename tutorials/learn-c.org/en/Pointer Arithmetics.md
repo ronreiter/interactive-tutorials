@@ -5,7 +5,7 @@ There are multiple arithmetic operations that can be applied on C pointers: ++, 
 
 ### Incrementing a Pointer with (++)
 
-Just like any variable the ++ operation increases the value of that variable. In our case here the variable is a pointer hence when we increase its value we are increasing the address in the momory that pointer points to. 
+Just like any variable the ++ operation increases the value of that variable. In our case here the variable is a pointer hence when we increase its value we are increasing the address in the memory that pointer points to. 
 Let's combine this operation with an array in our example:
 
 	#include <stdio.h>
@@ -31,7 +31,7 @@ Let's combine this operation with an array in our example:
 
 ### Decreasing a Pointer with (--)
 
-Just like in our previous example we increased the pointer's pointed-to address by one using the ++ operator, we can decrese the address pointed-to by one using the decremant operator (--).
+Just like in our previous example we increased the pointer's pointed-to address by one using the ++ operator, we can decrease the address pointed-to by one using the decrement operator (--).
 
 	#include <stdio.h>
 	
@@ -82,7 +82,7 @@ In our code we shifted by 2 (added +2) to the initial address so that makes them
 
 ### Subtracting Pointers with (-)
 
-Similiarly we can substract:
+Similarly we can subtract:
 
 	#include <stdio.h>
 	
@@ -107,7 +107,7 @@ Similiarly we can substract:
 again the address is shifted by blocks of 4bytes (in case of int).
 
 ### Other Operations
-There are more operations such as comparison >, <, ==. The idea is very similiar of comparing variables, but in this case we are comparing memory address.
+There are more operations such as comparison >, <, ==. The idea is very similar of comparing variables, but in this case we are comparing memory address.
 
 Exercise
 --------
