@@ -21,6 +21,7 @@ Table of Contents
 - [[For loops]]
 - [[While loops]]
 - [[Functions]]
+- [[Static]]
 
 ### Advanced
 - [[Pointers]]
