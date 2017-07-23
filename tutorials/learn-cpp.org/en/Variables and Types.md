@@ -61,7 +61,7 @@ in the following notation, and assign a new value to `a`:
 
     int a = 0,b = 1,c = 2,d = 3, e = 4;
     a = b - c + d * e;
-    printf("%d", a); /* will print 1-2+3*4 = 11 */
+    cout << a << endl; // will print 1-2+3*4 = 11
 
 Exercise
 --------
@@ -71,7 +71,8 @@ In the next exercise, you will need to create a program which prints out the sum
 Tutorial Code
 -------------
 
-    #include <stdio.h>
+    #include <iostream>
+    using namespace std;
 
     int main() {
       int a = 3;
@@ -81,7 +82,7 @@ Tutorial Code
 
       /* Your code goes here */
 
-      printf("The sum of a, b, and c is %f.", sum);
+      cout << "The sum of a, b, and c is", sum << endl;
       return 0;
     }
 
@@ -91,16 +92,17 @@ Expected Output
 
 Solution
 --------
-    #include <stdio.h>
+    #include <iostream>
+    using namespace std;
 
     int main() {
       int a = 3;
       float b = 4.5;
       double c = 5.25;
-      float sum = a + b + c;
+      double sum;
 
-      /* Your code goes here */
+      sum = a + b + c;
 
-      printf("The sum of a, b, and c is %f.", sum);
+      cout << "The sum of a, b, and c is", sum << endl;
       return 0;
     }
