@@ -358,6 +358,20 @@ function load() {
 			Prism.highlightAll();
 
 			break;
+		case "go":
+			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+				lineNumbers: true,
+				indentUnit: 4,
+				tabMode: "shift",
+				mode: "text/x-go",
+				theme: "monokai"
+			});
+
+			codeBlocks.addClass("language-go");
+			Prism.highlightAll();
+
+			break;
+
 	}
 
 	output = CodeMirror.fromTextArea(document.getElementById("output"), {

@@ -15,7 +15,7 @@ LEARNPHP_DOMAIN = "learn-php.org"
 LEARNPERL_DOMAIN = "learn-perl.org"
 LEARNCS_DOMAIN = "learncs.org"
 LEARNHTML_DOMAIN = "learn-html.org"
-
+LEARNGO_DOMAIN = "learn-golang.org"
 
 DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
@@ -333,5 +333,46 @@ public class Hello
     }
 }
 """,
-        },
+    },
+
+    LEARNGO_DOMAIN : {
+        "language" : "go",
+        "analytics" : "UA-22741967-13",
+        "namespace" : "learn-golang.org",
+        "full_url" : "http://learn-golang.org",
+        "sender" : "LearnCS.org <admin@learn-golang.org>",
+        "styled_domain" : "Learn-GoLang.org",
+        "contact_email" : "admin@learn-golang.org",
+        "support_email" : "support@learn-golang.org",
+        "logo" : "/static/img/logos/learn-golang.png",
+        "language_uppercase" : "Go",
+        "twitter" : "@learngolang",
+        "favicon" : "favicon-learngolang.ico",
+        "copyright" : "Copyright &copy; Learn-GoLang.org.",
+        "default_code" : """// Welcome to the Interactive Go Tutorial.
+// Start by choosing a chapter, write your code in this window.
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    fmt.Println("Hello, world!")
+}
+""",
+        "container_word" : "class",
+        "container_indent" : "        ",
+        "container" : """package main
+
+import (
+    "fmt"
+)
+
+func main() {
+{code}
+}
+""",
+
+    },
 }
