@@ -106,7 +106,7 @@ return 0;
     },
     LEARNCPP_DOMAIN : {
         "language" : "c++11",
-        "analytics" : "UA-22741967-3",
+        "analytics" : "UA-22741967-12",
         "namespace" : "learn-cpp.org",
         "full_url" : "http://learn-cpp.org",
         "sender" : "Learn-cpp.org <admin@learn-cpp.org>",
