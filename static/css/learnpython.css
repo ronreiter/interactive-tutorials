@@ -216,3 +216,8 @@ textarea {
 .container div.datacamp-exercise {
 	min-height: 150px;
 }
+
+.nav-tabs>li>a, .nav-pills>li>a {
+    padding-left: 8px;
+    padding-right: 8px;
+}
