@@ -1,10 +1,11 @@
 Tutorial
 --------
-Static is a keyword in C programming language. It are used with variable and functions.
+`static` is a keyword in the C programming language. It can be used with variables and functions.
 
-###What is Static variable ?
- By default, Variable are local to scope in which they are defined. Varibale are declared as static to increase thier scope upto file containing them. As a result these varibale are accessed anywhere inside a file.
-Consider we want to count the runners participating in a race  
+### What is a static variable?
+ By default, variables are local to the scope in which they are defined. Variables can be declared as static to increase their scope up to file containing them. As a result, these variables can be accessed anywhere inside a file.
+
+Consider the following scenario – we want to count the runners participating in a race:
 
     #include<stdio.h>
     int runner() {
@@ -12,7 +13,7 @@ Consider we want to count the runners participating in a race
         count++;
         return count;
     }
-  
+
     int main()
     {
         printf("%d ", runner());
@@ -20,7 +21,7 @@ Consider we want to count the runners participating in a race
         return 0;
     }
 
-We will see that count is not updated correctly because count gets removed from memory as soon as function completes, however if static is used
+We will see that `count` is not updated because it is removed from memory as soon as the function completes.  If `static` is used, however:
 
     #include<stdio.h>
     int runner()
@@ -29,7 +30,7 @@ We will see that count is not updated correctly because count gets removed from 
         count++;
         return count;
     }
-  
+
     int main()
     {
         printf("%d ", runner());
@@ -37,37 +38,38 @@ We will see that count is not updated correctly because count gets removed from 
         return 0;
     }
 
-###What is Static function ?
- By default function are global in C. However if we declare them with static, scope of functions is reduced to the file containing them.
-Syntax
+### What is a static function?
+By default, functions are global in C.  If we declare a function with `static`, the scope of that function is reduced to the file containing it.
+
+The syntax looks like this:
 
     static int fun(void) {
        printf("I am a static function.");
     }
 
-###Static vs Global ?
- As we know static variables have scope as file containing them making them accessible only inside file, global variable can be accessed outside the file too.
+### Static vs Global?
+While static variables have scope over the file containing them making them accessible only inside a given file, global variables can be accessed outside the file too.
 
 Exercise
 --------
-In this exercise, we try to find sum of some number without passing any total variable to function.
+In this exercise, try to find the sum of some numbers by using the static keyword.  Do not pass any variable representing the running total to the `sum()` function.
 
 Tutorial Code
 -------------
 
-   #include <stdio.h>  
+   #include <stdio.h>
    int sum (int num) {
        /**
        * find sum to n numbers
        */
-   } 
+   }
 
    int main() {
        printf("%d ",sum(55));
        printf("%d ",sum(45));
        printf("%d ",sum(50));
        return 0;
-   }   
+   }
 
 Expected Output
 ---------------
@@ -83,11 +85,11 @@ Solution
        total += num;
        return total;
    }
-   
+
    int main() {
        printf("%d ",sum(55));
        printf("%d ",sum(45));
        printf("%d ",sum(50));
        return 0;
-   }  
+   }
 
