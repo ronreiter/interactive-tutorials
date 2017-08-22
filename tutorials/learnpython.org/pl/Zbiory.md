@@ -28,7 +28,7 @@ Wyodrębnieniu osób, które brały udział w A i nie brały w B, służy różn
     print B.difference(A) # set(['Jill'])
     
 
-Z kolei"union" (suma zbiorów) da nam listę wszyskicz osób:
+Z kolei"union" (suma zbiorów) da nam listę wszyskich osób:
 
     print A.union(B) # set(['Jill', 'Jake', 'John', 'Eric'])
     
