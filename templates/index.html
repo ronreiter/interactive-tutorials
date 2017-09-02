@@ -21,7 +21,7 @@
 <div class="container" id="main">
     <div class="row">
 
-        <div class="span10" style="padding-right: 10px; box-sizing: border-box;">
+        <div class="span10" style="box-sizing: border-box;">
 
             {% if domain_data.language != "python" %}
             <div>
@@ -100,6 +100,55 @@
 
             <div class="hidden-phone">
 
+
+            {% if domain_data.language == "java" %}
+                <style>
+                #amazon-books img {
+                    width: 100%;
+                }
+                </style>
+                <h3>Java Books You Might Like...</h3>
+                <div id="amazon-books" class="row">
+                    <div class="span2">
+                        <a target="_blank"  href="https://www.amazon.com/gp/product/0596009208/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0596009208&linkCode=as2&tag=interactivetu-20&linkId=52fd44d032317d77323709e6d77f731b">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0596009208&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=interactivetu-20" >
+                            <h5>Head First Java, 2nd Edition</h5>
+                            <p></p>
+                        </a>
+                        <img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=0596009208" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </div>
+                    <div class="span2">
+                        <a target="_blank"  href="https://www.amazon.com/gp/product/0071809252/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0071809252&linkCode=as2&tag=interactivetu-20&linkId=7c638cf6fb361c7f6e9c303f33177ecb">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0071809252&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=interactivetu-20" >
+                            <h5>Java: A Beginner's Guide, Sixth Edition</h5>
+                            <p></p>
+                        </a>
+                        <img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=0071809252" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </div>
+                    <div class="span2">
+                        <a target="_blank"  href="https://www.amazon.com/gp/product/1118407814/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1118407814&linkCode=as2&tag=interactivetu-20&linkId=9c5472a2cf80b4300dd770f7fb6efd98">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1118407814&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=interactivetu-20" >
+                            <h5>Beginning Programming with Java For Dummies</h5>
+                        </a>
+                        <img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=1118407814" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </div>
+                    <div class="span2">
+                        <a target="_blank"  href="https://www.amazon.com/gp/product/1539397831/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1539397831&linkCode=as2&tag=interactivetu-20&linkId=38694c88370dd73323600485cf526cd7">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1539397831&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=interactivetu-20" >
+                            <h5>Learn Java in One Day and Learn It Well</h5>
+                        </a>
+                        <img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=1539397831" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </div>
+                    <div class="span2">
+                        <a target="_blank"  href="https://www.amazon.com/gp/product/0134670949/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0134670949&linkCode=as2&tag=interactivetu-20&linkId=33f79e94951f43b9b12a4bd5bf125443">
+                            <img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=0134670949&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=interactivetu-20" >
+                            <h5>Introduction to Java Programming and Data Structures, Comprehensive Version</h5>
+                        </a>
+                        <img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=0134670949" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </div>
+                </div>
+            {% endif %}
+
             <!--
             <div>
                 <script type="text/javascript">
@@ -131,7 +180,7 @@
             <script type="text/javascript" src="https://www.spoj.com/banner.js"></script>
             {% endif %}
 
-            {% if domain_data.language == "java" %}
+            {% if domain_data.language == "java" and False %}
             <!-- Insticator API Embed Code -->
             <div id="insticator-container">
             <link rel="stylesheet" href="https://embed.insticator.com/embedstylesettings/getembedstyle?embedUUID=313360e4-8449-4846-814d-e8ec2acce8e7">
@@ -148,7 +197,7 @@
             </div>
 
         </div>
-        <div class="span2 hidden-phone" style="margin-left: 0">
+        <div class="span2 hidden-phone" style="margin-left: 10px">
             <div id="google-ad-right">
                 <!--
                 <div style="margin-bottom: 10px">
