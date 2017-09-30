@@ -191,7 +191,9 @@
                 </div>
                 {% endif %}
 
-                {% if domain_data.language == "python" %}
+                <a target="_blank"  href="https://www.amazon.com/gp/product/B00NB86OYE/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00NB86OYE&linkCode=as2&tag=interactivetu-20&linkId=c1368e9bd84bc242ab9f8fe8d62b4144"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B00NB86OYE&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=interactivetu-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=B00NB86OYE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+                {% if domain_data.language == "python" and False %}
                     <iframe src="https://learnpython-ads.datacamp.com/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
 {#
                     <script type="text/javascript">
@@ -228,8 +230,8 @@
                 {% elif domain_data.language == "java" %}
 
                 {% endif %}
-                <div style="margin-left: 5px;">
-                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png"></a>
+                <div style="margin-top: 10px">
+                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png" style="width: 160px"></a>
                 </div>
 
             </div>
