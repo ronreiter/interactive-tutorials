@@ -191,9 +191,8 @@
                 </div>
                 {% endif %}
 
-                <a target="_blank"  href="https://www.amazon.com/gp/product/B00NB86OYE/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00NB86OYE&linkCode=as2&tag=interactivetu-20&linkId=c1368e9bd84bc242ab9f8fe8d62b4144"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B00NB86OYE&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=interactivetu-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=B00NB86OYE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-                {% if domain_data.language == "python" and False %}
+                {% if domain_data.language == "python" %}
                     <iframe src="https://learnpython-ads.datacamp.com/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
 {#
                     <script type="text/javascript">
@@ -211,7 +210,6 @@
                     amzn_assoc_rows = "1";
                     </script>
                     <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-#}
                     <script type="text/javascript">
                     amzn_assoc_placement = "adunit0";
                     amzn_assoc_search_bar = "false";
@@ -225,11 +223,21 @@
                     amzn_assoc_asins = "1449340377,1449355730,1449357016,1449359361";
                     </script>
                     <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+#}
 
+                    <h4>Online Courses</h4>
+                    <a href="https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.426570&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-python%2F">
 
-                {% elif domain_data.language == "java" %}
+                        <img border=0 src="https://udemy-images.udemy.com/course/480x270/426570_1b91_3.jpg" >
+                        <div style="text-align: center">Learn Python: Python for Beginners</div>
+                    </a>
+                    <img border=0 width=1 height=1 src="https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.426570&type=2&subid=0">
+
+                {% else %}
+                    <a target="_blank"  href="https://www.amazon.com/gp/product/B00NB86OYE/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00NB86OYE&linkCode=as2&tag=interactivetu-20&linkId=c1368e9bd84bc242ab9f8fe8d62b4144"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B00NB86OYE&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=interactivetu-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=B00NB86OYE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
                 {% endif %}
+                <h4>Sponsors</h4>
                 <div style="margin-top: 10px">
                     <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png" style="width: 160px"></a>
                 </div>
