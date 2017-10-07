@@ -41,9 +41,7 @@ It is also possible to send functions arguments by keyword, so that the order of
 
 
 
-
-
-The "bar" function receives 3 arguments. If an additional "action" argument is received, and it instructs on summing up the numbers, then the sum is printed out. Alternatively, the function also knows it must return the first argument, if a "return" argument is received which instructs it.
+The "bar" function receives 3 arguments. If an additional "action" argument is received, and it instructs on summing up the numbers, then the sum is printed out. Alternatively, the function also knows it must return the first argument, if the value of the "number" parameter, passed into the function, is equal to "first".
 
 Exercise
 --------
