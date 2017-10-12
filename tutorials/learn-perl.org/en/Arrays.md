@@ -102,6 +102,7 @@ Tutorial Code
 
 Expected Output
 ---------------
+
 	One iPhone 5 costs 120 pounds.
 	One Samsung Galaxy S4 costs 90 pounds.
 	One Motorolla Razr XT910 costs 86 pounds.

@@ -7,7 +7,8 @@ Perl programming can be accomplished by directly executing perl commands at the 
 
 Exercise
 -------------
-Use the print command to print the line "Hello, World!". Note that the new line character "\n" should be used in order to print a new line.
+
+Use the print command to print the line "Hello, World!". Note that the new line character `\n` should be used in order to print a new line.
 
 Tutorial Code
 -------------

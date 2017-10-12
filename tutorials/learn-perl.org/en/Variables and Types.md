@@ -1,29 +1,32 @@
 Tutorial
 --------
-Basic syntax:
-The hash (#) sign starts a comment (there are no multiline comments)
 
-The semicolon (;) is required to end each command line
+### Basic syntax
 
-The simplest way to print text to the screen is using the 'print' command. 
+The hash `#` sign starts a comment (there are no multiline comments)
+
+The semicolon `;` is required to end each command line
+
+The simplest way to print text to the screen is using the `print` command. 
 
 	print "this is a text line\n";
 
-The newline (\\n) needs to be explicitly defined, is required.
+The newline `\n` needs to be explicitly defined, is required.
 
-The double-quotes ("") used to encapsulate a string to be printed allows replacement of variable values inside the string. The single-quote ('') prevents variable value replacement.
+The double-quotes `""` used to encapsulate a string to be printed allows replacement of variable values inside the string. The single-quote `''` prevents variable value replacement.
 
 	$x = 5;
 	print "double quotes allow the variable named x to show its real value of $x\n";
 	print 'but within single-quotes - its value of $x is not replaced\n';
 
-Variables:
-Perl supports 3 kinds of variables
-Scalars - contain a single string or numeric value. Variable name must start with a $.
-Arrays - contain a randomly accessed ordered set of values. Variable name must start with a @.
-Hashes - contain (key, value) pairs efficiently accessed per key. Variable name must start with a %.
+### Variables
 
-Assigning values to variable is done with the equal sign (=). The operand to the left of the = sign is the name of the variable, and the operand to the right of the = sign is the value stored in the variable. For example some assignments to scalars:
+Perl supports 3 kinds of variables
+Scalars - contain a single string or numeric value. Variable name must start with a `$`.
+Arrays - contain a randomly accessed ordered set of values. Variable name must start with a `@`.
+Hashes - contain (key, value) pairs efficiently accessed per key. Variable name must start with a `%`.
+
+Assigning values to variable is done with the equal sign `=`. The operand to the left of the `=` sign is the name of the variable, and the operand to the right of the `=` sign is the value stored in the variable. For example some assignments to scalars:
 
 	$item_price = 5;             # An integer assignment
 	$item_name = "Apple";        # A string
@@ -56,7 +59,7 @@ model: Mercedes 2000  price: 250000
 model: Toyota Corolla price:  20000
 model: Lexus 3        price:  95000
 
-Assign an array variable called: my_wishlist with the two requested car model you wish to buy: The first array element is the full model name of the BMW car and the second array model is the full model name of the Toyota car. Use the array variable contents as keys to the hash variable in order to print lines in the following format:
+Assign an array variable called: `my_wishlist` with the two requested car models you wish to buy: The first array element is the full model name of the BMW car and the second array model is the full model name of the Toyota car. Use the array variable's contents as keys to the hash variable in order to print lines in the following format:
 I would like to buy one <car model goes here> for the price of <price goes here> Dollars.
 for example:
 I would like to buy one Lexus 3 for the price of 95000 Dollars.
@@ -70,6 +73,7 @@ Tutorial Code
 
 Expected Output
 ---------------
+
 	I would like to buy one BMW Series 5 for the price of 100000 Dollars.
 	I would like to buy one Toyota Corolla for the price of 20000 Dollars.
 
