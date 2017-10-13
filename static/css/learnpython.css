@@ -221,3 +221,7 @@ textarea {
     padding-left: 8px;
     padding-right: 8px;
 }
+
+.course img:first-child {
+    width: 100%;
+}

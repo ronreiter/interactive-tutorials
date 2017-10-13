@@ -100,7 +100,7 @@
 
             <div class="hidden-phone">
 
-            {% if domain_data.language == "java" %}
+            {% if domain_data.language == "java" and False %}
                 <script type="text/javascript">
                 amzn_assoc_placement = "adunit0";
                 amzn_assoc_search_bar = "false";
@@ -118,6 +118,24 @@
                 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
 
             {% endif %}
+            <h3>Online Courses</h3>
+            <div class="row">
+
+            {% if domain_data.language in ["java", "c#", "c"] %}
+                {% for course in domain_data.courses %}
+                <div class="course span2">
+                    <a href="{{ course.link }}">
+                        <img src="{{ course.image_url }}">
+                        <p style="font-weight: bold; margin-top: 10px; font-size: 14px">{{ course.link_name }}</p>
+{#                    <div>Retail Price: ${{ course.retail_price }}</div>#}
+{#                    <div style="text-size: 12px">{{ course.advertiser }}</div>#}
+                    </a>
+                    <img src="{{ course.pixel_url }}" width="1" height="1" border="0"/>
+                </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+
 
             <!--
             <div>
