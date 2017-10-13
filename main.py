@@ -212,7 +212,7 @@ def is_development_mode():
 def get_domain_data():
     host = get_host() if not is_development_mode() else DEFAULT_DOMAIN
     data = constants.DOMAIN_DATA[host]
-    data["courses"] = courses[host]
+    data["courses"] = courses.get(host)
     return data
 
 
