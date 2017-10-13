@@ -13,8 +13,8 @@ Perl hash variables store a set of key/values pairs. The hash variable name begi
         print "$age_tom\n";                   # 12
         print "$names_and_ages{'John'}\n";    # 25
 
-Values to hash pairs can be created by using a list as shown above, where the first element of the pair is used as the key and the second element is used as the value and so forth. For claritym the
-"=>" string can be used as an alias to specify the pairs. For example:
+Values to hash pairs can be created by using a list as shown above, where the first element of the pair is used as the key and the second element is used as the value and so forth. For clarity, the
+`=>` string can be used as an alias to specify the pairs. For example:
 
 	%names_and_ages = ('John' => 25, 'Mary' => 45, 'Tom' => 12);
 
@@ -25,9 +25,9 @@ Another method for assigning a value to a named key, one by one, is via a direct
 
 ### Extracting Keys and Values from a Hash variable
 
-The list of all the keys from a hash is provided by the 'keys' function, in the syntax: keys %hashname
-The list of all the values from a hash is provided by the 'values' function, in the syntax: values %hashname
-Both the 'keys' and 'values' function return an array variable.
+The list of all the keys from a hash is provided by the `keys` function, in the syntax: `keys %hashname`
+The list of all the values from a hash is provided by the `values` function, in the syntax: `values %hashname`
+Both the `keys` and `values` function return an array variable.
 
 For example:
 
