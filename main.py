@@ -18,6 +18,8 @@ import constants
 
 #cache = redis.Redis(host=constants.CACHE_HOST)
 
+courses = json.load(open("courses.json"))
+
 # Flask app
 app = Flask(__name__)
 app.secret_key = constants.SECRET_KEY
@@ -208,7 +210,10 @@ def is_development_mode():
 
 
 def get_domain_data():
-    return constants.DOMAIN_DATA[get_host()] if not is_development_mode() else constants.DOMAIN_DATA[DEFAULT_DOMAIN]
+    host = get_host() if not is_development_mode() else DEFAULT_DOMAIN
+    data = constants.DOMAIN_DATA[host]
+    data["courses"] = courses.get(host)
+    return data
 
 
 def get_tutorial_data(tutorial_id, language="en"):
