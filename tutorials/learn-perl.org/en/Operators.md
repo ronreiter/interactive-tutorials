@@ -23,7 +23,7 @@ Arithmetic Operators - manipulate numeric scalar values
 	# scalar values for operator examples
 	$x = 10;
 	$y = 30;
-        $z = 3;
+	$z = 3;
 
 Operator - Description e.g. Example
 
