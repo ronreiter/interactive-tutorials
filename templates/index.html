@@ -118,10 +118,10 @@
                 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
 
             {% endif %}
+            {% if domain_data.courses %}
             <h3>Online Courses</h3>
             <div class="row">
 
-            {% if domain_data.language in ["java", "c#", "c"] %}
                 {% for course in domain_data.courses %}
                 <div class="course span2">
                     <a href="{{ course.link }}">
@@ -133,8 +133,8 @@
                     <img src="{{ course.pixel_url }}" width="1" height="1" border="0"/>
                 </div>
                 {% endfor %}
-            {% endif %}
             </div>
+            {% endif %}
 
 
             <!--
