@@ -62,7 +62,7 @@ You can create multiple different objects that are of the same class(have the sa
 
     myobjecty.variable = "yackity"
 
-    # Then pring out both values
+    # Then print out both values
     print(myobjectx.variable)
     print(myobjecty.variable)
 
