@@ -17,17 +17,17 @@ Table des Matières
 ### Apprenez les Bases
 
 - [[Hello, World!]]
-- [[Variables et Types]](Variables and Types)
-- [[Listes]](Lists)
-- [[Opérators de Base]](Basic Operators)
-- [[Formatage de chaînes]](String Formatting)
-- [[Opérations de base sur les chaînes]](Basic String Operations)
+- [Variables et Types](Variables and Types)
+- [Listes](Lists)
+- [Opérators de Base](Basic Operators)
+- [Formatage de chaînes](String Formatting)
+- [Opérations de base sur les chaînes](Basic String Operations)
 - [[Conditions]]
-- [[Boucles]](Loops)
-- [[Fonctions]](Functions)
-- [[Classes et Objets]](Classes and Objects)
-- [[Dictionnaires]](Dictionaries)
-- [[Modules et Paquetages]](Modules and Packages)
+- [Boucles](Loops)
+- [Fonctions](Functions)
+- [Classes et Objets](Classes and Objects)
+- [Dictionnaires](Dictionaries)
+- [Modules et Paquetages](Modules and Packages)
 
 ### Data Science Tutorials
 - [[Numpy Arrays]]
