@@ -38,6 +38,8 @@ LANGUAGES = {
     "it": "Italian",
     "de": "German",
     "cn": "Chinese",
+    "fr": "French",
+    "pt": "Portugese",
 }
 
 tutorial_data = {}
