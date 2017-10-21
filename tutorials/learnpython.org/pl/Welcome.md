@@ -27,7 +27,6 @@ Spis treści
  - [[Moduly i pakiety|Moduły i pakiety]]
 
 ### Zaawansowany tutorial
-- [[Generatory]]
 - [[Listy skladane|Listy składane]]
 - [[Funkcje o zmiennej liczbie argumentow|Funkcje o zmiennej liczbie argumentów]]
 - [[Wyrazenia regularne|Wyrażenia regularne]]
