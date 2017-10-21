@@ -18,34 +18,6 @@ Table des Matières
 
 - [[Hello, World!]]
 - [Variables et Types](Variables and Types)
-- [Listes](Lists)
-- [Opérators de Base](Basic Operators)
-- [Formatage de chaînes](String Formatting)
-- [Opérations de base sur les chaînes](Basic String Operations)
-- [[Conditions]]
-- [Boucles](Loops)
-- [Fonctions](Functions)
-- [Classes et Objets](Classes and Objects)
-- [Dictionnaires](Dictionaries)
-- [Modules et Paquetages](Modules and Packages)
-
-### Data Science Tutorials
-- [[Numpy Arrays]]
-- [[Pandas Basics]]
-
-### Advanced Tutorials
-
-- [[Generators]]
-- [[List Comprehensions]]
-- [[Multiple Function Arguments]]
-- [[Regular Expressions]]
-- [[Exception Handling]]
-- [[Sets]]
-- [[Serialization]]
-- [[Partial functions]]
-- [[Code Introspection]]
-- [[Closures]]
-- [[Decorators]]
 
 ### Other Python Tutorials
 
