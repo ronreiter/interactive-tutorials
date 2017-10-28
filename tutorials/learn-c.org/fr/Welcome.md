@@ -14,26 +14,6 @@ Table des Matières
 ### Apprentissage des Bases
 
 - [[Hello, World!]]
-- [[Variables and Types|Variables et Types]]
-- [[Arrays|Tableaux]]
-- [[Multidimensional Arrays|Tableaux Multidimensionnels]]
-- [[Strings|Chaînes de caractères]]
-- [[For loops|Boucles For]]
-- [[While loops|Boucles While]]
-- [[Functions|Fonctions]]
-
-### Notions Avancées
-- [[Pointers|Pointeurs]]
-- [[Structures]]
-- [[Function arguments by reference|Passage de Paramètres par Référence]]
-- [[Dynamic allocation|Allocation Dynamique]]
-- [[Arrays and Pointers|Tableaux et Pointeurs]]
-- [[Recursion|Récursivité]]
-- [[Linked lists|Listes chaînées]]
-- [[Binary trees|Arbres binaires]]
-- [[Unions]]
-- [[Pointer Arithmetics|Arithmétique des Pointeurs]]
-- [[Function Pointers|Pointeurs de Fonctions]]
 
 ### Contributing Tutorials
 
