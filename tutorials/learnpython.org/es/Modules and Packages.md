@@ -57,25 +57,25 @@ El archivo `__init__.py` puede además decidir que módulos exporta el paquete c
 
     __all__ = ["bar"]
 
-Ejercicio
+Exercise
 --------
 
 En este ejercicio, necesitarás imprimir una lista alfabéticamente ordenada de todas las funciones en el módulo `re`, que contengan la palabra `find`.
 
-Código Tutorial
+Tutorial Code
 -------------
 
 import re
 
 # Tu código va aquí
 
-Salida esperada
+Expected Output
 ---------------
 
 test_object('find_members')
 success_msg('Great work!')
 
-Solución
+Solution
 --------
 
 import re

@@ -22,24 +22,24 @@ Usando una comprensión de lista podemos simplificar éste proceso a ésta notac
     word_lengths = [len(word) for word in words if word != "the"]
     print(words)
 
-Ejercicio
+Exercise
 --------
 
 Usando una comprensión de lista, crea una nueva lista llamada "newlist" fuera de la lista "numbers", que contenga solo los números positivos de la lista, como enteros.
 
-Código Tutorial
+Tutorial Code
 -------------
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 newlist = []
 print(newlist)
 
-Salida Esperada
+Expected Output
 ---------------
 
 test_output_contains("[34, 44, 68, 44, 12]")
 success_msg("Very nice!")
 
-Solución
+Solution
 --------
 numbers = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 newlist = [int(x) for x in numbers if x > 0]

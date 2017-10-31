@@ -43,14 +43,14 @@ También es posible enviar argumentos de funciones por clave, para que el orden 
 
 La función "bar" recibe tres argumentos. Si se recibe un argumento "action" adicional, y ordena que se haga un resumen de los números,  se imprimirá el resumen. Alternativamente, la función tambien debe devolver el primer argumento, si el valor del parámetro "number", pasado a la función, es igual a "first".
 
-Ejercicio
+Exercise
 --------
 
 Rellena las funciones `foo` y `bar` para que puedan recibir una cantidad variable de argumentos (tres o más)
 La función `foo` debe devolver la cantidad de argumentos extra recibidos.
 `bar` debe devolver `True` si el argumento con la clave `magicnumber` vale 7, y `False` en cualquier otro caso.
 
-Código del Tutorial
+Tutorial Code
 -------------
 
 # Edita el prototipo de las funciones y la implementación
@@ -71,7 +71,7 @@ if bar(1,2,3,magicnumber = 6) == False:
 if bar(1,2,3,magicnumber = 7) == True:
     print("Awesome!")
 
-Salida Esperada
+Expected Output
 ---------------
 
 test_output_contains("Good.")
@@ -80,7 +80,7 @@ test_output_contains("Great.")
 test_output_contains("Awesome!")
 success_msg("Great work!")
 
-Solución
+Solution
 --------
 # Edita el prototipo de las funciones y la implementación
 def foo(a, b, c, *args):
