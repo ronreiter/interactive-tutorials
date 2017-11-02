@@ -1,7 +1,7 @@
 Español
 -------
 
-Bienvenidos a los tutoriales de learnpython.org sobre Python. 
+Bienvenidos a los tutoriales de learnpython.org sobre Python.
 
 Seas un programador experimentado o no, este sitio web es creado para cualquiera que desea aprender el lenguaje
 de programación Python.
@@ -30,17 +30,32 @@ Indice
 - [Funciones](Functions)
 - [Clases y objetos](Classes and Objects)
 - [Diccionarios](Dictionaries)
+- [Módulos y paquetes](Modules and Packages)
+
+### Tutoriales de ciencias de datos
+- [Arrays Numpy](Numpy Arrays)
+- [Tutorial básico de Pandas](Pandas Basics)
 
 
 ### Tutoriales Avanzados
 
 - [Generadores](Generators)
+- [Compresiones de listas](List Comprehensions)
+- [Funciones de argumentos multiples](Multiple Function Arguments)
 - [Expresiones regulares](Regular Expressions)
-- Compresiones de listas
-- Funciones de argumentos multiples
-- Manejo de Excepciones
-- Sets
-- Serialización
-- Funciones parciales
-- Instrospección del códgo
-- Decoratores
+- [Manejo de Excepciones](Exception Handling)
+- [Sets](Sets)
+- [Serialización](Serialization)
+- [Funciones parciales](Partial functions)
+- [Instrospección del códgo](Code Introspection)
+- [Closures](Closures)
+- [Decoradores](Decorators)
+
+### Otros tutoriales Python
+
+- [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) tiene toneladas de grandes [tutoriales Python](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) cubriendo manipulación de datos, visualización de datos, estadísticas, machine learning, y más
+- Lee el curso de After Hours Programming [Tutoriales Python y referencias](http://www.afterhoursprogramming.com/index.php?article=181)
+
+### Contribuir con tutoriales
+
+Lee más aquí: [Contribuir con tutoriales](Contributing Tutorials)
