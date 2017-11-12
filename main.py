@@ -176,10 +176,11 @@ def init_tutorials():
                     if not link in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
                             "page_title" : link.decode("utf8"),
-                            "text" : "You can contribute this page by forking the repository at: " +
+                            "text" : "<p>This page does not exist yet. </p>" + "<p>You can contribute this page by forking the repository at: " +
                                      "<a href='https://github.com/ronreiter/interactive-tutorials'>" +
                                      "https://github.com/ronreiter/interactive-tutorials" +
-                                     "</a>."
+                                     "</a>.</p>",
+                            "code": ""
                         }
 
                     if not "back_chapter" in tutorial_data[domain][language][link]:
