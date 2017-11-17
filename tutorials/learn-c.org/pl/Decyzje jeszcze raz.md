@@ -1,6 +1,6 @@
 Tutorial
 --------
-Na warsztat weźmiemy tym razem instrukcję switch. Za jej pomocą sprawdzamy, czy w danej zmiennej są zapisane konkretne wartość. Najpierw przykład:
+Na warsztat weźmiemy tym razem instrukcję `switch`. Za jej pomocą sprawdzamy, czy w danej zmiennej są zapisane konkretne wartości. Najpierw przykład:
 
     #include <stdio.h>
     #include <time.h>
@@ -34,11 +34,11 @@ Na warsztat weźmiemy tym razem instrukcję switch. Za jej pomocą sprawdzamy, c
       return 0;
     }
 
-Po słowie switch w nawiasach `()` umieszczamy zmienną, której wartość chcemy zbadać. Potem w nawiasach `{}` umieszczamy wszystkie rozważane "przypadki". Po słowie case umieszczamy wartość, z którą chcemy porównać zmienną, a potem dwukropek. Jeśli zmienna jest równa wartości po słówku case, to zostaną wykonane wszystkie instrukcje do wystąpienia słowa kluczowego break albo do nawiasu `}` zamykającego switch. Możesz się o tym przekonać usuwając pierwsze wystąpienie `brake` w powyższym przykładzie. Instrukcja default jest opcjonalna i służy nam obsłużeniu wszystkich tych sytuacji, których nie uwzględniliśmy za pomocą `case`. `default` umieszczamy zawsze na końcu i prawdę powiedziawszy `break` jest niepotrzebny, ale wielu programistów umieszcza go, aby uniknąć ewentualnych pomyłek przy ewentualnym modyfikowaniu programu w przyszłości.
+Po słowie `switch` w nawiasach `()` umieszczamy zmienną, której wartość chcemy zbadać. Potem w nawiasach `{}` umieszczamy wszystkie rozważane "przypadki". Po słowie `case` umieszczamy wartość, z którą chcemy porównać zmienną, a potem dwukropek. Jeśli zmienna jest równa wartości po słówku case, to zostaną wykonane wszystkie instrukcje do wystąpienia słowa kluczowego `break` albo do nawiasu `}` zamykającego switch. Możesz się o tym przekonać usuwając pierwsze wystąpienie `break` w powyższym przykładzie. Instrukcja `default` jest opcjonalna i służy nam do obsłużenia wszystkich tych sytuacji, których nie uwzględniliśmy za pomocą `case`. `default` umieszczamy zawsze na końcu i prawdę powiedziawszy `break` jest niepotrzebny, ale wielu programistów umieszcza go, aby uniknąć pomyłek przy modyfikowaniu programu w przyszłości.
 
 ### Ćwiczenie
 
-Za pomocą instrukcji switch oraz operatora `++`, (przypominam, że zwiększa zmienną o jeden) spraw, aby niezależnie od wyniku losowania zmienna X zawsze miała wartość 4. 
+Za pomocą instrukcji `switch` oraz operatora `++`, (zwiększa zmienną o jeden) spraw, aby niezależnie od wyniku losowania zmienna X zawsze miała wartość 4. 
 
 Tutorial Code
 -------------

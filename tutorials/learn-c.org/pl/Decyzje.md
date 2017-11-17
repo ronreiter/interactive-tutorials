@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Zdecydowana większość programów z jakimi się spotkasz w przyszłości będzie miała swego rodzaju mechanizm decyzyjny. To jaka akcja zostanie podjęta zależy od informacji dostarczonych przez użytkownika lub też odczytanych z dysku. Chyba najważniejszą instrukcją jest tutaj `if`. Pierwsza część kodu demonstruje przy okazji generowanie liczb losowych.
+Zdecydowana większość programów z jakimi się spotkasz w przyszłości będzie miała swego rodzaju mechanizm decyzyjny. To, jaka akcja zostanie podjęta zależy od informacji dostarczonych przez użytkownika lub odczytanych z dysku. Chyba najważniejszą instrukcją jest tutaj `if`. Pierwsza część kodu demonstruje przy okazji generowanie liczb losowych.
 
     #include <stdio.h>
     #include <time.h>
@@ -28,7 +28,7 @@ Zdecydowana większość programów z jakimi się spotkasz w przyszłości będz
       return 0;
     }
 
-Program ma za zadanie wygenerować liczbę pseudolosową, przez którą zostanie podzielone 100. Tutaj prawdopodobieństwo wylosowania 0 wynosi 1/3. Tymczasem dzielenie przez 0 jest po prostu niezdefniowane matematycznie. Tutaj niestety kompilator tego nie wykryje, bo liczby generowane są na bieżąco. Błąd objawi się dopiero w czasie wykonywania się programu. Dokładnie taki właśnie błąd w 1997 r. unieruchomił amerykański krążownik USS Yorktown. Aby uniknąć czegoś takiego, możemy przed każdym dzieleniem użyć instrukcji if(){} else{}. Jeśli warunek znajdujący się w okrągłych nawiasach za if jest prawdziwy, to wykonają się instrukcje umieszczone w następujących zaraz potem nasnawiasach klamrowych. Uwaga! Jeśli zabraknie nawiasów klamrowych to wykona się jedna linijka kodu tuż pod `if` albo `else`. Można po kolei rozwaź kilka różnych warunków za pomocą `else if`.
+Program ma za zadanie wygenerować liczbę pseudolosową, przez którą zostanie podzielone 100. Tutaj prawdopodobieństwo wylosowania 0 wynosi 1/3. Tymczasem dzielenie przez 0 jest po prostu niezdefniowane matematycznie. Tutaj niestety kompilator tego nie wykryje, bo liczby generowane są na bieżąco. Błąd objawi się dopiero w czasie wykonywania się programu. Dokładnie taki właśnie błąd w 1997 r. unieruchomił amerykański krążownik USS Yorktown. Aby uniknąć czegoś takiego, możemy przed każdym dzieleniem użyć instrukcji `if(){} else{}`. Jeśli warunek znajdujący się w okrągłych nawiasach za if jest prawdziwy, to wykonają się instrukcje umieszczone w następujących zaraz potem nawiasach klamrowych. Uwaga! Jeśli zabraknie nawiasów klamrowych to wykona się jedna linijka kodu tuż pod `if` albo `else`. Można po kolei rozważyć kilka różnych warunków za pomocą `else if`.
 
     #include <stdio.h>
 
@@ -50,7 +50,7 @@ Program ma za zadanie wygenerować liczbę pseudolosową, przez którą zostanie
       return 0;
     }
 
-Po znalezieniu pierwszego spełnionego warunku i wykonaniu przewidzianych dla niego instrukcji, dalsze warunki nie są spradzane. Wykonywane są instrukcje znajdujące się za klamrą zamykającą blok `else`, o ile taki został napisany. Jeśli potrzebujemy sprawdzić niezależnie kilka warunków, to można to zrobić tak:
+Po znalezieniu pierwszego spełnionego warunku i wykonaniu przewidzianych dla niego instrukcji, dalsze warunki nie są sprawdzane. Wykonywane są instrukcje znajdujące się za klamrą zamykającą blok `else`, o ile taki został napisany. Jeśli potrzebujemy sprawdzić niezależnie kilka warunków, to można to zrobić tak:
 
     if(jakiś warunek){
      jakieś instrukcje
@@ -65,6 +65,7 @@ Po znalezieniu pierwszego spełnionego warunku i wykonaniu przewidzianych dla ni
     }
 
 ### Ćwiczenie
+
 Do zmiennej X jest zapisywana losowa liczba całkowita z przedziału od 1 do 100. Umieść swój kod pomiędzy liniami komentarza. Do zmiennej Y zapisz 1, jeśli X należy do przedzialu od 1 do 25. Jeśli zaś X należy do przedziału od 26 do 50, to do Y dwójkę. Postąp analogicznie w pozostałych dwóch przypadkach. Nie wolno zmieniać ci wartości zmiennej X.
 
 Tutorial Code
