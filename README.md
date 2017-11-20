@@ -17,10 +17,14 @@ This is the open source repository for the free interactive tutorial websites:
 
 Please feel free to contribute your tutorials or exercises by sending a pull request and adding yourself on the list.
 
+Developers will require the programming language Python https://www.python.org/ and the web framework Flask http://flask.pocoo.org/ installed in order to use this repository.
+
 The web server will locally compile and load all Markdown files into memory. The development version of the web server
 requires that you specify the domain you are working on, e.g.:
 
     python main.py -d learnpython.org
+    
+By default, the server process will run at http://localhost:5000
 
 Contributors
 ============
