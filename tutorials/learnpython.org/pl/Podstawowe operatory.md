@@ -1,17 +1,17 @@
 Tutorial
 --------
 
-Ta sekcja wyjaśnia jak posługiwać się podstawowymi operatorami w Python'ie.
+Ta sekcja wyjaśnia jak posługiwać się podstawowymi operatorami w Pythonie.
 
-### Operatory arytmetyczne       
+### Operatory arytmetyczne
 
-Tak jak w innych językach programowania dostępne są operatory dodawania, odejmowania, mnożenia i dzielenia na liczbach.<br> 
+Tak jak w innych językach programowania dostępne są operatory dodawania, odejmowania, mnożenia i dzielenia na liczbach.
 
     suma = 1 + 2 * 3 / 4.0
 
-Spróbuj przewidzieć jaką wartość będzie miała ta zmienna. Czy python przestrzega reguł kolejności działań?
+Spróbuj przewidzieć jaką wartość będzie miała ta zmienna. Czy Python przestrzega reguł kolejności działań?
 
-Innym dostępnym operatorem jest modulo %, który zwraca resztę z dzielenia. dzielna % dzielnik = reszta.
+Innym dostępnym operatorem jest modulo (`%`), który zwraca resztę z dzielenia (`dzielna % dzielnik = reszta`).
 
     reszta = 11 % 3
 
@@ -35,8 +35,8 @@ Python pozwala także na "mnożenie" napisów, czyli uzyskanie ciągu powtarzaj�
 Tablice mogą być łączone za pomocą symbolu dodawania:
 
     parzyste_dodatnie = [2,4,6,8]
-    nieparzyste_dotanie = [1,3,5,7]
-    naturalne = parzyste_dodatnie + nieparzyste_dotanie
+    nieparzyste_dodatnie = [1,3,5,7]
+    naturalne = parzyste_dodatnie + nieparzyste_dodatnie
 
 Tak jak w przypadku stringów możliwe jest tworzenie tablic o powtarzającym się ciągu elementów za pomocą znaku mnożenia:
 
@@ -44,9 +44,9 @@ Tak jak w przypadku stringów możliwe jest tworzenie tablic o powtarzającym si
 
 ### Ćwiczenie
 
-Wypełnij tablice x_tab i y_tab tak, aby zawierały odpowiednio 10 obiektów x i 10 y. Musisz także utworzyć tablicę o nazwie "duza_tab", która będzie zawierała po 10 zmiennych "x" i "y". Zrób to dodając do siebie wspomniane wyżej tablice.
+Wypełnij tablice `x_tab` i `y_tab` tak, aby zawierały odpowiednio 10 obiektów `x` i 10 `y`. Stwórz także tablicę o nazwie `duza_tab`, która będzie zawierała po 10 zmiennych `x` i `y`. Zrób to dodając do siebie wspomniane wyżej tablice.
 
-Dociekliwych informuję, że funkcja object powołuje do życia obiekt najbardziej podstawowego typu, jaki jest dostępny w pythonie. Natomiast metoda nazwa_tablicy.count() zwraca liczbę elementów zapisanych w tablicy.
+Dociekliwych informuję, że funkcja `object` powołuje do życia obiekt najbardziej podstawowego typu, jaki jest dostępny w pythonie. Natomiast metoda `.count()` zwraca liczbę elementów zapisanych w tablicy.
 
 Tutorial Code
 -------------
