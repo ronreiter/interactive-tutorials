@@ -32,10 +32,84 @@
 <div class="navbar navbar-static-top" style="margin-bottom: 10px">
     <div class="navbar-inner">
         <div class="container">
-        <a class="brand" href="/" style="padding: 4px 10px"><img src="{{ domain_data.logo }}" style="height: 32px;"/></a>
+        <a class="brand" href="/"
+        {% if domain_data.language == "c" %}
+        style="padding: 4px 10px; position: relative; top: 5px;"
+        {% endif %}
+        {% if domain_data.language == "python" %}
+        style="padding: 4px 10px; position: relative; top: 3px;"
+        {% endif %}
+        {% if domain_data.language == "java" %}
+        style="padding: 4px 10px; position: relative; top: 3px;"
+        {% endif %}
+        {% if domain_data.language == "html" %}
+        style="padding: 4px 10px; position: relative; top: 2px;"
+        {% endif %}
+        {% if domain_data.language == "go" %}
+        style="padding: 4px 10px; position: relative; top: 5px;"
+        {% endif %}
+        {% if domain_data.language == "perl" %}
+        style="padding: 4px 10px; position: relative; top: 3px;"
+        {% endif %}
+        {% if domain_data.language == "php" %}
+        style="padding: 4px 10px; position: relative; top: 1px;"
+        {% endif %}
+        {% if domain_data.language == "javascript" %}
+        style="padding: 4px 10px; position: relative; top: 4px;"
+        {% endif %}
+        {% if domain_data.language == "ruby" %}
+        style="padding: 4px 10px; position: relative; top: 2px;"
+        {% endif %}
+        {% if domain_data.language == "bash" %}
+        style="padding: 4px 10px; position: relative; top: 2px;"
+        {% endif %}
+        {% if domain_data.language == "c#" %}
+        style="padding: 4px 10px; position: relative; top: 2px;"
+        {% endif %}
+        {% if domain_data.language == "cpp" %}
+        style="padding: 4px 10px; position: relative; top: 5px;"
+        {% endif %}>
+
+        <img src="{{ domain_data.logo }}" style="height: 32px;"/></a>
         <div class="social hidden-phone" style="margin-top: 10px; display: inline-block; float: left">
                 <!-- AddThis Button BEGIN -->
-                <div class="addthis_toolbox addthis_default_style " style="width: 400px; margin-left: 20px">
+                <div class="addthis_toolbox addthis_default_style "
+                {% if domain_data.language == "c" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 3px;"
+                {% endif %}
+                {% if domain_data.language == "python" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 4px;"
+                {% endif %}
+                {% if domain_data.language == "java" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 7px;"
+                {% endif %}
+                {% if domain_data.language == "html" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 3px;"
+                {% endif %}
+                {% if domain_data.language == "go" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 8px;"
+                {% endif %}
+                {% if domain_data.language == "perl" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 5px;"
+                {% endif %}
+                {% if domain_data.language == "php" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 2px;"
+                {% endif %}
+                {% if domain_data.language == "javascript" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 4px;"
+                {% endif %}
+                {% if domain_data.language == "ruby" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 1px;"
+                {% endif %}
+                {% if domain_data.language == "bash" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 2px;"
+                {% endif %}
+                {% if domain_data.language == "cpp" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 8px;"
+                {% endif %}
+                {% if domain_data.language == "c#" %}
+                style="width: 400px; margin-left: 20px; position: relative; top: 3px;"
+                {% endif %}>
                     <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
                     <a class="addthis_button_tweet"></a>
                     <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
