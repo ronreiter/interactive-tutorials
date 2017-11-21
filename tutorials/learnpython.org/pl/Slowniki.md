@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Słownik jest strukturą danych podobną do tablicy, ale pracuje się na nim w oparciu o hasła (zwane też kluczami), a nie indeksy. Hasła mogą być obiektem o dowolnego typu (napisy, liczby, tablice itp.).
+Słownik jest strukturą danych podobną do tablicy, ale pracuje się na nim w oparciu o klucze (zwane też hasłami), a nie indeksy. Klucze mogą być obiektem dowolnego typu (napisy, liczby, tablice itp.).
 
 Na przykład baza danych zawierająca numery telefoniczne znajomych może być utworzona w następujący sposób:
 
@@ -20,7 +20,7 @@ Powyższą operację można także zapisać w bardziej zwięzły sposób:
 
 ### Przeszukiwanie słowników 
 
-Słowniki mogą być przeszukiwane tak jak tablice. Jednak słowniki, w przeciwieństwie do tablic, nie przechowują danych w kolejności, w której zostały zapisane. Aby wypisać pary klucz - wartość, wystarczy użyć następującej składni:
+Słowniki mogą być przeszukiwane tak jak tablice. Jednak słowniki, w przeciwieństwie do tablic, nie przechowują danych w kolejności, w której zostały zapisane. Aby wypisać pary klucz – wartość, wystarczy użyć następującej składni:
 
     for imie, numer in kontakty.iteritems():
         print "%s ma numer telefonu: %d" % (imie, numer)
@@ -41,7 +41,7 @@ albo:
 
 ### Ćwiczenie
 
-Do istniejącej książki telefonicznej dodaj nowy kontakt: Jakub o nr 938273443. Musisz także usunąć z niej Kamilę.
+Do istniejącej książki telefonicznej dodaj nowy kontakt: `Jakub` o nr `938273443`. Następnie usuń z niej Kamilę.
 
 Tutorial Code
 -------------
@@ -65,7 +65,7 @@ if "Kamila" not in kontakty:
 Expected Output
 ---------------
 Jakub jest w kontaktach.
-Jego numer to  938273443 .
+Jego numer to 938273443 .
 Kamili nie ma w kontaktach.
 
 Solution
