@@ -20,6 +20,7 @@ LEARNGO_DOMAIN = "learn-golang.org"
 DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
         "language" : "python",
+        "css_safe_language" : "python",
         "analytics" : "UA-22741967-1",
         "namespace" : "learnpython.org",
         "full_url" : "http://learnpython.org",
@@ -28,6 +29,7 @@ DOMAIN_DATA = {
         "contact_email" : "admin@learnpython.org",
         "support_email" : "support@learnpython.org",
         "logo" : "/static/img/logos/learnpython.png",
+        "header_logo" : "/static/img/logos/learnpython_resized.png",
         "share_logo" : "/static/img/share-logos/learnpython-share.png",
         "language_uppercase" : "Python",
         "twitter" : "@learnpython",
@@ -42,6 +44,7 @@ print "Hello, World!"
     },
     LEARNHTML_DOMAIN : {
         "language" : "html",
+        "css_safe_language": "html",
         "analytics" : "UA-22741967-11",
         "namespace" : "learn-html.org",
         "full_url" : "http://learn-html.org",
@@ -50,6 +53,7 @@ print "Hello, World!"
         "contact_email" : "admin@learn-html.org",
         "support_email" : "support@learn-html.org",
         "logo" : "/static/img/logos/learnhtml.png",
+        "header_logo" : "/static/img/logos/learnhtml_resized.png",
         "share_logo" : "/static/img/share-logos/learnhtml-share.png",
         "language_uppercase" : "HTML",
         "twitter" : "@learnhtml",
@@ -73,6 +77,7 @@ write your code in this window.
 
     LEARNC_DOMAIN : {
         "language" : "c",
+        "css_safe_language": "c",
         "analytics" : "UA-22741967-3",
         "namespace" : "learn-c.org",
         "full_url" : "http://learn-c.org",
@@ -81,6 +86,7 @@ write your code in this window.
         "contact_email" : "admin@learn-c.org",
         "support_email" : "support@learn-c.org",
         "logo" : "/static/img/logos/learn-c.png",
+        "header_logo" : "/static/img/logos/learn-c_resized.png",
         "share_logo" : "/static/img/share-logos/learn-c-share.png",
         "language_uppercase" : "C",
         "twitter" : "@learnc",
@@ -109,6 +115,7 @@ return 0;
     },
     LEARNCPP_DOMAIN : {
         "language" : "c++11",
+        "css_safe_language": "cpp11",
         "analytics" : "UA-22741967-12",
         "namespace" : "learn-cpp.org",
         "full_url" : "http://learn-cpp.org",
@@ -117,6 +124,7 @@ return 0;
         "contact_email" : "admin@learn-cpp.org",
         "support_email" : "support@learn-cpp.org",
         "logo" : "/static/img/logos/learn-cpp.png",
+        "header_logo" : "/static/img/logos/learn-c_resized.png",
         "share_logo" : "/static/img/share-logos/learn-cpp-share.png",
         "language_uppercase" : "C++",
         "twitter" : "@learncpp",
@@ -147,6 +155,7 @@ return 0;
     },
     LEARNJAVA_DOMAIN : {
         "language" : "java",
+        "css_safe_language": "java",
         "analytics" : "UA-22741967-4",
         "namespace" : "learnjavaonline.org",
         "full_url" : "http://learnjavaonline.org",
@@ -155,6 +164,7 @@ return 0;
         "contact_email" : "admin@learnjavaonline.org",
         "support_email" : "support@learnjavaonline.org",
         "logo" : "/static/img/logos/learnjavaonline.png",
+        "header_logo" : "/static/img/logos/learnjavaonline_resized.png",
         "share_logo" : "/static/img/share-logos/learnjavaonline-share.png",
         "language_uppercase" : "Java",
         "twitter" : "@learnjava",
@@ -186,6 +196,7 @@ public class Main {
     },
     LEARNJS_DOMAIN : {
         "language" : "javascript",
+        "css_safe_language": "javascript",
         "analytics" : "UA-22741967-5",
         "namespace" : "learn-js.org",
         "full_url" : "http://learn-js.org",
@@ -194,6 +205,7 @@ public class Main {
         "contact_email" : "admin@learn-js.org",
         "support_email" : "support@learn-js.org",
         "logo" : "/static/img/logos/learn-js.png",
+        "header_logo" : "/static/img/logos/learn-js_resized.png",
         "share_logo" : "/static/img/share-logos/learn-js-share.png",
         "language_uppercase" : "JavaScript",
         "twitter" : "@learnjs",
@@ -208,6 +220,7 @@ console.log("Hello, World!");
     },
     LEARNRUBY_DOMAIN : {
         "language" : "ruby",
+        "css_safe_language": "ruby",
         "analytics" : "UA-22741967-6",
             "namespace" : "learnrubyonline.org",
         "full_url" : "http://learnrubyonline.org",
@@ -216,6 +229,7 @@ console.log("Hello, World!");
         "contact_email" : "admin@learnrubyonline.org",
         "support_email" : "support@learnrubyonline.org",
         "logo" : "/static/img/logos/learnrubyonline.png",
+        "header_logo" : "/static/img/logos/learnrubyonline_resized.png",
         "share_logo" : "/static/img/share-logos/learnrubyonline-share.png",
         "language_uppercase" : "Ruby",
         "twitter" : "@learnruby",
@@ -230,6 +244,7 @@ puts 'Hello, World!'
     },
     LEARNSHELL_DOMAIN : {
         "language" : "bash",
+        "css_safe_language": "bash",
         "analytics" : "UA-22741967-7",
         "namespace" : "learnshell.org",
         "full_url" : "http://learnshell.org",
@@ -238,6 +253,7 @@ puts 'Hello, World!'
         "contact_email" : "admin@learnshell.org",
         "support_email" : "support@learnshell.org",
         "logo" : "/static/img/logos/learnshell.png",
+        "header_logo" : "/static/img/logos/learnshell_resized.png",
         "share_logo" : "/static/img/share-logos/learnshell-share.png",
         "language_uppercase" : "Shell Programming",
         "twitter" : "@learnshell",
@@ -254,6 +270,7 @@ echo "Hello, World!";
 
     LEARNPERL_DOMAIN : {
         "language" : "perl",
+        "css_safe_language": "perl",
         "analytics" : "UA-22741967-8",
          "namespace" : "learn-perl.org",
         "full_url" : "http://learn-perl.org",
@@ -262,6 +279,7 @@ echo "Hello, World!";
         "contact_email" : "admin@learn-perl.org",
         "support_email" : "support@learn-perl.org",
         "logo" : "/static/img/logos/learn-perl.png",
+        "header_logo" : "/static/img/logos/learn-perl_resized.png",
         "share_logo" : "/static/img/share-logos/learn-perl-share.png",
         "language_uppercase" : "Perl",
         "twitter" : "@learnperl",
@@ -275,6 +293,7 @@ print 'Hello, World!';
 
     LEARNPHP_DOMAIN : {
         "language" : "php",
+        "css_safe_language": "php",
         "analytics" : "UA-22741967-9",
         "namespace" : "learn-php.org",
         "full_url" : "http://learn-php.org",
@@ -283,6 +302,7 @@ print 'Hello, World!';
         "contact_email" : "admin@learn-php.org",
         "support_email" : "support@learn-php.org",
         "logo" : "/static/img/logos/learn-php.png",
+        "header_logo" : "/static/img/logos/learn-php_resized.png",
         "share_logo" : "/static/img/share-logos/learn-php-share.png",
         "language_uppercase" : "PHP",
         "twitter" : "@learnphp",
@@ -305,6 +325,7 @@ echo "Hello, World!";
 
     LEARNCS_DOMAIN : {
         "language" : "c#",
+        "css_safe_language": "cs",
         "analytics" : "UA-22741967-10",
         "namespace" : "learncs.org",
         "full_url" : "http://learncs.org",
@@ -313,6 +334,7 @@ echo "Hello, World!";
         "contact_email" : "admin@learncs.org",
         "support_email" : "support@learncs.org",
         "logo" : "/static/img/logos/learncs.png",
+        "header_logo" : "/static/img/logos/learncs_resized.png",
         "share_logo" : "/static/img/share-logos/learncs-share.png",
         "language_uppercase" : "C#",
         "twitter" : "@learncs",
@@ -348,6 +370,7 @@ public class Hello
 
     LEARNGO_DOMAIN : {
         "language" : "go",
+        "css_safe_language": "go",
         "analytics" : "UA-22741967-13",
         "namespace" : "learn-golang.org",
         "full_url" : "http://learn-golang.org",
@@ -356,6 +379,7 @@ public class Hello
         "contact_email" : "admin@learn-golang.org",
         "support_email" : "support@learn-golang.org",
         "logo" : "/static/img/logos/learn-golang.png",
+        "header_logo" : "/static/img/logos/learn-golang_resized.png",
         "share_logo" : "/static/img/share-logos/learn-golang-share.png",
         "language_uppercase" : "Go",
         "twitter" : "@learngolang",

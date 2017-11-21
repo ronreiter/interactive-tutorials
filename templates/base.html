@@ -33,14 +33,15 @@
 <div class="navbar navbar-static-top" style="margin-bottom: 10px">
     <div class="navbar-inner">
         <div class="container">
-        <a class="brand" href="/" style="padding: 4px 10px"><img src="{{ domain_data.logo }}" style="height: 32px;"/></a>
-        <div class="social hidden-phone" style="margin-top: 10px; display: inline-block; float: left">
+        <a class="brand" href="/" style="padding: 4px 10px">
+        <img class="logo_{{ domain_data.css_safe_language }}" src="{{ domain_data.header_logo }}"/></a>
+        <div class="social hidden-phone social_{{ domain_data.css_safe_language }}" style="margin-top: 10px; display: inline-block; float: left">
                 <!-- AddThis Button BEGIN -->
-                <!-- <div class="addthis_toolbox addthis_default_style " style="width: 400px; margin-left: 20px">
-                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                    <a class="addthis_button_tweet"></a>
-                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-                    <a class="addthis_counter addthis_pill_style"></a>
+                <div class="addthis_toolbox addthis_default_style " style="width: 400px; margin-left: 20px">
+                    <a class="addthis_button_facebook_like facebook_{{ domain_data.language }}" fb:like:layout="button_count"></a>
+                    <a class="addthis_button_tweet tweet_{{ domain_data.language }}"></a>
+                    <a class="addthis_button_google_plusone googleplus_{{ domain_data.language }}" g:plusone:size="medium"></a>
+                    <a class="addthis_counter addthis_pill_style tweet_{{ domain_data.language }}"></a>
                 </div>
 
                 <script type="text/javascript">
@@ -55,7 +56,7 @@
                     <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="{{ domain_data.full_url }}"></a>
                 </div>
                 -->
-        <!-- </div> -->
+        </div>
 
         <ul class="nav pull-right">
             <li><a href="bitcoin:1PdKc2wAZoGq4kkCQ9Engig9x3TspCeVa8"><img src="/static/img/bitcoin.png" style="height: 20px; vertical-align: sub"/> Donate BTC</a></li>

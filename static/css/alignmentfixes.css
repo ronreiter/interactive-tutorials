@@ -1,10 +1,129 @@
 /*!
  * Alignment fixes present in the CSS and
- * additional Photoshop work fixes to
- * header logos --
+ * additional Photoshop work resizing
+ * header logos, as well as additional
+ * domain interpolation --
  *
- * Reponsiveness and image enhancements
- * by Peter David Carter
+ * Reponsive CSS and image enhancements
+ * Peter David Carter
  */
 
- 
+ .logo_html {
+  position: relative;
+  top: 3px;
+ }
+
+ .social_html {
+   position: relative;
+   top: 4px;
+ }
+
+ .logo_javascript {
+   position: relative;
+   top: 4px;
+ }
+
+ .social_javascript {
+   position: relative;
+   top: 5px;
+ }
+
+ .logo_bash {
+   position: relative;
+   top: 2px;
+ }
+
+ .social_bash {
+   position: relative;
+   top: 3px;
+ }
+
+ .logo_cs {
+   position: relative;
+   top: 2px;
+ }
+
+ .social_cs {
+   position: relative;
+   top: 3px;
+ }
+
+ .logo_cpp11 {
+   position: relative;
+   top: 5px;
+ }
+
+ .social_cpp11 {
+   position: relative;
+   top: 3px;
+ }
+
+ .logo_java {
+   position: relative;
+   top: 3px;
+ }
+
+ .social_java {
+   position: relative;
+   top: 7px;
+ }
+
+.logo_perl {
+  position: relative;
+  top: 1px;
+}
+
+.social_perl {
+  position: relative;
+  top: 2px;
+}
+
+.logo_php {
+  position: relative;
+  top: 2px;
+}
+
+.social_php {
+  position: relative;
+  top: 3px;
+}
+
+.logo_python {
+  position: relative;
+  top: 5px;
+}
+
+.social_python {
+  position: relative;
+  top: 5px;
+}
+
+.logo_go {
+  position: relative;
+  top: 5px;
+}
+
+.social_go {
+  position: relative;
+  top: 5px;
+}
+
+.logo_ruby {
+  position: relative;
+  top: 3px;
+}
+
+.social_ruby {
+  position: relative;
+  top: 2px;
+}
+
+.logo_c {
+  position: relative;
+  top: 5px;
+}
+
+.social_c {
+  position: relative;
+  top: 3px;
+}
