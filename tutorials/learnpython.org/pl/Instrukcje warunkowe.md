@@ -9,11 +9,11 @@ Python posiada specjalny typ danych logicznych, który jest używany w instrukcj
     print x == 3 # wypisze False
     print x < 3  # wypisze True
 
-Do przypisania zmiennej pewnej wartości używa się operatora "=", podczas gdy do porównania ze sobą dwóch zmiennych służy podwójny znak równości "==". Natomiast operator "różne od" zapisujemy "!=".
+Do przypisania zmiennej pewnej wartości używa się operatora `=`, podczas gdy do porównania ze sobą dwóch zmiennych służy podwójny znak równości `==`. Natomiast operator "różne od" zapisujemy `!=`.
 
 ### Operatory logiczne
 
-Operatory logiczne "and" i "or" (pol. "i" i "lub") pozwalają na budowanie kompletnych zdań logicznych, na przykład:
+Operatory logiczne `and` i `or` (pol. "i" i "lub") pozwalają na budowanie kompletnych zdań logicznych, na przykład:
 
     imie = "Jan"
     wiek = 23
@@ -48,7 +48,7 @@ Poniżej jest przykład użycia instrukcji "if" razem z blokami kodu:
         ....
         ....
 
-Jeśli chesz, to możesz pominąć bloki `elif` i `else`.
+Jeśli chesz, możesz pominąć bloki `elif` i `else`.
 
 Przykład:
 
@@ -58,24 +58,26 @@ Przykład:
     else:
         print "x jest rozne od dwoch."
 
-Dane wyrażenie jest prawdze, jeśli jeden z następujących warunków jest spełniony:
-1. Wartość logiczna "True" jest pzypisywana do zmiennej lub jest wynikiem porónania arytmetycznego.
-2. Kiedy pzypisany do zmiennej obiekt nie jest "pusty".
+Dane wyrażenie jest prawdziwe, jeśli jeden z następujących warunków jest spełniony:
+
+1. Wartość logiczna "True" jest przypisywana do zmiennej lub jest wynikiem porównania arytmetycznego.
+2. Kiedy przypisany do zmiennej obiekt nie jest "pusty".
 
 Tutaj jest kilka przykładowych obiektów postrzeganych jako puste:
-1. Pusty napis: ""
-2. Pusta tablica: []
-3. Liczba zero: 0
-4. Zmienna logiczna zawierająca False: False
+
+1. Pusty napis: `""`
+2. Pusta tablica (lista): `[]`
+3. Liczba zero: `0`
+4. Zmienna logiczna zawierająca False: `False`
 
 ### Operator "is"
 
-W przeciwieństwie do "==", operator "is" nie sprawdza, czy zmienne mają taką samą wartość, ale czy wskazują na ten sam obszar w pamięci komputera. Na przykład:
+W przeciwieństwie do `==`, operator `is` nie sprawdza, czy zmienne mają taką samą wartość, ale czy wskazują na ten sam obszar w pamięci komputera. Na przykład:
 
     x = [1,2,3]
     y = [1,2,3]
     print x == y # Wypisze True
-    print x is y # False
+    print x is y # Wypisze False
 
     tablica = [1, 2, 3]
     tablica2 = ['a', 'b', tablica]
@@ -87,7 +89,7 @@ W przeciwieństwie do "==", operator "is" nie sprawdza, czy zmienne mają taką 
     tablica.append(4) # Dodajemy do tablicy liczbe 4
     print tablica2[2] # [1, 2, 3, 4]
 
-Ponieważ `tablica` i `tablica2` odnoszą się do tego samego obiektu, więc zmiana jednej oznacza zmianę drugiej. Niestety istnieje w tym miejscu duże ryzyko pomyłki. Stosując proste podstawienie tablica traci kontakt ze starszym obiektem i zapisuje na jego miejscu całkiem nowy i niezależny.
+Ponieważ `tablica` i `tablica2` odnoszą się do tego samego obiektu, zmiana jednej oznacza zmianę drugiej. Niestety istnieje w tym miejscu duże ryzyko pomyłki. Stosując proste podstawienie tablica traci kontakt ze starszym obiektem i zapisuje na jego miejscu całkiem nowy i niezależny.
 
     tablica = [1, 2, 3]
     tablica2 = ['a', 'b', tablica]
@@ -101,14 +103,14 @@ Ponieważ `tablica` i `tablica2` odnoszą się do tego samego obiektu, więc zmi
 
 ### Operator "not"
 
-Używając "not" przed wyrażeniem logicznym zmieniamy jego wartość na przeciwną:
+Używając `not` przed wyrażeniem logicznym zmieniamy jego wartość na przeciwną:
 
     print not False              # Wypisze True
     print (not False) == (False) # Wypisze False
 
 ### Ćwiczenie
 
-Zmień zmienne tak w pierwszej części kodu tak, aby wszystkie instrukcje "if" zwracały True.
+Zmień zmienne w pierwszej części kodu tak, aby wszystkie instrukcje `if` zwracały True.
 
 Tutorial Code
 -------------

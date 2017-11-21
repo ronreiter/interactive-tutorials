@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Każda funkcja w Pythonie otrzymuje określoną ilość argumentów, jeśli została zdefiniowana w znany nam z poprzednich lekcji sposób:
+Każda funkcja w Pythonie otrzymuje określoną liczbę argumentów, jeśli została zdefiniowana w znany nam z poprzednich lekcji sposób:
 
     def funkcja(pierwszy, drugi, trzeci):
         # robi cos z trzema argumentami
@@ -15,7 +15,7 @@ Możliwe jest również zdefiniowanie funkcji, która otrzymuje zmienną liczbę
         print "Trzeci: %s" % trzeci
         print "I cala reszta... %s" % list(reszta)
 
-Zmienna "reszta" jest tablicą zmiennych, która przechowuje wszystkie argumenty przekazane  funkcji foo poza pierwszymi trzema argumentami. Tak więc wywołanie foo(1,2,3,4,5) wypisze:
+Zmienna "reszta" jest tablicą zmiennych, która przechowuje wszystkie argumenty przekazane  funkcji foo poza pierwszymi trzema argumentami. Tak więc wywołanie `foo(1,2,3,4,5)` wypisze:
 
     Pierwszy: 1
     Drugi: 2
@@ -45,8 +45,8 @@ Funkcja otrzymuje 3 argumenty. Jeśli dodatkowy argument "akcja" jest dany i ka�
 ### Ćwiczenie
 
 Napisz funkcje "foo" i "bar" tak, aby mogły otrzymywać zmienną liczbę argumentów (3 lub więcej). 
-Funkcja "foo" musi zwracać liczbę dodatkowych argumentów jakie otrzymała. 
-Funkcja "bar" musi zwracać "True", jeśli argument przypisany słowu kluczowemu "magiczna_liczba" jest równy 7, oraz "False" w przeciwnym razie.
+Funkcja `foo` musi zwracać liczbę dodatkowych argumentów jakie otrzymała. 
+Funkcja `bar` musi zwracać `True`, jeśli argument przypisany słowu kluczowemu `magiczna_liczba` jest równy 7, oraz `False` w przeciwnym razie.
 
 Tutorial Code
 -------------

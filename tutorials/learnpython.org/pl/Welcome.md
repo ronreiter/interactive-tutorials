@@ -1,7 +1,7 @@
 Polski
 ------
 
-Witaj w interaktywnym samouczku Python'a na stronie learnpython.org.
+Witaj w interaktywnym samouczku Pythona na stronie learnpython.org.
 
 Niezależnie od tego, czy masz doświadczenie w programowaniu, ta strona jest przeznaczona dla każdego, kto chce nauczyć się języka programowania Python.
 

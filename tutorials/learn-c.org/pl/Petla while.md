@@ -22,8 +22,10 @@ Instrukcje zawarte w nawiasach klamrowych są powtarzane tak długo, jak wyraże
       return 0;
     }
 
-Program wypisuje na ekran liczby od 1 do 20. Instrukcja i % 5 oblicza resztę z dzielenia i przez 5, natomiast putchar wypisuje pojedyńczy znak. W tym przypadku jest to znak nowej lini.
-Zanim przejdziemy do innych pętli warto zwrócić uwagę na pewien istotny szczegół. W `while` najpierw jest sprawdzany warunek w pętli, a jeśli ten jest spełniony, to zostają wykonane instrukcje zawarte w pętli. Jeśli przy pierwszym sprawdzeniu warunek będzie fałszywy, to pętla w ogóle się nie wykona.
+Program wypisuje na ekran liczby od 1 do 20. Instrukcja `i % 5` oblicza resztę z dzielenia `i` przez 5, natomiast `putchar` wypisuje pojedynczy znak. W tym przypadku jest to znak nowej linii.
+
+Zanim przejdziemy do innych pętli, warto zwrócić uwagę na pewien istotny szczegół. W `while` najpierw jest sprawdzany warunek w pętli, a jeśli ten jest spełniony, to zostają wykonane instrukcje zawarte w pętli. Jeśli przy pierwszym sprawdzeniu warunek będzie fałszywy, to pętla w ogóle się nie wykona.
+
 Pętla `do while` różni się od `while`, tym że warunek jest sprawdzany po pierwszym wykonaniu pętli. Zatem pętla wykona się co najmniej raz.
 
     do{
@@ -33,7 +35,7 @@ Pętla `do while` różni się od `while`, tym że warunek jest sprawdzany po pi
 
 ### Ćwiczenie
 
-Zmień poniższy tak, aby wyświetlał tabliczkę mnożenia do 10. W jednym wierszu tabliczki powinno znajdować się 10 liczb. Podczas pisania nie zmieniaj instrukcji printf.
+Zmień poniższy kod tak, aby wyświetlał tablicę od 1 do 100. W jednym wierszu tabliczki powinno znajdować się 10 liczb (czyli w pierwszej kolumnie będą 1, 11, 21 itd.). Podczas pisania nie zmieniaj instrukcji `printf`.
 
 Tutorial Code
 -------------
