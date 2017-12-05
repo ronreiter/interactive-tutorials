@@ -173,7 +173,7 @@ Tutorial Code
 
         for (i = 0; i < 3; i++) {
             for (j = 0; j <= i; j++) {
-                printf("%d ", pnumbers[i][j]);
+                printf("%d", pnumbers[i][j]);
             }
             printf("\n");
         }
@@ -191,8 +191,8 @@ Expected Output
 ---------------
 
     1
-    1 1
-    1 2 1
+    11
+    121
 
 Solution
 --------
@@ -222,7 +222,7 @@ Solution
 
         for (i = 0; i < 3; i++) {
             for (j = 0; j <= i; j++) {
-                printf("%d ", pnumbers[i][j]);
+                printf("%d", pnumbers[i][j]);
             }
             printf("\n");
         }

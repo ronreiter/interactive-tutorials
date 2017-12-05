@@ -175,13 +175,13 @@ item is the last one in the list:
             return retval;
         }
 
-        /* get to the last node in the list */
+        /* get to the second to last node in the list */
         node_t * current = head;
         while (current->next->next != NULL) {
             current = current->next;
         }
         
-        /* now current points to the last item of the list, so let's remove current->next */
+        /* now current points to the second to last item of the list, so let's remove current->next */
         retval = current->next->val;
         free(current->next);
         current->next = NULL;
