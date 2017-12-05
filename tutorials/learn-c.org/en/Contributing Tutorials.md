@@ -24,7 +24,7 @@ Every tutorial must have the following structure:
     Exercise
     --------
     Here you will need to write the purpose of the exercise. Finishing the exercise correctly
-    must be accomplished using the new feature that you are explaning.
+    must be accomplished using the new feature that you are explaining.
 
     Tutorial Code
     -------------

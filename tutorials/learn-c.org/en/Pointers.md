@@ -61,7 +61,7 @@ We then referred to it using the dereferencing operator. We can also change the 
     /* let's change the variable a */
     a += 1;
 
-    /* we just changed the variable a again! */
+    /* we just changed the variable again! */
     *pointer_to_a += 1;
 
     /* will print out 3 */
