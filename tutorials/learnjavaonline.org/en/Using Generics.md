@@ -46,4 +46,5 @@ food.add("rice");
 for (String item : food) {
   
   System.out.println(item);
+
 }
