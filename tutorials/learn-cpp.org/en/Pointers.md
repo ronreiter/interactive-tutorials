@@ -36,6 +36,7 @@ using namespace std;
 
 int main()
 {
+    
     int n = 1;
     
     // Create pointers for n
@@ -59,6 +60,7 @@ using namespace std;
 
 int main()
 {
+    
     int n = 1;
     
     // Create pointers for n
