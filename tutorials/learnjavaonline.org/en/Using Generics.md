@@ -20,9 +20,13 @@ List food<String> = new ArrayList<>();
 Expected Output
 --------
 milk
+
 cheese
+
 chicken
+
 carrot
+
 rice
 
 Solution
