@@ -32,12 +32,18 @@ rice
 Solution
 --------
 List food<String> = new ArrayList<>();
+
 food.add("milk");
+
 food.add("cheese");
+
 food.add("chicken");
+
 food.add("carrot");
+
 food.add("rice");
 
 for (String item : food) {
+  
   System.out.println(item);
 }
