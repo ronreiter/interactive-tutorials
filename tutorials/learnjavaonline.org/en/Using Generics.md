@@ -14,6 +14,7 @@ Create a list containing the of food you wish to buy in a supermarket. The list 
 Tutorial Code
 --------
 // Fill the list and print the items
+
 List food<String> = new ArrayList<>();
 
 Expected Output
