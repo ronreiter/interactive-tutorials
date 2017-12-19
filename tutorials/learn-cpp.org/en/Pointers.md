@@ -8,13 +8,10 @@ One of the biggest differences is that pointers in C++ are more secure. In C, we
 
 Example:
 
-void* p1;
-
-char* p2;
-
-p2 = p1; // Valid in C but not C++
-
-p2 = (char*) p1; // In C++
+    void* p1;
+    char* p2;
+    p2 = p1; // Valid in C but not C++
+    p2 = (char*) p1; // In C++
 
 C++ also introduced 2 new concepts on pointers:
 
@@ -30,48 +27,42 @@ Create 2 pointers p1 and p2 for the given integer, with p1 being the void pointe
 Tutorial code;
 --------
 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
+    #include <iostream>
     
-    int n = 1;
+    using namespace std;
     
-    // Create pointers for n
-    
-    cout << "Hello World!" << endl;
-
-    return 0;
-}
+    int main() {
+      int n = 1;
+      
+      // Create pointers for n
+      cout << "Hello World!" << endl;
+      
+      return 0;
+    }
 
 Expected Output
 --------
-
-2
+    
+    2
 
 Solution
 --------
 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
+    #include <iostream>
+    using namespace std;
     
-    int n = 1;
-    
-    // Create pointers for n
-    void* p1;
-    int* p2;
-    
-    p1 = &n;
-    p2 = (int*) p1;
-    *p2 += 1;
-    
-    cout << *p2 << endl;
-
-    return 0;
-}
+    int main() {
+      int n = 1;
+      
+      // Create pointers for n
+      void* p1;
+      int* p2;
+      
+      p1 = &n;
+      p2 = (int*) p1;
+      *p2 += 1;
+      
+      cout << *p2 << endl;
+      
+      return 0;
+    }
