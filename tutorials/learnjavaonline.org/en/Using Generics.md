@@ -13,38 +13,25 @@ Create a list containing the of food you wish to buy in a supermarket. The list 
 
 Tutorial Code
 --------
-// Fill the list and print the items
-
-List food<String> = new ArrayList<>();
+    // Fill the list and print the items
+    List food<String> = new ArrayList<>();
 
 Expected Output
 --------
-milk
-
-cheese
-
-chicken
-
-carrot
-
-rice
+    milk
+    cheese
+    chicken
+    carrot
+    rice
 
 Solution
 --------
-List food<String> = new ArrayList<>();
-
-food.add("milk");
-
-food.add("cheese");
-
-food.add("chicken");
-
-food.add("carrot");
-
-food.add("rice");
-
-for (String item : food) {
-  
-  System.out.println(item);
-
-}
+    List food<String> = new ArrayList<>();
+    food.add("milk");
+    food.add("cheese");
+    food.add("chicken");
+    food.add("carrot");
+    food.add("rice");
+    for (String item : food) {
+      System.out.println(item);
+    }
