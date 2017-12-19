@@ -111,7 +111,7 @@ There are more operations such as comparison >, <, ==. The idea is very similar 
 
 Exercise
 --------
-Create a pointer that points to the middle of the intArray and print the address of each element on a new line, starting from the middle position.
+Create a pointer that points to the middle of the intArray and print the value of each element referenced on a new line, starting from the middle position.
 
 Tutorial Code
 -------------
