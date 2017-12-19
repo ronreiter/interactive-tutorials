@@ -111,7 +111,7 @@ There are more operations such as comparison >, <, ==. The idea is very similar 
 
 Exercise
 --------
-Create a pointer that points to the middle of the intArray and print the address of each element on a new line, starting from the middle position.
+Create a pointer that points to the middle of the intArray and print the value of each element referenced on a new line, starting from the middle position.
 
 Tutorial Code
 -------------
@@ -130,9 +130,9 @@ Tutorial Code
 
 Expected Output
 ---------------
-	bff9bc64
-	bff9bc68
-	bff9bc6c
+	30
+	40
+	50
 
 Solution
 --------
@@ -146,7 +146,7 @@ Solution
 	    
 	    while (pointer < &intarray[5])
 	    {
-	        printf("%x\n", pointer);
+	        printf("%d\n", *pointer);
 	        pointer++;
 	    }
 	    return 0;
