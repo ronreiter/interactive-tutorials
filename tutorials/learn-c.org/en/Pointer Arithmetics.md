@@ -130,9 +130,9 @@ Tutorial Code
 
 Expected Output
 ---------------
-	bff9bc64
-	bff9bc68
-	bff9bc6c
+	30
+	40
+	50
 
 Solution
 --------
@@ -146,7 +146,7 @@ Solution
 	    
 	    while (pointer < &intarray[5])
 	    {
-	        printf("%x\n", pointer);
+	        printf("%d\n", *pointer);
 	        pointer++;
 	    }
 	    return 0;
