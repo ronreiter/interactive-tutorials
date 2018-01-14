@@ -12,7 +12,7 @@ The most basic example of structures are **points**, which are a single entity t
     struct point {
         int x;
         int y;
-    }
+    };
 
 Now, let's define a new point, and use it. Assume the function `draw` receives a point and draws it on a screen. Without structs, using it would require two arguments - each for every coordinate:
 
