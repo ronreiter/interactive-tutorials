@@ -63,14 +63,14 @@ Let's say you want to multiply the output by a variable amount. You could define
             return new_function
         return Multiply_Generator #it returns the new generator
     
-    #Usage    
+    #Usage
     @Multiply(3) #Multiply is not a generator, but Multiply(3) is
     def Num(num):
         return num
     #Now Num is decorated and reassigned into itself
     Num(5) #should give 15
 
-You can do anything you want with the old function, even completely ignore it! Advanced decorators can also manipulate the doc string and argument number.
+ You can do anything you want with the old function, even completely ignore it! Advanced decorators can also manipulate the doc string and argument number.
 For some snazzy decorators, go to <http://wiki.python.org/moin/PythonDecoratorLibrary>.
 Exercise
 --------
