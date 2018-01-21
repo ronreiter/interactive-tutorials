@@ -54,7 +54,7 @@ and do checking.
             old_function(arg)
         return new_function
 
-Let's say you want to multiply the output by a variable amount. You could do
+Let's say you want to multiply the output by a variable amount. You could define the decorator and use it as follows: 
 
     def Multiply(multiplier):
         def Multiply_Generator(old_function):
@@ -62,12 +62,13 @@ Let's say you want to multiply the output by a variable amount. You could do
                 return multiplier*old_function(*args, **kwds)
             return new_function
         return Multiply_Generator #it returns the new generator
-
-Now, you could do
-
+    
+    #Usage    
     @Multiply(3) #Multiply is not a generator, but Multiply(3) is
     def Num(num):
         return num
+    #Now Num is decorated and reassigned into itself
+    Num(5) #should give 3*5=15
 
 You can do anything you want with the old function, even completely ignore it! Advanced decorators can also manipulate the doc string and argument number.
 For some snazzy decorators, go to <http://wiki.python.org/moin/PythonDecoratorLibrary>.
