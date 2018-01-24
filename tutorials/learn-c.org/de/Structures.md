@@ -13,7 +13,7 @@ Das einfachste Beispiel einer Struktur sind **points**, die eine Einheit zweier 
     struct point {
         int x;
         int y;
-    }
+    };
 
 Jetzt definieren wir einen `point` und benutzen ihn. Nehmen wir an die Funktion `draw` bekommt einen `point` übergeben und malt ihn auf den Bildschirm. Diese Funktion würde 2 Argumente benötigen:
 
