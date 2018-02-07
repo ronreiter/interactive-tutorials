@@ -31,7 +31,7 @@ Beachte, dass wenn das Skript läuft, wird der Befehl innerhalb der `$()` Klamme
 
 Übung 
 -----
-Das Ziel dieser Übung ist einen String, eine Ganzzahl und eine komplexe Variable durch Befehlsubstitution zu erstellen. Der String sollte `BIRTHDATE` heißen und sollte "Jan 1 2000" enthalten. Die Ganzzahl sollte `Presents` genannt werden und sollte die Zahl 10 enthalten. Die komplexe Variable sollte `BIRTHDAY` heißen und den vollen Wochentag des Tages, in `BIRHTDATE`, zum Beispiel 'Samstag' (vielleicht in einer anderen Sprache). Beachte, dass der `date` Befehl dafür benutzt werden kann, Daten in andere Datenformate zu konvertieren. Zum Beispiel, um das Datum in `$date1` zu dessen Wochentag zu konvertieren:
+Das Ziel dieser Übung ist einen String, eine Ganzzahl und eine komplexe Variable durch Befehlsubstitution zu erstellen. Der String sollte `BIRTHDATE` heißen und sollte "Jan 1, 2000" enthalten. Die Ganzzahl sollte `Presents` genannt werden und sollte die Zahl 10 enthalten. Die komplexe Variable sollte `BIRTHDAY` heißen und den vollen Wochentag des Tages, in `BIRHTDATE`, zum Beispiel 'Samstag' (vielleicht in einer anderen Sprache). Beachte, dass der `date` Befehl dafür benutzt werden kann, Daten in andere Datenformate zu konvertieren. Zum Beispiel, um das Datum in `$date1` zu dessen Wochentag zu konvertieren:
 
     date -d "$date1" +%A
 
@@ -45,7 +45,7 @@ Tutorial Code
     
     # Testcode 
     
-    if [ "$BIRTHDATE" == "Jan 1 2000" ] ; then
+    if [ "$BIRTHDATE" == "Jan 1, 2000" ] ; then
         echo "BIRTHDATE ist korrekt, es ist $BIRTHDATE"
     else
         echo "BIRTHDATE ist nicht korrekt"
@@ -71,13 +71,13 @@ Lösung
 ------
     #!/bin/bash
     # Bearbeite diesen Code
-    BIRTHDATE="Jan 1 2000"
+    BIRTHDATE="Jan 1, 2000"
     Presents=10
     BIRTHDAY=`date -d "$BIRTHDATE" +%A`
     
     # Testcode 
     
-    if [ "$BIRTHDATE" == "Jan 1 2000" ] ; then
+    if [ "$BIRTHDATE" == "Jan 1, 2000" ] ; then
         echo "BIRTHDATE ist korrekt, es ist $BIRTHDATE"
     else
         echo "BIRTHDATE ist nicht korrekt"
