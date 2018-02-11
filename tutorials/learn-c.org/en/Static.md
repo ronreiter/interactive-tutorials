@@ -43,7 +43,7 @@ By default, functions are global in C.  If we declare a function with `static`, 
 
 The syntax looks like this:
 
-    static int fun(void) {
+    static void fun(void) {
        printf("I am a static function.");
     }
 

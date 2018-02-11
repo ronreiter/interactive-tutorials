@@ -19,7 +19,8 @@ In the following example, you will first create two Python lists. Then, you will
 	np_weight = np.array(weight)
 
 # Print out the type of np_height
-print(type(np_height))
+
+    print(type(np_height))
 
 ### Element-wise calculations
 
