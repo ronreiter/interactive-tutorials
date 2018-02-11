@@ -49,7 +49,7 @@ Define three variables:
 
 * A string called `productName` equal to `TV`.
 * An integer called `productYear` equal to 2012.
-* A double number called `productPrice` equal to 279.99.
+* A double number called `productPrice` equal to 279.99f.
 
 Tutorial Code
 -------------
