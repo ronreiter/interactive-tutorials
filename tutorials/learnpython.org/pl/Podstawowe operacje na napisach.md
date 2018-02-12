@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Napisy są fragmentami tekstu. W sumie jest nim każdy ciąg znaków, który ujeliśmy w cudzysłów lub apostrofy:
+Napisy są fragmentami tekstu. W sumie jest nim każdy ciąg znaków, który ujęliśmy w cudzysłów lub apostrofy:
 
     napis = "Witaj swiecie!"
     napis_2 = 'Witaj swiecie!'
@@ -15,7 +15,7 @@ Te dwa różne sposoby zapisu dają taki sam efekt końcowy. Jedyna różnica po
     # Ponizej jak umiescic " w tekscie
     print "Nigdy nie czytalem \"Potopu\"." # Nigdy nie czytalem "Potopu".
 
-Dobrze, abyś zdecydował się na jeden rodzaj zapisu. Ja preferuję `""` , bo takie samo oznaczenie występuje w innych językach.
+Dobrze, zdecydować się na jeden rodzaj zapisu. Wiele osób preferuje `""`, bo takie samo oznaczenie występuje w innych językach.
 
 Poniżej zaprezentowano kilka przydatnych operacji na napisach.
 
@@ -39,12 +39,12 @@ Ta metoda sprawdza ile razy w napisie pojawia się znak lub ciąg ujęty w cudzy
     napis = "abcdefghijk"
     print napis[2] # c
 
-Za pomocą nawiasów kwadratowych możemy uzyskać dostęp do pojedyńczego znaku
+Za pomocą nawiasów kwadratowych możemy uzyskać dostęp do pojedynczego znaku, jeśli znamy jego indeks.
 
     napis = "abcdefghijklmnop"
     print napis[3:7] # defg
 
-W ten sposób możemy wypisać interesujący nas fragment napisu, zaczynając od 3. nr indeksu i kończąc na 6. Ale dlaczego 6 a nie 7? Wynika to znowu z niepisanej zasady wśród twórców języków. Takie indeksowanie znacznie ułatwia obliczenia.
+W ten sposób możemy wypisać interesujący nas fragment napisu, zaczynając od trzeciego indeksu i kończąc na szóstym. Ale dlaczego 6 a nie 7? Wynika to znowu z niepisanej zasady wśród twórców języków. Takie indeksowanie znacznie ułatwia obliczenia.
 
     napis = "abcdefg"
 
@@ -80,13 +80,13 @@ Pierwsza linijka zamienia wszystkie małe litery w napisie na duże. Analogiczni
     print napis.endswith("Alu")     # True
     print napis.endswith("swiecie") # False
 
-Te fragmenty kodu służą do ustalenia, czy napis zaczyna się lub kończy od danego ciągu znaków. Pierwszy zwróci True, ponieważ napis zaczyna się od "Witaj". Drugi zwróci False, ponieważ napis oczywiście nie kończy się na "asdfasdfasdf".
+Te fragmenty kodu służą do ustalenia, czy napis zaczyna się lub kończy od danego ciągu znaków. Pierwszy zwróci `True`, ponieważ napis zaczyna się od "Witaj". Drugi zwróci `False`, ponieważ napis oczywiście nie zaczyna się od "Czesc".
 
     napis = "Ala ma kota."
     tablica_slow = napis.split(" ")
     print tablica_slow # ['Ala', 'ma', 'kota']
 
-To rozbije napis na kilka napisów zebranych razem w tablicy. Tutaj przykładowym "pęknięciem" jest spacja.
+To rozbije napis na kilka napisów zebranych razem w tablicy. Tutaj przykładowym "rozdzielaczem" jest spacja.
 
 ### Ćwiczenie
 

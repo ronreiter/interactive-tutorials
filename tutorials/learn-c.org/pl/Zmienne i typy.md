@@ -3,31 +3,27 @@ Tutorial
 
 W C istnieje kilka typów danych. Poniżej opisano te podstawowe:
 
-- **int** - reprezentuje liczby całkowite. To jak duże liczby może przechowywać zależy od komputera i kompilatora.
+- **int** – reprezentuje liczby całkowite. To, jak duże liczby może przechowywać zależy od komputera i kompilatora.
 
     Za pomocą kwalifikatorów można ten typ nieco zmodyfikować:
 
-      _short int_ - służy do przechowywana mniejszych liczb i zajmuje też mniej miejsca w pamięci
+      _short int_ – służy do przechowywana mniejszych liczb i zajmuje też mniej miejsca w pamięci
 
-      _long int_ - dane tego typu będą zajmowały znacznie więcej pamięci.
+      _long int_ – dane tego typu będą zajmowały znacznie więcej pamięci.
 
-      _long long int_ - w tych danych można przechowywać jeszcze większe wartości.
+      _long long int_ – w tych danych można przechowywać jeszcze większe wartości.
 
-- **char** - pojedyżczy bajt, w którym przechowujemy informację o znaku z lokalnego zestawu znaków. W pamięci komputera znaki
-  są reprezentowane za pomocą liczb i dlatego ten typ równie dobrze możesz zapisywać do niego liczby, ale muszą być odpowiednio małe.
+- **char** – pojedynczy bajt, w którym przechowujemy informację o znaku z lokalnego zestawu znaków. W pamięci komputera znaki są reprezentowane za pomocą liczb i dlatego tworząc ten typ równie dobrze możesz zapisywać do niego liczby, ale muszą być odpowiednio małe.
 
-- **float** i **double** - do danych tego typu zapisujemy liczby rzeczywiste. Najczęściej stosuje się nazwę liczby zmiennoprzecinkowe,
-  ponieważ są zapisywane w pamięci komputera za pomocą tzw. techniki zmiennego przecinka (ang. float - płynąć). double (ang. podwójny) pozwala zapisać liczbę rzeczywistą z dwa razy większą dokładnością niż float. Istnieje również typ **long double**. Różni się on od **double** tylko tym, że można w nim przechowywać większe liczby. Jeśli będziesz kiedyś potrzebował informacji jaką maksymalną wartość może przechowywać dany typ, to znajdują cię one w nagłówku **<limits.h>** (dla int są np. dwie stałe **INT_MAX** i **INT_MIN**).
+- **float** i **double** – do danych tego typu zapisujemy liczby rzeczywiste. Najczęściej stosuje się nazwę "liczby zmiennoprzecinkowe", ponieważ są zapisywane w pamięci komputera za pomocą tzw. techniki zmiennego przecinka (z ang. _floating point_). **double** (z ang. podwójny) pozwala zapisać liczbę rzeczywistą z dwa razy większą dokładnością niż float. Istnieje również typ **long double**. Różni się on od **double** tylko tym, że można w nim przechowywać większe liczby. Jeśli będziesz kiedyś potrzebował informacji jaką maksymalną wartość może przechowywać dany typ, to znajdują się one w nagłówku **<limits.h>** (dla int są np. dwie stałe `INT_MAX` i `INT_MIN`).
 
-Za pomocą dodatkowych kwalifikatorów **signed** i **unsigned** możemy określić czy chcemy pracować z liczbami dodatnimi i ujemnyni, czy tylko nieujemnymi (ang. unsigned - bez znaku). Jeśli sami nie postawimy tych kwalifikatorów to kompilator uzna, że chodzi o signed.
+Za pomocą dodatkowych kwalifikatorów **signed** i **unsigned** możemy określić czy chcemy pracować z liczbami dodatnimi i ujemnymi, czy tylko nieujemnymi (ang. _unsigned_ – bez znaku). Jeśli sami nie postawimy tych kwalifikatorów, kompilator domyślnie uzna, że chodzi o _signed_.
 
-Po nazwie typu trzeba podać nazwę naszej zmiennej. Wszystkie zmienne deklarujemy zawsze na samym początku funkcji.
+Po nazwie typu trzeba podać nazwę naszej zmiennej. Wszystkie zmienne deklarujemy na samym początku funkcji.
 
     unsigned short int zmienna;
 
-Do powyższej zmiennej 'zmienna' można zapisać liczbę całkowitą nieujemną.
-Jeśli chcesz wiedzieć ile miejsca w konkretnym komputerze zajmuje dany typ, użyj instrukcji printf("%d\n", sizeof(nazwa_typu));
-Zamiast nazwy typu możesz użyć nazwy zadeklarowanej wcześniej zmiennej.
+Do powyższej zmiennej `zmienna` można zapisać liczbę całkowitą nieujemną. Jeśli chcesz wiedzieć ile miejsca w konkretnym komputerze zajmuje dany typ, użyj instrukcji `printf("%d\n", sizeof(nazwa_typu));` Zamiast nazwy typu możesz użyć nazwy zadeklarowanej wcześniej zmiennej.
 
 W C nie ma zmiennych do przechowywania warotości logicznych prawda/fałsz. Używamy do tego liczb całkowitych, gdzie 0 to fałsz, a wartość różna od zera to prawda.
 
@@ -35,7 +31,7 @@ Napisy są przechowywane za pomocą tablic znaków oraz możesz tworzyć swoje w
 
 ### Ćwiczenie
 
-W tym ćwiczeniu muszą zostać wydrukowana suma zmiennych a, b i c.
+W tym ćwiczeniu muszą zostać wydrukowana suma zmiennych `a`, `b` i `c`.
 
 Tutorial Code
 -------------

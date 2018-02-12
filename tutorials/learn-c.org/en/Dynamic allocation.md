@@ -9,7 +9,7 @@ Let's assume we want to dynamically allocate a person structure. The person is d
 
     typedef struct {
         char * name;
-        char age;
+        int age;
     } person;
 
 To allocate a new person in the `myperson` argument, we use the following syntax:
@@ -18,7 +18,7 @@ To allocate a new person in the `myperson` argument, we use the following syntax
 
 This tells the compiler that we want to dynamically allocate just enough to hold a person struct in memory, and then return a pointer to the newly allocated data.
 
-Note that `sizeof` is not an actual function, because the compiler interprets it and translates it to the actual memory size of the pointer struct.
+Note that `sizeof` is not an actual function, because the compiler interprets it and translates it to the actual memory size of the person struct.
 
 To access the person's members, we can use the `->` notation:
 
@@ -40,6 +40,7 @@ Tutorial Code
 -------------
 
     #include <stdio.h>
+    #include <stdlib.h>
 
     typedef struct {
       int x;
@@ -69,6 +70,7 @@ Solution
 --------
 
     #include <stdio.h>
+    #include <stdlib.h>
 
     typedef struct {
       int x;

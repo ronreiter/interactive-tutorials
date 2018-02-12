@@ -26,6 +26,15 @@ To add one string to another, use the `+=` operator:
     sentence += "chess.";
     Console.WriteLine(sentence);
 
+### ToString function
+
+To cast a non-string object into a string, use the built in 'object.ToString()' function. Casting with '(string)' will only work on objects that are already strings, so the ToString function is necessary when turning something like an int into a string.
+
+    int integer = 1;
+    string ourString = "Something to be replaced by an int";
+    ourString = integer.ToString();
+    System.Console.WriteLine(ourString);
+
 ### String formatting
 
 To format a string, use the `String.Format` function. Each additional argument to the function

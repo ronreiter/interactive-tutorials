@@ -1,16 +1,14 @@
 Tutorial
 --------
 
-Python to język o wyjątkowo prostej składni. To zachęca programistów do programowania bez 
-(przygotowanych) schematów konstrukcyjnych. Najprostszą instrukcją jest "print" - po prostu wypisuje linijkę tekstu na ekranie.
-Po wypisaniu tekstu zawartego w cudzysłowach automatycznie dodawany jest zank nowego wiersza. Może zmylić to programistów np. C/C++, w których wygląda to inaczej.
+Python to język o wyjątkowo prostej składni. To zachęca programistów do programowania bez (przygotowanych) schematów konstrukcyjnych. Najprostszą instrukcją jest `print` – po prostu wypisuje linijkę tekstu na ekranie.
+Po wypisaniu tekstu zawartego w cudzysłowie automatycznie dodawany jest zank nowego wiersza. Może zmylić to programistów np. C/C++, w których wygląda to inaczej.
 
-Wersje 2.X i 3.X Python'a różnie traktują tą instrukcję - w Python'ie 2.X "print" nie jest tzw. funkcją i z tego powodu jest 
-wywoływana bez nawiasów. Jednakże w Python'ie 3.X jest funkcją i trzeba dodatkowo użyć nawiasów okrągłych okalających tekst.
+Wersje 2 i 3 Pythona różnie traktują tę instrukcję – w Pythonie 2 `print` nie jest tzw. funkcją i z tego powodu jest wywoływana bez nawiasów. Jednak w Pythonie 3 jest funkcją i trzeba dodatkowo użyć nawiasów okrągłych okalających tekst.
 
-W tym samouczku jest używany Python 2.X, któty pozwala wypisać wiersz bez nawiasów.
+W tym samouczku jest używany Python 2.7, który pozwala wypisać wiersz bez nawiasów.
 
-Aby wypisać wiersz po prostu napisz:
+Aby wypisać wiersz, po prostu napisz:
 
     print "Ta linijka tekstu zostanie wypisana."
 
@@ -18,7 +16,7 @@ Aby wypisać wiersz po prostu napisz:
 
 ### Ćwiczenie
 
-Używając instrukcji "print" do wypisaznia tekstu "Witaj Swiecie!"
+Użyj instrukcji `print` do wypisania tekstu "Witaj Swiecie!"
 
 Tutorial Code
 -------------
@@ -26,7 +24,8 @@ print "Do widzenia Swiecie!"
 
 Expected Output
 ---------------
-Witaj Swiecie! page explains.
+Witaj Swiecie!
 
 Solution
 --------
+print "Witaj Swiecie!"

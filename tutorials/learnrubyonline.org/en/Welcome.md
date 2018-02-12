@@ -21,6 +21,8 @@ Table of Contents
 - [[Hashes and Symbols]]
 - [[Conditional Statements]]
 - [[Unless, Until, and While]]
+- [[Methods]]
+- [[Methods With Parameters]]
 
 ### Contributing Tutorials
 

@@ -6,7 +6,7 @@ In last tutorial about shell function, you use "$1" represent the first argument
 
 * `$0` - The filename of the current script.|
 * `$n` - The Nth argument passed to script was invoked or function was called.|
-* `$` - The number of argument passed to script or function.|
+* `$#` - The number of argument passed to script or function.|
 * `$@` - All arguments passed to script or function.|
 * `$*` - All arguments passed to script or function.|
 * `$?` - The exit status of the last command executed.|

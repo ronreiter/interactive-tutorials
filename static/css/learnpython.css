@@ -21,6 +21,11 @@ h1.logo {
   line-height: 80px;
 }
 
+p, li {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
 pre {
   font-family: Courier New, monospaced;
 }
@@ -38,15 +43,6 @@ img.logo {
 
 .quasilink:hover {
   color: #800004;
-}
-
-h1 a:link, h1 a:visited, h1 a:hover {
-  color: black;
-}
-
-ul {
-  margin: 0;
-  padding-left: 0;
 }
 
 .copyright {
@@ -157,4 +153,75 @@ textarea {
     background-color: #3C3D38;
     background-image: url(/static/img/se-logo-anim.gif);
     background-repeat: no-repeat;
+}
+
+.btn.execute-code {
+    margin-bottom: 10px;
+}
+
+#macro-nav {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    footer.minimized {
+
+    }
+
+    #macro-nav {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-height: 500px) {
+    footer.maximized {
+        top: 0;
+    }
+
+    footer.minimized .code-window {
+
+    }
+}
+
+
+@media screen and (max-width: 768px) and (max-height: 800px) {
+    .code-window, .output-window {
+        display: none;
+    }
+
+    #main {
+        margin-bottom: 30px;
+    }
+
+    .execute-code {
+        visibility: hidden;
+    }
+}
+
+/* DataCamp */
+.container div.powered-by-datacamp a {
+	font-size: 0.8rem;
+}
+.container div.powered-by-datacamp .logo {
+	vertical-align: middle;
+}
+
+.container div.datacamp-exercise {
+	min-height: 150px;
+}
+
+.nav-tabs>li>a, .nav-pills>li>a {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.course img:first-child {
+    width: 100%;
 }

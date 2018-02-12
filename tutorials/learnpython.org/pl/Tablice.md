@@ -1,6 +1,8 @@
 Tutorial
 --------
 
+Tablice w Pythonie również nazywane są listami.
+
 Tablicę liczb można sobie wyobrazić jako zmienne ustawione w szereg. Każdej zmiennej jest przyporządkowany indeks, czyli oznaczenie jej miejsca w szeregu. Tablice mogą zawierać dane dowolnego typu. Poza tym nie ma ograniczeń (oprócz tych sprzętowych) dla rozmiaru tablic. Dostęp do danych w tablicy uzyskujemy poprzez indeks każdego elementu. Poniżej pokazano jak zbudować tablicę.
 
     tablica = []
@@ -22,9 +24,9 @@ Próba wywołania elementu o nieistniejącym adresie wygeneruje wyjątek (czyli 
 
 ### Ćwiczenie
 
-W tym ćwiczeniu będziesz musiał dodawać liczby i napisy do odpowiednich tablic za pomocą metody "append". Musisz dodać liczby 1, 2 i 3 do tablicy "liczby" oraz słowa 'witaj' i 'swiecie' do tablicy napisów.
+W tym ćwiczeniu dodasz liczby i napisy do odpowiednich tablic za pomocą metody "append". Dodaj liczby 1, 2 i 3 do tablicy `liczby` oraz słowa 'witaj' i 'swiecie' do tablicy `napisy`.
 
-Powinieneś także zapisać w zmiennej drugie imię z tablicy imiona używając do tego indeksowania. Zwróć uwagę na to, że indeksowanie w tablicach zaczyna się od 0, zatem pierwszy element w tabicy ma indeks 0, drugi 1 itd.
+Zapisz także w zmiennej drugie imię z tablicy `imiona` używając do tego indeksowania. Zwróć uwagę na to, że indeksowanie w tablicach zaczyna się od 0, zatem pierwszy element w tablicy ma indeks 0, drugi 1 itd.
 
 Tutorial Code
 -------------

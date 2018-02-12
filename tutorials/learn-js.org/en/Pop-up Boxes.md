@@ -3,7 +3,7 @@ Tutorial
 There are three types of pop-up boxes in javascript: confirm, alert, and prompt. To use any of them, type
 
 
-    comfirm("Hi!");
+    confirm("Hi!");
     prompt("Bye!");
     alert("Hello");
 
@@ -15,7 +15,7 @@ Make a variable ```test``` set it equal to a prompt box, and type "Hi!" in it (w
 
 Tutorial Code
 -------------
-//Make your prompt box below!
+// Make your prompt box below!
 
 console.log(test);
 
@@ -25,6 +25,6 @@ Hi!
 
 Solution
 --------
-//Make your prompt box below!
-var test=prompt("Type Hi!");
+// Make your prompt box below!
+var test = prompt("Type Hi!");
 console.log(test);

@@ -47,9 +47,9 @@ Exercise
 
 Define three variables:
 
-* A string called `productName` equal to `TV`.
-* An integer called `productYear` equal to 2012.
-* A double number called `productPrice` equal to 279.99.
+* A string named `productName` equal to `TV`.
+* An integer named `productYear` equal to 2012.
+* A float named `productPrice` equal to 279.99f.
 
 Tutorial Code
 -------------
@@ -76,7 +76,7 @@ Expected Output
 
     productName: TV
     productYear: 2012
-    productPrice: 279.99
+    productPrice: 279.99f
 
 Solution
 --------

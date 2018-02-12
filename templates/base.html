@@ -10,14 +10,17 @@
     <meta property="og:title" content="{% block ogtitle %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{% block ogurl %}{{ domain_data.full_url }}{% endblock %}" />
-    <meta property="og:image" content="{{ domain_data.full_url }}{{ domain_data.logo }}" />
+    <meta property="og:image" content="{{ domain_data.full_url }}{{ domain_data.share_logo }}" />
 
     <link rel="stylesheet" href="/static/css/codemirror.css">
     <link rel="stylesheet" href="/static/css/theme/monokai.css">
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/prism.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/learnpython.css"/>
     <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/prism.js"></script>
+    <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
     <!-- Insticator -->
     <script type='text/javascript'>(function(a,c){"Insticator"in a||(a.Insticator={ad:{},helper:{},client:{sid:"361f53d9-0236-472e-8223-ac276882d55b"},version:"1.0"},a.Insticator.ad.loadAd=function(b){a.Insticator.ad.q.push(b)},a.Insticator.ad.q=[]);var b=c.createElement("script"),cof=1000*60*10,cbt=new Date(Math.floor(new Date().getTime()/cof)*cof).getTime();b.src="//embed.insticator.com/advertisements/getheadertagforsite?id="+a.Insticator.client.sid+"&cbt="+cbt;b.async=!0;var d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)})(window,document);</script>
@@ -43,7 +46,7 @@
                     var addthis_config = {"data_track_clickback":true};
                     var addthis_share = {"url": "{{ domain_data.full_url }}" };
                 </script>
-                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dafdfe6039782b1"></script>
+                <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dafdfe6039782b1"></script>
                 <!-- AddThis Button END -->
 
                 <!--
@@ -54,6 +57,7 @@
         </div>
 
         <ul class="nav pull-right">
+            <li><a href="bitcoin:1PdKc2wAZoGq4kkCQ9Engig9x3TspCeVa8"><img src="/static/img/bitcoin.png" style="height: 20px; vertical-align: sub"/> Donate BTC</a></li>
             <li><a href="/about">About</a></li>
             <!--
             <li><a href="/{{ language_code }}/progress">Progress</a></li>
@@ -81,24 +85,26 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="span8">
+    <div class="row" id="macro-nav">
+        <div class="span9">
             <ul class="nav nav-pills">
-                <li {% if domain_data.language == "python" %}class="active"{% endif %}><a href="http://www.learnpython.org">Python</a></li>
-                <li {% if domain_data.language == "java" %}class="active"{% endif %}><a href="http://www.learnjavaonline.org">Java</a></li>
-                <li {% if domain_data.language == "c" %}class="active"{% endif %}><a href="http://www.learn-c.org">C</a></li>
-                <li {% if domain_data.language == "cpp" %}class="active"{% endif %}><a href="http://www.learn-cpp.org">C++</a></li>
-                <li {% if domain_data.language == "javascript" %}class="active"{% endif %}><a href="http://www.learn-js.org">JavaScript</a></li>
-                <li {% if domain_data.language == "php" %}class="active"{% endif %}><a href="http://www.learn-php.org">PHP</a></li>
-                <li {% if domain_data.language == "bash" %}class="active"{% endif %}><a href="http://www.learnshell.org">Shell</a></li>
-                <li {% if domain_data.language == "c#" %}class="active"{% endif %}><a href="http://www.learncs.org">C#</a></li>
-                <li {% if domain_data.language == "perl" %}class="active"{% endif %}><a href="http://www.learn-perl.org">Perl <small>(new!)</small></a></li>
-                <li {% if domain_data.language == "ruby" %}class="active"{% endif %}><a href="http://www.learnrubyonline.org">Ruby <small>(new!)</small></a></li>
+                <li {% if domain_data.language == "python" %}class="active"{% endif %}><a href="https://www.learnpython.org">Python</a></li>
+                <li {% if domain_data.language == "java" %}class="active"{% endif %}><a href="https://www.learnjavaonline.org">Java</a></li>
+                <li {% if domain_data.language == "html" %}class="active"{% endif %}><a href="https://www.learn-html.org">HTML & CSS</a></li>
+                <li {% if domain_data.language == "go" %}class="active"{% endif %}><a href="https://www.learn-golang.org">Go</a></li>
+                <li {% if domain_data.language == "c" %}class="active"{% endif %}><a href="https://www.learn-c.org">C</a></li>
+                <li {% if domain_data.language == "cpp" %}class="active"{% endif %}><a href="https://www.learn-cpp.org">C++</a></li>
+                <li {% if domain_data.language == "javascript" %}class="active"{% endif %}><a href="https://www.learn-js.org">JavaScript</a></li>
+                <li {% if domain_data.language == "php" %}class="active"{% endif %}><a href="https://www.learn-php.org">PHP</a></li>
+                <li {% if domain_data.language == "bash" %}class="active"{% endif %}><a href="https://www.learnshell.org">Shell</a></li>
+                <li {% if domain_data.language == "c#" %}class="active"{% endif %}><a href="https://www.learncs.org">C#</a></li>
+                <li {% if domain_data.language == "perl" %}class="active"{% endif %}><a href="https://www.learn-perl.org">Perl</a></li>
+                <li {% if domain_data.language == "ruby" %}class="active"{% endif %}><a href="https://www.learnrubyonline.org">Ruby</a></li>
                 <li><a href="/recruit-coders-jobs">Jobs</a></li>
             </ul>
 
         </div>
-        <div class="span4">
+        <div class="span3">
             <ul class="nav nav-pills pull-right">
             {% for language in languages %}
                 <li {% if language_code == language %}class="active"{% endif %}><a href="/{{ language }}/"><img src="/static/img/flags/{{ language }}.png"/></a></li>
@@ -114,14 +120,24 @@
 <script src="/static/js/codemirror/codemirror.js"></script>
 <script src="/static/js/codemirror/addon/edit/matchbrackets.js"></script>
 <script src="/static/js/codemirror/mode/clike/clike.js"></script>
-<script src="/static/js/codemirror/mode/python/python.js"></script>
-<script src="/static/js/codemirror/mode/perl/perl.js"></script>
-<script src="/static/js/codemirror/mode/php/php.js"></script>
-<script src="/static/js/codemirror/mode/javascript/javascript.js"></script>
-<script src="/static/js/codemirror/mode/ruby/ruby.js"></script>
-<script src="/static/js/codemirror/mode/shell/shell.js"></script>
+{% if domain_data.language == "go" %}<script src="/static/js/codemirror/mode/go/go.js"></script>{% endif %}
+{% if domain_data.language == "python" %}<script src="/static/js/codemirror/mode/python/python.js"></script>{% endif %}
+{% if domain_data.language == "perl" %}<script src="/static/js/codemirror/mode/perl/perl.js"></script>{% endif %}
+{% if domain_data.language == "php" %}<script src="/static/js/codemirror/mode/php/php.js"></script>{% endif %}
+{% if domain_data.language == "javascript" %}<script src="/static/js/codemirror/mode/javascript/javascript.js"></script>{% endif %}
+{% if domain_data.language == "ruby" %}<script src="/static/js/codemirror/mode/ruby/ruby.js"></script>{% endif %}
+{% if domain_data.language == "shell" %}<script src="/static/js/codemirror/mode/shell/shell.js"></script>{% endif %}
+<script src="/static/js/codemirror/mode/xml/xml.js"></script>
+<script src="/static/js/codemirror/mode/css/css.js"></script>
+<script src="/static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="/static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/bootbox.min.js"></script>
+
+{% if domain_data.language == "python" and domain_data.language_code == 'en'  %}
+<script src="/static/js/datacamp.js"></script>
+{% endif %}
+
 {% if domain_data.language == "javascript" %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -177,7 +193,12 @@
 {% endif %}
 
 {% block head %}{% endblock %}
-
-
+<!--
+<script>
+(function(w,i,d,g,e,t,s) {w[d]=w[d]||[];t=i.createElement(g);
+	t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t,s);
+}(window, document, '_gscq', 'script', '//www.hellothere.io/widget/De9tnfcdtMvwfdXI.js'));
+</script>
+-->
 </body>
 </html>

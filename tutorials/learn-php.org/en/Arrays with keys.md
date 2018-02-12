@@ -43,7 +43,7 @@ To check if a key exists within an array, we can use the `array_key_exists` func
     }
 
     if (array_key_exists("Michael", $phone_numbers)) {
-        echo "Michael's phone number is " . $phone_numbers["Alex"] . "\n";
+        echo "Michael's phone number is " . $phone_numbers["Michael"] . "\n";
     } else {
         echo "Michael's phone number is not in the phone book!";
     }
@@ -89,9 +89,9 @@ Expected Output
 
 Array
 (
-[Alex] => 415-235-8573
-[Jessica] => 415-492-4856
-[Eric] => 415-874-7659
+    [Alex] => 415-235-8573
+    [Jessica] => 415-492-4856
+    [Eric] => 415-874-7659
 )
 
 Solution

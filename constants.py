@@ -14,6 +14,8 @@ LEARNSHELL_DOMAIN = "learnshell.org"
 LEARNPHP_DOMAIN = "learn-php.org"
 LEARNPERL_DOMAIN = "learn-perl.org"
 LEARNCS_DOMAIN = "learncs.org"
+LEARNHTML_DOMAIN = "learn-html.org"
+LEARNGO_DOMAIN = "learn-golang.org"
 
 DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
@@ -26,6 +28,7 @@ DOMAIN_DATA = {
         "contact_email" : "admin@learnpython.org",
         "support_email" : "support@learnpython.org",
         "logo" : "/static/img/logos/learnpython.png",
+        "share_logo" : "/static/img/share-logos/learnpython-share.png",
         "language_uppercase" : "Python",
         "twitter" : "@learnpython",
         "favicon" : "favicon-learnpython.ico",
@@ -37,6 +40,37 @@ DOMAIN_DATA = {
 print "Hello, World!"
     """
     },
+    LEARNHTML_DOMAIN : {
+        "language" : "html",
+        "analytics" : "UA-22741967-11",
+        "namespace" : "learn-html.org",
+        "full_url" : "http://learn-html.org",
+        "sender" : "Learn-HTML.org <admin@learnhtml.org>",
+        "styled_domain" : "LearnHTML.org",
+        "contact_email" : "admin@learn-html.org",
+        "support_email" : "support@learn-html.org",
+        "logo" : "/static/img/logos/learnhtml.png",
+        "share_logo" : "/static/img/share-logos/learnhtml-share.png",
+        "language_uppercase" : "HTML",
+        "twitter" : "@learnhtml",
+        "favicon" : "favicon-learnhtml.ico",
+        "copyright" : "Copyright &copy; Learn-HTML.org.",
+        "default_code" : """<!-- Welcome to the Interactive HTML & CSS Tutorial.
+Start by choosing a chapter and
+write your code in this window.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello, World!</title>
+    </head>
+    <body>
+        <p>Hello, World!</p>
+    </body>
+</html>
+"""
+    },
+
     LEARNC_DOMAIN : {
         "language" : "c",
         "analytics" : "UA-22741967-3",
@@ -47,6 +81,7 @@ print "Hello, World!"
         "contact_email" : "admin@learn-c.org",
         "support_email" : "support@learn-c.org",
         "logo" : "/static/img/logos/learn-c.png",
+        "share_logo" : "/static/img/share-logos/learn-c-share.png",
         "language_uppercase" : "C",
         "twitter" : "@learnc",
         "favicon" : "favicon-learn-c.ico",
@@ -74,7 +109,7 @@ return 0;
     },
     LEARNCPP_DOMAIN : {
         "language" : "c++11",
-        "analytics" : "UA-22741967-3",
+        "analytics" : "UA-22741967-12",
         "namespace" : "learn-cpp.org",
         "full_url" : "http://learn-cpp.org",
         "sender" : "Learn-cpp.org <admin@learn-cpp.org>",
@@ -82,6 +117,7 @@ return 0;
         "contact_email" : "admin@learn-cpp.org",
         "support_email" : "support@learn-cpp.org",
         "logo" : "/static/img/logos/learn-cpp.png",
+        "share_logo" : "/static/img/share-logos/learn-cpp-share.png",
         "language_uppercase" : "C++",
         "twitter" : "@learncpp",
         "favicon" : "favicon-learn-cpp.ico",
@@ -119,6 +155,7 @@ return 0;
         "contact_email" : "admin@learnjavaonline.org",
         "support_email" : "support@learnjavaonline.org",
         "logo" : "/static/img/logos/learnjavaonline.png",
+        "share_logo" : "/static/img/share-logos/learnjavaonline-share.png",
         "language_uppercase" : "Java",
         "twitter" : "@learnjava",
         "favicon" : "favicon-learnjava.ico",
@@ -157,6 +194,7 @@ public class Main {
         "contact_email" : "admin@learn-js.org",
         "support_email" : "support@learn-js.org",
         "logo" : "/static/img/logos/learn-js.png",
+        "share_logo" : "/static/img/share-logos/learn-js-share.png",
         "language_uppercase" : "JavaScript",
         "twitter" : "@learnjs",
         "favicon" : "favicon-learn-js.ico",
@@ -178,6 +216,7 @@ console.log("Hello, World!");
         "contact_email" : "admin@learnrubyonline.org",
         "support_email" : "support@learnrubyonline.org",
         "logo" : "/static/img/logos/learnrubyonline.png",
+        "share_logo" : "/static/img/share-logos/learnrubyonline-share.png",
         "language_uppercase" : "Ruby",
         "twitter" : "@learnruby",
         "favicon" : "favicon-ruby.ico",
@@ -199,6 +238,7 @@ puts 'Hello, World!'
         "contact_email" : "admin@learnshell.org",
         "support_email" : "support@learnshell.org",
         "logo" : "/static/img/logos/learnshell.png",
+        "share_logo" : "/static/img/share-logos/learnshell-share.png",
         "language_uppercase" : "Shell Programming",
         "twitter" : "@learnshell",
         "favicon" : "favicon-shell.ico",
@@ -222,6 +262,7 @@ echo "Hello, World!";
         "contact_email" : "admin@learn-perl.org",
         "support_email" : "support@learn-perl.org",
         "logo" : "/static/img/logos/learn-perl.png",
+        "share_logo" : "/static/img/share-logos/learn-perl-share.png",
         "language_uppercase" : "Perl",
         "twitter" : "@learnperl",
         "favicon" : "favicon-learn-perl.ico",
@@ -242,6 +283,7 @@ print 'Hello, World!';
         "contact_email" : "admin@learn-php.org",
         "support_email" : "support@learn-php.org",
         "logo" : "/static/img/logos/learn-php.png",
+        "share_logo" : "/static/img/share-logos/learn-php-share.png",
         "language_uppercase" : "PHP",
         "twitter" : "@learnphp",
         "favicon" : "favicon-learn-php.ico",
@@ -271,6 +313,7 @@ echo "Hello, World!";
         "contact_email" : "admin@learncs.org",
         "support_email" : "support@learncs.org",
         "logo" : "/static/img/logos/learncs.png",
+        "share_logo" : "/static/img/share-logos/learncs-share.png",
         "language_uppercase" : "C#",
         "twitter" : "@learncs",
         "favicon" : "favicon-learncs.ico",
@@ -301,5 +344,47 @@ public class Hello
     }
 }
 """,
-        },
+    },
+
+    LEARNGO_DOMAIN : {
+        "language" : "go",
+        "analytics" : "UA-22741967-13",
+        "namespace" : "learn-golang.org",
+        "full_url" : "http://learn-golang.org",
+        "sender" : "LearnCS.org <admin@learn-golang.org>",
+        "styled_domain" : "Learn-GoLang.org",
+        "contact_email" : "admin@learn-golang.org",
+        "support_email" : "support@learn-golang.org",
+        "logo" : "/static/img/logos/learn-golang.png",
+        "share_logo" : "/static/img/share-logos/learn-golang-share.png",
+        "language_uppercase" : "Go",
+        "twitter" : "@learngolang",
+        "favicon" : "favicon-learngolang.ico",
+        "copyright" : "Copyright &copy; Learn-GoLang.org.",
+        "default_code" : """// Welcome to the Interactive Go Tutorial.
+// Start by choosing a chapter, write your code in this window.
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    fmt.Println("Hello, world!")
+}
+""",
+        "container_word" : "class",
+        "container_indent" : "        ",
+        "container" : """package main
+
+import (
+    "fmt"
+)
+
+func main() {
+{code}
+}
+""",
+
+    },
 }

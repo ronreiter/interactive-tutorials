@@ -85,7 +85,7 @@ Tutorial Code
 
             int x = 2;
             int y = 2;
-            int a = Foo(x,y);
+            int a = foo(x,y);
             Console.WriteLine(a);
 
         }

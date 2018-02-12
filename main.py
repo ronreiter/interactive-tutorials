@@ -18,6 +18,8 @@ import constants
 
 #cache = redis.Redis(host=constants.CACHE_HOST)
 
+courses = json.load(open("courses.json"))
+
 # Flask app
 app = Flask(__name__)
 app.secret_key = constants.SECRET_KEY
@@ -36,6 +38,8 @@ LANGUAGES = {
     "it": "Italian",
     "de": "German",
     "cn": "Chinese",
+    "fr": "French",
+    "pt": "Portugese",
 }
 
 tutorial_data = {}
@@ -114,6 +118,7 @@ def untab(text):
 
 def init_tutorials():
     for domain in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials")):
+        logging.warning("loading data for domain: %s", domain)
         tutorial_data[domain] = {}
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             continue
@@ -121,10 +126,16 @@ def init_tutorials():
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             tutorial_data[domain][language] = {}
 
-            if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+            tutorials_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language)
+            if not os.path.isdir(tutorials_path):
                 continue
 
-            for tutorial_file in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+            tutorials = os.listdir(tutorials_path)
+
+            # place the index file first
+            tutorials.remove("Welcome.md")
+            tutorials = ["Welcome.md"] + tutorials
+            for tutorial_file in tutorials:
                 if not tutorial_file.endswith(".md"):
                     continue
 
@@ -141,14 +152,14 @@ def init_tutorials():
                 except Exception, e:
                     tutorial_dict["text"] = "There was an error reading the tutorial. Exception: %s" % e.message
 
-                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(tutorial_dict["text"])]
+                # create links by looking at all lines that are not code lines
+                stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
+                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(stripped_text)]
                 tutorial_dict["links"] = links
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
                     text, code, output, solution = tutorial_sections[0]
-                    if tutorial == "Basic Operators":
-                        pass
                     tutorial_dict["page_title"] = tutorial.decode("utf8")
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)
@@ -165,15 +176,16 @@ def init_tutorials():
                     if not link in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
                             "page_title" : link.decode("utf8"),
-                            "text" : "You can contribute this page by forking the repository at: " +
+                            "text" : "<p>This page does not exist yet. </p>" + "<p>You can contribute this page by forking the repository at: " +
                                      "<a href='https://github.com/ronreiter/interactive-tutorials'>" +
                                      "https://github.com/ronreiter/interactive-tutorials" +
-                                     "</a>."
+                                     "</a>.</p>",
+                            "code": ""
                         }
 
                     if not "back_chapter" in tutorial_data[domain][language][link]:
                         tutorial_data[domain][language][link]["back_chapter"] = tutorial.decode("utf-8").replace(" ", "_")
-                    else:
+                    elif not link.startswith("http"):
                         logging.warn("Warning! duplicate links to tutorial %s from tutorial %s/%s", link, language, tutorial)
 
                     num_links = len(links)
@@ -197,11 +209,14 @@ def get_host():
 
 
 def is_development_mode():
-    return get_host() in ["localhost:5000", "192.241.245.44"]
+    return "localhost" in get_host() or "127.0.0.1" in get_host()
 
 
 def get_domain_data():
-    return constants.DOMAIN_DATA[get_host()] if not is_development_mode() else constants.DOMAIN_DATA[DEFAULT_DOMAIN]
+    host = get_host() if not is_development_mode() else DEFAULT_DOMAIN
+    data = constants.DOMAIN_DATA[host]
+    data["courses"] = courses.get(host)
+    return data
 
 
 def get_tutorial_data(tutorial_id, language="en"):
@@ -292,6 +307,7 @@ def index(title, language="en"):
     tutorial = title.replace("_", " ").encode("utf-8")
     current_tutorial_data = get_tutorial(tutorial, language)
     domain_data = get_domain_data()
+    domain_data["language_code"] = language
 
     if request.method == "GET":
         title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
@@ -306,6 +322,7 @@ def index(title, language="en"):
             "index.html",
             tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
+            tutorial_data=current_tutorial_data,
             tutorial_data_json=json.dumps(current_tutorial_data),
             domain_data_json=json.dumps(domain_data),
             html_title=html_title,
@@ -352,4 +369,3 @@ if __name__ == "__main__":
 
     logging.info("listening on port %s", args.port)
     app.run(debug=True, port=args.port)
-

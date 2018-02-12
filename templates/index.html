@@ -21,19 +21,21 @@
 <div class="container" id="main">
     <div class="row">
 
-        <div class="span10" style="padding-right: 10px; box-sizing: border-box;">
+        <div class="span10" style="box-sizing: border-box;">
 
+            {% if domain_data.language != "python" %}
             <div>
-                <script type="text/javascript"><!--
-                    google_ad_client = "ca-pub-3723950136133694";
-                    /* Learn Python Bottom */
-                    google_ad_slot = "7782329453";
-                    google_ad_width = 728;
-                    google_ad_height = 90;
-                    //-->
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Interactive Tutorials Top -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3723950136133694"
+                     data-ad-slot="2345161899"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
+            {% endif %}
 
             {% if page_title %}
             <ul class="breadcrumb" style="margin-top: 10px">
@@ -45,6 +47,9 @@
             {% endif %}
 
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if domain_data.language == "python" and tutorial_page %}
+                <p>Get started learning Python with <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp's</a> free <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Start Now</a>!</p>
+                {% endif %}
                 {% if previous_chapter %}
                 <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
                 {% endif %}
@@ -56,19 +61,35 @@
             <span id="inner-text">{% autoescape off %}
                 {% if page_title %}
                 <h1>{{ page_title }}</h1>
+                <hr/>
                 {% endif %}
                 {{ text }}
             {% endautoescape %}</span>
-            {% if tutorial_page %}
-            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true)"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
+
+            <!-- DataCamp-Light exercise -->
+            {% if domain_data.language == "python" and language_code == "en" and page_title %}
+            <div data-datacamp-exercise data-lang="python" data-height="400">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">{{tutorial_data.code}}</code>
+              <code data-type="solution">{{tutorial_data.solution}}</code>
+              <code data-type="sct">{{tutorial_data.output}}</code>
+            </div>
+            {% endif %}
+
+            {% if tutorial_page and (domain_data.language != "python" or language_code != "en") %}
+            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>
                 $(function(){
                     toggleMinimize();
                 })
             </script>
             {% endif %}
+
             <hr/>
             <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+                {% if domain_data.language == "python" and tutorial_page %}
+                <p>This site generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+                {% endif %}
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
                 {% endif %}
@@ -79,37 +100,40 @@
 
             <div class="hidden-phone">
 
-            <!--
-            <div>
-                <script type="text/javascript">
-                    google_ad_client = "ca-pub-3723950136133694";
-                    /* Learn Python Top Links */
-                    google_ad_slot = "7304541053";
-                    google_ad_width = 728;
-                    google_ad_height = 15;
-                </script>
-                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            {% if domain_data.courses %}
+            <h3>Online Courses</h3>
+            <div class="row">
+
+                {% for course in domain_data.courses %}
+                <div class="course span2">
+                    <a href="{{ course.link }}">
+                        <img src="{{ course.image_url }}">
+                        <p style="font-weight: bold; margin-top: 10px; font-size: 14px">{{ course.link_name }}</p>
+{#                    <div>Retail Price: ${{ course.retail_price }}</div>#}
+{#                    <div style="text-size: 12px">{{ course.advertiser }}</div>#}
+                    </a>
+                    <img src="{{ course.pixel_url }}" width="1" height="1" border="0"/>
+                </div>
+                {% endfor %}
             </div>
-            -->
+            {% endif %}
 
+            {% if domain_data.language != "python" %}
             <div>
-                <script type="text/javascript"><!--
-                    google_ad_client = "ca-pub-3723950136133694";
-                    /* Learn Python Bottom */
-                    // google_ad_slot = "7782329453";
-
-                    /* Learn Python Long Bottom */
-                    google_ad_slot = "7062365450";
-                    google_ad_width = 728;
-                    google_ad_height = 90;
-                    //-->
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Interactive Tutorials Bottom -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:728px;height:90px"
+                     data-ad-client="ca-pub-3723950136133694"
+                     data-ad-slot="6124145877"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
-
             <script type="text/javascript" src="https://www.spoj.com/banner.js"></script>
+            {% endif %}
 
-            {% if domain_data.language == "java" %}
+            {% if domain_data.language == "java" and False %}
             <!-- Insticator API Embed Code -->
             <div id="insticator-container">
             <link rel="stylesheet" href="https://embed.insticator.com/embedstylesettings/getembedstyle?embedUUID=313360e4-8449-4846-814d-e8ec2acce8e7">
@@ -126,79 +150,59 @@
             </div>
 
         </div>
-        <div class="span2 hidden-phone" style="margin-left: 0">
+        <div class="span2 hidden-phone" style="margin-left: 10px">
             <div id="google-ad-right">
-                <!--
+                {% if domain_data.language != "python" %}
                 <div style="margin-bottom: 10px">
-                    <a href="http://www.dreamhost.com/r.cgi?1502972"><img alt="DreamHost" src="http://images.dreamhost.com/rewards/300x250-Sunny.png" style="width: 160px; max-width: 160px"/></a>
-                </div>
-                -->
-
-                <div style="margin-bottom: 10px">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Interactive Tutorials Right -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:160px;height:600px"
+                         data-ad-client="ca-pub-3723950136133694"
+                         data-ad-slot="5528539062"></ins>
                     <script>
-                        google_ad_client = "ca-pub-3723950136133694";
-                        google_ad_slot = "6624688330";
-                        google_ad_width = 160;
-                        google_ad_height = 600;
-                    </script>
-
-                    <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                    (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
-
                 <div style="margin-bottom: 10px">
-                    <script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=283190&u=learnpython&width=160&height=600"></script>
-                </div>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Interactive Tutorials Right 2 -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:160px;height:600px"
+                         data-ad-client="ca-pub-3723950136133694"
+                         data-ad-slot="3908211929"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
 
-                {% if domain_data.language == "python" %}
-                <div style="margin-bottom: 10px; margin-left: 5px;">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
-                        <img src="/static/img/banners/pycharm.png" style="width: 160px; max-width: 160px"/>
-                    </a>
-                </div>
-                {% elif domain_data.language == "java" %}
-                <div style="margin-bottom: 10px; margin-left: 5px;">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'IntelliJ');return false;" href="https://www.jetbrains.com/idea/specials/idea/idea-forge.jsp?utm_source=learnjavaonline&utm_medium=banner&utm_content=ideage&utm_campaign=idea">
-                        <img src="/static/img/banners/intellij.png" style="width: 160px; max-width: 160px"/>
-                    </a>
                 </div>
                 {% endif %}
-                <div style="margin-left: 5px;">
-                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png"></a>
-                </div>
 
-                <!--
-                <div style="margin-bottom: 10px">
-                    <script>
-                        google_ad_client = "ca-pub-3723950136133694";
-                        google_ad_slot = "6624688330";
-                        google_ad_width = 160;
-                        google_ad_height = 600;
-                    </script>
 
-                    <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>
-                </div>
-                -->
                 {% if domain_data.language == "python" %}
-                <!--
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'LearnC');return false;" href="http://www.learn-c.org">
-                        <img src="/static/learn-c-banner.png" style="width: 160px"/>
-                    </a>
-                </div>
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'LearnJava');return false;" href="http://www.learnjavaonline.org">
-                        <img src="/static/learnjavaonline-banner.png" style="width: 160px"/>
-                    </a>
-                </div>
-                -->
+                    <iframe src="https://learnpython-ads.datacamp.com/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
                 {% endif %}
-                <!--
-                <div style="margin-bottom: 10px">
-                    <IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=160 HEIGHT=600 SRC="http://ad.tblamnetwork.com/st?ad_type=iframe&ad_size=160x600&section=4633617&pub_url=${PUB_URL}"></IFRAME>
+
+                <h4>Online Courses</h4>
+
+                {% if domain_data.language == "python" %}
+                    <a href="https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.426570&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-python%2F">
+                        <img border=0 src="https://udemy-images.udemy.com/course/480x270/426570_1b91_3.jpg" >
+                        <div style="text-align: center">Learn Python: Python for Beginners</div>
+                    </a>
+                    <img border=0 width=1 height=1 src="https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.426570&type=2&subid=0">
+
+                {% else %}
+                    <a href="https://click.linksynergy.com/fs-bin/click?id=2mhs2G02AJA&offerid=358574.1386&subid=0&type=4"><IMG border="0"   alt="Programming Category (English)300x250" src="https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1386&subid=0&type=4&gridnum=13"></a>
+
+                    {# <a target="_blank"  href="https://www.amazon.com/gp/product/B00NB86OYE/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00NB86OYE&linkCode=as2&tag=interactivetu-20&linkId=c1368e9bd84bc242ab9f8fe8d62b4144"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B00NB86OYE&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=interactivetu-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=interactivetu-20&l=am2&o=1&a=B00NB86OYE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />  #}
+
+                {% endif %}
+                <h4>Sponsors</h4>
+                <div style="margin-top: 10px">
+                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png" style="width: 160px"></a>
                 </div>
-                -->
+
             </div>
         </div>
     </div>
@@ -206,67 +210,60 @@
 <footer>
     <div class="container">
 
+    {% if domain_data.language != "python" or language_code != "en" %}
     <div class="row">
 
-	<div class="span6">
+	<div class="span6 code-window">
         <h5 style="line-height: 28px">
-            Code Window
+            Code
             <span style="float: right;">
                 <button id="run-button" class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>Run</button>
                 <button id="reset-button" onclick="reset()" class="btn btn-primary">Reset</button>
                 <button id="solution-button" onclick="showSolution()" class="btn btn-primary">Solution</button>
             </span>
         </h5>
+        <div class="footer-toggle">
+            <textarea id="code" style="width: 100%; height: 210px">{{ code.decode('utf8') }}</textarea>
+        </div>
 
 
     </div>
 
-	<div class="span6">
+	<div class="span6 output-window">
 		<div style="width: 100%; height: 100%">
             <h5 style="line-height: 28px">
-                Output Window
+                Output
                 <span style="float: right">
                     <button id="expected-output-button" class="btn btn-primary" onclick="showExpected()">Expected Output</button>
-                    <button id="minimize-button" class="btn" onclick="toggleMinimize()">Minimize Code Window</button>
+                    <button id="minimize-button" class="btn" onclick="toggleMinimize()">Minimize Window</button>
                 </span>
             </h5>
 		</div>
-	</div>
 
+        <div class="footer-toggle">
+            <div id="loading">
+                Executing, please wait...
+            </div>
+            <div id="text-output">
+                <textarea id="output" style="width: 475px; height: 210px"></textarea>
+                <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
+                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+                </div>
+            </div>
+            <iframe id="html-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+            <iframe id="expected-output" style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+        </div>
+	</div>
+  {% endif %}
 
     </div> <!-- row -->
 
-    <div class="row" id="footer-toggle">
-        <div class="span6">
-            <textarea id="code" style="width: 100%; height: 210px">{{ code }}</textarea>
-        </div>
-        <div class="span6">
-            <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
-            <div id="loading" style="">
-                Executing, please wait...
-            </div>
-            <textarea id="output" style="width: 475px; height: 210px"></textarea>
-            <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
-                Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
-            </div>
+    <div class="row">
+        <div class="span12">
+            <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
         </div>
     </div>
-
-    </div> <!-- container -->
-
-    <div class="container">
-
-        <div class="row">
-            <div class="span12">
-                <div class="pull-right" style="padding-top: 3px">
-                    <a href="http://www.dmca.com/Protection/Status.aspx?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c" title="DMCA"> <img src ="/static/img/dmca_protected_sml_120ad.png?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c"  alt="DMCA.com" /></a>
-                </div>
-
-                <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
-            </div>
-        </div>
 
     </div>
 </footer>
-<script src="http://s.univide.com/t.js?pid=1&pcid={{ uid }}"></script>
 {% endblock %}

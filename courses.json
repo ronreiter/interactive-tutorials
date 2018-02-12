@@ -1,0 +1,629 @@
+{
+    "learn-c.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1321548_ce0c.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1321548&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-beginners-advanced%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1321548&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-beginners-advanced%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1321548_ce0c.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1321548&type=2&subid=0\" >", 
+            "link_id": "1321548", 
+            "link_name": "C in Depth: The Complete C Programming Guide for Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1321548&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.111712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.111712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/111712_d7d9_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0\" >", 
+            "link_id": "111712", 
+            "link_name": "C Programming For Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.111712&type=2&subid=0", 
+            "retail_price": 145.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/771448_566f_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.771448&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fmaster-c-programming-with-visual-studio-for-all%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.771448&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fmaster-c-programming-with-visual-studio-for-all%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/771448_566f_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.771448&type=2&subid=0\" >", 
+            "link_id": "771448", 
+            "link_name": "Learn and Master C Programming For Absolute Beginners!", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.771448&type=2&subid=0", 
+            "retail_price": 200.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/512470_7b67_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.512470&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-for-technical-interview%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.512470&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-for-technical-interview%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/512470_7b67_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.512470&type=2&subid=0\" >", 
+            "link_id": "512470", 
+            "link_name": "C Programming - Complete Tutorial For Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.512470&type=2&subid=0", 
+            "retail_price": 95.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1037214_2ebc_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1037214&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1037214&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1037214_2ebc_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1037214&type=2&subid=0\" >", 
+            "link_id": "1037214", 
+            "link_name": "C Programming For Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1037214&type=2&subid=0", 
+            "retail_price": 20.0
+        }
+    ], 
+    "learn-cpp.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/657932_c7e0.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.657932&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funrealcourse%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.657932&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funrealcourse%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/657932_c7e0.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.657932&type=2&subid=0\" >", 
+            "link_id": "657932", 
+            "link_name": "The Unreal Engine Developer Course - Learn C++ & Make Games", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.657932&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/10321_0ea1_7.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.10321&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-c%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.10321&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-c%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/10321_0ea1_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.10321&type=2&subid=0\" >", 
+            "link_id": "10321", 
+            "link_name": "Learn to Program with C++", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.10321&type=2&subid=0", 
+            "retail_price": 50.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/43718_e5ca_10.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.43718&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fvideo-course-c-from-beginner-to-expert%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.43718&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fvideo-course-c-from-beginner-to-expert%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/43718_e5ca_10.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.43718&type=2&subid=0\" >", 
+            "link_id": "43718", 
+            "link_name": "C++: From Beginner to Expert", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.43718&type=2&subid=0", 
+            "retail_price": 70.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/816356_da9c_4.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.816356&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-c-plus-plus-from-beginner-to-advanced%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.816356&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-c-plus-plus-from-beginner-to-advanced%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/816356_da9c_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.816356&type=2&subid=0\" >", 
+            "link_id": "816356", 
+            "link_name": "Learn and Understand C++", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.816356&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "It & Software", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/760210_7215_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.760210&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fhow-to-create-an-advanced-keylogger-from-scratch-for-windows%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.760210&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fhow-to-create-an-advanced-keylogger-from-scratch-for-windows%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/760210_7215_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.760210&type=2&subid=0\" >", 
+            "link_id": "760210", 
+            "link_name": "Build an Advanced Keylogger using C++ for Ethical Hacking!", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.760210&type=2&subid=0", 
+            "retail_price": 195.0
+        }
+    ], 
+    "learn-golang.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1309202_1231_4.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309202&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgo-the-complete-developers-guide%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309202&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgo-the-complete-developers-guide%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1309202_1231_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309202&type=2&subid=0\" >", 
+            "link_id": "1309202", 
+            "link_name": "Go: The Complete Developer's Guide (Golang)", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309202&type=2&subid=0", 
+            "retail_price": 85.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1172402_2c2c_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1172402&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-cloud-native-go%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1172402&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-cloud-native-go%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1172402_2c2c_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1172402&type=2&subid=0\" >", 
+            "link_id": "1172402", 
+            "link_name": "Getting started with Cloud Native Go", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1172402&type=2&subid=0", 
+            "retail_price": 125.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1020950_1304.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1020950&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgooglego%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1020950&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgooglego%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1020950_1304.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1020950&type=2&subid=0\" >", 
+            "link_id": "1020950", 
+            "link_name": "The Complete Google Go Programming Course For Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1020950&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1328102_0176.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1328102&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-google-golang-programming%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1328102&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-google-golang-programming%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1328102_0176.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1328102&type=2&subid=0\" >", 
+            "link_id": "1328102", 
+            "link_name": "The Complete Google's Go (golang) Programming Course", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1328102&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1238718_fa8b_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1238718&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgo-building-7-real-world-projects%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1238718&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgo-building-7-real-world-projects%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1238718_fa8b_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1238718&type=2&subid=0\" >", 
+            "link_id": "1238718", 
+            "link_name": "Go: Building 7 Real-World Projects", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1238718&type=2&subid=0", 
+            "retail_price": 200.0
+        }
+    ], 
+    "learn-html.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/437398_46c3_8.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.437398&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fdesign-and-develop-a-killer-website-with-html5-and-css3%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.437398&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fdesign-and-develop-a-killer-website-with-html5-and-css3%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/437398_46c3_8.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.437398&type=2&subid=0\" >", 
+            "link_id": "437398", 
+            "link_name": "Build Responsive Real World Websites with HTML5 and CSS3", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.437398&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1302590_4889_4.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1302590&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fstep-by-step-html-and-css-course-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1302590&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fstep-by-step-html-and-css-course-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1302590_4889_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1302590&type=2&subid=0\" >", 
+            "link_id": "1302590", 
+            "link_name": "Step By Step HTML and CSS course for beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1302590&type=2&subid=0", 
+            "retail_price": 120.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1252318_3965_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1252318&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-html-and-css-course-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1252318&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-html-and-css-course-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1252318_3965_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1252318&type=2&subid=0\" >", 
+            "link_id": "1252318", 
+            "link_name": "The Complete HTML and CSS Course For Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1252318&type=2&subid=0", 
+            "retail_price": 85.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/80940_2664_8.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.80940&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbuild-website-scratch%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.80940&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbuild-website-scratch%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/80940_2664_8.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.80940&type=2&subid=0\" >", 
+            "link_id": "80940", 
+            "link_name": "Build Websites from Scratch with HTML & CSS", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.80940&type=2&subid=0", 
+            "retail_price": 145.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/365886_45be_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.365886&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcrash-course-html-and-css%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.365886&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcrash-course-html-and-css%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/365886_45be_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.365886&type=2&subid=0\" >", 
+            "link_id": "365886", 
+            "link_name": "A Web Development Crash Course in HTML5 and CSS3", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.365886&type=2&subid=0", 
+            "retail_price": 40.0
+        }
+    ], 
+    "learn-js.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/851712_fc61_4.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.851712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.851712&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-javascript-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/851712_fc61_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.851712&type=2&subid=0\" >", 
+            "link_id": "851712", 
+            "link_name": "The Complete JavaScript Course: Build a Real-World Project", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.851712&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/861624_864d_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.861624&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-es6-tutorial%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.861624&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-es6-tutorial%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/861624_864d_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.861624&type=2&subid=0\" >", 
+            "link_id": "861624", 
+            "link_name": "ES6 Javascript: The Complete Developer's Guide", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.861624&type=2&subid=0", 
+            "retail_price": 80.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/364426_2991_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.364426&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funderstand-javascript%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.364426&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funderstand-javascript%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/364426_2991_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.364426&type=2&subid=0\" >", 
+            "link_id": "364426", 
+            "link_name": "JavaScript: Understanding the Weird Parts", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.364426&type=2&subid=0", 
+            "retail_price": 175.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1351318_b207_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1351318&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-step-by-step-guide-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1351318&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-step-by-step-guide-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1351318_b207_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1351318&type=2&subid=0\" >", 
+            "link_id": "1351318", 
+            "link_name": "JavaScript - Step By Step Guide For Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1351318&type=2&subid=0", 
+            "retail_price": 115.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1342418_b2f3_10.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1342418&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-training%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1342418&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjavascript-training%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1342418_b2f3_10.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1342418&type=2&subid=0\" >", 
+            "link_id": "1342418", 
+            "link_name": "The Complete JavaScript Course - Beginner to Professional", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1342418&type=2&subid=0", 
+            "retail_price": 200.0
+        }
+    ], 
+    "learn-perl.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/648022_8693_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.648022&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperl-programming-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.648022&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperl-programming-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/648022_8693_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.648022&type=2&subid=0\" >", 
+            "link_id": "648022", 
+            "link_name": "Perl Programming for Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.648022&type=2&subid=0", 
+            "retail_price": 100.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/846662_895f_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.846662&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperlprogramming%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.846662&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperlprogramming%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/846662_895f_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.846662&type=2&subid=0\" >", 
+            "link_id": "846662", 
+            "link_name": "Perl Building Blocks - An Introduction to Perl", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.846662&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1347936_4117.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1347936&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperl-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1347936&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperl-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1347936_4117.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1347936&type=2&subid=0\" >", 
+            "link_id": "1347936", 
+            "link_name": "Perl for Beginners: Learn A to Z of Perl Scripting Hands-on", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1347936&type=2&subid=0", 
+            "retail_price": 200.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/857334_01f6_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.857334&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-perl-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.857334&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fgetting-started-with-perl-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/857334_01f6_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.857334&type=2&subid=0\" >", 
+            "link_id": "857334", 
+            "link_name": "Getting Started with Perl for Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.857334&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/38915_03af_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.38915&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperltutorial%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.38915&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fperltutorial%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/38915_03af_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.38915&type=2&subid=0\" >", 
+            "link_id": "38915", 
+            "link_name": "Learn Perl 5 By Doing It", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.38915&type=2&subid=0", 
+            "retail_price": 25.0
+        }
+    ], 
+    "learn-php.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1188176_a4be_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1188176&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fspotify-clone%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1188176&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fspotify-clone%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1188176_a4be_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1188176&type=2&subid=0\" >", 
+            "link_id": "1188176", 
+            "link_name": "Create a Spotify Clone from Scratch - JavaScript, PHP, MySQL", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1188176&type=2&subid=0", 
+            "retail_price": 50.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1236794_1aba_7.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1236794&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-beginners-r%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1236794&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-beginners-r%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1236794_1aba_7.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1236794&type=2&subid=0\" >", 
+            "link_id": "1236794", 
+            "link_name": "PHP For Absolute Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1236794&type=2&subid=0", 
+            "retail_price": 100.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/818958_2069_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.818958&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-wordpress-development%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.818958&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-for-wordpress-development%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/818958_2069_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.818958&type=2&subid=0\" >", 
+            "link_id": "818958", 
+            "link_name": "PHP For WordPress Development", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.818958&type=2&subid=0", 
+            "retail_price": 35.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/424864_ab6e_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.424864&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-mvc-from-scratch%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.424864&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fphp-mvc-from-scratch%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/424864_ab6e_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.424864&type=2&subid=0\" >", 
+            "link_id": "424864", 
+            "link_name": "Write PHP Like a Pro: Build a PHP MVC Framework From Scratch", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.424864&type=2&subid=0", 
+            "retail_price": 70.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/580466_3100_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.580466&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-php-course%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.580466&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcomplete-php-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/580466_3100_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.580466&type=2&subid=0\" >", 
+            "link_id": "580466", 
+            "link_name": "Complete PHP Course With Bootstrap3 CMS System & Admin Panel", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.580466&type=2&subid=0", 
+            "retail_price": 195.0
+        }
+    ], 
+    "learncs.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/258316_55e9_4.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.258316&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.258316&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Funitycourse%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/258316_55e9_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.258316&type=2&subid=0\" >", 
+            "link_id": "258316", 
+            "link_name": "Learn to Code by Making Games - Complete C# Unity Developer", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.258316&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1317756_be52_6.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1317756&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-sharp-basics-for-complete-newbies%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1317756&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-sharp-basics-for-complete-newbies%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1317756_be52_6.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1317756&type=2&subid=0\" >", 
+            "link_id": "1317756", 
+            "link_name": "C# Basics - For Complete Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1317756&type=2&subid=0", 
+            "retail_price": 20.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/382002_5d4a.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.382002&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcsharp-tutorial-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.382002&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcsharp-tutorial-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/382002_5d4a.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.382002&type=2&subid=0\" >", 
+            "link_id": "382002", 
+            "link_name": "C# Basics for Beginners: Learn C# Fundamentals by Coding", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.382002&type=2&subid=0", 
+            "retail_price": 180.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/920296_b189_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.920296&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-crash-course%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.920296&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-programming-crash-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/920296_b189_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.920296&type=2&subid=0\" >", 
+            "link_id": "920296", 
+            "link_name": "C# Programming Crash Course", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.920296&type=2&subid=0", 
+            "retail_price": 150.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1362870_6f5f_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1362870&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-sharp-basics-learn-to-code-the-hard-way%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1362870&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fc-sharp-basics-learn-to-code-the-hard-way%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1362870_6f5f_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1362870&type=2&subid=0\" >", 
+            "link_id": "1362870", 
+            "link_name": "C# Basics - Learn to Code the Hard Way", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1362870&type=2&subid=0", 
+            "retail_price": 30.0
+        }
+    ], 
+    "learnjavaonline.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/533682_c10c_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.533682&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.533682&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-the-complete-java-developer-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/533682_c10c_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.533682&type=2&subid=0\" >", 
+            "link_id": "533682", 
+            "link_name": "Complete Java Masterclass", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.533682&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1309166_f0f6_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309166&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbecome-a-junior-java-software-developer%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1309166&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbecome-a-junior-java-software-developer%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1309166_f0f6_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309166&type=2&subid=0\" >", 
+            "link_id": "1309166", 
+            "link_name": "Become a Junior Java Software Developer", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1309166&type=2&subid=0", 
+            "retail_price": 175.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/358540_d06b_6.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.358540&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-in-depth-become-a-complete-java-engineer%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.358540&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-in-depth-become-a-complete-java-engineer%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/358540_d06b_6.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.358540&type=2&subid=0\" >", 
+            "link_id": "358540", 
+            "link_name": "Java In-Depth: Become a Complete Java Engineer!", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.358540&type=2&subid=0", 
+            "retail_price": 120.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1228490_9cb9.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1228490&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-for-absolute-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1228490&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjava-for-absolute-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1228490_9cb9.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1228490&type=2&subid=0\" >", 
+            "link_id": "1228490", 
+            "link_name": "Java for Absolute Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1228490&type=2&subid=0", 
+            "retail_price": 20.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/618736_237d_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.618736&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjsp-tutorial%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.618736&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fjsp-tutorial%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/618736_237d_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.618736&type=2&subid=0\" >", 
+            "link_id": "618736", 
+            "link_name": "JSP, Servlets and JDBC for Beginners: Build a Database App", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.618736&type=2&subid=0", 
+            "retail_price": 95.0
+        }
+    ], 
+    "learnrubyonline.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/519442_63fe_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.519442&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-ruby-on-rails-developer-course%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.519442&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-ruby-on-rails-developer-course%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/519442_63fe_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.519442&type=2&subid=0\" >", 
+            "link_id": "519442", 
+            "link_name": "The Complete Ruby on Rails Developer Course", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.519442&type=2&subid=0", 
+            "retail_price": 195.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/369132_258f_5.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.369132&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbuild-etsy-yelp-craigslist-and-a-web-scraper-from-scratch%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.369132&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fbuild-etsy-yelp-craigslist-and-a-web-scraper-from-scratch%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/369132_258f_5.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.369132&type=2&subid=0\" >", 
+            "link_id": "369132", 
+            "link_name": "One-stop Ruby on Rails: Build Web Applications from Scratch", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.369132&type=2&subid=0", 
+            "retail_price": 145.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1004034_1b7c_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1004034&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-to-code-with-ruby-lang%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1004034&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-to-code-with-ruby-lang%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1004034_1b7c_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1004034&type=2&subid=0\" >", 
+            "link_id": "1004034", 
+            "link_name": "Learn to Code with Ruby", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1004034&type=2&subid=0", 
+            "retail_price": 30.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/739512_faa4_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.739512&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcomprehensive-ruby-programming-tutorial%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.739512&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fcomprehensive-ruby-programming-tutorial%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/739512_faa4_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.739512&type=2&subid=0\" >", 
+            "link_id": "739512", 
+            "link_name": "Comprehensive Ruby Programming", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.739512&type=2&subid=0", 
+            "retail_price": 40.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/8082_e627_11.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.8082&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-ruby-programming-in-ten-easy-steps%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.8082&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-ruby-programming-in-ten-easy-steps%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/8082_e627_11.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.8082&type=2&subid=0\" >", 
+            "link_id": "8082", 
+            "link_name": "Ruby Programming for Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.8082&type=2&subid=0", 
+            "retail_price": 75.0
+        }
+    ], 
+    "learnshell.org": [
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/1032334_d52b_4.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1032334&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-basic-commands-in-linux-shell%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.1032334&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-basic-commands-in-linux-shell%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/1032334_d52b_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1032334&type=2&subid=0\" >", 
+            "link_id": "1032334", 
+            "link_name": "Learn Basic Commands in Linux Shell", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.1032334&type=2&subid=0", 
+            "retail_price": 95.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/796654_8882_3.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.796654&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flinux-shell-programming-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.796654&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flinux-shell-programming-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/796654_8882_3.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.796654&type=2&subid=0\" >", 
+            "link_id": "796654", 
+            "link_name": "Linux Shell Programming for Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.796654&type=2&subid=0", 
+            "retail_price": 40.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/809770_2258_4.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.809770&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-bash-shell-in-linux-for-beginners-lite%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.809770&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-bash-shell-in-linux-for-beginners-lite%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/809770_2258_4.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.809770&type=2&subid=0\" >", 
+            "link_id": "809770", 
+            "link_name": "Learn Bash Shell in Linux for Beginners - Lite", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.809770&type=2&subid=0", 
+            "retail_price": 20.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/745772_0021.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.745772&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-bash-shell-in-linux-for-beginners%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.745772&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-bash-shell-in-linux-for-beginners%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/745772_0021.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.745772&type=2&subid=0\" >", 
+            "link_id": "745772", 
+            "link_name": "Learn Bash Shell in Linux for Beginners", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.745772&type=2&subid=0", 
+            "retail_price": 35.0
+        }, 
+        {
+            "advertiser": "Udemy", 
+            "category": "Development", 
+            "image_url": "https://udemy-images.udemy.com/course/480x270/563066_4981_2.jpg", 
+            "link": "https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.563066&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fshell-scripting-linux%2F", 
+            "link_code": "<a href=\"https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.563066&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fshell-scripting-linux%2F\"><IMG border=0 src=\"https://udemy-images.udemy.com/course/480x270/563066_4981_2.jpg\" ></a><IMG border=0 width=1 height=1 src=\"https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.563066&type=2&subid=0\" >", 
+            "link_id": "563066", 
+            "link_name": "Shell Scripting: Discover How to Automate Command Line Tasks", 
+            "pixel_url": "https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.563066&type=2&subid=0", 
+            "retail_price": 95.0
+        }
+    ]
+}
