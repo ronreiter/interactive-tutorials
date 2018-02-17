@@ -50,9 +50,7 @@ attribute - which directs the browser to break the floating effect after the fir
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
+Create a site that has a ```<h1>``` header that says "Picture of Elephant", and make a (imaginary) ```<img>``` of elephant.png from ```/static/img/``` with a width of 100 pixels
 
 Tutorial Code
 -------------
@@ -68,15 +66,8 @@ Tutorial Code
 Expected Output
 ---------------
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
+# Picture of Elephant
+
 
 Solution
 --------
@@ -84,9 +75,9 @@ Solution
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <h1>Picture of Elephant</h1>"
+            <img src="/static/img/elephant.png" style="width: 100px>
         </body>
     </html>
