@@ -124,10 +124,7 @@ Here is an example of the none list style type:
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
-
+Create a site that has a list of 5 vegetables, brocolli, cabbage, celery, spinach, and turnips. Make a ```<h1>``` header that says "List of Vegetables", then make a __Uppercase Roman Numeral List__ using the ```<ol>``` ordered list tag.
 
 Tutorial Code
 -------------
@@ -143,25 +140,35 @@ Tutorial Code
 Expected Output
 ---------------
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
+# List of Vegetables
+
+  I. brocolli
+  
+  II. cabbage
+  
+  III. celery
+  
+  IV. spinach
+  
+  V. turnips
+
 
 Solution
 --------
 
+
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <h1>List of Vegetables</h1>
+            <ol type="I">
+                <li>brocolli</li>
+                <li>cabbage</li>
+                <li>celery</li>
+                <li>spinach</li>
+                <li>turnips</li>
+            </ol>
         </body>
     </html>
