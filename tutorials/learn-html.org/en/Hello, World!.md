@@ -5,22 +5,6 @@ Welcome to *Learn HTML*, the easiest way to learn HTML & CSS online, interactive
     
 Learning HTML & CSS is essential for any web developer, and does not require to know how to program using JavaScript.
  
-Before you begin, I would recommend that you start out by downloading an HTML & CSS IDE. My personal preference
-is to use an IDE by JetBrains. You can download the PyCharm Community Edition for free, which has really good HTML, 
-CSS and JavaScript development support built-in, along with all the goodies that a good IDE provides - source code
-integration, code refactoring, automatic indentation, syntax highlighting, comparison tool, etc. 
-
-**Here is a list of HTML, CSS and JavaScript editors you can choose from:**
-
-* JetBrains PyCharm Community Edition (free) - [[https://www.jetbrains.com/pycharm/download/]]
-* JetBrains WebStorm (Commercial) - [[https://www.jetbrains.com/webstorm/]]
-* Atom (Free) - [[https://atom.io/]]
-* Sublime Text (Commercial) - [[https://www.sublimetext.com/]]
-* Brackets - [[http://brackets.io/]]
-* Notepad++ (Windows only) - [[https://notepad-plus-plus.org/download/v7.html]]
-
-In this tutorial you won't actually need an IDE, because all coding is done online.
-
 ### Introduction
 
 HTML (HyperText Markup Language) is a standard developed over the years to convey information over the internet by 
@@ -110,15 +94,8 @@ Tutorial Code
 Expected Output
 ---------------
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
+# Hello, World!
+Hello, World!
 
 Solution
 --------
