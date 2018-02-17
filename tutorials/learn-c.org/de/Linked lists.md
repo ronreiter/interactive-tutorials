@@ -203,7 +203,7 @@ There are a few edge cases we need to take care of, so make sure you understand 
             return pop(head);
         }
 
-        for (int i = 0; i < n-1; i++) {
+        for (i = 0; i < n-1; i++) {
             if (current->next == NULL) {
                 return -1;
             }
