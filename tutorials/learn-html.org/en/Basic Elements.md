@@ -66,9 +66,7 @@ A horizontal ruler `<hr>` tag acts as a simple separator between page sections.
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
+Create a page that has a ```<h1>``` header that says "Hello, World!" and a ```<p>``` paragraph that says "Hello, Internet!" under the header.
 
 
 Tutorial Code
@@ -85,15 +83,8 @@ Tutorial Code
 Expected Output
 ---------------
 
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
+# Hello, World!
+Hello, Internet!
 
 Solution
 --------
@@ -101,9 +92,9 @@ Solution
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <h1>Hello, World!</h1>
+            <p>Hello, Internet!</p>
         </body>
     </html>
