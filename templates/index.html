@@ -77,7 +77,8 @@
             {% endif %}
 
             {% if tutorial_page and (domain_data.language != "python" or language_code != "en") %}
-            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()"><div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
+            <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()">
+                <div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
             <script>
                 $(function(){
                     toggleMinimize();

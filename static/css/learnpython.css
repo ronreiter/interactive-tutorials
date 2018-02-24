@@ -153,6 +153,8 @@ textarea {
     background-color: #3C3D38;
     background-image: url(/static/img/se-logo-anim.gif);
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .btn.execute-code {
@@ -192,17 +194,17 @@ textarea {
 
 
 @media screen and (max-width: 768px) and (max-height: 800px) {
-    .code-window, .output-window {
-        display: none;
-    }
+    /*.code-window, .output-window {*/
+        /*display: none;*/
+    /*}*/
 
     #main {
         margin-bottom: 30px;
     }
 
-    .execute-code {
-        visibility: hidden;
-    }
+    /*.execute-code {*/
+        /*visibility: hidden;*/
+    /*}*/
 }
 
 /* DataCamp */
