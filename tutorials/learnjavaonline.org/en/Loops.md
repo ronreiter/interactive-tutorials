@@ -114,7 +114,9 @@ These two keywords help us control the loop from within it.
 Exercise
 --------
 
-Loop through and print out all even numbers from the numbers list in the same order they are received. Don't print any numbers that come after 237 in the sequence.
+Loop through and print out all even numbers, each in a separate line, from the numbers list in the same order they are received.
+Don't print any numbers that come after 237 in the sequence.
+
 
 Tutorial Code
 -------------
@@ -137,7 +139,28 @@ Tutorial Code
 Expected Output
 ---------------
 
-    402 984 360 408 980 544 390 984 592 236 942 386 462 418 344 236 566 978 328 162 758 918
+    402
+    984
+    360
+    408
+    980
+    544
+    390
+    984
+    592
+    236
+    942
+    386
+    462
+    418
+    344
+    236
+    566
+    978
+    328
+    162
+    758
+    918
 
 Solution
 --------
@@ -153,13 +176,18 @@ Solution
                 958, 609, 842, 451, 688, 753, 854, 685, 93, 857, 440, 380, 126, 721, 328, 753, 470, 
                 743, 527};
             
-            
-            for (int i=0; i < numbers.length; i++) {
-            
+            for (int i = 0; i < numbers.length; i++) {
                 int el = numbers[i];
-                if (el == 237) break;
-                if (el % 2 == 0)           // using the remainder operator %
-                System.out.print(el+" ");  // the Expected Output likes it like this!
+
+                if (el == 237) {
+                    break;
+                }
+
+                // using the division remainder operator %
+                if (el % 2 == 0) {
+                    System.out.println(el);
+                }
+
             }
         }
     }
