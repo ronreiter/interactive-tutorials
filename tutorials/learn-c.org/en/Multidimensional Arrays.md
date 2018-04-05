@@ -30,9 +30,9 @@ In this sense, every element in the array a is identified by an element name of 
 And honestly, you really don't have to put in a [ x ] value really, because if you did something like this -
 
 	char vowels[][5] = {
-		{'A', 'E', 'I', 'O', 'U'}
+		{'A', 'E', 'I', 'O', 'U'},
 		{'a', 'e', 'i', 'o', 'u'}
-	}
+	};
 
 the compiler would already know that there is two "dimensions" you could say, but, you need need __NEED__ a [ y ] value!! The compiler may be smart, but it _will not know_ how many integers, characters, floats, whatever you're using you have in the dimensions. Keep that in mind.
 
