@@ -76,7 +76,7 @@ Expected Output
 
     productName: TV
     productYear: 2012
-    productPrice: 279.99f
+    productPrice: 279.99
 
 Solution
 --------
