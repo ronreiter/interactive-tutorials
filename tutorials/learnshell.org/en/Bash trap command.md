@@ -14,7 +14,7 @@ Trap is your command to try:
 	#!/bin/bash
 	# traptest.sh
 	# notice you cannot make Ctrl-C work in this shell, 
-	# try with your local one, also remeber to chmod -x 
+	# try with your local one, also remeber to chmod +x 
 	# your local .sh file so you can execute it!
 
 	trap "echo Booh!" SIGINT SIGTERM
