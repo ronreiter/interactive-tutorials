@@ -14,7 +14,7 @@ In single quotation can't support `'Hello world #{some code}'` or outher procecs
 Short syntax for puts is `p` keyword , example: 
     p 'Hello world'
     
-When you use puts keyword ruby add newline(' \n ') on end of line
+When you use puts keyword ruby add newline(' \\n ') on end of line
 
     puts 'Hello World !!!'
     Hello World !!!
