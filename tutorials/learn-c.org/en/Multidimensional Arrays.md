@@ -13,7 +13,7 @@ or maybe this one -
 
 	char vowels[1][5] = {
 		{'a', 'e', 'i', 'o', 'u'}
-	}
+	};
 
 ### Two-dimensional Arrays
 
