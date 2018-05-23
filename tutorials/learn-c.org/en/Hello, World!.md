@@ -19,7 +19,7 @@ to do.
 Every C program uses libraries, which give the ability to execute necessary functions. For example, the most basic function
 called `printf`, which prints to the screen, is defined in the `stdio.h` header file. 
 
-To add the ability to run the `printf` command to our program, we must add following include directive to our first line of the code:
+To add the ability to run the `printf` command to our program, we must add the following include directive to our first line of the code:
 
     #include <stdio.h>
 
@@ -45,7 +45,7 @@ Last but not least, we will need to call the function `printf` to print our sent
 Exercise
 --------
 
-Change the program in the bottom in a way so that it prints to the output "Hello, World!". 
+Change the program at the bottom so that it prints to the output "Hello, World!". 
 
 Tutorial Code
 -------------
