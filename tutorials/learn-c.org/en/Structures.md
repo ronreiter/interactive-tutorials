@@ -7,7 +7,7 @@ C structures are special, large variables which contain several named variables 
 * Passing multiple arguments in and out of functions through a single argument
 * Data structures such as linked lists, binary trees, and more
 
-The most basic example of structures are **points**, which are a single entity that contains two variables - `x` and `y`. Let's define a point in a two-dimensional point:
+The most basic example of structures are **points**, which are a single entity that contains two variables - `x` and `y`. Let's define a point:
 
     struct point {
         int x;
