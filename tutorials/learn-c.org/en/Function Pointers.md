@@ -1,13 +1,13 @@
 Tutorial
 --------
 
-Remember pointers? We used to point to an array of chars then make a string out of them.
+Remember pointers? We used them to point to an array of chars then make a string out of them.
 Then things got more interesting when we learned how to control these pointers.
-Now it is time to do something even more interesting with pointers where we point them to functions then call these functions using a pointer.
+Now it is time to do something even more interesting with pointers, using them to point to and call functions.
 
 ### Why point to a function?
 
-The first question that may come to your mind is why would we use pointers to call a function when we can simply call a function by its name: `function();` - that's a great question! Now imagine the `sort` function where you need to sort an array. Sometimes you want to order array elements in an ascending order or decending order. How would you choose? Function pointers!
+The first question that may come to your mind is why would we use pointers to call a function when we can simply call a function by its name: `function();` - that's a great question! Now imagine the `sort` function where you need to sort an array. Sometimes you want to order array elements in an ascending order or descending order. How would you choose? Function pointers!
 
 
 ### Function Pointer Syntax
