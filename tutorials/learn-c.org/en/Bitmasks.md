@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-Bit masking is simply the process of storing data truly as bits, as opposed to storing as chars/ints/floats.  It increadibly useful for storing certain types of data compactly and efficiently.
+Bit masking is simply the process of storing data truly as bits, as opposed to storing it as chars/ints/floats.  It is incredibly useful for storing certain types of data compactly and efficiently.
 
-The idea for bit masking is based off of boolean logic.  For those not familiar, boolean logic is the manipulation of 'true' (1) and 'false' (0) through logical operations (that take 0s and 1s as their argument).  We are concerned with the following operations:
+The idea for bit masking is based on boolean logic.  For those not familiar, boolean logic is the manipulation of 'true' (1) and 'false' (0) through logical operations (that take 0s and 1s as their argument).  We are concerned with the following operations:
 
 * NOT a - the final value is the opposite of the input value (1 -> 0, 0 -> 1)
 * a AND b - if both values are 1, the final value is 1, otherwise the final value is 0
