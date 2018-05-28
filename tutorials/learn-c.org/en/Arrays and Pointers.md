@@ -8,7 +8,7 @@ In a previous tutorial on [[Pointers]], you learned that a pointer to a given da
 
 Here, `c` is a scalar variable that can store only a single value. However, you are already familiar with arrays that can hold multiple values of the same data type in a contiguously allocated memory block. So, you might wonder, can we have pointers to arrays too? Indeed, we can.
 
-Let us start with an example code and look at its output. We would discuss its behavior subsequently.
+Let us start with an example code and look at its output. We will discuss its behavior subsequently.
 
     char vowels[] = {'A', 'E', 'I', 'O', 'U'};
     char *pvowels = &vowels;
@@ -48,9 +48,9 @@ A typical output of the above code is shown below.
 
 
 
-As you rightly guessed, `&vowels[i]` gives the memory location of the *i*th element of the array `vowels`. Moreover, since this is a character array, each element occupies one byte so that the consecutive memory addresses are separated by a single byte. We also considered a pointer, `pvowels`, and assigned the address of the array `vowels` to it. `pvowels + i` is a valid operation; although in general, this may not always be meaningful (explored further in [[Pointer Arithmetics]] ). In particular, the output shown above indicates that `&vowels[i]` and `pvowels + i` are equivalent. You are suggested to alter the data types of the array and pointer variables and convince yourself the this claim is indeed true.
+As you rightly guessed, `&vowels[i]` gives the memory location of the *i*th element of the array `vowels`. Moreover, since this is a character array, each element occupies one byte so that the consecutive memory addresses are separated by a single byte. We also created a pointer, `pvowels`, and assigned the address of the array `vowels` to it. `pvowels + i` is a valid operation; although in general, this may not always be meaningful (explored further in [[Pointer Arithmetics]] ). In particular, the output shown above indicates that `&vowels[i]` and `pvowels + i` are equivalent. Feel free to alter the data types of the array and pointer variables to test this out.
 
-If you look carefully at the previous code, you would notice that we also used another apparently surprising notation, `vowels + i`. Moreover, `pvowels + i` and `vowels + i` returns the same thing &mdash; address of the *i*th element of the array `vowels`. On the other hand, `*(pvowels + i)` and `*(vowels + i)` both return the *i*th element of the array `vowels`. Why is that so?
+If you look carefully at the previous code, you will notice that we also used another apparently surprising notation: `vowels + i`. Moreover, `pvowels + i` and `vowels + i` returns the same thing &mdash; address of the *i*th element of the array `vowels`. On the other hand, `*(pvowels + i)` and `*(vowels + i)` both return the *i*th element of the array `vowels`. Why is that so?
 
 This is because the name of an array itself is a (constant) pointer to the first element of the array. In other words, the notations `vowels`, `&vowels[0]`, and `vowels + 0` all point to the same location.
 
