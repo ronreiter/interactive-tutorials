@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-In the previous tutorials of [Arrays](https://www.learn-c.org/en/Arrays), we covered, well, arrays and how they work. But C can do another type of arrays; Mulitdimensional Arrays. Here is the general form of a multidimensional array declaration -
+In the previous tutorials on [Arrays](https://www.learn-c.org/en/Arrays), we covered, well, arrays and how they work. The arrays we looked at were all one-dimensional, but C can create and use multi-dimensional arrays. Here is the general form of a multidimensional array declaration:
 
 	type name[size1][size2]...[sizeN];
 
@@ -25,7 +25,7 @@ Where __type__ can be any C data type (int, char, long, long long, double, etc.)
 
 ![Table 1A](https://www.tutorialspoint.com/cprogramming/images/two_dimensional_arrays.jpg)
 
-In this sense, every element in the array a is identified by an element name of the form __a[i][j]__, where 'a' is the name of the array, and 'i' and 'j' are the indexes that uniquely identify, or show, each element in 'a'.
+In this sense, every element in the array a is identified by an element name in the form __a[i][j]__, where 'a' is the name of the array, and 'i' and 'j' are the indexes that uniquely identify, or show, each element in 'a'.
 
 And honestly, you really don't have to put in a [ x ] value really, because if you did something like this -
 
@@ -34,7 +34,7 @@ And honestly, you really don't have to put in a [ x ] value really, because if y
 		{'a', 'e', 'i', 'o', 'u'}
 	};
 
-the compiler would already know that there is two "dimensions" you could say, but, you need need __NEED__ a [ y ] value!! The compiler may be smart, but it _will not know_ how many integers, characters, floats, whatever you're using you have in the dimensions. Keep that in mind.
+the compiler would already know that there are two "dimensions" you could say, but, you need need __NEED__ a [ y ] value!! The compiler may be smart, but it _will not know_ how many integers, characters, floats, whatever you're using you have in the dimensions. Keep that in mind.
 
 ### Initializing Two-Dimensional Arrays
 
