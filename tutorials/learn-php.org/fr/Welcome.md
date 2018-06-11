@@ -23,7 +23,7 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 - [[Tableaux à clés]]
 - [[Chaines]]
 - [[Boucles for]]
-- [[While loops]]
+- [[Boucles while]]
 - [[Functions]]
 - [[Objects]]
 
