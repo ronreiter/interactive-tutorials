@@ -19,7 +19,7 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 
 - [[Salut, tout le monde !]]
 - [[Variables et types]]
-- [[Simple arrays]]
+- [[Tableaux simples]]
 - [[Arrays with keys]]
 - [[Strings]]
 - [[For loops]]
