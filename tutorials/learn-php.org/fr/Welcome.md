@@ -21,7 +21,7 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 - [[Variables et types]]
 - [[Tableaux simples]]
 - [[Tableaux à clés]]
-- [[Strings]]
+- [[Chaines]]
 - [[For loops]]
 - [[While loops]]
 - [[Functions]]
