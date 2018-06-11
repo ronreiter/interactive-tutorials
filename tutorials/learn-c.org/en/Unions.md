@@ -3,7 +3,7 @@ Tutorial
 
 C Unions are essentially the same as C Structures, except that instead of containing multiple variables each with their own memory a Union allows for multiple names to the same variable. These names can treat the memory as different types (and the size of the union will be the size of the largest type, + any padding the compiler might decide to give it)
 
-So if you wanted to be able to read a variable's memory in different ways, for example read an integer one byte at a time you could have something like this:
+So if you wanted to be able to read a variable's memory in different ways, for example read an integer one byte at a time, you could have something like this:
 
     union intParts {
       int theInt;

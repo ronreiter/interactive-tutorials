@@ -2,7 +2,7 @@ Tutorial
 --------
 
 While loops are similar to for loops, but have less functionality. A while loop continues executing the while block as long as the
-condition in the while holds. For example, the following code will execute exactly ten times:
+condition in the while remains true. For example, the following code will execute exactly ten times:
 
     int n = 0;
     while (n < 10) {
