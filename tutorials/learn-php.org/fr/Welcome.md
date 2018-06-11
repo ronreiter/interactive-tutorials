@@ -18,7 +18,7 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 ### Apprenez les bases
 
 - [[Salut, tout le monde !]]
-- [[Variables and Types]]
+- [[Variables et types]]
 - [[Simple arrays]]
 - [[Arrays with keys]]
 - [[Strings]]
