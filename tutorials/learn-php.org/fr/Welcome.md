@@ -29,4 +29,4 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 
 ### Proposer des tutoriels
 
-Plus de détails ici : [[Contributing Tutorials]]
+Plus de détails ici : [[Proposer des tutoriels]]
