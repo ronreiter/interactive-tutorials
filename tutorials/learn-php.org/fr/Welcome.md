@@ -20,7 +20,7 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 - [[Salut, tout le monde !]]
 - [[Variables et types]]
 - [[Tableaux simples]]
-- [[Arrays with keys]]
+- [[Tableaux à clés]]
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]
