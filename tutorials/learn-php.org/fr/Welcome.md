@@ -25,7 +25,7 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 - [[Boucles for]]
 - [[Boucles while]]
 - [[Fonctions]]
-- [[Objects]]
+- [[Objets]]
 
 ### Proposer des tutoriels
 
