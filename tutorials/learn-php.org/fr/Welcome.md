@@ -22,7 +22,7 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 - [[Tableaux simples]]
 - [[Tableaux à clés]]
 - [[Chaines]]
-- [[For loops]]
+- [[Boucles for]]
 - [[While loops]]
 - [[Functions]]
 - [[Objects]]
