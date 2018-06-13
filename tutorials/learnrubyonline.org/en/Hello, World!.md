@@ -10,11 +10,11 @@ or,
     puts "I will be printed to the console!"
     
 Everything between the `'` and `"` will be printed to the console.
-In single quotation can't support `'Hello world #{some code}'` or outher procecs, single quotation only use for string 
+Single quotes can't support string interpolation, which looks like this `'Hello world #{some code}'`. You need to use double quotes. Single quotes can only evaluate to a string object.
 Short syntax for puts is `p` keyword , example: 
     p 'Hello world'
     
-When you use puts keyword ruby add newline(' \\n ') on end of line
+When you use puts keyword, ruby adds a newline(' \\n ') on the end of the line
 
     puts 'Hello World !!!'
     Hello World !!!
@@ -23,7 +23,7 @@ When you use puts keyword ruby add newline(' \\n ') on end of line
      print 'Hello World !!!'
      Hello World !!!=> nil
 
-if you want add single quotation in an string you most use `\` for scape single quotation,example:
+if you want add single quotes in an string you must use `\` to escape single quotes, example:
 
     puts 'Hello i'm rubiest'
     #this code return error
