@@ -14,6 +14,7 @@ Table of Contents
 ### Learn the Basics
 
 - [[Hello, World!]]
+- [[Variables]]
 
 ### Contributing Tutorials
 
