@@ -80,56 +80,45 @@ Exercise
 --------
 
 You must print out to the console the following:
-Jhon Doe
-24
-154.61
+
+    Jhon Doe
+    24
+    154. 61
 
 
 Tutorial Code
 -------------
 
-package main
-
-import (
-    "fmt"
-)
-
-func main() {
-    name := "Chris Mien"
-    age := 29
-    weigth := 200.21
-
-    fmt.Println(name)
-    fmt.Println(age)
-    fmt.Println(weigth)
-
-}
+    package main
+    import "fmt"
+    func main() {
+        name := "Chris Mien"
+        age := 29
+        weigth := 200.21
+        fmt.Println(name)
+        fmt.Println(age)
+        fmt.Println(weigth)
+    }
 
 
 Expected Output
 ---------------
 
-Jhon Doe
-24
-154.61
+    Jhon Doe
+    24
+    154.61
 
 
 Solution
 --------
 
-package main
-
-import (
-    "fmt"
-)
-
-func main() {
-    name := "Jhon Doe"
-    age := 24
-    weigth := 154.61
-
-    fmt.Println(name)
-    fmt.Println(age)
-    fmt.Println(weigth)
-
-}
+    package main
+    import "fmt"
+    func main() {
+        name := "Jhon Doe"
+        age := 24
+        weigth := 154.61
+        fmt.Println(name)
+        fmt.Println(age)
+        fmt.Println(weigth)
+    }
