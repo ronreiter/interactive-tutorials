@@ -17,6 +17,7 @@ Table of Contents - Shell Programming
 - [[Variables]]
 - [[Passing Arguments to the Script]]
 - [[Arrays]]
+- [[Array-Comparison]]
 - [[Basic Operators]]
 - [[Basic String Operations]]
 - [[Decision Making]]
