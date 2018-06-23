@@ -12,7 +12,7 @@ Here is if/else statement syntax.
     if condition
       something to be done
     else
-      something to be done if the condition evualuates to false
+      something to be done if the condition evaluates to false
     end
 
 The else will only be executed if the if statement isn't run, so they will never both be executed.
@@ -26,7 +26,7 @@ Here is if/elsif/else statement syntax.
       another different thing to be done
     end
 
-Still only one of the code blocks will be done, because if the if statement is executed, it skips through all the elsif and else statements that go with it.
+Still only one of the code blocks will be run, because when the if statement is executed, it skips over all the elsif and else statements that go with it.
 Here is an actual example.
 
     booleanOne = true
@@ -42,7 +42,7 @@ Here is an actual example.
 
 Exercise
 --------
-Change the language value so that the elsif statement is the only thing executed.
+Change the value of language so that the elsif statement is the only block being executed.
 
 Tutorial Code
 -------------
