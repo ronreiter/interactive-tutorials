@@ -14,6 +14,7 @@ This is the open source repository for the free interactive tutorial websites:
 * [learncs.org](https://www.learncs.org)
 * [learn-perl.org](https://www.learn-perl.org)
 * [learnrubyonline.org](https://www.learnrubyonline.org)
+* [learn-golang.org](https://www.learn-golang.org)
 
 Please feel free to contribute your tutorials or exercises by sending a pull request and adding yourself on the list.
 
