@@ -30,57 +30,31 @@ You will also have to correct the values of the variable NumberOfNames and the v
 
 Tutorial Code
 -------------
-#!/bin/bash
-NAMES=( John Eric Jessica )
-
-# write your code here
-NUMBERS=()
-STRINGS=()
-NumberOfNames=0
-second_name='Vladimir'
-
-
-
-
-
-
-# Testing Code
-
-# this code should write out the filled arrays, the number of names (3)
-# and the second name in the NAMES array (Eric).
-echo ${NUMBERS[@]}
-echo ${STRINGS[@]}
-echo "The number of names listed in the NAMES array: $NumberOfNames"
-echo "The second name on the NAMES list is:" ${second_name}
+    #!/bin/bash
+    NAMES=( John Eric Jessica )
+    # write your code here
+    NUMBERS=()
+    STRINGS=()
+    NumberOfNames=0
+    second_name='Vladimir'
 
 Expected Output
 ---------------
-1 2 3
-hello world
-The number of names listed in the NAMES array: 3
-The second name on the NAMES list is: Eric
+    1 2 3
+    hello world
+    The number of names listed in the NAMES array: 3
+    The second name on the NAMES list is: Eric
 
 Solution
 --------
-#!/bin/bash
-NAMES=( John Eric Jessica )
-
-# write your code here
-NUMBERS=( 1 2 3 )
-STRINGS=( hello world )
-NumberOfNames=${#NAMES[@]}
-second_name=${NAMES[1]}
-
-
-
-
-
-
-# Testing Code
-
-# this code should write out the filled arrays, the number of names (3)
-# and the second name in the NAMES array (Eric).
-echo ${NUMBERS[@]}
-echo ${STRINGS[@]}
-echo "The number of names listed in the NAMES array: $NumberOfNames"
-echo "The second name on the NAMES list is:" ${second_name}
+    #!/bin/bash
+    NAMES=( John Eric Jessica )
+    # write your code here
+    NUMBERS=( 1 2 3 )
+    STRINGS=( "hello" "world" )
+    NumberOfNames=${#NAMES[@]}
+    second_name=${NAMES[1]}
+    echo ${NUMBERS[@]}
+    echo ${STRINGS[@]}
+    echo "The number of names listed in the NAMES array: $NumberOfNames"
+    echo "The second name on the NAMES list is:" ${second_name}
