@@ -17,6 +17,7 @@ Table of Contents
 - [[Variables and Types]]
 - [[Arrays]]
 - [[Multidimensional Arrays]]
+- [[Conditions]]
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]
