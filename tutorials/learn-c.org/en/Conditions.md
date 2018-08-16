@@ -63,23 +63,17 @@ You can also nest `if` `else` statements if you like.
     int peanuts_in_jar = 100;
     int max_peanut_limit = 50;
 
-    if (peanuts_in_jar > 80)
-    {
-    if (peanuts_eaten < max_peanut_limit)
-    {
-        printf("Take as many peanuts as you want!\n", );
-    }
-    }
-    else
-    {
-    if (peanuts_eaten > peanuts_in_jar)
-    {
-        printf("You can't have anymore peanuts!\n", );
-    }
-    else
-    {
-        printf("Alright, just one more peanut.\n", );
-    }
+    if (peanuts_in_jar > 80) {
+        if (peanuts_eaten < max_peanut_limit) {
+            printf("Take as many peanuts as you want!\n");
+        }
+    } else {
+        if (peanuts_eaten > peanuts_in_jar) {
+            printf("You can't have anymore peanuts!\n");
+        }
+        else {
+            printf("Alright, just one more peanut.\n");
+        }
     }
 
 
