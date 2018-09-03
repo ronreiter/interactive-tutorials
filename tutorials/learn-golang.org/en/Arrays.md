@@ -19,21 +19,15 @@ favNums[2] = 3
 ```
 An alternative syntax to the creation of arrays in golang is:
 ```golang
-varFavNums := [4] int
-// Insert data into the array
-// The first storage space will be assigned the value of 50.
-favNums[0] = 50
-// The second storage space will be assigned the value of 900.
-favNums[1] = 900
-// The third and final storage space will be assigned the value of 150.
-favNums[2] = 150
-// The fourth and final storage space will be assigned the value of 150.
-favNums[3] = 150
-
+favNums := [4] int {50, 25, 30, 33}
 ```
 In order to access members of an array, reference the storage space's address or number you used to create it. 
 ```golang
   fmt.Println(favNums[0])
+```
+output:
+```bash
+50
 ```
 ## Exercise
 Create two arrays, one a string array, the other a int array.
@@ -51,16 +45,45 @@ func main() {
   var strings(3) string
   var numbers(3) int
   
-  strings[0] = "Hello world!"
-  strings[1] = "Hello world!"
-  strings[2] = "Hello world!"
+  strings[1] = string("sdf")
+  strings[2] = string("sdf")
+  strings[3] =  string("hello")
   
-  numbers[0] = 1
-  numbers[1] = 2
-  numbers[2] = 3
+  numbers[1] = 21
+  numbers[2] = #2
+  numbers[3] = $3
   
+  fmt.Println(strings[2])
+  fmt.Println(numbers[2])
   
 }
 ```
+## Expected Output
+```bash
+  any string
+  3
+```
 ## Solution
+```golang
+package main
 
+import "fmt"
+
+func main() {
+  var strings[3] string
+  var numbers[3] int
+  
+  strings[0] = "Hola"
+  strings[1] = "Bonjour"
+  strings[2] = "Hallo"
+  
+  numbers[0] = 21
+  numbers[1] = 2
+  numbers[2] = 3
+  
+  fmt.Println(strings[2])
+  fmt.Println(numbers[2])
+  
+}
+
+```
