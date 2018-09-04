@@ -15,7 +15,7 @@ Table of Contents
 
 - [[Hello, World!]]
 - [[Variables]]
-
+- [[Arrays]]
 ### Contributing Tutorials
 
 Read more here: [[Contributing Tutorials]]
