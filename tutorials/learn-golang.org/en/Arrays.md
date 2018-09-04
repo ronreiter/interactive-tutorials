@@ -63,7 +63,7 @@ Tutorial Code
 
 Expected Output
 ---------------
-	any string
+	hello world
 	3
 
 Solution
