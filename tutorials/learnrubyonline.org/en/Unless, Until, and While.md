@@ -47,6 +47,6 @@ Solution
    #Make your loop below!
 condition = 0
 while condition<=6
-    puts "I'm looping!
+    puts "I'm looping!"
     condition = condition + 1
 end
