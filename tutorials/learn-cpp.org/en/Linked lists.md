@@ -359,7 +359,7 @@ There are a few edge cases we need to take care of, so make sure you understand 
 
     }
 
-[Note] This tutorial is inspired by and some content is taken from the following tutorial: https://www.codementor.io/codementorteam/a-comprehensive-guide-to-implementation-of-singly-linked-list-using-c_plus_plus-ondlm5azr
+##### Note: This tutorial is inspired by and some content is taken from the following tutorial: https://www.codementor.io/codementorteam/a-comprehensive-guide-to-implementation-of-singly-linked-list-using-c_plus_plus-ondlm5azr
 
 Exercise
 --------
