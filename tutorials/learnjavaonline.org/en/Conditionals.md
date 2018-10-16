@@ -21,7 +21,7 @@ Of course we don't normally assign a conditional expression to a boolean, we jus
 
 ### Boolean operators
 
-There aren't that many operators to use in conditional statements and most of them are pretty strait forward:
+There aren't that many operators to use in conditional statements and most of them are pretty straightforward:
 
     int a = 4;
     int b = 5;
