@@ -16,7 +16,10 @@ For example, if we want ask the user whether his name is "John", we can use the 
 
 It is also possible to omit the `else` keyword if we only want to execute a block of code only if a certain expression is true.
 
-To evaluate whether two variables are equal, the `==` operator is used.
+To evaluate whether two variables are equal, the `==` operator is used. There is also another equality operator in JavaScript, `===`, which does a strict comparison. This means that it will be true only if the two things you are comparing are the same type as well as same content. 
+
+    console.log("1" == 1); // true
+    console.log("1" === 1); // false
 
 For example:
 
