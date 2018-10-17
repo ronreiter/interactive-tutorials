@@ -4,6 +4,8 @@ Variables are defined like this
 
     myFirstVariable = "I made a variable!"
 
+A variable can be thought of as an pointer to find data. Variables tell the computer program where the data is located in memory. This is similar to using an address to find a house. When you use a variable, you are storing information and it's location to be referenced or used in a computer program. 
+
 There are three major types of data you can set variables to.
 
     =begin
