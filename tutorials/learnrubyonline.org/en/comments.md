@@ -10,7 +10,7 @@ Single-line comments can be started after another thing in the same line.
 
     puts "Hi!" #I'm a comment, but Hi! will still be printed to the console.
 
-
+What's the point of making comments? Comments are a way you can write documentation within your code. Some codebases are gigantic and have many developers working within it. It can be hard to understand code that was written by someone else, so documentation helps other developers know more about that code in a common language. 
 
 Exercise
 --------
