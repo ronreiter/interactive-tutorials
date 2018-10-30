@@ -20,6 +20,10 @@ The addition operator is used for concatenating strings to strings, strings to n
     console.log("The meaning of life is " + 42);
     console.log(42 + " is the meaning of life");
 
+JavaScript behaves differently when you are trying to combine two operands of different types. The default primitive value is a string, so when you try to add a number to a string, JavaScript will transform the number to a string before the concatenation.
+
+    console.log(1 + "1");   // outputs "11"
+
 ### Mathematical operators
 
 To subtract, multiply and divide two numbers, use the minus (`-`), asterisk (`*`) and slash (`/`) signs.
