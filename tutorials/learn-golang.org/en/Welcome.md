@@ -16,6 +16,8 @@ Table of Contents
 - [[Hello, World!]]
 - [[Variables]]
 - [[Arrays]]
+- [[Loops]]
+
 ### Contributing Tutorials
 
 Read more here: [[Contributing Tutorials]]
