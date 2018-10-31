@@ -30,6 +30,7 @@ Table of Contents
 - [[Linked lists]]
 - [[Binary trees]]
 - [[Function Pointers]]
+- [[Template Metaprogramming]]
 
 ### Integrated and Spiral Learning
 
