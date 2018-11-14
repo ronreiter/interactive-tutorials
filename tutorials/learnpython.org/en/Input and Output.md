@@ -6,7 +6,7 @@ output of various data types.
 ###raw_input()
 this is used to take input as long as it reached end of line.Note that there should not be any spaces.Taking input terminates with a new line character and if there are any spaces in the input line it results in error
 
-    # Prints out the input recieved from stdin
+    # Prints out the input received from stdin
     astring=raw_input()# give hello as input
     print raw_input()
 
@@ -27,7 +27,7 @@ this is especially used to input integers. The advantage of input() over raw_inp
     print a #prints 4
     print b #prints 2*2
 
-###how to take two two or more data types as input from a single line seperated by spaces?
+###how to take two two or more data types as input from a single line separated by spaces?
 Here we make use split() and map() functions
 
     #give two integers in first line and more than two integers in third line
