@@ -1,6 +1,6 @@
 Tutorial
 --------
-Conventions of a language are guidelines of a language to enhance readibillity. 
+Conventions of a language are guidelines of a language to enhance readability. 
 It will make it easier to diagnose code, and understand your code.
 
 ## File organization
@@ -12,7 +12,7 @@ date, and copyright notice.
 
 Following that are package statements.
 
-Then, you can write your imports, seperated from the packages with 1 blank line.
+Then, you can write your imports, separated from the packages with 1 blank line.
 
 You can now declare your classes.
 
@@ -27,7 +27,7 @@ is no access modifier variables, then finally private.
 
 ## Indentation
 
-Indentation is vital to readibillity. Indent only in a block of code (inside
+Indentation is vital to readability. Indent only in a block of code (inside
 {}).
 
 Indent 4 spaces normally. You can use tab or spaces to indent.
@@ -59,7 +59,7 @@ Do not put different types on the same line!
 	int[] b;
 	
 Try to initialize variables where they're declared. Only reason to not do that is if
-it requires some event occuring first.
+it requires some event occurring first.
 
 	//Try to do this:
 	int a = 5;
@@ -69,14 +69,14 @@ it requires some event occuring first.
 	int a;
 	a = 5;
 	
-Methods should also be seperated by a blank line.
+Methods should also be separated by a blank line.
 
 
 	
 Exercise
 --------
 Here you will need to write the purpose of the exercise. Finishing the exercise correctly
-must be accomplished using the new feature that you are explaning.
+must be accomplished using the new feature that you are explaining.
 
 Tutorial Code
 -------------

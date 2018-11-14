@@ -5,7 +5,7 @@ Coger la entrada y mostrar la salida de la forma requerida juega un papel import
 ###raw_input()
 Esto se usa para coger la entrada hasta el final de la línea. Hay que tomar en cuenta que no debe haber ningún espacio. La entrada finaliza con un caracter de nueva linea y si hay espacios en la línea de entrada se produce un error.
 
-    # Prints out the input recieved from stdin
+    # Prints out the input received from stdin
     astring=raw_input()# give hello as input
     print raw_input()
 
@@ -38,7 +38,7 @@ Aquí vamos a usar las funciones split() y map()
     print a,b,sum #imprime los dos primeros enteros desde la primera linea y suma los enteros de la segunda
 
 ###Formateo de salida
-You might have already noticed that print statement automatically inserts a new line. The use of comma like in the above code prints the values in a single line seperated by a space.Es posible que hayas notado que imprimir la declaración automáticamente inserta una nueva línea. El uso de la coma cómo en el código anterior imprime los varoes en una sola línea separada por un espacio.
+You might have already noticed that print statement automatically inserts a new line. The use of comma like in the above code prints the values in a single line separated by a space.Es posible que hayas notado que imprimir la declaración automáticamente inserta una nueva línea. El uso de la coma cómo en el código anterior imprime los varoes en una sola línea separada por un espacio.
 
     a=5
     b=0.63
