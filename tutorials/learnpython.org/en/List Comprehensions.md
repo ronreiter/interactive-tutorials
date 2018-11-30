@@ -12,6 +12,7 @@ For example, let's say we need to create a list of integers which specify the le
           if word != "the":
               word_lengths.append(len(word))
     print(words)
+    print(word_lengths)
 
 Using a list comprehension, we could simplify this process to this notation:
 
@@ -19,7 +20,8 @@ Using a list comprehension, we could simplify this process to this notation:
     words = sentence.split()
     word_lengths = [len(word) for word in words if word != "the"]
     print(words)
-    
+    print(word_lengths)
+
 Exercise
 --------
 
