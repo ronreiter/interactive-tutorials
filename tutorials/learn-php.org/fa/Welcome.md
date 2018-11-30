@@ -1,3 +1,6 @@
+<style>
+  body {direction:rtl}
+</style>
 #خوش آمدید
 
 به دوره آموزش رایگان PHP سایت learn-php.org خوش آمدید! 

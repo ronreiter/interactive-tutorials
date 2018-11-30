@@ -30,11 +30,10 @@ Inhaltsverzeichnis
 - [Rekursion](Recursion)
 - [Gelinkte Listen](Linked lists)
 - [Binäre Bäume](Binary trees)
-- [Unions]
+- [[Unions]]
 - [Zeiger Arithmetik](Pointer Arithmetics)
 - [Funktionszeiger](Function Pointers)
 
 ### Tutorials beitragen
 
 Erfahre hier mehr: [[Tutorials beitragen|Contributing Tutorials]]
-

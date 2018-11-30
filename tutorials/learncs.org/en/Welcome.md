@@ -15,6 +15,7 @@ Table of Contents
 
 - [[Hello, World!]]
 - [[Variables and Types]]
+- [[Conditionals]]
 - [[Arrays]]
 - [[Lists]]
 - [[Dictionaries]]

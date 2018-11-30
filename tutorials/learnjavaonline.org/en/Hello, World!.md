@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Java is an object oriented language (OOP). Objects in Java are called "classes".
+Java is an object oriented language (OOP). Java objects are part of so-called "Java classes".
 
 Let's go over the Hello world program, which simply prints "Hello, World!" to the screen.
 

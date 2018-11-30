@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Methods in C# are portions of a larger program that perform specific tasks. They can be used to keep code clean by seperating it into seperate pieces. They can also be used in more than one place allowing you to reuse previous code.
+Methods in C# are portions of a larger program that perform specific tasks. They can be used to keep code clean by separating it into separate pieces. They can also be used in more than one place allowing you to reuse previous code.
 
 In C# methods can be in the main program or can be in libraries, which are external files, containing classes and subroutines which can be imported into a program. This allows them to be distributed easily and used by multiple programs.
 
@@ -38,7 +38,7 @@ The return statement stops the subroutine and (depending on the output type) can
     
     }
 
-That is how you can recieve output from a subroutine.
+That is how you can receive output from a subroutine.
 But in some cases you do not need to return a value, for instance:
 
 

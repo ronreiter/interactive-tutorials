@@ -11,7 +11,7 @@ For example:
         System.out.println("It's true!");
     }
 
-Of course we don't normally assign a conditional expression to a boolean, we just use the short version:
+Of course we don't normally assign a conditional expression to a boolean. Normally, we just use the short version:
 
     int a = 4;
 
@@ -21,7 +21,7 @@ Of course we don't normally assign a conditional expression to a boolean, we jus
 
 ### Boolean operators
 
-There aren't that many operators to use in conditional statements and most of them are pretty strait forward:
+There aren't that many operators to use in conditional statements and most of them are pretty straight forward:
 
     int a = 4;
     int b = 5;
@@ -38,7 +38,7 @@ There aren't that many operators to use in conditional statements and most of th
 
 ### if - else and between
 
-The if, else statement in java is pretty simple.
+The if, else statement in Java is pretty simple.
 
     if (a == b) {
         // a and b are equal, let's do something cool
@@ -59,7 +59,7 @@ The if - else statements doesn't have to be in several lines with {}, if can be 
     else
         System.out.println("Double rainbow!");
 
-Although this method might be useful for making your code shorter by using fewer lines, we strongly recommend for beginners not to use this short version of statements and always use the full version with {}. This goes to every statement that can be shorted to a single line (for, while, etc).
+Although this method might be useful for making your code shorter by using fewer lines, we strongly recommend for beginners not to use this short version of statements and to always use the full version with {}. This goes to every statement that can be shorted to a single line (for, while, etc).
 
 ### The ugly side of if
 
@@ -83,7 +83,7 @@ Again, we strongly recommend for beginners not to use this version of if.
 ### == and equals
 
 The operator `==` works a bit different on objects than on primitives.
-When we are using objects and want to check if they are equal, the operator `==` wiil say if they are the same, if you want to check if they are logically equal, you should use the `equals` method on the object. For example:
+When we are using objects and want to check if they are equal, the operator `==` will say if they are the same, if you want to check if they are logically equal, you should use the `equals` method on the object. For example:
 
     String a = new String("Wow");
     String b = new String("Wow");
