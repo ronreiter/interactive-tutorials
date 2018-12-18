@@ -49,7 +49,7 @@ La instrucción previa mostrará un mensaje, "Este mensaje esta dentro de una cl
 
 ### Ejercicio
 
-Tenemos una clase definida para vehículo. Crea dos nuevos vehículos llamados MiCarro1 y MiCarro2. Fija MiCarro1 para ser un convertible rojo con valor de $60,000 a nombre de Fer, y MiCarro2 para ser una van azul en $10,000.
+Tenemos una clase definida para vehículo. Crea dos nuevos vehículos llamados MiCarro1 y MiCarro2. Fija MiCarro1 para ser un convertible rojo con valor de $60,000, con nombre de Fer, y MiCarro2 para ser una van azul en $10,000, con nombre de Jump.
 
 Tutorial Code
 -------------
@@ -61,7 +61,7 @@ class Vehicle:
     color = ""
     value = 100.00
     def description(self):
-        desc_str = "%s es un %s %s con valor de $%.2f." % (self.name, self.color, self.kind, self.value)
+        desc_str = "%s es un %s %s con valor de $%.2f." % (self.name, self.kind, self.color, self.value)
         return desc_str
 #your code goes here
 
@@ -77,3 +77,27 @@ Jump es una van azul con valor de $10000.00.
 
 Solution
 --------
+
+#define the Vehicle class
+class Vehicle:
+    name = ""
+    kind = "carro"
+    color = ""
+    value = 100.00
+    def description(self):
+        desc_str = "%s es un %s %s con valor de $%.2f." % (self.name, self.kind, self.color, self.value)
+        return desc_str
+#your code goes here
+MiCarro1=Vehicle()
+MiCarro1.color="rojo"
+MiCarro1.value=60000
+MiCarro1.name="Fer"
+
+MiCarro2=Vehicle()
+MiCarro2.color="azul"
+MiCarro2.value=10000
+MiCarro2.name="Jump"
+
+#checking code
+print MiCarro1.description()
+print MiCarro2.description()
