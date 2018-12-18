@@ -65,3 +65,19 @@ Jill is not listed in the libro telefonico.
 
 Solution
 --------
+
+librotelefonico = {
+    "Juan" : 938477566,
+    "Jack" : 938377264,
+    "Jill" : 947662781
+}
+
+# escribe tú codigo aquí
+librotelefonico["Jake"] = 938273443
+librotelefonico.pop("Jill")
+
+# probando el codigo
+if "Jake" in librotelefonico:
+    print "Jake esta listado en el libro telefonico."
+if "Jill" not in librotelefonico:
+    print "Jill no esta listada en el libro telefonico."
