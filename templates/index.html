@@ -21,7 +21,7 @@
 <div class="container" id="main">
     <div class="row">
 
-        <div class="span10" style="box-sizing: border-box;">
+        <div class="col-10 pl-4">
 
             {% if domain_data.language != "python" %}
             <div>
@@ -40,22 +40,23 @@
             {% if page_title %}
             <ul class="breadcrumb" style="margin-top: 10px">
               {% if back_chapter %}
-              <li><a href="/{{ language_code }}/{{ back_chapter }}">{{ back_chapter }}</a> <span class="divider">/</span></li>
+              <li><a href="/{{ language_code }}/{{ back_chapter }}">{{ back_chapter }}</a> <span class="divider mr-1">/</span></li>
               {% endif %}
               <li class="active">{{ page_title }}</li>
             </ul>
             {% endif %}
 
-            <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+            <div class="clearfix">
                 {% if domain_data.language == "python" and tutorial_page %}
                 <p>Get started learning Python with <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp's</a> free <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Start Now</a>!</p>
                 {% endif %}
-                {% if previous_chapter %}
-                <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
-                {% endif %}
-                {% if next_chapter %}
-                <a class="btn pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial <i class="icon-chevron-right"></i></a>
-                {% endif %}
+
+{#                {% if previous_chapter %}#}
+{#                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>#}
+{#                {% endif %}#}
+{#                {% if next_chapter %}#}
+{#                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial <i class="icon-chevron-right"></i></a>#}
+{#                {% endif %}#}
             </div>
 
             <span id="inner-text">{% autoescape off %}
@@ -86,10 +87,10 @@
             </script>
             {% endif %}
 
-            <hr/>
-            <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
+
+            <div>
                 {% if domain_data.language == "python" and tutorial_page %}
-                <p>This site generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+                <p>This site is generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
                 {% endif %}
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
@@ -106,7 +107,7 @@
             <div class="row">
 
                 {% for course in domain_data.courses %}
-                <div class="course span2">
+                <div class="course col-2">
                     <a href="{{ course.link }}">
                         <img src="{{ course.image_url }}">
                         <p style="font-weight: bold; margin-top: 10px; font-size: 14px">{{ course.link_name }}</p>
@@ -151,7 +152,7 @@
             </div>
 
         </div>
-        <div class="span2 hidden-phone" style="margin-left: 10px">
+        <div class="col-2 hidden-phone mt-2">
             <div id="google-ad-right">
                 {% if domain_data.language != "python" %}
                 <div style="margin-bottom: 10px">
@@ -188,8 +189,8 @@
 
                 {% if domain_data.language == "python" %}
                     <a href="https://click.linksynergy.com/link?id=2mhs2G02AJA&offerid=358574.426570&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Flearn-python%2F">
-                        <img border=0 src="https://udemy-images.udemy.com/course/480x270/426570_1b91_3.jpg" >
-                        <div style="text-align: center">Learn Python: Python for Beginners</div>
+                        <img border=0 src="https://udemy-images.udemy.com/course/480x270/426570_1b91_3.jpg" style="width: 160px">
+                        <div style="text-align: center; width: 160px">Learn Python: Python for Beginners</div>
                     </a>
                     <img border=0 width=1 height=1 src="https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=358574.426570&type=2&subid=0">
 
@@ -208,13 +209,14 @@
         </div>
     </div>
 </div>
-<footer>
-    <div class="container">
+
+
+<div class="container bg-light mb-5 mt-5">
 
     {% if domain_data.language != "python" or language_code != "en" %}
     <div class="row">
 
-	<div class="span6 code-window">
+	<div class="col-6 code-window">
         <h5 style="line-height: 28px">
             Code
             <span style="float: right;">
@@ -230,7 +232,7 @@
 
     </div>
 
-	<div class="span6 output-window">
+	<div class="col-6 output-window">
 		<div style="width: 100%; height: 100%">
             <h5 style="line-height: 28px">
                 Output
@@ -259,12 +261,15 @@
 
     </div> <!-- row -->
 
-    <div class="row">
-        <div class="span12">
-            <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
+    <div class="container-fluid bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
+            </div>
         </div>
     </div>
 
-    </div>
-</footer>
+
+</div>
+
 {% endblock %}

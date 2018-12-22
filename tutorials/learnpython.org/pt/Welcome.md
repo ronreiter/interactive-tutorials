@@ -1,4 +1,4 @@
-This site generously supported by [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offers online interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) for Data Science. Join **575,000** other learners and get started learning Python for data science today!
+This site is generously supported by [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offers online interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) for Data Science. Join **575,000** other learners and get started learning Python for data science today!
 
 # Welcome
 
@@ -10,9 +10,6 @@ You are welcome to join our group on <a href="http://www.facebook.com/groups/180
 
 Just click on the chapter you wish to begin from, and follow the instructions. Good luck!<br>
 
-
-Table of Contents
------------------
 
 ### Learn the Basics
 
