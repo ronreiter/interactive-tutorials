@@ -9,14 +9,12 @@ import functools
 import logging
 
 from flask import Flask, render_template, request, make_response, session
-#import redis
 import sys
 
 from ideone import Ideone
 
 import constants
 
-#cache = redis.Redis(host=constants.CACHE_HOST)
 
 courses = json.load(open("courses.json"))
 
@@ -27,8 +25,24 @@ app.secret_key = constants.SECRET_KEY
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 
-DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN
+current_domain = constants.LEARNPYTHON_DOMAIN
 
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-d",
+        "--domain",
+        help="Default domain when running in development mode",
+        default=constants.LEARNPYTHON_DOMAIN,
+        required=True,
+        choices=constants.DOMAIN_DATA.keys()
+    )
+
+    parser.add_argument("-p", "--port", help="port to listen to", default=5000, type=int)
+
+    args = parser.parse_args()
+    current_domain = args.domain
 
 LANGUAGES = {
     "en": "English",
@@ -118,7 +132,7 @@ def untab(text):
 
 def init_tutorials():
     for domain in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials")):
-        logging.warning("loading data for domain: %s", domain)
+        logging.warn("loading data for domain: %s", domain)
         tutorial_data[domain] = {}
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             continue
@@ -186,7 +200,7 @@ def init_tutorials():
                     if not "back_chapter" in tutorial_data[domain][language][link]:
                         tutorial_data[domain][language][link]["back_chapter"] = tutorial.decode("utf-8").replace(" ", "_")
                     elif not link.startswith("http"):
-                        logging.warn("Warning! duplicate links to tutorial %s from tutorial %s/%s", link, language, tutorial)
+                        logging.info("Warning! duplicate links to tutorial %s from tutorial %s/%s", link, language, tutorial)
 
                     num_links = len(links)
                     page_index = links.index(link)
@@ -197,30 +211,34 @@ def init_tutorials():
                         if not "next_chapter" in tutorial_data[domain][language][link]:
                             tutorial_data[domain][language][link]["next_chapter"] = links[page_index + 1].decode("utf-8").replace(" ", "_")
 
+
 init_tutorials()
 
 
 def get_languages():
-    return sorted(tutorial_data[get_host()].keys() if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN].keys())
+    return sorted(tutorial_data[get_host()].keys())
 
 
 def get_host():
+    if is_development_mode():
+        return current_domain
+
     return request.host[4:] if request.host.startswith("www.") else request.host
 
 
 def is_development_mode():
-    return "localhost" in get_host() or "127.0.0.1" in get_host()
+    return "localhost" in request.host or "127.0.0.1" in request.host
 
 
 def get_domain_data():
-    host = get_host() if not is_development_mode() else DEFAULT_DOMAIN
-    data = constants.DOMAIN_DATA[host]
-    data["courses"] = courses.get(host)
+    data = constants.DOMAIN_DATA[get_host()]
+    data["courses"] = courses.get(get_host())
     return data
 
 
 def get_tutorial_data(tutorial_id, language="en"):
-    return tutorial_data[get_host()][language][tutorial_id] if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN][language][tutorial_id]
+    logging.warn(tutorial_data[get_host()][language].keys())
+    return tutorial_data[get_host()][language][tutorial_id]
 
 
 def get_tutorial(tutorial_id, language="en"):
@@ -351,21 +369,5 @@ def robots():
     return make_response("User-agent: *\nAllow: /")
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-d",
-        "--domain",
-        help="Default domain when running in development mode",
-        # default=constants.LEARNPYTHON_DOMAIN,
-        required=True,
-        choices=constants.DOMAIN_DATA.keys()
-    )
-
-    parser.add_argument("-p", "--port", help="port to listen to", default=5000, type=int)
-
-    args = parser.parse_args()
-    DEFAULT_DOMAIN = args.domain
-
     logging.info("listening on port %s", args.port)
     app.run(debug=True, port=args.port)

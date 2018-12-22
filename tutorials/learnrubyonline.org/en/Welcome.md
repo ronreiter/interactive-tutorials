@@ -8,9 +8,6 @@ There is no need to download anything - Just click on the chapter you wish to be
 
 learnrubyonline.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
 
-Table of Contents
------------------
-
 ### Learn the Basics
 
 - [[Hello, World!]]

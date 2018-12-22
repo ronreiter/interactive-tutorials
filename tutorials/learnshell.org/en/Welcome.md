@@ -8,9 +8,6 @@ You are welcome to join our group on Facebook for questions, discussions and upd
 
 Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-Table of Contents - Shell Programming
------------------
-
 ### Learn the Basics
 
 - [[Hello, World!]]
