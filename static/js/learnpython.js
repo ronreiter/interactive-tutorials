@@ -384,7 +384,7 @@ function load() {
     originalCode = editor.getValue();
 
     $("#inner-text pre").after(
-        $("<a>").addClass("btn btn-small btn-success execute-code").text("Execute Code").click(function() {
+        $("<button>").addClass("btn btn-sm btn-primary execute-code").text("Execute Code").click(function() {
             var text = $(this).prev().text();
             if (window.domainData.container_word && text.indexOf(window.domainData.container_word) == -1) {
                 var lines = text.split("\n");
