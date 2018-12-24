@@ -337,7 +337,7 @@ def index(title, language="en"):
         uid = session["uid"]
 
         return make_response(render_template(
-            "index.html",
+            "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
             tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
             tutorial_data=current_tutorial_data,
