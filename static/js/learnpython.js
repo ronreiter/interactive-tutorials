@@ -106,7 +106,6 @@ function compareHTML(a, b) {
 }
 
 function execute() {
-	toggleMinimize(true);
 
 	if (window.domainData.language == "html") {
 		$("#html-output").show();
@@ -396,7 +395,6 @@ function load() {
                 text = window.domainData.container.replace("{code}", indentedText);
 
             }
-			toggleMinimize(true);
             editor.setValue(text);
 			execute();
         })
@@ -405,12 +403,10 @@ function load() {
 }
 
 function showExpected() {
-	toggleMinimize(true);
 	output.setValue(tutorialData.output);
 }
 
 function showSolution() {
-	toggleMinimize(true);
     var solutionText = tutorialData.solution;
     if (solutionText) {
     	editor.setValue(solutionText);
@@ -421,31 +417,8 @@ function showSolution() {
 }
 
 function reset() {
-	toggleMinimize(true);
     $("#run-button").prop("disabled", false);
 	editor.setValue(originalCode);
-}
-
-function toggleMinimize(maximizeOnly) {
-	if (maximizeOnly && !minimized) return;
-	if (minimized) {
-		$(".footer-toggle").show();
-		editor.setValue(originalCode);
-		$("#minimize-button").text("Minimize Window").removeClass("btn-success");
-	} else {
-		$(".footer-toggle").hide();
-		$("#minimize-button").text("Show Window").addClass("btn-success");
-	}
-
-	minimized = !minimized;
-	if (minimized) {
-		$("footer").addClass("minimized");
-		$("footer").removeClass("maximized");
-	} else {
-		$("footer").addClass("maximized");
-		$("footer").removeClass("minimized");
-	}
-
 }
 
 $(function() {
