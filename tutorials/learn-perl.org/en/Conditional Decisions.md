@@ -27,7 +27,7 @@ These operators can be used to define conditions in conditional statements. Nume
 ### Numeric values operators
 
 - `==` true if the value of the left operand is equal to the value of right operand, else false
-- `!= true if the value of the left operand is not equal to the value of right operand, else false
+- `!=` true if the value of the left operand is not equal to the value of right operand, else false
 - `!`	negates the boolean value of whatever comes after this in a conditional expression
 - `<=>`	Compares the values of two numeric values and returns -1, 0, or 1 if the left argument is numerically less than, equal to, or greater than the right argument, respectively
 - `>`	true if the value of the left operand is smaller than the value of right operand, else false
@@ -52,7 +52,7 @@ Example:
     # if
 	if ($x == 5) {
      	print "x is indeed 5\n";
-	} 
+	}
     # if ... else
 	if ($y == 5) {
 	   print "y is indeed 5\n"
@@ -76,7 +76,7 @@ Exercise
 -------------
 An array `@family` holds a list of family member names. The first hash `%shoe_color` contains favorite shoe color per person name. The second hash `%shoe_size` contains shoe size per person name.
 
-Evaluate and print the favorite shoe color and shoe size per each family member. For shoe sizes 10 and above, add the word 'large' to the output line. 
+Evaluate and print the favorite shoe color and shoe size per each family member. For shoe sizes 10 and above, add the word 'large' to the output line.
 
 Output lines should be in the format: "Homer wears large brown shoes size 12".
 
