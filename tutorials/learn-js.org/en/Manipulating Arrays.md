@@ -57,7 +57,7 @@ The `unshift` method is used to insert a variable at the beginning of an array. 
 Splicing arrays in JavaScript removes a certain part from an array to create a new array, made up from the part we took out. For example, if we wanted to remove the five numbers from the following array beginning from the 3rd index, we would do the following:
 
     var myArray = [0,1,2,3,4,5,6,7,8,9];
-    var splice = myArray.splice(3,7);
+    var splice = myArray.splice(3,5);
 
     console.log(splice);        // will print out 3,4,5,6,7
     console.log(myArray);       // will print out 0,1,2,8,9
