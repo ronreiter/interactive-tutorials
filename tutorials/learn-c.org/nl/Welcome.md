@@ -29,8 +29,8 @@ learn-c.org is nog in aanbouw - Als u zou willen helpen met het toevoegen van tu
 - [[Arrays en Pointers]]
 - [[Recursie]]
 - [[Linked lists]]
-- [[Binary trees]]
-- [[Unions]]
+- [[Binaire bomen]]
+- [[Unies]]
 - [[Pointer Rekenkundigheid]]
 - [[Functie Pointers]]
 
