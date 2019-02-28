@@ -3,7 +3,7 @@
 Welkom bij Learn HTML, de gemakkelijkste manier om HTML & CSS te leren. Learn HTML geeft een interactieve tutorial die uitlegt
 hoe u HTML & CSS websites stap voor stap maakt.
 
-De basis tutorial gidst u door het creeeren van een pagina met gebruik het Bootstrap CSS framework.
+De basis tutorial gidst u door het creëren van een pagina met gebruik het Bootstrap CSS framework.
 
 De geadvanceerde tutorials zullen u gidsen door alles wat er valt te weten omtrent HTML & CSS.
 
