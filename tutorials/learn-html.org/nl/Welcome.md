@@ -1,7 +1,6 @@
 # Welkom
 
-Welkom bij Learn HTML, de gemakkelijkste manier om HTML & CSS te leren. Learn HTML geeft een interactieve tutorial die uitlegt
-hoe u HTML & CSS websites stap voor stap maakt.
+Welkom bij Learn HTML, de gemakkelijkste manier om HTML & CSS te leren. Learn HTML geeft een interactieve tutorial die uitlegt hoe u HTML & CSS websites stap voor stap maakt.
 
 De basis tutorial gidst u door het creëren van een pagina met gebruik het Bootstrap CSS framework.
 
@@ -96,6 +95,6 @@ De geadvanceerde tutorials zullen u gidsen door alles wat er valt te weten omtre
 - Startboostrap.com - Een lijst met gratis bootstrap templates om vanuit te starten.
 
 
-### Contributing Tutorials
+### Bijdragen aan Tutorials
 
-Lees hier meer: [[Contributing Tutorials]]
+Lees hier meer: [[Bijdragen aan Tutorials]]
