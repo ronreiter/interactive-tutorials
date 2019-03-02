@@ -10,7 +10,7 @@ learn-c.org is nog in aanbouw - Als u zou willen helpen met het toevoegen van tu
 
 ### Leer de Basis
 
-- [Hello, World!]() Hallo, wereld!
+- [Hello, World!](interactive-tutorials/blob/master/tutorials/learn-c.org/nl/Hello%2C%20World!.md) Hallo, wereld!
 - [Variablen en Types]()
 - [Arrays]()
 - [Multidimensionele Arrays]()
