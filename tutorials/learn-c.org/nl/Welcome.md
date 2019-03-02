@@ -10,21 +10,21 @@ learn-c.org is nog in aanbouw - Als u zou willen helpen met het toevoegen van tu
 
 ### Leer de Basis
 
-- [Hello, World!](interactive-tutorials/blob/master/tutorials/learn-c.org/nl/Hello%2C%20World!.md) Hallo, wereld!
-- [Variablen en Types]()
-- [Arrays]()
-- [Multidimensionele Arrays]()
-- [Condities]()
-- [Strings]()
-- [For loops]()
-- [While loops]()
-- [Functies]()
-- [Statisch]()
+- [Hello, World!](Hello, World!)
+- [Variablen en Types](Variables and Types)
+- [Arrays](Arrays)
+- [Multidimensionele Arrays](Multidimensional Arrays)
+- [Condities](Conditions)
+- [Strings](Strings)
+- [For loops](For loops)
+- [While loops](While loops)
+- [Functies](Functions)
+- [Statisch](Static)
 
 ### Geadvanceerd
 
-- [[Pointers]]
-- [[Structuren]]
+- [Pointers](Pointers)
+- [Structuren](Structures)
 - [[Functie argumenten door verwijzing]]
 - [[Dynamische allocatie]]
 - [[Arrays en Pointers]]
