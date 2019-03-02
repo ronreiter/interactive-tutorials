@@ -10,18 +10,19 @@ learn-c.org is nog in aanbouw - Als u zou willen helpen met het toevoegen van tu
 
 ### Leer de Basis
 
-- [[Hello, World!]]
-- [[Variablen en Types]]
-- [[Arrays]]
-- [[Multidimensionele Arrays]]
-- [[Condities]]
-- [[Strings]]
-- [[For loops]]
-- [[While loops]]
-- [[Functies]]
-- [[Statisch]]
+- [Hello, World!]() Hallo, wereld!
+- [Variablen en Types]()
+- [Arrays]()
+- [Multidimensionele Arrays]()
+- [Condities]()
+- [Strings]()
+- [For loops]()
+- [While loops]()
+- [Functies]()
+- [Statisch]()
 
 ### Geadvanceerd
+
 - [[Pointers]]
 - [[Structuren]]
 - [[Functie argumenten door verwijzing]]
@@ -36,4 +37,4 @@ learn-c.org is nog in aanbouw - Als u zou willen helpen met het toevoegen van tu
 
 ### Bijdragen Aan Tutorials
 
-Lees meer hier: [[Bijdragen Aan Tutorials]]
+Lees meer hier: [Bijdragen Aan Tutorials]()
