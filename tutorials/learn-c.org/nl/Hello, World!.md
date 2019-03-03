@@ -15,30 +15,28 @@ we geschreven hebben, dit verwerken, en dan een uitvoerbaar bestand er van maken
 ### Ons eerste programma
 
 Elk C programma gebruikt libraries(bibliotheken), welke de mogelijkheid geven om vereiste functies uit te voeren. Bijvoorbeeld, de meest simpele functie
-heet `printf`, deze print op het scherm, is gedefineerd in het `stdio.h` header(hoofding) bestand. 
+heet `printf`, deze print op het scherm, is gedefineerd in het `stdio.h` header (hoofding) bestand. 
 
-To add the ability to run the `printf` command to our program, we must add the following include directive to our first line of the code:
+Om de mogelijkheid om het `printf` commando te gebruiken aan ons programma toe te voegen, moeten we het volgende toevoegen 'include directive' in onze eerste lijn code:
 
     #include <stdio.h>
 
-The second part of the code is the actual code which we are going to write. The first code which will run will always reside 
-in the `main` function. 
+Het tweede deel van de code is de feitelijke code die we gaan schrijven. De eerste code die zal 'runnen', zal altijd deze code bevatten in de `main` functie. 
 
     int main() {
       ... our code goes here
     }
 
-The `int` keyword indicates that the function `main` will return an integer - a simple number. The number which will be returned
-by the function indicates whether the program that we wrote worked correctly. If we want to say that our code
-was run successfully, we will return the number 0. A number greater than 0 will mean that the program that we wrote failed.
+Het `int` sleutelwoord geeft aan dat de functie `main` een geheel getal zal teruggeven - een simpel getal. Het getal dat zal worden teruggegeven  door de functie geeft aan of het programma dat we schreven wel of niet correct werkte.
+Als we willen zeggen dat onze code succesvol heeft gedraaid, geven we het getal 0 terug. Een getal groter dan 0 zal betekenen dat het programma dat we schreven faalde.
 
-For this tutorial, we will return 0 to indicate that our program was successful:
+Voor deze tutorial, gebruiken we 'return 0' om aan te geven dat ons programma succesvol was:
 
     return 0;
 
-Notice that every line in C must end with a semicolon, so that the compiler knows that a new line has started.
+Merk op dat elke lijn in C met een semicolon moet eindigen, zodat de compiler weet dat een nieuwe lijn is begonnen.
 
-Last but not least, we will need to call the function `printf` to print our sentence.
+En als laatste, gaan de we de functie `printf` oproepen zodat we onze zin kunnen printen.
 
 Oefening
 --------
