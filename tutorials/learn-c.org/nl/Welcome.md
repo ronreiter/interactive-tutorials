@@ -10,30 +10,30 @@ Learn-c.org is nog in aanbouw - Als u zou willen helpen met het toevoegen van tu
 
 ### Leer de Basis
 
-- [Hello, World!](Hello, World!)
-- [Variablen en Types](Variables and Types)
-- [Arrays](Arrays)
-- [Multidimensionele Arrays](Multidimensional Arrays)
-- [Condities](Conditions)
-- [Strings](Strings)
-- [For loops](For loops)
-- [While loops](While loops)
-- [Functies](Functions)
-- [Statisch](Static)
+- [[Hello, World!]]
+- [[Variables and Types]]
+- [[Arrays]]
+- [[Multidimensional Arrays]]
+- [[Conditions]]
+- [[Strings]]
+- [[For loops]]
+- [[While loops]]
+- [[Functions]]
+- [[Static]]
 
 ### Geadvanceerd
 
-- [Pointers](Pointers)
-- [Structuren](Structures)
-- [[Functie argumenten door verwijzing]]
-- [[Dynamische allocatie]]
-- [[Arrays en Pointers]]
-- [[Recursie]]
+- [[Pointers]]
+- [[Structures]]
+- [[Function arguments by reference]]
+- [[Dynamic allocation]]
+- [[Arrays and Pointers]]
+- [[Recursion]]
 - [[Linked lists]]
-- [[Binaire bomen]]
-- [[Unies]]
-- [[Pointer Rekenkundigheid]]
-- [[Functie Pointers]]
+- [[Binary trees]]
+- [[Unions]]
+- [[Pointer Arithmetics]]
+- [[Function Pointers]]
 
 ### Bijdragen Aan Tutorials
 
