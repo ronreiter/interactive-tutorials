@@ -1,27 +1,27 @@
 Tutorial
 --------
 
-Welcome to *Learn HTML*, the easiest way to learn HTML & CSS online, interactively.
+Welkom bij *Learn HTML*, de makkelijkste manier om HTML & CSS online te leren op een interactieve manier.
     
-Learning HTML & CSS is essential for any web developer, and does not require to know how to program using JavaScript.
+Het leren van HTML & CSS is essentieel voor elke web developer, en vereist niet dat je al JavaScript kent.
  
 Before you begin, I would recommend that you start out by downloading an HTML & CSS IDE. My personal preference
 is to use an IDE by JetBrains. You can download the PyCharm Community Edition for free, which has really good HTML, 
 CSS and JavaScript development support built-in, along with all the goodies that a good IDE provides - source code
 integration, code refactoring, automatic indentation, syntax highlighting, comparison tool, etc. 
 
-**Here is a list of HTML, CSS and JavaScript editors you can choose from:**
+**Hier is een lijst met HTML, CSS en JavaScript editors waaruit u kan kiezen:**
 
-* JetBrains PyCharm Community Edition (free) - [[https://www.jetbrains.com/pycharm/download/]]
-* JetBrains WebStorm (Commercial) - [[https://www.jetbrains.com/webstorm/]]
-* Atom (Free) - [[https://atom.io/]]
-* Sublime Text (Commercial) - [[https://www.sublimetext.com/]]
+* JetBrains PyCharm Community Edition (Gratis) - [[https://www.jetbrains.com/pycharm/download/]]
+* JetBrains WebStorm (Commercieel) - [[https://www.jetbrains.com/webstorm/]]
+* Atom (Gratis) - [[https://atom.io/]]
+* Sublime Text (Commercieel) - [[https://www.sublimetext.com/]]
 * Brackets - [[http://brackets.io/]]
-* Notepad++ (Windows only) - [[https://notepad-plus-plus.org/download/v7.html]]
+* Notepad++ (Alleen Windows) - [[https://notepad-plus-plus.org/download/v7.html]]
 
-In this tutorial you won't actually need an IDE, because all coding is done online.
+In deze tutorial zelf heb je feitelijk geen IDE nodig, al het coderen gebeurd online.
 
-### Introduction
+### Introductie
 
 HTML (HyperText Markup Language) is a standard developed over the years to convey information over the internet by 
 using "hyperlinks" - or just links as we know them today. As opposed to a PDF, an HTML page is much more dynamic in
@@ -51,7 +51,7 @@ today. The basic principles of a CSS library is pretty much the same - they are 
 which is an easy way to define the layout of an HTML page - a methodology that was developed over the years in web 
 development.
 
-### Your first HTML Page
+### U eerste HTML pagina
 
 Let's start by creating a simple HTML page. An HTML page has the following basic layout:
 
@@ -91,7 +91,7 @@ you can double click it to open it with your browser.
 
 Now that we know the basic structure of an HTML page, let's try it out. 
 
-Exercise
+Oefening
 --------
 1. Add an HTML `<title>` tag with the text "Hello, World!"
 2. Add a paragraph (`<p>` tag) to the body with the text "Hello, World!"
@@ -107,7 +107,7 @@ Tutorial Code
         </body>
     </html>
     
-Expected Output
+Verwachte Output
 ---------------
 
     <!DOCTYPE html>
@@ -119,8 +119,7 @@ Expected Output
             <p>Hello, World!</p>
         </body>
     </html>
-
-Solution
+Oplossing
 --------
 
     <!DOCTYPE html>
