@@ -1,48 +1,46 @@
 Tutorial
 --------
 
-### Data types
+### Data types (Soorten Gegevens)
 
-C has several types of variables, but there are a few basic types:
+C heeft meerdere types variabelen, maar hier zijn een paar basis types:
 
-* Integers - whole numbers which can be either positive or negative. Defined using `char`, `int`, `short`, `long` or `long long`.
-* Unsigned integers - whole numbers which can only be positive. Defined using `unsigned char`, `unsigned int`, `unsigned short`, `unsigned long` or `unsigned long long`.
-* Floating point numbers - real numbers (numbers with fractions). Defined using `float` and `double`.
-* Structures - will be explained later, in the Structures section.
+* Integers - gehele getallen die zowel positief als negatief kunnen zijn. Gedefinieerd met `char`, `int`, `short`, `long` of `long long`.
+* Unsigned integers - gehele getallen die enkel positief kunnen zijn. Gedefinieerd met `unsigned char`, `unsigned int`, `unsigned short`, `unsigned long` of `unsigned long long`.
+* Floating point numbers - reële getallen(getallen met breuken). Gedefinieerd met `float` en `double`.
+* Structures - hier komen we later op terug in de Structures sectie.
 
 The different types of variables define their bounds. A `char` can range only from -128 to 127, whereas a `long` can range from -2,147,483,648 to 2,147,483,647 (`long` and other numeric data types may have another range on different computers, for example - from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 on 64-bit computer).
 
-Note that C does _not_ have a boolean type. Usually, it is defined using the following notation:
+Merk hier op dat C _geen_ boolean type bezit. Meestal, wordt het gedefineerd op deze manier:
 
     #define BOOL char
     #define FALSE 0
     #define TRUE 1
 
-C uses arrays of characters to define strings, and will be explained in the Strings section.
+C gebruikt arrays van characters om strings te definiëren, en zal worden uitgelegd in de Strings sectie.
 
-### Defining variables
+### Variabelen definiëren
 
-For numbers, we will usually use the type `int`, which an integer in the size of a "word" the default number size of the machine which your program is
-compiled on. On most computers today, it is a 32-bit number, which means the number can range from -2,147,483,648 to 2,147,483,647.
+Voor getallen, zullen we meestal het type `int` gebruiken, welke een geheel getal in de grootte van een "woord" de standaard getalgrootte is van de machine waar het programma op gecompileerd wordt. Op de meeste computers vandaag de dag, is het een 32-bit getal, wat betekent dat het een bereik heeft van -2,147,483,648 tot 2,147,483,647.
 
-To define the variables `foo` and `bar`, we need to use the following syntax:
+Om variabelen `foo` en `bar` te definiëren , moeten we gebruik maken van deze syntax:
 
     int foo;
     int bar = 1;
 
-The variable `foo` can be used, but since we did not initialize it, we don't know what's in it. The variable `bar` contains the number 1.
+De variabele `foo` kan gebruikt worden, maar omdat we het niet geinitializeerd hebben, weten we niet wat er in zit. De variabele `bar` bevat het getal 1.
 
-Now, we can do some math. Assuming `a`, `b`, `c`, `d`, and `e` are variables, we can simply use plus, minus and multiplication operators
-in the following notation, and assign a new value to `a`:
+Nu kunnen we wat wiskunde doen. Aangenomen dat `a`, `b`, `c`, `d`, en `e` variabelen zijn, kunnen we simpelweg gebruik maken van plus, min en vermenigvuldigings operatoren in de volgende notatie, en een nieuwe waarde toewijzen aan `a`:
 
     int a = 0,b = 1,c = 2,d = 3, e = 4;
     a = b - c + d * e;
     printf("%d", a); /* will print 1-2+3*4 = 11 */
 
-Exercise
+Oefening
 --------
 
-In the next exercise, you will need to create a program which prints out the sum of the numbers `a`, `b`, and `c`.
+In de volgende oefening zal u een programma moeten maken dat de som van de getallen `a`, `b`, en `c` print.
 
 Tutorial Code
 -------------
@@ -61,11 +59,11 @@ Tutorial Code
       return 0;
     }
 
-Expected Output
+Verwachte Output
 ---------------
     The sum of a, b, and c is 12.750000.
 
-Solution
+Oplossing
 --------
     #include <stdio.h>
 
