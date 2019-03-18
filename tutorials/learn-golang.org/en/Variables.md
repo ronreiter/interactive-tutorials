@@ -96,7 +96,7 @@ Solution
     package main
     import "fmt"
     func main() {
-        name := "Jhon Doe"
+        name := "John Doe"
         age := 24
         weigth := 154.61
         fmt.Println(name)
