@@ -30,6 +30,7 @@ Table of Contents - Shell Programming
 - [[Bash trap command]]
 - [[File Testing]]
 - [[Input Parameter Parsing]]
+- [[Pipelines]]
 - [[Process Substitution]]
 - [[Regular Expressions]]
 - [[Special Commands  sed,awk,grep,sort]]
