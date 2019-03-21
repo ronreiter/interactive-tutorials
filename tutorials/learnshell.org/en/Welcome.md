@@ -27,6 +27,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Bash trap command]]
 - [[File Testing]]
 - [[Input Parameter Parsing]]
+- [[Pipelines]]
 - [[Process Substitution]]
 - [[Regular Expressions]]
 - [[Special Commands  sed,awk,grep,sort]]
