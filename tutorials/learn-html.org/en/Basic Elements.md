@@ -65,11 +65,9 @@ A horizontal ruler `<hr>` tag acts as a simple separator between page sections.
 
 Exercise
 --------
-
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
-
+1. Add an HTML `<h1>` tag with the text "I'm the most important!"
+2. Add an HTML `<h2>` tag with the text "I'm less important!"
+3. Add an HTML `<h6>` tag with the text "I'm the least important!"
 
 Tutorial Code
 -------------
@@ -88,10 +86,11 @@ Expected Output
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <h1>I'm the most important!</h1>
+            <h2>I'm less important!</h2>
+            <h6>I'm the least important!</h6>
         </body>
     </html>
 
@@ -101,9 +100,10 @@ Solution
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <h1>I'm the most important!</h1>
+            <h2>I'm less important!</h2>
+            <h6>I'm the least important</h6>
         </body>
     </html>
