@@ -1,51 +1,49 @@
-Tutorial
---------
+<!DOCTYPE html>
+<html>
+<body>
 
-This page is empty. You are welcome to contribute the content by sending me a pull request:
+<h1 class="text-1">Any property could be  inside @media query as long as it's css property </h1>
+<div class="block-1">This line will change its color when its width is less than 1200px</div>
 
-[[https://github.com/ronreiter/interactive-tutorials]]
+<div class="block-2">An object will apear when the width is less than 1000px
+  <div class="hidden-object"></div>
+</div>
 
-Exercise
---------
+<h1 class="text-1"></h1>
+<style>
+.block-1{
+  height: 50px;
+  width: 100%;
+  background-color: #c3d3a3;
+}
+@media only screen and (max-width: 1200px) { /*-- WHEN THE SCREEN IS LESS THAN 1200PX it changes yo LIGHTBLUE */
+  .block-1 {
+    background-color: lightblue;
+  }
+}
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
+.block-2{
+  height: 120px;
+  width: 100%;
+  background-color: #c2d4;
+}
+@media only screen and (max-width: 1200px) { /*-- WHEN THE SCREEN IS LESS THAN 1200PX it changes yo LIGHTBLUE */
+  .block-1 {
+    background-color: lightblue;
+  }
+}
+.hidden-object{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: none;
+}
+@media only screen and (max-width: 1000px) { /*-- WHEN THE SCREEN IS LESS THAN 1200PX it changes yo LIGHTBLUE */
+  .hidden-object {
+   display: block;
+  }
+}
+</style>
 
-[[https://github.com/ronreiter/interactive-tutorials]]
-
-
-Tutorial Code
--------------
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-        </head>
-        <body>
-        </body>
-    </html>
-    
-Expected Output
----------------
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
-
-Solution
---------
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
+</body>
+</html>
