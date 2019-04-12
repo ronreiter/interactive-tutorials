@@ -50,17 +50,15 @@ attribute - which directs the browser to break the floating effect after the fir
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
+1. Add a image within the body, <img src=""> tag with the image "photo.jpg".
+2. Adjust size of img to 100px by 100px
+3. Add onload command, onload="alert('')" with the text "task complete"
 
 Tutorial Code
 -------------
 
     <!DOCTYPE html>
     <html>
-        <head>
-        </head>
         <body>
         </body>
     </html>
@@ -70,11 +68,8 @@ Expected Output
 
     <!DOCTYPE html>
     <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
         <body>
-            <p>Hello, World!</p>
+            <img src="photo.jpg" width="100px" height="100px" onload="alert('task complete')">
         </body>
     </html>
 
@@ -83,10 +78,7 @@ Solution
 
     <!DOCTYPE html>
     <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
         <body>
-            <p>Hello, World!</p>
+            <img src="photo.jpg" width="100px" height="100px" onload="alert('task complete')">
         </body>
     </html>
