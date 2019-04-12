@@ -1,51 +1,23 @@
-Tutorial
---------
-
-This page is empty. You are welcome to contribute the content by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
-
-Exercise
---------
-
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
-
-
-Tutorial Code
--------------
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-        </head>
-        <body>
-        </body>
-    </html>
-    
-Expected Output
----------------
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
-
-Solution
---------
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <p>Hello, World!</p>
-        </body>
-    </html>
+<!DOCTYPE html>
+<html>
+  <style>
+    h1 {
+  font-size:50px;
+    }
+    body {
+      background-color:lightblue;
+    }
+  </style>
+    <head>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <center> <h1>      <i class="fas fa-address-book"></i>
+ Icons in HTML <i class="fas fa-ambulance"></i></h1> </center>
+    </head>
+    <body>
+      <p>
+In order to start using icons in HTML, you first need to link to a icon stylesheet. This can be done by pasting [link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha38450oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"] with angle brackets instead of brackets at the beginning and end of the link. Afterwards, go to a website like <a href="https://fontawesome.com">this one</a> and find an icon you like. Finnaly, copy the code that is displayed for that icon and paste it into your code. If you have linked the stylesheet correctly, the icon should show up on your page. 
+      </p>
+      <p>
+        For example, here is an image of an air-freshener. <i class="fas fa-air-freshener"></i>
+    </body>   
+</html>
