@@ -22,8 +22,8 @@ The basic loop structures are:
 
 `for (INIT ; CONDITION ; COMMAND) {BLOCK}`: This is a loop structure similar to the C language `for` loop. Before the loop starts execute INIT as the initialization sequence. Then repeat the statement BLOCK while CONDITION is true. CONDITION is tested before executing BLOCK. After each iteration, execute the COMMAND.
 
-	for ($count = 1 ; $count > 10 ; $count++) {
-	  print "My count is: $count\n":
+	for ($count = 1 ; $count < 10 ; $count++) {
+	  print "My count is: $count\n";
 	}
 
 `foreach VAR (ARRAY) {BLOCK}`: iterate over all ARRAY values, assigning VAR to the next value from ARRAY in each iteration, and run BLOCK for each value.
