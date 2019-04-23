@@ -30,21 +30,25 @@ Here's how you could do that:
     def do_stuff_with_number(n):
         print(n)
     
-    the_list = (1, 2, 3, 4, 5)
+    def catch_this():
+        the_list = (1, 2, 3, 4, 5)
     
-    for i in range(20):
-        try:
-            do_stuff_with_number(the_list[i])
-        except IndexError: # Raised when accessing a non-existing index of a list
-          do_stuff_with_number(0)
+        for i in range(20):
+            try:
+                do_stuff_with_number(the_list[i])
+            except IndexError: # Raised when accessing a non-existing index of a list
+                do_stuff_with_number(0)
+    
+    catch_this()
 
 There, that wasn't too hard! You can do that with any exception. For
-more details on handling exceptions, look no further than [here](http://docs.python.org/tutorial/errors.html#handling-exceptions)
+more details on handling exceptions, look no further than the 
+[Python Docs](http://docs.python.org/tutorial/errors.html#handling-exceptions)
 
 Exercise
 --------
 
-Handle all the exception! Think back to the previous lessions to return the last name of the actor.
+Handle all the exception! Think back to the previous lessons to return the last name of the actor.
 
 Tutorial Code
 -------------
