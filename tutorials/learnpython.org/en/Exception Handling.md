@@ -41,18 +41,22 @@ Here's how you could do that:
 There, that wasn't too hard! You can do that with any exception. For
 more details on handling exceptions, look no further than [here](http://docs.python.org/tutorial/errors.html#handling-exceptions)
 
+Exercise
+--------
+
+Handle all the exception! Think back to the previous lessions to return the last name of the actor.
+
 Tutorial Code
 -------------
 
-# Handle all the exceptions!
-#Setup
+# Setup
 actor = {"name": "John Cleese", "rank": "awesome"}
 
-#Function to modify, should return the last name of the actor - think back to previous lessons for how to get it
-def get_last_name():
+# Function to modify!!!
+def get_last_name(): 
     return actor["last_name"]
 
-#Test code
+# Test code
 get_last_name()
 print("All exceptions caught! Good job!")
 print("The actor's last name is %s" % get_last_name())
