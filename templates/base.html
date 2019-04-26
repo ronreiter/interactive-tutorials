@@ -26,7 +26,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg bg-light navbar-light mb-2">
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
 
     <div class="container">
     <a class="navbar-brand" href="/">
@@ -76,6 +76,7 @@
                 </div>
             </li>
          #}
+        {#
 
             <li class="nav-item mr-sm-2 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -96,6 +97,7 @@
                     <a class="dropdown-item" {% if domain_data.language == "ruby" %}class="active"{% endif %} href="https://www.learnrubyonline.org">Ruby</a>
                 </div>
             </li>
+        #}
 
 
         </ul>
@@ -122,19 +124,28 @@
 
 </nav>
 
-<div class="container-fluid">
-    <div class="row" id="macro-nav">
-        <div class="col-9">
-            <ul class="nav nav-pills">
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3">
 
-            </ul>
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "python" %}active{% endif %}" href="https://www.learnpython.org">Python</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "java" %}active{% endif %}" href="https://www.learnjavaonline.org">Java</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "html" %}active{% endif %}" href="https://www.learn-html.org">HTML & CSS</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "go" %}active{% endif %}" href="https://www.learn-golang.org">Go</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "c" %}active{% endif %}" href="https://www.learn-c.org">C</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "cpp" %}active{% endif %}" href="https://www.learn-cpp.org">C++</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "javascript" %}active{% endif %} "href="https://www.learn-js.org">JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "php" %}active{% endif %}" href="https://www.learn-php.org">PHP</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "bash" %}active{% endif %}" href="https://www.learnshell.org">Shell</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "c#" %}active{% endif %}" href="https://www.learncs.org">C#</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "perl" %}active{% endif %}" href="https://www.learn-perl.org">Perl</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "ruby" %}active{% endif %}" href="https://www.learnrubyonline.org">Ruby</a></li>
+        </ul>
 
-        </div>
-        <div class="col-3">
-        </div>
     </div>
 
-</div>
+</nav>
+
 
 {% block content %}{% endblock %}
 
