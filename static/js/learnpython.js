@@ -147,7 +147,8 @@ function execute() {
 			print(err.message);
 		}
 	} else {
-		loading.show();
+		//loading.show();
+		print("Executing, please wait...");
 		$.ajax({
 			type : "post",
 			data : JSON.stringify({
@@ -164,7 +165,7 @@ function execute() {
 }
 
 function execDone(data) {
-	loading.hide();
+	//loading.hide();
 	//$('#output').css('background-color', 'white');
 	if (data["output"] == "exception") {
 		//$('#output').css('color', 'red');
@@ -207,6 +208,7 @@ function load() {
 	loading = $("#loading");
 	var codeBlocks = $("code");
 	// TODO: make syntax highlighting generic by matching language codes with prism codes
+	var theme = "elegant";
 
 	switch (window.domainData.language) {
 		case "python":
@@ -217,7 +219,7 @@ function load() {
 				lineNumbers: true,
 				indentUnit: 4,
 				tabMode: "shift",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-python");
@@ -230,7 +232,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-java",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-java");
@@ -243,7 +245,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-csrc",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-c");
@@ -256,7 +258,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-csrc",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-cpp");
@@ -269,7 +271,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/javascript",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-javascript");
@@ -282,7 +284,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-ruby",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-ruby");
@@ -295,7 +297,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-sh",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-bash");
@@ -308,7 +310,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-perl",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-perl");
@@ -322,7 +324,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "application/x-httpd-php",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-php");
@@ -336,7 +338,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-csharp",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-csharp");
@@ -350,7 +352,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/html",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-html");
@@ -363,7 +365,7 @@ function load() {
 				indentUnit: 4,
 				tabMode: "shift",
 				mode: "text/x-go",
-				theme: "monokai"
+				theme: theme
 			});
 
 			codeBlocks.addClass("language-go");
@@ -419,6 +421,15 @@ function showSolution() {
 function reset() {
     $("#run-button").prop("disabled", false);
 	editor.setValue(originalCode);
+}
+
+function toggleMinimize() {
+	var dock = document.querySelector("footer#dock");
+	if (dock.classList.contains("maximized")) {
+		dock.classList.remove("maximized");
+	} else {
+		dock.classList.add("maximized");
+	}
 }
 
 $(function() {

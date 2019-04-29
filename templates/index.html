@@ -52,12 +52,7 @@
 
     <div class="row">
 
-        <div class="col-5">
-
-
-
-
-
+        <div class="col-10">
             <span id="inner-text">{% autoescape off %}
                 {% if page_title %}
                     <h1>{{ page_title }}</h1>
@@ -70,66 +65,14 @@
             <button id="start-exercise" class="btn btn-success" onclick="toggleMinimize(true); reset()">
                 <div class="icon-play icon-white" style="padding-right: 10px"></div> Start Exercise</button>
 
-
-
-
-
         </div>
 
+        {#
         <div class="col-5">
             <div class="sticky-top">
-
-                <div class="code-window">
-
-                    <h5 style="line-height: 28px">Code</h5>
-                    <div class="mb-1">
-                        <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
-                            <div
-                                    class="icon-play icon-white" style="padding-right: 10px"></div>
-                            Run
-                        </button>
-                        <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">Reset</button>
-                        <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution
-                        </button>
-
-                    </div>
-
-                    <div class="footer-toggle">
-                        <textarea id="code" style="width: 100%; height: 210px">{{ code.decode('utf8') }}</textarea>
-                    </div>
-
-                </div>
-
-                <div class="output-window">
-                    <div style="width: 100%; height: 100%">
-                        <h5 style="line-height: 28px">Output</h5>
-                        <div class="mb-1">
-                            <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
-                                Expected Output
-                            </button>
-                        </div>
-
-                    </div>
-
-                    <div class="footer-toggle">
-                        <div id="loading">
-                            Executing, please wait...
-                        </div>
-                        <div id="text-output">
-                            <textarea id="output" style="width: 475px; height: 210px"></textarea>
-                            <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
-                                Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
-                            </div>
-                        </div>
-                        <iframe id="html-output"
-                                style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
-                        <iframe id="expected-output"
-                                style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
-                    </div>
-                </div>
-
             </div>
         </div>
+         #}
 
         <div class="col-2 hidden-phone">
             <div id="google-ad-right">
@@ -237,5 +180,76 @@
 </div>
 
 {% include "footer.html" %}
+
+<div style="height: 250px"></div>
+
+<footer id="dock">
+    <div class="container mt-2">
+        <div class="row mb-2">
+            <div class="col">
+                <div class="code-window">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <h5>Code</h5>
+                        </div>
+
+                        <div class="col text-right">
+                            <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
+                                <div
+                                        class="icon-play icon-white" style="padding-right: 10px"></div>
+                                Run
+                            </button>
+                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">Reset</button>
+                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <textarea id="code">{{ code.decode('utf8') }}</textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="output-window">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <h5>Output</h5>
+                        </div>
+                        <div class="col text-right">
+                            <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
+                                Expected Output
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <div id="text-output">
+                                <textarea id="output"></textarea>
+                                <div class="powered-by-sphere">
+                                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+                                </div>
+                            </div>
+                            <iframe id="html-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                            <iframe id="expected-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
 
 {% endblock %}

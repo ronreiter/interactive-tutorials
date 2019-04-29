@@ -13,6 +13,28 @@ header {
     height: 110px;
 }
 
+footer#dock {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #eee;
+
+}
+footer#dock .footer-toggle {
+    display: none;
+}
+
+footer#dock.maximized .footer-toggle {
+    display: block;
+}
+
+footer#dock:hover .footer-toggle {
+    display: block;
+}
+
+
 h1.logo {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 45px;
@@ -101,20 +123,9 @@ textarea {
 }
 
 #loading {
-    padding: 0 4px;
-    box-sizing: border-box;
-    color: #A6E22C;
-    font-family: monospace;
-    display:none;
-    margin-bottom: -200px;
-    position: relative;
-    z-index: 10;
-    height: 200px;
-    background-color: #3C3D38;
-    background-image: url(/static/img/se-logo-anim.gif);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    font-family: Courier New, monospace;
+    font-size: 12px;
+    display: none;
 }
 
 .btn.execute-code {
@@ -182,4 +193,19 @@ textarea {
 
 .course img:first-child {
     width: 100%;
+}
+
+.CodeMirror {
+    background-color: #f8f8f8;
+}
+
+.powered-by-sphere {
+    margin-top: -20px;
+    text-align: right;
+    font-size: 10px;
+    color: black;
+    z-index: inherit;
+    position: relative;
+    line-height: 20px;
+    padding-right: 5px;
 }

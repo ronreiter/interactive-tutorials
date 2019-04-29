@@ -17,7 +17,10 @@
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/prism-light.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/learnpython.css"/>
-    <script src="/static/js/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
     <script src="/static/js/prism.js"></script>
     <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
 
@@ -145,6 +148,24 @@
     </div>
 
 </nav>
+
+<div class="container">
+        <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style ">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+    </div>
+
+    <script type="text/javascript">
+        var addthis_config = {"data_track_clickback": true};
+        var addthis_share = {"url": "http://learnpython.org"};
+    </script>
+    <script type="text/javascript"
+            src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dafdfe6039782b1"></script>
+    <!-- AddThis Button END -->
+</div>
 
 
 {% block content %}{% endblock %}
