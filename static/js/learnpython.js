@@ -208,7 +208,8 @@ function load() {
 	loading = $("#loading");
 	var codeBlocks = $("code");
 	// TODO: make syntax highlighting generic by matching language codes with prism codes
-	var theme = "elegant";
+	var theme = "xq-light";
+	var outputTheme = "xq-light";
 
 	switch (window.domainData.language) {
 		case "python":
@@ -379,7 +380,7 @@ function load() {
 		lineNumbers: false,
 		textWrapping: true,
 		readOnly : true,
-		theme: "monokai",
+		theme: outputTheme,
         mode: "text/plain"
 	});
 
@@ -387,6 +388,7 @@ function load() {
 
     $("#inner-text pre").after(
         $("<button>").addClass("btn btn-sm btn-primary execute-code").text("Execute Code").click(function() {
+        	maximizeDock();
             var text = $(this).prev().text();
             if (window.domainData.container_word && text.indexOf(window.domainData.container_word) == -1) {
                 var lines = text.split("\n");
@@ -425,11 +427,33 @@ function reset() {
 
 function toggleMinimize() {
 	var dock = document.querySelector("footer#dock");
+
 	if (dock.classList.contains("maximized")) {
-		dock.classList.remove("maximized");
+		minimizeDock();
 	} else {
-		dock.classList.add("maximized");
+		maximizeDock();
 	}
+}
+
+function maximizeDock() {
+	var dock = document.querySelector("footer#dock");
+	var toggleButton = document.querySelector("#toggle-dock-button");
+
+	dock.classList.add("maximized");
+	toggleButton.classList.remove("btn-primary");
+	toggleButton.classList.add("btn-success");
+
+}
+
+
+function minimizeDock() {
+	var dock = document.querySelector("footer#dock");
+	var toggleButton = document.querySelector("#toggle-dock-button");
+
+	dock.classList.remove("maximized");
+	toggleButton.classList.remove("btn-success");
+	toggleButton.classList.add("btn-primary");
+
 }
 
 $(function() {
