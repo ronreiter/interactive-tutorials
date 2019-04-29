@@ -186,14 +186,14 @@
 <footer id="dock">
     <div class="container mt-2">
         <div class="row mb-2">
-            <div class="col">
+            <div class="col-lg">
                 <div class="code-window">
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-3">
                             <h5>Code</h5>
                         </div>
 
-                        <div class="col text-right">
+                        <div class="col-9 text-right">
                             <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
                                 <div
                                         class="icon-play icon-white" style="padding-right: 10px"></div>
@@ -214,15 +214,18 @@
 
                 </div>
             </div>
-            <div class="col">
+            <div class="col-lg">
                 <div class="output-window">
                     <div class="row mb-2">
-                        <div class="col">
+                        <div class="col-3">
                             <h5>Output</h5>
                         </div>
-                        <div class="col text-right">
+                        <div class="col-9 text-right">
                             <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
                                 Expected Output
+                            </button>
+                            <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">
+                                Toggle Dock
                             </button>
                         </div>
 
