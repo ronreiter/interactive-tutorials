@@ -213,15 +213,20 @@ function load() {
 
 	switch (window.domainData.language) {
 		case "python":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				mode: {name: "python",
-					version: 2,
-					singleLineStringErrors: false},
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				theme: theme
-			});
+            //
+			// editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+			// 	mode: {name: "python",
+			// 		version: 2,
+			// 		singleLineStringErrors: false},
+			// 	lineNumbers: true,
+			// 	indentUnit: 4,
+			// 	tabMode: "shift",
+			// 	theme: theme
+			// });
+			editor = {
+				"getValue": function() {},
+				"setValue": function(x) {}
+			};
 
 			codeBlocks.addClass("language-python");
 			Prism.highlightAll();
@@ -376,13 +381,15 @@ function load() {
 
 	}
 
-	output = CodeMirror.fromTextArea(document.getElementById("output"), {
-		lineNumbers: false,
-		textWrapping: true,
-		readOnly : true,
-		theme: outputTheme,
-        mode: "text/plain"
-	});
+	if (document.getElementById("output")) {
+		output = CodeMirror.fromTextArea(document.getElementById("output"), {
+			lineNumbers: false,
+			textWrapping: true,
+			readOnly : true,
+			theme: outputTheme,
+			mode: "text/plain"
+		});
+	}
 
     originalCode = editor.getValue();
 
