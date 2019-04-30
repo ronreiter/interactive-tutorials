@@ -228,8 +228,8 @@ function load() {
 				"setValue": function(x) {}
 			};
 
-			codeBlocks.addClass("language-python");
-			Prism.highlightAll();
+			//codeBlocks.addClass("language-python");
+			//Prism.highlightAll();
 
 			break;
 		case "java":
