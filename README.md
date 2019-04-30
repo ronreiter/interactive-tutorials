@@ -24,8 +24,15 @@ The web server will locally compile and load all Markdown files into memory. The
 requires that you specify the domain you are working on, e.g.:
 
     python main.py -d learnpython.org
-    
+
 By default, the server process will run at http://localhost:5000
+
+Todos
+=====
+
+* Dark mode
+* Fix mobile
+
 
 Contributors
 ============
