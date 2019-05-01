@@ -31,7 +31,7 @@ THE SOFTWARE.
 .cm-s-xq-light span.cm-operator {}
 .cm-s-xq-light span.cm-comment { color: #0080FF; font-style: italic; }
 .cm-s-xq-light span.cm-string { color: red; }
-.cm-s-xq-light span.cm-meta { color: yellow; }
+.cm-s-xq-light span.cm-meta { color: #0080FF; }
 .cm-s-xq-light span.cm-qualifier { color: grey; }
 .cm-s-xq-light span.cm-builtin { color: #7EA656; }
 .cm-s-xq-light span.cm-bracket { color: #cc7; }
