@@ -35,10 +35,10 @@ To define a double floating point number, use the following syntax:
 If you want to use float, you will have to cast:
 
     float f = (float) 4.5;
-    
+
 Or, You can use this:
-	
-    float f = 4.5f (f is a shorter way of casting float)
+
+    float f = 4.5f; // (f is a shorter way of casting float)
 
 ### Characters and Strings
 
@@ -70,7 +70,7 @@ Every comparison operator in java will return the type `boolean` that not like o
 
     boolean b = false;
     b = true;
-    
+
     boolean toBe = false;
     b = toBe || !toBe;
     if (b) {
@@ -82,7 +82,7 @@ Every comparison operator in java will return the type `boolean` that not like o
     if (children) { // Will not work
         // Will not work
     }
-    
+
 Exercise
 --------
 

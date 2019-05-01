@@ -7,7 +7,7 @@ Let's go over the Hello world program, which simply prints "Hello, World!" to th
 
     public class Main {
         public static void main(String[] args) {
-            System.out.println("Hello, World!");
+            System.out.println("This will be printed");
         }
     }
 
@@ -27,14 +27,14 @@ The next line is:
 
 This is the entry point of our Java program. the main method has to have this exact signature in order to be able to run our program.
 
-* `public` again means that anyone can access it. 
+* `public` again means that anyone can access it.
 * `static` means that you can run this method without creating an instance of `Main`.
 * `void` means that this method doesn't return any value.
 * `main` is the name of the method.
 
 The arguments we get inside the method are the arguments that we will get when running the program with parameters. It's an array of strings. We will use it in our next lesson, so don't worry if you don't understand it all now.
 
-    System.out.println("Hello, World!");
+    System.out.println("This will be printed");
 
 * `System` is a pre-defined class that Java provides us and it holds some useful methods and variables.
 * `out` is a static variable within System that represents the output of your program (stdout).
