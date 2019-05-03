@@ -252,6 +252,17 @@ def get_tutorial(tutorial_id, language="en"):
     else:
         return td
 
+
+def error404():
+    domain_data = get_domain_data()
+    return make_response(render_template(
+        "error404.html",
+        domain_data=domain_data,
+        language_code="en",
+        languages=get_languages(),
+    ), 404)
+
+
 #app.add_url_rule('/favicon.ico', redirect_to=url_for('static/img/favicons', filename=get_domain_data()["favicon"]))
 @app.route("/favicon.ico")
 def favicon():
@@ -323,7 +334,10 @@ def progress(language):
 @app.route("/<language>/<title>", methods=["GET", "POST"])
 def index(title, language="en"):
     tutorial = title.replace("_", " ").encode("utf-8")
-    current_tutorial_data = get_tutorial(tutorial, language)
+    try:
+        current_tutorial_data = get_tutorial(tutorial, language)
+    except KeyError:
+        return error404()
     domain_data = get_domain_data()
     domain_data["language_code"] = language
 
