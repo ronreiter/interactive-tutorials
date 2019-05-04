@@ -60,7 +60,7 @@ called `strcmp`, but it is not recommended to use it. For example:
 ### String Concatenation
 
 The function 'strncat' appends first n characters of src string string to the destination string where n is min(n,length(src));
-The arguments passed are destination string, source string, and n - maximum number of characters to be appended.For Example:
+The arguments passed are destination string, source string, and n - maximum number of characters to be appended. For Example:
 
     char dest[20]="Hello";
     char src[20]="World";
