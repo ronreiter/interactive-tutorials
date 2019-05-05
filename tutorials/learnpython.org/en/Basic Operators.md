@@ -81,8 +81,9 @@ if big_list.count(x) == 10 and big_list.count(y) == 10:
 Expected Output
 ---------------
 
-test_object('x')
-test_object('y')
+Ex().check_object('x_list').has_equal_value(expr_code = 'len(x_list)')
+Ex().check_object('y_list').has_equal_value(expr_code = 'len(y_list)')
+Ex().check_object('big_list').has_equal_value(expr_code = 'len(big_list)')
 success_msg('Good work!')
 
 Solution

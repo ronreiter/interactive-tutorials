@@ -1,3 +1,4 @@
 *.pyc
 .idea
 .DS_Store
+learnpython_env/
