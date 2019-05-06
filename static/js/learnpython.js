@@ -207,178 +207,35 @@ function print(text) {
 function load() {
 	loading = $("#loading");
 	var codeBlocks = $("code");
-	// TODO: make syntax highlighting generic by matching language codes with prism codes
-	var theme = "xq-light";
 	var outputTheme = "xq-light";
+	var mode;
 
-	switch (window.domainData.language) {
-		case "python":
-            //
-			// editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-			// 	mode: {name: "python",
-			// 		version: 2,
-			// 		singleLineStringErrors: false},
-			// 	lineNumbers: true,
-			// 	indentUnit: 4,
-			// 	tabMode: "shift",
-			// 	theme: theme
-			// });
-			editor = {
-				"getValue": function() {},
-				"setValue": function(x) {}
-			};
+    if (document.getElementById("code")) {
+    	if (window.domainData.language === "python") {
+    		mode = {
+    			name: "python",
+			 	version: 2,
+			 	singleLineStringErrors: false
+    		}
+		} else {
+    		mode = window.domainData.codemirror_mode
+		}
 
-			//codeBlocks.addClass("language-python");
-			//Prism.highlightAll();
+        editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            indentUnit: 4,
+            tabMode: "shift",
+            mode: mode,
+            theme: "xq-light"
+        });
 
-			break;
-		case "java":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-java",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-java");
-			Prism.highlightAll();
-
-			break;
-		case "c":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-csrc",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-c");
-			Prism.highlightAll();
-
-			break;
-		case "c++11":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-csrc",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-cpp");
-			Prism.highlightAll();
-
-			break;
-		case "javascript":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/javascript",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-javascript");
-			Prism.highlightAll();
-
-			break;
-		case "ruby":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-ruby",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-ruby");
-			Prism.highlightAll();
-
-			break;
-		case "bash":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-sh",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-bash");
-			Prism.highlightAll();
-
-			break;
-		case "perl":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-perl",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-perl");
-			Prism.highlightAll();
-
-			break;
-
-		case "php":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "application/x-httpd-php",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-php");
-			Prism.highlightAll();
-
-			break;
-
-		case "c#":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-csharp",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-csharp");
-			Prism.highlightAll();
-
-			break;
-
-		case "html":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/html",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-html");
-			Prism.highlightAll();
-
-			break;
-		case "go":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-go",
-				theme: theme
-			});
-
-			codeBlocks.addClass("language-go");
-			Prism.highlightAll();
-
-			break;
-
+        codeBlocks.addClass(window.domainData.prism_mode);
+        Prism.highlightAll();
+    } else {
+		editor = {
+			"getValue": function() {},
+			"setValue": function(x) {}
+		};
 	}
 
 	if (document.getElementById("output")) {

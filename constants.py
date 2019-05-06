@@ -16,10 +16,14 @@ LEARNPERL_DOMAIN = "learn-perl.org"
 LEARNCS_DOMAIN = "learncs.org"
 LEARNHTML_DOMAIN = "learn-html.org"
 LEARNGO_DOMAIN = "learn-golang.org"
+LEARNSCALA_DOMAIN = "learnscala.org"
+LEARNSOLIDITY_DOMAIN = "learnsolidity.org"
 
 DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
         "language" : "python",
+        "codemirror_mode": "python",
+        "prism_mode": "language-python",
         "analytics" : "UA-22741967-1",
         "namespace" : "learnpython.org",
         "full_url" : "http://learnpython.org",
@@ -30,9 +34,7 @@ DOMAIN_DATA = {
         "logo" : "/static/img/logos/learnpython.png",
         "share_logo" : "/static/img/share-logos/learnpython-share.png",
         "language_uppercase" : "Python",
-        "twitter" : "@learnpython",
         "favicon" : "favicon-learnpython.ico",
-        "copyright" : "Copyright &copy; LearnPython.org.",
         "default_code" : """# Welcome to the Interactive Python Tutorial.
 # Start by choosing a chapter and
 # write your code in this window.
@@ -42,6 +44,8 @@ print "Hello, World!"
     },
     LEARNHTML_DOMAIN : {
         "language" : "html",
+        "codemirror_mode": "text/html",
+        "prism_mode": "language-html",
         "analytics" : "UA-22741967-11",
         "namespace" : "learn-html.org",
         "full_url" : "http://learn-html.org",
@@ -52,9 +56,7 @@ print "Hello, World!"
         "logo" : "/static/img/logos/learnhtml.png",
         "share_logo" : "/static/img/share-logos/learnhtml-share.png",
         "language_uppercase" : "HTML",
-        "twitter" : "@learnhtml",
         "favicon" : "favicon-learnhtml.ico",
-        "copyright" : "Copyright &copy; Learn-HTML.org.",
         "default_code" : """<!-- Welcome to the Interactive HTML & CSS Tutorial.
 Start by choosing a chapter and
 write your code in this window.
@@ -73,6 +75,8 @@ write your code in this window.
 
     LEARNC_DOMAIN : {
         "language" : "c",
+        "codemirror_mode": "text/x-csrc",
+        "prism_mode": "language-c",
         "analytics" : "UA-22741967-3",
         "namespace" : "learn-c.org",
         "full_url" : "http://learn-c.org",
@@ -83,9 +87,7 @@ write your code in this window.
         "logo" : "/static/img/logos/learn-c.png",
         "share_logo" : "/static/img/share-logos/learn-c-share.png",
         "language_uppercase" : "C",
-        "twitter" : "@learnc",
         "favicon" : "favicon-learn-c.ico",
-        "copyright" : "Copyright &copy; Learn-C.org. ",
         "default_code" : """/* Welcome to the Interactive C Tutorial.
 Start by choosing a chapter and
 write your code in this window. */
@@ -109,6 +111,8 @@ return 0;
     },
     LEARNCPP_DOMAIN : {
         "language" : "c++11",
+        "codemirror_mode": "text/x-csrc",
+        "prism_mode": "language-cpp",
         "analytics" : "UA-22741967-12",
         "namespace" : "learn-cpp.org",
         "full_url" : "http://learn-cpp.org",
@@ -119,9 +123,7 @@ return 0;
         "logo" : "/static/img/logos/learn-cpp.png",
         "share_logo" : "/static/img/share-logos/learn-cpp-share.png",
         "language_uppercase" : "C++",
-        "twitter" : "@learncpp",
         "favicon" : "favicon-learn-cpp.ico",
-        "copyright" : "Copyright &copy; Learn-cpp.org. ",
         "default_code" : """// Welcome to the Interactive C++ Tutorial.
 // Start by choosing a chapter and
 // write your code in this window.
@@ -147,6 +149,8 @@ return 0;
     },
     LEARNJAVA_DOMAIN : {
         "language" : "java",
+        "codemirror_mode": "text/x-java",
+        "prism_mode": "language-java",
         "analytics" : "UA-22741967-4",
         "namespace" : "learnjavaonline.org",
         "full_url" : "http://learnjavaonline.org",
@@ -157,9 +161,7 @@ return 0;
         "logo" : "/static/img/logos/learnjavaonline.png",
         "share_logo" : "/static/img/share-logos/learnjavaonline-share.png",
         "language_uppercase" : "Java",
-        "twitter" : "@learnjava",
         "favicon" : "favicon-learnjava.ico",
-        "copyright" : "Copyright &copy; LearnJavaOnline.org.",
         "default_code" : """// Welcome to the Interactive Java Tutorial.
 // Start by choosing a chapter and
 // write your code in this window.
@@ -186,6 +188,8 @@ public class Main {
     },
     LEARNJS_DOMAIN : {
         "language" : "javascript",
+        "codemirror_mode": "text/javascript",
+        "prism_mode": "language-javascript",
         "analytics" : "UA-22741967-5",
         "namespace" : "learn-js.org",
         "full_url" : "http://learn-js.org",
@@ -196,9 +200,7 @@ public class Main {
         "logo" : "/static/img/logos/learn-js.png",
         "share_logo" : "/static/img/share-logos/learn-js-share.png",
         "language_uppercase" : "JavaScript",
-        "twitter" : "@learnjs",
         "favicon" : "favicon-learn-js.ico",
-        "copyright" : "Copyright &copy; Learn-JS.org.",
         "default_code" : """// Welcome to the Interactive JavaScript Tutorial.
 // Start by choosing a chapter and
 // write your code in this window.
@@ -208,8 +210,10 @@ console.log("Hello, World!");
     },
     LEARNRUBY_DOMAIN : {
         "language" : "ruby",
+        "codemirror_mode": "text/x-ruby",
+        "prism_mode": "language-ruby",
         "analytics" : "UA-22741967-6",
-            "namespace" : "learnrubyonline.org",
+        "namespace" : "learnrubyonline.org",
         "full_url" : "http://learnrubyonline.org",
         "sender" : "Learn-JS.org <admin@learnrubyonline.org>",
         "styled_domain" : "LearnRubyOnline.org",
@@ -218,9 +222,7 @@ console.log("Hello, World!");
         "logo" : "/static/img/logos/learnrubyonline.png",
         "share_logo" : "/static/img/share-logos/learnrubyonline-share.png",
         "language_uppercase" : "Ruby",
-        "twitter" : "@learnruby",
         "favicon" : "favicon-ruby.ico",
-        "copyright" : "Copyright &copy; LearnRubyOnline.org.",
         "default_code" : """# Welcome to the Interactive Ruby Tutorial.
 # Start by choosing a chapter and
 # write your code in this window.
@@ -230,6 +232,8 @@ puts 'Hello, World!'
     },
     LEARNSHELL_DOMAIN : {
         "language" : "bash",
+        "codemirror_mode": "text/x-sh",
+        "prism_mode": "language-bash",
         "analytics" : "UA-22741967-7",
         "namespace" : "learnshell.org",
         "full_url" : "http://learnshell.org",
@@ -240,9 +244,7 @@ puts 'Hello, World!'
         "logo" : "/static/img/logos/learnshell.png",
         "share_logo" : "/static/img/share-logos/learnshell-share.png",
         "language_uppercase" : "Shell Programming",
-        "twitter" : "@learnshell",
         "favicon" : "favicon-shell.ico",
-        "copyright" : "Copyright &copy; LearnShell.org.",
         "default_code" : """#!/bin/bash
 # Welcome to the Interactive Shell Tutorial.
 # Start by choosing a chapter and
@@ -254,6 +256,8 @@ echo "Hello, World!";
 
     LEARNPERL_DOMAIN : {
         "language" : "perl",
+        "codemirror_mode": "text/x-perl",
+        "prism_mode": "language-perl",
         "analytics" : "UA-22741967-8",
          "namespace" : "learn-perl.org",
         "full_url" : "http://learn-perl.org",
@@ -264,9 +268,7 @@ echo "Hello, World!";
         "logo" : "/static/img/logos/learn-perl.png",
         "share_logo" : "/static/img/share-logos/learn-perl-share.png",
         "language_uppercase" : "Perl",
-        "twitter" : "@learnperl",
         "favicon" : "favicon-learn-perl.ico",
-        "copyright" : "Copyright &copy; Learn-Perl.org.",
         "default_code" : """# Welcome to the Interactive Perl Tutorial.
 # Start by choosing a chapter and write your code in this window.
 
@@ -275,6 +277,8 @@ print 'Hello, World!';
 
     LEARNPHP_DOMAIN : {
         "language" : "php",
+        "codemirror_mode": "application/x-httpd-php",
+        "prism_mode": "language-php",
         "analytics" : "UA-22741967-9",
         "namespace" : "learn-php.org",
         "full_url" : "http://learn-php.org",
@@ -285,9 +289,7 @@ print 'Hello, World!';
         "logo" : "/static/img/logos/learn-php.png",
         "share_logo" : "/static/img/share-logos/learn-php-share.png",
         "language_uppercase" : "PHP",
-        "twitter" : "@learnphp",
         "favicon" : "favicon-learn-php.ico",
-        "copyright" : "Copyright &copy; Learn-PHP.org.",
         "default_code" : """<?php
 // Welcome to the Interactive PHP Tutorial.
 // Start by choosing a chapter and
@@ -305,6 +307,8 @@ echo "Hello, World!";
 
     LEARNCS_DOMAIN : {
         "language" : "c#",
+        "codemirror_mode": "text/x-csharp",
+        "prism_mode": "language-csharp",
         "analytics" : "UA-22741967-10",
         "namespace" : "learncs.org",
         "full_url" : "http://learncs.org",
@@ -315,9 +319,7 @@ echo "Hello, World!";
         "logo" : "/static/img/logos/learncs.png",
         "share_logo" : "/static/img/share-logos/learncs-share.png",
         "language_uppercase" : "C#",
-        "twitter" : "@learncs",
         "favicon" : "favicon-learncs.ico",
-        "copyright" : "Copyright &copy; LearnCS.org.",
         "default_code" : """// Welcome to the Interactive C# Tutorial.
 // Start by choosing a chapter and write your code in this window.
 
@@ -348,6 +350,8 @@ public class Hello
 
     LEARNGO_DOMAIN : {
         "language" : "go",
+        "codemirror_mode": "text/x-go",
+        "prism_mode": "language-go",
         "analytics" : "UA-22741967-13",
         "namespace" : "learn-golang.org",
         "full_url" : "http://learn-golang.org",
@@ -358,9 +362,7 @@ public class Hello
         "logo" : "/static/img/logos/learn-golang.png",
         "share_logo" : "/static/img/share-logos/learn-golang-share.png",
         "language_uppercase" : "Go",
-        "twitter" : "@learngolang",
         "favicon" : "favicon-learngolang.ico",
-        "copyright" : "Copyright &copy; Learn-GoLang.org.",
         "default_code" : """// Welcome to the Interactive Go Tutorial.
 // Start by choosing a chapter, write your code in this window.
 package main
@@ -385,6 +387,66 @@ func main() {
 {code}
 }
 """,
+
+    },
+    LEARNSCALA_DOMAIN : {
+        "language" : "scala",
+        "codemirror_mode": "text/x-scala",
+        "prism_mode": "language-scala",
+        "analytics" : "UA-22741967-14",
+        "namespace" : "learnscala.org",
+        "full_url" : "http://learnscala.org",
+        "sender" : "LearnScala.org <admin@learnscala.org>",
+        "styled_domain" : "LearnScala.org",
+        "contact_email" : "admin@learnscala.org",
+        "support_email" : "support@learnscala.org",
+        "logo" : "/static/img/logos/learnscala.png",
+        "share_logo" : "/static/img/share-logos/learnscala-share.png",
+        "language_uppercase" : "Scala",
+        "favicon" : "favicon-learnscala.ico",
+        "default_code" : """// Welcome to the Interactive Scala Tutorial.
+// Start by choosing a chapter, write your code in this window.
+object Main {
+    def main(args: Array[String]) {
+        println("Hello, World!\\n");
+    }
+} 
+
+""",
+        "container_word": "object",
+        "container_indent": "    ",
+        "container": """object Test {
+    def main(args: Array[String]) {
+        println("Hello, World!\\n");
+    }
+} 
+
+""",
+    },
+    LEARNSOLIDITY_DOMAIN: {
+        "language" : "solidity",
+        "codemirror_mode": "text/x-solidity",
+        "prism_mode": "language-solidity",
+        "analytics" : "UA-22741967-15",
+        "namespace" : "learnsolidity.org",
+        "full_url" : "http://learnsolidity.org",
+        "sender" : "LearnSolidity.org <admin@learnsolidity.org>",
+        "styled_domain" : "LearnSolidity.org",
+        "contact_email" : "admin@learnsolidity.org",
+        "support_email" : "support@learnsolidity.org",
+        "logo" : "/static/img/logos/learnsolidity.png",
+        "share_logo" : "/static/img/share-logos/learnsolidity-share.png",
+        "language_uppercase" : "Solidity",
+        "favicon" : "favicon-learnsolidity.ico",
+        "default_code" : """// Welcome to the Interactive Solidity Tutorial.
+// Start by choosing a chapter, write your code in this window.
+
+""",
+        "container_word" : "",
+        "container_indent" : "",
+        "container" : """
+""",
+
 
     },
 }
