@@ -131,7 +131,12 @@ def untab(text):
 
 
 def init_tutorials():
+    contributing_tutorials = wikify(open(os.path.join(os.path.dirname(__file__), "tutorials", "Contributing Tutorials.md")).read(), "en")
+
     for domain in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials")):
+        if domain.endswith(".md"):
+            continue
+
         logging.warn("loading data for domain: %s", domain)
         tutorial_data[domain] = {}
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
@@ -190,10 +195,7 @@ def init_tutorials():
                     if not link in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
                             "page_title" : link.decode("utf8"),
-                            "text" : "<p>This page does not exist yet. </p>" + "<p>You can contribute this page by forking the repository at: " +
-                                     "<a href='https://github.com/ronreiter/interactive-tutorials'>" +
-                                     "https://github.com/ronreiter/interactive-tutorials" +
-                                     "</a>.</p>",
+                            "text": contributing_tutorials,
                             "code": ""
                         }
 

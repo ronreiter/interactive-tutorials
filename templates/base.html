@@ -82,29 +82,6 @@
                 </div>
             </li>
          #}
-        {#
-
-            <li class="nav-item mr-sm-2 dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More Languages
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" {% if domain_data.language == "python" %}class="active"{% endif %} href="https://www.learnpython.org">Python</a>
-                    <a class="dropdown-item" {% if domain_data.language == "java" %}class="active"{% endif %} href="https://www.learnjavaonline.org">Java</a>
-                    <a class="dropdown-item" {% if domain_data.language == "html" %}class="active"{% endif %} href="https://www.learn-html.org">HTML & CSS</a>
-                    <a class="dropdown-item" {% if domain_data.language == "go" %}class="active"{% endif %} href="https://www.learn-golang.org">Go</a>
-                    <a class="dropdown-item" {% if domain_data.language == "c" %}class="active"{% endif %} href="https://www.learn-c.org">C</a>
-                    <a class="dropdown-item" {% if domain_data.language == "cpp" %}class="active"{% endif %} href="https://www.learn-cpp.org">C++</a>
-                    <a class="dropdown-item" {% if domain_data.language == "javascript" %}class="active"{% endif %} href="https://www.learn-js.org">JavaScript</a>
-                    <a class="dropdown-item" {% if domain_data.language == "php" %}class="active"{% endif %} href="https://www.learn-php.org">PHP</a>
-                    <a class="dropdown-item" {% if domain_data.language == "bash" %}class="active"{% endif %} href="https://www.learnshell.org">Shell</a>
-                    <a class="dropdown-item" {% if domain_data.language == "c#" %}class="active"{% endif %} href="https://www.learncs.org">C#</a>
-                    <a class="dropdown-item" {% if domain_data.language == "perl" %}class="active"{% endif %} href="https://www.learn-perl.org">Perl</a>
-                    <a class="dropdown-item" {% if domain_data.language == "ruby" %}class="active"{% endif %} href="https://www.learnrubyonline.org">Ruby</a>
-                </div>
-            </li>
-        #}
-
 
         </ul>
 
@@ -146,6 +123,8 @@
             <li class="nav-item"><a class="nav-link {% if domain_data.language == "c#" %}active{% endif %}" href="https://www.learncs.org">C#</a></li>
             <li class="nav-item"><a class="nav-link {% if domain_data.language == "perl" %}active{% endif %}" href="https://www.learn-perl.org">Perl</a></li>
             <li class="nav-item"><a class="nav-link {% if domain_data.language == "ruby" %}active{% endif %}" href="https://www.learnrubyonline.org">Ruby</a></li>
+            <li class="nav-item"><a class="nav-link {% if domain_data.language == "scala" %}active{% endif %}" href="https://www.learnscala.org">Scala</a></li>
+{#            <li class="nav-item"><a class="nav-link {% if domain_data.language == "solidity" %}active{% endif %}" href="https://www.learnsolidity.org">Solidity</a></li>#}
         </ul>
 
     </div>
