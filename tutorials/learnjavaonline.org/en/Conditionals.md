@@ -109,7 +109,7 @@ Tutorial Code
             String d = c;
 
             boolean b1 = a == b;
-            boolean b2 = b.equals(b + "!");
+            boolean b2 = d.equals(b + "!");
             boolean b3 = !c.equals(a);
 
             if (b1 && b2 && b3) {
@@ -128,24 +128,13 @@ Solution
 
     public class Main {
         public static void main(String[] args) {
-            Main a = new Main() {
-                @Override
-                public boolean equals(Object obj) {
-                    return true;
-                }
-            };
-
-            Main b = a;
-
-            Main c = new Main() {
-                @Override
-                public boolean equals(Object obj) {
-                    return false;
-                }
-            };
+            String a = "Wow";
+            String b = a;
+            String c = b + "!";
+            String d = c;
 
             boolean b1 = a == b;
-            boolean b2 = b.equals(b + "!");
+            boolean b2 = d.equals(b + "!");
             boolean b3 = !c.equals(a);
 
             if (b1 && b2 && b3) {
