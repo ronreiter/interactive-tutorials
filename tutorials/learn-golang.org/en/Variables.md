@@ -64,7 +64,7 @@ You must print out to the console the following:
 
     John Doe
     24
-    154. 61
+    154.61
 
 
 Tutorial Code
@@ -75,10 +75,10 @@ Tutorial Code
     func main() {
         name := "Chris Mien"
         age := 29
-        weigth := 200.21
+        weight := 200.21
         fmt.Println(name)
         fmt.Println(age)
-        fmt.Println(weigth)
+        fmt.Println(weight)
     }
 
 
@@ -98,8 +98,8 @@ Solution
     func main() {
         name := "John Doe"
         age := 24
-        weigth := 154.61
+        weight := 154.61
         fmt.Println(name)
         fmt.Println(age)
-        fmt.Println(weigth)
+        fmt.Println(weight)
     }
