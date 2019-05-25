@@ -44,6 +44,13 @@ Selecting data from one or more tables is done using the SELECT statement.
 Selecting data from a table is by far the most important skill to learn, because it is what enables us to create insights from data according to the
 question we want to answer. For example - "how many students have an average higher than 80" is something we can answer using a SELECT statement.
 
+Here is the basic syntax of a SELECT statement:
+
+    SELECT * FROM helloworld WHERE phrase = "Hello, World!";
+
+This statement will fetch all columns (hence the `*`) from the table `helloworld`, and filter the results only to the rows which the phrase column
+is equal to `Hello, World!`.
+
 Exercise
 --------
 
