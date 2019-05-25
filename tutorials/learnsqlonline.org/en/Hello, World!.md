@@ -30,19 +30,19 @@ how to use the INSERT INTO statement in one of the next tutorials as well.
 Data is inserted into tables on a row by row basis. We can insert a row using the INSERT INTO statement, and then update that row if we want using the
 UPDATE statement. But again, we'll get into updating rows in length later on.
 
-### Selecting from a table
-
-Selecting data from one or more tables is done using the SELECT statement.
-
-Selecting data from a table is by far the most important skill to learn, because it is what enables us to create insights from data according to the
-question we want to answer. For example - "how many students have an average higher than 80" is something we can answer using a SELECT statement.
-
 Now let's use the INSERT INTO statment, add two rows to the table, and then count how many row's we've added:
 
     CREATE TABLE helloworld (phrase TEXT);
     INSERT INTO helloworld VALUES ("Hello, World!");
     INSERT INTO helloworld VALUES ("Goodbye, World!");
     SELECT COUNT(*) FROM helloworld;
+
+### Selecting from a table
+
+Selecting data from one or more tables is done using the SELECT statement.
+
+Selecting data from a table is by far the most important skill to learn, because it is what enables us to create insights from data according to the
+question we want to answer. For example - "how many students have an average higher than 80" is something we can answer using a SELECT statement.
 
 Exercise
 --------
