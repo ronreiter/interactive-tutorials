@@ -65,7 +65,7 @@ def run_code(code, language):
         constants.IDEONE_PASSWORD,
         api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
 
-    code = ideone_api.create_submission(code, language_name=language, std_input="1 2 3")["link"]
+    code = ideone_api.create_submission(code, language_name=language, std_input="")["link"]
     result = None
 
     while True:
@@ -265,7 +265,6 @@ def error404():
     ), 404)
 
 
-#app.add_url_rule('/favicon.ico', redirect_to=url_for('static/img/favicons', filename=get_domain_data()["favicon"]))
 @app.route("/favicon.ico")
 def favicon():
     return open(os.path.join(os.path.dirname(__file__), "static/img/favicons/" + get_domain_data()["favicon"]), "rb").read()
