@@ -18,6 +18,7 @@ LEARNHTML_DOMAIN = "learn-html.org"
 LEARNGO_DOMAIN = "learn-golang.org"
 LEARNSCALA_DOMAIN = "learnscala.org"
 LEARNSOLIDITY_DOMAIN = "learnsolidity.org"
+LEARNSQL_DOMAIN = "learnsqlonline.org"
 
 DOMAIN_DATA = {
     LEARNPYTHON_DOMAIN : {
@@ -449,4 +450,45 @@ object Main {
 
 
     },
+    LEARNSQL_DOMAIN: {
+        "language" : "sql",
+        "codemirror_mode": "text/x-sql",
+        "prism_mode": "language-sql",
+        "analytics" : "UA-22741967-16",
+        "namespace" : "learnsqlonline.org",
+        "full_url" : "http://www.learnsqlonline.org",
+        "sender" : "LearnSQLOnline.org <admin@learnsqlonline.org>",
+        "styled_domain" : "LearnSQLOnline.org",
+        "contact_email" : "admin@learnsqlonline.org",
+        "support_email" : "support@learnsqlonline.org",
+        "logo" : "/static/img/logos/learnsqlonline.org.png",
+        "share_logo" : "/static/img/share-logos/learnsqlonline-share.png",
+        "language_uppercase" : "SQL",
+        "favicon" : "favicon-learnsqlonline.org.png",
+        "default_code" : """-- Welcome to the Interactive SQL Tutorial.
+-- Start by choosing a chapter, write your code in this window.
+
+CREATE TABLE helloworld (phrase TEXT);
+INSERT INTO helloworld VALUES ("Hello, World!");
+INSERT INTO helloworld VALUES ("Goodbye, World!");
+
+SELECT * FROM helloworld WHERE phrase = "Hello, World!";
+""",
+        "container_word" : "",
+        "container_indent" : "",
+        "container" : """
+""",
+
+
+    },
 }
+#
+# for v in DOMAIN_DATA.values():
+#     v["full_url"] = "https://" + v["namespace"]
+#     v["contact_email"] = "admin@" + v["namespace"]
+#     v["support_email"] = "support@" + v["namespace"]
+#     v["logo"] = "/static/img/logos/" + v["namespace"] + ".png"
+#     v["share_logo"] = "/static/img/share-logos/" + v["namespace"] + ".png"
+#     v["favicon"] = "/static/img/favicon-logos/" + v["namespace"] + ".ico"
+#
+
