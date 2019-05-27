@@ -1,13 +1,13 @@
 Tutorial
 --------
 
-For Schleifen in C sind ziemlich unkompliziert. Sie bieten sie Möglichkeit Schleifen zu erstellen - ein Code Block, der mehrfach ausgeführt wird.
+For Schleifen in C sind ziemlich unkompliziert. Sie bieten die Möglichkeit Schleifen zu erstellen - ein Code Block, der mehrfach ausgeführt wird.
 For Schleifen benötigen eine Iterator Variable, meistens als `i` genannt.
 
 For Schleifen bieten die folgende Funktionalität:
 
 * Inititalisiere die Iterator Variable mit einem Initialwert
-* Prüfe, ob die Iteratorc Variable ihren Endwert erreicht hat
+* Prüfe, ob die Iterator Variable ihren Endwert erreicht hat
 * Erhöhe den Iterator
 
 Zum Beispiel, wenn wir über einen Code Block 10 mal iterieren wollen, schreiben wir:
@@ -35,7 +35,7 @@ For Schleifen können über Array Werte iterieren. Zum Beispiel, wenn wir alle W
 Übung
 -----
 
-Berechne die Fakultät (multiplikation aller Werte `array[0]` bis einschließlich `array[9]`), einer Variable `array`.
+Berechne die Fakultät (Multiplikation aller Werte `array[0]` bis einschließlich `array[9]`), einer Variable `array`.
 
 Tutorial Code
 -------------
@@ -47,7 +47,7 @@ Tutorial Code
       int factorial = 1;
       int i;
 
-      /* berechne die Fakultät mit einer For Schleife hier */
+      /* Berechne hier die Fakultät mit einer For Schleife */
 
       printf("10! ist %d.\n", factorial);
     }
