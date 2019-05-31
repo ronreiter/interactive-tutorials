@@ -9,43 +9,44 @@ Tambien las funciones son una forma clave para definir interfaces para que los p
 Python hace uso de bloques de codigo para desarrollarse.
 
 Un bloque es un area de codigo que escrita en el siguiente formato:
-<pre><code>
-block_head: <br>
-    the_1st_block_line <br>
-    the_2nd_block_line <br>
-    ... <br>
-</code></pre>
+    block_head:
+    the_1st_block_line
+    the_2nd_block_line
+    ...
+
 Donde un bloque de linea es mas codigo Python (aun otro bloque),
 y la cabeza del bloque es de la sigueinte manera:
-<code>block_keyword block_name(argument1,argument2, ...)</code>
-Las palabras del codigo son "if", "for", y "while". 
+
+    block_keyword block_name(argument1,argument2, ...)
+
+Las palabras del codigo son "if", "for", y "while".
 
 Funciones en python son definidas usando la palabra reservada de "def", seguida del nombre de la funcion como nombre del bloque.<br>
 Por ejemplo:
-<pre><code>def my_function():
+    def my_function():
     print "Hello From My Function!"
-</code></pre>
+
 
 Las funciones tambien pueden recibir argumentos (pasar argumentos del que llama la funcion)
 Por ejemplo:
-<pre><code>def my_function_with_args(username, greeting):
-    print "Hello, %s , From My Function!, I wish you %s"%(username, greeting) 
-</code></pre>
+    def my_function_with_args(username, greeting):
+    print "Hello, %s , From My Function!, I wish you %s"%(username, greeting)
+
 
 La funcion puede regresarse un valor al que llama, usando la palabra reservada de - 'return' .<br>
 Por ejemplo:
-<pre><code>def sum_two_numbers(a, b):
-    return a + b 
-</code></pre>
+    def sum_two_numbers(a, b):
+    return a + b
+
 
 ###Como llamas a funciones dentro de Python ?
 Simplemente escribe el nombre de la funcion seguida de un (), poniendo cualquier argumento requrido dentro de los brackets..<br>
 Por ejemplo, vamos a llamar a la funcion siguiente (en el ejemplo previo):
-<pre><code>
-my_function() #print a simple greeting 
-my_function_with_args("Or Weis", "a great year!") #prints - "Hello, Or Weis , From My Function!, I wish you a great year!"
-x = sum_two_numbers(1,2)  #after this line x will hold the value 3 !
-</code></pre>
+
+    my_function() #print a simple greeting
+    my_function_with_args("Or Weis", "a great year!") #prints - "Hello, Or Weis , From My Function!, I wish you a great year!"
+    x = sum_two_numbers(1,2)  #after this line x will hold the value 3 !
+
 
 
 ### Ejercicio
