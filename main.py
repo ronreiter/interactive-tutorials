@@ -137,9 +137,13 @@ def init_tutorials():
         if domain.endswith(".md"):
             continue
 
-        logging.warn("loading data for domain: %s", domain)
+        logging.info("loading data for domain: %s", domain)
         tutorial_data[domain] = {}
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
+            continue
+
+        if domain not in constants.DOMAIN_DATA:
+            logging.warn("skipping domain %s beacause no domain data exists" % domain)
             continue
 
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
@@ -267,7 +271,7 @@ def error404():
 
 @app.route("/favicon.ico")
 def favicon():
-    return open(os.path.join(os.path.dirname(__file__), "static/img/favicons/" + get_domain_data()["favicon"]), "rb").read()
+    return open(os.path.join(os.path.dirname(__file__), get_domain_data()["favicon"][1:]), "rb").read()
 
 @app.route("/", methods=["GET", "POST"])
 @app.route("/<language>/", methods=["GET", "POST"])
@@ -318,12 +322,6 @@ def signup():
     session["user_id"] = str(id)
 
 
-@app.route("/recruit-coders-jobs")
-def jobs():
-
-    return make_response(render_template("recruit-coders-jobs.html", domain_data=get_domain_data()))
-
-
 @app.route("/<language>/progress")
 def progress(language):
     return make_response(render_template(
@@ -355,6 +353,7 @@ def index(title, language="en"):
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
             tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
+            all_data=constants.DOMAIN_DATA,
             tutorial_data=current_tutorial_data,
             tutorial_data_json=json.dumps(current_tutorial_data),
             domain_data_json=json.dumps(domain_data),

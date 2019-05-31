@@ -186,7 +186,15 @@
                                 Run
                             </button>
                             <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">Reset</button>
-                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution
+                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution</button>
+
+                            <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">
+                                <span class="maximized">
+                                    <i class="fas fa-angle-double-down"></i>
+                                </span>
+                                <span class="minimized">
+                                    <i class="fas fa-angle-double-up"></i>
+                                </span>
                             </button>
 
                         </div>
@@ -210,9 +218,7 @@
                             <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
                                 Expected Output
                             </button>
-                            <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">
-                                Toggle Dock
-                            </button>
+
                         </div>
 
                     </div>

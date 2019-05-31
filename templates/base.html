@@ -12,7 +12,7 @@
     <meta property="og:url" content="{% block ogurl %}{{ domain_data.full_url }}{% endblock %}" />
     <meta property="og:image" content="{{ domain_data.full_url }}{{ domain_data.share_logo }}" />
 
-    <link rel="favicon" href="/static/img/favicons/{{ domain_data.favicon }}" type="image/x-icon">
+    <link rel="favicon" href="{{ domain_data.favicon }}" type="image/x-icon">
 
     <link rel="stylesheet" href="/static/css/codemirror.css">
     <link rel="stylesheet" href="/static/css/theme/xq-light.css">
@@ -20,16 +20,6 @@
     <link rel="stylesheet" type="text/css" href="/static/css/prism-light.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/learnpython.css"/>
 {#    <script src="/static/js/jquery.min.js"></script>#}
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-    <script src="/static/js/prism.js"></script>
-    <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 </head>
 <body>
@@ -57,6 +47,17 @@
                 <a class="nav-link" href="/about">About</a>
             </li>
 
+            <li class="nav-item mr-sm-2 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    {% for domain, data in all_data.items() %}
+                        <a class="dropdown-item{% if domain_data.namespace == domain %} disabled{% endif %}" href="{{ data.full_url }}">{{ data.language_uppercase }}</a>
+                    {% endfor %}
+
+                </div>
 
         {#
             <li class="nav-item mr-sm-2 dropdown">
@@ -114,21 +115,9 @@
 
     <div class="container">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "python" %}active{% endif %}" href="https://www.learnpython.org">Python</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "java" %}active{% endif %}" href="https://www.learnjavaonline.org">Java</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "html" %}active{% endif %}" href="https://www.learn-html.org">HTML & CSS</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "go" %}active{% endif %}" href="https://www.learn-golang.org">Go</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "c" %}active{% endif %}" href="https://www.learn-c.org">C</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "cpp" %}active{% endif %}" href="https://www.learn-cpp.org">C++</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "javascript" %}active{% endif %} "href="https://www.learn-js.org">JavaScript</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "php" %}active{% endif %}" href="https://www.learn-php.org">PHP</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "bash" %}active{% endif %}" href="https://www.learnshell.org">Shell</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "c#" %}active{% endif %}" href="https://www.learncs.org">C#</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "perl" %}active{% endif %}" href="https://www.learn-perl.org">Perl</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "ruby" %}active{% endif %}" href="https://www.learnrubyonline.org">Ruby</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "scala" %}active{% endif %}" href="https://www.learnscala.org">Scala</a></li>
-            <li class="nav-item"><a class="nav-link {% if domain_data.language == "sql" %}active{% endif %}" href="https://www.learnsqlonline.org">SQL</a></li>
-{#            <li class="nav-item"><a class="nav-link {% if domain_data.language == "solidity" %}active{% endif %}" href="https://www.learnsolidity.org">Solidity</a></li>#}
+            {% for domain, data in all_data.items() %}
+                <li class="nav-item"><a class="nav-link{% if domain_data.namespace == domain %} active{% endif %}" href="{{ data.full_url }}">{{ data.language_uppercase }}</a></li>
+            {% endfor %}
         </ul>
 
     </div>
@@ -155,6 +144,20 @@
 
 
 {% block content %}{% endblock %}
+
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="/static/js/prism.js"></script>
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://kit.fontawesome.com/e7efaf7ef6.js"></script>
+
 
 <script src="/static/js/codemirror/codemirror.js"></script>
 <script src="/static/js/codemirror/addon/edit/matchbrackets.js"></script>
