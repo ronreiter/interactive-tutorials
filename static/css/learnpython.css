@@ -1,9 +1,6 @@
 .CodeMirror {
 	font-family: monospace;
 	height: 200px;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -30,9 +27,6 @@ footer#dock.maximized .footer-toggle {
     display: block;
 }
 
-footer#dock:hover .footer-toggle {
-    display: block;
-}
 
 
 h1.logo {
@@ -161,17 +155,9 @@ textarea {
 
 
 @media screen and (max-width: 768px) and (max-height: 800px) {
-    /*.code-window, .output-window {*/
-        /*display: none;*/
-    /*}*/
-
     #main {
         margin-bottom: 30px;
     }
-
-    /*.execute-code {*/
-        /*visibility: hidden;*/
-    /*}*/
 }
 
 /* DataCamp */
@@ -209,3 +195,21 @@ textarea {
     line-height: 20px;
     padding-right: 5px;
 }
+
+
+#dock .maximized {
+	display: none;
+}
+
+#dock .minimized {
+	display: block;
+}
+
+#dock.maximized .maximized {
+	display: block;
+}
+
+#dock.maximized .minimized {
+	display: none;
+}
+

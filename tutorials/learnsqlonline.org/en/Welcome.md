@@ -28,7 +28,7 @@ learnsqlonline.org is still under construction - If you wish to contribute tutor
 - [[Joining tables]]
 - [[Group by]]
 - [[Aggregate functions]]
-- [[String Operations]]
+- [[String operations]]
 - [[Distinct queries]]
 
 ### Advanced tutorials

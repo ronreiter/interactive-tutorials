@@ -32,4 +32,4 @@ if __name__ == '__main__':
         'Ron Reiter',
         'LearnPython.org Interactive Python Tutorial',
         datetime.datetime.now(),
-        'static/img/logos/learnpython.png')
+        'static/img/logos/learnpython.org.png')

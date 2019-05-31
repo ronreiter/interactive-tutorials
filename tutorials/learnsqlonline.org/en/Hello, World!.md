@@ -17,6 +17,7 @@ The `phrase` column holds data of type TEXT, which basically means you can store
 
 Here is the statement:
 
+    .exec
     CREATE TABLE helloworld (phrase TEXT);
     .tables
 
@@ -32,6 +33,7 @@ UPDATE statement. But again, we'll get into updating rows in length later on.
 
 Now let's use the INSERT INTO statment, add two rows to the table, and then count how many row's we've added:
 
+    .exec
     CREATE TABLE helloworld (phrase TEXT);
     INSERT INTO helloworld VALUES ("Hello, World!");
     INSERT INTO helloworld VALUES ("Goodbye, World!");
