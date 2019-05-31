@@ -106,6 +106,7 @@ function compareHTML(a, b) {
 }
 
 function execute() {
+	maximizeDock();
 
 	if (window.domainData.language == "html") {
 		$("#html-output").show();
@@ -271,10 +272,12 @@ function load() {
 }
 
 function showExpected() {
+	maximizeDock();
 	output.setValue(tutorialData.output);
 }
 
 function showSolution() {
+	maximizeDock();
     var solutionText = tutorialData.solution;
     if (solutionText) {
     	editor.setValue(solutionText);
@@ -285,6 +288,7 @@ function showSolution() {
 }
 
 function reset() {
+	maximizeDock();
     $("#run-button").prop("disabled", false);
 	editor.setValue(originalCode);
 }
