@@ -63,7 +63,7 @@
             </span>
 
             <button id="start-exercise" class="btn btn-success" onclick="maximizeDock(); reset()">
-                <div class="icon-play icon-white"></div> Start Exercise</button>
+                <i class="fas fa-play"></i> Start Exercise</button>
 
         </div>
 
@@ -130,12 +130,15 @@
     <div class="row mt-2 mb-2">
         <div class="col-xs-12 col-lg-10">
             {% if previous_chapter %}
-                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i
-                        class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
+                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
             {% endif %}
             {% if next_chapter %}
-                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial
-                    <i class="icon-chevron-right icon-white"></i></a>
+                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+
             {% endif %}
         </div>
     </div>
@@ -181,11 +184,10 @@
 
                         <div class="col-9 text-right">
                             <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
-                                <div
-                                        class="icon-play icon-white" style="padding-right: 10px"></div>
-                                Run
+                                <i class="fas fa-play"></i> Run
                             </button>
-                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">Reset</button>
+                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">
+                                <i class="fas fa-sync-alt"></i> Reset</button>
                             <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution</button>
 
                             <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">

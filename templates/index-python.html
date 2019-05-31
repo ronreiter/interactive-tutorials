@@ -57,10 +57,13 @@
             <div>
                 <p>This site is generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
                 {% if previous_chapter %}
-                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
+                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
                 {% endif %}
                 {% if next_chapter %}
-                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial  <i class="icon-chevron-right icon-white"></i></a>
+                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
                 {% endif %}
             </div>
 
