@@ -264,6 +264,7 @@ def error404():
     return make_response(render_template(
         "error404.html",
         domain_data=domain_data,
+        all_data=constants.DOMAIN_DATA,
         language_code="en",
         languages=get_languages(),
     ), 404)
@@ -285,6 +286,7 @@ def static_file():
     return make_response(render_template(
         request.path.strip("/") + ".html",
         domain_data=get_domain_data(),
+        all_data=constants.DOMAIN_DATA,
         domain_data_json=json.dumps(get_domain_data()),
         language_code="en",
     ))
@@ -327,6 +329,7 @@ def progress(language):
     return make_response(render_template(
         "progress.html",
         domain_data=get_domain_data(),
+        all_data=constants.DOMAIN_DATA,
     ))
 
 @app.route("/<title>", methods=["GET", "POST"])
