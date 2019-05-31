@@ -250,7 +250,7 @@ function load() {
 
     originalCode = editor.getValue();
 
-    $("#inner-text pre").after(
+    $("#inner-text pre.exec").after(
         $("<button>").addClass("btn btn-sm btn-primary execute-code").text("Execute Code").click(function() {
         	maximizeDock();
             var text = $(this).prev().text();
