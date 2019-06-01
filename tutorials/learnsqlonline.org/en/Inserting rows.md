@@ -13,6 +13,9 @@ the set of columns defined by the first clause, and in the same order. Any other
 the default value. If a `NOT NULL` column was defined in the table and the `INSERT INTO` statement missed the column, the `INSERT` command will fail
 to run.
 
+On an INSERT, if the INTEGER PRIMARY KEY column is not explicitly given a value, then it will be filled automatically with an unused integer, usually the
+next number currently in use in the column. This is true regardless of whether or not the `AUTOINCREMENT` keyword is used.
+
 If the columns clause that specifies the list of columns is omitted, then the assumption is that all columns will be provided in the `INSERT` statement:
 
     INSERT INTO table_name VALUES (value1, value2, value3, value4...);

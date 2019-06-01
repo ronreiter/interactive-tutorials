@@ -18,19 +18,19 @@ which is why it doesn't have many different data types.
 To create a table, use the following syntax:
 
     CREATE TABLE database_name.table_name (
-        column1 <data type> PRIMARY KEY(column1, column2...)
+        column1 <data type> PRIMARY KEY,
         column2 <data type>,
         column3 <data type>
     );
 
 A primary key of a table is a special type of unique index which defines the primary key of the table. There can only one row for each primary key, and
 it is very efficient to select on the primary because it is also an index. Unlike a unique index, a primary key cannot be NULL. Primary keys can also
-be used for things like sharding or other special features, and it is always important to define one, if possible.
+be used for things like foreign keys, constraints, sharing and more, and it is always important to define one, if possible.
 
 Here is an example:
 
     CREATE TABLE students (
-        id INTEGER PRIMARY KEY(id),
+        id INTEGER PRIMARY KEY,
         full_name TEXT,
         age INTEGER
     )
