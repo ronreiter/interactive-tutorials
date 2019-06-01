@@ -306,6 +306,7 @@ function toggleMinimize() {
 function maximizeDock() {
 	var dock = document.querySelector("footer#dock");
 	var toggleButton = document.querySelector("#toggle-dock-button");
+	// $("#run-button").prop("disabled", false);
 
 	dock.classList.add("maximized");
 	toggleButton.classList.remove("btn-primary");
@@ -317,6 +318,7 @@ function maximizeDock() {
 function minimizeDock() {
 	var dock = document.querySelector("footer#dock");
 	var toggleButton = document.querySelector("#toggle-dock-button");
+	// $("#run-button").prop("disabled", true);
 
 	dock.classList.remove("maximized");
 	toggleButton.classList.remove("btn-success");
