@@ -23,6 +23,10 @@ To create a table, use the following syntax:
         column3 <data type>
     );
 
+A primary key of a table is a special type of unique index which defines the primary key of the table. There can only one row for each primary key, and
+it is very efficient to select on the primary because it is also an index. Unlike a unique index, a primary key cannot be NULL. Primary keys can also
+be used for things like sharding or other special features, and it is always important to define one, if possible.
+
 Here is an example:
 
     CREATE TABLE students (
@@ -31,22 +35,33 @@ Here is an example:
         age INTEGER
     )
 
+The `id` of the student is the primary key, since we cannot have more than two people with the same ID number in our table. full_name needs to be a textual
+record whereas the age can be a whole number.
+
 Exercise
 --------
 
-Create a table named `students` with a first_name and a last_name.
+Create a table named `students` with a first_name, a last_name (both text columns) and an age (which should be defined as an integer).
 
 Tutorial Code
 -------------
+-- enter code here
+
+INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);
+SELECT * FROM students;
 
 Expected Output
 ---------------
-CREATE TABLE students (
-    first_name TEXT,
-    last_name TEXT
-)
-.tables
+John|Doe|23
 
 Solution
 --------
-students
+-- enter code here
+CREATE TABLE students (
+    first_name TEXT,
+    last_name TEXT,
+    age INTEGER
+);
+
+INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);
+SELECT * FROM students;
