@@ -45,7 +45,8 @@ Just as in strings, Python supports forming new lists with a repeating sequence 
 
 ### Ejercicios
 
-The target of this exercise is to create two lists called x_list and y_list, which contain 10 instances of the variables x and y, respectively. You are also required to create a list called "big_list", which contains the variables "x" and "y", 10 times each, by concatenating the two lists you have created.
+El objetivo de este ejercicio es crear dos listas llamadas `x_list` y `y_list`, las cuales contendrán 10 instancias de las variables `x` e `y`,
+respectivamente. También se requiere crear una lista llamada "big_list", la cual contendrá las variables `x` e `y`, 10 veces cada una, concatenando las dos listas que has creado.
 
 Tutorial Code
 -------------
