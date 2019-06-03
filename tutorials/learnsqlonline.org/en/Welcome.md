@@ -27,21 +27,21 @@ learnsqlonline.org is still under construction - If you wish to contribute tutor
 - [[Deleting rows]]
 - [[Joining tables]]
 - [[Group by]]
-- [[Aggregate functions]]
-- [[String operations]]
-- [[Distinct queries]]
+- Aggregate functions
+- The HAVING statement
+- String operations
+- Distinct queries
 
 ### Advanced tutorials
-- [[Inner and outer joins]]
-- [[The HAVING statement]]
-- [[The UNION statement]]
-- [[The CASE statement]]
-- [[Combining INSERT INTO and SELECT]]
-- [[Subqueries]]
-- [[Keys]]
-- [[Altering tables]]
-- [[Views]]
-- [[Window functions]]
+- Inner and outer joins
+- The UNION statement
+- The CASE statement
+- Combining INSERT INTO and SELECT
+- Subqueries
+- Indexing
+- Altering tables
+- Views
+- Window functions
 
 ### Contributing Tutorials
 
