@@ -38,7 +38,7 @@ A logical example for this can be given using an example. Let's say we have the 
     CREATE TABLE grades (name TEXT, class INTEGER, grade INTEGER);
     
     INSERT INTO grades (name, class, grade) VALUES
-        ("John", 1, 97), ("Eric", 1, 88), ("Jessica", 1, 98), ("Mike", 82), ("Jeff", 1, NULL),
+        ("John", 1, 97), ("Eric", 1, 88), ("Jessica", 1, 98), ("Mike", 1, 82), ("Jeff", 1, NULL),
         ("Ben", 2, 93), ("Andrew", 2, 82), ("Jason", 2, 87), ("Carol", 2, 99), ("Fred", 2, 79);
  
 Once we group the results by the class number, we create two types of fields in the grouped by result:
