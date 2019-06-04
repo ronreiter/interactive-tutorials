@@ -28,7 +28,7 @@ learnsqlonline.org is still under construction - If you wish to contribute tutor
 - [[Joining tables]]
 - [[Group by]]
 - [[Aggregate functions]]
-- The HAVING statement
+- [[The HAVING statement]]
 - String operations
 - Distinct queries
 
