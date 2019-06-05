@@ -188,7 +188,6 @@
 <script src="/static/js/datacamp.js"></script>
 {% endif %}
 
-{% if domain_data.language == "javascript" %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -211,21 +210,7 @@
 
   gtag('config', 'UA-22741967-17');
 </script>
-#}
-{% else %}
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{ domain_data.analytics }}']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 <script>
     $(function() {
         $("#sign-in").click(function() {
@@ -252,19 +237,14 @@
 
         });
     });
-
-
 </script>
 
-{#
 <script>
 (function(w,i,d,g,e,t,s) {w[d]=w[d]||[];t=i.createElement(g);
 	t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t,s);
 }(window, document, '_gscq', 'script', '//www.hellothere.io/widget/cYqedgvGuFe2EvXs.js'));
 </script>
 #}
-
-{% endif %}
 
 {% block head %}{% endblock %}
 
