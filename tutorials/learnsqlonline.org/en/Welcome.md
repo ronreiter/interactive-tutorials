@@ -29,10 +29,11 @@ learnsqlonline.org is still under construction - If you wish to contribute tutor
 - [[Group by]]
 - [[Aggregate functions]]
 - [[The HAVING statement]]
-- String operations
-- Distinct queries
+- [[Distinct queries]]
+- [[Order by]]
 
 ### Advanced tutorials
+- String operations
 - Inner and outer joins
 - The UNION statement
 - The CASE statement
