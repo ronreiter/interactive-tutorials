@@ -43,6 +43,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Code Introspection]]
 - [[Closures]]
 - [[Decorators]]
+- [[Map, Filter, Reduce]]
 
 ### Other Python Tutorials
 
