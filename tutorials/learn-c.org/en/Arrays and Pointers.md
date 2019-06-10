@@ -54,8 +54,6 @@ If you look carefully at the previous code, you will notice that we also used an
 
 This is because the name of an array itself is a (constant) pointer to the first element of the array. In other words, the notations `vowels`, `&vowels[0]`, and `vowels + 0` all point to the same location.
 
-You may go through [Pointers and Arrays](https://www.le.ac.uk/users/rjm1/cotter/page_59.htm) for a further detailed discussion on this topic.
-
 
 Dynamic Memory Allocation for Arrays
 ------------------------------------
@@ -81,7 +79,7 @@ By now we know that we can traverse an array using pointers. Moreover, we also k
 
     free(pvowels);
 
-In the above code, we allocated five contiguous bytes of memory to store five characters. Subsequently, we used array notations to traverse the blocks of memory as if `pvowels` is an array. However, remember that `pvowels` actually is a pointer, and as noted in [Pointers and Arrays](https://www.le.ac.uk/users/rjm1/cotter/page_59.htm), pointers and arrays, in general, are not the same thing.
+In the above code, we allocated five contiguous bytes of memory to store five characters. Subsequently, we used array notations to traverse the blocks of memory as if `pvowels` is an array. However, remember that `pvowels` actually is a pointer. Pointers and arrays, in general, are not the same thing.
 
 So when is this useful? Remember that while declaring an array, the number of elements that it would contain must be known beforehand. Therefore, in some scenarios it might happen that the space allocated for an array is either too less than the desired space or too much more. However, by using dynamic memory allocation, one can allocate just as much memory as required by a program. Moreover, unused memory can be freed as soon as it is no longer required by invoking the `free()` function. On the down side, with dynamic memory allocation, one must responsibly call `free()` wherever relevant. Otherwise, memory leaks would occur.
 
