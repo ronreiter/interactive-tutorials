@@ -34,18 +34,17 @@ Python uses indentation to define code blocks, instead of brackets. The standard
 
 Here is an example for using Python's "if" statement using code blocks:
 
-    if <statement is true>:
-        <do something>
-        ....
-        ....
-    elif <another statement is true>: # else if
-        <do something else>
-        ....
-        ....
+    statement = False
+    another_statement = True
+    if statement is true:
+        # do something
+        pass
+    elif another_statement is true: # else if
+        # do something else
+        pass
     else:
-        <do another thing>
-        ....
-        ....
+        # do another thing
+        pass
 
 For example:
 
