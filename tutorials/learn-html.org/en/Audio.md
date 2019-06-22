@@ -21,6 +21,8 @@ Tutorial Code
         <head>
         </head>
         <body>
+        <audio>
+        </audio>
         </body>
     </html>
     
