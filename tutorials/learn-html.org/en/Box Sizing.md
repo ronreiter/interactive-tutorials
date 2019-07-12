@@ -1,4 +1,4 @@
-Box-Sizing Property
+Tutorial
 --------
 Without any alterations, the size of a box is calcualted like this:
 width + padding + border = actual width of an element
