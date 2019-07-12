@@ -48,7 +48,7 @@ The `draw` module may look something like this:
     def clear_screen(screen):
         ...
 
-In this example, the `game` module imports the `load` module, which enables it to use functions implemented
+In this example, the `game` module imports the `draw` module, which enables it to use functions implemented
 in that module. The `main` function would use the local function `play_game` to run the game, and then 
 draw the result of the game using a function implemented in the `draw` module called `draw_game`. To use
 the function `draw_game` from the `draw` module, we would need to specify in which module the function is
