@@ -9,7 +9,7 @@ A regular expression is a string of characters that defines a text pattern or pa
 1. Splitting a formatted string (e.g. a date like `01/06/2014`) into components (e.g. into day, month and year).
 1. Validating fields from a submitted HTML form by verifying if the data conforms to a particular format.
 
-### MMatching a string pattern
+### Matching a string pattern
 
 Matching a string pattern is done by the `m//` operator and the `=~` binding operator. The expression `$string =~ m/$regexp/` returns `true` if the scalar `$string` matches the pattern defined by the value of the scalar `$regexp`.
 
