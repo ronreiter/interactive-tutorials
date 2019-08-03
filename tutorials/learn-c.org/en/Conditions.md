@@ -41,7 +41,7 @@ We can use the `else` keyword to exectue code when our expression evaluates to `
     if (foo < bar) {
         printf("foo is smaller than bar.");
     } else {
-        printf("foo is greater than bar.");
+        printf("foo is NOT smaller than bar.");
     }
 
 Sometimes we will have more than two outcomes to choose from. In these cases, we can "chain" multiple `if` `else` statements together.
