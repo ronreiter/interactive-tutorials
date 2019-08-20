@@ -95,7 +95,46 @@
             <div id="google-ad-right">
                 <iframe src="https://learnpython-ads.datacamp.com/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
 
-                <a href="https://click.linksynergy.com/fs-bin/click?id=2mhs2G02AJA&offerid=467035.369&subid=0&type=4"><IMG border="0"   alt="Start your future with a Data Science Certificate." src="https://ad.linksynergy.com/fs-bin/show?id=2mhs2G02AJA&bids=467035.369&subid=0&type=4&gridnum=9"></a>
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.target.parentElement.dataset.variant
+                        });
+                    }
+                    window.addEventListener('DOMContentLoaded', function() {
+                        var banners = document.querySelectorAll('.ab-test > a');
+                        var bannerIndex = Math.floor(Math.random() * banners.length);
+                        banners[bannerIndex].style.display = "block";
+                        for (var i = 0; i < banners.length; i++) {
+                            banners[i].addEventListener('click', handleOutboundLinkClicks);
+                        }
+                    });
+                </script>
+                <div class="ab-test" style="margin-bottom: 30px">
+                    <a href="https://www.rookout.com/production-debugging/?utm_source=learnpythonorg&utm_campaign=woman-logging-learnpython&utm_content=rookout-160-600-1" target="_blank" data-variant="rookout-160-600-1">
+                        <img src="/static/img/banners/rookout/rookout-160-600-1.png">
+                    </a>
+                    <a href="https://www.rookout.com/production-debugging/?utm_source=learnpythonorg&utm_campaign=woman-logging-learnpython&utm_content=rookout-160-600-2" target="_blank" data-variant="rookout-160-600-2">
+                        <img src="/static/img/banners/rookout/rookout-160-600-2.png">
+                    </a>
+                    <a href="https://www.rookout.com/production-debugging/?utm_source=learnpythonorg&utm_campaign=woman-logging-learnpython&utm_content=rookout-160-600-3" target="_blank" data-variant="rookout-160-600-3">
+                        <img src="/static/img/banners/rookout/rookout-160-600-3.png">
+                    </a>
+                    <a href="https://www.rookout.com/production-debugging/?utm_source=learnpythonorg&utm_campaign=woman-logging-learnpython&utm_content=rookout-160-600-4" target="_blank" data-variant="rookout-160-600-4">
+                        <img src="/static/img/banners/rookout/rookout-160-600-4.png">
+                    </a>
+                    <a href="https://www.rookout.com/production-debugging/?utm_source=learnpythonorg&utm_campaign=woman-logging-learnpython&utm_content=rookout-160-600-5" target="_blank" data-variant="rookout-160-600-5">
+                        <img src="/static/img/banners/rookout/rookout-160-600-5.png">
+                    </a>
+                </div>
 
                 <h4>Sponsors</h4>
                 <div style="margin-top: 10px">
