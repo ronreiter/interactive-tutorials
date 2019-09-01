@@ -21,6 +21,7 @@ There is no need to download anything - just click on the chapter you wish to be
 - [[While loops]]
 - [[Functions]]
 - [[Objects]]
+- [[Exceptions]]
 
 ### Contributing Tutorials
 
