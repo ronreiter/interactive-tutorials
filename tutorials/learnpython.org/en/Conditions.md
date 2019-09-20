@@ -36,10 +36,10 @@ Here is an example for using Python's "if" statement using code blocks:
 
     statement = False
     another_statement = True
-    if statement is true:
+    if statement is True:
         # do something
         pass
-    elif another_statement is true: # else if
+    elif another_statement is True: # else if
         # do something else
         pass
     else:
