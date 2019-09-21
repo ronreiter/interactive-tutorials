@@ -8,7 +8,7 @@ import time
 import functools
 import logging
 
-from flask import Flask, render_template, request, make_response, session
+from flask import Flask, render_template, request, make_response, session, Response
 import sys
 
 from ideone import Ideone
@@ -273,6 +273,11 @@ def error404():
 @app.route("/favicon.ico")
 def favicon():
     return open(os.path.join(os.path.dirname(__file__), get_domain_data()["favicon"][1:]), "rb").read()
+
+@app.route("/ads.txt")
+def ads():
+    return Response(render_template("ads.txt"), mimetype='text/plain')
+
 
 @app.route("/", methods=["GET", "POST"])
 @app.route("/<language>/", methods=["GET", "POST"])
