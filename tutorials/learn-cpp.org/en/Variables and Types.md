@@ -22,7 +22,7 @@ The above types can be modified using the following type modifiers:
 
 #### User defined
 * Structures - `struct` will be explained later, in the Structures section.
-* Classes - `class` will be covered later, in the Classes section 
+* Classes - `class` will be covered later, in the Classes section
 
 C++ allows an array of characters to define strings. It also provides an extensive `string` library for manipulating strings and will be explained in the Strings section.
 
@@ -37,7 +37,7 @@ Typedefs allow for creating new names (think of them as aliases) for existing ty
 To create an enumeration requires the use of the keyword enum. The general form of an enumeration type is:
 
     enum enum-name { list of names } var-list;
-Above, the enum-name is the enumeration's type name. The list of names is comma separated. 
+Above, the enum-name is the enumeration's type name. The list of names is comma separated.
 
 For example, the following code defines an enumeration of colors called colors and the variable `a_colour` of type color. Finally, `a_colour` is assigned the value "green".
 
@@ -59,7 +59,7 @@ The variable `foo` can be used, but since we did not initialize it, we don't kno
 Now, we can do some math. Assuming `a`, `b`, `c`, `d`, and `e` are variables, we can simply use plus, minus and multiplication operators
 in the following notation, and assign a new value to `a`:
 
-    int a = 0,b = 1,c = 2,d = 3, e = 4;
+    int a = 0, b = 1, c = 2, d = 3, e = 4;
     a = b - c + d * e;
     cout << a << endl; // will print 1-2+3*4 = 11
 

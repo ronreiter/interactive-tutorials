@@ -22,7 +22,7 @@ C benutzt Arrays von Zeichen um Strings zu definieren. Das wird später in der S
 
 ### Variablen definieren
 
-Für Zahlen werden wir meistens den Typ `int` benutzen. Es ist eine Ganzzahl, die die Größe eines "word", einer Standardspeichergröße der Maschine, auf der 
+Für Zahlen werden wir meistens den Typ `int` benutzen. Es ist eine Ganzzahl, die die Größe eines "word", einer Standardspeichergröße der Maschine, auf der
 Das Programm kompiliert wurde. Auf den meisten Computern heutzutage ist dies eine 32Bit Zahl, also ein Zahl zwischen -2,147,483,648 und 2,147,483,647 (dasselbe wie `long`).
 
 Um die Variablen `foo` und `bar` zu definieren, benutzen wir die folgende Syntax:
@@ -35,7 +35,7 @@ Die Variable `foo` can benutzt werden, aber da wir sie nicht initialisiert haben
 Jetzt können wir Berechnungen durchführen. Wenn wir annehmen, dass `a`, `b`, `c`, `d` und `e` Variablen sind, können wir einfach Additions-, Subtraktions- und Multiplikationsoperatoren
 verwenden, um `a` einen neuen Wert zuzuweisen:
 
-    int a = 0,b = 1,c = 2,d = 3, e = 4;
+    int a = 0, b = 1, c = 2, d = 3, e = 4;
     a = b - c + d * e;
     printf("%d", a); /* gibt 1-2+3*4 = 11 aus */
 
