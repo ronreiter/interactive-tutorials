@@ -33,6 +33,7 @@ Inhaltsverzeichnis
 - [[Unions]]
 - [Zeiger Arithmetik](Pointer Arithmetics)
 - [Funktionszeiger](Function Pointers)
+- [[Bitmasks]]
 
 ### Tutorials beitragen
 
