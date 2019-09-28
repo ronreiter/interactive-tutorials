@@ -34,6 +34,7 @@ Learn-c.org is nog in aanbouw - Als u zou willen helpen met het toevoegen van tu
 - [[Unions]]
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
+- [[Bitmasks]]
 
 ### Bijdragen Aan Tutorials
 
