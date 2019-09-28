@@ -35,7 +35,7 @@ The variable `foo` can be used, but since we did not initialize it, we don't kno
 Now, we can do some math. Assuming `a`, `b`, `c`, `d`, and `e` are variables, we can simply use plus, minus and multiplication operators
 in the following notation, and assign a new value to `a`:
 
-    int a = 0,b = 1,c = 2,d = 3, e = 4;
+    int a = 0, b = 1, c = 2, d = 3, e = 4;
     a = b - c + d * e;
     printf("%d", a); /* will print 1-2+3*4 = 11 */
 
@@ -74,7 +74,7 @@ Solution
       float b = 4.5;
       double c = 5.25;
       float sum;
-      
+
       sum = a + b + c;
 
       printf("The sum of a, b, and c is %f.", sum);
