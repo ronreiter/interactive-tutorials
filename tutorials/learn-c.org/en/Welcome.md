@@ -22,6 +22,7 @@ learn-c.org is still under construction - If you wish to contribute tutorials, p
 - [[Static]]
 
 ### Advanced
+
 - [[Pointers]]
 - [[Structures]]
 - [[Function arguments by reference]]
