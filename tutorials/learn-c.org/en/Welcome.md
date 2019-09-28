@@ -33,6 +33,7 @@ learn-c.org is still under construction - If you wish to contribute tutorials, p
 - [[Unions]]
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
+- [[Bitmasks]]
 
 ### Contributing Tutorials
 
