@@ -60,11 +60,11 @@ Die Variable `foo` kann benutzt werden, aber da wir sie noch nicht instanziiert 
 
 Jetzt können wir Mathematik anwenden. Nehmen wir an `a`, `b`, `c`, `d`; und `e` sind Variablen, dann können wir plus, minus und Multiplicationsoperatoren in folgender Notation benutzen und der Variable `a` einen neuen Wert zuweisen.
 
-    int a = 0,b = 1,c = 2,d = 3, e = 4;
+    int a = 0, b = 1, c = 2, d = 3, e = 4;
     a = b - c + d * e;
     printf("%d", a); /* wird  1-2+3*4 = 11 ausgeben */
 
-Übung 
+Übung
 -----
 
 In der nächsten Übung wirst du ein Programm erstellen, dass die Summe der Zahlen `a`, `b` und `c` ausgibt.
@@ -90,7 +90,7 @@ Erwartete Ausgabe
 -----------------
     Die Summe von  a, b, und c ist 12.750000.
 
-Lösung 
+Lösung
 ------
 
     #include <stdio.h>
@@ -100,7 +100,7 @@ Lösung
       float b = 4.5;
       double c = 5.25;
       float sum;
-      
+
       sum = a + b + c;
 
       printf("Die Summe von a, b, und c ist %f.", sum);
