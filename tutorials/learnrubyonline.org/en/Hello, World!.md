@@ -1,20 +1,19 @@
 Tutorial
 --------
 
-To print things to the console, use "puts", like this
-
-    puts 'I will be printed to the console!'
-
-or,
+One of the most basic tasks in any programming language is to display information to the user. To print something to the console so the user can see it, use `puts`.
 
     puts "I will be printed to the console!"
-    
-Everything between the `'` and `"` will be printed to the console.
-Single quotes can't support string interpolation, which looks like this `'Hello world #{some code}'`. You need to use double quotes. Single quotes can only evaluate to a string object.
-Short syntax for puts is `p` keyword , example: 
+
+Everything between the quotation marks will be printed to the console. 
+
+You can use either single (`'`) or double (`"`) quotation marks with `puts`, as long as you are consistent.
+
+Instead of writing `puts`, you can use the shorter form, `p`.
+
     p 'Hello world'
-    
-When you use puts keyword, ruby adds a newline(' \\n ') on the end of the line
+
+You can also use `print` to display information. The difference between `puts` and `print` is that when you use the `puts` keyword, Ruby adds a newline(' \\n ') at the end. Ruby does not do this with `print`.
 
     puts 'Hello World !!!'
     Hello World !!!
@@ -22,15 +21,6 @@ When you use puts keyword, ruby adds a newline(' \\n ') on the end of the line
 
      print 'Hello World !!!'
      Hello World !!!=> nil
-
-if you want add single quotes in an string you must use `\` to escape single quotes, example:
-
-    puts 'Hello i'm rubiest'
-    #this code return error
-    puts 'Hello i\'m rubiest'
-    # return Hello i'm rubiest
-
-
 
 Exercise
 --------
