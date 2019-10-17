@@ -8,27 +8,24 @@ You can use single quotes or double quotes for strings - either one is acceptabl
     myFirstString = 'I am a string!' #single quotes
     mySecondString = "Me too!" #double quotes
 
-The key difference between using single quotes and double quotes is that you can only perform interpolation if you use 
+There are many built-in methods in Ruby for manipulating strings. 
 
-
-There are many things you can do with strings, using methods.
-.length will give you the number of characters in a string.
+`.length` will give you the number of characters in a string.
 
     "Hi!".length #is 3
 
-.reverse will flip the string around.
+`.reverse` will flip the string around.
 
     "Hi!".reverse #is !iH
 
-.upcase will make a string all caps.
+`.upcase` will make a string all caps.
 
     "Hi!".upcase #is HI!
 
-and .downcase will make a string all lowercase.
+and `.downcase` will make a string all lowercase.
 
     "Hi!".downcase #is hi!
 
-There are many more methods, but I am not going to list them all.
 You can also use many methods at once. They are solved from left to right.
 
     "Hi!".downcase.reverse #is !ih
