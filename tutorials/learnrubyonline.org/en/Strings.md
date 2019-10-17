@@ -1,9 +1,15 @@
 Tutorial
 --------
-Strings are anything between "" or ''. It makes no difference if you use single quotes or double quotes. For example,
+
+A string is a collection of characters/symbols inside quotation marks. Strings are interpreted by the computer as raw text.
+
+You can use single quotes or double quotes for strings - either one is acceptable.
 
     myFirstString = 'I am a string!' #single quotes
     mySecondString = "Me too!" #double quotes
+
+The key difference between using single quotes and double quotes is that you can only perform interpolation if you use 
+
 
 There are many things you can do with strings, using methods.
 .length will give you the number of characters in a string.
