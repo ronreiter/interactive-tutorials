@@ -51,13 +51,13 @@ In Java, a character is it's own type and it's not simply a number, so it's not 
 Here are some ways to use a string:
 
     // Create a string with a constructor
-    String s1 = new String("Who let the dogs out?");
+    String s1 = new String("Who let the dogs out?");        // String object stored in heap memory
     // Just using "" creates a string, so no need to write it the previous way.
-    String s2 = "Who who who who!";
+    String s2 = "Who who who who!";                         // String literal stored in String pool
     // Java defined the operator + on strings to concatenate:
     String s3 = s1 + s2;
 
-There is no operator overloading in Java! The operator `+` is only defined for strings, you will never see it with other objects, only primitives.
+String is the only class where operator overloading is supported in java rest There is no operator overloading in Java!  We can concat two strings using + operator. The operator `+` is only defined for strings, you will never see it with other objects, only primitives.
 
 You can also concat string to primitives:
 
@@ -66,7 +66,7 @@ You can also concat string to primitives:
 
 ### boolean
 
-Every comparison operator in java will return the type `boolean` that not like other languages can only accept two special values: `true` or `false`.
+Every comparison operator in java will return the type boolean. Unlike other languages, it only accepts two special values: `true` or `false`. 
 
     boolean b = false;
     b = true;
@@ -82,6 +82,12 @@ Every comparison operator in java will return the type `boolean` that not like o
     if (children) { // Will not work
         // Will not work
     }
+    
+    int a;
+    boolean b = true; 
+    boolean c = false; 
+    a = b + c;            //The following line will give an error
+    System.out.println(a); 
 
 Exercise
 --------
