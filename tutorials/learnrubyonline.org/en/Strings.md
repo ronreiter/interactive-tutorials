@@ -30,6 +30,12 @@ You can also use many methods at once. They are solved from left to right.
 
     "Hi!".downcase.reverse #is !ih
 
+If you want to check if one string contains another string, you can use `.include?`.
+
+    "Happy Birthday!".include?("Happy")
+
+The above code evaluates to `true`.
+
 Exercise
 --------
 Take the given string and use methods to make the code print out "!edoc ma i !ih".

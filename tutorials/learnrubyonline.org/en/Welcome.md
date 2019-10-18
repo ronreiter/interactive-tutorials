@@ -10,7 +10,7 @@ learnrubyonline.org is still under construction - If you wish to contribute tuto
 
 ### Learn the Basics
 
-- [[Hello, World!]]
+- [[Hello World]]
 - [[Comments]]
 - [[Variables and Types]]
 - [[Math]]
