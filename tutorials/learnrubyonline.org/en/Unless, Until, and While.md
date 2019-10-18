@@ -21,8 +21,10 @@ It is basically the reverse of the if statement, because `if` statements will on
     end
 
 ###Important!
+
 Make sure that you don't make an **infinite loop**. An infinite loop repeats forever, stopping your program from ever advancing, because the condition never changes to what will stop the loop.
 Exercise
+
 --------
 Make a while or until statement from scratch that will `puts` "I'm looping!" to the console 7 times.
 
