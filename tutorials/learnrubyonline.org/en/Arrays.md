@@ -1,16 +1,18 @@
 Tutorial
 --------
-Arrays are similar to variables. They are defined in a similar way, ```myArray = []```  is an empty array.
-To put items in your array, use ```myArray = [1, 2, 3]``` or 
 
+Arrays allow you to group multiple values together in a list. Each value in an array is referred to as an "element".
 
-    myArray = []
-    myArray[0] = 1
-    myArray[1] = 2
-    myArray[2] = 3
+The code below demonstrates how to create arrays:
 
-Note that counting places in arrays start at zero.
-To print items of your array, use ```print``` , then ```arrayName[i]``` where "arrayName" is the name of the array and "i" is the place of the array you want to access, and remember, counting starts at zero.
+    myArray = []  # an empty array
+    myOtherArray = [1, 2, 3]  # an array with three elements
+
+Elements are numbered starting at zero and can be accessed by their number. `myOtherArray[1]` is how you would access the second element in an array. 
+
+In order to add to or change elements in an array, you can refer to an element by number.
+
+    myOtherArray[3] = 4
 
 Exercise
 --------
