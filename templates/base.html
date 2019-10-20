@@ -99,10 +99,15 @@
                 <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<img src="/static/img/icon20x24px-exported-transparent.png">
                 </a>
+		<!-- https://stackoverflow.com/questions/22181944/using-utf-8-characters-in-a-jinja2-template
+	  https://jinja.palletsprojects.com/en/2.10.x/api/#unicode
+	  https://flask-doc.readthedocs.io/en/latest/unicode.html
+	  https://stackoverflow.com/questions/24566538/flask-rendering-unicode-characters-in-template
+	language_name[loop.index0]	-->
                 <div class="dropdown-menu" aria-labelledby="langs">
 
                     {% for language in languages %}
-		    <a class="dropdown-item{% if language_code  == language %} disabled{% endif %}" href="/{{ language }}/">{{ language }}</a><br>
+		    <a class="dropdown-item{% if language_code  == language %} disabled{% endif %}" href="/{{ language }}/">{{ language_names[loop.index0] }}</a><br>
 		    {% endfor %}
 
                 </div>

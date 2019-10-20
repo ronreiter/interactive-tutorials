@@ -11,6 +11,9 @@ import logging
 
 from flask import Flask, render_template, request, make_response, session, Response
 import sys
+if sys.version_info.major < 3:
+    reload(sys)
+sys.setdefaultencoding('utf8')
 
 from ideone import Ideone
 
@@ -225,6 +228,12 @@ init_tutorials()
 def get_languages():
     return sorted(tutorial_data[get_host()].keys())
 
+def get_language_names():
+    arr = []
+    langs = get_languages()
+    for lang in langs:
+        arr.append(LANGUAGES.get(lang))
+    return arr
 
 def get_host():
     if is_development_mode():
@@ -368,8 +377,8 @@ def index(title, language="en"):
             domain_data_json=json.dumps(domain_data),
             html_title=html_title,
             language_code=language,
-            language_name=LANGUAGES[language],
             languages=get_languages(),
+            language_names=get_language_names(),
             uid=uid,
             **current_tutorial_data
         ))
