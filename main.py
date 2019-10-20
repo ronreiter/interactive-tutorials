@@ -46,14 +46,14 @@ if __name__ == '__main__':
 
 LANGUAGES = {
     "en": "English",
-    "pl": "Polish",
-    "fa": "Persian",
-    "es": "Spanish",
-    "it": "Italian",
-    "de": "German",
-    "cn": "Chinese",
-    "fr": "French",
-    "pt": "Portugese",
+    "pl": "Polski",
+    "fa": "فارسی",
+    "es": "Español",
+    "it": "Italiano",
+    "de": "Deutsch",
+    "cn": "普通话",
+    "fr": "Français",
+    "pt": "Português",
 }
 
 tutorial_data = {}
