@@ -61,11 +61,11 @@
                 <div class="dropdown-menu" aria-labelledby="more-langs">
 
                     {% for domain, data in all_data.items() %}
-                        <a class="dropdown-item{% if domain_data.namespace == domain %} disabled{% endif %}" href="{{ data.full_url }}">{{ data.language_uppercase }}</a>
+		    <a class="dropdown-item{% if domain_data.namespace == domain %} disabled{% endif %}" href="{{ data.full_url }}">{{ data.language_uppercase }}</a>
                     {% endfor %}
 
                 </div>
-
+              </li>
         {#
             <li class="nav-item mr-sm-2 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -95,17 +95,22 @@
          #}
 
         </ul>
+	<li class="nav nav-pill mr-sm-2 mb-2 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<img src="/static/img/icon20x24px-exported-transparent.png">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
 
-        <ul class="nav nav-pills mr-sm-2 mb-2">
-        {% for language in languages %}
-            <li {% if language_code == language %}class="active"{% endif %}><a href="/{{ language }}/"><img src="/static/img/flags/{{ language }}.png"/></a></li>
-        {% endfor %}
-        </ul>
+                    {% for language in languages %}
+		    <a class="dropdown-item{% if language_code  == language %} disabled{% endif %}" href="/{{ language }}/">{{ language }}</a><br>
+		    {% endfor %}
 
+                </div>
+	</li>
         <ul class="navbar-nav">
 
             <li class="nav-item">
-                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star" aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
                 <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
             </li>
 
