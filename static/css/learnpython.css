@@ -213,3 +213,43 @@ textarea {
 	display: none;
 }
 
+/*
+WIP: dark mode
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1b1e21;
+        color: #cccccc;
+    }
+
+    .breadcrumb {
+        color: white;
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    .breadcrumb .active {
+        color: white;
+    }
+
+    .bg-light {
+        background-color: #222222 !important;
+    }
+
+    .bg-primary {
+        background-color: #003b8f !important;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: rgba(255,255,255,.5);
+    }
+
+    .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+        color: rgba(255,255,255,.9);
+    }
+
+    footer#dock {
+        color: #ccc;
+        background-color: #222222;
+        border-top: 2px solid #333333;
+    }
+}
+*/
