@@ -48,7 +48,7 @@ Tutorial Code
     } point;
 
     int main() {
-      point * mypoint;
+      point * mypoint = NULL;
 
       /* Dynamically allocate a new point
          struct which mypoint points to here */
