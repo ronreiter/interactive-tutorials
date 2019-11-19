@@ -49,7 +49,7 @@ Tutorial Code
     } point;
 
     int main() {
-      point * mypoint;
+      point * mypoint = NULL;
 
       /* Belege ein neues point Strukt hier,
          sodass mypoint darauf zeigt */
