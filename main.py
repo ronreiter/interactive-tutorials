@@ -63,13 +63,13 @@ LANGUAGES = {
 tutorial_data = {}
 
 
-def run_code(code, language):
+def run_code(code, language_id):
     ideone_api = Ideone(
         constants.IDEONE_USERNAME,
         constants.IDEONE_PASSWORD,
         api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
 
-    code = ideone_api.create_submission(code, language_name=language, std_input="")["link"]
+    code = ideone_api.create_submission(code, language_id=language_id, std_input="")["link"]
     result = None
 
     while True:
@@ -384,7 +384,7 @@ def index(title, language="en"):
         ))
 
     # POST method handling
-    data = run_code(request.json["code"], request.json["language"])
+    data = run_code(request.json["code"], domain_data["language_id"])
 
     if "output" in current_tutorial_data and current_tutorial_data["output"] == data["output"]:
         data["solved"] = True
