@@ -12,11 +12,10 @@ integration, code refactoring, automatic indentation, syntax highlighting, compa
 
 **Hier is een lijst met HTML, CSS en JavaScript editors waaruit u kan kiezen:**
 
-* JetBrains PyCharm Community Edition (Gratis) - [[https://www.jetbrains.com/pycharm/download/]]
-* JetBrains WebStorm (Commercieel) - [[https://www.jetbrains.com/webstorm/]]
+* VS Code (Gratis) - [[https://code.visualstudio.com/]]
 * Atom (Gratis) - [[https://atom.io/]]
+* JetBrains WebStorm (Commercieel) - [[https://www.jetbrains.com/webstorm/]]
 * Sublime Text (Commercieel) - [[https://www.sublimetext.com/]]
-* Brackets - [[http://brackets.io/]]
 * Notepad++ (Alleen Windows) - [[https://notepad-plus-plus.org/download/v7.html]]
 
 In deze tutorial zelf heb je feitelijk geen IDE nodig, al het coderen gebeurd online.
