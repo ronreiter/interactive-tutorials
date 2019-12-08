@@ -30,7 +30,12 @@ We can also create an array with values in the same line:
 
     int[] arr = {1, 2, 3, 4, 5};
 
-Don't try to print the array without a loop, it will print something nasty like [I@f7e6a96.
+Don't try to print the array without a loop, it will print something nasty like [I@f7e6a96. 
+To print out an array, use the following code:
+
+    for (int i=0; i < arr.length; i++) {
+        System.out.println(arr[i]);
+    }
 
 Exercise
 --------
