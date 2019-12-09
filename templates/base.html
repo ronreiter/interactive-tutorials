@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ domain_data.language_uppercase }}">
+<html lang="{{ domain_data.language_code }}">
 <head>
     <title>{% block page_title %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -99,7 +99,7 @@
         <ul class="navbar-nav">
 	        <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			        <img src="/static/img/icon20x24px-exported-transparent.png" style="height: 20px">
+			        <img src="/static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="langs">
                     {% for language in languages %}
