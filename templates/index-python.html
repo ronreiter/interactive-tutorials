@@ -36,13 +36,13 @@
                 <p>Get started learning Python with <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp's</a> free <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Start Now</a>!</p>
             </div>
 
-            <span id="inner-text">{% autoescape off %}
+            <div id="inner-text">{% autoescape off %}
                 {% if page_title %}
                 <h1>{{ page_title }}</h1>
                 <hr/>
                 {% endif %}
                 {{ text }}
-            {% endautoescape %}</span>
+            {% endautoescape %}</div>
 
             <!-- DataCamp-Light exercise -->
             {% if page_title %}
@@ -121,7 +121,7 @@
 
                 <h4>Sponsors</h4>
                 <div style="margin-top: 10px">
-                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png" style="width: 160px"></a>
+                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png" style="width: 160px" alt="Digital Ocean"></a>
                 </div>
 
             </div>
