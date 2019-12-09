@@ -74,7 +74,8 @@ Exercise
 --------
 Create a gorilla class which implements the Animal interface.
 
-### Tutorial Code
+Tutorial Code
+-------------
 
     interface Animal {
         bool feed(bool timeToEat);
@@ -82,11 +83,13 @@ Create a gorilla class which implements the Animal interface.
         void pet();
     }
 
-### Expected Output
+Expected Output
+---------------
 
   No visible output. However, the result should be a class, similar to the ones implemented above, for a gorilla that includes all of the interface methods.
 
-### Solution
+Solution
+--------
 
     class Gorilla implements Animal {
         bool feed(bool timeToEat) {

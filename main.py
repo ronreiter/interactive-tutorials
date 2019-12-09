@@ -253,7 +253,6 @@ def get_domain_data():
 
 
 def get_tutorial_data(tutorial_id, language="en"):
-    logging.warn(tutorial_data[get_host()][language].keys())
     return tutorial_data[get_host()][language][tutorial_id]
 
 
@@ -367,11 +366,18 @@ def index(title, language="en"):
 
         uid = session["uid"]
 
+        try:
+            site_links = tutorial_data[get_host()][language]["Welcome"]["links"]
+        except Exception, e:
+            site_links = []
+            logging.error("cant get site links for %s %s" % (get_host(), language))
+
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
             tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
             all_data=constants.DOMAIN_DATA,
+            site_tutorial_links=site_links,
             tutorial_data=current_tutorial_data,
             tutorial_data_json=json.dumps(current_tutorial_data),
             domain_data_json=json.dumps(domain_data),
