@@ -182,7 +182,7 @@ def init_tutorials():
                 # create links by looking at all lines that are not code lines
                 stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
                 links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(stripped_text)]
-                tutorial_dict["links"] = links
+                tutorial_dict["links"] = [(x, pageurl(x, language)) for x in links]
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
