@@ -24,8 +24,8 @@ Exercise
 
 Create 2 pointers p1 and p2 for the given integer, with p1 being the void pointer, and p2 the int pointer. p2 must be assigned to p1. Increase the value of the content by 1 and print the value.
 
-Tutorial code;
---------
+Tutorial Code
+-------------
 
     #include <iostream>
     

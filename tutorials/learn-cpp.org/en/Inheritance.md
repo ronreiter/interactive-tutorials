@@ -46,11 +46,10 @@ Let's extend the `class Point` from the previous tutorial to handle __Complex__ 
       out<< "y:" << c.y << "\n";
       return out;
     }
-    
-### We All Need Friends
 
 Exercise
 --------
+
 Form two `Complex` objects. Use the `Swap` function to swap the `Complex` objects as Point types. 
 Reset the code area, and take the opportunity to write everything from scratch.
 
