@@ -54,9 +54,6 @@ If you look carefully at the previous code, you will notice that we also used an
 
 This is because the name of an array itself is a (constant) pointer to the first element of the array. In other words, the notations `vowels`, `&vowels[0]`, and `vowels + 0` all point to the same location.
 
-You may go through [Pointers and Arrays](https://www.le.ac.uk/users/rjm1/cotter/page_59.htm) for a further detailed discussion on this topic.
-
-
 Dynamic Memory Allocation for Arrays
 ------------------------------------
 
