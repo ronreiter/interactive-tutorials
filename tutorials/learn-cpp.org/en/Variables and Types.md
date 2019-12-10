@@ -12,7 +12,9 @@ C++ provides a rich set of built-in as well as user defined data types. Followin
 * Valueless	 using the `void` keyword
 * Wide character using the `wchar_t` keyword
 
-The different types of variables define their bounds. A `char` can range only from -128 to 127, whereas a `long` can range from -2,147,483,648 to 2,147,483,647.
+The different types of variables define their bounds. A `char` can range only from -128 to 127, 
+whereas a `long` can range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. This is because a `char`
+is represented using only 8 bits of information whereas `long` uses 64 bits of information.
 
 #### Type Modifiers
 
