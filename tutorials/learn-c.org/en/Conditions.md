@@ -109,14 +109,14 @@ Tutorial Code
 
 #include <stdio.h>
 
+void guessNumber(int guess) {
+    // TODO: write your code here
+}
+
 int main() {
     guessNumber(500);
     guessNumber(600);
     guessNumber(555);
-}
-
-void guessNumber(int guess) {
-    // TODO: write your code here
 }
 
 Expected Output
@@ -131,12 +131,6 @@ Solution
 
 #include <stdio.h>
 
-int main() {
-    guessNumber(500);
-    guessNumber(600);
-    guessNumber(555);
-}
-
 void guessNumber(int guess) {
     // TODO: write your code here
     if (guess < 555) {
@@ -146,4 +140,10 @@ void guessNumber(int guess) {
     } else {
         printf("Correct. You guessed it!\n");
     }
+}
+
+int main() {
+    guessNumber(500);
+    guessNumber(600);
+    guessNumber(555);
 }
