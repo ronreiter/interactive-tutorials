@@ -80,7 +80,7 @@ Solution
     int main() {
       point * mypoint;
 
-      mypoint = malloc(sizeof(point));
+      mypoint = (point *)malloc(sizeof(point));
 
       mypoint->x = 10;
       mypoint->y =5 ;
