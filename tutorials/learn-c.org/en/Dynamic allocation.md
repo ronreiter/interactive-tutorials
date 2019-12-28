@@ -14,7 +14,7 @@ Let's assume we want to dynamically allocate a person structure. The person is d
 
 To allocate a new person in the `myperson` argument, we use the following syntax:
 
-    person * myperson = malloc(sizeof(person));
+    person * myperson = (person *) malloc(sizeof(person));
 
 This tells the compiler that we want to dynamically allocate just enough to hold a person struct in memory, and then return a pointer to the newly allocated data.
 
