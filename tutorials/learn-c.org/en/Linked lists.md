@@ -51,7 +51,7 @@ Notice that we are defining the struct in a recursive manner, which is possible 
 Now we can use the nodes. Let's create a local variable which points to the first item of the list (called `head`).
 
     node_t * head = NULL;
-    head = malloc(sizeof(node_t));
+    head = (node_t *) malloc(sizeof(node_t));
     if (head == NULL) {
         return 1;
     }
@@ -65,9 +65,9 @@ to finish populating the list. Notice that we should always check if malloc retu
 To add a variable to the end of the list, we can just continue advancing to the next pointer:
 
     node_t * head = NULL;
-    head = malloc(sizeof(node_t));
+    head = (node_t *) malloc(sizeof(node_t));
     head->val = 1;
-    head->next = malloc(sizeof(node_t));
+    head->next = (node_t *) malloc(sizeof(node_t));
     head->next->val = 2;
     head->next->next = NULL;
 
@@ -101,7 +101,7 @@ and then in each step, we advance the pointer to the next item in the list, unti
         }
 
         /* now we can add a new variable */
-        current->next = malloc(sizeof(node_t));
+        current->next = (node_t *) malloc(sizeof(node_t));
         current->next->val = val;
         current->next->next = NULL;
     }
@@ -124,7 +124,7 @@ pass a pointer to the pointer variable (a double pointer) so we will be able to 
 
     void push(node_t ** head, int val) {
         node_t * new_node;
-        new_node = malloc(sizeof(node_t));
+        new_node = (node_t *) malloc(sizeof(node_t));
 
         new_node->val = val;
         new_node->next = *head;
@@ -281,13 +281,13 @@ Tutorial Code
 
     int main() {
 
-        node_t * test_list = malloc(sizeof(node_t));
+        node_t * test_list = (node_t *) malloc(sizeof(node_t));
         test_list->val = 1;
-        test_list->next = malloc(sizeof(node_t));
+        test_list->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->val = 2;
-        test_list->next->next = malloc(sizeof(node_t));
+        test_list->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->val = 3;
-        test_list->next->next->next = malloc(sizeof(node_t));
+        test_list->next->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->next->val = 4;
         test_list->next->next->next->next = NULL;
 
@@ -376,14 +376,14 @@ Solution
     }
 
     int main(void) {
-        node_t * test_list = malloc(sizeof(node_t));
+        node_t * test_list = (node_t *) malloc(sizeof(node_t));
 
         test_list->val = 1;
-        test_list->next = malloc(sizeof(node_t));
+        test_list->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->val = 2;
-        test_list->next->next = malloc(sizeof(node_t));
+        test_list->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->val = 3;
-        test_list->next->next->next = malloc(sizeof(node_t));
+        test_list->next->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->next->val = 4;
         test_list->next->next->next->next = NULL;
 
