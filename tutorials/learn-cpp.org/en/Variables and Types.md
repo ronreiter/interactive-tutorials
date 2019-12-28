@@ -90,7 +90,7 @@ Tutorial Code
 
 Expected Output
 ---------------
-    The sum of a, b, and c is 12.750000.
+    The sum of a, b, and c is 12.75
 
 Solution
 --------
@@ -105,6 +105,6 @@ Solution
 
       sum = a + b + c;
 
-      cout << "The sum of a, b, and c is" << sum << endl;
+      cout << "The sum of a, b, and c is " << sum << endl;
       return 0;
     }
