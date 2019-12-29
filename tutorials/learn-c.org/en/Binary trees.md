@@ -3,7 +3,7 @@ Tutorial
 
 ### Introduction
 
-A Binary Tree is a type of data structure in which each node has at most two children (left child and right child). Binary trees are used to implement binary search trees and binary heaps, and are used for efficient searching and sorting. A binary tree is a special case of a K-ary tree, where k is 2. Common operations for binary trees include insertion, deletion, and traversal. The difficulty of performing these operations varies if the tree is balanced and also whether the nodes are leaf nodes or branch nodes. For **balanced trees** the depth of the left and right subtrees ov every node differ by 1 or less. This allows for a predictable **depth** also known as **height**. This is the measure of a node from root to leaf, where root is 0 and sebsequent nodes are (1,2..n). This can be expressed by the integer part of log<sub>2</sub>(n) where n is the number of nodes in the tree.
+A Binary Tree is a type of data structure in which each node has at most two children (left child and right child). Binary trees are used to implement binary search trees and binary heaps, and are used for efficient searching and sorting. A binary tree is a special case of a K-ary tree, where k is 2. Common operations for binary trees include insertion, deletion, and traversal. The difficulty of performing these operations varies if the tree is balanced and also whether the nodes are leaf nodes or branch nodes. For **balanced trees** the depth of the left and right subtrees of every node differ by 1 or less. This allows for a predictable **depth** also known as **height**. This is the measure of a node from root to leaf, where root is 0 and sebsequent nodes are (1,2..n). This can be expressed by the integer part of log<sub>2</sub>(n) where n is the number of nodes in the tree.
 
             g                  s                  9
            / \                / \                / \
@@ -41,7 +41,7 @@ Tutorial Code
     
     int main()
     {
-      node_t * test_list = malloc(sizeof(node_t));
+      node_t * test_list = (node_t *) malloc(sizeof(node_t));
       /* set values explicitly, alternative would be calloc() */
       test_list->val = 0;
       test_list->left = NULL;
@@ -61,7 +61,7 @@ Tutorial Code
       if (tree->val == 0)
       {
         /* insert on current (empty) position */
-        tree->val=val;
+        tree->val = val;
       }
       else
       {
@@ -74,7 +74,7 @@ Tutorial Code
           }
           else
           {
-            tree->left = malloc(sizeof(node_t));
+            tree->left = (node_t *) malloc(sizeof(node_t));
             /* set values explicitly, alternative would be calloc() */
             tree->left->val = val;
             tree->left->left = NULL;
@@ -92,9 +92,9 @@ Tutorial Code
             }
             else
             {
-              tree->right=malloc(sizeof(node_t));
+              tree->right = (node_t *) malloc(sizeof(node_t));
               /* set values explicitly, alternative would be calloc() */
-              tree->right->val=val;
+              tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
             }
@@ -138,7 +138,7 @@ Solution
     
     int main()
     {
-      node_t * test_list = malloc(sizeof(node_t));
+      node_t * test_list = (node_t *) malloc(sizeof(node_t));
       /* set values explicitly, alternative would be calloc() */
       test_list->val = 0;
       test_list->left = NULL;
@@ -158,7 +158,7 @@ Solution
       if (tree->val == 0)
       {
         /* insert on current (empty) position */
-        tree->val=val;
+        tree->val = val;
       }
       else
       {
@@ -171,7 +171,7 @@ Solution
           }
           else
           {
-            tree->left = malloc(sizeof(node_t));
+            tree->left = (node_t *) malloc(sizeof(node_t));
             /* set values explicitly, alternative would be calloc() */
             tree->left->val = val;
             tree->left->left = NULL;
@@ -189,9 +189,9 @@ Solution
             }
             else
             {
-              tree->right=malloc(sizeof(node_t));
+              tree->right = (node_t *) malloc(sizeof(node_t));
               /* set values explicitly, alternative would be calloc() */
-              tree->right->val=val;
+              tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
             }
