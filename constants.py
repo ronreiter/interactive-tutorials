@@ -102,7 +102,7 @@ DOMAIN_DATA[LEARNPYTHON_DOMAIN] = {
 # Start by choosing a chapter and
 # write your code in this window.
 
-print "Hello, World!"
+print("Hello, World!")
     """
 }
 
