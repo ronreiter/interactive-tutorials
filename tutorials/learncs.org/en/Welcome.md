@@ -21,6 +21,7 @@ learncs.org is still under construction - If you wish to contribute tutorials, p
 - [[While loops]]
 - [[Methods]]
 - [[Basic Classes]]
+- [[Class Variables]]
 - [[Class Properties]]
 
 ### Contributing Tutorials
