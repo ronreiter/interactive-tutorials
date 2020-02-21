@@ -7,7 +7,7 @@ In C#, everything is an object, made from a class. Classes are defined with curl
     }
     
 
-The above example is a very basic class definition, containing no properties or methods. Now, we have a class, but how do we use it?
+The above example is a very basic class definition, containing no fields, properties, or methods. Now, we have a class, but how do we use it?
 The answer is create an instance of that class. You can do this with the `new` keyword, like this:
 
     class myClass{
@@ -18,7 +18,7 @@ The answer is create an instance of that class. You can do this with the `new` k
       }
     }
 
-Now, the class doesn't do anything, so why use it? Next, we will give the class some properties like this:
+Now, the class doesn't do anything, so why use it? Next, we will give the class a field like this:
 
     using System;
     class myClass{
@@ -57,7 +57,7 @@ Finally, we write out the value of `test` using the dot operator on the instance
        
 Exercise
 --------
-Make a class `car` with the properties `numTires = 4`, `year = 2000`, and `runs = true`, and create three instances of it: `car1`, `car2`, and `car3`.
+Make a class `car` with the fields `numTires = 4`, `year = 2000`, and `runs = true`, and create three instances of it: `car1`, `car2`, and `car3`.
 
 Tutorial Code
 -------------
