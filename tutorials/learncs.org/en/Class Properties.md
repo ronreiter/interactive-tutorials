@@ -1,141 +1,162 @@
 Tutorial
 --------
-Building off of what we learned about basic classes, we can start working with properties. We know we create an instance of a class using:
+Classes can have _properties_ in addition to fields and methods.  Properties allow variables to be protected and validated while keeping the variables simple to use.
 
-    myClass myObject = new myClass();
+Getters and Setters
+-------------------
+Programmers in other languages often write getter and setter methods to protect their data:
+
+    public class Shape {
+        private int Sides;
+        
+        public int GetSides() {
+          return Sides;
+        }
+        
+        public void SetSides(int value) {
+           if (value > 2) Sides = value;
+        }
+    }    
+
+Properties
+----------
+In C# we use properties to provide getters and a setters, but we can use a property just like a variable. For example, if `Sides` and `SideLength` were properties then we would get and set their values like this:
+
+    shape.Sides = 3;
+    shape.SideLength = 2;
+    int perimeter = shape.Sides * shape.SideLength;
+
+Properties in C# are defined like this:
+
+    [Modifiers (e.g. public or static)] [Type] [Name] { get {...} set {...} }
+
+In the `get` block we return the value of the property. In the `set` block we receive the new value.  Inside the `set` block, the special name `value` represents the new value for the property.
+
+Here is an example of a property named `Sides`:
+
+    private int _sides = 3;
     
-Additionally we know these objects have properties or member variables defined like so:
-
-    class Shape{
-      public string Type = "square";
-      public int Sides = 4;
-      public int Sidelength = 1;
-      public double Area = 1;
+    public int Sides { 
+      get {
+        return _sides;
+      }
+      set {
+        if (value > 2) _sides = value;
+      }
     }
     
-The above code defines a class named Shape with 4 different properties. In this case our shape is a square with 4 sides of length 1 and an area of 1. What if we wanted a triangle instead of a square? We can do that by allowing our class to accept different values for its properties. Because we will be defining the values of the properties later, we don't have to assign them here. We give Shape properties without values like this:
+In the example above, the property `Sides` stores its value in a private field `_sides`.  We say the property `Sides` _wraps_ the field `_sides`, and we call `_sides` the _backing field_.
 
-    class Shape{
-      public string Type;
-      public int Sides;
-      public int Sidelength;
-      public double Area;  
+Calculated Properties
+---------------------
+A property is not required to have a setter or a backing field.  For example, we can use a property to represent a calculated value like this:
+
+    public int Area {
+       get { return 0.5 * base * height; }
     }
+    
+However, a property without a setter cannot be assigned a value.  For the `Area` property above, we could write `double volume = shape.Area * 5`, but we could not write `shape.Area = 3`.
 
-Now to give those properties values we need to define something called a constructor in our class. Constructors use the same name of their class. Adding an empty constructor, our class looks like this:
+Default Properties
+------------------
+Sometimes we might want to create a property with an empty getter and setter:
 
-    class Shape{
-      public string Type;
-      public int Sides;
-      public int Sidelength;
-      public double Area;  
-      public Shape(){} 
-    }
-
-Let's give the constructor parameters and set the values of our properties to the passed in parameters:
-
-    class Shape{
-      public string Type;
-      public int Sides;
-      public int Sidelength;
-      public double Area;  
-      public Shape(string type, int sides, int sidelength, double area){
-        Type = type;
-        Sides = sides;
-        Sidelength = sidelength;
-        Area = area;
+    private string _type;
+    public string Type {
+      get {
+        return _type;
+      }
+      set {
+        _type = value;
       }
     }
+    
+We can write this more easily with a _default property_. With default properties we do not have to create our own backing field.  We simply write:
 
-Now when we create an instance of Shape, we can give it parameters using the constructor! Putting it all together looks something like this:
+    public string Type { get; set; }
+    
+One use for a default property is to provide read-only data by making the setter private:
 
-    using System;
-    class Shape{
-      public string Type;
-      public int Sides;
-      public int Sidelength;
-      public double Area;  
-      public Shape(string type, int sides, int sidelength, double area){
-        Type = type;
-        Sides = sides;
-        Sidelength = sidelength;
-        Area = area;
-      }
-    }
-    class MainClass{
-      public static void Main(){
-        Shape square = new Shape("square", 4, 1, 1);
-        Shape bigsquare = new Shape("square", 4, 2, 4);
-        Shape triangle = new Shape("triangle", 3, 3, 3.9);
-        Console.WriteLine("A {0} with {1} sides of length {2} has an area of {3}", square.Type, square.Sides, square.Sidelength, square.Area);
-        Console.WriteLine("A {0} with {1} sides of length {2} has an area of {3}", bigsquare.Type, bigsquare.Sides, bigsquare.Sidelength, bigsquare.Area);
-        Console.WriteLine("A {0} with {1} sides of length {2} has an area of {3}", triangle.Type, triangle.Sides, triangle.Sidelength, triangle.Area);
-      }
-    }
-
-Executing the above code will print the following:
-
-A square with 4 sides of length 1 has an area of 1
-A square with 4 sides of length 2 has an area of 4
-A triangle with 3 sides of length 3 has an area of 3.9
-
-
+    public string Type { get; private set; }
+    
 Exercise
 --------
-Make a class `Vehicle` with the properties `string Type`, `int NumTires`, `int Year`, and `bool Runs`, and create:
+Make a class `Vehicle` with the properties `string Type` and `int NumTires`.  
 
-A `car`: `Type = car` with `NumTires = 4` from `Year = 2000` which `Runs = true`
-An `oldcar`: `Type = car` with `NumTires = 4` from `Year = 1980` which `Runs = false`
-A `bike`: `Type = bike` with `NumTires = 2` from `Year = 2017` which `Runs = true`
-
-Watch out for the capitalizations! 
+When `Type` is set to `String.Empty`, print "The vehicle type cannot be empty" and keep the previous value.  When `NumTires` is set to a value less than 1, print "The vehicle must have at least one tire" and keep the previous value.
 
 Tutorial Code
 -------------
-using System;
 
-//Write Vehicle class here
+    using System;
 
-public class MainClass{
-    public static void Main(){
-        //Create vehicles here
-        
-        // Test code
-        Console.WriteLine(car.Type);
-        Console.WriteLine(oldcar.Runs);
-        Console.WriteLine(bike.NumTires);
+    //Write Vehicle class here
+
+    public class MainClass{
+        public static void Main(){
+            // Test code
+            Vehicle myRide = new Vehicle();
+            myRide.Type = "Motorcycle";
+            myRide.NumTires = 2;
+            Console.WriteLine(myRide.Type);
+            Console.WriteLine(myRide.NumTires);
+            myRide.Type = String.Empty;
+            Console.WriteLine(myRide.Type);
+            myRide.NumTires = 0;
+            Console.WriteLine(myRide.NumTires);
+      }
     }
-}
 
 Expected Output
 ---------------
-car
-False
-2
+
+    Motorcycle
+    2
+    The vehicle type cannot be empty
+    Motorcycle
+    The vehicle must have at least one tire
+    2
 
 Solution
 --------
+
     using System;
-    class Vehicle{
-      public string Type;
-      public int NumTires;
-      public int Year;
-      public bool Runs;  
-      public Vehicle(string type, int numTires, int year, bool runs){
-        Type = type;
-        NumTires = numTires;
-        Year = year;
-        Runs = runs;
+
+    public class Vehicle {
+      private string _type;
+      public string Type {
+        get { return _type; }
+        set {
+          if (value == String.Empty) {
+            Console.WriteLine("The vehicle type cannot be empty");
+          }
+          else _type = value;
+        }
+      }
+
+      private int _numTires;
+      public int NumTires {
+        get { return _numTires; }
+        set { 
+          if (value < 1) {
+            Console.WriteLine("The vehicle must have at least one tire");
+          }
+          else _numTires = value;
+        }
       }
     }
-    class MainClass{
-      public static void Main(){
-        Vehicle car = new Vehicle("car", 4, 2000, true);
-        Vehicle oldcar = new Vehicle("car", 4, 1980, false);
-        Vehicle bike = new Vehicle("bike", 2, 2017, true);
-        
-        Console.WriteLine(car.Type);
-        Console.WriteLine(oldcar.Runs);
-        Console.WriteLine(bike.NumTires);
-      }
+
+    public class MainClass {
+        public static void Main() {
+            // Test code
+            Vehicle myRide = new Vehicle();
+            myRide.Type = "Motorcycle";
+            myRide.NumTires = 2;
+            Console.WriteLine(myRide.Type);
+            Console.WriteLine(myRide.NumTires);
+            myRide.Type = String.Empty;
+            Console.WriteLine(myRide.Type);
+            myRide.NumTires = 0;
+            Console.WriteLine(myRide.NumTires);
+        }
     }
