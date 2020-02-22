@@ -36,6 +36,30 @@ C# supports multidimensional arrays, defined in the following manner:
     matrix[1,1] = 4;
 
     int[,] predefinedMatrix = new int[2,2] { { 1, 2 }, { 3, 4 } };
+   
+   
+### Jagged arrays 
+
+These are multidimensional arrays where each subarray is an independent array - Can have subarrays of different lengths.
+Use a separate set of square brackets for each dimension of the array.
+
+##### jagArray1[2][7][4] // Three sets of square brackets
+
+Unlike other types of arrays, you cannot fully instantiate a jagged array in a single step. Since a jagged array is an array of independent arrays, each array must be created separately.
+
+Instantiating a full jagged array requires the following steps: 
+
+ ##### 1. Instantiate the top-level array.
+ ##### 2. Instantiate each subarray separately, assigning the reference of the newly created array to the appropriate element of its containing array.
+ 
+For example, the following code shows the declaration, instantiation, and initialization of a twodimensional jagged array. Notice in the code that the reference to each subarray is assigned to an 
+element in the top-level array.
+```
+int[][] Arr = new int[3][]; 
+Arr[0] = new int[] {10, 20, 30};
+Arr[1] = new int[] {40, 50, 60, 70}; 
+Arr[2] = new int[] {80, 90, 100, 110, 120}; 
+```
 
 Exercise
 --------
