@@ -34,6 +34,27 @@ The above code will print "This works!" to the screen. First, in `myClass`, we d
 Until you learn more advanced programming, you will have to use to `public` modifier in separate classes. Then we make an instance of `myClass`.
 Finally, we write out the value of `test` using the dot operator on the instance of `myClass`.
         
+## Partial Classes and Partial Types: 
+     The declaration of a class can be partitioned among several partial class declarations. 
+ 
+ • Each of the partial class declarations contains the declarations of some of the class members. 
+  
+  • The partial class declarations of a class can be in the same file or in different files. Each partial declaration must be labeled as partial class, in contrast to the single keyword class.
+  
+  The declaration of a partial class looks the same as the declaration of a normal class, other than the addition of the type modifier partial.
+        
+     
+        partial class MyPartialClass {
+        
+             int w  // member1 declaration
+             int x  // member2 declaration
+        }
+        partial class MyPartialClass {
+        
+             int y  // member1 declaration
+             int z  // member2 declaration
+        }
+       
 Exercise
 --------
 Make a class `car` with the properties `numTires = 4`, `year = 2000`, and `runs = true`, and create three instances of it: `car1`, `car2`, and `car3`.
