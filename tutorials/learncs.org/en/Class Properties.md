@@ -1,6 +1,6 @@
 Tutorial
 --------
-Classes can have _properties_ in addition to fields and methods.  Properties allow variables to be protected and validated while keeping the variables simple to use.
+Classes can have _properties_ in addition to fields and methods.  Properties allow variables to be protected and validated while keeping them simple to use.
 
 Getters and Setters
 -------------------
@@ -20,13 +20,17 @@ Programmers in other languages often write getter and setter methods to protect 
 
 Properties
 ----------
-In C# we use properties to provide getters and a setters, but we can use a property just like a variable. For example, if `Sides` and `SideLength` were properties then we would get and set their values like this:
+In C# we use properties with get and set _accessors_.  These accessors can protect and validate data, but we can use a property just like a variable. For example, if `Sides` and `SideLength` were properties of `Shape` then we would get and set their values just like fields:
 
-    shape.Sides = 3;
-    shape.SideLength = 2;
-    int perimeter = shape.Sides * shape.SideLength;
-
-Properties in C# are defined like this:
+    public class MainClass{
+        public static void Main(){
+            Shape shape = new Shape();
+            shape.Sides = 3;
+            shape.SideLength = 2;
+            int perimeter = shape.Sides * shape.SideLength;
+            //...
+        }
+    }
 
     [Modifiers (e.g. public or static)] [Type] [Name] { get {...} set {...} }
 
@@ -34,8 +38,7 @@ In the `get` block we return the value of the property. In the `set` block we re
 
 Here is an example of a property named `Sides`:
 
-    private int _sides = 3;
-    
+    private int _sides = 3; // This is the "backing field"
     public int Sides { 
       get {
         return _sides;
@@ -49,17 +52,17 @@ In the example above, the property `Sides` stores its value in a private field `
 
 Calculated Properties
 ---------------------
-A property is not required to have a setter or a backing field.  For example, we can use a property to represent a calculated value like this:
+A property is not required to have a set accessor or a backing field.  For example, we can use a property to represent a calculated value like this:
 
     public int Area {
-       get { return 0.5 * base * height; }
+       get { return SideLength * SideLength; }
     }
     
-However, a property without a setter cannot be assigned a value.  For the `Area` property above, we could write `double volume = shape.Area * 5`, but we could not write `shape.Area = 3`.
+However, a property without a set accessor cannot be assigned a value.  For the `Area` property above, we could write `double volume = shape.Area * 5`, but we could not write `shape.Area = 3`.
 
 Default Properties
 ------------------
-Sometimes we might want to create a property with an empty getter and setter:
+Sometimes we might want to create a property with minimal get and set accessors:
 
     private string _type;
     public string Type {
