@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the learn-js.org interactive JavaScript tutorial. 
+Welcome to the learn-js.org interactive JavaScript tutorial.
 
 Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the JavaScript programming language.
 
@@ -21,8 +21,10 @@ learn-js.org is still under construction - If you wish to contribute tutorials, 
 - [[Functions]]
 - [[Pop-up Boxes]]
 - [[Callbacks]]
+- [[Arrow Functions]]
 
 ### Advanced tutorials
+
 - [[Object Oriented JavaScript]]
 - [[Function Context]]
 - [[Inheritance]]
@@ -30,4 +32,3 @@ learn-js.org is still under construction - If you wish to contribute tutorials, 
 ### Contributing Tutorials
 
 Read more here: [[Contributing Tutorials]]
-
