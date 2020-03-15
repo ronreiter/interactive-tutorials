@@ -29,20 +29,21 @@ Using an arrow as a callback compared to a normal function:
 
     let numbers = [3, 5, 8, 9, 2];
 
+    // Old way
     function multiplyByTwo(number){
         return number * 2;
     }
 
-    numbers.map(multiplyByTwo);
+    let multipliedNumbers = numbers.map(multiplyByTwo);
 
-    console.log(numbers);              // prints out [6, 10, 16, 18, 4]
+    console.log(multipliedNumbers);              // prints out: 6, 10, 16, 18, 4
 
-
+    // Using ES6 arrow functions
     const multiplyByTwo = number => number * 2;
 
-    numbers.map(multiplyByTwo);
+    let multipliedNumbers = numbers.map(multiplyByTwo);
 
-    console.log(numbers);              // prints out [6, 10, 16, 18, 4]
+    console.log(multipliedNumbers);              // prints out: 6, 10, 16, 18, 4
 
 Exercise
 --------
