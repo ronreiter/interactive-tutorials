@@ -28,6 +28,7 @@ learn-js.org is still under construction - If you wish to contribute tutorials, 
 - [[Object Oriented JavaScript]]
 - [[Function Context]]
 - [[Inheritance]]
+- [[Destructuring]]
 
 ### Contributing Tutorials
 
