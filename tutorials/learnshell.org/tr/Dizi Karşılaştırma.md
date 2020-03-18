@@ -14,7 +14,7 @@ Diziler, birden fazla değer tutabilen değişkenlerdir. Herhangi bir değişken
 	# Dizideki eleman sayısını çekmek için:
 	echo ${#dizi[@]}
 
-Ödev
+Exercise
 --------
 Bu ödevde, üç farklı dizideki elemanları kıyaslamalı ve bu üç dizideki ortak elemanı yazdırmalısınız. Not: Soruyu çözebilmek için [[Karar Verme]] ve [[Döngüler]] sayfalarını okumanız gerekmektedir.
 

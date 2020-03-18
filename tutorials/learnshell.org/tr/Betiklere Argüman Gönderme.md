@@ -19,7 +19,7 @@ $# değişkeni ise, betiğin çalışması için gönderilen argüman sayısın�
 
 $@ değişkeni, tüm argümanların boşlukla ayrılmış halini dizgi olarak saklar.
 
-Ödev
+Exercise
 -------------
 Bu bölümde ödev bulunmamaktadır. Öğrenim serüveninize devam edebilirsiniz.
 
