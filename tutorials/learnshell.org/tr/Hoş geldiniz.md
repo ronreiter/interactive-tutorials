@@ -19,7 +19,7 @@ Hangi bölümden başlamak istiyorsan sadece tıkla ve talimatları takip et. İ
 - [[Temel Dizgi İşlemleri]]
 - [[Koşullu Durumlar]]
 - [[Döngüler]]
-- [[Kabuk Fonksiyonları]]
+- [[Fonksiyonlar]]
 
 ### İleri Seviye Bilgiler
 
