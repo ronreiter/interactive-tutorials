@@ -57,7 +57,7 @@ Here are some ways to use a string:
     // Java defined the operator + on strings to concatenate:
     String s3 = s1 + s2;
 
-String is the only class where operator overloading is supported in java rest There is no operator overloading in Java!  We can concat two strings using + operator. The operator `+` is only defined for strings, you will never see it with other objects, only primitives.
+There is no operator overloading in Java but there is the exception that proves the rule - string is the only class where operator overloading is supported. We can concat two strings using + operator. The operator `+` is only defined for strings, you will never see it with other objects, only primitives.
 
 You can also concat string to primitives:
 
