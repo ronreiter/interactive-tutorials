@@ -1,6 +1,6 @@
 Tutorial
 --------
-Aritmetik İşlemler
+# Aritmetik İşlemler
 
 Basit aritmetik işlemler şu şekilde yapılabilirler: $((expression))
 
@@ -21,9 +21,8 @@ Temel işlemler şunlardır:
 
 **a** ****** **b** üs alma (a üssü b)
 
-Ödev
+Exercise
 --------
-In this exercise, you will need to calculate to total cost (variable TOTAL) of a fruit basket, which contains 1 pineapple, 2 bananas and 3 watermelons. Don't forget to include the cost of the basket....
 Bu ödevde, bir meyve sepetinin toplam ücretini hesaplamalı ve TOPLAM adlı değişkene atamalısınız. Bu emyve tabağı bir ananas, iki muz ve üç karpuz içermektedir. Tabağın maliyetini unutmayınız!
 
 Tutorial Code

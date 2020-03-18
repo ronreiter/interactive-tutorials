@@ -33,7 +33,7 @@ Değişkenler, herhangi bir komutun çıktı değerine atanabilir. Bu olay yer d
 
 Betik çalıştırıldığında, $() ifadesi içindeki komutu çalıştıracak ve çıktısını yakalayacaktır.
 
-Ödev
+Exercise
 --------
 Bu ödevin amacı; yer değiştirme metotları ile komutları kullanarak bir dizgi (string), bir tam sayı (integer) ve bir karmaşık değişken oluşturmaktır. Dizginin adı DOGUMTARIHI olmalı ve içinde "Jan 1, 2000" metnini saklamalıdır. Tam sayının adı Hediyeler olmalı ve 10 sayısını saklamalıdır. Karmaşık değişken ise DOGUMGUNU adında olmalı ve içinde değer olarak DOGUMTARIHI değişkenin sakladığı tarihin gün ismini saklamalıdır, örneğin: Saturday. Unutulmamalıdır ki, 'date' komutu, bir tarih formatını farklı bir tarih formatına çevirmek için de kullanılabilir. Örneğin, $trh1 içindeki tarih değerinin gün ismini trh1 değişkenine kaydetmek için şu komut kullanılabilir:
 

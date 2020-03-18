@@ -22,10 +22,9 @@ Bu cevap bize gösteriyor ki, kullandığınız kabuğun tipi "bash"tir, şimdi 
 
 /bin/bash
 
-This response shows the full execution path of the shell interpreter. Make sure that the "sha-bang" line at the beginning of your script, matches this same execution path.
 Bu cevap, kullandığınız kabuğun (örneğimizde "bash") tam dosya yolunu bize gösteriyor. Betiğinizdeki sha-bang'ın burada verilen yol ile aynı olması gerektiğine dikkat edin.
 
-Ödev
+Exercise
 -------------
 "echo" komutunu kullanarak "Merhaba, dünya!" satırını yazdırın.
 
