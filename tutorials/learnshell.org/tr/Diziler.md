@@ -22,7 +22,7 @@ Dizilerin elemanları, sıra numaraları (index) ile erişilebilmektedir. İlk s
     echo ${#benim_dizim[@]}                      # 5
     echo ${benim_dizim[${benim_dizim[@]}-1]}     # havuç - Dizinin her zaman son elemanını verir.
 
-Ödev
+Exercise
 --------
 In this exercise, you will need to add numbers and strings to the correct arrays. You must add the numbers 1,2, and 3 to the "numbers" array, and the words 'hello' and 'world' to the strings array.
 Bu ödevde, belirli sayıları ve dizgileri doğru dizilere eklemeniz gerekmektedir. 1, 2 ve 3 sayılarını "sayilar" dizisine; "merhaba" ve "dünya" dizgilerini "dizgi" dizisine eklemelisiniz.

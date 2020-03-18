@@ -77,7 +77,7 @@ Değiştirilecek ifadeyi kabuktaki herhangi bir komutun çıktısı ile değişt
     dizgi="to be or not to be"
     echo ${dizgi[@]/%be/be on $(date +%Y-%m-%d)}    # to be or not to be on 2012-06-14
 
-Ödev
+Exercise
 --------
 Bu ödevinizde, Warren Buffet'in bilindik söylemini değiştirmelisiniz. İlk olarak benDerim adlı bir değişken yaratın ve ona asıl söylemi atayın. Daha sonra, dizgi işlemlerini kullanarak aşağıdaki dört değişikliği sırası ile atamaya çalışın:
 - İlk değişiklik: ilk "snow" kelimesini "foot" ile değiştirin.

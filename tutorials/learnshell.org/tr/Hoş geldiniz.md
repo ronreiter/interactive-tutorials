@@ -6,7 +6,6 @@ Deneyimli bir programcı olsanız da olmasanız da, bu web sitesi Unix/Linux kab
 
 Sorular, tartışmalar ve güncellemeler için Facebook'taki grubumuza davetlisiniz.
 
-Just click on the chapter you wish to begin from, and follow the . Good luck!
 Hangi bölümden başlamak istiyorsan sadece tıkla ve talimatları takip et. İyi şanslar!
 
 ### Temel Bilgileri Öğrenin
@@ -18,7 +17,7 @@ Hangi bölümden başlamak istiyorsan sadece tıkla ve talimatları takip et. İ
 - [[Dizi Karşılaştırma]]
 - [[Temel İşlemler]]
 - [[Temel Dizgi İşlemleri]]
-- [[Karar Verme]]
+- [[Koşullu Durumlar]]
 - [[Döngüler]]
 - [[Kabuk Fonksiyonları]]
 
