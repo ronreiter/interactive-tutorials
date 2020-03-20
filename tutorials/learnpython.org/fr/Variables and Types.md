@@ -1,4 +1,4 @@
-Tutoriel
+Tutorial
 --------
 
 Python est complètement orienté objet et non "typé statiquement". Vous n'avez pas besoin de declarer des variables avant de les utiliser, ni de déclarer leur type. Chaque variable en Python est un objet.
@@ -22,19 +22,19 @@ Pour définir un nombre à virgule flottante, vous pouvez utiliser l'une des not
 
 ### Chaînes de caractères
 
-Les chaînes de caractères sont définies avec des guillemets, soit simples, soit doubles.
+Les chaînes de caractères sont définies avec des guillemets (anglais) soit simples, soit doubles.
 
     monstr = 'salut'
     print(monstr)
     monstr = "salut"
     print(monstr)
 
-La différence entre les deux est que l'utilisation de guillemets doubles facilite l'inclusion des apostrophes (alors qu'elles termineraient la chaîne si l'on utilisait des guillemets simples)
+La différence entre les deux est que l'utilisation de guillemets doubles facilite l'inclusion des apostrophes (alors qu'elles termineraient la chaîne si l'on utilisait des guillemets simples) :
 
     monstr = "Je ne m'inquiète pas des apostrophes"
     print(monstr)
     
-Il existe des variations supplémentaires pour la définition de chaînes, qui facilitent l'inclusion de caractères comme les retours à la ligne, les barres obliques inversées (antislashes) et des caractères Unicode. Ceux-ci dépassent le cadre de ce tutoriel, mais sont traités dans la [documentation de Python](https://www.afpy.org/doc/python/3.6/tutorial/introduction.html#strings "Les chaînes de caractères dans le Tutoriel Python").
+On peut toutefois include des `"` ou `'` dans l'une ou l'autre version en utilisant le caractère d'échappement `\` (barre oblique inversée ou "antislash"), comme par exemple `"Il m'a dit \"Bonjour\"."` De même on peut inclure des retours à la ligne en utilisant `"\n"`, et des caractères Unicode. Celà dépasse le cadre de ce tutoriel, on pourra se référer à la [documentation de Python](https://www.afpy.org/doc/python/3.6/tutorial/introduction.html#strings "Les chaînes de caractères dans le Tutoriel Python").
 
 Des opérateurs simples peuvent être appliqués aux nombres et aux chaînes&nbsp;:
 
@@ -53,7 +53,9 @@ Les affectations peuvent être effectuées à plus d'une variable "simultanémen
     a, b = 3, 4
     print(a,b)
 
-Le mélange des opérandes entre nombres et chaînes n'est pas pris en charge&nbsp;:
+Ceci est surtout pratique pour permuter deux valeurs (en faisant `a,b = b,a`).
+
+Le mélange d'opérandes de type numérique et chaînes de caractères n'est pas pris en charge&nbsp;:
 
     # Ceci ne fonctionnera pas !
     un = 1
@@ -62,20 +64,21 @@ Le mélange des opérandes entre nombres et chaînes n'est pas pris en charge&nb
     
     print(un + deux + hello)
 
+(Par contre, on peut multiplier une chaîne par un entier pour la "dédoubler" plusieurs fois, par exemple `' ' * 10` va créer une chaine de 10 espaces.) 
 
-Exercice
+Exercise
 --------
 
 L'objectif de cet exercice est de créer une chaîne de caractères, un entier, et un nombre à virgule flottante. La chaîne devra être nommée `mystring` et devra contenir le mot "hello". Le nombre à virgule flottante devra être nommé `myfloat` et devra contenir le nombre 10.0, et le nombre entier devra être nommé `myint` et devra contenir le nombre 20.
 
 Tutorial Code
 -------------
-# changez ce code
+# changez le code ici conformément à l'énoncé :
 mystring = None
 myfloat = None
 myint = None
 
-# code de test
+# code pour vérification : (à ne pas modifier!) 
 if mystring == "hello":
     print("String: %s" % mystring)
 if isinstance(myfloat, float) and myfloat == 10.0:
@@ -97,12 +100,12 @@ success_msg("Bon travail !")
 Solution
 --------
 
-# changez ce code
+# changez le code ici conformément à l'énoncé :
 mystring = "hello"
 myfloat = 10.0
 myint = 20
 
-# code de test
+# code pour vérification : (à ne pas modifier!) 
 if mystring == "hello":
     print("String: %s" % mystring)
 if isinstance(myfloat, float) and myfloat == 10.0:
