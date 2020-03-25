@@ -38,7 +38,7 @@ Or we can do it in a single line as,
 
 or simply
 
-    int marks[] = { 96. 92, 78, 54, 86};
+    int marks[] = { 96, 92, 78, 54, 86};
 
 Now we can access the elements of this array using [ ]. Arrays are 0 indexed, so your first element would be marks[0] i.e. 96. Lets print this.
 
