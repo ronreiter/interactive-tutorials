@@ -56,7 +56,7 @@ implemented, using the dot operator. To reference the `draw_game` function from 
 we would need to import the `draw` module and only then call `draw.draw_game()`. 
 
 When the `import draw` directive will run, the Python interpreter will look for a file in the directory which
-the script was executed from, by the name of the module with a `.py` prefix, so in our case it will try to
+the script was executed from, by the name of the module with a `.py` suffix, so in our case it will try to
 look for `draw.py`. If it will find one, it will import it. If not, he will continue to look for built-in modules.
 
 You may have noticed that when importing a module, a `.pyc` file appears, which is a compiled Python file. 
