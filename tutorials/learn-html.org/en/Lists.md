@@ -68,7 +68,7 @@ To count using lowercase roman numerals, use type="i":
 
 Here is an example of how to create an unordered list:
     
-    <p>Here is a list of unordered items:</p>    
+   <p>Here is a list of unordered items:</p>    
     <ul>
         <li>First item</li>
         <li>Second item</li>
@@ -124,9 +124,15 @@ Here is an example of the none list style type:
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
+Use `<ul>` and `<ol>` listing the list(bottom) below the text `My favorite foods/drinks list`.<br>
+(<b>Hint</b>: You can insert a list to a list like `<ol>` into `<li>`)
 
-[[https://github.com/ronreiter/interactive-tutorials]]
+	• Foods
+		1. Egg
+		2. Sushi
+	• Drinks
+		1. Apple juice
+		2. Coffee
 
 
 Tutorial Code
@@ -134,34 +140,61 @@ Tutorial Code
 
     <!DOCTYPE html>
     <html>
-        <head>
-        </head>
         <body>
+        <p>My favorite foods/drinks list</p>
         </body>
     </html>
     
 Expected Output
 ---------------
 
-    <!DOCTYPE html>
+     <!DOCTYPE html>
     <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
         <body>
-            <p>Hello, World!</p>
+            <p>My favorite foods/drinks list</p>
+        <ul>
+            <li>Foods		
+                <ol>
+                    <li>Egg</li>
+                    <li>Sushi</li>
+                </ol>			
+            </li>
+			
+            <li>Drinks
+			
+		<ol>
+			<li>Apple juice</li>
+			<li>Coffee</li>
+		</ol>
+		
+	  </li>
+        </ul>
         </body>
     </html>
 
 Solution
 --------
 
-    <!DOCTYPE html>
+     <!DOCTYPE html>
     <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
         <body>
-            <p>Hello, World!</p>
+            <p>My favorite foods/drinks list</p>
+        <ul>
+            <li>Foods		
+                <ol>
+                    <li>Egg</li>
+                    <li>Sushi</li>
+                </ol>			
+            </li>
+			
+            <li>Drinks
+			
+		<ol>
+			<li>Apple juice</li>
+			<li>Coffee</li>
+		</ol>
+		
+	  </li>
+        </ul>
         </body>
     </html>
