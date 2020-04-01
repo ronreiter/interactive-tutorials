@@ -42,9 +42,8 @@ Let's try it out:
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
+1. Mark the word `Go to google.` to a `link` to `https://www.google.com` .
+2. Mark the word `Go to blue!` to an `anchor` and link it to element `<div id="blue">` , and so does ` Back to green!` .
 
 
 Tutorial Code
@@ -53,33 +52,79 @@ Tutorial Code
     <!DOCTYPE html>
     <html>
         <head>
+        <style>
+         div {
+           width:60%;
+           height:150px;
+         }
+        </style>
         </head>
         <body>
+		
+	<!--Start Your Code Under Here-->
+	
+	Go to google.
+	
+	<h3>I'm Green!</h3>
+	
+	Go to blue!
+	
+	<div id='green' style='background-color:#00A000'></div>
+	
+	<h3>I'm Blue!</h3>
+	
+	Back to green!
+	
+	<div id='blue' style='background-color:#0000A0'></div>
+	
         </body>
     </html>
     
 Expected Output
 ---------------
-
-    <!DOCTYPE html>
+   <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+	<style>
+	   div {
+	      width:60%;
+	      height:150px;
+	   }
+	</style>
         </head>
         <body>
-            <p>Hello, World!</p>
+	<a href='https://www.google.com'>Go to google.</a>
+	<h3>I'm Green!</h3>
+	<a href='#blue'>Go to blue!</a>
+	<div id='green' style='background-color:#00A000'></div>
+	<h3>I'm Blue!</h3>
+	<a href='#green'>Back to green!</a>
+	<div id='blue' style='background-color:#0000A0'></div>
         </body>
     </html>
+    
 
 Solution
 --------
 
-    <!DOCTYPE html>
+     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+	<style>
+	   div {
+	      width:60%;
+	      height:150px;
+	   }
+	</style>
         </head>
         <body>
-            <p>Hello, World!</p>
+	<a href='https://www.google.com'>Go to google.</a>
+	<h3>I'm Green!</h3>
+	<a href='#blue'>Go to blue!</a>
+	<div id='green' style='background-color:#00A000'></div>
+	<h3>I'm Blue!</h3>
+	<a href='#green'>Back to green!</a>
+	<div id='blue' style='background-color:#0000A0'></div>
         </body>
     </html>
+    
