@@ -188,7 +188,7 @@ def init_tutorials():
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
                     text, code, output, solution = tutorial_sections[0]
-                    tutorial_dict["page_title"] = tutorial.decode("latin-1")
+                    tutorial_dict["page_title"] = tutorial.decode("utf8")
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)
                     tutorial_dict["output"] = untab(output)
@@ -203,7 +203,7 @@ def init_tutorials():
                 for link in links:
                     if not link in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
-                            "page_title" : link.decode("latin-1"),
+                            "page_title" : link.decode("utf8"),
                             "text": contributing_tutorials,
                             "code": ""
                         }
