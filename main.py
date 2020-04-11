@@ -58,6 +58,7 @@ LANGUAGES = {
     "cn": "普通话",
     "fr": "Français",
     "pt": "Português",
+    "tr": "Türkçe",
 }
 
 tutorial_data = {}
