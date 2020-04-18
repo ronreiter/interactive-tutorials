@@ -21,7 +21,7 @@ Spis treści
  - [[Podstawowe operacje na napisach]]
  - [[Instrukcje warunkowe]]
  - [[Petle|Pętle]]
- - [[Funkcje|Funkcje]]
+ - [[Funkcje]]
  - [[Klasy i obiekty]]
  - [[Slowniki|Słowniki]]
  - [[Moduly i pakiety|Moduły i pakiety]]
