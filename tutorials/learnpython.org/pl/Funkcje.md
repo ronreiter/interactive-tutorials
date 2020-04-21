@@ -75,11 +75,11 @@ Po prostu napisz nazwę funkcji razem z argumentami w nawiasach, jak widać w pr
 
 W tym ćwiczeniu użyjesz istniejącej funkcji oraz dodasz swoją własną, aby stworzyć w pełni funkcjonalny program.
 
-1. Dodaj funkcję nazwaną `lista_korzysci()` – która zwraca tablicę następujących napisów: "Lepiej zorganizowany kod", "Wieksza czytelnosc kodu", "Latwiejsze wielokrotne uzycie kodu", "Mozliwosc dzielenia sie kodem i laczenia go w calosc przez rozne osoby"
+ 1. Dodaj funkcję nazwaną `lista_korzysci()` – która zwraca tablicę następujących napisów: "Lepiej zorganizowany kod", "Wieksza czytelnosc kodu", "Latwiejsze wielokrotne uzycie kodu", "Mozliwosc dzielenia sie kodem i laczenia go w calosc przez rozne osoby"
 
-2. Dodaj funkcję nazwaną `buduj_zdanie(info)`, która otrzymuje pojedynczy argument zawierający napis i zwraca zdanie zaczynające się podanym napisem i kończące się " jest zaleta funkcji!"
+ 2. Dodaj funkcję nazwaną `buduj_zdanie(info)`, która otrzymuje pojedynczy argument zawierający napis i zwraca zdanie zaczynające się podanym napisem i kończące się " jest zaleta funkcji!"
 
-3. Wykonaj i zobacz jak funkcje ze sobą współpracują.
+ 3. Wykonaj i zobacz jak funkcje ze sobą współpracują.
 
 Tutorial Code
 -------------
@@ -109,6 +109,7 @@ Latwiejsze wielokrotne uzycie kodu jest zaleta funkcji!
 Mozliwosc dzielenia sie kodem i laczenia go w calosc przez rozne osoby jest zaleta funkcji!
 
 Solution
+-----------
 # Ta funkcja powinna zwracac tablice napisow, ktore wymieniono w punkcie 1.
 def lista_korzysci():
     return tablica
