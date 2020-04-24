@@ -14,11 +14,11 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Variables]]
 - [[Passing Arguments to the Script]]
 - [[Arrays]]
-- [[Array-Comparison]]
 - [[Basic Operators]]
 - [[Basic String Operations]]
 - [[Decision Making]]
 - [[Loops]]
+- [[Array-Comparison]]
 - [[Shell Functions]]
 
 ### Advanced Tutorials
