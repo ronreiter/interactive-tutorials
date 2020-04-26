@@ -11,14 +11,14 @@ Nasza strona jest ciągle w rozbudowie, więc jeśli chcesz nam pomóc, napisz p
 
 ### Spis treści
 
-- [[Witaj świecie]]
+- [[Witaj świecie|Witaj Swiecie]]
 - [[Zmienne i typy]]
 - [[Decyzje]]
 - [[Decyzje jeszcze raz]]
 - [[Tablice]]
 - [[Napisy]]
-- [[Petla while]]
-- [[Petla for]]
+- [[Pętla while|Petla while]]
+- [[Pętla for|Petla for]]
 - [[Funkcje]]
 
 Tutorial Code
