@@ -56,7 +56,7 @@ A horizontal ruler `<hr>` tag acts as a simple separator between page sections.
         <body>
             <h1>My First Page</h1>
             <p>This is my first page.</p>
-            <hr/>
+            <hr>
             <p>This is the footer - all rights are reserved to me.</p>
         </body>
     </html>
