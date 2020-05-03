@@ -35,11 +35,11 @@ Python también soporta multiplicar texto o cadenas para formar una cadena con u
 
 Listas pueden ser unidas con los operadores de adición:
 
-    even_numbers = [2,4,6,8]
-    odd_numbers = [1,3,5,7]
-    all_numbers = odd_numbers + even_numbers
+    numeros_pares = [2,4,6,8]
+    numeros_impares = [1,3,5,7]
+    todos_los_numeros = numeros_pares + numeros_impares
 
-Just as in strings, Python supports forming new lists with a repeating sequence using the multiplication operator:
+Al igual que en las cadenas, Python admite la formación de nuevas listas con una secuencia repetitiva utilizando el operador de multiplicación:
 
     print [1,2,3] * 3
 
@@ -63,13 +63,13 @@ print "x_list contains %d objects" % len(x_list)
 print "y_list contains %d objects" % len(y_list)
 print "big_list contains %d objects" % len(big_list)
 
-# testing code
+# Código de Prueba
 if x_list.count(x) == 10 and y_list.count(y) == 10:
     print "Almost there..."
 if big_list.count(x) == 10 and big_list.count(y) == 10:
     print "Great!"
 
-Expected Output
+Salida Esperada
 ---------------
 
 x_list contains 10 objects
@@ -78,12 +78,12 @@ big_list contains 20 objects
 Almost there...
 Great!
 
-Solution
+Solución
 --------
 x = object()
 y = object()
 
-# change this code
+# Cambiar este código
 x_list = [x]*10
 y_list = [y]*10
 big_list = x_list + y_list
@@ -92,7 +92,7 @@ print "x_list contains %d objects" % len(x_list)
 print "y_list contains %d objects" % len(y_list)
 print "big_list contains %d objects" % len(big_list)
 
-# testing code
+# Código de Prueba
 if x_list.count(x) == 10 and y_list.count(y) == 10:
     print "Almost there..."
 if big_list.count(x) == 10 and big_list.count(y) == 10:
