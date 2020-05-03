@@ -1,0 +1,43 @@
+//Tutorial de Array en JavaScript:
+
+/* JavaScript puede contener una matriz de variables en un objeto Array. En JavaScript, una matriz también funciona como una lista, una pila o una cola. 
+Para definir una matriz, use la notación de corchetes o la notación de objeto Array: */
+	
+	var miArreglo = [1, 2, 3];
+	var copiaMiArreglo = new Array(1, 2, 3);
+	
+//Direccionamiento y Acceso:
+/* Puedes usar corchetes [] para acceder a una celda específica del arreglo. El direccionamiento utiliza indicies con ínicio en 0, es decir por ejemplo en miArreglo el segundo elemento es accesible con el índice = 1 */
+
+	Console.log(miArreglo[1]);
+	
+	//En consola se visualizará: 2
+	
+/* Los arreglos en JavaScript son escasos, es decir que no se crean los índices de manera contínua, esto significa que podemos asignar variables a ubicaciones aleatorias a pesar de que las celdas anteriores no estaban definidas. Por ejemplo: */
+	
+	var miArreglo = [];
+	miArreglo[3] = "Hola";
+	console.log(miArreglo);
+	
+	//En consola mostrará: [undefined, undefined, undefined, "Hello"]
+	
+//Elementos de un arreglo:
+/* Debido a que las matrices de JavaScript son solo tipos especiales de objetos puede tener elementos de diferentes tipos almacenados juntos en la misma matriz. El siguiente ejemplo es una matriz con una cadena, un número y un pobjeto vacío: */
+
+	var miArreglo = ["cadenaTexto", 10, {}];
+	
+//Ejercicio:
+/* Definir un arreglo con las siguientes tres variables:
+		1- Una cadena con el valor "¿Cuál es el significado de la vida?"
+		2- Un número que tenga el vaor 42
+		3- Un variable booleana con valor True */
+		
+//Resolución:
+		//TODO: cambiamos miArreglo para que contenga lo solicitado:
+			var miArreglo = ["¿Cuál es el significado de la vida?", 42, true];
+			console.log(miArreglo[0]);console.log(miArreglo[1]);console.log(miArreglo[2]);
+			
+		//En consola se mostrará: ¿Cuál es el significado de la vida? 42 true
+	
+			
+	
