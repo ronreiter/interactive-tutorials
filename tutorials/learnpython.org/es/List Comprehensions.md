@@ -3,24 +3,24 @@ Tutorial
 
 Las compresiones de listas son una herramienta muy poderosa, que crea una lista basada en otra, en una única linea legible.
 
-For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
+Por ejemplo, vamos a decir que necesitamos crear una lista de enteros  que especifique la longitud de cada palabra en una frase en concreto, pero solo si la palabra no es "el".
 
-Por ejemplo, vamos a decir que necesitamos crear una lista de enteros  que especifique la longitud de cada palabra en una frase en concreto, pero solo si la palabra no es "the".
-
-    sentence = "the quick brown fox jumps over the lazy dog"
-    words = sentence.split()
-    word_lengths = []
-    for word in words:
-          if word != "the":
-              word_lengths.append(len(word))
-    print(words)
+    sentencia = "el rápido zorro marrón salta sobre el perro perezoso"
+    palabras = sentencia.split()
+    longitud_palabra = []
+    for palabra in palabras:
+          if palabra != "el":
+              longitud_palabra.append(len(palabra))
+    print(palabras)
+    print(longitud_palabra)
 
 Usando una comprensión de lista podemos simplificar éste proceso a ésta notación:
 
-    sentence = "the quick brown fox jumps over the lazy dog"
-    words = sentence.split()
-    word_lengths = [len(word) for word in words if word != "the"]
-    print(words)
+    sentencia = "el rápido zorro marrón salta sobre el perro perezoso"
+    palabras = sentencia.split()
+    longitud_palabras = [len(palabra) for palabra in palabras if palabra != "el"]
+    print(palabras)
+    print(longitud_palabras)
 
 Exercise
 --------
