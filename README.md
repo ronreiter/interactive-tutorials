@@ -42,3 +42,5 @@ superreg
 JBoy Advance
 
 qwong95
+
+AddaxSoft
