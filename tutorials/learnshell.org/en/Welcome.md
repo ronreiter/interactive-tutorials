@@ -8,9 +8,6 @@ You are welcome to join our group on Facebook for questions, discussions and upd
 
 Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-Table of Contents - Shell Programming
------------------
-
 ### Learn the Basics
 
 - [[Hello, World!]]
@@ -21,6 +18,7 @@ Table of Contents - Shell Programming
 - [[Basic String Operations]]
 - [[Decision Making]]
 - [[Loops]]
+- [[Array-Comparison]]
 - [[Shell Functions]]
 
 ### Advanced Tutorials
@@ -29,6 +27,7 @@ Table of Contents - Shell Programming
 - [[Bash trap command]]
 - [[File Testing]]
 - [[Input Parameter Parsing]]
+- [[Pipelines]]
 - [[Process Substitution]]
 - [[Regular Expressions]]
 - [[Special Commands  sed,awk,grep,sort]]

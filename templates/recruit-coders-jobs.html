@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block page_title %}Jobs{% endblock %}
+{% block content %}
+<div class="container">
+{#    <script type="text/javascript" src="https://www.spoj.com/job-widget-x.js"></script>#}
+
+
+    <div id="zipsearch_container">
+    </div>
+    <script type="text/javascript" src="https://www.ziprecruiter.com/jobs-widget/pro/v2/ewyge5gsybdrde3nf5nvhd28h6eq2ydn"></script>
+    <script>
+        var options = {
+            container: "zipsearch_container",
+            alerts_api_key: "jqe3gfzaejjy3imjctpa5j3yy8pbnqej",
+            jobs_per_page: '10',
+            search: '{{ domain_data.language_uppercase }}',
+        };
+        zipsearch.init(options);
+    </script>
+</div>
+{% endblock %}

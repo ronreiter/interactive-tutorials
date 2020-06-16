@@ -1,3 +1,5 @@
+This site is generously supported by [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offers online interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) for Data Science. Join **575,000** other learners and get started learning Python for data science today!
+
 # Welcome
 
 Welcome to the LearnPython.org interactive Python tutorial.
@@ -8,9 +10,6 @@ You are welcome to join our group on <a href="http://www.facebook.com/groups/180
 
 Just click on the chapter you wish to begin from, and follow the instructions. Good luck!<br>
 
-
-Table of Contents
------------------
 
 ### Learn the Basics
 
@@ -27,6 +26,10 @@ Table of Contents
 - [[Dictionaries]]
 - [[Modules and Packages]]
 
+### Data Science Tutorials
+- [[Numpy Arrays]]
+- [[Pandas Basics]]
+
 ### Advanced Tutorials
 
 - [[Generators]]
@@ -38,16 +41,15 @@ Table of Contents
 - [[Serialization]]
 - [[Partial functions]]
 - [[Code Introspection]]
+- [[Closures]]
 - [[Decorators]]
+- [[Map, Filter, Reduce]]
 
 ### Other Python Tutorials
 
+- [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) has tons of great interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) covering data manipulation, data visualization, statistics, machine learning, and more
 - Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
 
 ### Contributing Tutorials
 
 Read more here: [[Contributing Tutorials]]
-
-### Paid Tutorials
-
-- Take [Learn Python the Hard Way](http://ude.my/87d5) course from Zed Shaw

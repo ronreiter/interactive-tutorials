@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-Bit masking is simply the process of storing data truly as bits, as opposed to storing as chars/ints/floats.  It increadibly useful for storing certain types of data compactly and efficiently.
+Bit masking is simply the process of storing data truly as bits, as opposed to storing it as chars/ints/floats.  It is incredibly useful for storing certain types of data compactly and efficiently.
 
-The idea for bit masking is based off of boolean logic.  For those not familiar, boolean logic is the manipulation of 'true' (1) and 'false' (0) through logical operations (that take 0s and 1s as their argument).  We are concerned with the following operations:
+The idea for bit masking is based on boolean logic.  For those not familiar, boolean logic is the manipulation of 'true' (1) and 'false' (0) through logical operations (that take 0s and 1s as their argument).  We are concerned with the following operations:
 
 * NOT a - the final value is the opposite of the input value (1 -> 0, 0 -> 1)
 * a AND b - if both values are 1, the final value is 1, otherwise the final value is 0
@@ -65,7 +65,7 @@ storage ^= 1 << n;
    XOR         XOR
 00001000    00001000
    ==          ==
-00001010    01000010
+01001010    01000010
 ```
 
 ### Checking bit n
@@ -92,7 +92,7 @@ Use bit masks to manipulate some flags.
 
 Tutorial Code
 -------------
-
+    #include <stdio.h>
     #include <assert.h>
 
     /* Finish initializing the flags */
@@ -109,11 +109,11 @@ Tutorial Code
 
       /* Set the attributes ON, TRANSPARENT, and BROKEN */
 
-      assert(attributes == FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN);
+      assert(attributes == (FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN));
 
       /* Modify (set/clear/toggle) so the only attributes are ON and ALIVE */
 
-      assert(attributes == FLAG_ON | FLAG_ALIVE);
+      assert(attributes == (FLAG_ON | FLAG_ALIVE));
 
       /* Check if the ALIVE flag is set */
       assert(/* ??? */);
@@ -124,16 +124,18 @@ Tutorial Code
       /* Modify so only the EDIBLE attribute is set */
 
       assert(attributes == FLAG_EDIBLE);
+
+      printf("Done!");
     }
 
 
-Excepted Output
+Expected Output
 ---------------
-
+   Done!
 
 Solution
 --------
-
+    #include <stdio.h>
     #include <assert.h>
 
     /* Finish initializing the flags */
@@ -149,23 +151,23 @@ Solution
       short attributes = 0;
 
       /* Set the attributes ON, TRANSPARENT, and BROKEN */
-      storage |= FLAG_ON;
-      storage |= FLAG_TRANSPARENT;
-      storage |= FLAG_BROKEN;
+      attributes |= FLAG_ON;
+      attributes |= FLAG_TRANSPARENT;
+      attributes |= FLAG_BROKEN;
       // possible solution(s):
-      // storage |= FLAG_ON & FLAG_TRANSPARENT & FLAG_BROKEN;
-      // storage = FLAG_ON & FLAG_TRANSPARENT & FLAG_BROKEN;
+      // attributes |= FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN;
+      // attributes = FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN;
 
-      assert(attributes == FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN);
+      assert(attributes == (FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN));
 
       /* Modify (set/clear/toggle) so the only attributes are ON and ALIVE */
-      storage &= ~FLAG_TRANSPARENT;
-      // possible: storage ^= FLAG_TRANSPARENT;
-      storage ^= FLAG_BROKEN;
-      // possible: storage &= ~FLAG_BROKEN;
-      storage |= FLAG_ALIVE;
+      attributes &= ~FLAG_TRANSPARENT;
+      // possible: attributes ^= FLAG_TRANSPARENT;
+      attributes ^= FLAG_BROKEN;
+      // possible: attributes &= ~FLAG_BROKEN;
+      attributes |= FLAG_ALIVE;
 
-      assert(attributes == FLAG_ON | FLAG_ALIVE);
+      assert(attributes == (FLAG_ON | FLAG_ALIVE));
 
       /* Check if the ALIVE flag is set */
       assert(attributes & FLAG_ALIVE);
@@ -174,7 +176,9 @@ Solution
       assert(!(attributes & FLAG_BROKEN));
 
       /* Modify so only the EDIBLE attribute is set */
-      storage = FLAG_EDIBLE;
+      attributes = FLAG_EDIBLE;
 
       assert(attributes == FLAG_EDIBLE);
+
+      printf("Done!");
     }

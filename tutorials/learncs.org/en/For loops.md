@@ -60,7 +60,7 @@ This allows you to skip straight to the next iteration
     
     }
 
-Print only the even numbers by skipping the interations where i is odd.
+Print only the even numbers by skipping the interactions where i is odd.
 
 Exercise
 --------

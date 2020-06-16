@@ -16,8 +16,8 @@ To initialize an object, use curly braces:
 Members of objects can be addressed using the brackets operator `[]`, very much like arrays, but just like many
 other object oriented languages, the period `.` operator can also be used. They are very similar, except for
 the fact that brackets return a member by using a string, in contrast to the period operator,
-which requires the member to be a simple word (the word should not contain spaces,
-start with a letter or use illegal characters).
+which requires the member to be a simple word (the word should not contain spaces, 
+start with a number or use illegal characters).
 
 For example, we can continue to fill the person object with more details:
 
@@ -83,10 +83,10 @@ Solution
 
 // TODO: change this code
 var person = {
-    firstName : "Jack";
-    lastName : "Smith";
-    age : 19;
-    employed : true;
+    firstName : "Jack",
+    lastName : "Smith",
+    age : 19,
+    employed : true
 }
 
 console.log(person.firstName);

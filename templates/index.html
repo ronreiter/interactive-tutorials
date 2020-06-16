@@ -1,268 +1,233 @@
 {% extends "base.html" %}
 {% block page_title %}{{ html_title }}{% endblock %}
 {% block head %}
-    {% autoescape off %}
-    <script>
-        var domainData = {{ domain_data_json }};
-        var nextChapter = "/{{ language_code }}/{{ next_chapter }}";
-        var previousChapter = "/{{ language_code }}/{{ previous_chapter }}";
-        var backChapter = "/{{ language_code }}/{{ back_chapter }}";
-        var tutorialData = {{ tutorial_data_json }};
-    </script>
-    {% endautoescape %}
-    <script src="/static/js/learnpython.js"></script>
+{% autoescape off %}
+<script>
+    var domainData = {{ domain_data_json }};
+    var nextChapter = "/{{ language_code }}/{{ next_chapter }}";
+    var previousChapter = "/{{ language_code }}/{{ previous_chapter }}";
+    var backChapter = "/{{ language_code }}/{{ back_chapter }}";
+    var tutorialData = {{ tutorial_data_json }};
+</script>
+{% endautoescape %}
+<script src="/static/js/learnpython.js"></script>
 {% endblock %}
 
-{% block title %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
-{% block ogtitle %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
+{% block title %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free
+    Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
+{% block ogtitle %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free
+    Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
 {% block ogurl %}{{ domain_data.full_url }}{% if tutorial_page %}/{{ path }}{% endif %}{% endblock %}
 
 {% block content %}
 <div class="container" id="main">
     <div class="row">
+        <div class="col-12">
 
-        <div class="span10" style="padding-right: 10px; box-sizing: border-box;">
-
-            <div>
-                <script type="text/javascript"><!--
-                    google_ad_client = "ca-pub-3723950136133694";
-                    /* Learn Python Bottom */
-                    google_ad_slot = "7782329453";
-                    google_ad_width = 728;
-                    google_ad_height = 90;
-                    //-->
+            <div class="mb-3">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Interactive Tutorials Top -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-3723950136133694"
+                     data-ad-slot="2345161899"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
 
             {% if page_title %}
-            <ul class="breadcrumb" style="margin-top: 10px">
-              {% if back_chapter %}
-              <li><a href="/{{ language_code }}/{{ back_chapter }}">{{ back_chapter }}</a> <span class="divider">/</span></li>
-              {% endif %}
-              <li class="active">{{ page_title }}</li>
-            </ul>
+                <ul class="breadcrumb" style="margin-top: 10px">
+                    {% if back_chapter %}
+                        <li><a href="/{{ language_code }}/{{ back_chapter }}">{{ back_chapter }}</a> <span
+                                class="divider mr-1">/</span></li>
+                    {% endif %}
+                    <li class="active">{{ page_title }}</li>
+                </ul>
             {% endif %}
 
-            <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
-                {% if previous_chapter %}
-                <a class="btn pull-left" href="/{{ language_code }}/{{ previous_chapter }}"> <i class="icon-chevron-left"></i> Previous Tutorial</a>
-                {% endif %}
-                {% if next_chapter %}
-                <a class="btn pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial <i class="icon-chevron-right"></i></a>
-                {% endif %}
-            </div>
-
-            <span id="inner-text">{% autoescape off %}
-                {% if page_title %}
-                <h1>{{ page_title }}</h1>
-                {% endif %}
-                {{ text }}
-            {% endautoescape %}</span>
-            {% if wiki_user %}
-            <small style="color: gray; margin-top: 10px">This page was last edited by {{ wiki_user }}</small>
-            {% endif %}
-            <div class="clearfix" style="margin-top: 10px; margin-bottom: 10px;">
-                {% if previous_chapter %}
-                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}"><i class="icon-chevron-left icon-white"></i> Previous Tutorial</a>
-                {% endif %}
-                {% if next_chapter %}
-                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">Next Tutorial  <i class="icon-chevron-right icon-white"></i></a>
-                {% endif %}
-            </div>
-
-            <!--
-            <div>
-                <script type="text/javascript">
-                    google_ad_client = "ca-pub-3723950136133694";
-                    /* Learn Python Top Links */
-                    google_ad_slot = "7304541053";
-                    google_ad_width = 728;
-                    google_ad_height = 15;
-                </script>
-                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-            </div>
-            -->
-
-            <!-- SKILLFEED -->
-            {% if domain_data.language == "python" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=python&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px; margin-right: -20px"></iframe>
-            {% endif %}
-            {% if domain_data.language == "java" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=java%20-javascript&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            {% if domain_data.language == "c" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=c%20programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            {% if domain_data.language == "javascript" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=javascript+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            {% if domain_data.language == "perl" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=perl+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            {% if domain_data.language == "php" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=php+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            {% if domain_data.language == "shell" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=shell+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            {% if domain_data.language == "ruby" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=ruby+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            <!--
-            {% if domain_data.language == "c#" %}
-            <iframe src="https://www.skillfeed.com/related_courses?border=yes&search=yes&title=Related Tutorials&head=center&keyword=c%23+programming&affiliate_code=67577" width="800" height="255" frameborder="0" style="margin-left: -10px"></iframe>
-            {% endif %}
-            -->
-            <!-- END SKILLFEED -->
-
-            <div>
-                <script type="text/javascript"><!--
-                    google_ad_client = "ca-pub-3723950136133694";
-                    /* Learn Python Bottom */
-                    // google_ad_slot = "7782329453";
-
-                    /* Learn Python Long Bottom */
-                    google_ad_slot = "7062365450";
-                    google_ad_width = 728;
-                    google_ad_height = 90;
-                    //-->
-                </script>
-                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-            </div>
         </div>
-        <div class="span2" style="margin-left: 0">
-            <div id="google-ad-right">
-                <!--
-                <div style="margin-bottom: 10px">
-                    <a href="http://www.dreamhost.com/r.cgi?1502972"><img alt="DreamHost" src="http://images.dreamhost.com/rewards/300x250-Sunny.png" style="width: 160px; max-width: 160px"/></a>
-                </div>
-                -->
 
-                {% if domain_data.language == "python" %}
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'Udemy');return false;" href="http://ude.my/87d5">
-                        <img src="/static/img/banners/learnpythonthehardway.jpg" style="width: 160px; max-width: 160px"/>
-                    </a>
-                </div>
-                {% endif %}
-
-                <div style="margin-bottom: 10px">
-                    <script>
-                        google_ad_client = "ca-pub-3723950136133694";
-                        google_ad_slot = "6624688330";
-                        google_ad_width = 160;
-                        google_ad_height = 600;
-                    </script>
-
-                    <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>
-                </div>
-
-                {% if domain_data.language == "python" %}
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'PyCharm');return false;" href="http://www.jetbrains.com/pycharm?utm_source=learnpythonorg&utm_medium=Banner&utm_campaign=PyCharm">
-                        <img src="/static/img/banners/pycharm.png" style="width: 160px; max-width: 160px"/>
-                    </a>
-                </div>
-                {% endif %}
-                <div>
-                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png"></a>
-                </div>
-
-                <!--
-                <div style="margin-bottom: 10px">
-                    <script>
-                        google_ad_client = "ca-pub-3723950136133694";
-                        google_ad_slot = "6624688330";
-                        google_ad_width = 160;
-                        google_ad_height = 600;
-                    </script>
-
-                    <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                    </script>
-                </div>
-                -->
-                {% if domain_data.language == "python" %}
-                <!--
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'LearnC');return false;" href="http://www.learn-c.org">
-                        <img src="/static/learn-c-banner.png" style="width: 160px"/>
-                    </a>
-                </div>
-                <div style="margin-bottom: 10px">
-                    <a onClick="recordOutboundLink(this, 'Outbound Links', 'LearnJava');return false;" href="http://www.learnjavaonline.org">
-                        <img src="/static/learnjavaonline-banner.png" style="width: 160px"/>
-                    </a>
-                </div>
-                -->
-                {% endif %}
-                <!--
-                <div style="margin-bottom: 10px">
-                    <IFRAME FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=160 HEIGHT=600 SRC="http://ad.tblamnetwork.com/st?ad_type=iframe&ad_size=160x600&section=4633617&pub_url=${PUB_URL}"></IFRAME>
-                </div>
-                -->
-            </div>
-        </div>
     </div>
-</div>
-<footer>
-    <div class="container">
 
     <div class="row">
 
-	<div class="span6">
-        <h5 style="line-height: 28px">
-            Code Window
-            <span style="float: right;">
-                <button id="run-button" class="btn btn-success" onclick="execute()"><div class="icon-play icon-white" style="padding-right: 10px"></div>Run</button>
-                <button id="reset-button" onclick="reset()" class="btn btn-primary">Reset</button>
-                <button id="solution-button" onclick="showSolution()" class="btn btn-primary">Solution</button>
-            </span>
-        </h5>
+        <div class="col col-lg-10">
+            <div id="inner-text">{% autoescape off %}
+                {% if page_title %}
+                    <h1>{{ page_title }}</h1>
+                    <hr/>
+                {% endif %}
+                {{ text }}
+            {% endautoescape %}</div>
 
-
-<textarea id="code" style="width: 100%; height: 210px">{{ code }}</textarea>
-
-    </div>
-
-	<div class="span6">
-		<div style="width: 100%; height: 100%">
-            <h5 style="line-height: 28px">
-                Output Window
-                <span style="float: right">
-                    <button id="expected-output-button" class="btn btn-primary" onclick="showExpected()">Expected Output</button>
-                </span>
-            </h5>
-            <!--<div id="canvas_container" style="display: none; border: 1px solid #eed; width: 475px; height: 210px"></div>-->
-            <div id="loading" style="padding: 0 4px; box-sizing: border-box; color: #A6E22C; font-family: monospace; display:none; margin-bottom: -200px; position: relative; z-index: 10; width: 100%; height: 200px; background: url(/static/img/se-logo-anim.gif)">
-                Executing, please wait...
+            <div class="row mt-2">
+                <div class="col">
+                    <button id="start-exercise" class="btn btn-success pull-left mt-2" onclick="reset()">
+                        <i class="fas fa-play"></i> Start Exercise
+                    </button>
+                </div>
             </div>
-            <textarea id="output" style="width: 475px; height: 210px"></textarea>
-            <div style="background: rgba(255,255,255,0.1); margin-top: -20px; text-align: right; font-size: 10px; color: white; z-index: inherit; position: relative; line-height: 20px; padding-right: 5px;">
-                Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+
+            <hr/>
+
+            <div class="row mt-2 mb-2">
+                <div class="col">
+                    {% if previous_chapter %}
+                        <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}">
+                            <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                        </a>
+                    {% endif %}
+
+
+                    {% if next_chapter %}
+                        <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">
+                            Next Tutorial <i class="fas fa-angle-double-right"></i>
+                        </a>
+
+                    {% endif %}
+                </div>
             </div>
-		</div>
-	</div>
 
+            <div class="row mt-2">
+                <div class="col">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Interactive Tutorials Bottom -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3723950136133694"
+                         data-ad-slot="6124145877"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
 
-    </div> <!-- row -->
+        </div>
 
-    </div> <!-- container -->
-
-    <div class="container">
-
-        <div class="row">
-            <div class="span12">
-                <div class="pull-right" style="padding-top: 3px">
-                    <a href="http://www.dmca.com/Protection/Status.aspx?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c" title="DMCA"> <img src ="/static/img/dmca_protected_sml_120ad.png?ID=fd56e7e2-9e1f-43cc-be7c-e1023cb5781c"  alt="DMCA.com" /></a>
+        <div class="col-2 d-none d-lg-block mt-2">
+            <div id="google-ad-right">
+                <h4>Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    {% for link, link_href in site_tutorial_links %}
+                        <div>
+                            <a href="{{ link_href }}">{{ link }}</a>
+                        </div>
+                    {% endfor %}
                 </div>
 
-                <div class="copyright">{% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a></div>
+                <h4 class="mt-3">Sponsors</h4>
+                <hr/>
+                <div class="mt-3">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- Interactive Tutorials Right -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:160px;height:600px"
+                         data-ad-client="ca-pub-3723950136133694"
+                         data-ad-slot="5528539062"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="mt-3">
+                    <a href="https://digitalocean.com/" target="_blank" >
+                        <img src="/static/img/banners/digital-ocean.png" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <div class="mt-3">
+                    <a href="http://www.spoj.com/?utm_campaign=permanent&utm_medium=banner&utm_source=learnx" target="_blank">
+                        <img src="/static/img/logos/spoj.png" style="width: 160px" alt="Sphere Engine">
+                    </a>
+                </div>
             </div>
         </div>
 
+    </div> <!-- row -->
+
+</div>
+
+{% include "footer.html" %}
+
+<footer id="dock">
+    <div class="container">
+        <div class="row mb-2">
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="code-window">
+                    <div class="row mb-2">
+                        <div class="col-2">
+                            <h5>Code</h5>
+                        </div>
+
+                        <div class="col-10 text-right">
+                            <button id="run-button" class="btn btn-success btn-sm" onclick="execute()">
+                                <i class="fas fa-play"></i> Run
+                            </button>
+                            <button id="reset-button" onclick="reset()" class="btn btn-primary btn-sm">
+                                <i class="fas fa-sync-alt"></i> Reset</button>
+                            <button id="solution-button" onclick="showSolution()" class="btn btn-primary btn-sm">Solution</button>
+
+                            <button id="toggle-dock-button" class="btn btn-primary btn-sm" onclick="toggleMinimize()">
+                                <span class="maximized">
+                                    <i class="fas fa-angle-double-down"></i>
+                                </span>
+                                <span class="minimized">
+                                    <i class="fas fa-angle-double-up"></i>
+                                </span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <textarea id="code">{{ code.decode('utf8') }}</textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 mt-3">
+                <div class="output-window">
+                    <div class="row mb-2">
+                        <div class="col-3">
+                            <h5>Output</h5>
+                        </div>
+                        <div class="col-9 text-right">
+                            <button id="expected-output-button" class="btn btn-primary btn-sm" onclick="showExpected()">
+                                Expected Output
+                            </button>
+
+                        </div>
+
+                    </div>
+                    <div class="row footer-toggle">
+                        <div class="col">
+                            <div id="text-output">
+                                <textarea id="output"></textarea>
+                                <div class="powered-by-sphere">
+                                    Powered by <a target="_blank" href="http://sphere-engine.com/">Sphere Engine &trade;</a>
+                                </div>
+                            </div>
+                            <iframe id="html-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                            <iframe id="expected-output"
+                                    style="border: 1px solid #ccc; box-sizing: border-box; background-color: white; display: none; height: 200px; width: 100%"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+
 </footer>
-<script src="http://s.univide.com/t.js?pid=1&pcid={{ uid }}"></script>
+
+
+
 {% endblock %}

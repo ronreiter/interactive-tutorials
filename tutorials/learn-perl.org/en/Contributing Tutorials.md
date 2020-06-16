@@ -1,11 +1,11 @@
-Contributing Tutorials
+Tutorial
 ----------------------
 
 To contribute tutorials, simply fork the following repository:
 
 [[https://github.com/ronreiter/interactive-tutorials]]
 
-Then you may add or edit tutorials, and then send me a pull request.
+Then, you may add or edit tutorials, and send a pull request.
 
 To write a tutorial, simply create a Markdown page under the relevant directory in the `tutorials` directory, and link it in the welcome screen in the relevant section. After adding it, please make sure that it linked correctly by running the Flask web server.
 
@@ -24,7 +24,7 @@ Every tutorial must have the following structure:
     Exercise
     --------
     Here you will need to write the purpose of the exercise. Finishing the exercise correctly
-    must be accomplished using the new feature that you are explaning.
+    must be accomplished using the new feature that you are explaining.
 
     Tutorial Code
     -------------

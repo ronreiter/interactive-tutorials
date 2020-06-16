@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-Listy składane są potężne narzędzie, które tworzy nową tablicę na podstawie innej tablicy. I to wszystko w jednej, czytelnej instrukcji. 
+Listy składane (ang. _list comprehension_) są potężnym narzędzie, które tworzy nową tablicę na podstawie innej tablicy. I to wszystko w jednej, czytelnej instrukcji. 
 
-Przykładowo powiedzmy, że potrzebujemy stworzyć nową tablicę liczb całkowitych, które określają długość każdego słowa w pewnym napisie, ale pod warunkiem, że nie jest to słowo 'nad'.
+Przykładowo powiedzmy, że potrzebujemy stworzyć nową tablicę liczb całkowitych, które określają długość każdego słowa w pewnym napisie, ale pod warunkiem, że nie jest to słowo "nad".
 
     napis = 'Odwazny rudy lis przeskoczyl nad spiacym wilczurem'
     slowa = napis.split() # tworzymy tablice ze slowami zawartymi w napisie
@@ -32,7 +32,7 @@ Jeśli chcemy, to możemy pominąć część z `if`, dzięki czemu operacja będ
 
 ### Ćwiczenie
 
-Za pomocą listy składanej stwórz nową tablicę 'nowa' na podstawie tablicy 'liczby'. 'nowa' ma się składać z całkowitych części nieujemnych liczb tablicy 'liczby'. Wskazówka: liczbę rzeczywistą możemy zaokrąglić do całkowitej za pomocą `int()`: int(4.3)
+Z pomocą listy składanej stwórz nową tablicę `nowa` na podstawie tablicy `liczby`. `nowa` ma się składać z całkowitych części nieujemnych liczb tablicy `liczby`. Wskazówka: liczbę rzeczywistą możemy zaokrąglić do całkowitej za pomocą `int()`, np.: `int(4.3)` da nam `4`.
 
 Tutorial Code
 -------------

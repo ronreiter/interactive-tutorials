@@ -12,7 +12,7 @@ C++ is one of the most popular programming languages and is implemented on a wid
 Every C++ program uses libraries, which give the ability to execute necessary functions. For example, the most basic function
 called 'cout', which prints to the screen, is defined in the `iostream` header file. 
 
-To add the ability to run the `cout` command to our program, we must add following include derivative to our first line of the code:
+To add the ability to run the `cout` command to our program, we must add following include directive to our first line of the code:
 
     #include <iostream>
     using namespace std;
@@ -34,7 +34,7 @@ For this tutorial, we will return 0 to indicate that our program was successful:
 
 Notice that every line in C++ must end with a semicolon, so that the compiler knows that a new line has started.
 
-Last but not least, we will need to call the function `printf` to print our sentence.
+Last but not least, we will need to use redirection to the `cout` stream to print our sentence.
 
 Exercise
 --------

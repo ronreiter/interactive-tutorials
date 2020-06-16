@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Arrays are special variables which can hold more than one value using the same variable, using an index. Arrays are defined in a very
+Arrays are special variables which can hold more than one value under the same variable name, organised with an index. Arrays are defined using a very
 straightforward syntax:
 
     /* defines an array of 10 integers */
@@ -25,7 +25,7 @@ defined an array of size 10, then the array cells 0 through 9 (inclusive) are de
     printf("The 7th number in the array is %d", numbers[6]);
 
 Arrays can only have one type of variable, because they are implemented as a sequence of values in the computer's memory.
-Because of that, accessing a random array cell is very efficient.
+Because of that, accessing a specific array cell is very efficient.
 
 Exercise
 --------
@@ -61,13 +61,17 @@ Expected Output
 Solution
 --------
 
+    #include <stdio.h>
+
     int main() {
       /* TODO: define the grades variable here */
+      int grades[3];
       int average;
 
       grades[0] = 80;
       /* TODO: define the missing grade
          so that the average will sum to 85. */
+      grades[1] = 85;
       grades[2] = 90;
 
       average = (grades[0] + grades[1] + grades[2]) / 3;

@@ -51,7 +51,7 @@ Notice that we are defining the struct in a recursive manner, which is possible 
 Now we can use the nodes. Let's create a local variable which points to the first item of the list (called `head`).
 
     node_t * head = NULL;
-    head = malloc(sizeof(node_t));
+    head = (node_t *) malloc(sizeof(node_t));
     if (head == NULL) {
         return 1;
     }
@@ -65,9 +65,9 @@ to finish populating the list. Notice that we should always check if malloc retu
 To add a variable to the end of the list, we can just continue advancing to the next pointer:
 
     node_t * head = NULL;
-    head = malloc(sizeof(node_t));
+    head = (node_t *) malloc(sizeof(node_t));
     head->val = 1;
-    head->next = malloc(sizeof(node_t));
+    head->next = (node_t *) malloc(sizeof(node_t));
     head->next->val = 2;
     head->next->next = NULL;
 
@@ -101,7 +101,7 @@ and then in each step, we advance the pointer to the next item in the list, unti
         }
 
         /* now we can add a new variable */
-        current->next = malloc(sizeof(node_t));
+        current->next = (node_t *) malloc(sizeof(node_t));
         current->next->val = val;
         current->next->next = NULL;
     }
@@ -124,7 +124,7 @@ pass a pointer to the pointer variable (a double pointer) so we will be able to 
 
     void push(node_t ** head, int val) {
         node_t * new_node;
-        new_node = malloc(sizeof(node_t));
+        new_node = (node_t *) malloc(sizeof(node_t));
 
         new_node->val = val;
         new_node->next = *head;
@@ -170,23 +170,29 @@ item is the last one in the list:
         int retval = 0;
         /* if there is only one item in the list, remove it */
         if (head->next == NULL) {
-            head->val
+            retval = head->val;
             free(head);
-            head = NULL;
             return retval;
         }
 
+        /* get to the second to last node in the list */
         node_t * current = head;
-
         while (current->next->next != NULL) {
             current = current->next;
         }
+        
+        /* now current points to the second to last item of the list, so let's remove current->next */
+        retval = current->next->val;
+        free(current->next);
+        current->next = NULL;
+        return retval;
+        
     }
 
 
 ### Removing a specific item
 
-To remove a specific from the list, either by its index from the beginning of the list or by its value, we will
+To remove a specific item from the list, either by its index from the beginning of the list or by its value, we will
 need to go over all the items, continuously looking ahead to find out if we've reached the node before the item
 we wish to remove. This is because we need to change the location to where the previous node points to as well.
 
@@ -210,7 +216,7 @@ There are a few edge cases we need to take care of, so make sure you understand 
             return pop(head);
         }
 
-        for (int i = 0; i < n-1; i++) {
+        for (i = 0; i < n-1; i++) {
             if (current->next == NULL) {
                 return -1;
             }
@@ -275,13 +281,13 @@ Tutorial Code
 
     int main() {
 
-        node_t * test_list = malloc(sizeof(node_t));
+        node_t * test_list = (node_t *) malloc(sizeof(node_t));
         test_list->val = 1;
-        test_list->next = malloc(sizeof(node_t));
+        test_list->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->val = 2;
-        test_list->next->next = malloc(sizeof(node_t));
+        test_list->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->val = 3;
-        test_list->next->next->next = malloc(sizeof(node_t));
+        test_list->next->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->next->val = 4;
         test_list->next->next->next->next = NULL;
 
@@ -334,45 +340,57 @@ Solution
     }
 
     int remove_by_value(node_t ** head, int val) {
-        int i = 0;
-        int retval = -1;
-        node_t * current = *head;
-        node_t * temp_node = NULL;
+        node_t *previous, *current;
 
+        if (*head == NULL) {
+            return -1;
+        }
 
         if ((*head)->val == val) {
             return pop(head);
         }
 
-        while (current->next->val != val) {
-            if (current->next == NULL) {
-                return -1;
+        previous = current = (*head)->next;
+        while (current) {
+            if (current->val == val) {
+                previous->next = current->next;
+                free(current);
+                return val;
             }
-            current = current->next;
+
+            previous = current;
+            current  = current->next;
         }
-
-        temp_node = current->next;
-        retval = temp_node->val;
-        current->next = temp_node->next;
-        free(temp_node);
-
-        return retval;
-
+        return -1;
     }
 
-    int main() {
+    void delete_list(node_t *head) {
+        node_t  *current = head, 
+                *next = head;
 
-        node_t * test_list = malloc(sizeof(node_t));
+        while (current) {
+            next = current->next;
+            free(current);
+            current = next;
+        }
+    }
+
+    int main(void) {
+        node_t * test_list = (node_t *) malloc(sizeof(node_t));
+
         test_list->val = 1;
-        test_list->next = malloc(sizeof(node_t));
+        test_list->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->val = 2;
-        test_list->next->next = malloc(sizeof(node_t));
+        test_list->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->val = 3;
-        test_list->next->next->next = malloc(sizeof(node_t));
+        test_list->next->next->next = (node_t *) malloc(sizeof(node_t));
         test_list->next->next->next->val = 4;
         test_list->next->next->next->next = NULL;
 
         remove_by_value(&test_list, 3);
 
         print_list(test_list);
+        delete_list(test_list);
+
+        return EXIT_SUCCESS;
     }

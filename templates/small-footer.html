@@ -1,7 +1,7 @@
-<footer style="position: static; margin-top: 100px">
+<footer class="container" style="position: static; margin-top: 100px">
     <div class="row">
-	    <div class="copyright">
-            {% autoescape off %}{{ domain_data.copyright }}{% endautoescape %} Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a>
+	    <div class="col-12 copyright">
+            {% autoescape off %}Copyright &copy; {{ domain_data.styled_domain }}{% endautoescape %}. Read our <a href='/tos'>Terms of Use</a> and <a href='/privacy'>Privacy Policy</a>
         </div>
     </div>
 </footer>

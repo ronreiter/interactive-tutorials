@@ -8,9 +8,6 @@ There is no need to download anything - Just click on the chapter you wish to be
 
 learn-cpp.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
 
-Table of Contents
------------------
-
 ### Learn the Basics
 
 - [[Hello, World!]]
@@ -21,14 +18,6 @@ Table of Contents
 - [[While loops]]
 - [[Functions]]
 
-### Integrated and Spiral Learning
-
-This set of problems will cover templates, operator overloading (polymorphism), inheritance, friend functions, etc. 
-We will cover them in a spiral and integrated manner so as to maximize learning and minimize cognitive load.
-
-- [[World!, Hello]]
-- [[Generic Programming]]
-
 ### Advanced
 - [[Pointers]]
 - [[Structures]]
@@ -38,6 +27,17 @@ We will cover them in a spiral and integrated manner so as to maximize learning 
 - [[Linked lists]]
 - [[Binary trees]]
 - [[Function Pointers]]
+- [[Template Metaprogramming]]
+
+### Integrated and Spiral Learning
+
+This set of problems will cover templates, operator overloading (polymorphism), inheritance, friend functions, etc. 
+They are presented in a spiral and integrated approach so as to maximize learning and minimize cognitive load.
+
+- [[World!, Hello]]
+- [[Generic Programming]]
+- [[Inheritance]]
+
 
 ### Contributing Tutorials
 

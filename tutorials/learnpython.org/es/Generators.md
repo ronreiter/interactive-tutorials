@@ -5,7 +5,8 @@ Los Generadores (Generators) son muy fáciles de implementar, pero un poco difí
 
 Los Generadres son usados para crear iteradores , pero en una forma diferente. Los Generadores son simples funciones las cuales devuelven un numero de elementos (items) iterables, uno a la vez, de forma especial.
 
-When an iteration over a set of item starts using the for statement, the generator is run. Once the generator's function code reaches a "yield" statement, the generator yields its execution back to the for loop, returning a new value from the set. The generator function can generate as many values (possibly infinite) as it wants, yielding each one in its turn.
+Cuando una iteración sobre un conjunto de elementos comienza a usar la instrucción , se ejecuta el generador. Una vez que el código de función del generador alcanza una declaración de "rendimiento", el generador devuelve su ejecución al ciclo for, devolviendo un nuevo valor del conjunto. La función de generador puede generar tantos valores (posiblemente infinitos) como desee, produciendo cada uno a su vez
+
 
 He aqui un simple ejemplo de una función Generador (Generator) la cual devuelve 7 números enteros al azar (aleatorios):
 
@@ -22,19 +23,18 @@ He aqui un simple ejemplo de una función Generador (Generator) la cual devuelve
     for random_number in lottery():
         print "And the next number is... %d!" % random_number
 
-This function decides how to generate the random numbers on its own, and executes the yield statements one at a time, pausing in between to yield execution back to the main for loop.
+Esta función decide cómo generar los números aleatorios por sí sola y ejecuta las declaraciones de rendimiento de una en una, deteniéndose en el medio para devolver la ejecución al ciclo principal for.
 
 Exercise
 --------
 
-Write a generator function which returns the Fibonacci series. They are calculated using the following formula: The first two numbers of the series is always equal to 1, and each consecutive number returned is the sum of the last two numbers.
-Hint: Can you use only two variables in the generator function? Remember that assignments can be done simultaneously. The code
+Escriba una función generadora que devuelva la serie Fibonacci. Se calculan utilizando la siguiente fórmula: los dos primeros números de la serie siempre son iguales a 1, y cada número consecutivo devuelto es la suma de los dos últimos números. Sugerencia: ¿Puedes usar solo dos variables en la función de generador? Recuerde que las tareas se pueden hacer simultáneamente. El código
 
     a = 1
     b = 2
     a, b = b, a
 
-will simultaneously switch the values of a and b.
+cambiará simultáneamente los valores de a y b.
 
 Tutorial Code
 -------------

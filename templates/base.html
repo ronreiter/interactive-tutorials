@@ -1,149 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ domain_data.language_code }}">
 <head>
     <title>{% block page_title %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="description" content="{{ domain_data.styled_domain }} is a free interactive {{ domain_data.language_uppercase }} tutorial for people who want to learn {{ domain_data.language_uppercase }}, fast." />
     <meta name="keywords" content="Learn,{{ domain_data.language_uppercase }},Tutorial,Interactive,Free" />
     <meta name="google-site-verification" content="cXWj61RCtO3fVP24Y7CO-nX0ba30tgdJYY8GGBactLI" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="{% block ogtitle %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{% block ogurl %}{{ domain_data.full_url }}{% endblock %}" />
-    <meta property="og:image" content="{{ domain_data.full_url }}{{ domain_data.logo }}" />
+    <meta property="og:image" content="{{ domain_data.full_url }}{{ domain_data.share_logo }}" />
+
+    <link rel="icon" href="{{ domain_data.favicon }}" type="image/x-icon">
 
     <link rel="stylesheet" href="/static/css/codemirror.css">
-    <link rel="stylesheet" href="/static/css/theme/monokai.css">
+    <link rel="stylesheet" href="/static/css/theme/xq-light.css">
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/prism-light.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/learnpython.css"/>
+{#    <script src="/static/js/jquery.min.js"></script>#}
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3723950136133694",
+              enable_page_level_ads: true
+         });
+    </script>
 </head>
 <body>
 
-<div class="navbar navbar-static-top" style="margin-bottom: 10px">
-    <div class="navbar-inner">
-        <div class="container">
-        <a class="brand" href="/" style="padding: 4px 10px"><img src="{{ domain_data.logo }}" style="height: 32px;"/></a>
-        <div class="social" style="margin-top: 10px; display: inline-block; float: left">
-                <!-- AddThis Button BEGIN -->
-                <div class="addthis_toolbox addthis_default_style " style="width: 400px; margin-left: 20px">
-                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                    <a class="addthis_button_tweet"></a>
-                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-                    <a class="addthis_counter addthis_pill_style"></a>
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+
+    <div class="container">
+    <a class="navbar-brand" href="/">
+        <img src="{{ domain_data.logo }}" style="height: 24px;" alt="{{ domain_data.language_uppercase }}"/>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item mr-sm-2">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+
+            <li class="nav-item mr-sm-2 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="more-langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More Languages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="more-langs">
+
+                    {% for domain, data in all_data.items() %}
+		                <a class="dropdown-item{% if domain_data.namespace == domain %} disabled{% endif %}" href="{{ data.full_url }}">{{ data.language_uppercase }}</a>
+                    {% endfor %}
+
                 </div>
-
-                <script type="text/javascript">
-                    var addthis_config = {"data_track_clickback":true};
-                    var addthis_share = {"url": "{{ domain_data.full_url }}" };
-                </script>
-                <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dafdfe6039782b1"></script>
-                <!-- AddThis Button END -->
-
-                <!--
-                <div style="float: right; padding-left: 10px">
-                    <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="{{ domain_data.full_url }}"></a>
-                </div>
-                -->
-        </div>
-
-        <ul class="nav pull-right">
-            <li><a href="/about">About</a></li>
-            <!--
-            <li><a href="/{{ language_code }}/progress">Progress</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-                <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              </li>
+        {#
+            <li class="nav-item mr-sm-2 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sign In
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                     <div id="status" style="color: red"></div>
-                    <form method="post" accept-charset="UTF-8">
-                        <input style="margin-bottom: 15px;" type="email" placeholder="E-mail" id="email" name="email">
-                        <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
-                        <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
-                        <label class="string optional" for="user_remember_me"> Remember me</label>
-                        <button class="btn btn-primary btn-block" id="sign-in">Sign In</button>
-                        <label style="text-align:center;margin-top:5px">or</label>
-                        <input style="margin-bottom: 15px;" type="password" placeholder="Confirm Password" id="confirm" name="confirm">
-                        <button class="btn btn-primary btn-block" id="sign-up">Sign Up</button>
+                    <form method="post" class="form p-3" style="width: 270px">
+                        <div class="form-group">
+                            <input class="form-control" type="email" placeholder="E-mail" id="email" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Password" id="password" name="password">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block" id="sign-in">Sign In</button>
+                        </div>
+
+                        <div class="text-center">Don't have an account? <a href="/signup">Sign Up</a>.</div>
+
+
                     </form>
                 </div>
             </li>
-            -->
+         #}
+
         </ul>
 
-        </div>
+        <ul class="navbar-nav">
+	        <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        <img src="/static/img/icon20x24px-exported-transparent.png" style="height: 20px" alt="Languages">
+                </a>
+                <div class="dropdown-menu" aria-labelledby="langs">
+                    {% for language in languages %}
+		                <a class="dropdown-item{% if language_code  == language %} disabled{% endif %}" href="/{{ language }}/">{{ language_names[loop.index0] }}</a><br>
+		            {% endfor %}
+                </div>
+    	    </li>
+
+            <li class="nav-item" style="line-height: 30px">
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials" data-icon="octicon-star"  aria-label="Star ronreiter/interactive-tutorials on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/ronreiter/interactive-tutorials/fork" data-icon="octicon-repo-forked" aria-label="Fork ronreiter/interactive-tutorials on GitHub">Fork</a>
+            </li>
+
+
+        </ul>
+
     </div>
-</div>
 
-<div class="container">
-    <div class="row">
-        <div class="span8">
-            <ul class="nav nav-pills">
-                <li {% if domain_data.language == "python" %}class="active"{% endif %}><a href="http://www.learnpython.org">Python</a></li>
-                <li {% if domain_data.language == "java" %}class="active"{% endif %}><a href="http://www.learnjavaonline.org">Java</a></li>
-                <li {% if domain_data.language == "c" %}class="active"{% endif %}><a href="http://www.learn-c.org">C</a></li>
-            <!--
-                <li {% if domain_data.language == "cpp" %}class="active"{% endif %}><a href="http://www.learn-cpp.org">C++</a></li>
-            -->
-                <li {% if domain_data.language == "javascript" %}class="active"{% endif %}><a href="http://www.learn-js.org">JavaScript</a></li>
-                <li {% if domain_data.language == "php" %}class="active"{% endif %}><a href="http://www.learn-php.org">PHP</a></li>
-                <li {% if domain_data.language == "bash" %}class="active"{% endif %}><a href="http://www.learnshell.org">Shell</a></li>
-                <li {% if domain_data.language == "c#" %}class="active"{% endif %}><a href="http://www.learncs.org">C#</a></li>
-            <!--
-                <li {% if domain_data.language == "perl" %}class="active"{% endif %}><a href="http://www.learn-perl.org">Perl <small>(new!)</small></a></li>
-                <li {% if domain_data.language == "ruby" %}class="active"{% endif %}><a href="http://www.learnrubyonline.org">Ruby <small>(new!)</small></a></li>
-            -->
-            </ul>
+    </div>
 
-        </div>
-        <div class="span4">
-            <ul class="nav nav-pills pull-right">
-            {% for language in languages %}
-                <li {% if language_code == language %}class="active"{% endif %}><a href="/{{ language }}/"><img src="/static/img/flags/{{ language }}.png"/></a></li>
+</nav>
+
+<nav class="navbar-dark bg-primary navbar-expand-lg mb-3 d-none d-lg-block">
+
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            {% for domain, data in all_data.items() %}
+                <li class="nav-item"><a class="nav-link{% if domain_data.namespace == domain %} active{% endif %}" href="{{ data.full_url }}">{{ data.language_uppercase }}</a></li>
             {% endfor %}
-            </ul>
-        </div>
+        </ul>
+
     </div>
 
-</div>
+</nav>
+
+{#<div class="container mt-2">#}
+{#        <!-- AddThis Button BEGIN -->#}
+{#    <div class="addthis_toolbox addthis_default_style ">#}
+{#        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>#}
+{#        <a class="addthis_button_tweet"></a>#}
+{#        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>#}
+{#        <a class="addthis_counter addthis_pill_style"></a>#}
+{#    </div>#}
+{##}
+{#    <script type="text/javascript">#}
+{#        var addthis_config = {"data_track_clickback": true};#}
+{#        var addthis_share = {"url": "http://learnpython.org"};#}
+{#    </script>#}
+{#    <script type="text/javascript"#}
+{#            src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dafdfe6039782b1"></script>#}
+{#    <!-- AddThis Button END -->#}
+{#</div>#}
+
 
 {% block content %}{% endblock %}
 
-<script src="/static/js/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="/static/js/prism.js"></script>
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://kit.fontawesome.com/e7efaf7ef6.js"></script>
+
+
 <script src="/static/js/codemirror/codemirror.js"></script>
 <script src="/static/js/codemirror/addon/edit/matchbrackets.js"></script>
 <script src="/static/js/codemirror/mode/clike/clike.js"></script>
-<script src="/static/js/codemirror/mode/python/python.js"></script>
-<script src="/static/js/codemirror/mode/perl/perl.js"></script>
-<script src="/static/js/codemirror/mode/php/php.js"></script>
-<script src="/static/js/codemirror/mode/javascript/javascript.js"></script>
-<script src="/static/js/codemirror/mode/ruby/ruby.js"></script>
-<script src="/static/js/codemirror/mode/shell/shell.js"></script>
+{% if domain_data.language == "go" %}<script src="/static/js/codemirror/mode/go/go.js"></script>{% endif %}
+{% if domain_data.language == "python" %}<script src="/static/js/codemirror/mode/python/python.js"></script>{% endif %}
+{% if domain_data.language == "perl" %}<script src="/static/js/codemirror/mode/perl/perl.js"></script>{% endif %}
+{% if domain_data.language == "php" %}<script src="/static/js/codemirror/mode/php/php.js"></script>{% endif %}
+{% if domain_data.language == "javascript" %}<script src="/static/js/codemirror/mode/javascript/javascript.js"></script>{% endif %}
+{% if domain_data.language == "ruby" %}<script src="/static/js/codemirror/mode/ruby/ruby.js"></script>{% endif %}
+{% if domain_data.language == "shell" %}<script src="/static/js/codemirror/mode/shell/shell.js"></script>{% endif %}
+{% if domain_data.language == "sql" %}<script src="/static/js/codemirror/mode/sql/sql.js"></script>{% endif %}
+<script src="/static/js/codemirror/mode/xml/xml.js"></script>
+<script src="/static/js/codemirror/mode/css/css.js"></script>
+<script src="/static/js/codemirror/mode/htmlembedded/htmlembedded.js"></script>
+<script src="/static/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/bootbox.min.js"></script>
-{% if domain_data.language == "javascript" %}
+
+{% if domain_data.language == "python" and domain_data.language_code == 'en'  %}
+<script src="/static/js/datacamp.js"></script>
+{% endif %}
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-22741967-17', '{{ domain_data.namespace }}');
   ga('create', '{{ domain_data.analytics }}', '{{ domain_data.namespace }}');
   ga('send', 'pageview');
 
 </script>
-{% else %}
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{ domain_data.analytics }}']);
-  _gaq.push(['_trackPageview']);
+{#
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-22741967-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+  gtag('config', 'UA-22741967-17');
 </script>
+
 <script>
     $(function() {
         $("#sign-in").click(function() {
@@ -171,10 +242,15 @@
         });
     });
 </script>
-{% endif %}
+
+<script>
+(function(w,i,d,g,e,t,s) {w[d]=w[d]||[];t=i.createElement(g);
+	t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t,s);
+}(window, document, '_gscq', 'script', '//www.hellothere.io/widget/cYqedgvGuFe2EvXs.js'));
+</script>
+#}
 
 {% block head %}{% endblock %}
-
 
 </body>
 </html>

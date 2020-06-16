@@ -8,12 +8,10 @@ There is no need to download anything - Just click on the chapter you wish to be
 
 learnrubyonline.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
 
-Table of Contents
------------------
-
 ### Learn the Basics
 
-- [[Hello, World!]]
+- [[Hello World]]
+- [[Comments]]
 - [[Variables and Types]]
 - [[Math]]
 - [[Strings]]
@@ -21,6 +19,8 @@ Table of Contents
 - [[Hashes and Symbols]]
 - [[Conditional Statements]]
 - [[Unless, Until, and While]]
+- [[Methods]]
+- [[Methods With Parameters]]
 
 ### Contributing Tutorials
 

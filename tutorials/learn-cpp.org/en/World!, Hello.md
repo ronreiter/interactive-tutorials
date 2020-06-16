@@ -20,7 +20,7 @@ Tutorial Code
     using namespace std;
     
     template<typename T>
-    void Swap(T &a, T&b)  {
+    void Swap(T & a, T & b)  {
     // your code goes here
     
     }
@@ -44,6 +44,7 @@ Solution
 
     #include <iostream>
     using namespace std;
+
     template<typename T>
     void Swap(T & a, T & b) {
        T temp = b;
@@ -51,12 +52,11 @@ Solution
        a = temp;
     }
 
-
     int main() {
-      // your code goes here
-
-      string hello = "world!", world = "Hello, ";
-      Swap( world, hello );
-      cout << hello << world << endl; //Output is "Hello, world!"	
-      return 0;
+        string hello = "world!", 
+        world = "Hello, ";
+        Swap( world, hello );
+        cout << hello << world << endl; //Output is "Hello, world!"
+  
+        return 0;
     }

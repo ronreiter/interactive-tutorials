@@ -8,7 +8,7 @@ While loops are very similar to For loops, They are defined like this:
     [Code to execute]
     }
 
-This allows you to continously repeat a section of code while a condition is satisfied.
+This allows you to continuously repeat a section of code while a condition is satisfied.
 
 E.G:
 
@@ -64,7 +64,8 @@ Expected Output
 
 Solution
 --------
-
+    using System;
+    
     public class Functions
     {
         public static void Main()
@@ -77,6 +78,7 @@ Solution
             while(i < n)
             {
                 Console.WriteLine(x);
+                i++;
             }
         }
 

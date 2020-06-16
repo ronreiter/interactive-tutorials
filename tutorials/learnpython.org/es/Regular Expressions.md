@@ -1,26 +1,27 @@
 Tutorial
 --------
 
-Expresiones regulares (sometimes shortened to regexp, regex, or re) are a
-tool for matching patterns in text. In Python, we have the re module.
-The applications for regular expressions are wide-spread, but they are
-fairly complex, so when contemplating using a regex for a certain task,
-think about alternatives, and come to regexes as a last resort.
+Las expresiones regulares (a veces resumidas como 'regexp', 'regex', o 're')
+son una herramienta para unir patrones de texto. En Python, tenemos el modulo de re.
+Las aplicaciones para expresiones regulares están muy extendidas, pero son
+bastante complejas, así que cuando consideres usar una expresión regular
+para una determinada tarea, piensa primero alguna alternativa, y acude a
+regexes como un ultimo recurso.
 
-An example regex is `r"^(From|To|Cc).*?python-list@python.org"` Now for an
-explaination:
+Como un ejemplo tenemos `r"^(From|To|Cc).*?python-list@python.org"` Ahora para
+explicarlo mejor:
 
-the caret `^` matches text at the beginning of a line. The following
-group, the part with `(From|To|Cc)` means that the line has to start with
-one of the words that are separated by the pipe `|`. That is called
-the OR operator, and the regex will match if the line starts with any
-of the words in the group. The `.\*?` means to un-greedily match any 
-number of  characters, except the newline `\n` character. The un-greedy
-part means to match as few repetitions as possible. The `.` character
-means any non-newline character, the `\*` means to repeat 0 or more
-times, and the `?` character makes it un-greedy. 
+El signo de intercalacion `^` coincide con el texto al comienzo de una línea. 
+El siguiente grupo, la parte con `(From|To|Cc)` significa que la línea tiene que comenzar con
+una de las palabras que están separadas por el pipe `|`. Eso se llama operador OR,
+y la expresión regular coincidirá si la línea comienza con cualquier
+de las palabras en el grupo. El `.\*?`significa emparejar sin codicia cualquier
+número de caracteres, excepto el caracter de nueva linea `\n`.La parte no codiciosa
+significa hacer coincidir la menor cantidad de repeticiones posible. El caracter `.` 
+significa cualquier caracter que no sea de nueva linea, el `\*` significa repetir 0 o
+mas veces, y el caracter `?`  lo hace no codicioso. 
 
-So, the following lines would be matched by that regex:
+Entonces, las siguientes líneas coincidirían con esa expresión regular:
 `From: python-list@python.org`
 `To: !asp]<,.      python-list@python.org`
 

@@ -1,40 +1,39 @@
 Tutorial
 --------
 
-Il nostro amico Python usa lo stile C  per formattare e creare le stringhe. L'operatore "%" è usato per formattare un gruppo di variabili racchiuse
-in una "tuple" (una lista di grandezza prefissata), insieme con una stringa formata, che contiene normale testo insieme con  "specifici argomenti" , speciali simboli come  "%s" and "%d".
+Python usa lo stile C per formattare le stringhe. L'operatore "%" è usato per formattare un gruppo di variabili racchiuse in  "tuple" (una lista di valori di grandezza prefissata), insieme ad una stringa per la definizione del formato, che contiene del normale testo insieme a "specifici argomenti", cioè simboli speciali come  "%s" and "%d".
 
-Let's say you have a variable called "name" with your user name in it, and you would then like to print out a greeting to that user.
+Poniamo di avere una variabile "name" che contiene il nome utente e vogliamo stampare un messaggio di benvenuto.
 
-    # This prints out "Hello, John!"
+    # Stamperà "Hello, John!"
     name = "John"
     print "Hello, %s!" % name
 
-To use two or more argument specifiers, use a tuple (parentheses):
+Per usare due o più argomenti, usare una tupla (con i valori racchiusi fra parentesi)
 
-    # This prints out "John is 23 years old."
+    # Stamperà "John is 23 years old."
     name = "John"
     age = 23
     print "%s is %d years old." % (name, age)
 
-Any object which is not a string can be formatted using the %s operator as well. The string which returns from the "repr" method of that object is formatted as the string. For example:
+Qualsiasi oggetto che non è una stringa può essere formattato usando l'operatore "%s". La stringa che verrà restituita dal metodo "repr" dell'oggetto verrà formattata come stringa. Per esempio:
 
     # This prints out: A list: [1, 2, 3]
     mylist = [1,2,3]
     print "A list: %s" % mylist
 
-Here are some basic argument specifiers you should know:
+Di seguito alcuni indicatori di formato per alcuni tipi di dati basilari:
 
-    %s - String (or any object with a string representation, like numbers)
-    %d - Integers
-    %f - Floating point numbers
-    %.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot.
-    %x/%X - Integers in hex representation (lowercase/uppercase)
+    %s - Stringa (o qualsiasi oggetto che possa essere rappresentato con una stringa, ad esempio numeri)
+    %d - Interi
+    %f - Numeri reali/virgola mobile
+    %.<number of digits>f - Numeri in vigola mobile con un un numero fisso di cifre decimali.
+    %x/%X - Rappresentazione esadecimale di numeri interi (minuscolo/maiuscolo)
 
 Exercise
 --------
 
-You will need to write a format string which prints out the data using the following syntax:
+Definire una stringa di formato che stampi i dati con la seguente sintassi:
     Hello John Doe. Your current balance is 53.44$.
 
 Tutorial Code

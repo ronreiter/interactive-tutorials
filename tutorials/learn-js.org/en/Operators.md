@@ -5,7 +5,7 @@ Every variable in JavaScript is casted automatically so any operator between two
 
 ### The addition operator
 
-The `+` (addition) operator is used both addition and concatenation of strings.
+The `+` (addition) operator is used for both addition and concatenation of strings.
 
 For example, adding two variables is easy:
 
@@ -19,6 +19,10 @@ The addition operator is used for concatenating strings to strings, strings to n
     console.log("Hello " + name + "!");
     console.log("The meaning of life is " + 42);
     console.log(42 + " is the meaning of life");
+
+JavaScript behaves differently when you are trying to combine two operands of different types. The default primitive value is a string, so when you try to add a number to a string, JavaScript will transform the number to a string before the concatenation.
+
+    console.log(1 + "1");   // outputs "11"
 
 ### Mathematical operators
 
@@ -34,8 +38,13 @@ JavaScript supports the modulus operator (`%`) which calculates the remainder of
 
     console.log(5 % 3);     // outputs 2
 
-Instead of typing something like myNumber=myNumber*2, you can use myNumber*=2.
-There are the following shortcuts like that: *= -= += /=
+JavaScript also supports combined assignment and operation operators. So, instead of typing `myNumber = myNumber / 2`, you can type `myNumber /= 2`. Here is a list of all these operators:
+
+* `/=`
+* `*=`
+* `-=`
+* `+=`
+* `%=`
 
 JavaScript also has a `Math` module which contains more advanced functions:
 
@@ -43,7 +52,7 @@ JavaScript also has a `Math` module which contains more advanced functions:
 * `Math.exp` calculates __e__ to the power of a number
 * `Math.pow(x,y)` calculates the result of __x__ to the power of __y__
 * `Math.floor` removes the fraction part from a number
-* `Math.random()` will give a random number `x` and 0<=x<1
+* `Math.random()` will give a random number `x` where 0<=x<1
 
 And many more mathematical functions.
 

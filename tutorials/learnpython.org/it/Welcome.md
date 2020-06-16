@@ -1,34 +1,20 @@
 # Italiano
 
-BENVENUTI
-in questo Tutorial interattivo  che io chiamo **_AMICO_** [scritto per gli italiani] e ospitato da LEARNPYTHON.ORG 
-che non finiremo mai di ringraziare-
+BENVENUTI<br/>
+Benvenuti nel tutorial interattivo di LearnPython.org.
 
-L'originale appunto scritto e ospitato da LEARNPYTHON.ORG  è diretto sia ad  esperti programmatori che ai principianti. 
-Ma principalmente a tutti coloro che desiderano imparare il linguaggio Python. NOI CI UNIANO A QUESTO MESSAGGIO e come conoscitore di
-Python e di alcune librerie grafiche mi sento di aggiungere appunto **wxPython**  che è una di queste. Comincerò a parlarne non da subito
-ma solo verso la fine degli argomenti trattati nell'area avanzata. Per i curiosi dico solo di scrivermi [vonkes at gmail dot com]
+Questo tutorial è pensato per chiunque voglia imparare il linguaggio di programmazione Python. Non importa quindi se si è sviluppatori alle prime armi o programmatori esperti.
 
-Potete cominciare dove volete basta scegliere il capitolo e seguire le istruzioni. Nella versione Inglese il tutorial interattivo prevede
-un riquadro a sinistra dove potete inserire il vs codice e allorquando avrete terminato potrete vedere il risultato dei vostri sforzi nel 
-riquadro di destra non prima di aver cliccato sulla parola **_Run_**. <br>
-Nella malaugurata ipotesi che abbiate commesso un errore il nostro amico Python non potrà mostrarvi alcun risultato, ma il tutorial,
-nella sua infinita bontà, cercherà di accontentarvi ma dovrete cliccare in corrispondenza della frase che segue **_Run_** e precisamente
-su **_Show Expected Output_**  che significa **Ecco cosa ti aspettavi**. 
-BUON LAVORO:
+Ti invitiamo inoltre a far parte del nostro gruppo su <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> dovei potrai trovare tante discussioni interessanti su Python e porre anche domande ai vari esperti della nostra comunità.
 
-Cliccate sul capitolo con il quale volete iniziare  e seguite le istruzioni.
-
-_Per gli studenti che consultano le pagine wiki in italiano consiglio di usare per le loro prove e per gli esercizi il tutorial Inglese; non sempre
-gli esercizi usano la sintassi di python e allora il nostro amico non capisce e quindi non opera. Mi riservo di aiutarvi allorquando pur con sintassi
-non conforme python eseguirà ugualmente il codice propostogli.
+Per cominciare non ti resta altro che cliccare sul link del capitolo che ti interessa e seguire le istruzioni. Buona fortuna! 
 
 **Elenco dei Capitoli:**
 =========================
 
-- [[Linguaggio PYTHON per ITALIANI]] 
+- [[Ciao Mondo]] 
 - [[Variabili e tipi]]
+- [[Liste]]
 - [[Operatori_Base]]
 - [[Funzioni con Argomenti Multipli]]
-- [[Liste]]
 - [[Formattazione delle stringhe]]

@@ -1,7 +1,7 @@
 Polski
 ------
 
-Witaj w interaktywnym samouczku Python'a na stronie learnpython.org.
+Witaj w interaktywnym samouczku Pythona na stronie learnpython.org.
 
 Niezależnie od tego, czy masz doświadczenie w programowaniu, ta strona jest przeznaczona dla każdego, kto chce nauczyć się języka programowania Python.
 
@@ -21,13 +21,12 @@ Spis treści
  - [[Podstawowe operacje na napisach]]
  - [[Instrukcje warunkowe]]
  - [[Petle|Pętle]]
- - [[Funkcje|Funkcje]]
+ - [[Funkcje]]
  - [[Klasy i obiekty]]
  - [[Slowniki|Słowniki]]
  - [[Moduly i pakiety|Moduły i pakiety]]
 
 ### Zaawansowany tutorial
-- [[Generatory]]
 - [[Listy skladane|Listy składane]]
 - [[Funkcje o zmiennej liczbie argumentow|Funkcje o zmiennej liczbie argumentów]]
 - [[Wyrazenia regularne|Wyrażenia regularne]]

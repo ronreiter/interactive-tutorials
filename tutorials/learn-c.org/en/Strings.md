@@ -3,8 +3,7 @@ Tutorial
 
 ### Defining strings
 
-Strings in C are actually arrays of characters. Although pointers in C is in advanced subject explained later on, we will use pointers to
-a character array to define simple strings, in the following manner:
+Strings in C are actually arrays of characters. Although using pointers in C is an advanced subject, fully explained later on, we will use pointers to a character array to define simple strings, in the following manner:
 
     char * name = "John Smith";
 
@@ -21,7 +20,7 @@ the length of the string:
     /* is the same as */
     char name[11] = "John Smith";
 
-The reason that we need to add one, although the string `John Smith` is exactly 10 characters long, is for the string termination,
+The reason that we need to add one, although the string `John Smith` is exactly 10 characters long, is for the string termination:
 a special character (equal to 0) which indicates the end of the string. The end of the string is marked because the program
 does not know the length of the string - only the compiler knows it according to the code.
 
@@ -37,6 +36,13 @@ We can use the `printf` command to format a string together with other strings, 
 
 Notice that when printing strings, we must add a newline (`\n`) character so that our next `printf` statement will print in a new line.
 
+### String Length
+
+The function 'strlen' returns the length of the string which has to be passed as an argument:
+
+    char * name = "Nikhil";
+    printf("%d\n",strlen(name));        
+
 ### String comparison
 
 The function `strncmp` compares between two strings, returning the number 0 if they are equal, or a different number if they are different.
@@ -51,6 +57,18 @@ called `strcmp`, but it is not recommended to use it. For example:
         printf("You are not John. Go away.\n");
     }
 
+### String Concatenation
+
+The function 'strncat' appends first n characters of src string to the destination string where n is min(n,length(src));
+The arguments passed are destination string, source string, and n - maximum number of characters to be appended. For Example:
+
+    char dest[20]="Hello";
+    char src[20]="World";
+    strncat(dest,src,3);
+    printf("%s\n",dest);
+    strncat(dest,src,20);
+    printf("%s\n",dest);
+
 Exercise
 --------
 
@@ -61,22 +79,21 @@ Tutorial Code
 -------------
 
     #include <stdio.h>
-
+    #include <string.h>
     int main() {
       /* define first_name */
       /* define last_name */
       char name[100];
-
-      /* testing code */
-      if (strncmp(first_name, "John") != 0) return 1;
-      if (strncmp(last_name, "Doe") != 0) return 1;
 
       last_name[0] = 'B';
       sprintf(name, "%s %s", first_name, last_name);
       if (strncmp(name, "John Boe", 100) == 0) {
           printf("Done!\n");
       }
-
+      name[0]='\0';
+      strncat(name,first_name,4);
+      strncat(name,last_name,20);
+      printf("%s\n",name);
       return 0;
     }
 
@@ -85,24 +102,26 @@ Expected Output
 ---------------
 
     Done!
+    JohnBoe
 
 Solution
 --------
 
+    #include <stdio.h>
+    #include <string.h>
     int main() {
-      char first_name[] = "John";
+      char * first_name = "John";
       char last_name[] = "Doe";
       char name[100];
-
-      /* testing code */
-      if (strncmp(first_name, "John") != 0) return 1;
-      if (strncmp(last_name, "Doe") != 0) return 1;
 
       last_name[0] = 'B';
       sprintf(name, "%s %s", first_name, last_name);
       if (strncmp(name, "John Boe", 100) == 0) {
           printf("Done!\n");
       }
-
+      name[0]='\0';
+      strncat(name,first_name,4);
+      strncat(name,last_name,20);
+      printf("%s\n",name);
       return 0;
     }

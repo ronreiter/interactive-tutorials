@@ -2,6 +2,7 @@ var editor;
 var output;
 var originalCode;
 var loading;
+var minimized = false;
 
 (function( jQuery ) {
 
@@ -64,10 +65,79 @@ function eval_console(code) {
 	return text;
 }
 
+function compareHTML(a, b) {
+	// TODO - check CSS
+	// TODO - check head
+
+	if (a.children.length != b.children.length) {
+		return false;
+	}
+
+	for (var i = 0; i < a.children.length; i++) {
+		// first check that the tag name is similar
+		if (a.children[i].tagName != b.children[i].tagName) {
+			return false;
+		}
+
+		// check attributes - TODO
+		if (a.children[i].attributes.length != b.children[i].attributes.length) {
+			return false;
+		}
+
+		for (var j = 0; j < a.children[i].attributes.length; j++) {
+			var attribute = a.children[i].attributes[j].name;
+			if (a.children[i].attributes[attribute].value != b.children[i].attributes[attribute].value) {
+				return false;
+			}
+		}
+
+		if (a.children[i].children.length == 0) {
+			if (a.children[i].innerHTML != b.children[i].innerHTML) {
+				return false;
+			}
+		} else {
+			if (!compareHTML(a.children[i], b.children[i])) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
 function execute() {
+	maximizeDock();
+
+	if (window.domainData.language == "html") {
+		$("#html-output").show();
+		$("#text-output").hide();
+
+		var a = $("#expected-output").contents()[0];
+		a.write(tutorialData.output);
+		a.close();
+
+		var b = $("#html-output").contents()[0];
+		b.write(editor.getValue());
+		b.close();
+
+		// now, let's compare A and B
+		if (compareHTML(a.body, b.body)) {
+			correct();
+		}
+
+		// links should not redirect us out of here.
+		var links = b.querySelectorAll("a");
+		for (var i = 0; i < links.length; i++) {
+			if (links[i].href.indexOf("#") == -1) {
+				links[i].target = "_blank";
+			}
+		}
+
+		return;
+	}
+
 	//$('#output').css('color', '#bbbbbb');
 	//$('#output').css('background-color', '#eeeeee');
-	loading.show();
 	output.setValue("");
 	//$('#output').text('');
 
@@ -78,6 +148,8 @@ function execute() {
 			print(err.message);
 		}
 	} else {
+		//loading.show();
+		print("Executing, please wait...");
 		$.ajax({
 			type : "post",
 			data : JSON.stringify({
@@ -94,7 +166,7 @@ function execute() {
 }
 
 function execDone(data) {
-	loading.hide();
+	//loading.hide();
 	//$('#output').css('background-color', 'white');
 	if (data["output"] == "exception") {
 		//$('#output').css('color', 'red');
@@ -118,129 +190,70 @@ function handleError(data) {
 	}
 }
 
+function correct() {
+	bootbox.confirm("Correct! Click OK to move on to the next chapter.", function(success) {
+		if (success) {
+			document.location.href = nextChapter;
+		}
+	});
+}
+
 function print(text) {
 	output.setValue(text);
 	if ($.trim(tutorialData.output) != '' && $.trim(tutorialData.output) == $.trim(text)) {
-		bootbox.confirm("Correct! Click OK to move on to the next chapter.", function(success) {
-			if (success) {
-				document.location.href = nextChapter;
-			};
-		});
+		correct();
 	}
 }
 
 function load() {
 	loading = $("#loading");
+	var codeBlocks = $("code");
+	var outputTheme = "xq-light";
+	var mode;
 
-	switch (window.domainData.language) {
-		case "python":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				mode: {name: "python",
-					version: 2,
-					singleLineStringErrors: false},
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				theme: "monokai"
-			});
-			break;
-		case "java":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-java",
-				theme: "monokai"
-			});
-			break;
-		case "c":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-csrc",
-				theme: "monokai"
-			});
-			break;
-		case "c++11":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-csrc",
-				theme: "monokai"
-			});
-			break;
-		case "javascript":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/javascript",
-				theme: "monokai"
-			});
-			break;
-		case "ruby":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-ruby",
-				theme: "monokai"
-			});
-			break;
-		case "bash":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-sh",
-				theme: "monokai"
-			});
-			break;
-		case "perl":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-perl",
-				theme: "monokai"
-			});
-			break;
+    if (document.getElementById("code")) {
+    	if (window.domainData.language === "python") {
+    		mode = {
+    			name: "python",
+			 	version: 2,
+			 	singleLineStringErrors: false
+    		}
+		} else {
+    		mode = window.domainData.codemirror_mode
+		}
 
-		case "php":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "application/x-httpd-php",
-				theme: "monokai"
-			});
-			break;
+        editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            indentUnit: 4,
+            tabMode: "shift",
+            mode: mode,
+            theme: "xq-light"
+        });
 
-		case "c#":
-			editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-				lineNumbers: true,
-				indentUnit: 4,
-				tabMode: "shift",
-				mode: "text/x-csharp",
-				theme: "monokai"
-			});
-			break;
+        codeBlocks.addClass(window.domainData.prism_mode);
+        Prism.highlightAll();
+    } else {
+		editor = {
+			"getValue": function() {},
+			"setValue": function(x) {}
+		};
 	}
 
-	output = CodeMirror.fromTextArea(document.getElementById("output"), {
-		lineNumbers: false,
-		textWrapping: true,
-		readOnly : true,
-		theme: "monokai",
-        mode: "text/plain"
-	});
+	if (document.getElementById("output")) {
+		output = CodeMirror.fromTextArea(document.getElementById("output"), {
+			lineNumbers: false,
+			textWrapping: true,
+			readOnly : true,
+			theme: outputTheme,
+			mode: "text/plain"
+		});
+	}
 
     originalCode = editor.getValue();
 
-    $("#inner-text pre").after(
-        $("<a>").addClass("btn btn-small btn-success").css("margin-bottom", "10px").text("Execute Code").click(function() {
+    $("#inner-text pre.exec").after(
+        $("<button>").addClass("btn btn-sm btn-primary execute-code").text("Execute Code").click(function() {
+        	maximizeDock();
             var text = $(this).prev().text();
             if (window.domainData.container_word && text.indexOf(window.domainData.container_word) == -1) {
                 var lines = text.split("\n");
@@ -251,29 +264,20 @@ function load() {
                 text = window.domainData.container.replace("{code}", indentedText);
 
             }
-            editor.setValue(text); execute()
+            editor.setValue(text);
+			execute();
         })
     );
-
-    /*
-    $("footer").click(function() {
-        $("#main").css("margin-bottom", 500);
-        $(".CodeMirror").height(400);
-    });
-
-    $("#main").click(function() {
-        $("#main").css("margin-bottom", 300);
-        $(".CodeMirror").height(200);
-    });
-    */
 
 }
 
 function showExpected() {
+	maximizeDock();
 	output.setValue(tutorialData.output);
 }
 
 function showSolution() {
+	maximizeDock();
     var solutionText = tutorialData.solution;
     if (solutionText) {
     	editor.setValue(solutionText);
@@ -284,10 +288,43 @@ function showSolution() {
 }
 
 function reset() {
+	maximizeDock();
     $("#run-button").prop("disabled", false);
 	editor.setValue(originalCode);
 }
 
+function toggleMinimize() {
+	var dock = document.querySelector("footer#dock");
+
+	if (dock.classList.contains("maximized")) {
+		minimizeDock();
+	} else {
+		maximizeDock();
+	}
+}
+
+function maximizeDock() {
+	var dock = document.querySelector("footer#dock");
+	var toggleButton = document.querySelector("#toggle-dock-button");
+	// $("#run-button").prop("disabled", false);
+
+	dock.classList.add("maximized");
+	toggleButton.classList.remove("btn-primary");
+	toggleButton.classList.add("btn-success");
+
+}
+
+
+function minimizeDock() {
+	var dock = document.querySelector("footer#dock");
+	var toggleButton = document.querySelector("#toggle-dock-button");
+	// $("#run-button").prop("disabled", true);
+
+	dock.classList.remove("maximized");
+	toggleButton.classList.remove("btn-success");
+	toggleButton.classList.add("btn-primary");
+
+}
 
 $(function() {
 	load();

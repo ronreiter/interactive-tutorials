@@ -22,15 +22,20 @@ We can access the array and set values:
 Java arrays are 0 based, which means the first element in an array is accessed at index 0 (e.g: arr[0], which
 accesses the first element). Also, as an example, an array of size 5 will only go up to index 4 due to it being 0 based.
 
-    int[] arr = new int[5]
+    int[] arr = new int[5];
     //accesses and sets the first element
-    arr[4] = 4;
+    arr[0] = 4;
 
 We can also create an array with values in the same line:
 
     int[] arr = {1, 2, 3, 4, 5};
 
-Don't try to print the array without a loop, it will print something nasty like [I@f7e6a96.
+Don't try to print the array without a loop, it will print something nasty like [I@f7e6a96. 
+To print out an array, use the following code:
+
+    for (int i=0; i < arr.length; i++) {
+        System.out.println(arr[i]);
+    }
 
 Exercise
 --------

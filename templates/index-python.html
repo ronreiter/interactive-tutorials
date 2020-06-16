@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block page_title %}{{ html_title }}{% endblock %}
+{% block head %}
+    {% autoescape off %}
+    <script>
+        var domainData = {{ domain_data_json }};
+        var nextChapter = "/{{ language_code }}/{{ next_chapter }}";
+        var previousChapter = "/{{ language_code }}/{{ previous_chapter }}";
+        var backChapter = "/{{ language_code }}/{{ back_chapter }}";
+        var tutorialData = {{ tutorial_data_json }};
+    </script>
+    {% endautoescape %}
+    <script src="/static/js/learnpython.js"></script>
+{% endblock %}
+
+{% block title %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
+{% block ogtitle %}{% if tutorial_page %}{{ page_title }} - {% endif %}Learn {{ domain_data.language_uppercase }} - Free Interactive {{ domain_data.language_uppercase }} Tutorial{% endblock %}
+{% block ogurl %}{{ domain_data.full_url }}{% if tutorial_page %}/{{ path }}{% endif %}{% endblock %}
+
+{% block content %}
+<div class="container" id="main">
+    <div class="row">
+
+        <div class="col">
+
+            {% if page_title %}
+            <ul class="breadcrumb" style="margin-top: 10px">
+              {% if back_chapter %}
+              <li><a href="/{{ language_code }}/{{ back_chapter }}">{{ back_chapter }}</a> <span class="divider mr-1">/</span></li>
+              {% endif %}
+              <li class="active">{{ page_title }}</li>
+            </ul>
+            {% endif %}
+
+            <div class="clearfix">
+                <p>Get started learning Python with <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp's</a> free <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Start Now</a>!</p>
+            </div>
+
+            <div id="inner-text">{% autoescape off %}
+                {% if page_title %}
+                <h1>{{ page_title }}</h1>
+                <hr/>
+                {% endif %}
+                {{ text }}
+            {% endautoescape %}</div>
+
+            <!-- DataCamp-Light exercise -->
+            {% if page_title %}
+            <div data-datacamp-exercise data-lang="python" data-height="400">
+              <code data-type="pre-exercise-code"></code>
+              <code data-type="sample-code">{{tutorial_data.code}}</code>
+              <code data-type="solution">{{tutorial_data.solution}}</code>
+              <code data-type="sct">{{tutorial_data.output}}</code>
+            </div>
+            {% endif %}
+
+            <div>
+                <p>This site is generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+                {% if previous_chapter %}
+                <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}">
+                    <i class="fas fa-angle-double-left"></i> Previous Tutorial
+                </a>
+                {% endif %}
+                {% if next_chapter %}
+                <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">
+                    Next Tutorial <i class="fas fa-angle-double-right"></i>
+                </a>
+                {% endif %}
+            </div>
+
+            <div class="hidden-phone">
+
+            {% if domain_data.courses %}
+            <h3>Online Courses</h3>
+            <div class="row">
+
+                {% for course in domain_data.courses %}
+                <div class="course col-2">
+                    <a href="{{ course.link }}">
+                        <img src="{{ course.image_url }}">
+                        <p style="font-weight: bold; margin-top: 10px; font-size: 14px">{{ course.link_name }}</p>
+{#                    <div>Retail Price: ${{ course.retail_price }}</div>#}
+{#                    <div style="text-size: 12px">{{ course.advertiser }}</div>#}
+                    </a>
+                    <img src="{{ course.pixel_url }}" width="1" height="1" border="0"/>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            </div>
+
+        </div>
+        <div class="col-2 d-none d-lg-block mt-2">
+            <div id="google-ad-right">
+                <iframe src="https://learnpython-ads.datacamp.com/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+
+                <style>
+                    .ab-test a {
+                        display: none;
+                    }
+
+                </style>
+                <script>
+                    function handleOutboundLinkClicks(event) {
+                        ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: event.target.parentElement.dataset.variant
+                        });
+                    }
+                    window.addEventListener('DOMContentLoaded', function() {
+                        var banners = document.querySelectorAll('.ab-test > a');
+                        var bannerIndex = Math.floor(Math.random() * banners.length);
+                        banners[bannerIndex].style.display = "block";
+                        for (var i = 0; i < banners.length; i++) {
+                            banners[i].addEventListener('click', handleOutboundLinkClicks);
+                        }
+                    });
+                </script>
+
+                <h4>Sponsors</h4>
+                <div style="margin-top: 10px">
+                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.png" style="width: 160px" alt="Digital Ocean"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+
+{% endblock %}

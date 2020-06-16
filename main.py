@@ -1,28 +1,26 @@
+# -*- coding: utf-8 -*-
 import json
 import re
 import markdown
 import os
 import cgi
 import urllib
-import hashlib
 import time
 import functools
+import logging
 
-from flask import Flask, render_template, request, make_response, session
-#import pymongo
-import redis
+from flask import Flask, render_template, request, make_response, session, Response
 import sys
+if sys.version_info.major < 3:
+    reload(sys)
+sys.setdefaultencoding('utf8')
 
 from ideone import Ideone
 
 import constants
 
-ideone_api = Ideone(constants.IDEONE_USERNAME, constants.IDEONE_PASSWORD)
-cache = redis.Redis(host=constants.CACHE_HOST)
 
-# mongo connection
-#client = pymongo.MongoClient(host=constants.DB_HOST)
-#users = client.tutorials.users
+courses = json.load(open("courses.json"))
 
 # Flask app
 app = Flask(__name__)
@@ -30,21 +28,49 @@ app.secret_key = constants.SECRET_KEY
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
-DEFAULT_DOMAIN = constants.LEARNPYTHON_DOMAIN if not len(sys.argv) > 1 else sys.argv[1]
+
+current_domain = constants.LEARNPYTHON_DOMAIN
+
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-d",
+        "--domain",
+        help="Default domain when running in development mode",
+        default=constants.LEARNPYTHON_DOMAIN,
+        required=True,
+        choices=constants.DOMAIN_DATA.keys()
+    )
+
+    parser.add_argument("-p", "--port", help="port to listen to", default=5000, type=int)
+
+    args = parser.parse_args()
+    current_domain = args.domain
 
 LANGUAGES = {
     "en": "English",
-    "pl": "Polish",
-    "fa": "Persian",
-    "es": "Spanish",
-    "it": "Italian",
+    "pl": "Polski",
+    "fa": "فارسی",
+    "es": "Español",
+    "it": "Italiano",
+    "de": "Deutsch",
+    "cn": "普通话",
+    "fr": "Français",
+    "pt": "Português",
+    "tr": "Türkçe",
 }
 
 tutorial_data = {}
 
 
-def run_code(code, language):
-    code = ideone_api.create_submission(code, language_name=language, std_input="1 2 3")["link"]
+def run_code(code, language_id):
+    ideone_api = Ideone(
+        constants.IDEONE_USERNAME,
+        constants.IDEONE_PASSWORD,
+        api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
+
+    code = ideone_api.create_submission(code, language_id=language_id, std_input="")["link"]
     result = None
 
     while True:
@@ -110,23 +136,39 @@ def untab(text):
 
 
 def init_tutorials():
+    contributing_tutorials = wikify(open(os.path.join(os.path.dirname(__file__), "tutorials", "Contributing Tutorials.md")).read(), "en")
+
     for domain in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials")):
+        if domain.endswith(".md"):
+            continue
+
+        logging.info("loading data for domain: %s", domain)
         tutorial_data[domain] = {}
         if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
+            continue
+
+        if domain not in constants.DOMAIN_DATA:
+            logging.warn("skipping domain %s beacause no domain data exists" % domain)
             continue
 
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             tutorial_data[domain][language] = {}
 
-            if not os.path.isdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+            tutorials_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language)
+            if not os.path.isdir(tutorials_path):
                 continue
 
-            for tutorial_file in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain, language)):
+            tutorials = os.listdir(tutorials_path)
+
+            # place the index file first
+            tutorials.remove("Welcome.md")
+            tutorials = ["Welcome.md"] + tutorials
+            for tutorial_file in tutorials:
                 if not tutorial_file.endswith(".md"):
                     continue
 
                 tutorial = tutorial_file[:-3]
-                print "loading tutorial %s" % tutorial
+                logging.debug("loading tutorial %s" % tutorial)
 
                 if not tutorial in tutorial_data[domain][language]:
                     tutorial_data[domain][language][tutorial] = {}
@@ -138,14 +180,14 @@ def init_tutorials():
                 except Exception, e:
                     tutorial_dict["text"] = "There was an error reading the tutorial. Exception: %s" % e.message
 
-                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(tutorial_dict["text"])]
-                tutorial_dict["links"] = links
+                # create links by looking at all lines that are not code lines
+                stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
+                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(stripped_text)]
+                tutorial_dict["links"] = [(x, pageurl(x, language)) for x in links]
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
                     text, code, output, solution = tutorial_sections[0]
-                    if tutorial == "Basic Operators":
-                        pass
                     tutorial_dict["page_title"] = tutorial.decode("utf8")
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)
@@ -162,13 +204,14 @@ def init_tutorials():
                     if not link in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
                             "page_title" : link.decode("utf8"),
-                            "text" : "You can contribute this page by forking the repository at: <a href='https://github.com/ronreiter/interactive-tutorials'>https://github.com/ronreiter/interactive-tutorials</a>."
+                            "text": contributing_tutorials,
+                            "code": ""
                         }
 
                     if not "back_chapter" in tutorial_data[domain][language][link]:
                         tutorial_data[domain][language][link]["back_chapter"] = tutorial.decode("utf-8").replace(" ", "_")
-                    else:
-                        print "Warning! duplicate links to tutorial %s" % link
+                    elif not link.startswith("http"):
+                        logging.info("Warning! duplicate links to tutorial %s from tutorial %s/%s", link, language, tutorial)
 
                     num_links = len(links)
                     page_index = links.index(link)
@@ -179,27 +222,39 @@ def init_tutorials():
                         if not "next_chapter" in tutorial_data[domain][language][link]:
                             tutorial_data[domain][language][link]["next_chapter"] = links[page_index + 1].decode("utf-8").replace(" ", "_")
 
+
 init_tutorials()
 
 
 def get_languages():
-    return sorted(tutorial_data[get_host()].keys() if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN].keys())
+    return sorted(tutorial_data[get_host()].keys())
 
+def get_language_names():
+    arr = []
+    langs = get_languages()
+    for lang in langs:
+        arr.append(LANGUAGES.get(lang))
+    return arr
 
 def get_host():
+    if is_development_mode():
+        return current_domain
+
     return request.host[4:] if request.host.startswith("www.") else request.host
 
 
 def is_development_mode():
-    return get_host() in ["localhost:5000", "192.241.245.44"]
+    return "localhost" in request.host or "127.0.0.1" in request.host
 
 
 def get_domain_data():
-    return constants.DOMAIN_DATA[get_host()] if not is_development_mode() else constants.DOMAIN_DATA[DEFAULT_DOMAIN]
+    data = constants.DOMAIN_DATA[get_host()]
+    data["courses"] = courses.get(get_host())
+    return data
 
 
 def get_tutorial_data(tutorial_id, language="en"):
-    return tutorial_data[get_host()][language][tutorial_id] if not is_development_mode() else tutorial_data[DEFAULT_DOMAIN][language][tutorial_id]
+    return tutorial_data[get_host()][language][tutorial_id]
 
 
 def get_tutorial(tutorial_id, language="en"):
@@ -207,16 +262,32 @@ def get_tutorial(tutorial_id, language="en"):
 
     if not td:
         return {
-            "page_title" : cgi.escape(tutorial_id),
-            "text" : "Page not found."
+            "page_title": cgi.escape(tutorial_id),
+            "text": "Page not found."
         }
     else:
         return td
 
-#app.add_url_rule('/favicon.ico', redirect_to=url_for('static/img/favicons', filename=get_domain_data()["favicon"]))
+
+def error404():
+    domain_data = get_domain_data()
+    return make_response(render_template(
+        "error404.html",
+        domain_data=domain_data,
+        all_data=constants.DOMAIN_DATA,
+        language_code="en",
+        languages=get_languages(),
+    ), 404)
+
+
 @app.route("/favicon.ico")
 def favicon():
-    return open(os.path.join(os.path.dirname(__file__), "static/img/favicons/" + get_domain_data()["favicon"]), "rb").read()
+    return open(os.path.join(os.path.dirname(__file__), get_domain_data()["favicon"][1:]), "rb").read()
+
+@app.route("/ads.txt")
+def ads():
+    return Response(render_template("ads.txt"), mimetype='text/plain')
+
 
 @app.route("/", methods=["GET", "POST"])
 @app.route("/<language>/", methods=["GET", "POST"])
@@ -230,6 +301,7 @@ def static_file():
     return make_response(render_template(
         request.path.strip("/") + ".html",
         domain_data=get_domain_data(),
+        all_data=constants.DOMAIN_DATA,
         domain_data_json=json.dumps(get_domain_data()),
         language_code="en",
     ))
@@ -272,65 +344,58 @@ def progress(language):
     return make_response(render_template(
         "progress.html",
         domain_data=get_domain_data(),
+        all_data=constants.DOMAIN_DATA,
     ))
 
 @app.route("/<title>", methods=["GET", "POST"])
 @app.route("/<language>/<title>", methods=["GET", "POST"])
 def index(title, language="en"):
     tutorial = title.replace("_", " ").encode("utf-8")
-    current_tutorial_data = get_tutorial(tutorial, language)
+    try:
+        current_tutorial_data = get_tutorial(tutorial, language)
+    except KeyError:
+        return error404()
     domain_data = get_domain_data()
+    domain_data["language_code"] = language
 
     if request.method == "GET":
         title_suffix = "Learn %s - Free Interactive %s Tutorial" % (domain_data["language_uppercase"], domain_data["language_uppercase"])
-        html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title else title_suffix
+        html_title = "%s - %s" % (title.replace("_", " "), title_suffix) if title != "Welcome" else title_suffix
 
         if not "uid" in session:
             session["uid"] = os.urandom(16).encode("hex")
 
         uid = session["uid"]
 
+        try:
+            site_links = tutorial_data[get_host()][language]["Welcome"]["links"]
+        except Exception, e:
+            site_links = []
+            logging.error("cant get site links for %s %s" % (get_host(), language))
+
         return make_response(render_template(
-            "index.html",
+            "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
+            tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
+            all_data=constants.DOMAIN_DATA,
+            site_tutorial_links=site_links,
+            tutorial_data=current_tutorial_data,
             tutorial_data_json=json.dumps(current_tutorial_data),
             domain_data_json=json.dumps(domain_data),
             html_title=html_title,
             language_code=language,
-            language_name=LANGUAGES[language],
             languages=get_languages(),
+            language_names=get_language_names(),
             uid=uid,
             **current_tutorial_data
         ))
 
     # POST method handling
-    request_hash = "%s_%s" % (hashlib.md5(request.json["code"]).hexdigest(), request.json["language"])
-
-    cached_request = cache.get(request_hash)
-
-    if cached_request is not None:
-        data = json.loads(cached_request)
-    else:
-        data = run_code(request.json["code"], request.json["language"])
-
-        # ha, guess why this check is done :)
-        if data["output"] and "import random" not in data["output"]:
-            cache.set(request_hash, json.dumps(data))
+    data = run_code(request.json["code"], domain_data["language_id"])
 
     if "output" in current_tutorial_data and current_tutorial_data["output"] == data["output"]:
         data["solved"] = True
 
-        # if "user_id" in session:
-        #     user_data = users.findOne({"_id": session["user_id"]})
-        #     if not "tutorials_solved" in user_data:
-        #         user_data["tutorials_solved"] = {}
-        #
-        #     if not language in user_data["tutorials_solved"]:
-        #         user_data["tutorials_solved"][language] = {}
-        #
-        #     user_data["tutorials_solved"][language][title] = True
-        #
-        #     users.insert(user_data)
 
     else:
         data["solved"] = False
@@ -343,5 +408,5 @@ def robots():
     return make_response("User-agent: *\nAllow: /")
 
 if __name__ == "__main__":
-    app.run(debug=True)
-
+    logging.info("listening on port %s", args.port)
+    app.run(debug=True, port=args.port)

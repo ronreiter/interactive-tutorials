@@ -1,17 +1,17 @@
 Tutorial
 --------
 
-W Pythonie używane są dwa rodzaje pętli: "while" i "for".
+W Pythonie używane są dwa rodzaje pętli: `while` i `for`.
 
 ### Pętla "for"
 
-Pętla for "przebiega" przez podany ciąg liczb. Przykład poniżej:
+Pętla `for` "przebiega" przez podany ciąg liczb. Przykład poniżej:
 
     pierwsze = [2,3,5,7]
     for pierwsza in pierwsze:
         print pierwsza
 
-Pętlę for możemy zrealizować z użyciem funkcji range i xrange. Różnica między nimi polega na tym, że range zwraca nową tablicę liczb zawartych w określonym przedziale, natomiast xrange zwraca pojedyńczą liczbę, co czyni ją w pętlach bardziej wydajną. Python 3.x używa funkcji range, która działa jak xrange. Funkcja xrange zwracając liczby zaczyna od 0.
+Pętlę `for` możemy zrealizować z użyciem funkcji `range` lub `xrange`. Różnica między nimi polega na tym, że range zwraca nową tablicę liczb zawartych w określonym przedziale, natomiast `xrange` zwraca pojedyńczą liczbę, co czyni ją w pętlach bardziej wydajną. Python 3 używa funkcji `range`, która działa jak `xrange`. Funkcja `xrange` zwracając liczby zaczyna od 0.
 
     # Wypisze liczby 0 1 2 3 4
     for x in xrange(5):
@@ -25,7 +25,7 @@ Pętlę for możemy zrealizować z użyciem funkcji range i xrange. Różnica mi
 
 ### Pętla "while"
 
-Pętla while wykonuje się dopóki pewien warunek logiczny jest spełniony. Przykład:
+Pętla `while` wykonuje się dopóki pewien warunek logiczny jest spełniony. Przykład:
 
     # Wypisze 0 1 2 3 4
 
@@ -36,7 +36,7 @@ Pętla while wykonuje się dopóki pewien warunek logiczny jest spełniony. Przy
 
 ### Instrukcje "break" i "continue"
 
-`break` jest używany do zakończenia pętli for i while, podczas gdy `continue` pozwala opuścić blok instrukcji niżej i wrócić do nagłówka pętli. Kilka przykładów:
+`break` jest używany do zakończenia pętli `for` i `while`, podczas gdy `continue` pozwala opuścić blok instrukcji niżej i wrócić do nagłówka pętli. Kilka przykładów:
 
     # Wypisze 0 1 2 3 4
 
@@ -58,7 +58,7 @@ Pętla while wykonuje się dopóki pewien warunek logiczny jest spełniony. Przy
 
 ### Ćwiczenie
 
-Za pomocą pętli wypisz wszystkie liczby **parzyste **z tablicy liczby w takiej samej kolejności w jakiej zostały w niej zapisane. Nie wypisuj żadnej liczby, która w tej tablicy znajduje się za liczbą 237.
+Za pomocą pętli wypisz wszystkie liczby **parzyste** z tablicy `liczby` w takiej samej kolejności, w jakiej zostały w niej zapisane. Nie wypisuj żadnej liczby, która w tej tablicy znajduje się za liczbą 237.
 
 Tutorial Code
 -------------

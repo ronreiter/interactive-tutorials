@@ -6,9 +6,6 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-Table of Contents
------------------
-
 ### Learn the Basics
 
 - [[Hello, World!]]

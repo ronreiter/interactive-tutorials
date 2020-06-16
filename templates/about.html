@@ -1,13 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <h1>About</h1>
-    <img src="/static/img/code.jpg" style="float: right">
-    <p><b>{{ domain_data.styled_domain }}</b> is a free interactive {{ domain_data.language_uppercase }} tutorial.</p>
-    <p>Our vision is to teach {{ domain_data.language_uppercase }} in the browser using short and effective exercises. By running real {{ domain_data.language_uppercase }} code directly from the web browser, students are able to try out {{ domain_data.language_uppercase }} without installing it. This creates a more efficient learning process, because students focus on the important stuff - learning how to program.</p>
-    <p>This website and its may be used freely and without charge, and it will always be free.</p>
-    <p>For any comments and suggestions, please send your feedback to <a href="mailto:{{ domain_data.support_email }}">{{ domain_data.support_email }}</a>.</p>
+  <div class="row">
+    <div class="col">
+      <h1>About Interactive Tutorials</h1>
+      <hr/>
+      <img src="/static/img/logos/interactivetutorials-large.png" style="float: right; padding-left: 20px; width: 400px">
+      <p><b>{{ domain_data.styled_domain }}</b> is a free interactive {{ domain_data.language_uppercase }} tutorial - one of the Interactive Tutorials websites.</p>
+      <p>Interactive Tutorials is a personal project of <a href="https://github.com/ronreiter">mine</a> aimed at making everyone in the world be able to
+            learn how to code for free. The servers used to run the tutorials and the time invested in writing tutorials is funded through ads.</p>
 
+      <p>The vision is to teach coding within the browser using short and effective exercises. By running actual code directly from the web browser,
+          students are able to try out coding without installing and executing it locally, which can be hard and redundant for the purpose of learning how to code.
+          This creates a more efficient learning process, because students focus on learning instead of setting up coding environments.</p>
+
+      <p>This website and its content may be used freely and without charge, and it will always be free.</p>
+
+      <p>For any comments and suggestions, please send your feedback to <a href="mailto:{{ domain_data.support_email }}">{{ domain_data.support_email }}</a>.</p>
+
+      <p>To contribute tutorials, please fork <a href="https://github.com/ronreiter/interactive-tutorials">this repository</a> and help with writing tutorials or translating them to different languages.</p>
+    </div>
+  </div>
 </div>
 {% include "small-footer.html" %}
 {% endblock %}

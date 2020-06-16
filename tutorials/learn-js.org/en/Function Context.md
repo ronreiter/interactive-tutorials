@@ -3,7 +3,7 @@ Tutorial
 
 Functions in JavaScript run in a specific context, and using the `this` variable we have access to it. 
 
-All standard functions in the browser run under the Window context. Functions defined under an object or a class (another function) will use the context of the object it was created in. However, we can also change the context of a function on runtime, both before or while executing the function.
+All standard functions in the browser run under the Window context. Functions defined under an object or a class (another function) will use the context of the object it was created in. However, we can also change the context of a function at runtime, either before or while executing the function.
 
 ### Binding a method to an object
 
@@ -31,10 +31,40 @@ For example, let's call `printName` with `person` as the context using the `call
 
     printName.call(person);      // prints out "John"
 
+### call/apply vs bind
+
+The difference between `call`/`apply` and `bind` is that `bind` returns a new function identical to the old function, except that the value of `this` in the new function is now the object it was bound to.  `call`/`apply` calls the function with `this` being the bound object, but it does not return a return a new function or change the original, it calls it with a different value for `this`.
+
+For example:
+
+    var boundPrintName = printName.call(person);    //boundPrintName gets printName's return value (null)
+    boundPrintName();                               //doesn't work because it's not a function, it's null
+    
+    printName.bind(person);                         //returns a new function, but nothing is using it so it's useless
+    printName();                                    //throws error because this.name is not defined 
+    
+Think of `call` as executing the return value of `bind`.
+
+For example:
+
+    printName.call(person);     //is the same as
+    printName.bind(person)();   //executes the function returned by bind
+
+Or think of `bind` returning a shortcut to `call`.
+
+For example:
+
+    var boundPrintName = printName.bind(person); //is the same as
+    var boundPrintName = function()
+    {
+        printName.call(person);
+    }
+
+
 Exercise
 --------
 
-Create bound copies of printFullName to printDetails to person called boundPrintFullName and boundPrintDetails.
+Create bound copies of printFullName and printDetails to person called boundPrintFullName and boundPrintDetails.
 
 Tutorial Code
 -------------

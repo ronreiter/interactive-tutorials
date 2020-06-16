@@ -27,6 +27,17 @@ To run it, we need to run java with the name of the class as the argument (Not t
 ##### Right!
 
     java MyFirstClass
+    
+### Compiling with Java 11
+
+If you are running Java 11, there is a new feature that allows single source file execution. Prior to Java 11, to run your code you have to first compile it, then you can run it. Here's an example:
+
+    javac MyFirstClass.java
+    java MyFirstClass
+
+Since Java 11, you can still do `javac + java` , or you can run `java` by itself to compile and auto-run your code. Note that no .class file will be generated. Here's an example:
+
+    java MyFirstClass.java
 
 ### Arguments
 
@@ -57,19 +68,27 @@ Create a program that prints the arguments of our program. Write one argument pe
 Tutorial Code
 -------------
 
-public class Main {
-    public static void main(String[] args) {
-        // write your code here
-
+    public class Main {
+        public static void main(String[] args) {
+            // write your code here
+        }
     }
-}
 
 Expected Output
 ---------------
 
-1
-2
-3
+    1
+    2
+    3
 
 Solution
 --------
+
+    public class Main {
+        public static void main(String[] args) {
+            for (int i = 0; i < args.length; i++) {
+                System.out.println(args[i]);
+            }
+        }
+    }
+    
