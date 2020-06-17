@@ -80,3 +80,22 @@ Allowing programmers to share and connect code together is a benefit of function
 
 Solution
 --------
+
+#Agrega una funcion aqui (antes de la funcion existente)
+
+def list_benefits():
+    #Devolvemos una lista con las cadenas que se nos piden
+    #Esto es lo mismo que si creasemos primero la lista y luego hiciesemos return lista
+	return ["codigo mas organizado", "codigo mas facil de leer", "reuso de codigo mas facil", "permitir a los programadores compartir codigo y compartirlo"]
+
+def build_sentence(info):
+    #Devolvemos una cadena formada por info (el parametro que recivimos) con el texto que se pide al final
+    #Devolvemos directamente la cadena, pero esto se podria hacer con una cadena auxiliar, aplicando las operaciones sobre ella y devolviendola
+	return (info + (" es el beneficio de una funcion!"))
+
+def name_the_benefits_of_functions():
+    list_of_benefits = list_benefits()
+    for benefit in list_of_benefits:
+        print (build_sentence(benefit))
+
+name_the_benefits_of_functions()
