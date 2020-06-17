@@ -53,7 +53,7 @@ Por ejemplo, vamos a llamar a la funcion siguiente (en el ejemplo previo):
 
 En este ejercicio estaras usando una funcion existente, crearas una propia formando un programa funcional.
 
-1. Agregar una funcion llamada list_benefits()- que regresen la siguiente lista de cadenas, "codigo mas organizado", "codigo mas facil de leer", "reuso de codigo mas facil", "permitir a los programadores compartir codigo y compartirlo"
+1. Agregar una funcion llamada list_benefits()- que regresen la siguiente lista de cadenas, "Codigo mas organizado", "Codigo mas facil de leer", "Reuso de codigo mas facil", "Permitir a los programadores compartir codigo y compartirlo"
 2. Agrega una funcion llamada build_sentence(info) la cual recibe un argumento sencillo conteniendo una cadena y retorna una sentencia comenzando con la cadena y terminando con cadena " es el beneficio de una funcion!"
 3. Ejecuta y velo todo trabajar junto!
 
@@ -73,10 +73,10 @@ name_the_benefits_of_functions()
 Expected Output
 ---------------
 
-More organized code is a benefit of functions!
-More readable code is a benefit of functions!
-Easier code reuse is a benefit of functions!
-Allowing programmers to share and connect code together is a benefit of functions!
+Codigo mas organizado es el beneficio de una funcion!
+Codigo mas facil de leer es el beneficio de una funcion!
+Reuso de codigo mas facil es el beneficio de una funcion!
+Permitir a los programadores compartir codigo y compartirlo es el beneficio de una funcion!
 
 Solution
 --------
@@ -86,7 +86,7 @@ Solution
 def list_benefits():
     #Devolvemos una lista con las cadenas que se nos piden
     #Esto es lo mismo que si creasemos primero la lista y luego hiciesemos return lista
-	return ["codigo mas organizado", "codigo mas facil de leer", "reuso de codigo mas facil", "permitir a los programadores compartir codigo y compartirlo"]
+	return ["Codigo mas organizado", "Codigo mas facil de leer", "Reuso de codigo mas facil", "Permitir a los programadores compartir codigo y compartirlo"]
 
 def build_sentence(info):
     #Devolvemos una cadena formada por info (el parametro que recivimos) con el texto que se pide al final
