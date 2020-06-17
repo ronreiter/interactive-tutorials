@@ -69,10 +69,10 @@ numeros = [
     743, 527
 ]
 
-# Tu codigo va aquí
+#  your code goes here
 
 
-Salida esperada
+Expected Output
 ---------------
 
 402
@@ -93,5 +93,5 @@ Salida esperada
 126
 328
 
-Solución
+Solution
 --------
