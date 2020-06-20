@@ -16,6 +16,7 @@ There is no need to download anything - just click on the chapter you wish to be
 - [[Variables and Types]]
 - [[Simple arrays]]
 - [[Arrays with keys]]
+- [[Multidimensional arrays]]
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]
