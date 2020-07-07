@@ -45,10 +45,10 @@ Create a table named `students` with a first_name, a last_name (both text column
 
 Tutorial Code
 -------------
--- enter code here
+-- create your table here  
 
-INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);
-SELECT * FROM students;
+INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);  
+SELECT * FROM students;  
 
 Expected Output
 ---------------
@@ -56,12 +56,11 @@ John|Doe|23
 
 Solution
 --------
--- enter code here
-CREATE TABLE students (
-    first_name TEXT,
-    last_name TEXT,
-    age INTEGER
-);
+CREATE TABLE students (  
+    first_name TEXT,  
+    last_name TEXT,  
+    age INTEGER  
+);  
 
-INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);
-SELECT * FROM students;
+INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);  
+SELECT * FROM students;  
