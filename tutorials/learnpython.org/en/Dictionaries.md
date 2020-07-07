@@ -58,43 +58,32 @@ Add "Jake" to the phonebook with the phone number 938273443, and remove Jill fro
 Tutorial Code
 -------------
 
-phonebook = {
-    "John" : 938477566,
-    "Jack" : 938377264,
-    "Jill" : 947662781
-}
-
 # write your code here
-
-
-# testing code
-if "Jake" in phonebook:
-    print("Jake is listed in the phonebook.")
-if "Jill" not in phonebook:
-    print("Jill is not listed in the phonebook.")
-
-Expected Output
----------------
-
-test_output_contains("Jake is listed in the phonebook.")
-test_output_contains("Jill is not listed in the phonebook.")
-success_msg("Nice work!")
+phonebook = {  
+    "John" : 938477566,  
+    "Jack" : 938377264,  
+    "Jill" : 947662781  
+}  
 
 Solution
 --------
 
-phonebook = {
-    "John" : 938477566,
-    "Jack" : 938377264,
-    "Jill" : 947662781
-}
-
-# write your code here
-phonebook["Jake"] = 938273443
-del phonebook["Jill"]
+phonebook = {  
+    "John" : 938477566,  
+    "Jack" : 938273443,  
+}  
+phonebook["Jake"] = 938273443  
+del phonebook["Jill"]  
 
 # testing code
-if "Jake" in phonebook:
-    print("Jake is listed in the phonebook.")
-if "Jill" not in phonebook:
-    print("Jill is not listed in the phonebook.")
+if "Jake" in phonebook and "Jill" not in phonebook:  
+    print("Jake is listed in the phonebook.")  
+    print("Jill is not listed in the phonebook.")  
+    print("Nice work!")  
+
+Expected Output
+---------------
+
+>> Jake is listed in the phonebook.  
+>> Jill is not listed in the phonebook.    
+>> Nice work!  
