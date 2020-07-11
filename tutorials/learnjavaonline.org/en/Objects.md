@@ -69,7 +69,7 @@ We can now define methods on `Point`.
         
         Point center(Point other) {
             // Returns the center between this point the other point
-            // Notice we are using integer, we wan't get an accurate value
+            // Notice we are using integer, we won't get an accurate value
             return new Point((x + other.x) / 2, (y + other.y) / 2);
         }
     }
