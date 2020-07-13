@@ -31,7 +31,7 @@ NOTE: You can also use Exception as the exception to catch if any exception is t
 Exercise
 --------
 In this exercise, you will try to catch problematic code. I will create a problematic code block. I want you
-to wrap the problematic code in the try block, than make it print "Problem with code detected" if the exception is
+to wrap the problematic code in the try block, then make it print "Problem with code detected" if the exception is
 thrown.
 
 NOTE: Use ArrayIndexOutOfBoundsException as exception, or Exception as the exception.
