@@ -52,19 +52,19 @@ Tutorial Code
 
 s = "¡Hola! ¿Qué debe ser esta cadena?"
 
-# Longitud debe ser 38
+# La longitud debe ser 38
 print("Longitud de s = %d" % len(s))
 
 # La primera ocurrencia de "a" deberá estar en la posición 2
-print("Primera ocurrencia de la letra a = %d" % s.index("a"))
+print("La primera ocurrencia de la letra a = %d" % s.index("a"))
 
 # El número de a's deberá ser 5
 print("Hay %d a's" % s.count("a"))
 
 # Partiendo el string en trozos
 print("Los primeros cinco caracteres son '%s'" % s[:5]) # Desde el inicio hasta 5
-print("Los siguientes cinco caracteres son '%s'" % s[5:10]) # Desde 5 hasta 10
-print("El treceavo caracter es '%s'" % s[12]) # Solo el 12
+print("Los siguientes diez caracteres son '%s'" % s[5:15]) # Desde 5 hasta 15
+print("El caracter en la posición 22 es '%s'" % s[22]) # Solo el 22
 print("Los últimos cinco caracteres son '%s'" % s[-5:]) # 5 a partir del final
 
 # Convertir todo a mayúsculas
@@ -79,7 +79,7 @@ if s.startswith("¡Las"):
 
 # Revisar cómo termina un string
 if s.endswith("tes!"):
-	print("La cadena termina con 'tes!'. ¡Bien!")
+	print("La cadena termina con 'fascinantes!'. ¡Bien!")
 
 # Separar el string en seis partes,
 # una por palabra.
@@ -92,13 +92,13 @@ Longitud de s = 38
 La primera ocurrencia de la letra a = 2
 Hay 5 a's
 Los primeros cinco caracteres son '¡Las '
-Los siguientes cinco caracteres son 'caden'
-El treceavo caracter es ' '
+Los siguientes diez caracteres son 'cadenas de'
+El caracter en la posición 22 es 's'
 Los últimos cinco caracteres son 'ntes!'
 La cadena en mayúsculas: ¡LAS CADENAS DE TEXTO SON FASCINANTES!
-La cadena en minúsculas: ¡Las cadenas de texto son fascinantes!
+La cadena en minúsculas: ¡las cadenas de texto son fascinantes!
 La cadena empieza con '¡Las'. ¡Bien!
-La cadena termina con 'tes!'. ¡Bien!
+La cadena termina con 'fascinantes!'. ¡Bien!
 Las palabras de la cadena: ['¡Las', 'cadenas', 'de', 'texto', 'son', 'fascinantes!']
 
 Solution
