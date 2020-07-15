@@ -88,8 +88,6 @@ print("Las palabras de la cadena: %s" % s.split(" "))
 Expected Output
 ---------------
 
-test_object("s", incorrect_msg="Asegurate de cambiar el valor de `s` para que coincida con las instrucciones del ejercicio.")
-success_msg("¡Muy bien!")
 Longitud de s = 38
 La primera ocurrencia de la letra a = 2
 Hay 5 a's
