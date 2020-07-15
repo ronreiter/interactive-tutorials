@@ -59,7 +59,7 @@ print("Longitud de s = %d" % len(s))
 print("La primera ocurrencia de la letra a = %d" % s.index("a"))
 
 # El número de a's deberá ser 5
-print("Hay %d letras a." % s.count("a"))
+print("Hay %d a's" % s.count("a"))
 
 # Partiendo el string en trozos
 print("Los primeros cinco caracteres son '%s'" % s[:5]) # Desde el inicio hasta 5
@@ -90,7 +90,7 @@ Expected Output
 
 Longitud de s = 38
 La primera ocurrencia de la letra a = 2
-Hay 5 letras a.
+Hay 5 a's
 Los primeros cinco caracteres son '¡Las '
 Los siguientes diez caracteres son 'cadenas de'
 El caracter en la posición 22 es 's'
