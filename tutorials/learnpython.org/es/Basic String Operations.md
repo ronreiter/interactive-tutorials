@@ -50,12 +50,12 @@ Intenta arreglar el código para mostrar la información correcta al cambiar la 
 Tutorial Code
 -------------
 
-s = "Hola! ¿Qué debe ser esta cadena?"
-
-# Longitud debe ser 37
+s = "¡Hola! ¿Qué debe ser esta cadena?"
+as de texto son fascin
+# Longitud debe ser 38
 print("Longitud de s = %d" % len(s))
 
-# La primera ocurrencia de "a" deberá estar en la posición 1
+# La primera ocurrencia de "a" deberá estar en la posición 2
 print("Primera ocurrencia de la letra a = %d" % s.index("a"))
 
 # El número de a's deberá ser 5
@@ -88,18 +88,18 @@ print("Las palabras de la cadena: %s" % s.split(" "))
 Expected Output
 ---------------
 
-Longitud de s = 37
-La primera ocurrencia de la letra a = 1
+Longitud de s = 38
+La primera ocurrencia de la letra a = 2
 Hay 5 a's
-Los primeros cinco caracteres son 'Strin'
-Los siguientes cinco caracteres son 'gs ar'
-El treceavo caracter es 'a'
-Los últimos cinco caracteres son 'some!'
-La cadena en mayúsculas: STRINGS ARE AWESOME!
-La cadena en minúsculas: strings are awesome!
-La cadena empieza con 'Las'. ¡Bien!
+Los primeros cinco caracteres son '¡Las '
+Los siguientes cinco caracteres son 'caden'
+El treceavo caracter es ' '
+Los últimos cinco caracteres son 'ntes!'
+La cadena en mayúsculas: ¡LAS CADENAS DE TEXTO SON FASCINANTES!
+La cadena en minúsculas: ¡Las cadenas de texto son fascinantes!
+La cadena empieza con '¡Las'. ¡Bien!
 La cadena termina con 'tes!'. ¡Bien!
-Las palabras de la cadena: ['Las', 'cadenas', 'de', 'texto', 'son', 'fascinantes!']
+Las palabras de la cadena: ['¡Las', 'cadenas', 'de', 'texto', 'son', 'fascinantes!']
 
 Solution
 --------
