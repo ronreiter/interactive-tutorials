@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Las cadenas de texto son secuencias de caracteres, delimitada por comillas:
+Las cadenas de texto son secuencias de caracteres, delimitadas por comillas:
 
 	unacadena = "¡Hola mundo!"
 
