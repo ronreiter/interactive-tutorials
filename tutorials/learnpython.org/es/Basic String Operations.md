@@ -29,13 +29,13 @@ Si hay solamente un número entre los corchetes, devolverá el caracter que est�
 
 Incluso es posible poner números negativos en los corchetes. Son una forma fácil de comenzar la cadena por el final en lugar de por el principio. De esta forma -3 significa "el tercer caracter desde el final".
 
-	print unacadena.upper()
-	print unacadena.lower()
+	print(unacadena.upper())
+	print(unacadena.lower())
 
 Esto muestra nuevas cadenas cuyas letras fueron convertidas a  mayúsculas y minúsculas respectivamente.
 
-	print unacadena.startswith("¡Hola")
-	print unacadena.endswith("asdfasdfasdf")
+	print(unacadena.startswith("¡Hola"))
+	print(unacadena.endswith("asdfasdfasdf"))
 
 Esto se usa para determinar si la cadena empieza con algo o termina con algo, respectivamente. La primera imprimirá True porque la cadena empieza con "¡Hola". La segunda imprimirá False porque la cadena no termina con "asdfasdfasdf".
 
@@ -53,37 +53,37 @@ Tutorial Code
 s = "Hola! ¿Qué debe ser esta cadena?"
 
 # Longitud debe ser 37
-print "Longitud de s = %d" % len(s)
+print("Longitud de s = %d" % len(s))
 
 # La primera ocurrencia de "a" deberá estar en la posición 1
-print "Primera ocurrencia de la letra a = %d" % s.index("a")
+print("Primera ocurrencia de la letra a = %d" % s.index("a"))
 
 # El número de a's deberá ser 5
-print "Hay %d a's" % s.count("a")
+print("Hay %d a's" % s.count("a"))
 
 # Partiendo el string en trozos
-print "Los primeros cinco caracteres son '%s'" % s[:5] # Desde el inicio hasta 5
-print "Los siguientes cinco caracteres son '%s'" % s[5:10] # Desde 5 hasta 10
-print "El treceavo caracter es '%s'" % s[12] # Solo el 12
-print "Los últimos cinco caracteres son '%s'" % s[-5:] # 5 a partir del final
+print("Los primeros cinco caracteres son '%s'" % s[:5] # Desde el inicio hasta 5)
+print("Los siguientes cinco caracteres son '%s'" % s[5:10] # Desde 5 hasta 10)
+print("El treceavo caracter es '%s'" % s[12] # Solo el 12)
+print("Los últimos cinco caracteres son '%s'" % s[-5:] # 5 a partir del final)
 
 # Convertir todo a mayúsculas
-print "La cadena en mayúsculas: %s" % s.upper()
+print("La cadena en mayúsculas: %s" % s.upper())
 
 # Convertir todo a minúsculas
-print "La cadena en minúsculas: %s" % s.lower()
+print("La cadena en minúsculas: %s" % s.lower())
 
 # Revisar cómo inicia un string
 if s.startswith("Las"):
-	print "La cadena empieza con 'Las'. ¡Bien!"
+	print("La cadena empieza con 'Las'. ¡Bien!")
 
 # Revisar cómo termina un string
 if s.endswith("tes!"):
-	print "La cadena termina con 'tes!'. ¡Bien!"
+	print("La cadena termina con 'tes!'. ¡Bien!")
 
 # Separar el string en seis partes,
 # una por palabra.
-print "Las palabras de la cadena: %s" % s.split(" ")
+print("Las palabras de la cadena: %s" % s.split(" "))
 
 Expected Output
 ---------------
