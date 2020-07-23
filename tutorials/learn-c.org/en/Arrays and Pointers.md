@@ -11,12 +11,12 @@ Here, `c` is a scalar variable that can store only a single value. However, you 
 Let us start with an example code and look at its output. We will discuss its behavior subsequently.
 
     char vowels[] = {'A', 'E', 'I', 'O', 'U'};
-    char *pvowels = &vowels;
+    char *pvowels = vowels;
     int i;
 
     // Print the addresses
     for (i = 0; i < 5; i++) {
-        printf("&vowels[%d]: %u, pvowels + %d: %u, vowels + %d: %u\n", i, &vowels[i], i, pvowels + i, i, vowels + i);
+        printf("&vowels[%d]: %p, pvowels + %d: %p, vowels + %d: %p\n", i, &vowels[i], i, pvowels + i, i, vowels + i);
     }
 
     // Print the values
@@ -26,15 +26,15 @@ Let us start with an example code and look at its output. We will discuss its be
 
 A typical output of the above code is shown below.
 
->&vowels[0]: 4287605531, pvowels + 0: 4287605531, vowels + 0: 4287605531
+>&vowels[0]: 0x7ffee146da17, pvowels + 0: 0x7ffee146da17, vowels + 0: 0x7ffee146da17
 >
->&vowels[1]: 4287605532, pvowels + 1: 4287605532, vowels + 1: 4287605532
+>&vowels[1]: 0x7ffee146da18, pvowels + 1: 0x7ffee146da18, vowels + 1: 0x7ffee146da18
 >
->&vowels[2]: 4287605533, pvowels + 2: 4287605533, vowels + 2: 4287605533
+>&vowels[2]: 0x7ffee146da19, pvowels + 2: 0x7ffee146da19, vowels + 2: 0x7ffee146da19
 >
->&vowels[3]: 4287605534, pvowels + 3: 4287605534, vowels + 3: 4287605534
+>&vowels[3]: 0x7ffee146da1a, pvowels + 3: 0x7ffee146da1a, vowels + 3: 0x7ffee146da1a
 >
->&vowels[4]: 4287605535, pvowels + 4: 4287605535, vowels + 4: 4287605535
+>&vowels[4]: 0x7ffee146da1b, pvowels + 4: 0x7ffee146da1b, vowels + 4: 0x7ffee146da1b
 >
 >vowels[0]: A, \*(pvowels + 0): A, *(vowels + 0): A
 >
