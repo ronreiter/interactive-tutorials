@@ -15,6 +15,7 @@ This is the open source repository for the free interactive tutorial websites:
 * [learn-perl.org](https://www.learn-perl.org)
 * [learnrubyonline.org](https://www.learnrubyonline.org)
 * [learn-golang.org](https://www.learn-golang.org)
+* [learnRust.org](https://learnRust.org)
 
 Please feel free to contribute your tutorials or exercises by sending a pull request and adding yourself on the list.
 
@@ -41,3 +42,5 @@ superreg
 JBoy Advance
 
 qwong95
+
+AddaxSoft
