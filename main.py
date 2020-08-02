@@ -44,6 +44,7 @@ if __name__ == '__main__':
     )
 
     parser.add_argument("-p", "--port", help="port to listen to", default=5000, type=int)
+    parser.add_argument("-H", "--host", help="host", default='127.0.0.1')
 
     args = parser.parse_args()
     current_domain = args.domain
@@ -409,4 +410,4 @@ def robots():
 
 if __name__ == "__main__":
     logging.info("listening on port %s", args.port)
-    app.run(debug=True, port=args.port)
+    app.run(debug=True, port=args.port, host=args.host)
