@@ -12,7 +12,7 @@ Here is a list of all primitives in Java:
 - `float` (float number, 4 bytes)
 - `double` (float number, 8 bytes)
 - `char` (a character, 2 bytes)
-- `boolean` (true or false, 1 byte)
+- `boolean` (true or false, 1 bit)
 
 Java is a strong typed language, which means variables need to be defined before we use them.
 
