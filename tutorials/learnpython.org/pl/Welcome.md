@@ -1,24 +1,22 @@
-Polski
-------
+This site is generously supported by [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offers online interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) for Data Science. Join **575,000** other learners and get started learning Python for data science today!
 
-Witaj w interaktywnym samouczku Pythona na stronie learnpython.org.
+# Witaj
 
-Niezależnie od tego, czy masz doświadczenie w programowaniu, ta strona jest przeznaczona dla każdego, kto chce nauczyć się języka programowania Python.
+Witaj w interaktywnym samouczku Pythona LearnPython.org.
 
-Zapraszamy Cię do dołączenia do naszej grupy <a href="http://www.facebook.com/groups/180708015327157/">Facebooku</a>, gdzie możesz zadać pytanie, dyskutować nad rozwojem strony i proponować ulepszenia.
+Niezależnie od tego, czy dopiero zaczynasz, czy masz już doświadczenie w programowaniu w innych językach, ten kurs pomoże Ci nauczyć się Pythona.
 
-Po prostu kliknij rozdział, od którego chcesz zacząć i postępuj zgodnie z instrukcjami na stronie. Powodzenia!
+Zapraszamy Cię do dołączenia do naszej grupy na [Facebooku](http://www.facebook.com/groups/180708015327157), gdzie możesz zadawać pytania, dyskutować nad rozwojem strony i proponować ulepszenia.
 
-Spis treści
------------
+Kliknij rozdział, od którego chcesz zacząć i postępuj zgodnie z instrukcjami na stronie. Powodzenia!
 
-### Nauka podstaw
- - [[Witaj Swiecie|Witaj Świecie]]
+### Podstawowe zagadnienia
+ - [[Witaj Swiecie|Witaj, Świecie!]]
  - [[Zmienne i typy]]
  - [[Tablice]]
  - [[Podstawowe operatory]]
  - [[Formatowanie Napisow|Formatowanie Napisów]]
- - [[Podstawowe operacje na napisach]]
+ - [[Operacje na napisach]]
  - [[Instrukcje warunkowe]]
  - [[Petle|Pętle]]
  - [[Funkcje]]
@@ -26,7 +24,7 @@ Spis treści
  - [[Slowniki|Słowniki]]
  - [[Moduly i pakiety|Moduły i pakiety]]
 
-### Zaawansowany tutorial
+### Zaawansowane
 - [[Listy skladane|Listy składane]]
 - [[Funkcje o zmiennej liczbie argumentow|Funkcje o zmiennej liczbie argumentów]]
 - [[Wyrazenia regularne|Wyrażenia regularne]]
