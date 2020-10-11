@@ -6,7 +6,7 @@ Python is completely object oriented, and not "statically typed". You do not nee
 This tutorial will go over a few basic types of variables.
 
 ### Numbers
-Python supports two types of numbers - integers and floating point numbers. (It also supports complex numbers, which will not be explained in this tutorial).
+Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals). (It also supports complex numbers, which will not be explained in this tutorial).
 
 To define an integer, use the following syntax:
 
