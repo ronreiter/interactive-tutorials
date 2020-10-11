@@ -31,7 +31,7 @@ indentation requires standard Python code to use four spaces. For example:
 Exercise
 --------
 
-Use the "print" command to print the line "Hello, World!".
+Use the "print" function to print the line "Hello, World!".
 
 Tutorial Code
 -------------
