@@ -44,19 +44,19 @@ If that pointer (the "tail") is also `nullptr`, then the list is considered to b
 
 Let's define a linked list:
 
-  class LinkedList
-  {
-  public:
-      LinkedList()
-      {
-          head = nullprt;
-          tail = nullptr;
-      }
-
-  private:
-      Node *head;
-      Node *tail;
-  };
+    class LinkedList
+    {
+    public:
+        LinkedList()
+        {
+            head = nullprt;
+            tail = nullptr;
+        }
+    
+    private:
+        Node *head;
+        Node *tail;
+    };
 
 
 ### Adding an item (to the end of the linked list)
