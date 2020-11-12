@@ -3,7 +3,7 @@ Tutorial
 --------
 Map, Filter, and Reduce are paradigms of functional programming. They allow the programmer (you) to write simpler, shorter code, without neccessarily needing to bother about intricacies like loops and branching.
 
-Essentially, these three functions allow you to apply a function across a number of iterables, in one full swoop. ```map``` and ```filter``` come built-in with Python (in the ```__builtins__``` module) and require no importing. ```reduce```, however, needs to be imported as it resides in the ```functools``` module. Let's get a better understanding of how they all work, starting with ```map```.
+Essentially, these three functions allow you to apply a function across a number of iterables, in one fell swoop. ```map``` and ```filter``` come built-in with Python (in the ```__builtins__``` module) and require no importing. ```reduce```, however, needs to be imported as it resides in the ```functools``` module. Let's get a better understanding of how they all work, starting with ```map```.
 
 #### Map
 The ```map()``` function in python has the following syntax:
@@ -150,7 +150,7 @@ Pretty neat huh? Finally, ```reduce()```
 ```reduce(func, iterable[, initial])```
 
 Where ```func``` is the function on which each element in the ```iterable``` gets cumulatively applied to, and ```initial``` is the optional value that gets placed before the elements of the iterable in the calculation, and serves as a default when the iterable is empty. The following should be noted about ```reduce()```:
-1. ```func``` requires two arguments, the first of which is the first element in ```iterable``` (if ```initial``` is not supplied) and the second the second element in ```iterable```. If ```initial``` is supplied, then it becomes the first argument to ```func``` and the first element in ```iterable``` becomes the second element.
+1. ```func``` requires two arguments, the first of which is the first element in ```iterable``` (if ```initial``` is not supplied) and the second element in ```iterable```. If ```initial``` is supplied, then it becomes the first argument to ```func``` and the first element in ```iterable``` becomes the second element.
 2. ```reduce``` "reduces" (I know, forgive me) ```iterable``` into a single value. 
 
 As usual, let's see some examples.
