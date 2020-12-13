@@ -1,16 +1,16 @@
 Tutorial
 --------
 
-Python es completamente orientado a objetos, y no es "escrito estaticamente". No necesitas declarar variables o el tipo antes de usuarlas. Cada variable en Python es un objeto y así cada objeto soporta las siguientes instrucciones:
+Python es completamente orientado a objetos, y no es "escrito estáticamente". No necesitas declarar variables o el tipo antes de usarlas. Cada variable en Python es un objeto y así cada objeto soporta las siguientes instrucciones:
 
-**help(object)** - Muestra información de como usar objetos.
+**help(object)** - Muestra información de cómo usar objetos.
 
-**dir(object)** - muestra que la estructura interna del objeto - y sus metodos y miembros.
+**dir(object)** - muestra la estructura interna del objeto - con sus metodos y miembros.
 
-Este tutorial ira a traves de algunos tipos basicos de variables.
+Este tutorial irá a través de algunos tipos básicos de variables.
 
 ### Números
-Python soporta dos tipos de números - integrales y numeros de punto flotante. (Tambien soporta números complejos, los cuales no se explicarán en este tutorial). 
+Python soporta dos tipos de números - enteros o integrales (integer) y números de punto flotante (float). (Tambien soporta números complejos, los cuales no se explicarán en este tutorial). 
 
 Para definir un integral, usa la siguiente sintaxis:
 
@@ -28,13 +28,13 @@ Las cadenas están definidas con comillas sencillas o compuestas.
     micadena = 'Hola'
     micadena = "Hola"
 
-La diferencia ente las dos es que usando doble comillas lo hace mas facil de incluir los apostofres (de lo contrario concluirira la cadena si se usa doble comillas)
+La diferencia entre las dos es que usando doble comillas lo hace más fácil de incluir los apostofres (de lo contrario concluirá la cadena si se usa doble comillas)
 
         micadena = "No te preocupes de los 'apostofres' usando comillas dobles"
 
-There are additional variations on defining strings that make it easier to include things such as carriage returns, backslashes and Unicode characters. These are beyond the scope of this tutorial, but are covered in the [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial"). 
+Existen variaciones para definir cadenas de texto que hacen más sencillo incluir otros símbolos como un salto de línea, una contrabarra o caracteres Unicode. Este tema no se cubre en este tutorial, pero puedes conseguir más información en [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial"). 
 
-Operadores sencillos pueden ser ejecutados en números o cadenas:
+Los operadores simples pueden ser ejecutados en números o cadenas:
 
     uno = 1
     dos = 2
@@ -44,7 +44,7 @@ Operadores sencillos pueden ser ejecutados en números o cadenas:
     mundo = "mundo"
     holamundo = hola + " " + mundo
 
-Se puede asignar a mas de una variable simultaneamente en la misma linea, como se muestra aquí
+Se puede asignar a más de una variable simultaneamente en la misma línea, como se muestra aquí
 
     a, b = 3, 4
 
@@ -56,14 +56,14 @@ Mezclando operadores entre los numeros y cadenas que no son soportadas:
 
 ### Ejercicio
 
-The target of this exercise is to create a string, an integer, and a floating point number. The string should be named mystring and should contain the word "hello". The floating point number should be named myfloat and should contain the number 10, and the integer should be named myint and should contain the number 20. 
+El objetivo de este ejercicio es crear una cadena de texto, un número entero y uno flotante. La cadena de texto debe nombrarse como "mystring" y debe de contener la palabra "hello". El número flotante deberá llamarse "myfloat" y debe de contener el número 10; el entero debe de llamarse "myint" y deberá contener el número 20.
 
 Tutorial Code
 -------------
-# Escribe tu propio codigo aqui
+# Escribe tu propio código aquí
 
 
-# probando el codigo
+# probando el código
 if micadena == "hola":
     print "Cadena: %s" % micadena
 if isinstance(miflotante, float) and miflotante == 10.0:
