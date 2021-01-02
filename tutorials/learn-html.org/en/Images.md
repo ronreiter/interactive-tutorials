@@ -45,7 +45,7 @@ attribute - which directs the browser to break the floating effect after the fir
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
 
-    <p class="clear: both">Second paragraph</p>
+    <p style="clear: both">Second paragraph</p>
 
 Exercise
 --------
