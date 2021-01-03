@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Listas son como arreglos flexibles. Estos contienen variables que desees y todas los tipos de variables que esten soportados. Los elementos de la lista pueden ser iterated over! (se explicará mas adelante en el tutorial) o accediendo a ellos via un indice basado en cero.
+Las listas son muy similares a los arreglos. Estas pueden contener cualquier tipo de variable y pueden soportar todas las variables que desees. Los elementos de la lista pueden ser iterados de manera simple ! (se explicará mas adelante en el tutorial) o accediendo a ellos via un indice basado en cero. Aquí hay un ejemplo de cómo crear una lista.
 
 
     milista = []
@@ -16,7 +16,7 @@ Listas son como arreglos flexibles. Estos contienen variables que desees y todas
     for x in mylist:
         print x
 
-Accediendo un indice que no exista generará un error.
+Accediendo a un indice que no exista generará un error.
 
     mylist = [1,2,3]
     print mylist[10]
