@@ -205,7 +205,7 @@ Tutorial Code
 from functools import reduce 
 
 # Use map to print the square of each numbers rounded
-# to two decimal places
+# to three decimal places
 my_floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59]
 
 # Use filter to print only the names that are less than 
