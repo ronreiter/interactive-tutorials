@@ -78,7 +78,7 @@ Here is an example for defining the same CSS class defined in the previous examp
      
 To load the CSS file, we would need to use the `<link>` HTML tag in the following manner:
  
-    <link rel="stylesheet" href="nice.css">
+    <link rel="stylesheet" href="style.css">
     
 Please note that the stylesheet should be positioned properly relative to the HTML page. In this example, both the
 HTML file and the CSS file would need to be in the same directory.
@@ -87,7 +87,7 @@ The link tag should be positioned inside the `<head>` section of the HTML page, 
 
     <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="nice.css">    
+        <link rel="stylesheet" href="style.css">    
     </head>
     <body>
         <p>This is the default serif font. It is commonly used in 
