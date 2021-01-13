@@ -50,6 +50,7 @@ or:
     phonebook.pop("John")
     print(phonebook)
 
+
 Exercise
 --------
 
@@ -58,12 +59,19 @@ Add "Jake" to the phonebook with the phone number 938273443, and remove Jill fro
 Tutorial Code
 -------------
 
-# write your code here
 phonebook = {  
     "John" : 938477566,  
     "Jack" : 938377264,  
     "Jill" : 947662781  
 }  
+# your code goes here
+
+Expected Output
+---------------
+
+#test_output_contains("Jake is listed in the phonebook.")
+#test_output_contains("Jill is not listed in the phonebook.")
+success_msg("Nice work!")
 
 Solution
 --------
@@ -71,7 +79,10 @@ Solution
 phonebook = {  
     "John" : 938477566,  
     "Jack" : 938273443,  
+    "Jill" : 947662781  
 }  
+
+# your code goes here
 phonebook["Jake"] = 938273443  
 del phonebook["Jill"]  
 
@@ -79,11 +90,3 @@ del phonebook["Jill"]
 if "Jake" in phonebook and "Jill" not in phonebook:  
     print("Jake is listed in the phonebook.")  
     print("Jill is not listed in the phonebook.")  
-    print("Nice work!")  
-
-Expected Output
----------------
-
->> Jake is listed in the phonebook.  
->> Jill is not listed in the phonebook.    
->> Nice work!  
