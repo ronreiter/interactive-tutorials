@@ -60,26 +60,34 @@ Tutorial Code
 -------------
 
 phonebook = {  
-    "John" : 938477566,  
-    "Jack" : 938377264,  
-    "Jill" : 947662781  
+    "John" : 938477566,
+    "Jack" : 938377264,
+    "Jill" : 947662781
 }  
 # your code goes here
+
+# testing code
+if "Jake" in phonebook:  
+    print("Jake is listed in the phonebook.")
+    
+if "Jill" not in phonebook:      
+    print("Jill is not listed in the phonebook.")  
+
 
 Expected Output
 ---------------
 
-#test_output_contains("Jake is listed in the phonebook.")
-#test_output_contains("Jill is not listed in the phonebook.")
+test_output_contains("Jake is listed in the phonebook.")
+test_output_contains("Jill is not listed in the phonebook.")
 success_msg("Nice work!")
 
 Solution
 --------
 
 phonebook = {  
-    "John" : 938477566,  
-    "Jack" : 938273443,  
-    "Jill" : 947662781  
+    "John" : 938477566,
+    "Jack" : 938377264,
+    "Jill" : 947662781
 }  
 
 # your code goes here
@@ -87,6 +95,8 @@ phonebook["Jake"] = 938273443
 del phonebook["Jill"]  
 
 # testing code
-if "Jake" in phonebook and "Jill" not in phonebook:  
-    print("Jake is listed in the phonebook.")  
+if "Jake" in phonebook:  
+    print("Jake is listed in the phonebook.")
+    
+if "Jill" not in phonebook:      
     print("Jill is not listed in the phonebook.")  
