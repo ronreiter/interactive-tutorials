@@ -1,4 +1,4 @@
-Tutorial
+Operadores Básicos
 --------
 
 Esta sección explica un poco sobre cómo usar los operadores básicos en Python. 
@@ -6,7 +6,7 @@ Esta sección explica un poco sobre cómo usar los operadores básicos en Python
 ### Operadores Aritméticos  
 
 
-Tal como cualquier otro lenguaje de programación, los operadores de suma, resta, multiplicación y división pueden ser usadas con números.<br> 
+Tal como cualquier otro lenguaje de programación, los operadores de suma, resta, multiplicación y división pueden ser usados con números.<br> 
 
     numeros = 1 + 2 * 3 / 4.0
 
@@ -21,7 +21,7 @@ Usando dos símbolos de multiplicación (*) crea una relación de potencia.
     cuadrado = 7 ** 2
     cubico = 2 ** 3
 
-### Usando operadores con texto
+### Usando Operadores con texto
 
 Python soporta unir texto usando el operador de adición:
 
@@ -41,11 +41,11 @@ Las listas pueden ser unidas con los operadores de adición:
 
 Al igual que con los Strings, Python soporta la creación de nuevas listas, repitiendo una secuencia utilizando el operador multiplicación (*) :
 
-    print [1,2,3] * 3
+    print([1,2,3] * 3)
 
 ### Ejercicios
 
-El objetivo de este ejercicio es crear dos listas llamadas `x_lista` y `y_lista`, las cuales contendrán 10 instancias de las variables `x` y `y`,respectivamente. También se requiere crear una lista llamada "gran_lista", la cual contendrá las variables `x` e `y`, 10 veces cada una, concatenando las dos listas que has creado.
+El objetivo de este ejercicio es crear dos listas llamadas `x_lista` y `y_lista`, las cuales contendrán 10 instancias de las variables `x` y `y`,respectivamente. También se requiere crear una lista llamada "gran_lista", la cual contendrá las variables `x` y `y`, 10 veces cada una, concatenando las dos listas que has creado.
 
 Tutorial de Código
 -------------
