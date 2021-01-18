@@ -129,11 +129,11 @@ Tutorial Code
 	}
 
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 	304050
 	
-Lösung
+Solution
 ------
 	#include <stdio.h>
 	

@@ -67,7 +67,7 @@ Die For-Schleife wird folgendes Ausgeben:
 Erstellen Sie ein Array, das 6 Integer enthaltet. Initialisieren Sie alle 6 Integer und geben Sie das 4. in der Konsole aus.
 
 
-Lösung für die Übung.
+Solution für die Übung.
 --------
 
     #include <iostream>

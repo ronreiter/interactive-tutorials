@@ -119,14 +119,14 @@ Tutorial Code
     }
 
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     Das ist f1 und var ist: 0
     Das ist f2 und var ist: 1
     Das ist f3 und var ist: 2
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

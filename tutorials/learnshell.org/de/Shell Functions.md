@@ -43,13 +43,13 @@ Tutorial Code
     ENGLISH_CALC 5 minus 1
     ENGLISH_CALC 4 times 6
 
-Erwartete Ausgabe
+Expected Output
 ---------------
     3 + 5 = 8
     5 - 1 = 4
     4 * 6 = 24
 
-Lösung
+Solution
 --------
     #!/bin/bash
     # Schreibe deine Funktion hier

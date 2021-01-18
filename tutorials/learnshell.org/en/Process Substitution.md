@@ -1,4 +1,4 @@
-Process Substitution
+Tutorial
 -----------------
 In the previous section we've seen how to chain output of one command to the next one.
 But what if you want to chain the output of two or more commands to the another one?

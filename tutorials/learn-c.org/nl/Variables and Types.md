@@ -59,11 +59,11 @@ Tutorial Code
       return 0;
     }
 
-Verwachte Output
+Expected Output
 ---------------
     The sum of a, b, and c is 12.750000.
 
-Oplossing
+Solution
 --------
     #include <stdio.h>
 

@@ -35,11 +35,11 @@ COST_BASKET=1
 TOTAL=
 echo "Gesamtpreis ist: $TOTAL"
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 Gesamtpreis ist: 128
 
-Lösung
+Solution
 ------
 #!/bin/bash
 COST_PINEAPPLE=50

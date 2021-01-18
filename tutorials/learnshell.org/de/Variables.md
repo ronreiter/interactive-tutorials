@@ -61,13 +61,13 @@ Tutorial Code
         echo "BIRTHDAY ist nicht korrekt"
     fi
 
-Erwartete Ausgabe
+Expected Output
 -----------------
     BIRTHDATE ist korrekt, es ist Jan 1, 2000
     Ich habe 10 Geschenke bekommen.
     Ich wurde an einem Samstag geboren.
 
-Lösung
+Solution
 ------
     #!/bin/bash
     # Bearbeite diesen Code

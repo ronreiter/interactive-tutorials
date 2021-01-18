@@ -137,12 +137,12 @@ Tutorial Code
     	printf("%s\n", intCharacters.chars);
 	}
 	
-Erwartete Ausgabe
+Expected Output
 
 	[I, , u, n, d, e, r, s, t, a, n, d, , U, n, i, o, n, s, !]
 	I understand Unions!
 	
-Lösung
+Solution
 
 	#include <stdio.h>
 

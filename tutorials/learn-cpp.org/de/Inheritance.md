@@ -72,7 +72,7 @@ Tutorial Code
         return 0;
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     Forming...x (real): 15 15 y (imag): 30 30
@@ -84,7 +84,7 @@ Erwartete Ausgabe
     c1: x (real): 100 100 y (imag): 200 100
     c2: x (real): 15 15 y (imag): 30 30
     
-Lösung
+Solution
 ------
 
     #include <iostream>

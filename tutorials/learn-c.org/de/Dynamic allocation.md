@@ -62,12 +62,12 @@ Tutorial Code
       return 0;
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     mypoint Koordinaten: 10, 5
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

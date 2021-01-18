@@ -117,14 +117,14 @@ Tutorial Code
       echo 4
     fi
 
-Erwartete Ausgabe
+Expected Output
 -----------------
     1
     2
     3
     4
 
-Lösung
+Solution
 ------
 
     #!/bin/bash

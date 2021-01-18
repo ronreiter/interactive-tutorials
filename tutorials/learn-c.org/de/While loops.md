@@ -75,7 +75,7 @@ Tutorial Code
         return 0;
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     7
@@ -83,7 +83,7 @@ Erwartete Ausgabe
     9
     5
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

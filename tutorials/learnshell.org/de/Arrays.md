@@ -54,14 +54,14 @@ echo ${STRINGS[@]}
 echo "Die Anzahl der Namen im NAMES Array: $NumberOfNames"
 echo "Der zweite Name des NAME Arrays ist:" ${second_name}
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 1 2 3
 Hallo Welt
 Die Anzahl der Namen im NAMES Array: 3
 Der zweite Name des NAME Arrays ist: Eric
 
-Lösung
+Solution
 ------
 #!/bin/bash
 NAMES=( John Eric Jessica )

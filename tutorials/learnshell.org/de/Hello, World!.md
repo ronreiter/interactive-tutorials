@@ -35,11 +35,11 @@ Tutorial Code
     # Text rechts eines '#' Zeichens werden als Kommentar eingelesen. Der Befehl ist unten
     echo "Auf Wiedersehen, Welt!"
 
-Erwartete Ausgabe
+Expected Output
 -----------------
     Hallo Welt!
 
-Lösung
+Solution
 ------
     #!/bin/bash
     # Text rechts eines '#' Zeichens werden als Kommentar eingelesen. Der Befehl ist unten

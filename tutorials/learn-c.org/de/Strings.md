@@ -81,12 +81,12 @@ Tutorial Code
     }
 
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     Erledigt!
 
-Lösung
+Solution
 ------
 
     int main() {

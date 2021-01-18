@@ -55,14 +55,14 @@ Tutorial Code
     
     /* definiere deine Funktion hier (vergiss nicht sie rechtzeitig zu deklarieren!) */
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     1! = 1
     3! = 6
     5! = 120
 
-Lösung
+Solution
 --------
 
     #include <stdio.h>

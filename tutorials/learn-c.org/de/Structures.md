@@ -79,12 +79,12 @@ Tutorial Code
         printf("%s ist %d Jahre alt.", john.name, john.age);
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     John ist 27 Jahre alt.
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

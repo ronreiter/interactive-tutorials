@@ -108,14 +108,14 @@ echo $BUFFETT
 echo "and I say:"
 echo $ISAY
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 Warren Buffett said:
 Life is like a snowball. The important thing is finding wet snow and a really long hill.
 and I say:
 Life is like a football. The important thing is getting wet
 
-Lösung
+Solution
 --------
 #!/bin/bash
 

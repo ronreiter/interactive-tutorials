@@ -1,4 +1,4 @@
-Special Variables
+Tutorial
 -----------------
 
 In last tutorial about shell function, you use "$1" represent the first argument passed to function_A. Moreover, here are some special variables in shell:

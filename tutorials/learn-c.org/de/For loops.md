@@ -52,12 +52,12 @@ Tutorial Code
       printf("10! ist %d.\n", factorial);
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     10! ist 3628800.
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

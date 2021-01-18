@@ -52,7 +52,7 @@ Nós possuímos uma classe definida para veículos. Crie dois novos veículos ch
 Configure carro1 para um conversível vermelho que custa $60,000 com o nome Fer,
 e carro2 para uma van azul que custa $10,000 chamada Jump.
 
-Código do Tutorial
+Tutorial Code
 ------------------
 
 # definir a classe veículo
@@ -70,12 +70,12 @@ class Veículo:
 print carro1.descrição()
 print carro2.descrição()
 
-Saída esperada
+Expected Output
 --------------
 Fer é um conversível vermelho que vale $60000.00.
 Jump é uma van azul que vale $10000.00.
 
-Solução
+Solution
 -------
 
 # definindo a classe veículo

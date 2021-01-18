@@ -1,4 +1,4 @@
-File Testing
+Tutorial
 -----------------
 
 Often you will want to do some file tests on the file system you are running. In this case, shell will provide you with several useful commands to achieve it.

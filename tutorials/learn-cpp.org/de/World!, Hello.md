@@ -34,12 +34,12 @@ Tutorial Code
         return 0;
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     Hallo, Welt!
 
-Lösung
+Solution
 ------
 
     #include <iostream>

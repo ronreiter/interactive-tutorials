@@ -82,7 +82,7 @@ Tutorial Code
         </body>
     </html>
     
-Verwachte Output
+Expected Output
 ---------------
 
     <!DOCTYPE html>
@@ -95,7 +95,7 @@ Verwachte Output
         </body>
     </html>
 
-Oplossing
+Solution
 --------
 
     <!DOCTYPE html>

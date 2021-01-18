@@ -50,7 +50,7 @@ Exercícios
 
 Tente consertar o código para mostrar a informação correta ao mudar a string.
 
-Código do tutorial
+Tutorial Code
 ------------------
 
 s = "Olá! o que essa string será?"
@@ -90,7 +90,7 @@ if s.endswith("ome!"):
 # cada contendo apenas uma palavra
 print "Split the words of the string: %s" % s.split(" ")
 
-Saída esperada
+Expected Output
 ---------------
 
 Tamanho de s = 28
@@ -106,7 +106,7 @@ string começa com 'Str'. Bom!
 String termina com 'ome!'. Bom!\
 Partir as palavras da string: ['Strings', 'são', 'demais!']
 
-Solução
+Solution
 --------
 
 s = "Strings são demais!"

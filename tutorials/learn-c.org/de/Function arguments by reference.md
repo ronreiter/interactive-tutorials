@@ -77,13 +77,13 @@ Tutorial Code
       return 0;
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     John ist 27 Jahre alt.
     Happy birthday! John ist jetzt 28 Jahre alt.
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

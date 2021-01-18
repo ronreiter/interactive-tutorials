@@ -53,12 +53,12 @@ Tutorial Code
       return 0;
     }
 
-Verwachte Output
+Expected Output
 ---------------
 
     Hello, World!
 
-Oplossing
+Solution
 --------
 
     #include <stdio.h>

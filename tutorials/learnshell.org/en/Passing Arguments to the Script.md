@@ -1,4 +1,4 @@
-Passing Arguments to the Script
+Tutorial
 --------
 Arguments can be passed to the script when it is executed, by writing them as a space-delimited list following the script file name.
 

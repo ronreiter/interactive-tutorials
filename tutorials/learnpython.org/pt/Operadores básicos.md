@@ -82,7 +82,7 @@ grande_lista contém 10 objetos
 Quase lá...
 Ótimo!
 
-Solução
+Solution
 --------
 
 x = objeto()

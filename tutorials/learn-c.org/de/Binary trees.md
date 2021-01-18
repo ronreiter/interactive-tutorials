@@ -68,12 +68,12 @@ Tutorial Code
       if(current!=NULL)printf("%d ",current->val);
       if(current->right!=NULL)printDFS(current->right);}
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     1 2 3 4
 
-Lösung
+Solution
 --------
 
     #include <stdio.h>

@@ -127,11 +127,11 @@ Tutorial Code
     }
 
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
 
-Lösung
+Solution
 ------
 
     #include <assert.h>

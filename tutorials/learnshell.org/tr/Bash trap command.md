@@ -1,4 +1,4 @@
-Bash Trap Command
+Tutorial
 -----------------
 
 It often comes the situations that you want to catch 

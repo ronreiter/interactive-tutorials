@@ -90,12 +90,12 @@ Tutorial Code
       return 0;
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     Erledigt!
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

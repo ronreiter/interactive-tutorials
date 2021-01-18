@@ -27,7 +27,7 @@ Neste exercício você terá que adicionar números e "strings" nas listas corre
 
 Você também terá que preencher a variável second_name com o segundo nome contido na lista "names", usando o operador `[]`. Note que o index é iniciado em zero, por exemplo, se quiser acessar o segundo item da lista, terá que usar o index 1.
 
-Código do tutorial
+Tutorial Code
 -------------
 numbers = []  
 strings = []  
@@ -42,7 +42,7 @@ print(numbers)
 print(strings)  
 print("O segundo nome na lista names é %s" % second_name)  
 
-Output esperado
+Expected Output
 ---------------
 
 test_output_contains("[1,2,3]", no_output_msg= "Make sure that you have printed the `numbers` list.")  
@@ -50,7 +50,7 @@ test_output_contains("['hello', 'world']", no_output_msg= "Make sure that you ha
 test_output_contains("The second name on the names list is Eric", no_output_msg= "Did you fill in the variable `second_name` with the second name in the names list?")  
 success_msg("Great Job!")  
 
-Solução
+Solution
 --------
 
 numbers = []  

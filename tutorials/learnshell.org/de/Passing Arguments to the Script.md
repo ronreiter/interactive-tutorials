@@ -28,12 +28,12 @@ Tutorial Code
     #!/bin/bash
     # In dieser Sektion gibt es keine Uebung.
 
-Lösung
+Solution
 ------
     #!/bin/bash
     # In dieser Sektion gibt es keine Uebung.
 
-Erwartete Ausgabe
+Expected Output
 -----------------
     #!/bin/bash
     # In dieser Sektion gibt es keine Uebung.

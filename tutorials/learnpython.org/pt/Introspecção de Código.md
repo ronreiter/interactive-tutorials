@@ -32,10 +32,10 @@ class Veículo:
 
 print dir(Veículo)
 
-Saída esperada
+Expected Output
 ---------------
 
 ['__doc__', '__module__', 'cor', 'descrição', 'tipo', 'nome', 'valor']
 
-Solução
+Solution
 -------

@@ -127,7 +127,7 @@ Tutorial Code
     }
 
 
-Excepted Output
+Expected Output
 ---------------
 
 

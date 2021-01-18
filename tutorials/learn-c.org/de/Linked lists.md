@@ -283,14 +283,14 @@ Tutorial Code
         print_list(test_list);
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     1
     2
     4
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

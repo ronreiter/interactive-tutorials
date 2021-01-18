@@ -45,12 +45,12 @@ Tutorial Code
     #Ändern dies!
     puts 'Goodbye, Welt!'
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
 Hallo, Welt!
 
-Lösung
+Solution
 ------
 
     #Ändern dies!

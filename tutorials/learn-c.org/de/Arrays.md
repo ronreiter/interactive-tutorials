@@ -50,12 +50,12 @@ Tutorial Code
       return 0;
     }
 
-Erwartete Ausgabe
+Expected Output
 -----------------
 
     Der Durchschnitt der 3 Grade betraegt: 85
 
-Lösung
+Solution
 ------
 
     #include <stdio.h>

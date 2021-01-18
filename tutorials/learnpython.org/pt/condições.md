@@ -85,7 +85,7 @@ Exercício
 
 Altere as variáveis na primeira seção, para que cada instrução if seja resolvida como True.
 
-Código do tutorial
+Tutorial Code
 -------------
 
 # change this code
@@ -112,7 +112,7 @@ if first_array and first_array[0] == 1:
 if not second_number:
     print("6")
 
-Saída esperada
+Expected Output
 ---------------
 
 test_output_contains("1", no_output_msg= "Did you print out 1 if `number` is greater than 15?")
@@ -123,7 +123,7 @@ test_output_contains("5", no_output_msg= "Did you print out 5 if first_array and
 test_output_contains("6", no_output_msg= "Did you print out 6 if not second_number?")
 success_msg("Great Work!")
 
-Solução
+Solution
 --------
 
 # change this code
