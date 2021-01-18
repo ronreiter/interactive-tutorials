@@ -47,7 +47,7 @@ Al igual que con los Strings, Python soporta la creación de nuevas listas, repi
 
 El objetivo de este ejercicio es crear dos listas llamadas `x_lista` y `y_lista`, las cuales contendrán 10 instancias de las variables `x` y `y`,respectivamente. También se requiere crear una lista llamada "gran_lista", la cual contendrá las variables `x` e `y`, 10 veces cada una, concatenando las dos listas que has creado.
 
-Tutorial de Código
+Tutorial Code
 -------------
 
 x = object()
@@ -77,7 +77,7 @@ gran_lista contiene 20 objetos
 Casi llegamos...
 Genial!
 
-Solución
+Solution
 --------
 x = object()
 y = object()
