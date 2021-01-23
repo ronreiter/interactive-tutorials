@@ -29,7 +29,7 @@ app.secret_key = constants.SECRET_KEY
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 
-current_domain = constants.LEARNPYTHON_DOMAIN
+current_domain = constants.LEARNPYTHON_DOMAIN  # python
 
 if __name__ == '__main__':
     import argparse
@@ -37,8 +37,8 @@ if __name__ == '__main__':
     parser.add_argument(
         "-d",
         "--domain",
-        help="Default domain when running in development mode",
-        default=constants.LEARNPYTHON_DOMAIN,
+        help="Default domain when running in development mode",        
+        default=current_domain,
         required=True,
         choices=constants.DOMAIN_DATA.keys()
     )
