@@ -35,19 +35,41 @@ We can also write the initialisation part before and modifying expression in the
         i++;
     }
 
-The for loop in C++ can also be used to iterate over an array just as in python as shown in the example below.
+The for loop in C++ (since C++11) can also be used to iterate over an array.
+Some other modern programming languages reference to the technique in the example below as a "foreach-loop":
 
-    // print the array elements 
+    // fetch each array-element and print it out
     int arr[] = {1,2,3,4,5,6};
-    int n;
-    for(n : arr)
+    
+    for(int n : arr)
     {
         cout << n << endl;
     }
 
+    /*
+      Warning: the example above will reference the original memory of arr[] and has write-access!
+      
+      As you often don't need to write to that adress-space, you should consider to access it read-only for safety reasons.
+      To avoid write-access, you might consider using a const-reference like shown below,
+      which will create a constant -and therefore unchangeable- reference named "n" to each existing value of "arr",
+      effectively referncing the values read-only.
+
+      You'll learn more about reference's and pointer's in the next chapters.
+    */
+
+    // fetch each array-element and print it out (readonly)
+    int arr[] = {1,2,3,4,5,6};
+    
+    for(const int& n : arr)
+    {
+        cout << n << endl;
+    }
+
+
+
 Exercise
 --------
-Try to print all the even numbers below 20 using a for loop.
+Try to print all the even numbers below 20 using a for loop in ascending order.
 
 Tutorial Code
 -------------
@@ -56,7 +78,7 @@ using namespace std;
 
 int main()
 {
-    # your code goes here.
+    // your code goes here.
     return 0;
 }
 
