@@ -11,9 +11,16 @@ We run a block if code if the condition in the if statement evaluates to true. T
         // block of code to be run if condition is true
     }
 
+The following example prints "The one i searched for" if num is 4 
+
+    if(num == 4)
+    {
+        cout << "The one i searched for" << endl;
+    }    
+
 The following example prints "Number is Even" if num is a even number i.e. num % 2 == 0
 
-    if(num % 2 == 0)
+    if(num % 2 == 0)  // % is a modulo-operator, which returns the remainder of a division. on even numbers it will return 0
     {
         cout << "Number is Even"<< endl;
     }
@@ -71,10 +78,9 @@ using namespace std;
 int main()
 {
     int age[] = {16,48,72,66,23};
-    int person_age;
+    
     for(int i = 0; i < 5; i++)
-    {
-        person_age = age[i];
+    {        
         # your code goes here. 
         # use a if else block to classify the person as Child / Adult / Retired
     }
@@ -97,15 +103,15 @@ using namespace std;
 int main()
 {
     int age[] = {16,48,72,66,23};
-    int person_age;
+    
     for(int i = 0; i < 5; i++)
     {
-        person_age = age[i];
-        if(person_age < 20)
+        
+        if(age[i] < 20)
         {
             cout << "Child" << endl;
         }
-        else if( person_age >= 20 && person_age < 60)
+        else if( age[i] >= 20 && age[i] < 60)
         {
             cout << "Adult" << endl;
         }
