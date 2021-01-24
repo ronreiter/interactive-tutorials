@@ -155,11 +155,16 @@ def init_tutorials():
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             tutorial_data[domain][language] = {}
 
+            # This
+            if language == "tr":
+                continue
+
             tutorials_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language)
             if not os.path.isdir(tutorials_path):
                 continue
 
             tutorials = os.listdir(tutorials_path)
+            # print >> sys.stderr, "Welcome.md" in tutorials, language
 
             # place the index file first
             tutorials.remove("Welcome.md")

@@ -1,47 +1,47 @@
 Tutorial
 --------
 
-Cadenas son bits de texto. Estas pueden ser definidas como cualquier cosa entre comillas:
+Las cadenas de texto son secuencias de caracteres, delimitadas por comillas:
 
-    unacadena = "Hola Mundo!"
+	unacadena = "¡Hola mundo!"
 
-Como puedes ver, la primera cosas que aprendes es la de mostrar una simple oración. Esta oración es ordenada por Python como cadena. Sin embargo, en vez de imprimir la cadena inmediatamente, debemos explorar varias cosas que puedes hacerle.
+Lo primero que aprendes es definir una simple oración. Python guarda esta oración como una cadena de texto (también conocidas como 'strings', en inglés). Sin embargo, antes de imprimir la cadena, debemos explorar varias cosas que le puedes hacer.
 
-    print len(unacadena)
+	print(len(unacadena))
 
-Esta muestra 12, porque "Hola mundo!" es de 12 caracteres incluyendo puntuación y espacios.
+Esto muestra 12, porque "¡Hola mundo!" tiene un total de 12 caracteres, incluyendo los signos de puntuación y espacios.
 
-    print unacadena.index("o")
+	print(unacadena.index("o"))
 
-Esto imprime 1, porque la ubicación de la primera letra que cumple, en este caso la letra "o" esta en el primer caracter a partir del primero. Nota que aunque hay dos "o"s en la frase, este método solo reconoce el primero.
+Esto imprime 2, porque la primera letra que cumple, en este caso la letra "o", es la tercera. Nota que aunque hay dos "o"s en la frase, este método solo reconoce el primero.
 
-Pero por que no imprime 2? No es "o" el segundo caracter de la cadena? Para hacer las cosas mas sencillas, Python (y mucho de los otros lenguajes de programación) comienzan con 0 en vez de 1. Asi que el lugar de "o" es 1.
+Pero, ¿Por qué no imprime 2? No es "o" el tercer caracter de la cadena? Para hacer las cosas mas sencillas, Python (y muchos otros lenguajes de programación) comienzan a contar desde 0, en vez de 1. Asi que el primer lugar donde aparece "o" es 2.
 
-    print unacadena.count("l")
+	print(unacadena.count("l"))
 
-Para quienes estén usando fuentes especiales, tal como un l minúscula, en vez del número uno. Este cuenta el número de eles en la cadena. Así que debe mostrar 1.
+Para quienes estén usando fuentes especiales, eso es una L minúscula, no el número uno. Este método cuenta el número de eles en la cadena. Así que debe mostrar 1.
 
-    print astring[3:7]
+	print(unacadena[3:7])
 
 Esto imprime una sección de la cadena, comenzando en el indice 3, y terminando en el 6. Pero por que el 6 y no el 7? De nuevo, la mayoría de los lenguajes de programación hacen esto - facilita la forma de hacer matemáticas dentro de esos corchetes.
 
-Si hay solamente un número entre los corchetes, devolverá el caracter que esté en ese índice. Si dejas en blanco el primer número pero mantienes la coma, devolverá una porción desde el principio hasta el número que dejó. Si dejas en blanco el segundo número, devolverá una porción desde el primer número hasta el final.
+Si hay solamente un número entre los corchetes, devolverá el caracter que esté en ese índice. Si dejas en blanco el primer número pero mantienes los dos puntos, devolverá una porción desde el principio hasta el número que dejó. Si dejas en blanco el segundo número, devolverá una porción desde el primer número hasta el final.
 
 Incluso es posible poner números negativos en los corchetes. Son una forma fácil de comenzar la cadena por el final en lugar de por el principio. De esta forma -3 significa "el tercer caracter desde el final".
 
-    print astring.upper()
-    print astring.lower()
+	print(unacadena.upper())
+	print(unacadena.lower())
 
-Esto muestra nuevas cadenas con todas las letras convertidas de mayúsculas a minúsculas respectivamente.
+Esto muestra nuevas cadenas cuyas letras fueron convertidas a  mayúsculas y minúsculas respectivamente.
 
-    print astring.startswith("Hola")
-    print astring.endswith("asdfasdfasdf")
+	print(unacadena.startswith("¡Hola"))
+	print(unacadena.endswith("asdfasdfasdf"))
 
-Esto se usa para determinar si la cadena empieza con algo o termina con algo, respectivamente. La primera imprimirá True porque la cadena empieza con "Hola". La segunda imprimirá False porque la cadena no termina con "asdfasdfasdf".
+Esto se usa para determinar si la cadena empieza con algo o termina con algo, respectivamente. La primera imprimirá True porque la cadena empieza con "¡Hola". La segunda imprimirá False porque la cadena no termina con "asdfasdfasdf".
 
-    afewwords = astring.split(" ")
+	palabras = astring.split(" ")
 
-Esto separa la cadena en un montón de cadenas agrupadas en una lista. Ya que este ejemplo separa con un espacio, el primer elemento en la lista sera "Hola", y el segundo "Mundo!". 
+Esto separa la cadena en un montón de cadenas agrupadas en una lista. Ya que este ejemplo separa con un espacio, el primer elemento en la lista sera "¡Hola", y el segundo "Mundo!".
 
 ### Ejercicio
 
@@ -50,57 +50,56 @@ Intenta arreglar el código para mostrar la información correcta al cambiar la 
 Tutorial Code
 -------------
 
-s = "Hola ahi! Que debe ser esta cadena?"
+s = "¡Hola! ¿Qué debe ser esta cadena?"
 
-# Longitud debe ser 35
-print "Longitud de s = %d" % len(s)
+# La longitud debe ser 38
+print("Longitud de s = %d" % len(s))
 
-# Primer evento de "a" deberá estar en el lugar 3
-print "Primer evento de la letra a = %d" % s.index("a")
+# La primera ocurrencia de "a" deberá estar en la posición 2
+print("La primera ocurrencia de la letra a = %d" % s.index("a"))
 
 # El número de a's deberá ser 5
-print "a ocurre %d veces" % s.count("a")
+print("Hay %d a's" % s.count("a"))
 
-# Slicing the string into bits
-print "The first five characters are '%s'" % s[:5] # Start to 5
-print "The next five characters are '%s'" % s[5:10] # 5 to 10
-print "The thirteenth character is '%s'" % s[12] # Just number 12
+# Partiendo el string en trozos
+print("Los primeros cinco caracteres son '%s'" % s[:5]) # Desde el inicio hasta 5
+print("Los siguientes diez caracteres son '%s'" % s[5:15]) # Desde 5 hasta 15
+print("El caracter en la posición 22 es '%s'" % s[22]) # Solo el 22
+print("Los últimos cinco caracteres son '%s'" % s[-5:]) # 5 a partir del final
 
-print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
+# Convertir todo a mayúsculas
+print("La cadena en mayúsculas: %s" % s.upper())
 
-# Convert everything to uppercase
-print "String in uppercase: %s" % s.upper()
+# Convertir todo a minúsculas
+print("La cadena en minúsculas: %s" % s.lower())
 
-# Convert everything to lowercase
-print "String in lowercase: %s" % s.lower()
+# Revisar cómo inicia un string
+if s.startswith("¡Las"):
+	print("La cadena empieza con '¡Las'. ¡Bien!")
 
-# Check how a string starts
-if s.startswith("Str"):
-    print "String starts with 'Str'. Good!"
+# Revisar cómo termina un string
+if s.endswith("tes!"):
+	print("La cadena termina con 'fascinantes!'. ¡Bien!")
 
-# Check how a string ends
-if s.endswith("ome!"):
-    print "String ends with 'ome!'. Good!"
-
-# Split the string into three separate strings,
-# each containing only a word
-print "Split the words of the string: %s" % s.split(" ")
+# Separar el string en seis partes,
+# una por palabra.
+print("Las palabras de la cadena: %s" % s.split(" "))
 
 Expected Output
 ---------------
 
-Length of s = 35
-The first occurrence of the letter a = 3
-a occurs 5 times
-The first five characters are 'Strin'
-The next five characters are 'gs ar'
-The thirteenth character is 'a'
-The last five characters are 'some!'
-String in uppercase: STRINGS ARE AWESOME!
-String in lowercase: strings are awesome!
-String starts with 'Str'. Good!
-String ends with 'ome!'. Good!
-Split the words of the string: ['Strings', 'are', 'awesome!']
+Longitud de s = 38
+La primera ocurrencia de la letra a = 2
+Hay 5 a's
+Los primeros cinco caracteres son '¡Las '
+Los siguientes diez caracteres son 'cadenas de'
+El caracter en la posición 22 es 's'
+Los últimos cinco caracteres son 'ntes!'
+La cadena en mayúsculas: ¡LAS CADENAS DE TEXTO SON FASCINANTES!
+La cadena en minúsculas: ¡las cadenas de texto son fascinantes!
+La cadena empieza con '¡Las'. ¡Bien!
+La cadena termina con 'fascinantes!'. ¡Bien!
+Las palabras de la cadena: ['¡Las', 'cadenas', 'de', 'texto', 'son', 'fascinantes!']
 
 Solution
 --------
