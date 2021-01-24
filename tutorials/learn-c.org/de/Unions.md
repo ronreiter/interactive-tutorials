@@ -1,5 +1,6 @@
 Tutorial
 --------
+
 C Unions sind im Grunde dasselbe wie C Strukturen (structs), abgesehen davon, dass sie anstatt mehrere Variablen, die ihren eigenen Speicher besitzen, besitzen Unions die Eigenschaft mehrere Namen für die selbe Variable zu verwenden. Über diese Namen kann der Speicher als unterschiedliche Datentypen interpretiert werden (und die Größe der Union ist die des größten verwendeten typen + Puffer den ihm der Compiler eventuell mit gibt)
 Also wenn Sie in der Lage sein wollen Speicher in unterschiedlichen Wegen zu interpretieren, zum Beispiel einen integer Byte für Byte zu lesen hätte man so etwas wie das:
 
@@ -107,11 +108,12 @@ In diesem Beispiel sieht man einen struct mit den 4 (häufigsten) Münzen der Ve
 	printf("Es sind %i quarters, %i dimes, %i nickels, %i pennies\n",
     	change.quarter, change.dime, change.nickel, change.penny);
 	
-Übung
+## Übung
 
 Erstelle ein Union die ein Array von 21 Zeichen enthält und 6 ints (6 da 21 / 4 == 5, aber 5 * 4 = 20 also brauchen wir für diese Übung 1 mehr), die integers werden auf 6 vorgegebene Werte gesetzt und dann gib das Zeichenarray sowohl als Serie von Zeichen, als auch als String aus.
 
 Tutorial Code
+-------------
 
 	#include <stdio.h>
 
@@ -138,11 +140,13 @@ Tutorial Code
 	}
 	
 Expected Output
+---------------
 
 	[I, , u, n, d, e, r, s, t, a, n, d, , U, n, i, o, n, s, !]
 	I understand Unions!
 	
 Solution
+--------
 
 	#include <stdio.h>
 

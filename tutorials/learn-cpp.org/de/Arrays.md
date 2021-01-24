@@ -61,23 +61,36 @@ Die For-Schleife wird folgendes Ausgeben:
     86
 
 
-Übung
---------
+## Exercise
 
 Erstellen Sie ein Array, das 6 Integer enthaltet. Initialisieren Sie alle 6 Integer und geben Sie das 4. in der Konsole aus.
 
 
-Solution für die Übung.
+Tutorial Code
+-------------
+
+    #include <iostream>
+    using namespace std;
+    int main() {
+      char keys[6] = {'a','b','a','c','d','c'};
+      return 0;
+    }
+
+Expected Output
+---------------
+
+    
+    d
+    
+
+
+Solution
 --------
 
     #include <iostream>
     using namespace std;
-
     int main() {
-      
-      int uebung[6] = {20,21,22,23,24,25};
-      cout << uebung[3] << endl;	
-	
+      char keys[6] = {'b','c','d','a','b','b'};
+      cout<< keys[2]<<endl;
       return 0;
-
     }
