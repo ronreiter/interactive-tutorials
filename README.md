@@ -54,10 +54,9 @@ Todos
 
 Contributors
 ============
-superreg
-
-JBoy Advance
-
-qwong95
-
-AddaxSoft
+- superreg
+- JBoy Advance
+- qwong95
+- AddaxSoft
+- derco0n
+- ...<perhaps you>...
