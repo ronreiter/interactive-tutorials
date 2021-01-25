@@ -7,7 +7,8 @@ But what if we pass pointers to values instead of the values themselves? This wi
 Let's say we want to write a function which increments a number by one, called `addone`. This will not work:
 
     void addone(int n) {
-        n++;
+        // n is local variable which only exists within the function scope
+        n++; // therefore incrementing it has no effect
     }
 
     int n;
@@ -17,8 +18,9 @@ Let's say we want to write a function which increments a number by one, called `
 
 However, this will work:
 
-    void addone(int * n) {
-        (*n)++;
+    void addone(int *n) {
+        // n is a pointer here which point to a memory-adress outside the function scope
+        (*n)++; // this will effectively increment the value of n
     }
 
     int n;
@@ -98,7 +100,8 @@ Solution
     void birthday(person * p);
 
     void birthday(person * p){
-        (*p).age += 1;
+        p->age++; // This is the same..	
+        //(*p).age++; // ... as this would be
     }
 
     int main() {
