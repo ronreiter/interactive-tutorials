@@ -85,12 +85,12 @@ Tutorial Code
 
             int x = 2;
             int y = 2;
-            int a = foo(x,y);
+            int a = Foo(x,y);
             Console.WriteLine(a);
 
         }
 
-        //write method foo here
+        //write method Foo here
     }
 
 Expected Output
