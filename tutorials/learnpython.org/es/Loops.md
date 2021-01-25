@@ -1,15 +1,15 @@
 Tutorial
 --------
 
-Hay dos tipos de búcles en Python, for y while.
+Hay dos tipos de búcles en Python, "for" y "while".
 
 ### El búcle "for"
 
 Los búcles For iteran sobre una secuencia. Aquí un ejemplo:
 
-    primes = [2,3,5,7]
-    for prime in primes:
-        print prime
+    primos = [2,3,5,7]
+    for prime in primos:
+        print primos
 
 Para bucles pueden iterar sobre una secuencia de números usando las funciones de "range" y "xrange". La diferencia entre rango y range el que la función de rango devuelve una nueva lista con números que el rango especifica, donde xrange devuelve un iterador, el cual es muy eficiente. (Python 3 usa la función range, el cual actua como xrange). Nota que la función xrange esta basada en zero.
 
@@ -21,18 +21,18 @@ Para bucles pueden iterar sobre una secuencia de números usando las funciones d
     for x in xrange(3,6):
         print x
 
-### búcle "while"
+### El búcle "while"
 
-Mientras que los búcles While se repiten mientras se cumpla una condición buleana sea cumplida. Por ejemplo:
+Mientras que los búcles While, a diferencia de los For, se repiten tantas veces como se cumpla una condición buleana. Por ejemplo:
 
     # Muestra 0,1,2,3,4
 
     count = 0
     while count < 5:
         print count
-        count += 1  # This is the same as count = count + 1
+        count += 1  # Esto es lo mismo que escribir:  count = count + 1
 
-### sentencias "break" y "continue"
+### Sentencias "break" y "continue"
 
 **break** es usado para salir de un búcle o un búcle while, donde **continue** es usado para saltar el bloque actual, y el retorno de las sentencias "for" o "while". Aquí unos ejemplos:
 
@@ -47,19 +47,19 @@ Mientras que los búcles While se repiten mientras se cumpla una condición bule
 
     # Muestra solo números impares - 1,3,5,7,9
     for x in xrange(10):
-        # Check if x is even
+        # Chequéa si x es numero par
         if x % 2 == 0:
             continue
         print x
 
 ### Ejercicio
 
-Búcles que muestra todos los números impares de los números de la lista en el mismo orden que es recibido, pero solo en el número "412" (sin incluirlos) Se pare e ignore todos los números mayores a 412 en la sentencia. (Nota que habra números superior a 412.)
+Búcles que muestra todos los números pares de los números de la lista en el mismo orden que es recibido, pero solo menores al número "412" (sin incluirlos). Separe e ignore todos los números mayores a 412 en la sentencia. (Note que habra números superiores a 412.)
 
 Tutorial Code
 -------------
 
-numbers = [
+numeros = [
     951, 402, 984, 651, 360, 69, 408, 319, 601, 485, 980, 507, 725, 547, 544,
     615, 83, 165, 141, 501, 263, 617, 865, 575, 219, 390, 984, 592, 236, 105, 942, 941,
     386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
@@ -69,7 +69,7 @@ numbers = [
     743, 527
 ]
 
-# your code goes here
+#  your code goes here
 
 
 Expected Output
