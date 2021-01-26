@@ -115,16 +115,6 @@
 
         <div class="col-2 d-none d-lg-block mt-2">
             <div id="google-ad-right">
-                <h4>Chapters</h4>
-                <hr/>
-                <div class="mt-2">
-                    {% for link, link_href in site_tutorial_links %}
-                        <div>
-                            <a href="{{ link_href }}">{{ link }}</a>
-                        </div>
-                    {% endfor %}
-                </div>
-
                 <h4 class="mt-3">Sponsors</h4>
                 <hr/>
 {#                <div class="mt-3">#}
@@ -150,6 +140,15 @@
                     <a href="http://www.spoj.com/?utm_campaign=permanent&utm_medium=banner&utm_source=learnx" target="_blank">
                         <img src="/static/img/logos/spoj.png" style="width: 160px" alt="Sphere Engine">
                     </a>
+                </div>
+                <h4>Chapters</h4>
+                <hr/>
+                <div class="mt-2">
+                    {% for link, link_href in site_tutorial_links %}
+                        <div>
+                            <a href="{{ link_href }}">{{ link }}</a>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
