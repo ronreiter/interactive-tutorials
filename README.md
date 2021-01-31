@@ -45,12 +45,6 @@ To run the development server outside of a Docker, create a Python 2 virtualenv 
     python main.py -d learnpython.org
     
 
-Todos
-=====
-
-* Dark mode
-* Fix mobile
-
 
 Contributors
 ============
