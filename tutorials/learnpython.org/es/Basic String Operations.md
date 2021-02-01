@@ -1,11 +1,11 @@
 Tutorial
 --------
 
-Cadenas son bits de texto. Estas pueden ser definidas como cualquier cosa entre comillas:
+Las cadenas son bits de texto; estas pueden ser definidas como cualquier cosa entre comillas:
 
     unacadena = "Hola Mundo!"
 
-Como puedes ver, la primera cosas que aprendes es la de mostrar una simple oración. Esta oración es ordenada por Python como cadena. Sin embargo, en vez de imprimir la cadena inmediatamente, debemos explorar varias cosas que puedes hacerle.
+Como puedes ver, la primera cosa que aprendes es la de mostrar una simple oración. Esta oración es procesada por Python como una cadena. Sin embargo, en vez de imprimir la cadena inmediatamente, debemos explorar varias cosas que puedes hacerle.
 
     print len(unacadena)
 
@@ -13,21 +13,21 @@ Esta muestra 12, porque "Hola mundo!" es de 12 caracteres incluyendo puntuación
 
     print unacadena.index("o")
 
-Esto imprime 1, porque la ubicación de la primera letra que cumple, en este caso la letra "o" esta en el primer caracter a partir del primero. Nota que aunque hay dos "o"s en la frase, este método solo reconoce el primero.
+Esto imprime 1, porque la ubicación de la primera letra que imprime, en este caso la letra "o" esta en el primer caracter a partir del primero. Nota que aunque hay dos "o" en la frase, este método solo reconocerá al primero.
 
-Pero por que no imprime 2? No es "o" el segundo caracter de la cadena? Para hacer las cosas mas sencillas, Python (y mucho de los otros lenguajes de programación) comienzan con 0 en vez de 1. Asi que el lugar de "o" es 1.
+Pero ¿Por qué no imprime 2? ¿No es "o" el segundo caracter de la cadena? Para hacer las cosas mas sencillas, Python (y mucho de los otros lenguajes de programación) comienzan con 0 en vez de 1. Asi que el lugar de "o" es 1.
 
     print unacadena.count("l")
 
-Para quienes estén usando fuentes especiales, tal como un l minúscula, en vez del número uno. Este cuenta el número de eles en la cadena. Así que debe mostrar 1.
+Para quienes estén usando fuentes especiales, tal como la 'l' minúscula, en vez del número uno. Este cuenta el número de eles en la cadena, así que debe mostrar 1.
 
     print astring[3:7]
 
-Esto imprime una sección de la cadena, comenzando en el indice 3, y terminando en el 6. Pero por que el 6 y no el 7? De nuevo, la mayoría de los lenguajes de programación hacen esto - facilita la forma de hacer matemáticas dentro de esos corchetes.
+Esto imprime una sección de la cadena, comenzando en el indice 3, y terminando en el 6. Pero ¿Por qué el 6 y no el 7? De nuevo, la mayoría de los lenguajes de programación hacen esto - facilita la forma de hacer matemáticas dentro de esos corchetes.
 
-Si hay solamente un número entre los corchetes, devolverá el caracter que esté en ese índice. Si dejas en blanco el primer número pero mantienes la coma, devolverá una porción desde el principio hasta el número que dejó. Si dejas en blanco el segundo número, devolverá una porción desde el primer número hasta el final.
+Si hay solamente un número entre los corchetes, devolverá el caracter que esté en ese índice. Si dejas en blanco el primer número pero mantienes los dos puntos, devolverá una porción desde el índice 0 hasta el número que quedó. Si dejas en blanco el segundo número, devolverá una porción desde el primer número hasta el final.
 
-Incluso es posible poner números negativos en los corchetes. Son una forma fácil de comenzar la cadena por el final en lugar de por el principio. De esta forma -3 significa "el tercer caracter desde el final".
+Incluso es posible poner números negativos en los corchetes. Son una forma sencilla de comenzar la cadena por el final en lugar de por el principio. De esta forma -3 significa "el tercer caracter desde el final".
 
     print astring.upper()
     print astring.lower()
@@ -41,7 +41,7 @@ Esto se usa para determinar si la cadena empieza con algo o termina con algo, re
 
     afewwords = astring.split(" ")
 
-Esto separa la cadena en un montón de cadenas agrupadas en una lista. Ya que este ejemplo separa con un espacio, el primer elemento en la lista sera "Hola", y el segundo "Mundo!". 
+Esto separa la cadena en un montón de cadenas agrupadas en una lista. Ya que este ejemplo hace una separación con un espacio; el primer elemento en la lista sera "Hola", y el segundo "Mundo!". 
 
 ### Ejercicio
 
