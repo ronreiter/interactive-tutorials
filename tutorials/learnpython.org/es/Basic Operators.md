@@ -6,7 +6,7 @@ Esta sección explica un poco sobre cómo usar los operadores básicos en Python
 ### Operadores Aritméticos  
 
 
-Tal como cualquier otro lenguaje de programación, los operadores de suma, resta, multiplicación y división pueden ser usadas con números.<br> 
+Tal como cualquier otro lenguaje de programación, los operadores de suma, resta, multiplicación y división pueden ser usados con números.<br> 
 
     numeros = 1 + 2 * 3 / 4.0
 
