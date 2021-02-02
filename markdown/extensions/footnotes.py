@@ -114,7 +114,7 @@ class FootnoteExtension(markdown.Extension):
     def makeFootnotesDiv(self, root):
         """ Return div of footnotes as et Element. """
 
-        if not self.footnotes.keys():
+        if not list(self.footnotes.keys()):
             return None
 
         div = etree.Element("div")
@@ -122,7 +122,7 @@ class FootnoteExtension(markdown.Extension):
         hr = etree.SubElement(div, "hr")
         ol = etree.SubElement(div, "ol")
 
-        for id in self.footnotes.keys():
+        for id in list(self.footnotes.keys()):
             li = etree.SubElement(ol, "li")
             li.set("id", self.makeFootnoteId(id))
             self.parser.parseChunk(li, self.footnotes[id])

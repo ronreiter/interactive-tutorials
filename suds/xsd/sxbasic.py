@@ -27,7 +27,7 @@ from suds.xsd.query import *
 from suds.sax import splitPrefix, Namespace
 from suds.transport import TransportError
 from suds.reader import DocumentReader
-from urlparse import urljoin
+from urllib.parse import urljoin
 
 
 log = getLogger(__name__)
@@ -630,7 +630,7 @@ class Include(SchemaObject):
             root.set(TNS, tns)
         else:
             if self.schema.tns[1] != tns:
-                raise Exception, '%s mismatch' % TNS
+                raise Exception('%s mismatch' % TNS)
                 
  
     def description(self):

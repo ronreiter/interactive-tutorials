@@ -141,7 +141,7 @@ def _serialize_html(write, elem, encoding, qnames, namespaces):
                 _serialize_html(write, e, encoding, qnames, None)
         else:
             write("<" + tag)
-            items = elem.items()
+            items = list(elem.items())
             if items or namespaces:
                 items.sort() # lexical order
                 for k, v in items:
@@ -154,7 +154,7 @@ def _serialize_html(write, elem, encoding, qnames, namespaces):
                     # FIXME: handle boolean attributes
                     write(" %s=\"%s\"" % (qnames[k], v))
                 if namespaces:
-                    items = namespaces.items()
+                    items = list(namespaces.items())
                     items.sort(key=lambda x: x[1]) # sort on prefix
                     for v, k in items:
                         if k:
@@ -247,12 +247,12 @@ def _namespaces(elem, encoding, default_namespace=None):
         tag = elem.tag
         if isinstance(tag, QName) and tag.text not in qnames:
             add_qname(tag.text)
-        elif isinstance(tag, basestring):
+        elif isinstance(tag, str):
             if tag not in qnames:
                 add_qname(tag)
         elif tag is not None and tag is not Comment and tag is not PI:
             _raise_serialization_error(tag)
-        for key, value in elem.items():
+        for key, value in list(elem.items()):
             if isinstance(key, QName):
                 key = key.text
             if key not in qnames:

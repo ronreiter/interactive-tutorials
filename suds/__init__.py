@@ -94,7 +94,7 @@ class Repr:
 
 def tostr(object, encoding=None):
     """ get a unicode safe string representation of an object """
-    if isinstance(object, basestring):
+    if isinstance(object, str):
         if encoding is None:
             return object
         else:
@@ -102,7 +102,7 @@ def tostr(object, encoding=None):
     if isinstance(object, tuple):
         s = ['(']
         for item in object:
-            if isinstance(item, basestring):
+            if isinstance(item, str):
                 s.append(item)
             else:
                 s.append(tostr(item))
@@ -112,7 +112,7 @@ def tostr(object, encoding=None):
     if isinstance(object, list):
         s = ['[']
         for item in object:
-            if isinstance(item, basestring):
+            if isinstance(item, str):
                 s.append(item)
             else:
                 s.append(tostr(item))
@@ -121,13 +121,13 @@ def tostr(object, encoding=None):
         return ''.join(s)
     if isinstance(object, dict):
         s = ['{']
-        for item in object.items():
-            if isinstance(item[0], basestring):
+        for item in list(object.items()):
+            if isinstance(item[0], str):
                 s.append(item[0])
             else:
                 s.append(tostr(item[0]))
             s.append(' = ')
-            if isinstance(item[1], basestring):
+            if isinstance(item[1], str):
                 s.append(item[1])
             else:
                 s.append(tostr(item[1]))
@@ -135,7 +135,7 @@ def tostr(object, encoding=None):
         s.append('}')
         return ''.join(s)
     try:
-        return unicode(object)
+        return str(object)
     except:
         return str(object)
     
@@ -151,4 +151,4 @@ def objid(obj):
         +':'+hex(id(obj))
 
 
-import client
+from . import client

@@ -43,12 +43,12 @@ So, we apply the expressions in the following order:
 
 import markdown
 import re
-from urlparse import urlparse, urlunparse
+from urllib.parse import urlparse, urlunparse
 import sys
 if sys.version >= "3.0":
     from html import entities as htmlentitydefs
 else:
-    import htmlentitydefs
+    import html.entities
 
 """
 The actual regular expressions for patterns
@@ -354,7 +354,7 @@ class AutomailPattern (Pattern):
 
         def codepoint2name(code):
             """Return entity definition by code, or the code if not defined."""
-            entity = htmlentitydefs.codepoint2name.get(code)
+            entity = html.entities.codepoint2name.get(code)
             if entity:
                 return "%s%s;" % (markdown.AMP_SUBSTITUTE, entity)
             else:

@@ -51,7 +51,7 @@ class Options(Skin):
             Definition('proxy', dict, {}),
             Definition('timeout', (int,float), 90),
             Definition('headers', dict, {}),
-            Definition('username', basestring, None),
-            Definition('password', basestring, None),
+            Definition('username', str, None),
+            Definition('password', str, None),
         ]
         Skin.__init__(self, domain, definitions, kwargs)

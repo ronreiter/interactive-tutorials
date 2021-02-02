@@ -87,7 +87,7 @@ class BlockParser:
 
         """
         while blocks:
-           for processor in self.blockprocessors.values():
+           for processor in list(self.blockprocessors.values()):
                if processor.test(parent, blocks[0]):
                    processor.run(parent, blocks)
                    break

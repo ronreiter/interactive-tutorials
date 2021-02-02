@@ -3,7 +3,7 @@ import re
 
 def isString(s):
     """ Check if it's string """
-    return isinstance(s, unicode) or isinstance(s, str)
+    return isinstance(s, str) or isinstance(s, str)
 
 class Processor:
     def __init__(self, markdown_instance=None):

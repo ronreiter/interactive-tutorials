@@ -54,7 +54,7 @@ class Query(Object):
         @return: The item matching the search criteria.
         @rtype: L{sxbase.SchemaObject}
         """
-        raise Exception, 'not-implemented by subclass'
+        raise Exception('not-implemented by subclass')
         
     def filter(self, result):
         """

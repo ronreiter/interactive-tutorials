@@ -222,7 +222,7 @@ class PropertyAppender(Appender):
         child = self.node(content)
         child.setText(p.get())
         parent.append(child)
-        for item in p.items():
+        for item in list(p.items()):
             cont = Content(tag=item[0], value=item[1])
             Appender.append(self, child, cont)
 
@@ -254,7 +254,7 @@ class DictAppender(Appender):
             return
         child = self.node(content)
         parent.append(child)
-        for item in d.items():
+        for item in list(d.items()):
             cont = Content(tag=item[0], value=item[1])
             Appender.append(self, child, cont)
             

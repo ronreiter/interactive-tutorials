@@ -74,8 +74,8 @@ BLOCK_LEVEL_ELEMENTS = re.compile("p|div|h[1-6]|blockquote|pre|table|dl|ol|ul"
 DOC_TAG = "div"     # Element used to wrap document - later removed
 
 # Placeholders
-STX = u'\u0002'  # Use STX ("Start of text") for start-of-placeholder
-ETX = u'\u0003'  # Use ETX ("End of text") for end-of-placeholder
+STX = '\u0002'  # Use STX ("Start of text") for start-of-placeholder
+ETX = '\u0003'  # Use ETX ("End of text") for end-of-placeholder
 INLINE_PLACEHOLDER_PREFIX = STX+"klzzwxh:"
 INLINE_PLACEHOLDER = INLINE_PLACEHOLDER_PREFIX + "%s" + ETX
 AMP_SUBSTITUTE = STX+"amp"+ETX
@@ -86,11 +86,11 @@ Constants you probably do not need to change
 -----------------------------------------------------------------------------
 """
 
-RTL_BIDI_RANGES = ( (u'\u0590', u'\u07FF'),
+RTL_BIDI_RANGES = ( ('\u0590', '\u07FF'),
                      # Hebrew (0590-05FF), Arabic (0600-06FF),
                      # Syriac (0700-074F), Arabic supplement (0750-077F),
                      # Thaana (0780-07BF), Nko (07C0-07FF).
-                    (u'\u2D30', u'\u2D7F'), # Tifinagh
+                    ('\u2D30', '\u2D7F'), # Tifinagh
                     )
 
 
@@ -109,7 +109,7 @@ def message(level, text):
         if level > WARN:
             sys.exit(0)
     elif level > WARN:
-        raise MarkdownException, text
+        raise MarkdownException(text)
     else:
         warnings.warn(text, MarkdownWarning)
 
@@ -123,7 +123,7 @@ MISC AUXILIARY CLASSES
 =============================================================================
 """
 
-class AtomicString(unicode):
+class AtomicString(str):
     """A string which should not be further processed."""
     pass
 
@@ -158,14 +158,14 @@ Those steps are put together by the Markdown() class.
 
 """
 
-import preprocessors
-import blockprocessors
-import treeprocessors
-import inlinepatterns
-import postprocessors
-import blockparser
-import etree_loader
-import odict
+from . import preprocessors
+from . import blockprocessors
+from . import treeprocessors
+from . import inlinepatterns
+from . import postprocessors
+from . import blockparser
+from . import etree_loader
+from . import odict
 
 # Extensions should use "markdown.etree" instead of "etree" (or do `from
 # markdown import etree`).  Do not import it by yourself.
@@ -173,7 +173,7 @@ import odict
 etree = etree_loader.importETree()
 
 # Adds the ability to output html4
-import html4
+from . import html4
 
 
 class Markdown:
@@ -325,12 +325,12 @@ class Markdown:
 
         """
         for ext in extensions:
-            if isinstance(ext, basestring):
+            if isinstance(ext, str):
                 ext = load_extension(ext, configs.get(ext, []))
             if isinstance(ext, Extension):
                 try:
                     ext.extendMarkdown(self, globals())
-                except NotImplementedError, e:
+                except NotImplementedError as e:
                     message(ERROR, e)
             else:
                 message(ERROR, 'Extension "%s.%s" must be of type: "markdown.Extension".' \
@@ -356,7 +356,7 @@ class Markdown:
             self.serializer = self.output_formats[format.lower()]
         except KeyError:
             message(CRITICAL, 'Invalid Output Format: "%s". Use one of %s.' \
-                               % (format, self.output_formats.keys()))
+                               % (format, list(self.output_formats.keys())))
 
     def convert(self, source):
         """
@@ -370,12 +370,12 @@ class Markdown:
 
         # Fixup the source text
         if not source.strip():
-            return u""  # a blank unicode string
+            return ""  # a blank unicode string
         try:
-            source = unicode(source)
+            source = str(source)
         except UnicodeDecodeError:
             message(CRITICAL, 'UnicodeDecodeError: Markdown only accepts unicode or ascii input.')
-            return u""
+            return ""
 
         source = source.replace(STX, "").replace(ETX, "")
         source = source.replace("\r\n", "\n").replace("\r", "\n") + "\n\n"
@@ -384,14 +384,14 @@ class Markdown:
 
         # Split into lines and run the line preprocessors.
         self.lines = source.split("\n")
-        for prep in self.preprocessors.values():
+        for prep in list(self.preprocessors.values()):
             self.lines = prep.run(self.lines)
 
         # Parse the high-level elements.
         root = self.parser.parseDocument(self.lines).getroot()
 
         # Run the tree-processors
-        for treeprocessor in self.treeprocessors.values():
+        for treeprocessor in list(self.treeprocessors.values()):
             newRoot = treeprocessor.run(root)
             if newRoot:
                 root = newRoot
@@ -412,7 +412,7 @@ class Markdown:
                     message(CRITICAL, 'Failed to strip top level tags.')
 
         # Run the text post-processors
-        for pp in self.postprocessors.values():
+        for pp in list(self.postprocessors.values()):
             output = pp.run(output)
 
         return output.strip()
@@ -443,13 +443,13 @@ class Markdown:
         input_file = codecs.open(input, mode="r", encoding=encoding)
         text = input_file.read()
         input_file.close()
-        text = text.lstrip(u'\ufeff') # remove the byte-order mark
+        text = text.lstrip('\ufeff') # remove the byte-order mark
 
         # Convert
         html = self.convert(text)
 
         # Write to file or stdout
-        if isinstance(output, (str, unicode)):
+        if isinstance(output, str):
             output_file = codecs.open(output, "w", encoding=encoding)
             output_file.write(html)
             output_file.close()
@@ -482,7 +482,7 @@ class Extension:
 
     def getConfigInfo(self):
         """ Return all config settings as a list of tuples. """
-        return [(key, self.config[key][1]) for key in self.config.keys()]
+        return [(key, self.config[key][1]) for key in list(self.config.keys())]
 
     def setConfig(self, key, value):
         """ Set a config setting for `key` with the given `value`. """
@@ -501,8 +501,8 @@ class Extension:
         * md_globals: Global variables in the markdown module namespace.
 
         """
-        raise NotImplementedError, 'Extension "%s.%s" must define an "extendMarkdown"' \
-            'method.' % (self.__class__.__module__, self.__class__.__name__)
+        raise NotImplementedError('Extension "%s.%s" must define an "extendMarkdown"' \
+            'method.' % (self.__class__.__module__, self.__class__.__name__))
 
 
 def load_extension(ext_name, configs = []):
@@ -542,7 +542,7 @@ def load_extension(ext_name, configs = []):
     # If the module is loaded successfully, we expect it to define a
     # function called makeExtension()
     try:
-        return module.makeExtension(configs.items())
+        return module.makeExtension(list(configs.items()))
     except AttributeError:
         message(CRITICAL, "Failed to initiate extension '%s'" % ext_name)
 

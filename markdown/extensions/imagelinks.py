@@ -83,7 +83,7 @@ class ImageLinkPreprocessor(markdown.preprocessors.Preprocessor):
                     new_block += "</span>"
                     new_block += SLIDESHOW_LINK % url.get_slideshow()
 
-                    album_urls = album_url_hash.keys()
+                    album_urls = list(album_url_hash.keys())
                     album_urls.sort()
 
                     if len(album_urls) == 1:
