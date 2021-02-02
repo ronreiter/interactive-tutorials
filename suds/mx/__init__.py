@@ -43,7 +43,7 @@ class Content(Object):
         Object.__init__(self)
         self.tag = tag
         self.value = value
-        for k,v in kwargs.items():
+        for k,v in list(kwargs.items()):
             setattr(self, k, v)
             
     def __getattr__(self, name):
@@ -52,8 +52,7 @@ class Content(Object):
                 v = None
                 setattr(self, name, v)
             else:
-                raise AttributeError, \
-                    'Content has no attribute %s' % name
+                raise AttributeError('Content has no attribute %s' % name)
         else:
             v = self.__dict__[name]
         return v

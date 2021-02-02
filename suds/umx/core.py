@@ -97,7 +97,7 @@ class Core:
                 return None
             else:
                 return Text('', lang=lang)
-        if isinstance(content.text, basestring):
+        if isinstance(content.text, str):
             return Text(content.text, lang=lang)
         else:
             return content.text

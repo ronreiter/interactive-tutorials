@@ -10,7 +10,7 @@ for f in glob.glob("*.csv"):
 
     for l in d:
         t = f[:-4]
-        l = {x[0].lower().replace(" ", "_"): x[1] for x in l.items()}
+        l = {x[0].lower().replace(" ", "_"): x[1] for x in list(l.items())}
         l["retail_price"] = float(l["retail_price"])
 
         link = re.findall(r'<a href=\"(.*?)\">', l["link_code"])[0]
@@ -26,7 +26,7 @@ for f in glob.glob("*.csv"):
         data[t].append(l)
 
 encoded = json.dumps(data, sort_keys=True, indent=4)
-print encoded
+print(encoded)
 with open("../courses.json", "w") as e:
     e.write(encoded)
 

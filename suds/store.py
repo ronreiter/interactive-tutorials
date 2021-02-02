@@ -20,7 +20,7 @@ with the suds lib.  Also, contains classes for accessing
 these documents.
 """
 
-from StringIO import StringIO
+from io import StringIO
 from logging import getLogger
 
 log = getLogger(__name__)
@@ -577,7 +577,7 @@ class DocumentStore:
             return StringIO(content)
         except:
             reason = 'location "%s" not in document store' % location
-            raise Exception, reason
+            raise Exception(reason)
         
     def split(self, url):
         """

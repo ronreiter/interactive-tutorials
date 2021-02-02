@@ -39,7 +39,7 @@ def parse_options():
                     'extensions': [],
                     'encoding': None }, CRITICAL
         else:
-            print OPTPARSE_WARNING
+            print(OPTPARSE_WARNING)
             return None, None
 
     parser = optparse.OptionParser(usage="%prog INPUTFILE [options]")

@@ -31,8 +31,9 @@ from suds.xsd.schema import Schema, SchemaCollection
 from suds.xsd.query import ElementQuery
 from suds.sudsobject import Object, Facade, Metadata
 from suds.reader import DocumentReader, DefinitionsReader
-from urlparse import urljoin
-import re, soaparray
+from urllib.parse import urljoin
+import re
+from . import soaparray
 
 log = getLogger(__name__)
 
@@ -232,7 +233,7 @@ class Definitions(WObject):
         for p in service.ports:
             binding = p.binding
             ptype = p.binding.type
-            operations = p.binding.type.operations.values()
+            operations = list(p.binding.type.operations.values())
             for name in [op.name for op in operations]:
                 m = Facade('Method')
                 m.name = name
@@ -249,8 +250,8 @@ class Definitions(WObject):
                 
     def set_wrapped(self):
         """ set (wrapped|bare) flag on messages """
-        for b in self.bindings.values():
-            for op in b.operations.values():
+        for b in list(self.bindings.values()):
+            for op in list(b.operations.values()):
                 for body in (op.soap.input.body, op.soap.output.body):
                     body.wrapped = False
                     if len(body.parts) != 1:
@@ -484,7 +485,7 @@ class PortType(NamedObject):
         @param definitions: A definitions object.
         @type definitions: L{Definitions}
         """
-        for op in self.operations.values():
+        for op in list(self.operations.values()):
             if op.input is None:
                 op.input = Message(Element('no-input'), definitions)
             else:
@@ -507,7 +508,7 @@ class PortType(NamedObject):
                 qref = qualify(f.message, self.root, definitions.tns)
                 msg = definitions.messages.get(qref)
                 if msg is None:
-                    raise Exception, "msg '%s', not-found" % f.message
+                    raise Exception("msg '%s', not-found" % f.message)
                 f.message = msg
                 
     def operation(self, name):
@@ -521,7 +522,7 @@ class PortType(NamedObject):
         """
         try:
             return self.operations[name]
-        except Exception, e:
+        except Exception as e:
             raise MethodNotFound(name)
                 
     def __gt__(self, other):
@@ -656,7 +657,7 @@ class Binding(NamedObject):
         @type definitions: L{Definitions}
         """
         self.resolveport(definitions)
-        for op in self.operations.values():
+        for op in list(self.operations.values()):
             self.resolvesoapbody(definitions, op)
             self.resolveheaders(definitions, op)
             self.resolvefaults(definitions, op)
@@ -685,8 +686,7 @@ class Binding(NamedObject):
         """
         ptop = self.type.operation(op.name)
         if ptop is None:
-            raise Exception, \
-                "operation '%s' not defined in portType" % op.name
+            raise Exception("operation '%s' not defined in portType" % op.name)
         soap = op.soap
         parts = soap.input.body.parts
         if len(parts):
@@ -722,15 +722,14 @@ class Binding(NamedObject):
             ref = qualify(mn, self.root, definitions.tns)
             message = definitions.messages.get(ref)
             if message is None:
-                raise Exception, "message'%s', not-found" % mn
+                raise Exception("message'%s', not-found" % mn)
             pn = header.part
             for p in message.parts:
                 if p.name == pn:
                     header.part = p
                     break
             if pn == header.part:
-                raise Exception, \
-                    "message '%s' has not part named '%s'" % (ref, pn)
+                raise Exception("message '%s' has not part named '%s'" % (ref, pn))
                         
     def resolvefaults(self, definitions, op):
         """
@@ -743,8 +742,7 @@ class Binding(NamedObject):
         """
         ptop = self.type.operation(op.name)
         if ptop is None:
-            raise Exception, \
-                "operation '%s' not defined in portType" % op.name
+            raise Exception("operation '%s' not defined in portType" % op.name)
         soap = op.soap
         for fault in soap.faults:
             for f in ptop.faults:
@@ -753,8 +751,7 @@ class Binding(NamedObject):
                     continue
             if hasattr(fault, 'parts'):
                 continue
-            raise Exception, \
-                "fault '%s' not defined in portType '%s'" % (fault.name, self.type.name)
+            raise Exception("fault '%s' not defined in portType '%s'" % (fault.name, self.type.name))
             
     def operation(self, name):
         """
@@ -801,7 +798,7 @@ class Port(NamedObject):
         if address is None:
             self.location = None
         else:
-            self.location = address.get('location').encode('utf-8')
+            self.location = address.get('location')
         self.methods = {}
         
     def method(self, name):
@@ -859,7 +856,7 @@ class Service(NamedObject):
         @type names: [str,..]
         """
         for p in self.ports:
-            for m in p.methods.values():
+            for m in list(p.methods.values()):
                 if names is None or m.name in names:
                     m.location = url
         

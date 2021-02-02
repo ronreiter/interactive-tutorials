@@ -15,7 +15,7 @@ class OrderedDict(dict):
             data = {}
         super(OrderedDict, self).__init__(data)
         if isinstance(data, dict):
-            self.keyOrder = data.keys()
+            self.keyOrder = list(data.keys())
         else:
             self.keyOrder = []
             for key, value in data:
@@ -25,7 +25,7 @@ class OrderedDict(dict):
     def __deepcopy__(self, memo):
         from copy import deepcopy
         return self.__class__([(key, deepcopy(value, memo))
-                               for key, value in self.iteritems()])
+                               for key, value in self.items()])
 
     def __setitem__(self, key, value):
         super(OrderedDict, self).__setitem__(key, value)
@@ -55,7 +55,7 @@ class OrderedDict(dict):
         return result
 
     def items(self):
-        return zip(self.keyOrder, self.values())
+        return list(zip(self.keyOrder, list(self.values())))
 
     def iteritems(self):
         for key in self.keyOrder:
@@ -75,7 +75,7 @@ class OrderedDict(dict):
             yield super(OrderedDict, self).__getitem__(key)
 
     def update(self, dict_):
-        for k, v in dict_.items():
+        for k, v in list(dict_.items()):
             self.__setitem__(k, v)
 
     def setdefault(self, key, default):
@@ -109,7 +109,7 @@ class OrderedDict(dict):
         Replace the normal dict.__repr__ with a version that returns the keys
         in their sorted order.
         """
-        return '{%s}' % ', '.join(['%r: %r' % (k, v) for k, v in self.items()])
+        return '{%s}' % ', '.join(['%r: %r' % (k, v) for k, v in list(self.items())])
 
     def clear(self):
         super(OrderedDict, self).clear()

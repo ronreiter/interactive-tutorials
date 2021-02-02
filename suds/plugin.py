@@ -205,7 +205,7 @@ class PluginContainer:
                     plugins.append(p)
             return PluginDomain(ctx, plugins)
         else:
-            raise Exception, 'plugin domain (%s), invalid' % name
+            raise Exception('plugin domain (%s), invalid' % name)
         
         
 class PluginDomain:
@@ -252,6 +252,6 @@ class Method:
                 method = getattr(plugin, self.name, None)
                 if method and callable(method):
                     method(ctx)
-            except Exception, pe:
+            except Exception as pe:
                 log.exception(pe)
         return ctx

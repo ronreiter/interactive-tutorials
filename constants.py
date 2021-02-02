@@ -441,7 +441,7 @@ SELECT * FROM helloworld WHERE phrase = "Hello, World!";
 }
 
 # this will run once
-for domain, v in DOMAIN_DATA.iteritems():
+for domain, v in list(DOMAIN_DATA.items()):
     v["namespace"] = domain
     v["full_url"] = "https://www." + v["namespace"]
     v["contact_email"] = "admin@" + v["namespace"]

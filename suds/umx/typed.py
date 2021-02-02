@@ -115,7 +115,7 @@ class Typed(Core):
         """
         type = self.resolver.findattr(name)
         if type is None:
-            log.warn('attribute (%s) type, not-found', name)
+            log.warning('attribute (%s) type, not-found', name)
         else:
             value = self.translated(value, type)
         Core.append_attribute(self, name, value, content)

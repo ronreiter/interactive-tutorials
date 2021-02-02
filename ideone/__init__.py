@@ -108,21 +108,21 @@ class Ideone(object):
 
         # Check for exact match first including the whole version
         # string
-        for ideone_index, ideone_language in languages.items():
+        for ideone_index, ideone_language in list(languages.items()):
             if ideone_language.lower() == language_name.lower():
                 return ideone_index
 
         # Check for a match of just the language name without any
         # version information
         simple_languages = dict((k,v.split('(')[0].strip())
-                                for (k,v) in languages.items())
-        for ideone_index, simple_name in simple_languages.items():
+                                for (k,v) in list(languages.items()))
+        for ideone_index, simple_name in list(simple_languages.items()):
             if simple_name.lower() == language_name.lower():
                 return ideone_index
 
         # Give up, but first find a similar name, suggest it and error
         # out
-        language_choices = languages.values() + simple_languages.values()
+        language_choices = list(languages.values()) + list(simple_languages.values())
         similar_choices = difflib.get_close_matches(language_name,
                                                     language_choices,
                                                     n=3,

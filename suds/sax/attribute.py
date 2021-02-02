@@ -169,7 +169,7 @@ class Attribute:
 
     def __str__(self):
         """ get an xml string representation """
-        return unicode(self).encode('utf-8')
+        return str(self)
     
     def __unicode__(self):
         """ get an xml string representation """
@@ -178,4 +178,4 @@ class Attribute:
             v = self.value.escape()
         else:
             v = self.value
-        return u'%s="%s"' % (n, v)
+        return '%s="%s"' % (n, v)

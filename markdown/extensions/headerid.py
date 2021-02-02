@@ -126,9 +126,9 @@ class HeaderIdProcessor(markdown.blockprocessors.BlockProcessor):
         level = int(self.config['level'][0]) - 1
         force = self._str2bool(self.config['forceid'][0])
         if hasattr(self.md, 'Meta'):
-            if self.md.Meta.has_key('header_level'):
+            if 'header_level' in self.md.Meta:
                 level = int(self.md.Meta['header_level'][0]) - 1
-            if self.md.Meta.has_key('header_forceid'): 
+            if 'header_forceid' in self.md.Meta: 
                 force = self._str2bool(self.md.Meta['header_forceid'][0])
         return level, force
 

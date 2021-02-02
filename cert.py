@@ -3,7 +3,7 @@ from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.units import inch
-import StringIO
+import io
 
 
 def create_cert(filename, name, course_name, date, logo_loc):

@@ -37,7 +37,7 @@ class Builder:
         
     def build(self, name):
         """ build a an object for the specified typename as defined in the schema """
-        if isinstance(name, basestring):
+        if isinstance(name, str):
             type = self.resolver.find(name)
             if type is None:
                 raise TypeNotFound(name)

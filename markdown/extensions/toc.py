@@ -124,7 +124,7 @@ class TocExtension(markdown.Extension):
         """ Slugify a string, to make it URL friendly. """
         import unicodedata
         value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-        value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
+        value = str(re.sub('[^\w\s-]', '', value).strip().lower())
         return re.sub('[-\s]+','-',value)
 
     def extendMarkdown(self, md, md_globals):

@@ -66,7 +66,7 @@ class XBoolean(XBuiltin):
         
     def translate(self, value, topython=True):
         if topython:
-            if isinstance(value, basestring):
+            if isinstance(value, str):
                 return XBoolean.translation[0].get(value)
             else:
                 return None
@@ -84,7 +84,7 @@ class XInteger(XBuiltin):
         
     def translate(self, value, topython=True):
         if topython:
-            if isinstance(value, basestring) and len(value):
+            if isinstance(value, str) and len(value):
                 return int(value)
             else:
                 return None
@@ -101,12 +101,12 @@ class XLong(XBuiltin):
         
     def translate(self, value, topython=True):
         if topython:
-            if isinstance(value, basestring) and len(value):
-                return long(value)
+            if isinstance(value, str) and len(value):
+                return int(value)
             else:
                 return None
         else:
-            if isinstance(value, (int,long)):
+            if isinstance(value, int):
                 return str(value)
             else:
                 return value
@@ -119,7 +119,7 @@ class XFloat(XBuiltin):
         
     def translate(self, value, topython=True):
         if topython:
-            if isinstance(value, basestring) and len(value):
+            if isinstance(value, str) and len(value):
                 return float(value)
             else:
                 return None
@@ -137,7 +137,7 @@ class XDate(XBuiltin):
         
     def translate(self, value, topython=True):
         if topython:
-            if isinstance(value, basestring) and len(value):
+            if isinstance(value, str) and len(value):
                 return Date(value).date
             else:
                 return None
@@ -155,7 +155,7 @@ class XTime(XBuiltin):
         
     def translate(self, value, topython=True):
         if topython:
-            if isinstance(value, basestring) and len(value):
+            if isinstance(value, str) and len(value):
                 return Time(value).time
             else:
                 return None
@@ -173,7 +173,7 @@ class XDateTime(XBuiltin):
 
     def translate(self, value, topython=True):
         if topython:
-            if isinstance(value, basestring) and len(value):
+            if isinstance(value, str) and len(value):
                 return DateTime(value).datetime
             else:
                 return None

@@ -36,7 +36,7 @@ from suds.sax.text import Text
 from suds.sax.attribute import Attribute
 from xml.sax import make_parser, InputSource, ContentHandler
 from xml.sax.handler import feature_external_ges
-from cStringIO import StringIO
+from io import StringIO
 
 log = getLogger(__name__)
 
@@ -49,10 +49,10 @@ class Handler(ContentHandler):
  
     def startElement(self, name, attrs):
         top = self.top()
-        node = Element(unicode(name), parent=top)
+        node = Element(str(name), parent=top)
         for a in attrs.getNames():
-            n = unicode(a)
-            v = unicode(attrs.getValue(a))
+            n = str(a)
+            v = str(attrs.getValue(a))
             attribute = Attribute(n,v)
             if self.mapPrefix(node, attribute):
                 continue
@@ -65,19 +65,19 @@ class Handler(ContentHandler):
         skip = False
         if attribute.name == 'xmlns':
             if len(attribute.value):
-                node.expns = unicode(attribute.value)
+                node.expns = str(attribute.value)
             skip = True
         elif attribute.prefix == 'xmlns':
             prefix = attribute.name
-            node.nsprefixes[prefix] = unicode(attribute.value)
+            node.nsprefixes[prefix] = str(attribute.value)
             skip = True
         return skip
  
     def endElement(self, name):
-        name = unicode(name)
+        name = str(name)
         current = self.top()
         if len(current.charbuffer):
-            current.text = Text(u''.join(current.charbuffer))
+            current.text = Text(''.join(current.charbuffer))
         del current.charbuffer
         if len(current):
             current.trim()
@@ -88,7 +88,7 @@ class Handler(ContentHandler):
             raise Exception('malformed document')
  
     def characters(self, content):
-        text = unicode(content)
+        text = str(content)
         node = self.top()
         node.charbuffer.append(text)
 
