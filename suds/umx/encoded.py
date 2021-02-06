@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -19,10 +19,9 @@ Provides soap encoded unmarshaller classes.
 """
 
 from logging import getLogger
-from suds import *
-from suds.umx import *
+from suds.umx import Content
 from suds.umx.typed import Typed
-from suds.sax import splitPrefix, Namespace
+from suds.sax import Namespace
 
 log = getLogger(__name__)
 
@@ -45,7 +44,7 @@ class Encoded(Typed):
         #
         self.setaty(content)
         Typed.start(self, content)
-    
+
     def end(self, content):
         #
         # Squash soap encoded arrays into python lists.  This is
@@ -56,7 +55,7 @@ class Encoded(Typed):
         if aty is not None:
             self.promote(content)
         return Typed.end(self, content)
-    
+
     def postprocess(self, content):
         #
         # Ensure proper rendering of empty arrays.
@@ -65,7 +64,7 @@ class Encoded(Typed):
             return Typed.postprocess(self, content)
         else:
             return content.data
-    
+
     def setaty(self, content):
         """
         Grab the (aty) soap-enc:arrayType and attach it to the
@@ -85,13 +84,13 @@ class Encoded(Typed):
             if len(parts) == 2:
                 self.applyaty(content, ref)
             else:
-                pass # (2) dimensional array
+                pass  # (2) dimensional array
         return self
-    
+
     def applyaty(self, content, xty):
         """
         Apply the type referenced in the I{arrayType} to the content
-        (child nodes) of the array.  Each element (node) in the array 
+        (child nodes) of the array.  Each element (node) in the array
         that does not have an explicit xsi:type attribute is given one
         based on the I{arrayType}.
         @param content: An array content.
@@ -115,13 +114,13 @@ class Encoded(Typed):
     def promote(self, content):
         """
         Promote (replace) the content.data with the first attribute
-        of the current content.data that is a I{list}.  Note: the 
+        of the current content.data that is a I{list}.  Note: the
         content.data may be empty or contain only _x attributes.
         In either case, the content.data is assigned an empty list.
         @param content: An array content.
         @type content: L{Content}
         """
-        for n,v in content.data:
+        for n, v in content.data:
             if isinstance(v, list):
                 content.data = v
                 return

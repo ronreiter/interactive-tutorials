@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -19,15 +19,15 @@ Provides appender classes for I{marshalling}.
 """
 
 from logging import getLogger
-from suds import *
-from suds.mx import *
+from suds import null, tostr
+from suds.mx import Content
 from suds.sudsobject import footprint
 from suds.sudsobject import Object, Property
 from suds.sax.element import Element
 from suds.sax.text import Text
-from copy import deepcopy
 
 log = getLogger(__name__)
+
 
 class Matcher:
     """
@@ -45,7 +45,7 @@ class Matcher:
 
     def __eq__(self, x):
         if self.cls is None:
-            return ( x is None )
+            return x is None
         else:
             return isinstance(x, self.cls)
 
@@ -74,18 +74,18 @@ class ContentAppender:
                 PropertyAppender(marshaller)),
             (Matcher(Object),
                 ObjectAppender(marshaller)),
-            (Matcher(Element), 
+            (Matcher(Element),
                 ElementAppender(marshaller)),
-            (Matcher(Text), 
+            (Matcher(Text),
                 TextAppender(marshaller)),
-            (Matcher(list), 
+            (Matcher(list),
                 ListAppender(marshaller)),
-            (Matcher(tuple), 
+            (Matcher(tuple),
                 ListAppender(marshaller)),
-            (Matcher(dict), 
+            (Matcher(dict),
                 DictAppender(marshaller)),
         )
-        
+
     def append(self, parent, content):
         """
         Select an appender and append the content to parent.
@@ -108,14 +108,14 @@ class Appender:
     @ivar marshaller: A marshaller.
     @type marshaller: L{suds.mx.core.Core}
     """
-    
+
     def __init__(self, marshaller):
         """
         @param marshaller: A marshaller.
         @type marshaller: L{suds.mx.core.Core}
         """
-        self.marshaller  = marshaller
-        
+        self.marshaller = marshaller
+
     def node(self, content):
         """
         Create and return an XML node that is qualified
@@ -127,7 +127,7 @@ class Appender:
         @rtype: L{Element}
         """
         return self.marshaller.node(content)
-    
+
     def setnil(self, node, content):
         """
         Set the value of the I{node} to nill.
@@ -137,7 +137,7 @@ class Appender:
         @type content: L{Object}
         """
         self.marshaller.setnil(node, content)
-        
+
     def setdefault(self, node, content):
         """
         Set the value of the I{node} to a default value.
@@ -148,7 +148,7 @@ class Appender:
         @return: The default.
         """
         return self.marshaller.setdefault(node, content)
-    
+
     def optional(self, content):
         """
         Get whether the specified content is optional.
@@ -156,7 +156,7 @@ class Appender:
         @type content: L{Content}
         """
         return self.marshaller.optional(content)
-        
+
     def suspend(self, content):
         """
         Notify I{marshaller} that appending this content has suspended.
@@ -164,7 +164,7 @@ class Appender:
         @type content: L{Object}
         """
         self.marshaller.suspend(content)
-        
+
     def resume(self, content):
         """
         Notify I{marshaller} that appending this content has resumed.
@@ -172,7 +172,7 @@ class Appender:
         @type content: L{Object}
         """
         self.marshaller.resume(content)
-    
+
     def append(self, parent, content):
         """
         Append the specified L{content} to the I{parent}.
@@ -181,12 +181,12 @@ class Appender:
         """
         self.marshaller.append(parent, content)
 
-       
+
 class PrimativeAppender(Appender):
     """
     An appender for python I{primative} types.
     """
-        
+
     def append(self, parent, content):
         if content.tag.startswith('_'):
             attr = content.tag[1:]
@@ -203,7 +203,7 @@ class NoneAppender(Appender):
     """
     An appender for I{None} values.
     """
-        
+
     def append(self, parent, content):
         child = self.node(content)
         default = self.setdefault(child, content)
@@ -216,22 +216,22 @@ class PropertyAppender(Appender):
     """
     A L{Property} appender.
     """
-        
+
     def append(self, parent, content):
         p = content.value
         child = self.node(content)
         child.setText(p.get())
         parent.append(child)
-        for item in list(p.items()):
+        for item in p.items():
             cont = Content(tag=item[0], value=item[1])
             Appender.append(self, child, cont)
 
-            
+
 class ObjectAppender(Appender):
     """
     An L{Object} appender.
     """
-        
+
     def append(self, parent, content):
         object = content.value
         if self.optional(content) and footprint(object) == 0:
@@ -241,33 +241,33 @@ class ObjectAppender(Appender):
         for item in object:
             cont = Content(tag=item[0], value=item[1])
             Appender.append(self, child, cont)
-            
+
 
 class DictAppender(Appender):
     """
     An python I{dict} appender.
     """
-        
+
     def append(self, parent, content):
         d = content.value
         if self.optional(content) and len(d) == 0:
             return
         child = self.node(content)
         parent.append(child)
-        for item in list(d.items()):
+        for item in d.items():
             cont = Content(tag=item[0], value=item[1])
             Appender.append(self, child, cont)
-            
+
 
 class ElementWrapper(Element):
     """
     Element wrapper.
     """
-    
+
     def __init__(self, content):
         Element.__init__(self, content.name, content.parent)
         self.__content = content
-        
+
     def str(self, indent=0):
         return self.__content.str(indent)
 

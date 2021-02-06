@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -44,15 +44,14 @@ def splitPrefix(name):
     @param name: A node name containing an optional prefix.
     @type name: basestring
     @return: A tuple containing the (2) parts of I{name}
-    @rtype: (I{prefix}, I{name}) 
+    @rtype: (I{prefix}, I{name})
     """
-    if isinstance(name, str) \
-        and ':' in name:
-            return tuple(name.split(':', 1))
+    if isinstance(name, str) and ':' in name:
+        return tuple(name.split(':', 1))
     else:
         return (None, name)
 
-   
+
 class Namespace:
     """
     The namespace class represents XML namespaces.
@@ -63,15 +62,15 @@ class Namespace:
     xsdns = ('xs', 'http://www.w3.org/2001/XMLSchema')
     xsins = ('xsi', 'http://www.w3.org/2001/XMLSchema-instance')
     all = (xsdns, xsins)
-    
+
     @classmethod
     def create(cls, p=None, u=None):
         return (p, u)
-    
+
     @classmethod
     def none(cls, ns):
-        return ( ns == cls.default )
-    
+        return ns == cls.default
+
     @classmethod
     def xsd(cls, ns):
         try:
@@ -79,7 +78,7 @@ class Namespace:
         except:
             pass
         return False
-    
+
     @classmethod
     def xsi(cls, ns):
         try:
@@ -87,10 +86,10 @@ class Namespace:
         except:
             pass
         return False
-    
+
     @classmethod
     def xs(cls, ns):
-        return ( cls.xsd(ns) or cls.xsi(ns) )
+        return cls.xsd(ns) or cls.xsi(ns)
 
     @classmethod
     def w3(cls, ns):
@@ -99,7 +98,7 @@ class Namespace:
         except:
             pass
         return False
-    
+
     @classmethod
     def isns(cls, ns):
         try:

@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -18,7 +18,7 @@
 Suds basic options classes.
 """
 
-from suds.properties import *
+from suds.properties import AutoLinker, Unskin, Skin, Definition
 from suds.wsse import Security
 from suds.xsd.doctor import Doctor
 from suds.transport import Transport
@@ -30,7 +30,7 @@ class TpLinker(AutoLinker):
     Transport (auto) linker used to manage linkage between
     transport objects Properties and those Properties that contain them.
     """
-    
+
     def updated(self, properties, prev, next):
         if isinstance(prev, Transport):
             tp = Unskin(prev.options)
@@ -56,7 +56,7 @@ class Options(Skin):
         - B{port} - The default service port name, not tcp port.
                 - type: I{str}
                 - default: None
-        - B{location} - This overrides the service port address I{URL} defined 
+        - B{location} - This overrides the service port address I{URL} defined
             in the WSDL.
                 - type: I{str}
                 - default: None
@@ -99,7 +99,7 @@ class Options(Skin):
                 - default: 0
         - B{plugins} - A plugin container.
                 - type: I{list}
-    """    
+    """
     def __init__(self, **kwargs):
         domain = __name__
         definitions = [

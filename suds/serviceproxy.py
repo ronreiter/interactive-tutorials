@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -21,17 +21,18 @@ Replaced by: L{client.Client}
 """
 
 from logging import getLogger
-from suds import *
-from suds.client import Client
 
+from .client import Client
+from .compat import unicode
+from .utils import is_builtin
 log = getLogger(__name__)
 
 
 class ServiceProxy(object):
-    
-    """ 
+
+    """
     A lightweight soap based web service proxy.
-    @ivar __client__: A client.  
+    @ivar __client__: A client.
         Everything is delegated to the 2nd generation API.
     @type __client__: L{Client}
     @note:  Deprecated, replaced by L{Client}.
@@ -43,7 +44,8 @@ class ServiceProxy(object):
         @type url: str
         @param kwargs: keyword arguments.
         @keyword faults: Raise faults raised by server (default:True),
-                else return tuple from service method invocation as (http code, object).
+                         else return tuple from service method invocation as
+                         (http code, object).
         @type faults: boolean
         @keyword proxy: An http proxy to be specified on requests (default:{}).
                            The proxy is defined as {protocol:proxy,}
@@ -51,7 +53,7 @@ class ServiceProxy(object):
         """
         client = Client(url, **kwargs)
         self.__client__ = client
-    
+
     def get_instance(self, name):
         """
         Get an instance of a WSDL type by name
@@ -61,7 +63,7 @@ class ServiceProxy(object):
         @rtype: L{sudsobject.Object}
         """
         return self.__client__.factory.create(name)
-    
+
     def get_enum(self, name):
         """
         Get an instance of an enumeration defined in the WSDL by name.
@@ -71,16 +73,15 @@ class ServiceProxy(object):
         @rtype: L{sudsobject.Object}
         """
         return self.__client__.factory.create(name)
- 
+
     def __str__(self):
         return str(self.__client__)
-        
+
     def __unicode__(self):
         return str(self.__client__)
-    
+
     def __getattr__(self, name):
-        builtin =  name.startswith('__') and name.endswith('__')
-        if builtin:
+        if is_builtin(name):
             return self.__dict__[name]
         else:
             return getattr(self.__client__.service, name)

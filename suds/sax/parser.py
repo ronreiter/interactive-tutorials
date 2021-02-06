@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -27,57 +27,55 @@ containing the prefix and the URI.  Eg: I{('tns', 'http://myns')}
 """
 
 from logging import getLogger
-import suds.metrics
-from suds import *
-from suds.sax import *
+from suds.compat import unicode
+from suds import metrics
 from suds.sax.document import Document
 from suds.sax.element import Element
 from suds.sax.text import Text
 from suds.sax.attribute import Attribute
-from xml.sax import make_parser, InputSource, ContentHandler
+from xml.sax import make_parser, ContentHandler, parseString
 from xml.sax.handler import feature_external_ges
-from io import StringIO
 
 log = getLogger(__name__)
 
 
 class Handler(ContentHandler):
     """ sax hanlder """
-    
+
     def __init__(self):
         self.nodes = [Document()]
- 
+
     def startElement(self, name, attrs):
         top = self.top()
-        node = Element(str(name), parent=top)
+        node = Element(unicode(name), parent=top)
         for a in attrs.getNames():
-            n = str(a)
-            v = str(attrs.getValue(a))
-            attribute = Attribute(n,v)
+            n = unicode(a)
+            v = unicode(attrs.getValue(a))
+            attribute = Attribute(n, v)
             if self.mapPrefix(node, attribute):
                 continue
             node.append(attribute)
         node.charbuffer = []
         top.append(node)
         self.push(node)
-        
+
     def mapPrefix(self, node, attribute):
         skip = False
         if attribute.name == 'xmlns':
             if len(attribute.value):
-                node.expns = str(attribute.value)
+                node.expns = unicode(attribute.value)
             skip = True
         elif attribute.prefix == 'xmlns':
             prefix = attribute.name
-            node.nsprefixes[prefix] = str(attribute.value)
+            node.nsprefixes[prefix] = unicode(attribute.value)
             skip = True
         return skip
- 
+
     def endElement(self, name):
-        name = str(name)
+        name = unicode(name)
         current = self.top()
         if len(current.charbuffer):
-            current.text = Text(''.join(current.charbuffer))
+            current.text = Text(u''.join(current.charbuffer))
         del current.charbuffer
         if len(current):
             current.trim()
@@ -86,9 +84,9 @@ class Handler(ContentHandler):
             self.pop()
         else:
             raise Exception('malformed document')
- 
+
     def characters(self, content):
-        text = str(content)
+        text = unicode(content)
         node = self.top()
         node.charbuffer.append(text)
 
@@ -98,14 +96,14 @@ class Handler(ContentHandler):
 
     def pop(self):
         return self.nodes.pop()
- 
+
     def top(self):
         return self.nodes[len(self.nodes)-1]
 
 
 class Parser:
     """ SAX Parser """
-    
+
     @classmethod
     def saxparser(cls):
         p = make_parser()
@@ -113,7 +111,7 @@ class Parser:
         h = Handler()
         p.setContentHandler(h)
         return (p, h)
-        
+
     def parse(self, file=None, string=None):
         """
         SAX parse XML text.
@@ -131,9 +129,9 @@ class Parser:
             metrics.log.debug('sax (%s) duration: %s', file, timer)
             return handler.nodes[0]
         if string is not None:
-            source = InputSource(None)
-            source.setByteStream(StringIO(string))
-            sax.parse(source)
+            if isinstance(string, str):
+                string = string.encode()
+            parseString(string, handler)
             timer.stop()
             metrics.log.debug('%s\nsax duration: %s', string, timer)
             return handler.nodes[0]
