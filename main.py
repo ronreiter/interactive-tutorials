@@ -16,6 +16,7 @@ from flask import Flask, render_template, request, make_response, session, Respo
 from ideone import Ideone
 
 import constants
+import secrets
 
 
 courses = json.load(open("courses.json"))
@@ -65,8 +66,8 @@ tutorial_data = {}
 
 def run_code(code, language_id):
     ideone_api = Ideone(
-        constants.IDEONE_USERNAME,
-        constants.IDEONE_PASSWORD,
+        secrets.IDEONE_USERNAME,
+        secrets.IDEONE_PASSWORD,
         api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
 
     code = ideone_api.create_submission(code, language_id=language_id, std_input="")["link"]
