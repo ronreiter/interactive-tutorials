@@ -10,4 +10,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT ["python", "main.py", "--host", "0.0.0.0", "--port", "5000"]
+# ENTRYPOINT ["python", "main.py", "--host", "0.0.0.0", "--port", "5000"]
+ENTRYPOINT ["gunicorn", "-b", "0.0.0.0:5000", "-w", "10", "-t", "30", "main:app"]
