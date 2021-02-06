@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -20,18 +20,17 @@ Contains basic caching classes.
 
 import os
 import suds
-from tempfile import gettempdir as tmp
-from suds.transport import *
+import tempfile
 from suds.sax.parser import Parser
 from suds.sax.element import Element
 from datetime import datetime as dt
 from datetime import timedelta
-from io import StringIO
 from logging import getLogger
 try:
-    import pickle as pickle
+    import cPickle as pickle
 except:
     import pickle
+import shutil
 
 log = getLogger(__name__)
 
@@ -50,7 +49,7 @@ class Cache:
         @rtype: any
         """
         raise Exception('not-implemented')
-    
+
     def getf(self, id):
         """
         Get a object from the cache by ID.
@@ -60,7 +59,7 @@ class Cache:
         @rtype: any
         """
         raise Exception('not-implemented')
-    
+
     def put(self, id, object):
         """
         Put a object into the cache.
@@ -70,7 +69,7 @@ class Cache:
         @type object: any
         """
         raise Exception('not-implemented')
-    
+
     def putf(self, id, fp):
         """
         Write a fp into the cache.
@@ -80,33 +79,33 @@ class Cache:
         @type fp: file-like object.
         """
         raise Exception('not-implemented')
-    
+
     def purge(self, id):
         """
         Purge a object from the cache by id.
         @param id: A object ID.
-        @type id: str        
+        @type id: str
         """
         raise Exception('not-implemented')
-    
+
     def clear(self):
         """
         Clear all objects from the cache.
         """
         raise Exception('not-implemented')
-    
+
 
 class NoCache(Cache):
     """
     The passthru object cache.
     """
-    
+
     def get(self, id):
         return None
-    
+
     def getf(self, id):
         return None
-    
+
     def put(self, id, object):
         pass
 
@@ -119,6 +118,9 @@ class FileCache(Cache):
     A file-based URL cache.
     @cvar fnprefix: The file name prefix.
     @type fnsuffix: str
+    @cvar remove_default_location_on_exit: Whether to remove the default cache
+        location on process exit (default=True).
+    @type remove_default_location_on_exit: bool
     @ivar duration: The cached file duration which defines how
         long the file will be cached.
     @type duration: (unit, value)
@@ -126,10 +128,21 @@ class FileCache(Cache):
     @type location: str
     """
     fnprefix = 'suds'
+    __default_location = None
+    remove_default_location_on_exit = True
     units = ('months', 'weeks', 'days', 'hours', 'minutes', 'seconds')
-    
+
     def __init__(self, location=None, **duration):
         """
+        Initialized a new FileCache instance.
+
+        If no cache location is specified, a temporary default location will be
+        used. Such default cache location will be shared by all FileCache
+        instances with no explicitly specified location within the same
+        process. The default cache location will be removed automatically on
+        process exit unless user sets the remove_default_location_on_exit
+        FileCache class attribute to False.
+
         @param location: The directory for the cached files.
         @type location: str
         @param duration: The cached file duration which defines how
@@ -138,12 +151,12 @@ class FileCache(Cache):
         @type duration: {unit:value}
         """
         if location is None:
-            location = os.path.join(tmp(), 'suds')
+            location = self.__get_default_location()
         self.location = location
         self.duration = (None, 0)
         self.setduration(**duration)
         self.checkversion()
-        
+
     def fnsuffix(self):
         """
         Get the file name suffix
@@ -151,10 +164,10 @@ class FileCache(Cache):
         @rtype: str
         """
         return 'gcf'
-        
+
     def setduration(self, **duration):
         """
-        Set the caching duration which defines how long the 
+        Set the caching duration which defines how long the
         file will be cached.
         @param duration: The cached file duration which defines how
             long the file will be cached.  A duration=0 means forever.
@@ -167,7 +180,7 @@ class FileCache(Cache):
                 raise Exception('must be: %s' % str(self.units))
             self.duration = arg
         return self
-    
+
     def setlocation(self, location):
         """
         Set the location (directory) for the cached files.
@@ -175,7 +188,7 @@ class FileCache(Cache):
         @type location: str
         """
         self.location = location
-            
+
     def mktmp(self):
         """
         Make the I{location} directory if it doesn't already exits.
@@ -186,30 +199,30 @@ class FileCache(Cache):
         except:
             log.debug(self.location, exc_info=1)
         return self
-    
+
     def put(self, id, bfr):
         try:
             fn = self.__fn(id)
-            f = self.open(fn, 'w')
+            f = self.open(fn, 'wb')
             f.write(bfr)
             f.close()
             return bfr
         except:
             log.debug(id, exc_info=1)
             return bfr
-        
+
     def putf(self, id, fp):
         try:
             fn = self.__fn(id)
-            f = self.open(fn, 'w')
+            f = self.open(fn, 'wb')
             f.write(fp.read())
             fp.close()
             f.close()
-            return open(fn)
+            return open(fn, 'rb')
         except:
             log.debug(id, exc_info=1)
             return fp
-        
+
     def get(self, id):
         try:
             f = self.getf(id)
@@ -218,12 +231,12 @@ class FileCache(Cache):
             return bfr
         except:
             pass
-    
+
     def getf(self, id):
         try:
             fn = self.__fn(id)
             self.validate(fn)
-            return self.open(fn)
+            return self.open(fn, 'rb')
         except:
             pass
 
@@ -236,12 +249,12 @@ class FileCache(Cache):
         if self.duration[1] < 1:
             return
         created = dt.fromtimestamp(os.path.getctime(fn))
-        d = { self.duration[0]:self.duration[1] }
+        d = {self.duration[0]: self.duration[1]}
         expired = created+timedelta(**d)
         if expired < dt.now():
             log.debug('%s expired, deleted', fn)
             os.remove(fn)
- 
+
     def clear(self):
         for fn in os.listdir(self.location):
             if os.path.isdir(fn):
@@ -249,64 +262,97 @@ class FileCache(Cache):
             if fn.startswith(self.fnprefix):
                 log.debug('deleted: %s', fn)
                 os.remove(os.path.join(self.location, fn))
-                
+
     def purge(self, id):
         fn = self.__fn(id)
         try:
             os.remove(fn)
         except:
             pass
-                
+
     def open(self, fn, *args):
         """
         Open the cache file making sure the directory is created.
         """
         self.mktmp()
         return open(fn, *args)
-    
+
     def checkversion(self):
         path = os.path.join(self.location, 'version')
         try:
-            
-            f = self.open(path)
+            f = self.open(path, 'rt')
             version = f.read()
             f.close()
             if version != suds.__version__:
                 raise Exception()
         except:
             self.clear()
-            f = self.open(path, 'w')
+            f = self.open(path, 'wt')
             f.write(suds.__version__)
-            f.close()        
-    
+            f.close()
+
     def __fn(self, id):
         name = id
         suffix = self.fnsuffix()
         fn = '%s-%s.%s' % (self.fnprefix, name, suffix)
         return os.path.join(self.location, fn)
-    
-    
+
+    @staticmethod
+    def __get_default_location():
+        """
+        Returns the current process's default cache location folder.
+
+        The folder is determined lazily on first call.
+
+        """
+        if not FileCache.__default_location:
+            tmp = tempfile.mkdtemp("suds-default-cache")
+            FileCache.__default_location = tmp
+            import atexit
+            atexit.register(FileCache.__remove_default_location)
+        return FileCache.__default_location
+
+    @staticmethod
+    def __remove_default_location():
+        """
+        Removes the default cache location folder.
+
+        This removal may be disabled by setting the
+        remove_default_location_on_exit FileCache class attribute to False.
+
+        """
+        if FileCache.remove_default_location_on_exit:
+            # We must not load shutil here on-demand as under some
+            # circumstances this may cause the shutil.rmtree() operation to
+            # fail due to not having some internal module loaded. E.g. this
+            # happens if you run the project's test suite using the setup.py
+            # test command on Python 2.4.x.
+            shutil.rmtree(FileCache.__default_location, ignore_errors=True)
+
+
 class DocumentCache(FileCache):
     """
     Provides xml document caching.
     """
-    
+
     def fnsuffix(self):
         return 'xml'
-    
+
     def get(self, id):
         try:
-            fp = FileCache.getf(self, id)
-            if fp is None:
-                return None
-            p = Parser()
-            return p.parse(fp)
+            with FileCache.getf(self, id) as fp:
+                if fp is None:
+                    return None
+                p = Parser()
+                return p.parse(fp)
         except:
             FileCache.purge(self, id)
-    
+
     def put(self, id, object):
         if isinstance(object, Element):
-            FileCache.put(self, id, str(object))
+            FileCache.put(self, id, str(object).encode())
+        else:
+            log.warn("WARN: Given object is not an instance of Element. Skipping!")
         return object
 
 
@@ -317,20 +363,20 @@ class ObjectCache(FileCache):
     @type protocol: int
     """
     protocol = 2
-    
+
     def fnsuffix(self):
         return 'px'
-    
+
     def get(self, id):
         try:
-            fp = FileCache.getf(self, id)
-            if fp is None:
-                return None
-            else:
-                return pickle.load(fp)
+            with FileCache.getf(self, id) as fp:
+                if fp is None:
+                    return None
+                else:
+                    return pickle.load(fp)
         except:
             FileCache.purge(self, id)
-    
+
     def put(self, id, object):
         bfr = pickle.dumps(object, self.protocol)
         FileCache.put(self, id, bfr)

@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -12,367 +12,439 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
-# written by: Nathan Van Gheem (vangheem@gmail.com)
+# written by: Glen Walker
+# based on code by: Nathan Van Gheem (vangheem@gmail.com)
 
 """
-The I{xdate} module provides classes for converstion
-between XML dates and python objects.
+The I{date} module provides classes for converstion between XML dates and
+Python objects.
 """
 
-from logging import getLogger
-from suds import *
-from suds.xsd import *
+
+__all__ = ('Date', 'Time', 'DateTime', 'FixedOffsetTimezone', 'UtcTimezone',
+           'LocalTimezone')
+
+
 import time
-import datetime as dt
+import datetime
 import re
 
-log = getLogger(__name__)
+from suds.compat import unicode
+
+SNIPPET_DATE = r'(?P<year>\d{1,})-(?P<month>\d{1,2})-(?P<day>\d{1,2})'
+SNIPPET_TIME = r'(?P<hour>\d{1,2}):(?P<minute>\d{1,2}):(?P<second>\d{1,2})' + \
+               r'(?:\.(?P<subsecond>\d+))?'
+SNIPPET_ZONE = r'(?:(?P<tz_sign>[-+])(?P<tz_hour>\d{1,2})' + \
+               r'(?::?(?P<tz_minute>\d{1,2})(?::?(?P<tz_second>\d{1,2}))?)?)' + \
+               r'|(?P<tz_utc>[Zz])'
+
+PATTERN_DATE = r'^%s(?:%s)?$' % (SNIPPET_DATE, SNIPPET_ZONE)
+PATTERN_TIME = r'^%s(?:%s)?$' % (SNIPPET_TIME, SNIPPET_ZONE)
+PATTERN_DATETIME = r'^%s[T ]%s(?:%s)?$' % (SNIPPET_DATE, SNIPPET_TIME,
+                                           SNIPPET_ZONE)
+
+RE_DATE = re.compile(PATTERN_DATE)
+RE_TIME = re.compile(PATTERN_TIME)
+RE_DATETIME = re.compile(PATTERN_DATETIME)
 
 
-class Date:
+class Date(object):
+    """An XML date object supporting the xsd:date datatype.
+
+    @ivar value: The object value.
+    @type value: B{datetime}.I{date}
+
     """
-    An XML date object.
-    Supported formats:
-        - YYYY-MM-DD
-        - YYYY-MM-DD(z|Z)
-        - YYYY-MM-DD+06:00
-        - YYYY-MM-DD-06:00
-    @ivar date: The object value.
-    @type date: B{datetime}.I{date}
-    """
-    def __init__(self, date):
+    __slots__ = ('value', )
+
+    def __init__(self, value):
+        """Constructor.
+
+        @param value: The date value of the object.
+        @type value: (datetime.date|str)
+        @raise ValueError: When I{value} is invalid.
+
         """
-        @param date: The value of the object.
-        @type date: (date|str)
-        @raise ValueError: When I{date} is invalid.
-        """
-        if isinstance(date, dt.date):
-            self.date = date
-            return
-        if isinstance(date, str):
-            self.date = self.__parse(date)
-            return
-        raise ValueError(type(date))
-    
-    def year(self):
-        """
-        Get the I{year} component.
-        @return: The year.
-        @rtype: int
-        """
-        return self.date.year
-    
-    def month(self):
-        """
-        Get the I{month} component.
-        @return: The month.
-        @rtype: int
-        """
-        return self.date.month
-    
-    def day(self):
-        """
-        Get the I{day} component.
-        @return: The day.
-        @rtype: int
-        """
-        return self.date.day
-        
-    def __parse(self, s):
-        """
-        Parse the string date.
-        Supported formats:
-            - YYYY-MM-DD
-            - YYYY-MM-DD(z|Z)
-            - YYYY-MM-DD+06:00
-            - YYYY-MM-DD-06:00
-        Although, the TZ is ignored because it's meaningless
-        without the time, right?
-        @param s: A date string.
-        @type s: str
+        if isinstance(value, datetime.date):
+            self.value = value
+        elif isinstance(value, str):
+            self.value = self.parse(value)
+        else:
+            raise ValueError('invalid type for Date(): %s' % (type(value), ))
+
+    @staticmethod
+    def parse(value):
+        """Parse the string date.
+
+        This supports the subset of ISO8601 used by xsd:date, but is lenient
+        with what is accepted, handling most reasonable syntax.
+
+        Any timezone is parsed but ignored  because a) it's meaningless without
+        a time and b) B{datetime}.I{date} does not support a tzinfo property.
+
+        @param value: A date string.
+        @type value: str
         @return: A date object.
-        @rtype: I{date}
+        @rtype: B{datetime}.I{date}
+
         """
-        try:
-            year, month, day = s[:10].split('-', 2)
-            year = int(year)
-            month = int(month)
-            day = int(day)
-            return dt.date(year, month, day)
-        except:
-            log.debug(s, exec_info=True)
-            raise ValueError('Invalid format "%s"' % s)
-        
+        match_result = RE_DATE.match(value)
+        if match_result is None:
+            raise ValueError('date data has invalid format "%s"' % value)
+
+        value = date_from_match(match_result)
+
+        return value
+
     def __str__(self):
-        return str(self)
-    
+        return self.value.isoformat()
+
     def __unicode__(self):
-        return self.date.isoformat()
+        return self.value.isoformat()
 
 
-class Time:
+class Time(object):
+    """An XML time object supporting the xsd:time datatype.
+
+    @ivar time: The object value.
+    @type time: B{datetime}.I{time}
+
     """
-    An XML time object.
-    Supported formats:
-        - HH:MI:SS
-        - HH:MI:SS(z|Z)
-        - HH:MI:SS.ms
-        - HH:MI:SS.ms(z|Z)
-        - HH:MI:SS(+|-)06:00
-        - HH:MI:SS.ms(+|-)06:00
-    @ivar tz: The timezone
-    @type tz: L{Timezone}
-    @ivar date: The object value.
-    @type date: B{datetime}.I{time}
-    """
-    
-    def __init__(self, time, adjusted=True):
+    __slots__ = ('value', )
+
+    def __init__(self, value):
+        """Constructor.
+
+        @param value: The time value of the object.
+        @type value: (dateime.time|str)
+        @raise ValueError: When I{value} is invalid.
+
         """
-        @param time: The value of the object.
-        @type time: (time|str)
-        @param adjusted: Adjust for I{local} Timezone.
-        @type adjusted: boolean
-        @raise ValueError: When I{time} is invalid.
-        """
-        self.tz = Timezone()
-        if isinstance(time, dt.time):
-            self.time = time
-            return
-        if isinstance(time, str):
-            self.time = self.__parse(time)
-            if adjusted:
-                self.__adjust()
-            return
-        raise ValueError(type(time))
-    
-    def hour(self):
-        """
-        Get the I{hour} component.
-        @return: The hour.
-        @rtype: int
-        """
-        return self.time.hour
-    
-    def minute(self):
-        """
-        Get the I{minute} component.
-        @return: The minute.
-        @rtype: int
-        """
-        return self.time.minute
-    
-    def second(self):
-        """
-        Get the I{seconds} component.
-        @return: The seconds.
-        @rtype: int
-        """
-        return self.time.second
-    
-    def microsecond(self):
-        """
-        Get the I{microsecond} component.
-        @return: The microsecond.
-        @rtype: int
-        """
-        return self.time.microsecond
-    
-    def __adjust(self):
-        """
-        Adjust for TZ offset.
-        """
-        if hasattr(self, 'offset'):
-            today = dt.date.today()
-            delta = self.tz.adjustment(self.offset)
-            d = dt.datetime.combine(today, self.time)
-            d = ( d + delta )
-            self.time = d.time()
-        
-    def __parse(self, s):
-        """
-        Parse the string date.
-        Patterns:
-            - HH:MI:SS
-            - HH:MI:SS(z|Z)
-            - HH:MI:SS.ms
-            - HH:MI:SS.ms(z|Z)
-            - HH:MI:SS(+|-)06:00
-            - HH:MI:SS.ms(+|-)06:00
-        @param s: A time string.
-        @type s: str
+        if isinstance(value, datetime.time):
+            self.value = value
+        elif isinstance(value, str):
+            self.value = self.parse(value)
+        else:
+            raise ValueError('invalid type for Time(): %s' % (type(value), ))
+
+    @staticmethod
+    def parse(value):
+        """Parse the string date.
+
+        This supports the subset of ISO8601 used by xsd:time, but is lenient
+        with what is accepted, handling most reasonable syntax.
+
+        @param value: A time string.
+        @type value: str
         @return: A time object.
         @rtype: B{datetime}.I{time}
+
         """
-        try:
-            offset = None
-            part = Timezone.split(s)
-            hour, minute, second = part[0].split(':', 2)
-            hour = int(hour)
-            minute = int(minute)
-            second, ms = self.__second(second)
-            if len(part) == 2:
-                self.offset = self.__offset(part[1])
-            if ms is None:
-                return dt.time(hour, minute, second)
-            else:
-                return dt.time(hour, minute, second, ms)
-        except:
-            log.debug(s, exec_info=True)
-            raise ValueError('Invalid format "%s"' % s)
-        
-    def __second(self, s):
-        """
-        Parse the seconds and microseconds.
-        The microseconds are truncated to 999999 due to a restriction in
-        the python datetime.datetime object.
-        @param s: A string representation of the seconds.
-        @type s: str
-        @return: Tuple of (sec,ms)
-        @rtype: tuple.
-        """
-        part = s.split('.')
-        if len(part) > 1:
-            return (int(part[0]), int(part[1][:6]))
-        else:
-            return (int(part[0]), None)
-        
-    def __offset(self, s):
-        """
-        Parse the TZ offset.
-        @param s: A string representation of the TZ offset.
-        @type s: str
-        @return: The signed offset in hours.
-        @rtype: str
-        """
-        if len(s) == len('-00:00'):
-            return int(s[:3])
-        if len(s) == 0:
-            return self.tz.local
-        if len(s) == 1:
-            return 0
-        raise Exception()
+        match_result = RE_TIME.match(value)
+        if match_result is None:
+            raise ValueError('date data has invalid format "%s"' % (value, ))
+
+        date = time_from_match(match_result)
+        tzinfo = tzinfo_from_match(match_result)
+
+        value = date.replace(tzinfo=tzinfo)
+
+        return value
 
     def __str__(self):
-        return str(self)
-    
+        return self.value.isoformat()
+
     def __unicode__(self):
-        time = self.time.isoformat()
-        if self.tz.local:
-            return '%s%+.2d:00' % (time, self.tz.local)
+        return self.value.isoformat()
+
+
+class DateTime(object):
+    """An XML datetime object supporting the xsd:dateTime datatype.
+
+    @ivar value: The object value.
+    @type value: B{datetime}.I{datetime}
+
+    """
+    __slots__ = ('value', )
+
+    def __init__(self, value):
+        """Constructor.
+
+        @param value: The datetime value of the object.
+        @type value: (datetime.datetime|str)
+        @raise ValueError: When I{value} is invalid.
+
+        """
+        if isinstance(value, datetime.datetime):
+            self.value = value
+        elif isinstance(value, str):
+            self.value = self.parse(value)
         else:
-            return '%sZ' % time
+            raise ValueError('invalid type for DateTime(): %s' % type(value))
 
+    @staticmethod
+    def parse(value):
+        """Parse the string datetime.
 
-class DateTime(Date,Time):
-    """
-    An XML time object.
-    Supported formats:
-        - YYYY-MM-DDB{T}HH:MI:SS
-        - YYYY-MM-DDB{T}HH:MI:SS(z|Z)
-        - YYYY-MM-DDB{T}HH:MI:SS.ms
-        - YYYY-MM-DDB{T}HH:MI:SS.ms(z|Z)
-        - YYYY-MM-DDB{T}HH:MI:SS(+|-)06:00
-        - YYYY-MM-DDB{T}HH:MI:SS.ms(+|-)06:00
-    @ivar datetime: The object value.
-    @type datetime: B{datetime}.I{datedate}
-    """
-    def __init__(self, date):
+        This supports the subset of ISO8601 used by xsd:dateTime, but is
+        lenient with what is accepted, handling most reasonable syntax.
+
+        @param value: A datetime string.
+        @type value: str
+        @return: A datetime object.
+        @rtype: B{datetime}.I{datetime}
+
         """
-        @param date: The value of the object.
-        @type date: (datetime|str)
-        @raise ValueError: When I{tm} is invalid.
-        """
-        if isinstance(date, dt.datetime):
-            Date.__init__(self, date.date())
-            Time.__init__(self, date.time())
-            self.datetime = \
-                dt.datetime.combine(self.date, self.time)
-            return
-        if isinstance(date, str):
-            part = date.split('T')
-            Date.__init__(self, part[0])
-            Time.__init__(self, part[1], 0)
-            self.datetime = \
-                dt.datetime.combine(self.date, self.time)
-            self.__adjust()
-            return
-        raise ValueError(type(date))
-    
-    def __adjust(self):
-        """
-        Adjust for TZ offset.
-        """
-        if not hasattr(self, 'offset'):
-            return
-        delta = self.tz.adjustment(self.offset)
-        try:
-            d = ( self.datetime + delta )
-            self.datetime = d
-            self.date = d.date()
-            self.time = d.time()
-        except OverflowError:
-            log.warning('"%s" caused overflow, not-adjusted', self.datetime)
+        match_result = RE_DATETIME.match(value)
+        if match_result is None:
+            raise ValueError('date data has invalid format "%s"' % (value, ))
+
+        date = date_from_match(match_result)
+        time = time_from_match(match_result)
+        tzinfo = tzinfo_from_match(match_result)
+
+        value = datetime.datetime.combine(date, time)
+        value = value.replace(tzinfo=tzinfo)
+
+        return value
 
     def __str__(self):
-        return str(self)
-    
+        return self.value.isoformat()
+
     def __unicode__(self):
-        s = []
-        s.append(Date.__unicode__(self))
-        s.append(Time.__unicode__(self))
-        return 'T'.join(s)
-    
-    
-class UTC(DateTime):
-    """
-    Represents current UTC time.
-    """
-    
-    def __init__(self, date=None):
-        if date is None:
-            date = dt.datetime.utcnow()
-        DateTime.__init__(self, date)
-        self.tz.local = 0
-    
-    
-class Timezone:
-    """
-    Timezone object used to do TZ conversions
-    @cvar local: The (A) local TZ offset.
-    @type local: int
-    @cvar patten: The regex patten to match TZ.
-    @type patten: re.Pattern
-    """
-    
-    pattern = re.compile('([zZ])|([\-\+][0-9]{2}:[0-9]{2})')
-    
-    LOCAL = ( 0-time.timezone/60/60 )
+        return self.value.isoformat()
 
-    def __init__(self, offset=None):
-        if offset is None:
-            offset = self.LOCAL
-        self.local = offset
-    
-    @classmethod
-    def split(cls, s):
-        """
-        Split the TZ from string.
-        @param s: A string containing a timezone
-        @type s: basestring
-        @return: The split parts.
-        @rtype: tuple
-        """
-        m = cls.pattern.search(s)
-        if m is None:
-            return (s,)
-        x = m.start(0)
-        return (s[:x], s[x:])
 
-    def adjustment(self, offset):
+class FixedOffsetTimezone(datetime.tzinfo):
+    """A timezone with a fixed offset and no daylight savings adjustment.
+
+    http://docs.python.org/library/datetime.html#datetime.tzinfo
+
+    """
+
+    def __init__(self, offset):
+        """Constructor.
+
+        @ivar offset: The fixed offset of the timezone.
+        @type offset: B{datetime}.I{timedelta}
+
         """
-        Get the adjustment to the I{local} TZ.
-        @return: The delta between I{offset} and local TZ.
-        @rtype: B{datetime}.I{timedelta}
+        self.__offset = offset
+
+    def utcoffset(self, dt):
         """
-        delta = ( self.local - offset )
-        return dt.timedelta(hours=delta)
+        http://docs.python.org/library/datetime.html#datetime.tzinfo.utcoffset
+
+        """
+        return self.__offset
+
+    def tzname(self, dt):
+        """
+        http://docs.python.org/library/datetime.html#datetime.tzinfo.tzname
+
+        """
+        sign = '+'
+        if self.__offset < datetime.timedelta():
+            sign = '-'
+
+        # total_seconds was introduced in Python 2.7
+        if hasattr(self.__offset, 'total_seconds'):
+            total_seconds = self.__offset.total_seconds()
+        else:
+            total_seconds = (self.__offset.days * 24 * 60 * 60) + \
+                            (self.__offset.seconds) + \
+                            (self.__offset.microseconds / 1000000.0)
+
+        hours = total_seconds // (60 * 60)
+        total_seconds -= hours * 60 * 60
+
+        minutes = total_seconds // 60
+        total_seconds -= minutes * 60
+
+        seconds = total_seconds // 1
+        total_seconds -= seconds
+
+        if seconds:
+            return '%s%02d:%02d:%02d' % (sign, hours, minutes, seconds)
+        else:
+            return '%s%02d:%02d' % (sign, hours, minutes)
+
+    def dst(self, dt):
+        """
+        http://docs.python.org/library/datetime.html#datetime.tzinfo.dst
+
+        """
+        return datetime.timedelta(0)
+
+    def __str__(self):
+        return 'FixedOffsetTimezone %s' % (self.tzname(None), )
+
+    def __unicode__(self):
+        return 'FixedOffsetTimezone %s' % (self.tzname(None), )
+
+
+class UtcTimezone(FixedOffsetTimezone):
+    """The UTC timezone.
+
+    http://docs.python.org/library/datetime.html#datetime.tzinfo
+
+    """
+
+    def __init__(self):
+        """Constructor."""
+        FixedOffsetTimezone.__init__(self, datetime.timedelta(0))
+
+    def tzname(self, dt):
+        """
+        http://docs.python.org/library/datetime.html#datetime.tzinfo.tzname
+
+        """
+        return 'UTC'
+
+    def __str__(self):
+        return 'UtcTimezone'
+
+    def __unicode__(self):
+        return 'UtcTimezone'
+
+
+class LocalTimezone(datetime.tzinfo):
+    """The local timezone of the operating system.
+
+    http://docs.python.org/library/datetime.html#datetime.tzinfo
+
+    """
+
+    def __init__(self):
+        """Constructor."""
+        self.__offset = datetime.timedelta(seconds=-time.timezone)
+        if time.daylight:
+            self.__dst_offset = datetime.timedelta(seconds=-time.altzone)
+        else:
+            self.__dst_offset = None
+
+    def utcoffset(self, dt):
+        """
+        http://docs.python.org/library/datetime.html#datetime.tzinfo.utcoffset
+
+        """
+        if self.__is_daylight_time(dt):
+            return self.__dst_offset
+        else:
+            return self.__offset
+
+    def dst(self, dt):
+        """
+        http://docs.python.org/library/datetime.html#datetime.tzinfo.dst
+
+        """
+        if self.__is_daylight_time(dt):
+            return self.__dst_offset - self.__offset
+        else:
+            return datetime.timedelta(0)
+
+    def tzname(self, dt):
+        """
+        http://docs.python.org/library/datetime.html#datetime.tzinfo.tzname
+
+        """
+        if self.__is_daylight_time(dt):
+            return time.tzname[1]
+        else:
+            return time.tzname[0]
+
+    def __is_daylight_time(self, dt):
+        if not time.daylight:
+            return False
+        time_tuple = dt.replace(tzinfo=None).timetuple()
+        time_tuple = time.localtime(time.mktime(time_tuple))
+        return time_tuple.tm_isdst > 0
+
+    def __str__(self):
+        dt = datetime.datetime.now()
+        return 'LocalTimezone %s offset: %s dst: %s' \
+            % (self.tzname(dt), self.utcoffset(dt), self.dst(dt))
+
+    def __unicode__(self):
+        dt = datetime.datetime.now()
+        return 'LocalTimezone %s offset: %s dst: %s' \
+            % (self.tzname(dt), self.utcoffset(dt), self.dst(dt))
+
+
+def date_from_match(match_object):
+    """Create a date object from a regular expression match.
+
+    The regular expression match is expected to be from RE_DATE or RE_DATETIME.
+
+    @param match_object: The regular expression match.
+    @type value: B{re}.I{MatchObject}
+    @return: A date object.
+    @rtype: B{datetime}.I{date}
+
+    """
+    year = int(match_object.group('year'))
+    month = int(match_object.group('month'))
+    day = int(match_object.group('day'))
+
+    return datetime.date(year, month, day)
+
+
+def time_from_match(match_object):
+    """Create a time object from a regular expression match.
+
+    The regular expression match is expected to be from RE_TIME or RE_DATETIME.
+
+    @param match_object: The regular expression match.
+    @type value: B{re}.I{MatchObject}
+    @return: A date object.
+    @rtype: B{datetime}.I{time}
+
+    """
+    hour = int(match_object.group('hour'))
+    minute = int(match_object.group('minute'))
+    second = int(match_object.group('second'))
+    subsecond = match_object.group('subsecond')
+
+    microsecond = 0
+    if subsecond is not None:
+        subsecond_denominator = 10.0 ** len(subsecond)
+        subsecond = int(subsecond)
+        microsecond = subsecond * (1000000 / subsecond_denominator)
+        microsecond = int(round(microsecond))
+
+    return datetime.time(hour, minute, second, microsecond)
+
+
+def tzinfo_from_match(match_object):
+    """Create a timezone information object from a regular expression match.
+
+    The regular expression match is expected to be from RE_DATE, RE_TIME or
+    RE_DATETIME.
+
+    @param match_object: The regular expression match.
+    @type value: B{re}.I{MatchObject}
+    @return: A timezone information object.
+    @rtype: B{datetime}.I{tzinfo}
+
+    """
+    tz_utc = match_object.group('tz_utc')
+    tz_sign = match_object.group('tz_sign')
+    tz_hour = int(match_object.group('tz_hour') or 0)
+    tz_minute = int(match_object.group('tz_minute') or 0)
+    tz_second = int(match_object.group('tz_second') or 0)
+
+    tzinfo = None
+    if tz_utc is not None:
+        tzinfo = UtcTimezone()
+    elif tz_sign is not None:
+        tz_delta = datetime.timedelta(hours=tz_hour,
+                                      minutes=tz_minute,
+                                      seconds=tz_second)
+        if tz_delta == datetime.timedelta():
+            tzinfo = UtcTimezone()
+        else:
+            tz_multiplier = int('%s1' % (tz_sign, ))
+            tz_delta = tz_multiplier * tz_delta
+            tzinfo = FixedOffsetTimezone(tz_delta)
+
+    return tzinfo

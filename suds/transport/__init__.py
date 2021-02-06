@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -25,6 +25,7 @@ class TransportError(Exception):
         self.httpcode = httpcode
         self.fp = fp
 
+
 class Request:
     """
     A transport request
@@ -46,13 +47,13 @@ class Request:
         self.url = url
         self.headers = {}
         self.message = message
-        
+
     def __str__(self):
         s = []
         s.append('URL:%s' % self.url)
         s.append('HEADERS: %s' % self.headers)
         s.append('MESSAGE:')
-        s.append(self.message)
+        s.append(str(self.message))
         return '\n'.join(s)
 
 
@@ -79,13 +80,13 @@ class Reply:
         self.code = code
         self.headers = headers
         self.message = message
-        
+
     def __str__(self):
         s = []
         s.append('CODE: %s' % self.code)
         s.append('HEADERS: %s' % self.headers)
         s.append('MESSAGE:')
-        s.append(self.message)
+        s.append(str(self.message))
         return '\n'.join(s)
 
 
@@ -93,7 +94,7 @@ class Transport:
     """
     The transport I{interface}.
     """
-    
+
     def __init__(self):
         """
         Constructor.
@@ -101,7 +102,7 @@ class Transport:
         from suds.transport.options import Options
         self.options = Options()
         del Options
-    
+
     def open(self, request):
         """
         Open the url in the specified request.
@@ -112,7 +113,7 @@ class Transport:
         @raise TransportError: On all transport errors.
         """
         raise Exception('not-implemented')
-    
+
     def send(self, request):
         """
         Send soap message.  Implementations are expected to handle:

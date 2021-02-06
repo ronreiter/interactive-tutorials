@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -17,15 +17,14 @@
 """
 Contains xml document reader classes.
 """
-
+import hashlib
+from logging import getLogger
 
 from suds.sax.parser import Parser
 from suds.transport import Request
-from suds.cache import Cache, NoCache
+from suds.cache import NoCache
 from suds.store import DocumentStore
 from suds.plugin import PluginContainer
-from logging import getLogger
-
 
 log = getLogger(__name__)
 
@@ -50,7 +49,7 @@ class Reader:
         Mangle the name by hashing the I{name} and appending I{x}.
         @return: the mangled name.
         """
-        h = abs(hash(name))
+        h = hashlib.sha256(name.encode('utf8')).hexdigest()
         return '%s-%s' % (h, x)
 
 
@@ -59,7 +58,7 @@ class DocumentReader(Reader):
     The XML document reader provides an integration
     between the SAX L{Parser} and the document cache.
     """
-    
+
     def open(self, url):
         """
         Open an XML document at the specified I{url}.
@@ -80,7 +79,7 @@ class DocumentReader(Reader):
             cache.put(id, d)
         self.plugins.document.parsed(url=url, document=d.root())
         return d
-    
+
     def download(self, url):
         """
         Download the docuemnt.
@@ -96,10 +95,10 @@ class DocumentReader(Reader):
         content = fp.read()
         fp.close()
         ctx = self.plugins.document.loaded(url=url, document=content)
-        content = ctx.document 
+        content = ctx.document
         sax = Parser()
         return sax.parse(string=content)
-    
+
     def cache(self):
         """
         Get the cache.
@@ -120,7 +119,7 @@ class DefinitionsReader(Reader):
         create the object not found in the cache.
     @type fn: I{Constructor}
     """
-    
+
     def __init__(self, options, fn):
         """
         @param options: An options object.
@@ -131,14 +130,14 @@ class DefinitionsReader(Reader):
         """
         Reader.__init__(self, options)
         self.fn = fn
-    
+
     def open(self, url):
         """
         Open a WSDL at the specified I{url}.
         First, the WSDL attempted to be retrieved from
         the I{object cache}.  After unpickled from the cache, the
         I{options} attribute is restored.
-        If not found, it is downloaded and instantiated using the 
+        If not found, it is downloaded and instantiated using the
         I{fn} constructor and added to the cache for the next open().
         @param url: A WSDL url.
         @type url: str.

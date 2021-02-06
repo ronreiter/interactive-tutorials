@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -19,7 +19,6 @@ Provides classes for the (WS) SOAP I{document/literal}.
 """
 
 from logging import getLogger
-from suds import *
 from suds.bindings.binding import Binding
 from suds.sax.element import Element
 
@@ -32,12 +31,14 @@ class Document(Binding):
     since document/encoded is pretty much dead.
     Although the soap specification supports multiple documents within the soap
     <body/>, it is very uncommon.  As such, suds presents an I{RPC} view of
-    service methods defined with a single document parameter.  This is done so 
-    that the user can pass individual parameters instead of one, single document.
-    To support the complete specification, service methods defined with multiple documents
-    (multiple message parts), must present a I{document} view for that method.
+    service methods defined with a single document parameter.  This is done so
+    that the user can pass individual parameters instead of one, single
+    document.
+    To support the complete specification, service methods defined withs
+    multiple documents (multiple message parts), must present a I{document}
+    view for that method.
     """
-        
+
     def bodycontent(self, method, args, kwargs):
         #
         # The I{wrapped} vs I{bare} style is detected in 2 ways.
@@ -75,7 +76,7 @@ class Document(Binding):
             return body[0].children
         else:
             return body.children
-        
+
     def document(self, wrapper):
         """
         Get the document root.  For I{document/literal}, this is the
@@ -89,7 +90,7 @@ class Document(Binding):
         ns = wrapper[1].namespace('ns0')
         d = Element(tag, ns=ns)
         return d
-    
+
     def mkparam(self, method, pdef, object):
         #
         # Expand list parameters into individual parameters
@@ -103,7 +104,7 @@ class Document(Binding):
             return tags
         else:
             return Binding.mkparam(self, method, pdef, object)
-        
+
     def param_defs(self, method):
         #
         # Get parameter definitions for document literal.
@@ -124,14 +125,13 @@ class Document(Binding):
                 if child.isattr():
                     continue
                 if self.bychoice(ancestry):
-                    log.debug(
-                        '%s\ncontained by <choice/>, excluded as param for %s()',
-                        child,
-                        method.name)
+                    log.debug('%s\ncontained by <choice/>, excluded as param for %s()',
+                              child,
+                              method.name)
                     continue
                 result.append((child.name, child))
         return result
-    
+
     def returned_types(self, method):
         result = []
         wrapped = method.soap.output.body.wrapped
@@ -145,7 +145,7 @@ class Document(Binding):
         else:
             result += rts
         return result
-    
+
     def bychoice(self, ancestry):
         """
         The ancestry contains a <choice/>

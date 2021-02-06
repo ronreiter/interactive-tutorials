@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -20,7 +20,7 @@ schema(s).
 """
 
 from logging import getLogger
-from suds.sax import splitPrefix, Namespace
+from suds.sax import Namespace
 from suds.sax.element import Element
 from suds.plugin import DocumentPlugin, DocumentContext
 
@@ -46,10 +46,10 @@ class Practice(Doctor):
     @ivar doctors: A list of doctors.
     @type doctors: list
     """
-    
+
     def __init__(self):
         self.doctors = []
-        
+
     def add(self, doctor):
         """
         Add a doctor to the practice
@@ -78,7 +78,7 @@ class TnsFilter:
         """
         self.tns = []
         self.add(*tns)
-        
+
     def add(self, *tns):
         """
         Add I{targetNamesapces} to be added.
@@ -97,12 +97,12 @@ class TnsFilter:
         """
         tns = root.get('targetNamespace')
         if len(self.tns):
-            matched = ( tns in self.tns )
+            matched = tns in self.tns
         else:
             matched = 1
-        itself = ( ns == tns )
-        return ( matched and not itself )
-    
+        itself = ns == tns
+        return matched and not itself
+
 
 class Import:
     """
@@ -119,7 +119,7 @@ class Import:
     """
 
     xsdns = Namespace.xsdns
-    
+
     def __init__(self, ns, location=None):
         """
         @param ns: An import namespace.
@@ -130,7 +130,7 @@ class Import:
         self.ns = ns
         self.location = location
         self.filter = TnsFilter()
-        
+
     def setfilter(self, filter):
         """
         Set the filter.
@@ -138,7 +138,7 @@ class Import:
         @type filter: L{TnsFilter}
         """
         self.filter = filter
-        
+
     def apply(self, root):
         """
         Apply the import (rule) to the specified schema.
@@ -157,7 +157,7 @@ class Import:
             node.set('schemaLocation', self.location)
         log.debug('inserting: %s', node)
         root.insert(node)
-        
+
     def add(self, root):
         """
         Add an <xs:import/> to the specified schema root.
@@ -169,8 +169,8 @@ class Import:
         if self.location is not None:
             node.set('schemaLocation', self.location)
         log.debug('%s inserted', node)
-        root.insert(node) 
-        
+        root.insert(node)
+
     def exists(self, root):
         """
         Check to see if the <xs:import/> already exists
@@ -185,7 +185,7 @@ class Import:
             if self.ns == ns:
                 return 1
         return 0
-    
+
 
 class ImportDoctor(Doctor, DocumentPlugin):
     """
@@ -199,7 +199,7 @@ class ImportDoctor(Doctor, DocumentPlugin):
         """
         self.imports = []
         self.add(*imports)
-        
+
     def add(self, *imports):
         """
         Add a namesapce to be checked.
@@ -207,7 +207,7 @@ class ImportDoctor(Doctor, DocumentPlugin):
         @type imports: [L{Import},..]
         """
         self.imports += imports
-        
+
     def examine(self, node):
         for imp in self.imports:
             imp.apply(node)
@@ -223,4 +223,3 @@ class ImportDoctor(Doctor, DocumentPlugin):
         for child in node:
             context.document = child
             self.parsed(context)
-        

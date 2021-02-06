@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -19,16 +19,17 @@ The I{service definition} provides a textual representation of a service.
 """
 
 from logging import getLogger
-from suds import *
+from suds import tostr
 import suds.metrics as metrics
 from suds.sax import Namespace
 
 log = getLogger(__name__)
 
+
 class ServiceDefinition:
     """
-    A service definition provides an object used to generate a textual description
-    of a service.
+    A service definition provides an object used to generate a textual
+    description of a service.
     @ivar wsdl: A wsdl.
     @type wsdl: L{wsdl.Definitions}
     @ivar service: The service object.
@@ -38,9 +39,9 @@ class ServiceDefinition:
     @ivar prefixes: A list of remapped prefixes.
     @type prefixes: [(prefix,uri),..]
     @ivar types: A list of type definitions
-    @type types: [I{Type},..] 
+    @type types: [I{Type},..]
     """
-    
+
     def __init__(self, wsdl, service):
         """
         @param wsdl: A wsdl object
@@ -59,7 +60,7 @@ class ServiceDefinition:
         self.publictypes()
         self.getprefixes()
         self.pushprefixes()
-    
+
     def pushprefixes(self):
         """
         Add our prefixes to the wsdl so that when users invoke methods
@@ -70,16 +71,16 @@ class ServiceDefinition:
 
     def addports(self):
         """
-        Look through the list of service ports and construct a list of tuples where
-        each tuple is used to describe a port and it's list of methods as:
-        (port, [method]).  Each method is tuple: (name, [pdef,..] where each pdef is
-        a tuple: (param-name, type).
+        Look through the list of service ports and construct a list of tuples
+        where each tuple is used to describe a port and it's list of methods
+        as: (port, [method]).  Each method is tuple: (name, [pdef,..] where
+        each pdef is a tuple: (param-name, type).
         """
         timer = metrics.Timer()
         timer.start()
         for port in self.service.ports:
             p = self.findport(port)
-            for op in list(port.binding.operations.values()):
+            for op in port.binding.operations.values():
                 m = p[0].method(op.name)
                 binding = m.binding.input
                 method = (m.name, binding.param_defs(m))
@@ -87,7 +88,7 @@ class ServiceDefinition:
                 metrics.log.debug("method '%s' created: %s", m.name, timer)
             p[1].sort()
         timer.stop()
-            
+
     def findport(self, port):
         """
         Find and return a port tuple for the specified port.
@@ -98,69 +99,76 @@ class ServiceDefinition:
         @rtype: (port, [method])
         """
         for p in self.ports:
-            if p[0] == p: return p
+            if p[0] == p:
+                return p
         p = (port, [])
         self.ports.append(p)
         return p
-            
+
     def getprefixes(self):
         """
         Add prefixes foreach namespace referenced by parameter types.
         """
         namespaces = []
         for l in (self.params, self.types):
-            for t,r in l:
+            for t, r in l:
                 ns = r.namespace()
-                if ns[1] is None: continue
-                if ns[1] in namespaces: continue
+                if ns[1] is None:
+                    continue
+                if ns[1] in namespaces:
+                    continue
                 if Namespace.xs(ns) or Namespace.xsd(ns):
                     continue
                 namespaces.append(ns[1])
-                if t == r: continue
+                if t == r:
+                    continue
                 ns = t.namespace()
-                if ns[1] is None: continue
-                if ns[1] in namespaces: continue
+                if ns[1] is None:
+                    continue
+                if ns[1] in namespaces:
+                    continue
                 namespaces.append(ns[1])
-        i = 0
         namespaces.sort()
         for u in namespaces:
             p = self.nextprefix()
             ns = (p, u)
             self.prefixes.append(ns)
-            
+
     def paramtypes(self):
         """ get all parameter types """
         for m in [p[1] for p in self.ports]:
             for p in [p[1] for p in m]:
                 for pd in p:
-                    if pd[1] in self.params: continue
+                    if pd[1] in self.params:
+                        continue
                     item = (pd[1], pd[1].resolve())
                     self.params.append(item)
-                    
+
     def publictypes(self):
         """ get all public types """
-        for t in list(self.wsdl.schema.types.values()):
-            if t in self.params: continue
-            if t in self.types: continue
+        for t in self.wsdl.schema.types.values():
+            if t in self.params:
+                continue
+            if t in self.types:
+                continue
             item = (t, t)
             self.types.append(item)
-        tc = lambda x,y: cmp(x[0].name, y[0].name)
-        self.types.sort(cmp=tc)
-        
+        self.types.sort(key=lambda x: x[0].name)
+
     def nextprefix(self):
         """
-        Get the next available prefix.  This means a prefix starting with 'ns' with
-        a number appended as (ns0, ns1, ..) that is not already defined on the
-        wsdl document.
+        Get the next available prefix.  This means a prefix starting with 'ns'
+        with a number appended as (ns0, ns1, ..) that is not already defined
+        on the wsdl document.
         """
         used = [ns[0] for ns in self.prefixes]
-        used += [ns[0] for ns in list(self.wsdl.root.nsprefixes.items())]
-        for n in range(0,1024):
-            p = 'ns%d'%n
+        used += [ns[0] for ns in self.wsdl.root.nsprefixes.items()]
+        for n in range(0, 1024):
+            p = 'ns%d' % n
             if p not in used:
                 return p
         raise Exception('prefixes exhausted')
-    
+
     def getprefix(self, u):
         """
         Get the prefix for the specified namespace (uri)
@@ -170,11 +178,13 @@ class ServiceDefinition:
         @rtype: (prefix, uri).
         """
         for ns in Namespace.all:
-            if u == ns[1]: return ns[0]
+            if u == ns[1]:
+                return ns[0]
         for ns in self.prefixes:
-            if u == ns[1]: return ns[0]
-        raise Exception('ns (%s) not mapped'  % u)
-    
+            if u == ns[1]:
+                return ns[0]
+        raise Exception('ns (%s) not mapped' % u)
+
     def xlate(self, type):
         """
         Get a (namespace) translated I{qualified} name for specified type.
@@ -192,16 +202,23 @@ class ServiceDefinition:
             return name
         prefix = self.getprefix(ns[1])
         return ':'.join((prefix, name))
-        
-    def description(self):
+
+    def description(self, html=False):
         """
-        Get a textual description of the service for which this object represents.
+        Get a textual description of the service for which this object
+        represents.
         @return: A textual description.
         @rtype: str
         """
         s = []
-        indent = (lambda n :  '\n%*s'%(n*3,' '))
-        s.append('Service ( %s ) tns="%s"' % (self.service.name, self.wsdl.tns[1]))
+        if html:
+            indent = lambda n: '<p>%*s' % (n * 3, ' ')
+            line = '<hr/>'
+        else:
+            indent = lambda n: '\n%*s' % (n * 3, ' ')
+            line = '\n' + '-'*80
+        s.append('Service ( %s ) tns="%s"' %
+                 (self.service.name, self.wsdl.tns[1]))
         s.append(indent(1))
         s.append('Prefixes (%d)' % len(self.prefixes))
         for p in self.prefixes:
@@ -234,15 +251,22 @@ class ServiceDefinition:
             for t in self.types:
                 s.append(indent(4))
                 s.append(self.xlate(t[0]))
-        s.append('\n\n')
+        s.append(line)
         return ''.join(s)
-    
+
     def __str__(self):
-        return str(self)
-        
-    def __unicode__(self):
         try:
             return self.description()
         except Exception as e:
             log.exception(e)
-        return tostr(e)
+            return tostr(e)
+
+    def __repr__(self):
+        return self.__str__()
+
+    def html(self):
+        try:
+            return self.description(html=True)
+        except Exception as e:
+            log.exception(e)
+            return tostr(e)

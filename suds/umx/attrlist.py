@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -18,8 +18,6 @@
 Provides filtered attribute list classes.
 """
 
-from suds import *
-from suds.umx import *
 from suds.sax import Namespace
 
 
@@ -37,7 +35,7 @@ class AttrList:
         @type attributes: list
         """
         self.raw = attributes
-        
+
     def real(self):
         """
         Get list of I{real} attributes which exclude xs and xml attributes.
@@ -45,20 +43,22 @@ class AttrList:
         @rtype: I{generator}
         """
         for a in self.raw:
-            if self.skip(a): continue
+            if self.skip(a):
+                continue
             yield a
-            
+
     def rlen(self):
         """
-        Get the number of I{real} attributes which exclude xs and xml attributes.
-        @return: A count of I{real} attributes. 
+        Get the number of I{real} attributes which exclude xs and xml
+        attributes.
+        @return: A count of I{real} attributes.
         @rtype: L{int}
         """
         n = 0
         for a in self.real():
             n += 1
         return n
-            
+
     def lang(self):
         """
         Get list of I{filtered} attributes which exclude xs.
@@ -85,4 +85,4 @@ class AttrList:
             'http://schemas.xmlsoap.org/soap/envelope/',
             'http://www.w3.org/2003/05/soap-envelope',
         )
-        return ( Namespace.xs(ns) or ns[1] in skip )
+        return Namespace.xs(ns) or ns[1] in skip

@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -19,7 +19,8 @@ The I{builder} module provides an wsdl/xsd defined types factory
 """
 
 from logging import getLogger
-from suds import *
+from suds import TypeNotFound
+from .compat import basestring
 from suds.sudsobject import Factory
 
 log = getLogger(__name__)
@@ -27,17 +28,17 @@ log = getLogger(__name__)
 
 class Builder:
     """ Builder used to construct an object for types defined in the schema """
-    
+
     def __init__(self, resolver):
         """
         @param resolver: A schema object name resolver.
         @type resolver: L{resolver.Resolver}
         """
         self.resolver = resolver
-        
+
     def build(self, name):
-        """ build a an object for the specified typename as defined in the schema """
-        if isinstance(name, str):
+        "build an object for the specified typename as defined in the schema"
+        if isinstance(name, basestring):
             type = self.resolver.find(name)
             if type is None:
                 raise TypeNotFound(name)
@@ -59,7 +60,7 @@ class Builder:
                 continue
             self.process(data, child, history[:])
         return data
-            
+
     def process(self, data, type, history):
         """ process the specified type then process its children """
         if type in history:
@@ -98,15 +99,13 @@ class Builder:
             name = '_%s' % attr.name
             value = attr.get_default()
             setattr(data, name, value)
-                
+
     def skip_child(self, child, ancestry):
         """ get whether or not to skip the specified child """
-        if child.any(): return True
-        for x in ancestry:
-            if x.choice():
-                return True
-        return False
-    
+        if child.any():
+            return True
+        return any(x.choice() for x in ancestry)
+
     def ordering(self, type):
         """ get the ordering """
         result = []
@@ -118,4 +117,3 @@ class Builder:
                 name = '_%s' % child.name
             result.append(name)
         return result
-            

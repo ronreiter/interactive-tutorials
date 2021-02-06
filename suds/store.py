@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -29,16 +29,17 @@ log = getLogger(__name__)
 #
 # Soap section 5 encoding schema.
 #
-encoding = \
-"""<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://schemas.xmlsoap.org/soap/encoding/">
-        
+encoding = """<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://schemas.xmlsoap.org/soap/encoding/"
+    targetNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+
  <xs:attribute name="root">
    <xs:annotation>
      <xs:documentation>
        'root' can be used to distinguish serialization roots from other
        elements that are present in a serialization but are not roots of
-       a serialized value graph 
+       a serialized value graph
      </xs:documentation>
    </xs:annotation>
    <xs:simpleType>
@@ -51,7 +52,7 @@ encoding = \
   <xs:attributeGroup name="commonAttributes">
     <xs:annotation>
       <xs:documentation>
-        Attributes common to all elements that function as accessors or 
+        Attributes common to all elements that function as accessors or
         represent independent (multi-ref) values.  The href attribute is
         intended to be used in a manner like CONREF.  That is, the element
         content should be empty iff the href attribute appears
@@ -63,26 +64,26 @@ encoding = \
   </xs:attributeGroup>
 
   <!-- Global Attributes.  The following attributes are intended to be usable via qualified attribute names on any complex type referencing them. -->
-       
+
   <!-- Array attributes. Needed to give the type and dimensions of an array's contents, and the offset for partially-transmitted arrays. -->
-   
+
   <xs:simpleType name="arrayCoordinate">
     <xs:restriction base="xs:string"/>
   </xs:simpleType>
-          
+
   <xs:attribute name="arrayType" type="xs:string"/>
   <xs:attribute name="offset" type="tns:arrayCoordinate"/>
-  
+
   <xs:attributeGroup name="arrayAttributes">
     <xs:attribute ref="tns:arrayType"/>
     <xs:attribute ref="tns:offset"/>
-  </xs:attributeGroup>    
-  
-  <xs:attribute name="position" type="tns:arrayCoordinate"/> 
-  
+  </xs:attributeGroup>
+
+  <xs:attribute name="position" type="tns:arrayCoordinate"/>
+
   <xs:attributeGroup name="arrayMemberAttributes">
     <xs:attribute ref="tns:position"/>
-  </xs:attributeGroup>    
+  </xs:attributeGroup>
 
   <xs:group name="Array">
     <xs:sequence>
@@ -94,18 +95,18 @@ encoding = \
   <xs:complexType name="Array">
     <xs:annotation>
       <xs:documentation>
-       'Array' is a complex type for accessors identified by position 
+       'Array' is a complex type for accessors identified by position
       </xs:documentation>
     </xs:annotation>
     <xs:group ref="tns:Array" minOccurs="0"/>
     <xs:attributeGroup ref="tns:arrayAttributes"/>
     <xs:attributeGroup ref="tns:commonAttributes"/>
-  </xs:complexType> 
+  </xs:complexType>
 
-  <!-- 'Struct' is a complex type for accessors identified by name. 
+  <!-- 'Struct' is a complex type for accessors identified by name.
        Constraint: No element may be have the same name as any other,
        nor may any element have a maxOccurs > 1. -->
-   
+
   <xs:element name="Struct" type="tns:Struct"/>
 
   <xs:group name="Struct">
@@ -117,7 +118,7 @@ encoding = \
   <xs:complexType name="Struct">
     <xs:group ref="tns:Struct" minOccurs="0"/>
     <xs:attributeGroup ref="tns:commonAttributes"/>
-  </xs:complexType> 
+  </xs:complexType>
 
   <!-- 'Base64' can be used to serialize binary data using base64 encoding
        as defined in RFC2045 but without the MIME line length limitation. -->
@@ -126,7 +127,7 @@ encoding = \
     <xs:restriction base="xs:base64Binary"/>
   </xs:simpleType>
 
- <!-- Element declarations corresponding to each of the simple types in the 
+ <!-- Element declarations corresponding to each of the simple types in the
       XML Schemas Specification. -->
 
   <xs:element name="duration" type="tns:duration"/>
@@ -157,7 +158,7 @@ encoding = \
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  
+
 
   <xs:element name="time" type="tns:time"/>
   <xs:complexType name="time">
@@ -221,7 +222,7 @@ encoding = \
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-  
+
   <xs:element name="boolean" type="tns:boolean"/>
   <xs:complexType name="boolean">
     <xs:simpleContent>
@@ -285,7 +286,7 @@ encoding = \
     </xs:simpleContent>
   </xs:complexType>
 
-  
+
   <xs:element name="string" type="tns:string"/>
   <xs:complexType name="string">
     <xs:simpleContent>
@@ -543,13 +544,13 @@ class DocumentStore:
     @cvar store: The mapping of URL location to documents.
     @type store: dict
     """
-    
+
     protocol = 'suds'
-    
+
     store = {
-        'schemas.xmlsoap.org/soap/encoding/' : encoding
+        'schemas.xmlsoap.org/soap/encoding/': encoding
     }
-    
+
     def open(self, url):
         """
         Open a document at the specified url.
@@ -563,7 +564,7 @@ class DocumentStore:
             return self.find(location)
         else:
             return None
-        
+
     def find(self, location):
         """
         Find the specified location in the store.
@@ -578,7 +579,7 @@ class DocumentStore:
         except:
             reason = 'location "%s" not in document store' % location
             raise Exception(reason)
-        
+
     def split(self, url):
         """
         Split the url into I{protocol} and I{location}

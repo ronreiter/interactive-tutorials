@@ -1,6 +1,6 @@
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the (LGPL) GNU Lesser General Public License as
-# published by the Free Software Foundation; either version 3 of the 
+# published by the Free Software Foundation; either version 3 of the
 # License, or (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -21,8 +21,7 @@ found in the document.
 """
 
 from logging import getLogger
-from suds import *
-from suds.sax import splitPrefix
+from suds import objid, TypeNotFound, MethodNotFound
 from suds.sax.element import Element
 from suds.bindings.document import Document
 from suds.bindings.rpc import RPC, Encoded
@@ -30,10 +29,9 @@ from suds.xsd import qualify, Namespace
 from suds.xsd.schema import Schema, SchemaCollection
 from suds.xsd.query import ElementQuery
 from suds.sudsobject import Object, Facade, Metadata
-from suds.reader import DocumentReader, DefinitionsReader
+from suds.reader import DocumentReader
 from urllib.parse import urljoin
 import re
-from . import soaparray
 
 log = getLogger(__name__)
 
@@ -48,7 +46,7 @@ class WObject(Object):
     @ivar root: The XML I{root} element.
     @type root: L{Element}
     """
-    
+
     def __init__(self, root, definitions=None):
         """
         @param root: An XML root element.
@@ -62,7 +60,7 @@ class WObject(Object):
         pmd.excludes = ['root']
         pmd.wrappers = dict(qname=repr)
         self.__metadata__.__print__ = pmd
-        
+
     def resolve(self, definitions):
         """
         Resolve named references to other WSDL objects.
@@ -71,7 +69,7 @@ class WObject(Object):
         """
         pass
 
-        
+
 class NamedObject(WObject):
     """
     A B{named} WSDL object.
@@ -122,7 +120,7 @@ class Definitions(WObject):
     @ivar service: The service object.
     @type service: L{Service}
     """
-    
+
     Tag = 'definitions'
 
     def __init__(self, url, options):
@@ -162,7 +160,7 @@ class Definitions(WObject):
         for s in self.services:
             self.add_methods(s)
         log.debug("wsdl at '%s' loaded:\n%s", url, self)
-        
+
     def mktns(self, root):
         """ Get/create the target namespace """
         tns = root.get('targetNamespace')
@@ -171,12 +169,13 @@ class Definitions(WObject):
             log.debug('warning: tns (%s), not mapped to prefix', tns)
             prefix = 'tns'
         return (prefix, tns)
-        
+
     def add_children(self, root):
         """ Add child objects using the factory """
         for c in root.getChildren(ns=wsdlns):
             child = Factory.create(c, self)
-            if child is None: continue
+            if child is None:
+                continue
             self.children.append(child)
             if isinstance(child, Import):
                 self.imports.append(child)
@@ -196,17 +195,17 @@ class Definitions(WObject):
             if isinstance(child, Service):
                 self.services.append(child)
                 continue
-                
+
     def open_imports(self):
         """ Import the I{imported} WSDLs. """
         for imp in self.imports:
             imp.load(self)
-                
+
     def resolve(self):
         """ Tell all children to resolve themselves """
         for c in self.children:
             c.resolve(self)
-                
+
     def build_schema(self):
         """ Process L{Types} objects and create the schema collection """
         container = SchemaCollection(self)
@@ -214,7 +213,7 @@ class Definitions(WObject):
             for root in t.contents():
                 schema = Schema(root, self.url, self.options, container)
                 container.add(schema)
-        if not len(container): # empty
+        if not len(container):  # empty
             root = Element.buildPath(self.root, 'types/schema')
             schema = Schema(root, self.url, self.options, container)
             container.add(schema)
@@ -222,18 +221,18 @@ class Definitions(WObject):
         for s in [t.schema() for t in self.types if t.imported()]:
             self.schema.merge(s)
         return self.schema
-                
+
     def add_methods(self, service):
         """ Build method view for service """
         bindings = {
-            'document/literal' : Document(self),
-            'rpc/literal' : RPC(self),
-            'rpc/encoded' : Encoded(self)
+            'document/literal': Document(self),
+            'rpc/literal': RPC(self),
+            'rpc/encoded': Encoded(self)
         }
         for p in service.ports:
             binding = p.binding
             ptype = p.binding.type
-            operations = list(p.binding.type.operations.values())
+            operations = p.binding.type.operations.values()
             for name in [op.name for op in operations]:
                 m = Facade('Method')
                 m.name = name
@@ -247,11 +246,11 @@ class Definitions(WObject):
                 m.binding.output = bindings.get(key)
                 op = ptype.operation(name)
                 p.methods[name] = m
-                
+
     def set_wrapped(self):
         """ set (wrapped|bare) flag on messages """
-        for b in list(self.bindings.values()):
-            for op in list(b.operations.values()):
+        for b in self.bindings.values():
+            for op in b.operations.values():
                 for body in (op.soap.input.body, op.soap.output.body):
                     body.wrapped = False
                     if len(body.parts) != 1:
@@ -267,7 +266,7 @@ class Definitions(WObject):
                         if resolved.builtin():
                             continue
                         body.wrapped = True
-                        
+
     def __getstate__(self):
         nopickle = ('options',)
         state = self.__dict__.copy()
@@ -275,7 +274,7 @@ class Definitions(WObject):
             if k in state:
                 del state[k]
         return state
-    
+
     def __repr__(self):
         return 'Definitions (id=%s)' % self.id
 
@@ -290,7 +289,7 @@ class Import(WObject):
     @ivar imported: The imported object.
     @type imported: L{Definitions}
     """
-    
+
     def __init__(self, root, definitions):
         """
         @param root: An XML root element.
@@ -304,7 +303,7 @@ class Import(WObject):
         self.imported = None
         pmd = self.__metadata__.__print__
         pmd.wrappers['imported'] = repr
-        
+
     def load(self, definitions):
         """ Load the object by opening the URL """
         url = self.location
@@ -320,7 +319,7 @@ class Import(WObject):
             self.import_schema(definitions, d)
             return
         raise Exception('document at "%s" is unknown' % url)
-    
+
     def import_definitions(self, definitions, d):
         """ import/merge wsdl definitions """
         definitions.types += d.types
@@ -329,7 +328,7 @@ class Import(WObject):
         definitions.bindings.update(d.bindings)
         self.imported = d
         log.debug('imported (WSDL):\n%s', d)
-        
+
     def import_schema(self, definitions, d):
         """ import schema as <types/> content """
         if not len(definitions.types):
@@ -339,16 +338,16 @@ class Import(WObject):
             types = definitions.types[-1]
         types.root.append(d.root)
         log.debug('imported (XSD):\n%s', d.root)
-   
+
     def __gt__(self, other):
         return False
-        
+
 
 class Types(WObject):
     """
     Represents <types><schema/></types>.
     """
-    
+
     @classmethod
     def create(cls, definitions):
         root = Element('types', ns=wsdlns)
@@ -364,22 +363,22 @@ class Types(WObject):
         """
         WObject.__init__(self, root, definitions)
         self.definitions = definitions
-        
+
     def contents(self):
         return self.root.getChildren('schema', Namespace.xsdns)
-    
+
     def schema(self):
         return self.definitions.schema
-    
+
     def local(self):
-        return ( self.definitions.schema is None )
-    
+        return self.definitions.schema is None
+
     def imported(self):
-        return ( not self.local() )
-        
+        return not self.local()
+
     def __gt__(self, other):
         return isinstance(other, Import)
-    
+
 
 class Part(NamedObject):
     """
@@ -406,14 +405,14 @@ class Part(NamedObject):
         tns = definitions.tns
         self.element = self.__getref('element', tns)
         self.type = self.__getref('type', tns)
-        
+
     def __getref(self, a, tns):
         """ Get the qualified value of attribute named 'a'."""
         s = self.root.get(a)
         if s is None:
             return s
         else:
-            return qualify(s, self.root, tns)  
+            return qualify(s, self.root, tns)
 
 
 class Message(NamedObject):
@@ -435,11 +434,11 @@ class Message(NamedObject):
         for p in root.getChildren('part'):
             part = Part(p, definitions)
             self.parts.append(part)
-            
+
     def __gt__(self, other):
         return isinstance(other, (Import, Types))
-    
-    
+
+
 class PortType(NamedObject):
     """
     Represents <portType/>.
@@ -478,14 +477,14 @@ class PortType(NamedObject):
                 faults.append(f)
             op.faults = faults
             self.operations[op.name] = op
-            
+
     def resolve(self, definitions):
         """
         Resolve named references to other WSDL objects.
         @param definitions: A definitions object.
         @type definitions: L{Definitions}
         """
-        for op in list(self.operations.values()):
+        for op in self.operations.values():
             if op.input is None:
                 op.input = Message(Element('no-input'), definitions)
             else:
@@ -510,7 +509,7 @@ class PortType(NamedObject):
                 if msg is None:
                     raise Exception("msg '%s', not-found" % f.message)
                 f.message = msg
-                
+
     def operation(self, name):
         """
         Shortcut used to get a contained operation by name.
@@ -522,9 +521,9 @@ class PortType(NamedObject):
         """
         try:
             return self.operations[name]
-        except Exception as e:
+        except Exception:
             raise MethodNotFound(name)
-                
+
     def __gt__(self, other):
         return isinstance(other, (Import, Types, Message))
 
@@ -555,15 +554,15 @@ class Binding(NamedObject):
         self.soap = soap
         self.soap.style = sr.get('style', default='document')
         self.add_operations(self.root, definitions)
-        
+
     def soaproot(self):
         """ get the soap:binding """
         for ns in (soapns, soap12ns):
-            sr =  self.root.getChild('binding', ns=ns)
+            sr = self.root.getChild('binding', ns=ns)
             if sr is not None:
                 return sr
         return None
-        
+
     def add_operations(self, root, definitions):
         """ Add <operation/> children """
         dsop = Element('operation', ns=soapns)
@@ -607,7 +606,7 @@ class Binding(NamedObject):
                 faults.append(f)
             soap.faults = faults
             self.operations[op.name] = op
-            
+
     def body(self, definitions, body, root):
         """ add the input/output body properties """
         if root is None:
@@ -619,7 +618,7 @@ class Binding(NamedObject):
         if parts is None:
             body.parts = ()
         else:
-            body.parts = re.split('[\s,]', parts)
+            body.parts = re.split(r'[\s,]', parts)
         body.use = root.get('use', default='literal')
         ns = root.get('namespace')
         if ns is None:
@@ -627,7 +626,7 @@ class Binding(NamedObject):
         else:
             prefix = root.findPrefix(ns, 'b0')
             body.namespace = (prefix, ns)
-            
+
     def header(self, definitions, parent, root):
         """ add the input/output header properties """
         if root is None:
@@ -647,7 +646,7 @@ class Binding(NamedObject):
         part = root.get('part')
         if part is not None:
             header.part = part
-            
+
     def resolve(self, definitions):
         """
         Resolve named references to other WSDL objects.  This includes
@@ -657,11 +656,11 @@ class Binding(NamedObject):
         @type definitions: L{Definitions}
         """
         self.resolveport(definitions)
-        for op in list(self.operations.values()):
+        for op in self.operations.values():
             self.resolvesoapbody(definitions, op)
             self.resolveheaders(definitions, op)
             self.resolvefaults(definitions, op)
-        
+
     def resolveport(self, definitions):
         """
         Resolve port_type reference.
@@ -674,10 +673,10 @@ class Binding(NamedObject):
             raise Exception("portType '%s', not-found" % self.type)
         else:
             self.type = port_type
-            
+
     def resolvesoapbody(self, definitions, op):
         """
-        Resolve soap body I{message} parts by 
+        Resolve soap body I{message} parts by
         cross-referencing with operation defined in port type.
         @param definitions: A definitions object.
         @type definitions: L{Definitions}
@@ -706,7 +705,7 @@ class Binding(NamedObject):
             soap.output.body.parts = pts
         else:
             soap.output.body.parts = ptop.output.parts
-            
+
     def resolveheaders(self, definitions, op):
         """
         Resolve soap header I{message} references.
@@ -730,7 +729,7 @@ class Binding(NamedObject):
                     break
             if pn == header.part:
                 raise Exception("message '%s' has not part named '%s'" % (ref, pn))
-                        
+
     def resolvefaults(self, definitions, op):
         """
         Resolve soap fault I{message} references by
@@ -752,7 +751,7 @@ class Binding(NamedObject):
             if hasattr(fault, 'parts'):
                 continue
             raise Exception("fault '%s' not defined in portType '%s'" % (fault.name, self.type.name))
-            
+
     def operation(self, name):
         """
         Shortcut used to get a contained operation by name.
@@ -766,9 +765,9 @@ class Binding(NamedObject):
             return self.operations[name]
         except:
             raise MethodNotFound(name)
-            
+
     def __gt__(self, other):
-        return ( not isinstance(other, Service) )
+        return not isinstance(other, Service)
 
 
 class Port(NamedObject):
@@ -781,7 +780,7 @@ class Port(NamedObject):
     @ivar location: The service location (url).
     @type location: str
     """
-    
+
     def __init__(self, root, definitions, service):
         """
         @param root: An XML root element.
@@ -798,9 +797,9 @@ class Port(NamedObject):
         if address is None:
             self.location = None
         else:
-            self.location = address.get('location')
+            self.location = address.get('location').encode('utf-8')
         self.methods = {}
-        
+
     def method(self, name):
         """
         Get a method defined in this portType by name.
@@ -810,7 +809,7 @@ class Port(NamedObject):
         @rtype: I{Method}
         """
         return self.methods.get(name)
-        
+
 
 class Service(NamedObject):
     """
@@ -820,7 +819,7 @@ class Service(NamedObject):
     @ivar methods: The contained methods for all ports.
     @type methods: [Method,..]
     """
-    
+
     def __init__(self, root, definitions):
         """
         @param root: An XML root element.
@@ -833,20 +832,20 @@ class Service(NamedObject):
         for p in root.getChildren('port'):
             port = Port(p, definitions, self)
             self.ports.append(port)
-            
+
     def port(self, name):
         """
         Locate a port by name.
         @param name: A port name.
         @type name: str
         @return: The port object.
-        @rtype: L{Port} 
+        @rtype: L{Port}
         """
         for p in self.ports:
             if p.name == name:
                 return p
         return None
-    
+
     def setlocation(self, url, names=None):
         """
         Override the invocation location (url) for service method.
@@ -856,10 +855,10 @@ class Service(NamedObject):
         @type names: [str,..]
         """
         for p in self.ports:
-            for m in list(p.methods.values()):
+            for m in p.methods.values():
                 if names is None or m.name in names:
-                    m.location = url
-        
+                    m.location = url.encode('utf-8')
+
     def resolve(self, definitions):
         """
         Resolve named references to other WSDL objects.
@@ -879,7 +878,7 @@ class Service(NamedObject):
             p.binding = binding
             filtered.append(p)
         self.ports = filtered
-        
+
     def __gt__(self, other):
         return True
 
@@ -891,16 +890,15 @@ class Factory:
     @type tags: dict
     """
 
-    tags =\
-    {
-        'import' : Import, 
-        'types' : Types, 
-        'message' : Message, 
-        'portType' : PortType,
-        'binding' : Binding,
-        'service' : Service,
+    tags = {
+        'import': Import,
+        'types': Types,
+        'message': Message,
+        'portType': PortType,
+        'binding': Binding,
+        'service': Service,
     }
-    
+
     @classmethod
     def create(cls, root, definitions):
         """
@@ -910,7 +908,7 @@ class Factory:
         @param definitions: A definitions object.
         @type definitions: L{Definitions}
         @return: The created object.
-        @rtype: L{WObject} 
+        @rtype: L{WObject}
         """
         fn = cls.tags.get(root.name)
         if fn is not None:
