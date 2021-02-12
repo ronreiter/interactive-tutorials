@@ -21,7 +21,7 @@ Usando dos símbolos de multiplicación (*) crea una relación de potencia.
     cuadrado = 7 ** 2
     cubico = 2 ** 3
 
-### Usando operadores con texto
+### Usando Operadores con Texto
 
 Python soporta unir texto usando el operador de adición:
 
@@ -45,7 +45,7 @@ Al igual que con los Strings, Python soporta la creación de nuevas listas, repi
 
 ### Ejercicios
 
-El objetivo de este ejercicio es crear dos listas llamadas `x_lista` y `y_lista`, las cuales contendrán 10 instancias de las variables `x` y `y`,respectivamente. También se requiere crear una lista llamada "gran_lista", la cual contendrá las variables `x` e `y`, 10 veces cada una, concatenando las dos listas que has creado.
+El objetivo de este ejercicio es crear dos listas llamadas `x_lista` y `y_lista`, las cuales contendrán 10 instancias de las variables `x` y `y`,respectivamente. También se requiere crear una lista llamada "gran_lista", la cual contendrá las variables `x` y `y`, 10 veces cada una, concatenando las dos listas que has creado.
 
 Tutorial Code
 -------------
