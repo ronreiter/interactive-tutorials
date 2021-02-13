@@ -38,7 +38,7 @@ For this tutorial, we will return 0 to indicate that our program was successful:
 
     return 0;
 
-Notice that every line in C must end with a semicolon, so that the compiler knows that a new line has started.
+Notice that every statement in C must end with a semicolon, so that the compiler knows that a new statement has started.
 
 Last but not least, we will need to call the function `printf` to print our sentence.
 
