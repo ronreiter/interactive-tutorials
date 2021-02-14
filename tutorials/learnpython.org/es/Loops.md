@@ -11,7 +11,7 @@ Los búcles For iteran sobre una secuencia. Aquí un ejemplo:
     for prime in primos:
         print primos
 
-Para bucles pueden iterar sobre una secuencia de números usando las funciones de "range" y "xrange". La diferencia entre rango y range el que la función de rango devuelve una nueva lista con números que el rango especifica, donde xrange devuelve un iterador, el cual es muy eficiente. (Python 3 usa la función range, el cual actua como xrange). Nota que la función xrange esta basada en zero.
+Los bucles pueden iterar sobre una secuencia de números usando las funciones de "range" y "xrange". La diferencia entre rango y range es que la función de rango devuelve una nueva lista con números que el rango especifica, donde xrange devuelve un iterador, el cual es muy eficiente. (Python 3 usa la función range, el cual actúa como xrange). Nota que la función xrange comienza desde el índice cero.
 
     # Muestra todos los números entre 0,1,2,3,4
     for x in xrange(5):
@@ -23,7 +23,7 @@ Para bucles pueden iterar sobre una secuencia de números usando las funciones d
 
 ### El búcle "while"
 
-Mientras que los búcles While, a diferencia de los For, se repiten tantas veces como se cumpla una condición buleana. Por ejemplo:
+Mientras que los búcles While, a diferencia de los For, se repiten tantas veces como se cumpla una condición booleana (operador lógico). Por ejemplo:
 
     # Muestra 0,1,2,3,4
 
@@ -54,7 +54,7 @@ Mientras que los búcles While, a diferencia de los For, se repiten tantas veces
 
 ### Ejercicio
 
-Búcles que muestra todos los números pares de los números de la lista en el mismo orden que es recibido, pero solo menores al número "412" (sin incluirlos). Separe e ignore todos los números mayores a 412 en la sentencia. (Note que habra números superiores a 412.)
+Crea un búcle que muestre todos los números pares de los números de la lista en el mismo orden que es recibido, pero que sean menores al número "412" (sin incluirlo). Separe e ignore todos los números mayores a 412 en la sentencia. (Note que habra números superiores a 412.)
 
 Tutorial Code
 -------------
@@ -95,3 +95,7 @@ Expected Output
 
 Solution
 --------
+
+for x in numeros:
+    if x % 2 == 0 and x <= 412:
+        print(x)
