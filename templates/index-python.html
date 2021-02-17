@@ -106,15 +106,24 @@
                         ga('send', 'event', {
                             eventCategory: 'Outbound Link',
                             eventAction: 'click',
-                            eventLabel: event.target.parentElement.dataset.variant
+                            eventLabel: event.href
                         });
+                        setTimeout(() => document.location = event.href, 500)
+                        return false;
                     }
 
                 </script>
 
                 <h4>Sponsors</h4>
-                <div style="margin-top: 10px">
-                    <a href="https://digitalocean.com/"><img src="/static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean"></a>
+                <div style="margin-top: 20px">
+                    <a href="https://digitalocean.com/" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="/static/img/banners/digital-ocean.svg" style="width: 160px" alt="Digital Ocean">
+                    </a>
+                </div>
+                <div style="margin-top: 20px">
+                    <a href="http://educative.io/learnx" onclick="return handleOutboundLinkClicks(this)">
+                        <img src="/static/img/banners/educative.png" style="width: 160px" alt="Educative">
+                    </a>
                 </div>
 
             </div>
