@@ -25,11 +25,12 @@ In this exercise, you will need to print the number of processors based on the i
 
 Tutorial Code
 -------------
-    cat /proc/cpuinfo # | some command
+    #!/bin/bash
+    cat /proc/cpuinfo | some command
 
 Expected Output
 ---------------
-    4
+    8
 
 Solution
 --------
