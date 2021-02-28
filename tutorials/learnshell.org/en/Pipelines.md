@@ -17,16 +17,21 @@ Then you want to see only the first 10 results
     ls / | head
 *Note: head outputs the first 10 lines by default, use option -n to change this behavior*
 
+Grep searches for patterns in each file. Patterns is one or more patterns separated by newline characters, and grep prints each line that matches a pattern. Typically patterns should be quoted when grep is used in a shell command.
+
+    ls / | grep  # This will grab any line/file that has a matching pattern in it
+
 Exercise
 --------
 In this exercise, you will need to print the number of processors based on the information in the cpuinfo file (/proc/cpuinfo)
 
-*Hint: each processor has a unique number, for instance the first processor will contain the line ``processor: 0``*
+*Hint 1: each processor has a unique number, for instance the first processor will contain the line ``processor: 0``*
+*Hint 2: you can chain together more than two commands in a row*
 
 Tutorial Code
 -------------
     #!/bin/bash
-    cat /proc/cpuinfo | some command
+    cat /proc/cpuinfo | 
 
 Expected Output
 ---------------
