@@ -82,7 +82,7 @@ Tutorial Code
 
       /* Your code goes here */
 
-      cout << "The sum of a, b, and c is" << sum << endl;
+      cout << "The sum of a, b, and c is " << sum << endl;
       return 0;
     }
 
