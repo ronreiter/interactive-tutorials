@@ -12,10 +12,10 @@ A structure is basically a user-defined datatype which consists of other datatyp
     //This is how you'll usually define a structure    
     using namespace std;
     struct MyOwnStructure { // keyword "struct" followed by a name, followed by braces containing the datatypes you like, followed by a semicolon
-        int poperty_one,
-        int property_two,
-        char property_three,
-        bool property_four
+        int poperty_one;
+        int property_two;
+        char property_three;
+        bool property_four;
         //...
     };
 
