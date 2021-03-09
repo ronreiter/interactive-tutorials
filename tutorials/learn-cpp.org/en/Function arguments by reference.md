@@ -31,7 +31,7 @@ However, this will work:
 
 The difference is that the second version of `addone` receives a pointer to the variable `n` as an argument, and then it can manipulate it, because it knows where it is in the memory.
 
-Notice that when calling the `addone` function, we **must** pass a reference (note the "$"-sign) to the variable `n`, and not the variable itself - this is done so that the function knows the address of the variable, and won't just receive a copy of the variable itself.
+Notice that when calling the `addone` function, we **must** pass a reference (note the "&"-sign) to the variable `n`, and not the variable itself - this is done so that the function knows the address of the variable, and won't just receive a copy of the variable itself.
 
 ### Pointers to structures
 
