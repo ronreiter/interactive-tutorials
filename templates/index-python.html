@@ -34,6 +34,7 @@
 
             <div class="clearfix">
                 <p>Get started learning Python with <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp's</a> free <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://www.datacamp.com/courses/intro-to-python-for-data-science/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Start Now</a>!</p>
+                <p>Ready to take the test? Head onto <a href="https://www.learnx.org" target="_blank">LearnX</a> and get your Python Certification!</p>
             </div>
 
             <div id="inner-text">{% autoescape off %}
@@ -56,16 +57,23 @@
 
             <div>
                 <p>This site is generously supported by <a href="https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">DataCamp</a>. DataCamp offers online interactive <a href="https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials">Python Tutorials</a> for Data Science. Join <b>over a million</b> other learners and get started learning Python for data science today!</p>
+                <p>Ready to take the test? Head onto <a href="https://www.learnx.org" target="_blank">LearnX</a> and get your Python Certification!</p>
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}">
                     <i class="fas fa-angle-double-left"></i> Previous Tutorial
                 </a>
                 {% endif %}
+
                 {% if next_chapter %}
                 <a class="btn btn-primary pull-right" href="/{{ language_code }}/{{ next_chapter }}">
                     Next Tutorial <i class="fas fa-angle-double-right"></i>
                 </a>
                 {% endif %}
+
+                <a class="btn btn-secondary pull-right mr-2" href="https://www.learnx.org">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+
             </div>
 
             <div class="hidden-phone">

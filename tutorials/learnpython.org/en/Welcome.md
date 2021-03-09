@@ -8,6 +8,8 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 You are welcome to join our group on <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> for questions, discussions and updates.
 
+After you complete the tutorials, you can get certified at [LearnX](https://www.learnx.org) and add your certification to your LinkedIn profile. 
+
 Just click on the chapter you wish to begin from, and follow the instructions. Good luck!<br>
 
 
