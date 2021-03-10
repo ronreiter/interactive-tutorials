@@ -7,17 +7,15 @@ Una clase muy básica se verá como esto:
 
      class MyClass:
           variable = "blah"
-
-     def function(self):
-          print "Este mensaje está dentro de una clase."
+          def function(self):
+               print "Este mensaje está dentro de una clase."
 
 Explicaremos el por qué debes de incluir el "self" como parametro más adelante; primero, para asignar la clase previa (plantilla) a un objeto debes hacer lo siguiente:
 
      class MyClass:
           variable = "blah"
-
-     def function(self):
-          print "Este mensaje está dentro de una clase."
+          def function(self):
+               print "Este mensaje está dentro de una clase."
                
      myobjectx = MyClass()
 
@@ -29,9 +27,8 @@ Para acceder dentro de la variable del objeto recién creado "myObjectx" se escr
 
      class MyClass:
           variable = "blah"
-
-     def function(self):
-          print "Este mensaje está dentro de una clase."
+          def function(self):
+               print "Este mensaje está dentro de una clase."
                
      myobjectx = MyClass()
 
@@ -42,9 +39,8 @@ El siguiente código de ejemplo imprime la variable "blah":
 
      class MyClass:
           variable = "blah"
-
-     def function(self):
-          print "Este mensaje está dentro de una clase."
+          def function(self):
+               print "Este mensaje está dentro de una clase."
                
      myobjectx = MyClass()
 
@@ -55,9 +51,8 @@ Puedes crear múltiples objetos diferentes que pertenezcan a la misma clase (ten
 
      class MyClass:
           variable = "blah"
-
-     def function(self):
-          print("Este mensaje está dentro de una clase.")
+          def function(self):
+               print("Este mensaje está dentro de una clase.")
 
      myobjectx = MyClass()
      myobjecty = MyClass()
@@ -78,9 +73,8 @@ Para acceder a una función dentro del objeto para usar una notación similar a 
 
      class MyClass:
           variable = "blah"
-
-     def function(self):
-          print("Este mensaje está dentro de una clase.")
+          def function(self):
+               print("Este mensaje está dentro de una clase.")
 
      myobjectx = MyClass()
 
@@ -108,8 +102,8 @@ class Vehicle:
 #your code goes here
 
 #checking code
-print MiCarro1.description()
-print MiCarro2.description()
+print(MiCarro1.description())
+print(MiCarro2.description())
 
 Expected Output
 ---------------
@@ -141,5 +135,5 @@ MiCarro2.value=10000
 MiCarro2.name="Jump"
 
 #checking code
-print MiCarro1.description()
-print MiCarro2.description()
+print(MiCarro1.description())
+print(MiCarro2.description())
