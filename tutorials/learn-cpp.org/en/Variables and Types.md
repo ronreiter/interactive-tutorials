@@ -36,8 +36,8 @@ Typedefs allow for creating new names (think of them as aliases) for existing ty
 
 To create an enumeration requires the use of the keyword enum. The general form of an enumeration type is:
 
-    enum enum-name { list of names } var-list;
-Above, the enum-name is the enumeration's type name. The list of names is comma separated.
+    enum enum_name { list of names } var_list;
+Above, the enum_name is the enumeration's type name. The list of names is comma separated.
 
 For example, the following code defines an enumeration of colors called colors and the variable `a_colour` of type color. Finally, `a_colour` is assigned the value "green".
 
