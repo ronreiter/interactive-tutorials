@@ -36,6 +36,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 
 - [[Generators]]
 - [[List Comprehensions]]
+- [[Lambda functions]]
 - [[Multiple Function Arguments]]
 - [[Regular Expressions]]
 - [[Exception Handling]]
