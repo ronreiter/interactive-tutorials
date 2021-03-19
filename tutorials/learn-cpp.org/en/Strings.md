@@ -35,7 +35,7 @@ In this tutorial we'll focus on the latter.
 Exercise
 --------
 
-Change the program in the bottom in a way so that it declares and initialises a string variable and outputs the Text "I just learned something about strings" (without the qoutes) followed by a carriage return and linefeed to the console.
+Change the program in the bottom in a way so that it declares and initialises a string variable and outputs the Text "I just learned something about strings" (without the quotation marks) followed by a carriage return and linefeed to the console.
 
 Tutorial Code
 -------------
