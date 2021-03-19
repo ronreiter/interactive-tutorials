@@ -9,7 +9,7 @@ Strings are used for text-values such as words or sentences.
 #### There are two types of strings:
 In traditional C, strings were basically just arrays of char-values (char*, wchar_t*).
 
-In C++ however, strings are reprensented as objects which offer some comfortable ways to work with these type of data.
+In C++ however, strings are represented as objects which offer some comfortable ways to work with these type of data.
 C++-strings are implemented in the standard-library "std::string" which must be referenced (#include) in the program.
 
 In this tutorial we'll focus on the latter.
