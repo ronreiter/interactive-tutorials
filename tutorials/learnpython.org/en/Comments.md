@@ -19,19 +19,20 @@ You can use comments to remove code temprarily, or to visually split up sections
 
 Exercise
 --------
-Here you will need to write the purpose of the exercise. Finishing the exercise correctly
-must be accomplished using the new feature that you are explaining.
+Comment out the `print()` statement that says `Goodbye, World!`:
 
 Tutorial Code
 -------------
-Write a code block that will appear on the interpreter window. For example, you may
-write an empty function, which the user must complete in order to finish the exercise.
+print("Hello, World")
+print("Goodbye, World")
 
 Expected Output
 ---------------
-Write a code block that will describe the exact output expected from the modified code,
-if it has been modified correctly.
+test_output_contains("Hello, World!")
+success_msg('Great job!')
 
 Solution
 --------
-Write the solution code to the problem.
+print("Hello, World")
+# print("Goodbye, World")
+
