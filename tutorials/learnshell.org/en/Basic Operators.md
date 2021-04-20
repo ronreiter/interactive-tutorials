@@ -27,12 +27,18 @@ In this exercise, you will need to calculate to total cost (variable TOTAL) of a
 
 Tutorial Code
 -------------
-#!/bin/bash
+#!/bin/bash 
+
 COST_PINEAPPLE=50
+
 COST_BANANA=4
+
 COST_WATERMELON=23
+
 COST_BASKET=1
-TOTAL=
+
+TOTAL= ?
+
 echo "Total Cost is $TOTAL"
 
 Expected Output
@@ -42,9 +48,15 @@ Total Cost is 128
 Solution
 --------
 #!/bin/bash
+
 COST_PINEAPPLE=50
+
 COST_BANANA=4
+
 COST_WATERMELON=23
+
 COST_BASKET=1
+
 TOTAL=$(($COST_PINEAPPLE + $COST_BANANA + $COST_WATERMELON + $COST_BASKET))
+
 echo "Total Cost is $TOTAL"
