@@ -67,7 +67,7 @@ Mantıksal işleyiciler, aynen matematikte kullanıldığı gibi programlama dil
 
 ### Mantıksal işleyicileri kullanma
 
-    if [[ $deg_A -eq 1 && ($deg_B = "bee" || $deg_T = "tee") ]] ; then
+    if [[ $deg_A[0] -eq 1 && ($deg_B = "bee" || $deg_T = "tee") ]] ; then
         # işlenecek kod bloğu
     fi
 

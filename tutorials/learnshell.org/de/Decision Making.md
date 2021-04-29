@@ -64,7 +64,7 @@ Der Ausdruck kann eine logische Kombination von Vergleichen sein. Die Negation w
 
 ### Logische Kombinationen
 
-    if [[ $VAR_A -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
+    if [[ $VAR_A[0] -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
         Befehl...
     fi
 

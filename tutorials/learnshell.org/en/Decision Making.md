@@ -64,7 +64,7 @@ The expression can be a logical combination of comparisons: negation is denoted 
 
 ### Logical combinations
 
-    if [[ $VAR_A -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
+    if [[ $VAR_A[0] -eq 1 && ($VAR_B = "bee" || $VAR_T = "tee") ]] ; then
         command...
     fi
 
