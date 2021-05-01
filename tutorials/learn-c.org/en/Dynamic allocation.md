@@ -16,7 +16,7 @@ To allocate a new person in the `myperson` argument, we use the following syntax
 
     person * myperson = (person *) malloc(sizeof(person));
 
-This tells the compiler that we want to dynamically allocate just enough to hold a person struct in memory, and then return a pointer to the newly allocated data.
+This tells the compiler that we want to dynamically allocate just enough to hold a person struct in memory and then return a pointer of type `person` to the newly allocated data. The reason we write `(person *)` before the call to `malloc()` is that `malloc()` returns a "void pointer," which is a pointer that doesn't have a type. Writing `(person *)` in front of it is called *typecasting*, and changes the type of the pointer returned from `malloc()` to be `person`. However, it isn't strictly necessary to write it like this as C will implicitly convert the type of the returned pointer to that of the pointer it is assigned to (in this case, `myperson`) if you don't typecast it.
 
 Note that `sizeof` is not an actual function, because the compiler interprets it and translates it to the actual memory size of the person struct.
 
