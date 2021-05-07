@@ -4,12 +4,11 @@ Tutorial
 A variable is a name given to a storage area that the programs can manipulate. The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. 
 
 ### Numbers
-They are arithmetic types and they represents following values throughout the program.
+Variables are arithmetic types and represent the following values throughout the program.
     a) integer types 
     b) floating point 
 
 To define an integer, use the following syntax:
-
 
     var a int = 4
     var b, c int
@@ -18,7 +17,7 @@ To define an integer, use the following syntax:
     fmt.Println(a)
     fmt.Println(b + c)
 
-To define a floating point number, you may use one of the following notations:
+To define a floating point number, use the following syntax:
 
     var d float64 = 9.14
     fmt.Println(d)
@@ -29,8 +28,7 @@ Strings in Go are defined with double quotes.
     var s string = "This is string s"
     fmt.Println(s)
     
-
-The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
+Single quotes are not used to enable the use of apostrophes in strings without having to escape.
 
     var s string = "Don't worry about apostrophes"
     fmt.Println(s)
