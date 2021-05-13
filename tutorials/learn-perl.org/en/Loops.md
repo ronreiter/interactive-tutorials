@@ -43,7 +43,7 @@ The basic loop structures are:
 
 ## Loop Control Statements
 
-Loop control statements can be placed within the loop's statement BLOCK. Wnen executed, these will alter the normal loop sequence. Some useful control statements are:
+Loop control statements can be placed within the loop's statement BLOCK. When executed, these will alter the normal loop sequence. Some useful control statements are:
 
 - `next` causes the loop to skip the rest of the statement block (like `continue` in the C language)
 - `last` causes the loop to skip the rest of the statement block and exit the loop iterations  (like `break` in the C language)
