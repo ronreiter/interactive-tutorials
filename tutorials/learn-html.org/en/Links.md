@@ -12,7 +12,7 @@ For example:
 To create a link to a different section in the same page, you will need to use a hash sign along with the element ID
 to where you would like the browser to jump to. For example:
 
-    <a href="#faq">Click here to read the Frequently Asked Questions</p>
+    <a href="#faq">Click here to read the Frequently Asked Questions</a>
     
 The element ID is denoted using the `id` attribute:
     
