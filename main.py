@@ -9,6 +9,7 @@ import time
 import functools
 import logging
 import binascii
+import datetime
 
 from flask import Flask, render_template, request, make_response, session, Response
 
@@ -401,6 +402,28 @@ def index(title, language="en"):
         data["solved"] = False
 
     return make_response(json.dumps(data))
+
+
+@app.route("/sitemap.xml")
+def sitemap_index():
+    languages = tutorial_data[get_host()].keys()
+    response = make_response(render_template("sitemap_index.xml", languages=languages))
+    response.headers['Content-Type'] = 'application/xml'
+    return response
+
+
+@app.route("/sitemap_<language>.xml")
+def sitemap(language):
+    try:
+        titles = tutorial_data[get_host()][language].keys()
+    except KeyError:
+        return error404()
+
+    # use today as lastmod to make sure the most recent version is always indexed
+    lastmod = datetime.datetime.utcnow().date()
+    response = make_response(render_template("sitemap.xml", titles=titles, lastmod=lastmod, language=language))
+    response.headers['Content-Type'] = 'application/xml'
+    return response
 
 
 @app.route("/robots.txt")
