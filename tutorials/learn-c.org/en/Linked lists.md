@@ -350,7 +350,8 @@ Solution
             return pop(head);
         }
 
-        previous = current = (*head)->next;
+        previous = *head;
+        current = (*head)->next;
         while (current) {
             if (current->val == val) {
                 previous->next = current->next;
