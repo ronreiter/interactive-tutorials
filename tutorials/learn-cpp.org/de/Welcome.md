@@ -17,6 +17,7 @@ Inhaltsverzeichnis
 - [[Variables and Types]]
 - [[Arrays]]
 - [[Strings]]
+- [[if-else]]
 - [[For loops]]
 - [[While loops]]
 - [[Functions]]
