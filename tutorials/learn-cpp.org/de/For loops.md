@@ -70,7 +70,7 @@ Die **for-Schleife** kann auch dafür genutzt werden, um Werte eines [*Array*](/
         cout << n << endl;
     }
 
-Exercise
+Übung
 --------
 Versuche alle **geraden** Nummern **unter 20** mithilfe einer *for-Schleife* auszugeben (in *aufsteigender* Reihenfolge).
 
