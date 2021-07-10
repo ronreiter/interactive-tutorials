@@ -64,7 +64,7 @@ Man kann auch mehrere verschachtelte **if-else-Anweisungen** benutzen, wenn man 
 
 Im oberen Code wird auf Teilbarkeit durch 2 geprüft. Wenn die Zahl nicht durch 2 teilbar ist, wird auf Teilbarkeit durch 3 geprüft. Wenn die Zahl weder durch 2, noch durch 3 teilbar ist, wird *"Blöde Zahl"* ausgegeben.
 
-Exercise
+Übung
 --------
 Geben sie aus, zu welcher Altersgruppe die Personen gemäß dem hier angegebenen Alter gehören. Hinweis: schaue dir vorher eventuell [**For-Schleifen**](/de/For_loops) an.
 ######
