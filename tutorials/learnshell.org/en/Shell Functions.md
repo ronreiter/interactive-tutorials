@@ -4,7 +4,7 @@ Tutorial
 Like other programming languages, the shell may have functions. A function is a subroutine that implements a set of commands and operations. It is useful for repeated tasks.
 
     # basic construct
-    function_name {
+    function function_name {
       command...
     }
 
