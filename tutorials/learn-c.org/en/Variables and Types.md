@@ -1,39 +1,40 @@
 Tutorial
 --------
 
-### Data types
+### 数据类型
 
-C has several types of variables, but there are a few basic types:
+C语言有很多种类型的变量，但只有几个基本类型。
 
-* Integers - whole numbers which can be either positive or negative. Defined using `char`, `int`, `short`, `long` or `long long`.
-* Unsigned integers - whole numbers which can only be positive. Defined using `unsigned char`, `unsigned int`, `unsigned short`, `unsigned long` or `unsigned long long`.
-* Floating point numbers - real numbers (numbers with fractions). Defined using `float` and `double`.
-* Structures - will be explained later, in the Structures section.
+* 整数——可以是正数或负数的整数。使用`char`、`int`、`short`、`long`或`long long`来定义。
+* 无符号整数——只能是正数的整数。使用`unsigned char`、`unsigned int`、`unsigned short`、`unsigned long`或`unsigned long long`定义。
+* 浮点数——实数（带小数的数字）。使用`float`和`double`来定义。
+* 结构——将在后面的结构部分解释。
 
-The different types of variables define their bounds. A `char` can range only from -128 to 127, whereas a `long` can range from -2,147,483,648 to 2,147,483,647 (`long` and other numeric data types may have another range on different computers, for example - from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 on 64-bit computer).
+不同类型的变量定义了它们的界限。一个`char`的范围只能从-128到127，而一个`long`的范围可以从-2,147,483,648到2,147,483,647（`long`和其他数字数据类型在不同的计算机上可能有另一个范围，例如——在64位计算机上从-9,223,372,036,854,775,808到9,223,372,036,854,775,807）。
 
-Note that C does _not_ have a boolean type. Usually, it is defined using the following notation:
+请注意，C语言*没有*布尔类型。通常情况下，它是用下面的符号定义的。
 
     #define BOOL char
     #define FALSE 0
     #define TRUE 1
 
-C uses arrays of characters to define strings, and will be explained in the Strings section.
+C语言使用字符数组来定义字符串，将在`字符串`部分进行解释。
 
-### Defining variables
+### 定义变量
 
-For numbers, we will usually use the type `int`, which an integer in the size of a "word" the default number size of the machine which your program is
-compiled on. On most computers today, it is a 32-bit number, which means the number can range from -2,147,483,648 to 2,147,483,647.
+对于数字，我们通常会使用`int`类型，它是一个`字`大小的整数，也就是你的程序的编译机器的默认数字大小。
+在今天的大多数计算机上，它是一个32位的数字，这意味着数字的范围可以从-2,147,483,648到2,147,483,647。
 
-To define the variables `foo` and `bar`, we need to use the following syntax:
+为了定义变量`foo`和`bar`，我们需要使用以下语法。
 
     int foo;
     int bar = 1;
 
-The variable `foo` can be used, but since we did not initialize it, we don't know what's in it. The variable `bar` contains the number 1.
+变量`foo`可以使用，但由于我们没有初始化它，我们不知道里面有什么。变量`bar`装着数字1。
 
-Now, we can do some math. Assuming `a`, `b`, `c`, `d`, and `e` are variables, we can simply use plus, minus and multiplication operators
-in the following notation, and assign a new value to `a`:
+现在，我们可以做一些数学运算。
+假设`a`、`b`、`c`、`d`和`e`是变量，我们可以简单地使用加、减和乘法运算符 在下面的代码中，给`a`分配一个新值：
+
 
     int a = 0, b = 1, c = 2, d = 3, e = 4;
     a = b - c + d * e;
@@ -42,7 +43,7 @@ in the following notation, and assign a new value to `a`:
 Exercise
 --------
 
-In the next exercise, you will need to create a program which prints out the sum of the numbers `a`, `b`, and `c`.
+在下一个练习中，你将创建一个程序，打印出数字`a`、`b`和`c`的和。
 
 Tutorial Code
 -------------
@@ -55,7 +56,7 @@ Tutorial Code
       double c = 5.25;
       float sum;
 
-      /* Your code goes here */
+      /* 你的代码放在这里 */
 
       printf("The sum of a, b, and c is %f.", sum);
       return 0;
