@@ -13,7 +13,7 @@ learn-c.org仍在建设中——如果你想贡献教程，请点击下方的`�
 - [[你好，世界!]]
 - [[变量和类型]]
 - [[数组]]
-- [[Multidimensional Arrays]]
+- [[多维数组]]
 - [[Conditions]]
 - [[Strings]]
 - [[For loops]]
