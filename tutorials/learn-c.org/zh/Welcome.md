@@ -14,7 +14,7 @@ learn-c.org仍在建设中——如果你想贡献教程，请点击下方的`�
 - [[变量和类型]]
 - [[数组]]
 - [[多维数组]]
-- [[Conditions]]
+- [[条件语句]]
 - [[Strings]]
 - [[For loops]]
 - [[While loops]]
