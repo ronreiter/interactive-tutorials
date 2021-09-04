@@ -16,7 +16,7 @@ learn-c.org仍在建设中——如果你想贡献教程，请点击下方的`�
 - [[多维数组]]
 - [[条件语句]]
 - [[字符串]]
-- [[For loops]]
+- [[for循环]]
 - [[While loops]]
 - [[Functions]]
 - [[Static]]
