@@ -223,6 +223,10 @@ There are a few edge cases we need to take care of, so make sure you understand 
             current = current->next;
         }
 
+        if (current->next == NULL) {
+            return -1;
+        }
+
         temp_node = current->next;
         retval = temp_node->val;
         current->next = temp_node->next;
