@@ -15,7 +15,7 @@ It is possible to declare functions which receive a variable number of arguments
         print("Third: %s" % third)
         print("And all the rest... %s" % list(therest))
 
-The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling `foo(1,2,3,4,5)` will print out:
+The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling `foo(1, 2, 3, 4, 5)` will print out:
 
     def foo(first, second, third, *therest):
         print("First: %s" %(first))
@@ -23,7 +23,7 @@ The "therest" variable is a list of variables, which receives all arguments whic
         print("Third: %s" %(third))
         print("And all the rest... %s" %(list(therest)))
     
-    foo(1,2,3,4,5)
+    foo(1, 2, 3, 4, 5)
 
 It is also possible to send functions arguments by keyword, so that the order of the argument does not matter, using the following syntax. The following code yields the following output: 
 ```The sum is: 6
@@ -62,13 +62,13 @@ def bar(a, b, c):
 
 
 # test code
-if foo(1,2,3,4) == 1:
+if foo(1, 2, 3, 4) == 1:
     print("Good.")
-if foo(1,2,3,4,5) == 2:
+if foo(1, 2, 3, 4, 5) == 2:
     print("Better.")
-if bar(1,2,3,magicnumber = 6) == False:
+if bar(1, 2, 3, magicnumber=6) == False:
     print("Great.")
-if bar(1,2,3,magicnumber = 7) == True:
+if bar(1, 2, 3, magicnumber=7) == True:
     print("Awesome!")
 
 Expected Output
@@ -91,11 +91,11 @@ def bar(a, b, c, **kwargs):
 
 
 # test code
-if foo(1,2,3,4) == 1:
+if foo(1, 2, 3, 4) == 1:
     print("Good.")
-if foo(1,2,3,4,5) == 2:
+if foo(1, 2, 3, 4, 5) == 2:
     print("Better.")
-if bar(1,2,3,magicnumber = 6) == False:
+if bar(1, 2, 3, magicnumber=6) == False:
     print("Great.")
-if bar(1,2,3,magicnumber = 7) == True:
+if bar(1, 2, 3, magicnumber=7) == True:
     print("Awesome!")

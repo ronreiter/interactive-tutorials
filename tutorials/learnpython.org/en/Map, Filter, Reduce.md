@@ -51,17 +51,17 @@ Python already blesses us with the ```round()``` built-in function that takes tw
 
     circle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]
 
-    result = list(map(round, circle_areas, range(1,7)))
+    result = list(map(round, circle_areas, range(1, 7)))
 
     print(result)
 
 See the beauty of ```map()```? Can you imagine the flexibility this evokes?
 
-The ```range(1,7)``` function acts as the second argument to the ```round``` function (the number of required decimal places per iteration). So as ```map``` iterates through ```circle_areas```, during the first iteration, the first element of ```circle_areas```, ```3.56773``` is passed along with the first element of ```range(1,7)```, ```1``` to ```round```, making it effectively become ```round(3.56773, 1)```. During the second iteration, the second element of ```circle_areas```, ```5.57668``` along with the second element of ```range(1,7)```, ```2``` is passed to ```round``` making it translate to ```round(5.57668, 2)```. This happens until the end of the ```circle_areas``` list is reached.
+The ```range(1, 7)``` function acts as the second argument to the ```round``` function (the number of required decimal places per iteration). So as ```map``` iterates through ```circle_areas```, during the first iteration, the first element of ```circle_areas```, ```3.56773``` is passed along with the first element of ```range(1,7)```, ```1``` to ```round```, making it effectively become ```round(3.56773, 1)```. During the second iteration, the second element of ```circle_areas```, ```5.57668``` along with the second element of ```range(1,7)```, ```2``` is passed to ```round``` making it translate to ```round(5.57668, 2)```. This happens until the end of the ```circle_areas``` list is reached.
 
-I'm sure you're wondering: "What if I pass in an iterable less than or more than the length of the first iterable? That is, what if I pass ```range(1,3)``` or ```range(1, 9999)``` as the second iterable in the above function". And the answer is simple: nothing! Okay, that's not true. "Nothing" happens in the sense that the ```map()``` function will not raise any exception, it will simply iterate over the elements until it can't find a second argument to the function, at which point it simply stops and returns the result.
+I'm sure you're wondering: "What if I pass in an iterable less than or more than the length of the first iterable? That is, what if I pass ```range(1, 3)``` or ```range(1, 9999)``` as the second iterable in the above function". And the answer is simple: nothing! Okay, that's not true. "Nothing" happens in the sense that the ```map()``` function will not raise any exception, it will simply iterate over the elements until it can't find a second argument to the function, at which point it simply stops and returns the result.
 
-So, for example, if you evaluate ```result = list(map(round, circle_areas, range(1,3)))```, you won't get any error even as the length of ```circle_areas``` and the length of ```range(1,3)``` differ. Instead, this is what Python does: It takes the first element of ```circle_areas``` and the first element of ```range(1,3)``` and passes it to ```round```. ```round``` evaluates it then saves the result. Then it goes on to the second iteration, second element of ```circle_areas``` and second element of ```range(1,3)```, ```round``` saves it again. Now, in the third iteration (```circle_areas``` has a third element), Python takes the third element of ```circle_areas``` and then tries to take the third element of ```range(1,3)``` but since ```range(1,3)``` does not have a third element, Python simply stops and returns the result, which in this case would simply be ```[3.6, 5.58]```. 
+So, for example, if you evaluate ```result = list(map(round, circle_areas, range(1, 3)))```, you won't get any error even as the length of ```circle_areas``` and the length of ```range(1, 3)``` differ. Instead, this is what Python does: It takes the first element of ```circle_areas``` and the first element of ```range(1,3)``` and passes it to ```round```. ```round``` evaluates it then saves the result. Then it goes on to the second iteration, second element of ```circle_areas``` and second element of ```range(1,3)```, ```round``` saves it again. Now, in the third iteration (```circle_areas``` has a third element), Python takes the third element of ```circle_areas``` and then tries to take the third element of ```range(1,3)``` but since ```range(1,3)``` does not have a third element, Python simply stops and returns the result, which in this case would simply be ```[3.6, 5.58]```. 
 
 Go ahead, try it.
 
@@ -69,7 +69,7 @@ Go ahead, try it.
 
     circle_areas = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.00013]
 
-    result = list(map(round, circle_areas, range(1,3)))
+    result = list(map(round, circle_areas, range(1, 3)))
 
     print(result)
 
@@ -81,7 +81,7 @@ To consolidate our knowledge of the ```map()``` function, we are going to use it
     # Python 3
 
     my_strings = ['a', 'b', 'c', 'd', 'e']
-    my_numbers = [1,2,3,4,5]
+    my_numbers = [1, 2, 3, 4, 5]
 
     results = list(zip(my_strings, my_numbers))
     
@@ -94,7 +94,7 @@ Onto our own custom ```zip()``` function!
     # Python 3
 
     my_strings = ['a', 'b', 'c', 'd', 'e']
-    my_numbers = [1,2,3,4,5]
+    my_numbers = [1, 2, 3, 4, 5]
 
     results = list(map(lambda x, y: (x, y), my_strings, my_numbers))
 

@@ -17,7 +17,7 @@ Here is a simple example of a generator function which returns 7 random integers
               yield random.randint(1, 40)
       
           # returns a 7th number between 1 and 15
-          yield random.randint(1,15)
+          yield random.randint(1, 15)
       
       for random_number in lottery():
              print("And the next number is... %d!" %(random_number))
@@ -33,7 +33,7 @@ Hint: Can you use only two variables in the generator function? Remember that as
     a = 1
     b = 2
     a, b = b, a
-    print(a,b)
+    print(a, b)
 
 will simultaneously switch the values of a and b.
 
