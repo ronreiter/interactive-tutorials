@@ -41,7 +41,7 @@ Some of the common signal types you can trap:
 
 * `SIGINT`: user sends an interrupt signal (Ctrl + C)
 
-* `SIGQUIT`: user sends a quit signal (Ctrl + C)
+* `SIGQUIT`: user sends a quit signal (Ctrl + D)
 
 * `SIGFPE`: attempted an illegal mathematical operation
 
