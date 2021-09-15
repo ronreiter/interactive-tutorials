@@ -31,20 +31,20 @@ this is especially used to input integers. The advantage of input() over raw_inp
 Here we make use split() and map() functions
 
     #give two integers in first line and more than two integers in third line
-    a,b=map(int,raw_input().split()
-    array=raw_input().split()
-    sum=0
+    a, b = map(int, raw_input().split())
+    array = raw_input().split()
+    sum = 0
     for each in array:
-        sum=sum+int(each)
-    print a,b,sum #prints first two integers from first line and sum of integers of second line
+        sum = sum + int(each)
+    print(a, b, sum)  # prints first two integers from first line and sum of integers of second line
 
 ###Output formatting
 You might have already noticed that print statement automatically inserts a new line. The use of comma like in the above code prints the values in a single line separated by a space.
 The sys module provides various functions for output formatting but here we learn how to use basic knowledge of formatting to output in our required way. Lets see a few examples to learn output formatting
 
-    a=5
-    b=0.63
-    c="hello"
-    print "a is : %d, b is %0.4f,c is %s" %(a,b,c)
+    a = 5
+    b = 0.63
+    c = "hello"
+    print "a is : %d, b is %0.4f,c is %s" % (a,b,c)
 
 The output must be self explanatory.

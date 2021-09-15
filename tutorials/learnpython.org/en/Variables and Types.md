@@ -51,7 +51,7 @@ Simple operators can be executed on numbers and strings:
 Assignments can be done on more than one variable "simultaneously" on the same line like this
 
     a, b = 3, 4
-    print(a,b)
+    print(a, b)
 
 Mixing operators between numbers and strings is not supported:
 
