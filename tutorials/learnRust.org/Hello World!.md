@@ -38,3 +38,9 @@ Expected Output
 ---------------
 
     Covid19 made me do this.
+
+Solution
+--------
+    fn main() {
+        println!("Covid19 made me do this.");
+    }
