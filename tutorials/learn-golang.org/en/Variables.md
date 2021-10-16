@@ -3,6 +3,10 @@ Tutorial
 
 A variable is a name given to a storage area that the programs can manipulate. The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. 
 
+The general code to declare a variable in golang is 
+
+    var <name of variable> <type of variable>
+
 ### Numbers
 Variables are arithmetic types and represent the following values throughout the program.
     a) integer types 
@@ -33,6 +37,21 @@ Single quotes are not used to enable the use of apostrophes in strings without h
     var s string = "Don't worry about apostrophes"
     fmt.Println(s)
 
+We can also define multiple line strings wrapping the string in `` quotes.
+
+    var s string = `This is a string spanning multiple lines
+    This is the second line
+    And this is the third`
+
+    fmt.Println(s)
+
+### Booleans
+Golang supports boolean values with the keywords `true` and `false`
+
+Boolean variables are declared in go as follows
+
+    var b bool = true
+
 ### Shorthand Declaration
 The `:=` notation serves both as a declaration and as initialization.
 ``` foo := "bar" ``` is equivalent to ``` var foo string = "bar" ```
@@ -44,6 +63,7 @@ The `:=` notation serves both as a declaration and as initialization.
     e := "Hello"
     f := `Do you like golang, so far?`
     g := 'M'
+    h := true
 
     fmt.Println(a)
     fmt.Println(b)
@@ -52,6 +72,7 @@ The `:=` notation serves both as a declaration and as initialization.
     fmt.Println(e)
     fmt.Println(f)
     fmt.Println(g)
+    fmt.Println(h)
 
 
 
@@ -63,6 +84,7 @@ You must print out to the console the following:
     John Doe
     24
     154.61
+    true
 
 
 Tutorial Code
@@ -74,9 +96,11 @@ Tutorial Code
         name := "Chris Mien"
         age := 29
         weight := 200.21
+        isMale := false
         fmt.Println(name)
         fmt.Println(age)
         fmt.Println(weight)
+        fmt.Println(isMale)
     }
 
 
@@ -86,6 +110,7 @@ Expected Output
     John Doe
     24
     154.61
+    true
 
 
 Solution
@@ -97,7 +122,9 @@ Solution
         name := "John Doe"
         age := 24
         weight := 154.61
+        isMale := true
         fmt.Println(name)
         fmt.Println(age)
         fmt.Println(weight)
+        fmt.Println(isMale)
     }
