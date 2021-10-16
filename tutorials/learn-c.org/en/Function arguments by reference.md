@@ -1,8 +1,8 @@
 Tutorial
 --------
 
-Assumingly, you already know pointers and functions, so you are aware that function arguments are passed by value, which means they are copied in and out of functions.
-But what if we pass pointers to values instead of the values themselves? This will enable us to give functions control over variables and structures of the parent functions, and not just a copy of them, thus directly reading and writing the original object.
+Assuming you now understand pointers and functions, you are aware that function arguments are passed by value, by which means they are copied in and out of functions.
+But what if we pass pointers to values instead of the values themselves? This will allow us to give functions control over the variables and structures of the parent functions and not just a copy of them, thus directly reading and writing the original object.
 
 Let's say we want to write a function which increments a number by one, called `addone`. This will not work:
 
