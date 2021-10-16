@@ -19,6 +19,8 @@ The loop will stop iterating once the boolean condition evaluates to false.
 Examples
 --------
 
+The following code prints numbers from 1 to 9.
+
 	package main
 
 	import "fmt"
@@ -29,10 +31,25 @@ Examples
 		}
 	}
 
+You can omit the init and post statement in the `for` loop to get a while loop. The below loop works like a while loop
+
+	package main
+
+	import "fmt"
+
+	func main() {
+		i := 0
+
+		for i < 10 {
+			fmt.Println(i)
+			i++
+		}
+	}
+	
 
 Exercise
 --------
-Find the sum of numbers from 1 to 100
+Find the sum of numbers from 1 to 100 using a for loop
 
 Tutorial Code
 -------------
