@@ -16,6 +16,7 @@ learn-golang.org is still under construction - If you wish to contribute tutoria
 - [[Slices]]
 - [[If-Else]]
 - [[Loops]]
+- [[Functions]]
 
 ### Contributing Tutorials
 
