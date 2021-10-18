@@ -19,6 +19,8 @@ The loop will stop iterating once the boolean condition evaluates to false.
 Examples
 --------
 
+The following code prints numbers from 1 to 9.
+
 	package main
 
 	import "fmt"
@@ -29,10 +31,46 @@ Examples
 		}
 	}
 
+You can omit the init and post statement in the `for` loop to get a while loop. The below loop works like a while loop
+
+	package main
+
+	import "fmt"
+
+	func main() {
+		i := 0
+
+		for i < 10 {
+			fmt.Println(i)
+			i++
+		}
+	}
+	
+Golang also provides a for-range loop to loop over an array, slice or few other datastructures.
+
+The for-range loop provides us access to the index and value of the elements in the array or slice we are looping through as shown below
+
+	package main
+
+	import "fmt"
+
+	func main() {
+		myList := []int{1,2,3}
+
+		for index, value := range myList {
+			fmt.Printf("%d is index, %d is value", index, value)
+		}
+	}
+
+We can ignore one or both the fields in a for-range loop by giving an `_` instead of giving a variable name
+
+		for _, value := range myList {
+			fmt.Println(value)
+		}
 
 Exercise
 --------
-Find the sum of numbers from 1 to 100
+Find the sum of numbers from 1 to 100 using a for loop
 
 Tutorial Code
 -------------
