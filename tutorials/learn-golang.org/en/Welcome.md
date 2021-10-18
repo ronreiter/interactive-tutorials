@@ -17,6 +17,7 @@ learn-golang.org is still under construction - If you wish to contribute tutoria
 - [[If-Else]]
 - [[Loops]]
 - [[Functions]]
+- [[The fmt module]]
 
 ### Contributing Tutorials
 
