@@ -19,7 +19,7 @@ This is the open source repository for the free interactive tutorial websites:
 
 Please feel free to contribute your tutorials or exercises by sending a pull request and adding yourself on the list.
 
-To run locally, execute:
+To run locally in a Docker container, execute:
 
     make build
     make run   
@@ -33,7 +33,7 @@ requires that you specify the domain you are working on, e.g.:
 
 The docker needs to be rebuilt upon any change in the Python code or the Markdown code.
 
-To run the development server outside of a Docker, create a Python 2 virtualenv and install the requirements.
+To run the development server outside of a Docker, create a Python 3 virtualenv and install the requirements. 
 
     # create the virtualenv
     mkvirtualenv interactive-tutorials
@@ -41,7 +41,7 @@ To run the development server outside of a Docker, create a Python 2 virtualenv 
     # install requirements
     pip install -r requirements.txt
     
-    # run the development server
+    # run the development server. Replace learnpython.org with the domain you are working on e.g. learn-golang.org
     python main.py -d learnpython.org
     
 
