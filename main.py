@@ -238,7 +238,7 @@ def get_language_names():
     return arr
 
 def get_host():
-    if is_development_mode():
+    if is_development_mode() or "ondigitalocean.app" in request.host:
         return current_domain
 
     return request.host[4:] if request.host.startswith("www.") else request.host
