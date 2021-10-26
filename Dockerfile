@@ -11,4 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # ENTRYPOINT ["python", "main.py", "--host", "0.0.0.0", "--port", "5000"]
-ENTRYPOINT ["gunicorn", "-b", "0.0.0.0:5000", "-w", "10", "-t", "30", "main:app"]
+ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
+
+CMD ["gunicorn --workers $WORKERS --threads $THREADS --timeout $TIMEOUT --bind :$PORT --worker-tmp-dir /dev/shm main:app"]
