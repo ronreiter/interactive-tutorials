@@ -23,18 +23,15 @@ To run locally in a Docker container, execute:
 
     make run
 
+This command will run learnpython.org website by default
+
 To run a specific website, run with the DEFAULT_DOMAIN option set, as follows:
 
     DEFAULT_DOMAIN=learn-js.org make run
 
 By default, the server process will run at http://localhost:5000.
 
-Make build will build a Dockerfile and make run will default to run with `learnpython.org`.
-
-The web server will locally compile and load all Markdown files into memory. The development version of the web server
-requires that you specify the domain you are working on, e.g.:
-
-The docker needs to be rebuilt upon any change in the Python code or the Markdown code.
+The web server will locally compile and load all Markdown files into memory. The docker needs to be rebuilt upon any change in the Python code or the Markdown code.
 
 To run the development server outside of a Docker, create a Python 3 virtualenv and install the requirements. 
 
