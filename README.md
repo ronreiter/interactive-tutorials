@@ -15,15 +15,20 @@ This is the open source repository for the free interactive tutorial websites:
 * [learn-perl.org](https://www.learn-perl.org)
 * [learnrubyonline.org](https://www.learnrubyonline.org)
 * [learn-golang.org](https://www.learn-golang.org)
-* [learnRust.org](https://learnRust.org)
+* [learnrust.org](https://learnrust.org)
 
 Please feel free to contribute your tutorials or exercises by sending a pull request and adding yourself on the list.
 
-To run locally in a Docker container, execute:
+To run locally, first create a new file called `app.env` based on `app.env.example`.
+(you don't need working credentials to run the website, just to execute code).
 
-    make run
+### Running with Docker
 
-This command will run learnpython.org website by default
+Execute:
+
+    DEFAULT_DOMAIN=learnpython.org make run
+
+This command will run learnpython.org website by default using Docker Compose.
 
 To run a specific website, run with the DEFAULT_DOMAIN option set, as follows:
 
@@ -33,18 +38,22 @@ By default, the server process will run at http://localhost:5000.
 
 The web server will locally compile and load all Markdown files into memory. The docker needs to be rebuilt upon any change in the Python code or the Markdown code.
 
-To run the development server outside of a Docker, create a Python 3 virtualenv and install the requirements. 
+### Running without Docker (locally)
 
-    # create the virtualenv
-    mkvirtualenv interactive-tutorials
-    
-    # install requirements
-    pip install -r requirements.txt
-    
-    # run the development server. Replace learnpython.org with the domain you are working on e.g. learn-golang.org
-    python main.py -d learnpython.org
+To run the development server outside of a Docker, run the following command once: 
+
+    make build-local
+
+And then run:
+
+    DEFAULT_DOMAIN=learn-js.org make run-local
     
 
+### IDEOne Credentials
+
+To make the IDEOne execution API work locally, you must obtain a username and password, 
+and add the credentials to a file called app.env.
+(TBD: add an option to use the remote version) 
 
 Contributors
 ============

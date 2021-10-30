@@ -28,7 +28,7 @@ app.secret_key = constants.SECRET_KEY
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 
-current_domain = constants.LEARNPYTHON_DOMAIN  # python
+current_domain = os.environ.get("DEFAULT_DOMAIN", constants.LEARNPYTHON_DOMAIN)
 
 if __name__ == '__main__':
     import argparse
@@ -38,7 +38,6 @@ if __name__ == '__main__':
         "--domain",
         help="Default domain when running in development mode",        
         default=current_domain,
-        required=True,
         choices=list(constants.DOMAIN_DATA.keys())
     )
 
@@ -66,8 +65,8 @@ tutorial_data = {}
 
 def run_code(code, language_id):
     ideone_api = Ideone(
-        constants.IDEONE_USERNAME,
-        constants.IDEONE_PASSWORD,
+        os.environ['IDEONE_USERNAME'],
+        os.environ['IDEONE_PASSWORD'],
         api_url='http://ronreiter.compilers.sphere-engine.com/api/1/service.wsdl')
 
     code = ideone_api.create_submission(code, language_id=language_id, std_input="")["link"]

@@ -7,4 +7,6 @@ services:
     volumes: ['./:/usr/src/app']
     environment:
     - DEFAULT_DOMAIN=learnpython.org
+    env_file:
+      - app.env
     entrypoint: ["python", "main.py", "-d", "$DEFAULT_DOMAIN", "-H", "0.0.0.0"]
