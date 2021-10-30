@@ -18,8 +18,10 @@ The tricky part about `async` functions is that they return a Promise, instead o
 means that every time we need to run an `async` function, we need to `await` on it if we want
 to get the return value.
 
-Let's revisit the example of `sumAsync` from the Promises tutorial, but with an addition:
-The sleep function will return a `Promise` which resolves after `ms` milliseconds.
+Let's revisit the example of `sumAsync` from the Promises tutorial, but with using the sleep
+function instead of setTimeout, so we can implement `sumAsync` using `await` later on.
+The sleep function will return a `Promise` which resolves after `ms` milliseconds, and uses
+setTimeout to work.
 
     function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
@@ -38,8 +40,7 @@ The sleep function will return a `Promise` which resolves after `ms` millisecond
         console.log("The result of the addition is:", result);
     });
 
-Now, let's rewrite sumAsync to wait 500 milliseconds using the sleep function. We can make our
-code `sumAsync` much nicer by simply using `await` on the `sleep` function and then
+We can make our code `sumAsync` much nicer by simply using `await` on the `sleep` function and then
 returning the result.
 
     function sleep(ms) {

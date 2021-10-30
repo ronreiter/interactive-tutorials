@@ -18,7 +18,7 @@ code which does something with what the server returned:
     }
 
 In many programming languages such as Python, this approach would work, because functions
-are by default synchronous function.
+are by default synchronous functions.
 
 In JavaScript, most APIs which require waiting for a function to do something, 
 are **asynchronous** by default which means that this code will not 
