@@ -5,4 +5,6 @@ services:
     ports:
       - "5000:5000"
     volumes: ['./:/usr/src/app']
-    command: python main.py -d learnpython.org -H 0.0.0.0
+    environment:
+    - DEFAULT_DOMAIN=learnpython.org
+    entrypoint: ["python", "main.py", "-d", "$DEFAULT_DOMAIN", "-H", "0.0.0.0"]

@@ -55,44 +55,54 @@ function recordOutboundLink(link, category, action) {
 }
 
 function eval_console(code) {
-	var original_log = console.log;
-	var text = "";
-	console.log = function(line) {
-		text += line + "\n";
+	let text = "";
+
+	const original_log = console.log;
+	console.log = function(...args) {
+		text += args.join(" ") + "\n";
 	};
+
+	// run the code evaluation
 	eval(code);
-	console.log = original_log;
-	return text;
+
+	// give the code 1 second to complete
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			// fix console.log
+			console.log = original_log;
+			resolve(text);
+		}, 1000);
+	});
 }
 
 function compareHTML(a, b) {
 	// TODO - check CSS
 	// TODO - check head
 
-	if (a.children.length != b.children.length) {
+	if (a.children.length !== b.children.length) {
 		return false;
 	}
 
-	for (var i = 0; i < a.children.length; i++) {
+	for (let i = 0; i < a.children.length; i++) {
 		// first check that the tag name is similar
-		if (a.children[i].tagName != b.children[i].tagName) {
+		if (a.children[i].tagName !== b.children[i].tagName) {
 			return false;
 		}
 
 		// check attributes - TODO
-		if (a.children[i].attributes.length != b.children[i].attributes.length) {
+		if (a.children[i].attributes.length !== b.children[i].attributes.length) {
 			return false;
 		}
 
-		for (var j = 0; j < a.children[i].attributes.length; j++) {
-			var attribute = a.children[i].attributes[j].name;
-			if (a.children[i].attributes[attribute].value != b.children[i].attributes[attribute].value) {
+		for (let j = 0; j < a.children[i].attributes.length; j++) {
+			let attribute = a.children[i].attributes[j].name;
+			if (a.children[i].attributes[attribute].value !== b.children[i].attributes[attribute].value) {
 				return false;
 			}
 		}
 
-		if (a.children[i].children.length == 0) {
-			if (a.children[i].innerHTML != b.children[i].innerHTML) {
+		if (a.children[i].children.length === 0) {
+			if (a.children[i].innerHTML !== b.children[i].innerHTML) {
 				return false;
 			}
 		} else {
@@ -108,7 +118,7 @@ function compareHTML(a, b) {
 function execute() {
 	maximizeDock();
 
-	if (window.domainData.language == "html") {
+	if (window.domainData.language === "html") {
 		$("#html-output").show();
 		$("#text-output").hide();
 
@@ -141,12 +151,8 @@ function execute() {
 	output.setValue("");
 	//$('#output').text('');
 
-	if (window.domainData.language == "javascript") {
-		try {
-			print(eval_console(editor.getValue()));
-		} catch(err) {
-			print(err.message);
-		}
+	if (window.domainData.language === "javascript") {
+		executeJS();
 	} else {
 		//loading.show();
 		print("Executing, please wait...");
@@ -165,25 +171,25 @@ function execute() {
 
 }
 
-function execDone(data) {
-	//loading.hide();
-	//$('#output').css('background-color', 'white');
-	if (data["output"] == "exception") {
-		//$('#output').css('color', 'red');
-	} else {
-		//$('#output').css('color', 'black');
+async function executeJS() {
+	try {
+		print("Executing, please wait...");
+		const response = await eval_console(editor.getValue());
+		print(response);
+	} catch(err) {
+		print(err.message);
 	}
-	if (data["output"] == "text" || data["output"] == "exception") {
-		//$("#output").show();
-		//$("#canvas_container").hide();
+
+}
+
+function execDone(data) {
+	if (data["output"] === "text" || data["output"] === "exception") {
 		print(data["text"]);
 	}
 }
 
 function handleError(data) {
-	//$('#output').css('color', 'black');
-	//$('#output').css('background-color', 'white');
-	if (data.status == 0) {
+	if (data.status === 0) {
 		print("There was an unknown error!");
 	} else {
 		print(data["text"]);
@@ -200,16 +206,16 @@ function correct() {
 
 function print(text) {
 	output.setValue(text);
-	if ($.trim(tutorialData.output) != '' && $.trim(tutorialData.output) == $.trim(text)) {
+	if ($.trim(tutorialData.output) !== '' && $.trim(tutorialData.output) === $.trim(text)) {
 		correct();
 	}
 }
 
 function load() {
 	loading = $("#loading");
-	var codeBlocks = $("code");
-	var outputTheme = "xq-light";
-	var mode;
+	const codeBlocks = $("code");
+	const outputTheme = "xq-light";
+	let mode;
 
     if (document.getElementById("code")) {
     	if (window.domainData.language === "python") {
@@ -255,7 +261,7 @@ function load() {
         $("<button>").addClass("btn btn-sm btn-primary execute-code").text("Execute Code").click(function() {
         	maximizeDock();
             var text = $(this).prev().text();
-            if (window.domainData.container_word && text.indexOf(window.domainData.container_word) == -1) {
+            if (window.domainData.container_word && text.indexOf(window.domainData.container_word) === -1) {
                 var lines = text.split("\n");
                 var indentedText = "";
                 for (var i = 0; i < lines.length; i++) {

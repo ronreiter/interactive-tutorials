@@ -21,8 +21,11 @@ Please feel free to contribute your tutorials or exercises by sending a pull req
 
 To run locally in a Docker container, execute:
 
-    make build
-    make run   
+    make run
+
+To run a specific website, run with the DEFAULT_DOMAIN option set, as follows:
+
+    DEFAULT_DOMAIN=learn-js.org make run
 
 By default, the server process will run at http://localhost:5000.
 
