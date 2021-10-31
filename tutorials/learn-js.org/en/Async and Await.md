@@ -23,12 +23,13 @@ function instead of setTimeout, so we can implement `sumAsync` using `await` lat
 The sleep function will return a `Promise` which resolves after `ms` milliseconds, and uses
 setTimeout to work.
 
+    .exec
     function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
 
     function sumAsync(x, y) {
-        return new Promise(function(resolve, reject) {
+        return new Promise((resolve, reject) => {
             sleep(500).then(() => {
                 resolve(x + y);
             });
@@ -36,13 +37,14 @@ setTimeout to work.
     }
 
     // let's use the function now
-    sumAsync(5, 7).then(function(result) {
+    sumAsync(5, 7).then((result) => {
         console.log("The result of the addition is:", result);
     });
 
 We can make our code `sumAsync` much nicer by simply using `await` on the `sleep` function and then
 returning the result.
 
+    .exec
     function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
@@ -55,7 +57,7 @@ returning the result.
     }
 
     // sumAsync is an async function, which means it returns a Promise.
-    sumAsync(5, 7).then(function(result) {
+    sumAsync(5, 7).then((result) => {
         console.log("The result of the addition is:", result);
     });
 

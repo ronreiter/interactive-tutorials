@@ -54,8 +54,9 @@ give the user the answer.
 For example, let's say that we would like to calculate the sum of two numbers, but by
 writing a function which returns a `Promise` and not the value.
 
+    .exec
     function sumAsync(x, y) {
-        const p = new Promise(function(resolve, reject) {
+        const p = new Promise((resolve, reject) => {
             // this resolves the promise we just created with the output of x+y
             resolve(x + y);                        
         });
@@ -65,7 +66,7 @@ writing a function which returns a `Promise` and not the value.
     }
 
     // let's use the function now
-    sumAsync(5, 7).then(function(result) {
+    sumAsync(5, 7).then((result) => {
         console.log("The result of the addition is:", result);
     });
 
@@ -75,21 +76,26 @@ command for example.
 
 Let's modify the example to resolve the solution only after a half a second:
 
+    .exec
     function sumAsync(x, y) {
-        return new Promise(function(resolve, reject) {
+        console.log("1. sumAsync is executed");
+        const p = new Promise((resolve, reject) => {
             // run this in 500ms from now
             setTimeout(() => {
-                // after 500ms, resolve the promise
+                console.log("4. Resolving sumAsync's Promise with the result after 500ms");
                 resolve(x + y);
             }, 500); 
 
             // we don't need to return anything
+            console.log("2. sumAsync Promise is initialized");            
         });
+        console.log("3. sumAsync has returned the Promise");
+        return p;
     }
 
     // let's use the function now
-    sumAsync(5, 7).then(function(result) {
-        console.log("The result of the addition is:", result);
+    sumAsync(5, 7).then((result) => {
+        console.log("5. The result of the addition is:", result);
     });
 
 ### Rejecting promises
@@ -100,8 +106,9 @@ we need to trigger the `reject` function instead.
 
 Let's say we want to write the same function, but with a rejection if a value is negative:
 
+    .exec
     function sumAsync(x, y) {
-        return new Promise(function(resolve, reject) {
+        return new Promise((resolve, reject) => {
             // run this in 500ms from now
             setTimeout(() => {
                 if (x < 0 || y < 0) {
@@ -115,9 +122,9 @@ Let's say we want to write the same function, but with a rejection if a value is
         });
     }
 
-    sumAsync(-5, 7).then(function(result) {
+    sumAsync(-5, 7).then((result) => {
         console.log("The result of the addition is:", result);
-    }).catch(function(error) {
+    }).catch((error) => {
         console.log("Error received:", error);
     });
 
@@ -134,10 +141,8 @@ Tutorial Code
         // write your code here
     }
     
-    upperCaseAsync("steve").then(function(x) {
-        console.log(x);
-    });
-    upperCaseAsync(null).catch(function(x) {
+    upperCaseAsync("steve").then(console.log);
+    upperCaseAsync(null).catch((x) => {
         console.log("No string received!");
     });
 
@@ -149,7 +154,7 @@ Expected Output
 Solution
 --------
     function upperCaseAsync(s) {
-        return new Promise(function(resolve, reject) {
+        return new Promise((resolve, reject) => {
             if (s === null) {
                 reject();
             } else {
@@ -158,9 +163,7 @@ Solution
         });
     }
     
-    upperCaseAsync("steve").then(function(x) {
-        console.log(x);
-    });
-    upperCaseAsync(null).catch(function(x) {
+    upperCaseAsync("steve").then(console.log);
+    upperCaseAsync(null).catch((x) => {
         console.log("No string received!");
     });
