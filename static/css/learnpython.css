@@ -197,7 +197,14 @@ textarea {
 	display: none;
 }
 
+.navbar-brand {
+    font-family: Consolas, monospace;
+}
+
 @media (prefers-color-scheme: dark) {
+    .navbar-brand {
+        color: #ccc !important;
+    }
     body {
         background: #1b1e21;
         color: #cccccc;
