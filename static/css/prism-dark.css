@@ -1,18 +1,18 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+aspnet+bash+basic+c+csharp+cpp+ruby+go+java+json+lua+markdown+perl+php+php-extras+python+r+rust+scala+sql+swift+yaml&plugins=line-highlight+line-numbers */
+/* PrismJS 1.25.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript&plugins=line-highlight+line-numbers */
 /**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
  */
-
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 
     code[class*="language-"],
     pre[class*="language-"] {
-        color: black;
+        color: #ccc;
         background: none;
-        text-shadow: 0 1px white;
         font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-size: 1em;
         text-align: left;
         white-space: pre;
         word-spacing: normal;
@@ -28,20 +28,8 @@
         -moz-hyphens: none;
         -ms-hyphens: none;
         hyphens: none;
-    }
 
-    pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-    code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-        text-shadow: none;
-        background: #b3d4fc;
     }
-
-    pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-    code[class*="language-"]::selection, code[class*="language-"] ::selection {
-        text-shadow: none;
-        background: #b3d4fc;
-    }
-
 
     /* Code blocks */
     pre[class*="language-"] {
@@ -52,7 +40,7 @@
 
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
-        background: #f5f2f0;
+        background: #2d2d2d;
     }
 
     /* Inline code */
@@ -63,62 +51,61 @@
     }
 
     .token.comment,
+    .token.block-comment,
     .token.prolog,
     .token.doctype,
     .token.cdata {
-        color: slategray;
-    }
-
-    .token.punctuation {
         color: #999;
     }
 
-    .namespace {
-        opacity: .7;
+    .token.punctuation {
+        color: #ccc;
+    }
+
+    .token.tag,
+    .token.attr-name,
+    .token.namespace,
+    .token.deleted {
+        color: #e2777a;
+    }
+
+    .token.function-name {
+        color: #6196cc;
+    }
+
+    .token.boolean,
+    .token.number,
+    .token.function {
+        color: #f08d49;
     }
 
     .token.property,
-    .token.tag,
-    .token.boolean,
-    .token.number,
+    .token.class-name,
     .token.constant,
-    .token.symbol,
-    .token.deleted {
-        color: #905;
+    .token.symbol {
+        color: #f8c555;
     }
 
     .token.selector,
-    .token.attr-name,
+    .token.important,
+    .token.atrule,
+    .token.keyword,
+    .token.builtin {
+        color: #cc99cd;
+    }
+
     .token.string,
     .token.char,
-    .token.builtin,
-    .token.inserted {
-        color: #690;
+    .token.attr-value,
+    .token.regex,
+    .token.variable {
+        color: #7ec699;
     }
 
     .token.operator,
     .token.entity,
-    .token.url,
-    .language-css .token.string,
-    .style .token.string {
-        color: #a67f59;
-        background: hsla(0, 0%, 100%, .5);
-    }
-
-    .token.atrule,
-    .token.attr-value,
-    .token.keyword {
-        color: #07a;
-    }
-
-    .token.function {
-        color: #DD4A68;
-    }
-
-    .token.regex,
-    .token.important,
-    .token.variable {
-        color: #e90;
+    .token.url {
+        color: #67cdcc;
     }
 
     .token.important,
@@ -132,6 +119,10 @@
 
     .token.entity {
         cursor: help;
+    }
+
+    .token.inserted {
+        color: green;
     }
 
     pre[data-line] {
@@ -179,14 +170,32 @@
         bottom: .4em;
     }
 
-    pre.line-numbers {
+    .line-numbers .line-highlight:before,
+    .line-numbers .line-highlight:after {
+        content: none;
+    }
+
+    pre[id].linkable-line-numbers span.line-numbers-rows {
+        pointer-events: all;
+    }
+
+    pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+        cursor: pointer;
+    }
+
+    pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+        background-color: rgba(128, 128, 128, .2);
+    }
+
+    pre[class*="language-"].line-numbers {
         position: relative;
         padding-left: 3.8em;
         counter-reset: linenumber;
     }
 
-    pre.line-numbers > code {
+    pre[class*="language-"].line-numbers > code {
         position: relative;
+        white-space: inherit;
     }
 
     .line-numbers .line-numbers-rows {
@@ -207,7 +216,6 @@
     }
 
     .line-numbers-rows > span {
-        pointer-events: none;
         display: block;
         counter-increment: linenumber;
     }
@@ -219,4 +227,5 @@
         padding-right: 0.8em;
         text-align: right;
     }
+
 }

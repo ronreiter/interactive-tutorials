@@ -181,22 +181,6 @@ textarea {
     width: 100%;
 }
 
-.CodeMirror {
-    background-color: #f8f8f8;
-}
-
-.powered-by-sphere {
-    margin-top: -20px;
-    text-align: right;
-    font-size: 10px;
-    color: black;
-    z-index: inherit;
-    position: relative;
-    line-height: 20px;
-    padding-right: 5px;
-}
-
-
 #dock .maximized {
 	display: none;
 }
@@ -213,8 +197,6 @@ textarea {
 	display: none;
 }
 
-/*
-WIP: dark mode
 @media (prefers-color-scheme: dark) {
     body {
         background: #1b1e21;
@@ -251,5 +233,9 @@ WIP: dark mode
         background-color: #222222;
         border-top: 2px solid #333333;
     }
+
+    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+        rgba(128,128,128,0.5);
+        text-shadow: none;
+    }
 }
-*/
