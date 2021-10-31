@@ -70,10 +70,6 @@
                 </div>
               </li>
 
-{#            <li class="nav-item mr-sm-2">#}
-{#                <a class="nav-link" href="https://chrome.google.com/webstore/detail/technews/babfhcgjchdmjknpmbdpcfggaonhimlj?hl=en&authuser=0"><span style="color: limegreen; font-family: monospace; font-weight: 800; font-size: 16px" target="_blank">&lt;/&gt;</span> TechNews Extension</a>#}
-{#            </li>#}
-
 
         {#
             <li class="nav-item mr-sm-2 dropdown">
@@ -144,23 +140,6 @@
 
 </nav>
 
-{#<div class="container mt-2">#}
-{#        <!-- AddThis Button BEGIN -->#}
-{#    <div class="addthis_toolbox addthis_default_style ">#}
-{#        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>#}
-{#        <a class="addthis_button_tweet"></a>#}
-{#        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>#}
-{#        <a class="addthis_counter addthis_pill_style"></a>#}
-{#    </div>#}
-{##}
-{#    <script type="text/javascript">#}
-{#        var addthis_config = {"data_track_clickback": true};#}
-{#        var addthis_share = {"url": "http://learnpython.org"};#}
-{#    </script>#}
-{#    <script type="text/javascript"#}
-{#            src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4dafdfe6039782b1"></script>#}
-{#    <!-- AddThis Button END -->#}
-{#</div>#}
 
 
 {% block content %}{% endblock %}
@@ -257,6 +236,31 @@
 }(window, document, '_gscq', 'script', '//www.hellothere.io/widget/cYqedgvGuFe2EvXs.js'));
 </script>
 #}
+
+<script type="text/javascript">(function(d, t, e, m){
+
+    // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+
+        RW.init({
+            huid: "480061",
+            uid: "5b43695d2214cb2f6b6bfcf88d8dca9d",
+            options: { "style": "oxygen" }
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() +
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
 
 {% block head %}{% endblock %}
 
