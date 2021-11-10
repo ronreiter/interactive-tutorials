@@ -81,8 +81,6 @@ The expression can be a logical combination of comparisons: negation is denoted 
 
 ### simple case bash structure
 
-Note in this case $case is variable and does not have to be named case - this is just an example
-
     mycase=1
     case $mycase in
         1) echo "You selected bash";;
