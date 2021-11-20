@@ -18,6 +18,7 @@ learncs.org is still under construction - If you wish to contribute tutorials, p
 - [[Dictionaries]]
 - [[Strings]]
 - [[For loops]]
+- [[Foreach loops]]
 - [[While loops]]
 - [[Methods]]
 - [[Basic Classes]]
