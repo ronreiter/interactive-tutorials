@@ -68,6 +68,9 @@ Let's start by creating a simple page that contains the phrase "Hello, World!" i
 a title - that thing that shows up in the title of the tab in your browser. The `<title>` element defines the title
 of the HTML page.
 
+The `<!DOCTYPE html>` tag defines the document type that the browser is going to render. This is used for legacy reasons.
+If you want to get to the latest version of HTML (HTML5) then it's recommended to use this tag.
+
 The `<p>` element defines a "paragraph", a block of text that has a small amount of spacing in between its top and 
 bottom.
 
