@@ -2,10 +2,10 @@ Tutorial
 --------
 JavaScript is a scripting language that is mostly used in web development. JavaScript runs in the front-end, so it can update HTML elements, connect to a server (e.g Database server, File Server etc.), change page style (CSS) and more.
 
-You can learn JavaScript here: https://www.learn-js.org/
+You can learn JavaScript here: [[https://www.learn-js.org/]]
 
 ## JavaScript in HTML file
-HTML has the <script> tag, which allows scripts in a web page.
+HTML has the `<script>` tag, which allows scripts in a web page.
 	
 Example:
 
