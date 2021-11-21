@@ -12,6 +12,7 @@ learncs.org is still under construction - If you wish to contribute tutorials, p
 
 - [[Hello, World!]]
 - [[Variables and Types]]
+- [[Type Convertion]]
 - [[Conditionals]]
 - [[Arrays]]
 - [[Lists]]
