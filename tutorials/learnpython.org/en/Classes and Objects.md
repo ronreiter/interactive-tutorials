@@ -83,7 +83,22 @@ To access a function inside of an object you use notation similar to accessing a
 
 The above would print out the message, "This is a message inside the class."
 
+### __init__()
 
+The `__init__()` function, is a special function that is called when the class is being initiated.
+It's used for asigning values in a class.
+
+    class NumberHolder:
+       
+       def __init__(self, number):
+           self.number = number
+           
+       def returnNumber(self):
+           return self.number
+
+    var = NumberHolder(7)
+    print(var.returnNumber()) #Prints '7'
+    
 Exercise
 --------
 
