@@ -1,17 +1,24 @@
 Tutorial
 --------
 
-This page is empty. You are welcome to contribute the content by sending me a pull request:
+Iframes are HTML elements that display a web page within a web page.
 
-[[https://github.com/ronreiter/interactive-tutorials]]
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>An Iframe</title>
+        </head>
+        <body>
+            <iframe src="learn-html.org"></iframe>
+        </body>
+    </html>
+
+You can also style it using CSS (e.g Removing the border).
 
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
-
+Create an Iframe that displays `learn-c.org`.
 
 Tutorial Code
 -------------
@@ -19,8 +26,10 @@ Tutorial Code
     <!DOCTYPE html>
     <html>
         <head>
+            <title>learn-c.org</title>
         </head>
         <body>
+        
         </body>
     </html>
     
@@ -30,10 +39,10 @@ Expected Output
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+            <title>learn-c.org</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <iframe src="learn-c.org></iframe>
         </body>
     </html>
 
@@ -43,9 +52,9 @@ Solution
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+            <title>learn-c.org</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <iframe src="learn-c.org></iframe>
         </body>
     </html>
