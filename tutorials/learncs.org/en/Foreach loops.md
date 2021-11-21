@@ -29,10 +29,17 @@ In this exercise, you must output every item in `parts` with a `foreach` loop th
 
 Tutorial Code
 -------------
-
-    string[] parts = {"CPU", "RAM", "HDD", "SSD", "GPU"};
-    //Place the loop here (Replace the comment)
-
+    
+    using System;
+    public class Hello
+    {
+        public static void Main()
+        {
+            string[] parts = {"CPU", "RAM", "HDD", "SSD", "GPU"};
+            //Place the loop here (Replace the comment)
+        }
+    }
+    
 Expected Output
 ---------------
 
@@ -45,8 +52,15 @@ GPU
 Solution
 --------
 
-   string[] parts = {"CPU", "RAM", "HDD", "SSD", "GPU"};
-   foreach (part in parts)
-   {
-       Console.WriteLine(part);
-   }
+    using System;
+    public class Hello
+    {
+        public static void Main()
+        {
+            string[] parts = {"CPU", "RAM", "HDD", "SSD", "GPU"};
+            foreach (part in parts)
+            {
+                Console.WriteLine(part);
+            }
+        }
+    }
