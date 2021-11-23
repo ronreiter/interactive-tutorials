@@ -20,7 +20,7 @@ Tutorial Code
 -------------
 
     using System;
-    public class Convertion
+    public class Conversion
     {
         public static void Main()
         {
@@ -39,7 +39,7 @@ Solution
 --------
 
     using System;
-    public class Convertion
+    public class Conversion
     {
         public static void Main()
         {
