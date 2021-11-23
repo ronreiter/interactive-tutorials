@@ -11,6 +11,7 @@ learncs.org is still under construction - If you wish to contribute tutorials, p
 ### Learn the Basics
 
 - [[Hello, World!]]
+- [[User Input]]
 - [[Variables and Types]]
 - [[Conditionals]]
 - [[Arrays]]
