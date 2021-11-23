@@ -10,7 +10,7 @@ There are two methods:
 
 * By reassigning the value to a new variable: `int myVar = (int) 1.0;`
 * By using methods: `string myVar = Convert.ToString(10);`
-Note: `Convert` uses the `ToInt32` for int convertion.
+Note: `Convert` uses the `ToInt32` for int conversion.
 
 Exercise
 --------
