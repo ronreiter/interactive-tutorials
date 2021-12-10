@@ -17,7 +17,7 @@ learn-c.org仍在建设中——如果你想贡献教程，请点击下方的`�
 - [[条件语句]]
 - [[字符串]]
 - [[for循环]]
-- [[While loops]]
+- [[while循环]]
 - [[Functions]]
 - [[Static]]
 
