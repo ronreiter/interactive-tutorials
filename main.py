@@ -58,6 +58,7 @@ LANGUAGES = {
     "fr": "Français",
     "pt": "Português",
     "tr": "Türkçe",
+    "nl": "Nederlands",
 }
 
 tutorial_data = {}
