@@ -5,7 +5,7 @@ Tutorial
 
 The `if` statement allows us to check if an expression is equal to `true` or `false`, and execute different code according to the result.
 
-For example, if we want ask the user whether his name is "John", we can use the `confirm` function.
+For example, if we want to ask the user whether his name is "John", we can use the `confirm` function.
 
     if (confirm("Are you John Smith?"))
     {
