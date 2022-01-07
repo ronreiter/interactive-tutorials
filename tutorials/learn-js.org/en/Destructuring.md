@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-Destructuring is a feature of ES6, introduced for making easier and cleaner some repetitive operations and assignments made in JS.
+Destructuring is a feature of ES6, introduced for making easier and cleaner repetitive operations and assignments made in JS.
 
-With destructuring we can data from a deeper lever inside an array / object with a more concise syntax, even giving to this 'extracted' data other name in the same operation.
+With destructuring we can extract data from a deeper level inside an array / object with a more concise syntax, even giving this 'extracted' data some other name in the same operation.
 
 In JavaScript we can achieve this in a very simply way:
 
