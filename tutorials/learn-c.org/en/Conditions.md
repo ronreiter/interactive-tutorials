@@ -33,7 +33,7 @@ Inequality operators can also be used to evaluate expressions. For example:
         printf("foo is greater than bar.");
     }
 
-We can use the `else` keyword to exectue code when our expression evaluates to `false`.
+We can use the `else` keyword to execute code when our expression evaluates to `false`.
 
     int foo = 1;
     int bar = 2;
