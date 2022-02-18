@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXO_Créer</title>
+    <style> #E {margin: 0% 0% 0% 2%;} #F {margin: 0% 0% 0% 4%}</style>
+</head>
+<body>
+ <h3>Tutoriel</h3>
+  <p>L'attribut universel class indique une liste de classes associées à l'élément courant. Les classes permettent de manipuler les éléments, via CSS ou JavaScript en utilisant les sélecteurs de classe ou des fonctions telles que <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/getElementsByClassName">document.getElementsByClassName</a>.</p>
+  <p>Bien que la spécification ne précise aucune contrainte quant aux noms utilisés pour les classes, une bonne pratique consiste à utiliser des noms qui traduisent la sémantique de l'élément plutôt que la mise en forme. Ainsi, les noms sémantiques restent pertinents même lorsque la présentation de la page évolue.</p>
+ <h3>Exercice</h3>
+  <p>Créer un fichier ".html" grace à votre logiciel, portant le nom que vous voulez; et ecrivez dans "head" tout ceci "Style>.exemple {Color: red} style>". 
+    Puis, attribuer la classe "exemple" à la 1er paragraphe "J'essaie de comprendre classe", et créer un 2 ème paragraphe sans la classe "Je crois que j'ai compris".</p>
+  <p>head></p>
+  <p>title>Document title></p>
+  <p id="E">style> .exemple {color: red} style></p>
+  <p>head></p>
+  <p>body></p>
+  <p id="E">(A remplir pour l'exercice)</p>
+  <p>body></p>
+ <h3>Resultat</h3>
+  <p style="color: red">J'essaie de comprendre la classe</p>
+  <p>Je crois que j'ai compris</p>
+ <h3>Solution</h3>
+  <p>head></p>
+  <p id="E">style></p>
+  <p id="F">.exemple {color: red;}</p>
+  <p id="E">style></p>
+  <p>head></p>
+  <p>body></p>
+  <p id="E">p class="exemple">J'essaie de comprendre la classe. p></p>
+  <p id="E">p>Je crois que j'ai compris. p></p>
+  <p>body></p>
+</body>
+</html>
