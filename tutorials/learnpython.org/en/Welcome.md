@@ -27,6 +27,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Classes and Objects]]
 - [[Dictionaries]]
 - [[Modules and Packages]]
+- [[PIP]]
 
 ### Data Science Tutorials
 - [[Numpy Arrays]]
