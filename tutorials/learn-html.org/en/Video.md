@@ -1,16 +1,24 @@
 Tutorial
 --------
 
-This page is empty. You are welcome to contribute the content by sending me a pull request:
+HTML5 includes the `<video>` tag. It is used for displaying videos.
 
-[[https://github.com/ronreiter/interactive-tutorials]]
+    <video width="400" height="400" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+### Code explained
+
+`<video>` is the main tag that is used for displaying videos.
+`controls` adds buttons for controlling the video.
+`<source>` adds a file.
+`src` specifies the file location on the server.
+`type` specifies the file type (In this case MP4)
 
 Exercise
 --------
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
+Add `myvideo.mp4` to this website with height 600 and width 649.
 
 
 Tutorial Code
@@ -21,6 +29,7 @@ Tutorial Code
         <head>
         </head>
         <body>
+        
         </body>
     </html>
     
@@ -30,10 +39,11 @@ Expected Output
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <video height="600" width="649" controls>
+                <source src="myvideo.mp4" type="video/mp4>
+            </video>
         </body>
     </html>
 
@@ -43,9 +53,10 @@ Solution
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <video height="600" width="649" controls>
+                <source src="myvideo.mp4" type="video/mp4>
+            </video>
         </body>
     </html>
