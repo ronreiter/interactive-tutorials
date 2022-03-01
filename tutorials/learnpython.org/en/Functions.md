@@ -94,6 +94,13 @@ def name_the_benefits_of_functions():
 
 name_the_benefits_of_functions()
 
+<div style="padding: 20px 0;">
+    <a href="https://app.datacamp.com/workspace/new?_tag=template&templateKey=learnpython-functions&utm_source=learnpython.org&utm_medium=docs&utm_term=functions&utm_content=run_code_in_workspace"
+                    style="font-size: 16px; padding: 12px 16px; border-radius: 4px; background: rgba(3, 239, 98); color: #1f2937; font-weight: 600; text-decoration: none;"
+                    target="_blank">
+    Run & Edit Full Tutorial
+    </a>
+</div>
 
 Expected Output
 ---------------
