@@ -42,6 +42,14 @@ print(numbers)
 print(strings)
 print("The second name on the names list is %s" % second_name)
 
+<div style="padding: 20px 0;">
+    <a href="https://app.datacamp.com/workspace/new?_tag=template&templateKey=learnpython-lists&utm_source=learnpython.org&utm_medium=docs&utm_term=lists&utm_content=run_code_in_workspace"
+                    style="font-size: 16px; padding: 12px 16px; border-radius: 4px; background: rgba(3, 239, 98); color: #1f2937; font-weight: 600; text-decoration: none;"
+                    target="_blank">
+    Run & Edit Full Tutorial
+    </a>
+</div>
+
 Expected Output
 ---------------
 
