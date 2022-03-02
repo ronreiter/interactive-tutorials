@@ -12,10 +12,13 @@ Modules in Python are simply Python files with a .py extension. The name of the 
 A Python module can have a set of functions, classes or variables defined and implemented. 
 In the example above, we will have two files, we will have:
 
-    mygame/
-    mygame/game.py
-    mygame/draw.py
-    
+<li>mygame/</li>
+
+<li>mygame/game.py</li>
+
+<li>mygame/draw.py</li>
+<br/>
+ 
 The Python script `game.py` will implement the game. It will use the function `draw_game` from the file `draw.py`,
 or in other words, the`draw` module, that implements the logic for drawing the game on the screen.
 
