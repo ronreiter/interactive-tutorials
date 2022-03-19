@@ -81,8 +81,8 @@ int main()
     
     for(int i = 0; i < 5; i++)
     {        
-        # your code goes here. 
-        # use a if else block to classify the person as Child / Adult / Retired
+        // your code goes here. 
+        // use a if else block to classify the person as Child / Adult / Retired
     }
     return 0;
 }
