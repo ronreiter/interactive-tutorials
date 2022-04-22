@@ -15,7 +15,7 @@ Now that we know the syntax for declaring an array, the solution for Q1 would be
 
     int marks[5];
 
-Now lets initialize the array in Q1. Suppose the 5 students marks are as 96,92,78,54 and 86, then we can give our array values as,
+Now let's initialize the array in Q1. Suppose the 5 students marks are as 96,92,78,54 and 86, then we can give our array values as,
 
     marks[0] = 96;
     marks[1] = 92;

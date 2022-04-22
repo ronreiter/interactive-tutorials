@@ -38,9 +38,9 @@ Another example:
 
 Most commonly, functions are placed outside of the Main function.
 
-Excercise
+Exercise
 ---------
-In this excercise, you will create a function that prints out the sum of the given variables, a, b, and c. Below is the given code.
+In this exercise, you will create a function that prints out the sum of the given variables, a, b, and c. Below is the given code.
 
 Tutorial Code
 -------------
