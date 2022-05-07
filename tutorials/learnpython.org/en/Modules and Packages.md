@@ -171,8 +171,7 @@ Check out the full list of built-in modules in the Python standard library [here
 
 Two very important functions come in handy when exploring modules in Python - the `dir` and `help` functions.
 
-If we want to import the module `urllib`, which enables us to create read data from URLs, we 
-simply `import` the module:
+To import the module `urllib`, which enables us to create read data from URLs, we `import` the module:
 
     # import the library
     import urllib
@@ -197,22 +196,19 @@ We can look for which functions are implemented in each module by using the `dir
     'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 
     'urlopen', 'urlretrieve']
 
-When we find the function in the module we want to use, we can read about it more using the `help` function, 
-inside the Python interpreter:
+When we find the function in the module we want to use, we can read more about it using the `help` function, 
+using the Python interpreter:
 
     help(urllib.urlopen)
 
 ### Writing packages
 
-Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, 
-but with a twist.
+Packages are namespaces containing multiple packages and modules. They're just directories, but with certain requirements.
 
-Each package in Python is a directory which **MUST** contain a special file called `__init__.py`. This file can 
-be empty, and it indicates that the directory it contains is a Python package, so it can be imported the same 
-way a module can be imported.
+Each package in Python is a directory which **MUST** contain a special file called `__init__.py`. This file, which can be empty, indicates that the directory it's in is a Python package. That way it can be imported the same way as a module.
 
 If we create a directory called `foo`, which marks the package name, we can then create a module inside that 
-package called `bar`. We also must not forget to add the `__init__.py` file inside the `foo` directory.
+package called `bar`. Then we add the `__init__.py` file inside the `foo` directory.
 
 To use the module `bar`, we can import it in two ways:
 
@@ -222,7 +218,7 @@ or:
 
     from foo import bar
 
-In the first method, we must use the `foo` prefix whenever we access the module `bar`. In the second method, 
+In the first example, we use the `foo` prefix whenever we access the module `bar`. In the second example, 
 we don't, because we import the module to our module's namespace.
 
 The `__init__.py` file can also decide which modules the package exports as the API, while keeping other modules 
@@ -235,8 +231,7 @@ internal, by overriding the `__all__` variable, like so:
 Exercise
 --------
 
-In this exercise, you will need to print an alphabetically sorted list of all functions in the `re` module,
-which contain the word `find`.
+In this exercise, print an alphabetically sorted list of all the functions in the `re` module containing the word `find`.
 
 Tutorial Code
 -------------
