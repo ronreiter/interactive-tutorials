@@ -48,7 +48,7 @@ Tutorial Code
 		("Mike", 3, "Paris", "Mike@Supplier.com", 20000),("Ben", 4, "Tokio", "Ben@Supplier.com",500);
 
 
--- write your code here
+    -- write your code here
     
 Expected Output
 ---------------
@@ -61,11 +61,11 @@ Solution
 --------
 	CREATE TABLE Supplier ( name TEXT,customerID INTERGER, city TEXT, email TEXT, stock INTERGER);
 
-	INSERT INTO Supplier ( name, customerID, city,email) VALUES
+	INSERT INTO Supplier ( name, customerID, city,email,stock) VALUES
 		("John", 1, "Huston", NULL,1000), ("Eric", 2, "Paris", "Eric@Supplier.com",200), 
 		("Mike", 3, "Paris", "Mike@Supplier.com", 20000),("Ben", 4, "Tokio", "Ben@Supplier.com",500);
 
- -- write your code here
+    -- write your code here
 
 	CREATE TABLE StockWarning as 
 	SELECT 
