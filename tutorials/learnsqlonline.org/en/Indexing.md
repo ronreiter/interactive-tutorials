@@ -1,3 +1,5 @@
+Tutorial
+--------
 ### What is an index?
 
 In relational databases, a table is a list of rows. In the same time, each row has the same column structure that consists of cells. Each row also has a consecutive row-id sequence number used to identify the row. Therefore, you can consider a table as a list of pairs: (rowid, row).
