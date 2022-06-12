@@ -16,17 +16,18 @@ A subquery is a SELECT statement nested in another statement. See the following 
         product_name TEXT
     );
 
-    INSERT INTO customers (first_name, last_name) VALUES
-        ("John", "Doe"),
-        ("Jane", "Doe"),
-        ("Chris", "Doe");
+    INSERT INTO customers (id,first_name, last_name) VALUES
+        (1,"John", "Doe"),
+        (2,"Jane", "Doe"),
+        (3,"Billy", "Doe"),
 
-    INSERT INTO orders (customer_id, product_name) VALUES
-        ("John", "Doe", "Coke"),
-        ("Jane", "Doe", "Sprite"),
-        ("Billy", "Doe", "Sprite"),
-        ("Joe", "Doe", "Beer"),
-        ("Chris", "Doe", "Wine");
+    INSERT INTO orders (id,customer_id, product_name,price) VALUES
+        (1,1, "Coke", 5),
+        (2,2, "Sprite", 4),
+        (3,3, "HotDog",7),
+        (4,4, "Beer",6),
+        (5,5, "Wine",9),
+
 
 
     .mode column
@@ -70,34 +71,34 @@ Tutorial Code
         price INTEGER
     );
 
-    INSERT INTO customers (first_name, last_name) VALUES
-        ("John", "Doe"),
-        ("Jane", "Doe"),
-        ("Billy", "Doe"),
-        ("Joe", "Doe"),
-        ("Chris", "Doe"),
-        ("Mike", "Doe"),
-        ("Jenny", "Doe"),
-        ("Alicia", "Doe");
+    INSERT INTO customers (id,first_name, last_name) VALUES
+        (1,"John", "Doe"),
+        (2,"Jane", "Doe"),
+        (3,"Billy", "Doe"),
+        (4,"Joe", "Doe"),
+        (5,"Chris", "Doe"),
+        (6,"Mike", "Doe"),
+        (7,"Jenny", "Doe"),
+        (8,"Alicia", "Doe");
 
-    INSERT INTO orders (customer_id, product_name,price) VALUES
-        ("John", "Doe", "Coke", 5),
-        ("Jane", "Doe", "Sprite", 4),
-        ("Billy", "Doe", "HotDog",7),
-        ("Joe", "Doe", "Beer",6),
-        ("Chris", "Doe", "Wine",9),
-        ("Mike", "Doe", "Burger",2),
-        ("Jenny", "Doe", "Pizza",3),
-        ("Alicia", "Doe", "Tequila",15);
+    INSERT INTO orders (id,customer_id, product_name,price) VALUES
+        (1,1, "Coke", 5),
+        (2,2, "Sprite", 4),
+        (3,3, "HotDog",7),
+        (4,4, "Beer",6),
+        (5,5, "Wine",9),
+        (6,6, "Burger",2),
+        (7,7, "Pizza",3),
+        (8,8, "Tequila",15);
 
     -- write your code here
 
     
 Expected Output
 ---------------
-        "Billy", "Doe"
-        "Chris", "Doe"
-        "Alicia", "Doe"
+        3,"Billy", "Doe"
+        5,"Chris", "Doe"
+        8,"Alicia", "Doe"
 
 Solution
 --------
@@ -114,25 +115,25 @@ Solution
         price INTEGER
     );
 
-    INSERT INTO customers (first_name, last_name) VALUES
-        ("John", "Doe"),
-        ("Jane", "Doe"),
-        ("Billy", "Doe"),
-        ("Joe", "Doe"),
-        ("Chris", "Doe"),
-        ("Mike", "Doe"),
-        ("Jenny", "Doe"),
-        ("Alicia", "Doe");
+    INSERT INTO customers (id,first_name, last_name) VALUES
+        (1,"John", "Doe"),
+        (2,"Jane", "Doe"),
+        (3,"Billy", "Doe"),
+        (4,"Joe", "Doe"),
+        (5,"Chris", "Doe"),
+        (6,"Mike", "Doe"),
+        (7,"Jenny", "Doe"),
+        (8,"Alicia", "Doe");
 
-    INSERT INTO orders (customer_id, product_name,price) VALUES
-        ("John", "Doe", "Coke", 5),
-        ("Jane", "Doe", "Sprite", 4),
-        ("Billy", "Doe", "HotDog",7),
-        ("Joe", "Doe", "Beer",6),
-        ("Chris", "Doe", "Wine",9),
-        ("Mike", "Doe", "Burger",2),
-        ("Jenny", "Doe", "Pizza",3),
-        ("Alicia", "Doe", "Tequila",15);
+    INSERT INTO orders (id,customer_id, product_name,price) VALUES
+        (1,1, "Coke", 5),
+        (2,2, "Sprite", 4),
+        (3,3, "HotDog",7),
+        (4,4, "Beer",6),
+        (5,5, "Wine",9),
+        (6,6, "Burger",2),
+        (7,7, "Pizza",3),
+        (8,8, "Tequila",15);
 
     -- write your code here
 

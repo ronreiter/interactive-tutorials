@@ -18,15 +18,15 @@ The following is an example of an INNER JOIN statement
         product_name TEXT
     );
 
-    INSERT INTO customers (first_name, last_name) VALUES
-        ("John", "Doe");
+    INSERT INTO customers (id,first_name, last_name) VALUES
+        (1,"John", "Doe");
 
-    INSERT INTO orders (customer_id, product_name) VALUES
-        ("John", "Doe", "Coke"),
-        ("Jane", "Doe", "Sprite"),
-        ("John", "Doe", "Sprite"),
-        ("John", "Doe", "Beer"),
-        ("Jane", "Doe", "Wine");
+    INSERT INTO orders (id,customer_id, product_name) VALUES
+        (1,1, "Coke"),
+        (2,2, "Sprite"),
+        (1,1, "Sprite"),
+        (1,1, "Beer"),
+        (2,2, "Wine");
 
 
     .mode column
@@ -55,15 +55,15 @@ Knowing what an inner join is, we can now define what an OUTER JOIN in. In short
         product_name TEXT
     );
 
-    INSERT INTO customers (first_name, last_name) VALUES
-        ("John", "Doe");
+    INSERT INTO customers (id,first_name, last_name) VALUES
+        (1,"John", "Doe");
 
-    INSERT INTO orders (customer_id, product_name) VALUES
-        ("John", "Doe", "Coke"),
-        ("Jane", "Doe", "Sprite"),
-        ("John", "Doe", "Sprite"),
-        ("John", "Doe", "Beer"),
-        ("Jane", "Doe", "Wine");
+    INSERT INTO orders (id,customer_id, product_name) VALUES
+        (1,1, "Coke"),
+        (2,2, "Sprite"),
+        (1,1, "Sprite"),
+        (1,1, "Beer"),
+        (2,2, "Wine");
 
 
     .mode column
@@ -90,15 +90,15 @@ Tutorial Code
         product_name TEXT
     );
 
-    INSERT INTO customers (first_name, last_name) VALUES
-        ("John", "Doe");
+    INSERT INTO customers (id,first_name, last_name) VALUES
+        (1,"John", "Doe");
 
-    INSERT INTO orders (customer_id, product_name) VALUES
-        ("John", "Doe", "Coke"),
-        ("Jane", "Doe", "Sprite"),
-        ("John", "Doe", "Sprite"),
-        ("John", "Doe", "Beer"),
-        ("Jane", "Doe", "Wine");
+    INSERT INTO orders (id,customer_id, product_name) VALUES
+        (1,1, "Coke"),
+        (2,2, "Sprite"),
+        (1,1, "Sprite"),
+        (1,1, "Beer"),
+        (2,2, "Wine");
 
 
 
@@ -126,19 +126,20 @@ Solution
         product_name TEXT
     );
 
-    INSERT INTO customers (first_name, last_name) VALUES
-        ("John", "Doe");
+    INSERT INTO customers (id,first_name, last_name) VALUES
+        (1,"John", "Doe");
 
-    INSERT INTO orders (customer_id, product_name) VALUES
-        ("John", "Doe", "Coke"),
-        ("Jane", "Doe", "Sprite"),
-        ("John", "Doe", "Sprite"),
-        ("John", "Doe", "Beer"),
-        ("Jane", "Doe", "Wine");
+    INSERT INTO orders (id,customer_id, product_name) VALUES
+        (1,1, "Coke"),
+        (2,2, "Sprite"),
+        (1,1, "Sprite"),
+        (1,1, "Beer"),
+        (2,2, "Wine");
+
 
 
     .mode column
     .headers on
-    SELECT product_name, first_name, last_name
+    SELECT orders.product_name, customers.first_name, customers.last_name
     FROM orders
     LEFT JOIN customers ON orders.customer_id = customers.id;
