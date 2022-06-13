@@ -96,7 +96,7 @@ To check if SQLite uses the index or not, you use the EXPLAIN QUERY PLAN
         WHERE
             email = 'lisa@Smith.net';
 
-### SQLite multicolumn index example
+### SQLite multicolumn index
 If you create an index that consists of one column, SQLite uses that column as the sort key. In case you create an index that has multiple columns, SQLite uses the additional columns as the second, third, … as the sort keys.
 
 SQLite sorts the data on the multicolumn index by the first column specified in the CREATE INDEX statement. Then, it sorts the duplicate values by the second column, and so on.

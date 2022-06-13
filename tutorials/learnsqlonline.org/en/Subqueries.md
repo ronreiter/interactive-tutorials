@@ -19,14 +19,14 @@ A subquery is a SELECT statement nested in another statement. See the following 
     INSERT INTO customers (id,first_name, last_name) VALUES
         (1,"John", "Doe"),
         (2,"Jane", "Doe"),
-        (3,"Billy", "Doe"),
+        (3,"Billy", "Doe");
 
     INSERT INTO orders (id,customer_id, product_name,price) VALUES
         (1,1, "Coke", 5),
         (2,2, "Sprite", 4),
         (3,3, "HotDog",7),
         (4,4, "Beer",6),
-        (5,5, "Wine",9),
+        (5,5, "Wine",9);
 
 
 
@@ -36,7 +36,7 @@ A subquery is a SELECT statement nested in another statement. See the following 
     FROM orders
     WHERE customer_id IN (
         SELECT DISTINCT customer_id from customers
-    )
+    );
 
 
 You must use a pair of parentheses to enclose a subquery. Note that you can nest a subquery inside another subquery with a certain depth.
@@ -144,4 +144,4 @@ Solution
     WHERE customer_id IN (
         SELECT DISTINCT customer_id from Orders
         where price > 6
-    )
+    );
