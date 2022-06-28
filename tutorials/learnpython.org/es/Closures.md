@@ -5,23 +5,23 @@ Un Closure (cierre) es un objeto de función que recuerda los valores en los ám
 
 Primero de todo, una **Función Anidada** es una función definida dentro de otra función. Es muy importante apuntar que las funciones anidadas pueden acceder a las variables de la función principal. Sin embargo, al menos en Python, son sólo de lectura, aunque se puede usar la palabra clave "nonlocal" explicitamente con esas variables para modificarlas.
 
-For example:
+Por ejemplo:
 
-    def transmit_to_space(message):
-        "This is the enclosing function"
-        def data_transmitter():
-            "The nested function"
-            print(message)
+    def transmitir_al_espacio(mensaje):
+        "Esta es la funcion de cierre"
+        def transmisor_de_datos():
+            "La funcion anidada"
+            print(mensaje)
 
-        data_transmitter()
+        transmisor_de_datos()
 
-    print(transmit_to_space("Test message"))
+    print(transmitir_al_espacio("Mensaje de prueba"))
 
-Esto funciona bien ya que la función 'data_transmitter' puede acceder al 'mensaje'. Para demostrar el uso de la clave "nonlocal", considera esto:
+Esto funciona bien ya que la función 'transmisor_de_datos' puede acceder al 'mensaje'. Para demostrar el uso de la clave "nonlocal", considera esto:
 
     def print_msg(number):
         def printer():
-            "Here we are using the nonlocal keyword"
+            "Aca usamos la palabra clave nonlocal"
             nonlocal number
             number=3
             print(number)
@@ -44,14 +44,14 @@ Ahora, ¿qué tal si devolvemos el objeto de función en lugar de llamar a la fu
 Y llamamos a la función de la siguiente manera:
 
 
-      def transmit_to_space(message):
-        "This is the enclosing function"
-        def data_transmitter():
-            "The nested function"
+      def transmitir_al_espacio(mensaje):
+        "Esta es la funcion de cierre"
+        def transmisor_de_datos():
+            "La funcion anidada"
             print(message)
-        return data_transmitter
+        return transmisor_de_datos
 
-  	  fun2 = transmit_to_space("Burn the Sun!")
+  	  fun2 = transmitir_al_espacio("Quema el sol!")
   	  fun2()
 
 Aunque se completó la ejecución de "transmit_to_space()", el mensaje se ha preservado. Esta técnica, mediante la cuál se adjuntan los datos a algún código incluso después de acabar esas otras funciones, se llama closures (cierres) en Python.
@@ -60,12 +60,12 @@ VENTAJA : Los Closures pueden evitar el uso de variables globales y proporcionan
 
 Además, los decoradores en Python hacen un uso extensivo de los closures.
 
-Exercise
+Ejercicio
 --------
 
 Haz un bucle anidado y un closure en Python para hacer múltiples funciones de multiplicación usando closures. Usando cierres, podrías crear las funciones multiply_with_5() o multiply_with_4().
 
-Tutorial Code
+Codigo tutorial
 -------------
 
 # Tu código va aquí
@@ -73,13 +73,13 @@ Tutorial Code
 multiplywith5 = multiplier_of(5)
 multiplywith5(9)
 
-Expected Output
+Salida esperada
 ---------------
 
 test_output_contains("45")
 success_msg("Great work!")
 
-Solution
+Solucion
 --------
 
 def multiplier_of(n):
