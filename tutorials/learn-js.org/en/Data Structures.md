@@ -23,4 +23,4 @@ Each Element/Node of a linkedlist would be
      
 ### Creating a list
 
-Suppose you want to construct a linked list of size `n`, then you should create n node's and interlink them with the help of `next` member in the class Node of Each element
+Suppose you want to construct a linked list of size `n`, then you should create n node's and interlink them with the help of `next` member in the class Node of Each element 
