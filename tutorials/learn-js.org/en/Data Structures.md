@@ -6,11 +6,11 @@ A linked list is a linear data structure similar to an array, but the elements a
 
 Each element of a linked list can be called as `Node` and `head` is a reference to the first element/Node in the linked list , if a list is Empty then the head of the list should be null and to indicate the end of the list the next value of the last element points to null 
 
-There are many types of linkedlists but in this tutorial we are going to discuss about singly linkedlist
+There are many types of linkedlists but in this tutorial we are going to discuss about `singly Linked List`
 
 Each Element/Node of a linkedlist would be
 
-     class Node{
+     class Node {
      constructor(val) {
           this.next = null;
 
@@ -19,10 +19,13 @@ Each Element/Node of a linkedlist would be
 
      };
 
-     
+
+
 ### Creating a list
 
-Suppose you want to construct a linked list of size `n`, then you should create n node's and interlink them with the help of `next` member in the class Node of Each element and to access the created list you need the head so you should return head from the function 
+Suppose you want to construct a linked list of size `n`, then you should create n node's and interlink them with the help of `next` member in the class Node of Each element 
+
+To access the created list you need the head/first element of the list so you should return head from the function 
      
      const createList = (n)=>{
 
@@ -43,4 +46,22 @@ Suppose you want to construct a linked list of size `n`, then you should create 
 
      };
 
-The `createList` function takes n(`number of nodes`) as argument and creates `n` nodes and interlinks them by connecting each node with previous node's next value/member and stores `NULL` in the next field of last node (i.e, to indicate the termination of list) and returns `head`(an object of Node type) which refers to the starting Node of linked list
+The `createList` function takes `n` (number of nodes) as argument and creates `n` nodes and connects them by storing the next nodes reference in the current node's next field and stores `NULL` in the next field of last node (i.e, to indicate the termination of list) and returns `head`(an object of Node type) which refers to the starting Node of linked list
+
+Invoking createList :
+
+     let head = createList(10);
+
+### Printing linked list 
+We can print the list if we have access to the head of the list 
+
+     const printList = (node1) => {
+     let node = node1;
+
+     while(node!=null)
+     {
+          console.log(node.data);
+          node = node.next;
+     }
+     };
+
