@@ -23,4 +23,22 @@ Each Element/Node of a linkedlist would be
      
 ### Creating a list
 
-Suppose you want to construct a linked list of size `n`, then you should create n node's and interlink them with the help of `next` member in the class Node of Each element 
+Suppose you want to construct a linked list of size `n`, then you should create n node's and interlink them with the help of `next` member in the class Node of Each element and to access the created list you need the head so you should return head from the function 
+     
+     const createList = (n)=>{
+
+     let node1 = new Node(1);
+     let head = node1;
+     let node2 = null;
+     for (let i = 0;i<n-1;i++)
+     {
+          node2 = new Node(i+2);
+          node1.next = node2;
+          node1 = node2;
+     }
+
+     node1.next = null;
+
+     return head;
+
+     };
