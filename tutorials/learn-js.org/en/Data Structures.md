@@ -4,11 +4,11 @@ Tutorial
 
 A linked list is a linear data structure similar to an array, but the elements are stored in a way such that each element is a seperate object which contains a pointer to next element/object in the list
 
-Each element of a linked list can be called as `Node` and `head` is a reference to the first element/Node in the linked list , if a list is Empty then the head of the list should be null and to indicate the end of the list the next value of the last element points to null 
-
 There are many types of linkedlists but in this tutorial we are going to discuss about `singly Linked List`
 
-Each Element/Node of a linkedlist would be
+Each element of a linked list can be called as `Node` and `head` is a reference to the first element/Node in the linked list , if a list is Empty then the head of the list should be `null` and to indicate the end of the list the next value of the last element points to null 
+
+Each Element/Node of a linkedlist would be of an object Node type 
 
      class Node {
      constructor(val) {
@@ -64,4 +64,100 @@ We can print the list if we have access to the head of the list
           node = node.next;
      }
      };
+
+Exercise
+--------
+
+In this Exercise you must complete the body of the given loop such that it will traverse the whole list and prints the content of each Node of the list
+you will have access to head of the linked list
+
+
+Tutorial Code
+-------------
+
+const createList = ()=>{
+
+     n = 5;
+     let temp = new Node(0);
+     let head = temp;
+     let node2 = null;
+
+     for (let i = 0;i<n-1;i++)
+     {
+          node2 = new Node(10+i*10);
+          temp.next = node2;
+          temp = node2;
+     }
+
+     temp.next = null;
+
+     return head;
+
+     };
+
+
+const DataInNode = (head)=>{
+
+     
+// TODO: modify this code
+     while(){
+
+
+
+
+     }
+}
+
+let retVal = createList();
+DataInNode(retVal);
+
+Expected Output
+---------------
+
+0
+10
+20
+30
+40
+
+solution
+--------
+
+const createList = ()=>{
+
+n = 5;
+let temp = new Node(0);
+let head = temp;
+let node2 = null;
+
+for (let i = 0;i<n-1;i++)
+{
+     node2 = new Node(10+i*10);
+     temp.next = node2;
+     temp = node2;
+}
+
+temp.next = null;
+
+return head;
+
+};
+
+
+const DataInNode = (head)=>{
+
+     
+// TODO: modify this code
+while(head!==null){
+
+     console.log(head.data);
+
+     head = head.next;
+
+
+    }
+}
+
+let retVal = createList();
+DataInNode(retVal);
 
