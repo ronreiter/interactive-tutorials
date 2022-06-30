@@ -11,13 +11,12 @@ There are many types of linkedlists but in this tutorial we are going to discuss
 Each Element/Node of a linkedlist would be
 
      class Node{
-          
      constructor(val) {
-
           this.next = null;
-          this.data = val;
 
-     }
+          this.data = val;
+       }
+
      };
 
      
@@ -30,6 +29,7 @@ Suppose you want to construct a linked list of size `n`, then you should create 
      let node1 = new Node(1);
      let head = node1;
      let node2 = null;
+
      for (let i = 0;i<n-1;i++)
      {
           node2 = new Node(i+2);
