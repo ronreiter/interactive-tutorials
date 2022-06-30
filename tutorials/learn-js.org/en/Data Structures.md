@@ -42,3 +42,5 @@ Suppose you want to construct a linked list of size `n`, then you should create 
      return head;
 
      };
+
+The `createList` function takes n(`number of nodes`) as argument and creates `n` nodes and interlinks them by connecting each node with previous node's next value/member and stores `NULL` in the next field of last node (i.e, to indicate the termination of list) and returns `head`(an object of Node type) which refers to the starting Node of linked list
