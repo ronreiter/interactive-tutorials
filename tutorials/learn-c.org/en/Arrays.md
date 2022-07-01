@@ -10,6 +10,8 @@ straightforward syntax:
 Accessing a number from the array is done using the same syntax. Notice that arrays in C are zero-based, which means that if we
 defined an array of size 10, then the array cells 0 through 9 (inclusive) are defined. `numbers[10]` is not an actual value.
 
+Elements of an Array are stored in a contiguous memory location 
+
     int numbers[10];
 
     /* populate the array */
