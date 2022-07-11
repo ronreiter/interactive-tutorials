@@ -31,7 +31,7 @@ constructeur, qui est exécutée quand l'objet est créé. Le constructeur
 reçoit des arguments qui sont fournis plus tard quand on construit
 l'objet avec le mot-clé `new`.
 
-Après que nous ayons construit l'objet dans ka variable `$alex` nous
+Après que nous ayons construit l'objet dans la variable `$alex` nous
 pouvons maintenant utiliser les méthodes de l'objet.
 
 Nous avons implémenté une méthode d'objet `say_name`, qui affiche le
