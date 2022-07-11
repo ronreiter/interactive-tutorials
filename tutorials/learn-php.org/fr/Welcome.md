@@ -21,11 +21,13 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 - [[Variables et types]]
 - [[Tableaux simples]]
 - [[Tableaux à clés]]
+- [[Tableaux multidimensionnels]]
 - [[Chaines]]
 - [[Boucles for]]
 - [[Boucles while]]
 - [[Fonctions]]
 - [[Objets]]
+- [[Exceptions]]
 
 ### Proposer des tutoriels
 
