@@ -10,21 +10,21 @@ learn-c.org sigue bajo construcción - Si deseas contribuir tutoriales, por favo
 
 ### Aprende lo básico
 
-- [[Hola, Mundo!]]
-- [[Variables y Tipos]]
-- [[Arreglos]]
-- [[Arreglos Multidimensionales]]
-- [[Condiciones]]
-- [[Strings]]
-- [[Bucles for]]
-- [[Bucles while]]
-- [[Funciones]]
-- [[Static]]
+- [Hola, Mundo!](Hello, World!)
+- [Variables y Tipos](Variables and Types)
+- [Arreglos](Arrays)
+- [Arreglos Multidimensionales](Multidimensional Arrays)
+- [Condiciones](Conditions)
+- [Strings](Strings)
+- [Bucles for](For loops)
+- [Bucles while](While loops)
+- [Funciones](Functions)
+- [Static](Static)
 
 ### Avanzado
 
-- [[Recursión]]
-- [[Árboles binarios]]
+- [Recursión](Recursion)
+- [Árboles binarios](Binary trees)
 
 ### Contributing Tutorials
 
