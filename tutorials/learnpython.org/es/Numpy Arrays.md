@@ -54,3 +54,13 @@ Expected Output
 
 Solution
 --------
+
+import numpy as np
+
+weight = [81.65, 97.52, 95.25, 92.98, 86.18, 88.45]
+
+np_weight = np.array(weight)
+
+np_weight = np_weight * 2.2
+
+print(np_weight)
