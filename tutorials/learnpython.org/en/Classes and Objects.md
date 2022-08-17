@@ -86,7 +86,7 @@ The above would print out the message, "This is a message inside the class."
 ### __init__()
 
 The `__init__()` function, is a special function that is called when the class is being initiated.
-It's used for asigning values in a class.
+It's used for assigning values in a class.
 
     class NumberHolder:
        
