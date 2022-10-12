@@ -12,7 +12,18 @@ In last tutorial about shell function, you use "$1" represent the first argument
 * `$?` - The exit status of the last command executed.|
 * `$$` - The process ID of the current shell. For shell scripts, this is the process ID under which they are executing.|
 * `$!` - The process number of the last background command.|
-    
+
+Most of these special variables probably look familiar to you, and are rather self-explanatory. Using them effectively will be a simple matter of practice. However, let's take a closer look at some of these.
+
+You might have noticed that `$@` and `$*` have the same description. This is because they output basically the same thing, just with different formats. So if you take the example:
+
+    ./command -arg1 -arg2 /path/to/somewhere
+
+`$*` will give you a plain string: `"-arg1 -arg2 /path/to/somewhere"` while `$@` will give you an array: `{"-arg1", "-arg2", "/path/to/somewhere"}`.
+
+`$$` - As described above, this is the process ID of the current shell. If you were to echo out `$$`, you would get a process ID. However, if you were to put the same command in a bash script and run it in the same shell, it would produce a separate process ID. This is because every time you run a bash script, a new bash shell is started.
+
+`$!` - 
 
 ### Example:
 
