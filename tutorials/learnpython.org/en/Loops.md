@@ -99,6 +99,7 @@ numbers = [
 ]
 
 # your code goes here
+for number in numbers:
 
 Expected Output
 ---------------

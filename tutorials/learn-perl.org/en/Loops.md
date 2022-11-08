@@ -12,7 +12,7 @@ The basic loop structures are:
 	  $count--;
 	}
 
-`until CONDITION {BLOCK}`: epeat a BLOCK until the CONDITION is false. The CONDITION is evaluated before executing the BLOCK.
+`until CONDITION {BLOCK}`: repeat a BLOCK until the CONDITION is true. The CONDITION is evaluated before executing the BLOCK.
 
 	$count = 1;
 	until ($count > 10) {

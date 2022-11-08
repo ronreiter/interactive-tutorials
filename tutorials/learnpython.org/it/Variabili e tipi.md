@@ -64,11 +64,11 @@ myint = None
 
 # verifica del codice
 if mystring == "ciao":
-    print "Stringa: %s" % mystring
+    print ("Stringa: %s" % mystring)
 if isinstance(myfloat, float) and myfloat == 10.0:
-    print "Numero in virgola mobile: %d" % myfloat
+    print ("Numero in virgola mobile: %d" % myfloat)
 if isinstance(myint, int) and myint == 20:
-    print "Intero: %d" % myint
+    print ("Intero: %d" % myint)
 
 Expected Output
 ---------------
@@ -78,3 +78,6 @@ Intero: 20
 
 Solution
 --------
+mystring = "ciao"
+myfloat = 10.0
+myint = 20

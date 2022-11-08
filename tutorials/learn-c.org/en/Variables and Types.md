@@ -22,8 +22,7 @@ C uses arrays of characters to define strings, and will be explained in the Stri
 
 ### Defining variables
 
-For numbers, we will usually use the type `int`, which an integer in the size of a "word" the default number size of the machine which your program is
-compiled on. On most computers today, it is a 32-bit number, which means the number can range from -2,147,483,648 to 2,147,483,647.
+For numbers, we will usually use the type `int`. On most computers today, it is a 32-bit number, which means the number can range from -2,147,483,648 to 2,147,483,647.
 
 To define the variables `foo` and `bar`, we need to use the following syntax:
 

@@ -31,7 +31,7 @@ constructeur, qui est exécutée quand l'objet est créé. Le constructeur
 reçoit des arguments qui sont fournis plus tard quand on construit
 l'objet avec le mot-clé `new`.
 
-Après que nous ayons construit l'objet dans ka variable `$alex` nous
+Après que nous ayons construit l'objet dans la variable `$alex` nous
 pouvons maintenant utiliser les méthodes de l'objet.
 
 Nous avons implémenté une méthode d'objet `say_name`, qui affiche le
@@ -98,7 +98,7 @@ respectivement pour définir des fonctions auxquelles on peut accéder
 depuis l'extérieur de l'objet ou non, pour des besoins
 d'encapsulation. Ceci permet de mieux définir comment les objets
 devraient être utilisés, pour distinguer entre les fonctions qui sont
-utilisées pour des besoins internes, ou a l'inverse pour une interface externe.
+utilisées pour des besoins internes, ou à l'inverse pour une interface externe.
 
     class Student {
         // le constructeur devrait être public

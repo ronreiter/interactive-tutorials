@@ -55,3 +55,20 @@ Drugim imieniem w tablicy jest Edward.
 
 Solution
 --------
+
+liczby = []
+napisy = []
+imiona = ["Jan", "Edward", "Joanna"]
+
+liczby.append(1)
+liczby.append(2)
+liczby.append(3)
+
+napisy.append('witaj')
+napisy.append('swiecie')
+
+drugie_imie = imiona[1]
+
+print (liczby)
+print (napisy)
+print ("Drugim imieniem w tablicy jest %s." % drugie_imie)

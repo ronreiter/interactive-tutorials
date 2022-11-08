@@ -281,6 +281,21 @@ def error404():
     ), 404)
 
 
+# We are checking only the current domain subfolder and adding all the files to files_to_track array
+# so that they can be tracked and on change of any of these files, reload the server in real time
+def get_filenames_to_watch_and_reload():
+    dir_to_look = "tutorials/" + current_domain
+    files_to_track = []
+
+    for dirname, dirs, files in os.walk(dir_to_look):
+        for filename in files:
+            filename = os.path.join(dirname, filename)
+            if os.path.isfile(filename):
+                files_to_track.append(filename)
+    
+    return files_to_track
+
+
 @app.route("/favicon.ico")
 def favicon():
     return open(os.path.join(os.path.dirname(__file__), get_domain_data()["favicon"][1:]), "rb").read()
@@ -432,4 +447,6 @@ def robots():
 
 if __name__ == "__main__":
     logging.info("listening on port %s", args.port)
-    app.run(debug=True, port=args.port, host=args.host)
+
+    # The extra_files attribute enables us to provide file names which need to be tracked on change, trigger server reload
+    app.run(debug=True, port=args.port, host=args.host, extra_files=get_filenames_to_watch_and_reload())
