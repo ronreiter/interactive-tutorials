@@ -1,13 +1,5 @@
 # Welcome
 
-Welcome to the learn-js.org interactive JavaScript tutorial.
-
-Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the JavaScript programming language.
-
-Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
-
-learn-js.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
-
 欢迎来到learn-js.org的免费交互式 Javascript 语言教程。
 
 无论你是新手还是经验丰富的程序员，都可以通过本网站轻松学习 Javascript 语言。
