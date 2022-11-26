@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3-slim-bullseye
 EXPOSE 5000
 
 WORKDIR /usr/src/app
