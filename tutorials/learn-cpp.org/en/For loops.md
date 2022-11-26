@@ -1,6 +1,6 @@
 Tutorial
 --------
-We use loops in programming to repeat execution of a block of code instead of repeating the entire code. In C ++ we have 3 types of loops:
+We use loops in programming to repeat execution of a block of code instead of repeating the entire code. In C++ we have 3 types of loops:
  - for-loops
  - while loops
  - do-while loops.
@@ -8,7 +8,7 @@ We use loops in programming to repeat execution of a block of code instead of re
 The execution of a loop can be controlled using the following keywords
  - break - terminates the loop (or switch) -statement and transfers execution to the statement directly after the loop
  - continue - will cause the loop to process to the next element skipping the current one
- - goto LABEL - transferes control to the specified label. IT IS NOT ADVISED TO USE THIS STATEMENT!
+ - goto LABEL - transfers control to the specified label. IT IS NOT ADVISED TO USE THIS STATEMENT!
 
 ### "for" loop
 

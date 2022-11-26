@@ -7,7 +7,7 @@ relativement simple comparé à d'autres frameworks Web basé MVC
 (Python, Ruby, node.js, etc).
 
 À la différence d'autres frameworks Web standards, un fichier PHP est
-en fait un fichier HTML "amélioréé, qui est aussi capable d'exécuter
+en fait un fichier HTML "amélioré", qui est aussi capable d'exécuter
 du code au sein d'un document. Ainsi, vous pouvez commencer par
 exemple avec une simple page HTML qui ressemble à ceci :
 

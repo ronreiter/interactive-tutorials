@@ -5,7 +5,7 @@ Tutorial
 ### What is a static variable?
 By default, variables are local to the scope in which they are defined. Variables can be declared as static to increase their scope up to file containing them. As a result, these variables can be accessed anywhere inside a file.
 
-Consider the following scenario – we want to count the runners participating in a race:
+Consider the following scenario – where we want to count the runners participating in a race:
 
     #include<stdio.h>
     int runner() {
@@ -21,7 +21,7 @@ Consider the following scenario – we want to count the runners participating i
         return 0;
     }
 
-We will see that `count` is not updated because it is removed from memory as soon as the function completes.  If `static` is used, however:
+We will see that `count` is not updated because it is removed from memory as soon as the function completes.  If `static` is used however, we get the desired result:
 
     #include<stdio.h>
     int runner()

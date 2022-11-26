@@ -34,7 +34,7 @@ And honestly, you really don't have to put in a [ x ] value really, because if y
 		{'a', 'e', 'i', 'o', 'u'}
 	};
 
-the compiler would already know that there are two "dimensions" you could say, but, you need need __NEED__ a [ y ] value!! The compiler may be smart, but it _will not know_ how many integers, characters, floats, whatever you're using you have in the dimensions. Keep that in mind.
+the compiler would already know that there are two "dimensions" you could say, but, you NEED a [ y ] value!! The compiler may be smart, but it _will not know_ how many integers, characters, floats, whatever you're using you have in the dimensions. Keep that in mind.
 
 ### Initializing Two-Dimensional Arrays
 

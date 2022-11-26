@@ -15,6 +15,7 @@ learnrubyonline.org is still under construction - If you wish to contribute tuto
 - [[Variables and Types]]
 - [[Math]]
 - [[Strings]]
+- [[Printing variables and strings]]
 - [[Arrays]]
 - [[Hashes and Symbols]]
 - [[Conditional Statements]]

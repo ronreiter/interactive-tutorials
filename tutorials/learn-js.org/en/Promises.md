@@ -33,7 +33,7 @@ To make the code above work, we will need to write the function in the following
 
         result.then(function(status) {
             console.log("The status from the server is: ", status.ok);
-        }
+        });
     }
 
 Notice that we used the `then` function here, which is one of the methods of a `Promise`.
