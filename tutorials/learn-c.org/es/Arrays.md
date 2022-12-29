@@ -31,7 +31,7 @@ Ejercicio
 --------
 
 * El código de abajo no compila, ya que no existe la variable `grades`. 
-* Falta una de las calificaciones. ¿Puedes definirla así el promedio de calificaciones sea 85?
+* Falta una de las calificaciones. ¿Puedes definirla para que el promedio de calificaciones sea 85?
 
 Tutorial Code
 -------------
