@@ -36,7 +36,7 @@ Use the "print" function to print the line "Hello, World!".
 Tutorial Code
 -------------
 
-print("Goodbye, World!")
+print("Hello, World!")
 
 Expected Output
 ---------------
