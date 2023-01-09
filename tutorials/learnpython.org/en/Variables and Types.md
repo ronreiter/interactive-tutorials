@@ -71,9 +71,9 @@ The target of this exercise is to create a string, an integer, and a floating po
 Tutorial Code
 -------------
 # change this code
-mystring = None
-myfloat = None
-myint = None
+mystring = "hello"
+myfloat = 10.0
+myint = 20
 
 # testing code
 if mystring == "hello":
