@@ -21,7 +21,7 @@ la longitud del string:
     char name[11] = "John Smith";
 
 La razón por la que debemos añadir uno, aunque el string `John Smith` tiene exactamente 10 caracteres, se debe a la terminación de strings:
-un caracter especial (igual a 0) el cual indica el final de strings. El final del string es marcado porque el programa
+un caracter especial (igual a 0) el cual indica el final del string. El final del string es marcado porque el programa
 no sabe la longitud del string - solo el compilador la sabe según el código.
 
 ### Formateando strings con printf
@@ -34,7 +34,7 @@ Podemos usar el comando `printf` para formatear un string junto a otros strings,
     /* imprime 'John Smith tiene 27 años.' */
     printf("%s tiene %d años.\n", name, age);
 
-Notemos que cuando imprimimos strings, debemos añadir un caracter de nueva línea (`\n`) para que nuestra sentencia `printf` vaya a imprimir en una nueva línea.
+Notemos que cuando imprimimos strings, debemos añadir un caracter de nueva línea (`\n`) para que nuestra próxima sentencia `printf` se imprima en una nueva línea.
 
 ### Longitud de Strings
 

@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-En el tutorial previo sobre [Arreglos](https://www.learn-c.org/en/Arrays), cubrimos los arreglos y cómo funcionan. Los arreglos que vimos eran unidimensionales, pero C puede crear y usar arreglos multidimensionales. Aquí está la forma general de una declaración de un arreglo multidimensional:
+En el tutorial previo sobre [Arreglos](https://www.learn-c.org/es/Arrays), cubrimos los arreglos y cómo funcionan. Los arreglos que vimos eran unidimensionales, pero C puede crear y usar arreglos multidimensionales. Aquí está la forma general de una declaración de un arreglo multidimensional:
 
 	tipo nombre[tamaño1][tamaño2]...[tamañoN];
 
@@ -25,7 +25,7 @@ Donde __tipo__ puede ser cualquier tipo de datos de C (int, char, long, long lon
 
 ![Table 1A](https://www.tutorialspoint.com/cprogramming/images/two_dimensional_arrays.jpg)
 
-En este sentido, todos los elementos en el arreglo a son identificados por un nombre de elemento en la forma __a[i][j]__, donde 'a' es el nombre del arreglo, y 'i' y 'j' son los índices que identifican, o muestran, cada elemento en 'a'.
+En este sentido, todos los elementos en el arreglo a son identificados por un nombre de elemento en la forma __a[i][j]__, donde 'a' es el nombre del arreglo, e 'i' y 'j' son los índices que identifican, o muestran, cada elemento en 'a'.
 
 Y realmente no necesitas poner un valor [ x ], porque si hicieses algo así -
 
@@ -34,7 +34,7 @@ Y realmente no necesitas poner un valor [ x ], porque si hicieses algo así -
 		{'a', 'e', 'i', 'o', 'u'}
 	};
 
-podríamos decir que el compilador ya sabría que hay dos "dimensiones", pero, necesitas necesitas __NECESITAS__ un valor [ y ]!! El compilador puede ser inteligente, pero _no sabrá_ cuantos enteros, caracteres, floats, lo que sea que estés usando tienes en las dimensiones. Ten eso en cuenta.
+podríamos decir que el compilador ya sabría que hay dos "dimensiones", pero, __NECESITAS__ un valor [ y ]!! El compilador puede ser inteligente, pero _no sabrá_ cuantos enteros, caracteres, floats, lo que sea que estés usando tienes en las dimensiones. Ten eso en cuenta.
 
 ### Inicializando arreglos bidimensionales
 
@@ -56,12 +56,12 @@ Un elemento de un arreglo bidimensional es accedido usando los suscriptos, e.g.,
 
 	int val = a[2][3];
 
-La previa sentencia tomará el 4to elemento de la 3er hilera del arreglo.
+La sentencia previa tomará el 4to elemento de la 3er hilera del arreglo.
 
 Ejercicio
 --------
 
-Intentemos encontrar las calificaciones promedio de un grupo de cinco estudiantes para dos materias, Matemática y Física. Para hacer esto, Usamos un arreglo bidimensional llamado ```grades```. Las calificaciones que corresponden a Matemática serán guardadas en la primer hilera (```grades[0]```), mientras que las correspondientes a Física serán guardadas en la segunda hilera (```grades[1]```). Completa los siguientes pasos así podrás ejecutar este programa.
+Intentemos encontrar las calificaciones promedio de un grupo de cinco estudiantes para dos materias, Matemática y Física. Para hacer esto, usamos un arreglo bidimensional llamado ```grades```. Las calificaciones que corresponden a Matemática serán guardadas en la primer hilera (```grades[0]```), mientras que las correspondientes a Física serán guardadas en la segunda hilera (```grades[1]```). Complete los siguientes pasos para que pueda ejecutar este programa.
 
 - Declara grades como un arreglo bidimensional de enteros
 - Completa los bucles for especificando sus condiciones finalizadoras
