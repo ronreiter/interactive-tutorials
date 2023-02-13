@@ -66,7 +66,7 @@ Let's write an example code to check if the user's name is `John` or not
     }
 
     // let's try again changing the username variable
-    userName = "Mathew"
+    userName := "Mathew"
 
     // prints You are not John
     if userName == "John" {
@@ -79,7 +79,7 @@ You can cascade if statement in an else statement to check for more conditions a
 
 Now let's write some code to check if a user age is below 20 or between 20 and 60 or above 60.
 
-    userAge = 26
+    userAge := 26
 
     if userAge < 20 {
         fmt.Println("Below 20")
