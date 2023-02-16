@@ -19,16 +19,16 @@ We use the following syntax to allocate a new animal in the `mypet` argument:
 
 This instructs the compiler that we want to allocate just enough memory to store an animal struct and then return a reference of type `animal` to the freshly allocated data. The memory allocation function `malloc()` reserves the memory space supplied. This is the size of an `animal` in bytes in this example.
 
- We write `(animal *)` before the call to `malloc()` because `malloc()` produces a "void pointer," which is a pointer with no type. The addition of `(animal *)` before it is known as *typecasting*, and it converts the type of the pointer returned by `malloc()` to `animal`. However, it isn`t technically required to express it this way since if you don`t typecast it, C will implicitly transform the type of the returned pointer to that of the pointer it is given to (in this case, `mypet`).
+ We write `(animal *)` before the call to `malloc()` because `malloc()` produces a "void pointer," which is a pointer with no type. The addition of `(animal *)` before it is known as *typecasting*, and it converts the type of the pointer returned by `malloc()` to `animal`. It is technically required to express it this way since if you don`t typecast it, C++ won't transform the type of the returned pointer to that of the pointer it is given to (in this case, `mypet`).
 
 It should be noted that `sizeof` is not a function since the compiler interprets it and converts it to the actual memory size of the person struct.
 
 We may use the `->` notation to access the animal`s members:
 
     mypet->name = "John";
-    mypet->age = 27;
+    mypet->type = 27;
 
-When we`re through with the dynamically allocated struct, we can free it using `free`:
+When we're through with the dynamically allocated struct, we can free it using `free`:
 
     free(mypet);
 
