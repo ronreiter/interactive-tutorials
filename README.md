@@ -62,4 +62,5 @@ Contributors
 - qwong95
 - AddaxSoft
 - derco0n
+- imagesid
 - ...<perhaps you>...
