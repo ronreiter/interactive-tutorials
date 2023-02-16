@@ -32,7 +32,7 @@ When we're through with the dynamically allocated struct, we can free it using `
 
     free(mypet);
 
-It should be noted that the free function does not remove the `mypet` variable itself; rather, it only releases the data that it references. The `mypet` variable will still point to a location in memory, but after calling `mypet,` we are no longer permitted to access that location. That pointer must not be used again until we allocate fresh data with it.
+ It should be noted that the free function does not remove the `mypet` variable itself; rather, it only releases the data that it references. The `mypet` variable will still point to a location in memory, but after calling `mypet,` we are no longer permitted to access that location. That pointer must not be used again until we allocate fresh data with it.
 Exercise
 --------
 
