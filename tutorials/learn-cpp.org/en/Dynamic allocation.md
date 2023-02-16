@@ -12,6 +12,7 @@ Assume we wish to allocate an animal structure dynamically. The animal is define
         int type;
     } ani;
 
+In the code above, `animal` is the name of the struct and `ani` is the nickname. Later you can call the struct by its real name or nickname.
 We use the following syntax to allocate a new animal in the `mypet` argument: 
 
     animal * mypet= (animal *) malloc(sizeof(animal));
