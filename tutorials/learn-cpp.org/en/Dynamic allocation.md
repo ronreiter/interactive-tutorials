@@ -5,7 +5,7 @@ Memory dynamic allocation is a crucial topic in C. It enables the creation of co
 
 To dynamically allocate memory, we must have a pointer ready to store the location of the freshly allocated memory. We can use that same address to access the memory that has been allocated to us, and we can use that same pointer to release the memory once we have finished using it.
 
-Assume we wish to allocate an animal structure dynamically. The person is defined as follows:
+Assume we wish to allocate an animal structure dynamically. The animal is defined as follows:
 
     typedef struct animal{
         char const * name;
