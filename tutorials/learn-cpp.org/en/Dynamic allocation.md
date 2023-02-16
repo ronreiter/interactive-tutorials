@@ -25,14 +25,14 @@ This instructs the compiler that we want to allocate just enough memory to store
 
 We may use the `->` notation to access the animal`s members:
 
-    mypet->name = "John";
-    mypet->type = 27;
+    mypet->name = "Mongmongi";
+    mypet->type = 2;
 
 When we're through with the dynamically allocated struct, we can free it using `free`:
 
     free(mypet);
 
- It should be noted that the free function does not remove the `mypet` variable itself; rather, it only releases the data that it references. The `mypet` variable will still point to a location in memory, but after calling `mypet,` we are no longer permitted to access that location. That pointer must not be used again until we allocate fresh data with it.
+ It should be noted that the free function does not remove the `mypet` variable itself; rather, it only releases the data that it references. The `mypet` variable will still point to a location in memory, but after calling `free,` we are no longer permitted to access that location. That pointer must not be used again until we allocate fresh data with it.
  
 Exercise
 --------
