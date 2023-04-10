@@ -50,7 +50,7 @@ Simplemente haga clic en el capítulo desde el que desea comenzar y después sig
 
 ### Otros tutoriales de Python
 
-- [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) tiene toneladas de [tutoriales interactivos](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) sobre Python que cubren temas como manipulación de datos, visualización de datos, estadística, aprendizaje automático (machine learning), y más.
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294) tiene toneladas de [tutoriales interactivos](https://datacamp.pxf.io/c/67577/1012793/13294) sobre Python que cubren temas como manipulación de datos, visualización de datos, estadística, aprendizaje automático (machine learning), y más.
 - Lee el curso de After Hours Programming [Tutoriales Python y referencias](http://www.afterhoursprogramming.com/index.php?article=181).
 
 ### Contribuir con tutoriales

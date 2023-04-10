@@ -2,7 +2,7 @@ Tutorial
 --------
 
 In programming, a module is a piece of software that has a specific functionality. 
-For example, when building a ping pong game, one module may be responsible for the game logic, and  
+For example, when building a ping pong game, one module may be responsible for the game logic, and 
 another module draws the game on the screen. Each module consists of a different
 file, which may be edited separately.
 
