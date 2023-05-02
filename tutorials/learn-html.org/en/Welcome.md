@@ -11,6 +11,7 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 ### Getting Started with HTML & CSS
 
 - [[Hello, World!]]
+- [[Comment]]
 - [[Basic Elements]]
 - [[Links]]
 - [[Lists]]

@@ -18,6 +18,8 @@ integration, code refactoring, automatic indentation, syntax highlighting, compa
 * Sublime Text (Commercial) - [[https://www.sublimetext.com/]]
 * Notepad++ (Windows only) - [[https://notepad-plus-plus.org/download/v7.html]]
 
+Of course you can also use other IDE's, but you will need to research them yourself!
+
 In this tutorial you won't actually need an IDE, because all coding is done online.
 
 ### Introduction
