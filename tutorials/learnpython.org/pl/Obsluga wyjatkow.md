@@ -7,7 +7,7 @@ Czasami użytkownik może podać złe dane. Zasoby sieciowe mogą być niedostę
 
 W Pythonie lekarstwem na to są tzw. wyjątki. Prawie na pewno nie widzisz ich po raz pierwszy.
 
-    >>> print a
+    >>> print(a)
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
     NameError: name 'a' is not defined
@@ -38,8 +38,8 @@ def zwroc_nazwisko():
 
 #Test kodu
 zwroc_nazwisko()
-print "Wszystkie wyjatki obsluzone! Dobra robota!"
-print "Nazwisko aktora brzmi %s" % zwroc_nazwisko()
+print("Wszystkie wyjatki obsluzone! Dobra robota!")
+print("Nazwisko aktora brzmi %s" % zwroc_nazwisko())
 
 Expected Output
 ---------------

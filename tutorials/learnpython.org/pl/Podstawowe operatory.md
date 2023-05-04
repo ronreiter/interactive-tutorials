@@ -40,7 +40,7 @@ Tablice mogą być łączone za pomocą symbolu dodawania:
 
 Tak jak w przypadku stringów możliwe jest tworzenie tablic o powtarzającym się ciągu elementów za pomocą znaku mnożenia:
 
-    print [1,2,3] * 3
+    print([1,2,3] * 3)
 
 ### Ćwiczenie
 
@@ -59,15 +59,15 @@ x_tab = [x]
 y_tab = [y]
 duza_tab = []
 
-print "x_tab zawiera %d obiektow" % len(x_tab)
-print "y_tab zawiera %d obiektow" % len(y_tab)
-print "duza_tab zawiera %d obiektow" % len(duza_tab)
+print("x_tab zawiera %d obiektow" % len(x_tab))
+print("y_tab zawiera %d obiektow" % len(y_tab))
+print("duza_tab zawiera %d obiektow" % len(duza_tab))
 
 # sprawdzenie poprawnosci
 if x_tab.count(x) == 10 and y_tab.count(y) == 10:
-    print "Prawie zrobione..."
+    print("Prawie zrobione...")
 if duza_tab.count(x) == 10 and duza_tab.count(y) == 10:
-    print "Doskonale!"
+    print("Doskonale!")
 
 Expected Output
 ---------------
@@ -87,11 +87,11 @@ x_tab = [x] * 10
 y_tab = [y] * 10
 duza_tab = x_tab + y_tab
 
-print ("x_tab zawiera %d obiektow" % len(x_tab))
-print ("y_tab zawiera %d obiektow" % len(y_tab))
-print ("duza_tab zawiera %d obiektow" % len(duza_tab))
+print("x_tab zawiera %d obiektow" % len(x_tab))
+print("y_tab zawiera %d obiektow" % len(y_tab))
+print("duza_tab zawiera %d obiektow" % len(duza_tab))
 
 if x_tab.count(x) == 10 and y_tab.count(y) == 10:
-    print ("Prawie zrobione...")
+    print("Prawie zrobione...")
 if duza_tab.count(x) == 10 and duza_tab.count(y) == 10:
-    print ("Doskonale!")
+    print("Doskonale!")

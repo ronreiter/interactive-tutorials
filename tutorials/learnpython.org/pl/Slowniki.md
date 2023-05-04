@@ -23,11 +23,11 @@ Powyższą operację można także zapisać w bardziej zwięzły sposób:
 Słowniki mogą być przeszukiwane tak jak tablice. Jednak słowniki, w przeciwieństwie do tablic, nie przechowują danych w kolejności, w której zostały zapisane. Aby wypisać pary klucz – wartość, wystarczy użyć następującej składni:
 
     for imie, numer in kontakty.iteritems():
-        print "%s ma numer telefonu: %d" % (imie, numer)
+        print("%s ma numer telefonu: %d" % (imie, numer))
 Albo
 
     for imie in kontakty:
-        print "%s ma numer telefonu: %d" % (imie, kontakty[imie])
+        print("%s ma numer telefonu: %d" % (imie, kontakty[imie]))
 
 ### Usuwanie wartości
 
@@ -57,10 +57,10 @@ kontakty = {
 
 # sprawdzenie poprawnosci koadu
 if "Jakub" in kontakty and kontakty["Jakub" ] == 938273443:
-    print "Jakub jest w kontaktach."
-    print "Jego numer to ", kontakty["Jakub"], "."
+    print("Jakub jest w kontaktach.")
+    print("Jego numer to ", kontakty["Jakub"], ".")
 if "Kamila" not in kontakty:
-    print "Kamili nie ma w kontaktach."
+    print("Kamili nie ma w kontaktach.")
 
 Expected Output
 ---------------

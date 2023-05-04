@@ -10,10 +10,10 @@ Każda funkcja w Pythonie otrzymuje określoną liczbę argumentów, jeśli zost
 Możliwe jest również zdefiniowanie funkcji, która otrzymuje zmienną liczbę argumentów:
 
     def foo(pierwszy, drugi, trzeci, *reszta):
-        print "Pierwszy: %s" % pierwszy
-        print "Drugi: %s" % drugi
-        print "Trzeci: %s" % trzeci
-        print "I cala reszta... %s" % list(reszta)
+        print("Pierwszy: %s" % pierwszy)
+        print("Drugi: %s" % drugi)
+        print("Trzeci: %s" % trzeci)
+        print("I cala reszta... %s" % list(reszta))
 
 Zmienna "reszta" jest tablicą zmiennych, która przechowuje wszystkie argumenty przekazane  funkcji foo poza pierwszymi trzema argumentami. Tak więc wywołanie `foo(1,2,3,4,5)` wypisze:
 
@@ -26,13 +26,13 @@ Argumenty do funkcji można przesyłać także za pomocą słów-kluczy, dzięki
 
     def funkcja(pierwszy, drugi, trzeci, **opcje):
         if opcje.get("akcja") == "dodaj":
-            print "Suma to: %d" % (pierwszy + drugi + trzeci)
+            print("Suma to: %d" % (pierwszy + drugi + trzeci))
 
         if opcje.get("zwroc") == "pierwszy":
             return pierwszy
 
     wynik = funkcja(1, 2, 3, akcja = "dodaj", zwroc = "pierwszy")
-    print "Wynik: %d" % wynik
+    print("Wynik: %d" % wynik)
 
 Po wykonaniu tego skryptu na wyjściu ujrzymy:
 
@@ -61,13 +61,13 @@ def bar(a, b, c):
 
 # test kodu
 if foo(1,2,3,4) == 1:
-    print "Dobrze."
+    print("Dobrze.")
 if foo(1,2,3,4,5) == 2:
-    print "Lepiej."
+    print("Lepiej.")
 if bar(1,2,3,magiczna_liczba = 6) == False:
-    print "Bardzo dobrze."
+    print("Bardzo dobrze.")
 if bar(1,2,3,magiczna_liczba = 7) == True:
-    print "Doskonale!"
+    print("Doskonale!")
 
 Expected Output
 ---------------

@@ -14,7 +14,7 @@ Wyrażenia regularne to pewne "wzorce", za pomocą których można opisać ciąg
 
     if dopasowanie: #Sprawdzamy czy udalo sie cos znalezc
         numer = dopasowanie.group()
-        print numer
+        print(numer)
 
 W linijce `sciezka = r'\d\d\d\d'` właśnie utworzyliśmy wyrażenie regularne.
 
@@ -60,11 +60,11 @@ def test_email(twoje_wyrazenie):
     adresy = ["john@example.com", "python-list@python.org", '"wha.t.`1an?ug{}ly@email.com"']
     for adres in adresy:
         if not re.match(wyrazenie, adres):
-            print "Nie udalo ci sie przyporzadkowac %s" % (adres)
+            print("Nie udalo ci sie przyporzadkowac %s" % (adres))
         elif not twoje_wyrazenie:
-            print "Nie wprowadziles wyrazenia do funkcji test_email"
+            print("Nie wprowadziles wyrazenia do funkcji test_email")
         else:
-            print "Dobrze"
+            print("Dobrze")
 
 wyrazenie = r"" # Tu wpisz swoje wyrazenie
 test_email(wyrazenie)
