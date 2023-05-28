@@ -38,6 +38,7 @@ Simplemente haga clic en el capítulo desde el que desea comenzar y después sig
 
 - [Generadores](Generators)
 - [Listas de comprensión](List Comprehensions)
+- [Funciones Lambda](Lambda functions)
 - [Funciones de argumentos múltiples](Multiple Function Arguments)
 - [Expresiones regulares](Regular Expressions)
 - [Manejo de excepciones](Exception Handling)
