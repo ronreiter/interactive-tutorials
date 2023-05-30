@@ -33,7 +33,7 @@ Here is an example:
         id INTEGER PRIMARY KEY,
         full_name TEXT,
         age INTEGER
-    )
+    );
 
 The `id` of the student is the primary key, since we cannot have more than two people with the same ID number in our table. full_name needs to be a textual
 record whereas the age can be a whole number.
