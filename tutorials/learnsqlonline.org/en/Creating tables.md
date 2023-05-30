@@ -23,7 +23,7 @@ To create a table, use the following syntax:
         column3 <data type>
     );
 
-A primary key of a table is a special type of unique index which defines the primary key of the table. There can only one row for each primary key, and
+A primary key of a table is a special type of unique index which defines the primary key of the table. There can only be one row for each primary key, and
 it is very efficient to select on the primary because it is also an index. Unlike a unique index, a primary key cannot be NULL. Primary keys can also
 be used for things like foreign keys, constraints, sharing and more, and it is always important to define one, if possible.
 
