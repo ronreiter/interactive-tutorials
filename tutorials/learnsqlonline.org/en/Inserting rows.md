@@ -1,8 +1,3 @@
-Introduction
-------------
-
-To discover more intermediate courses and gain hands-on experience in SQL, register to DataCamp's [Intermediate SQL](https://datacamp.pxf.io/m5nmQ7) tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. [Start Now!](https://datacamp.pxf.io/Kjxv6a)
-
 Tutorial
 --------
 

@@ -25,7 +25,7 @@ courses = json.load(open("courses.json"))
 app = Flask(__name__)
 app.secret_key = constants.SECRET_KEY
 
-sections = re.compile(r"(Introduction\n[=\-]+(.*)\n*)?Tutorial\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
+sections = re.compile(r"Tutorial\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 
 current_domain = os.environ.get("DEFAULT_DOMAIN", constants.LEARNPYTHON_DOMAIN)
@@ -186,9 +186,8 @@ def init_tutorials():
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
-                    _, introduction, text, code, output, solution = tutorial_sections[0]
+                    text, code, output, solution = tutorial_sections[0]
                     tutorial_dict["page_title"] = tutorial
-                    tutorial_dict["introduction"] = wikify(introduction, language)
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)
                     tutorial_dict["output"] = untab(output)
