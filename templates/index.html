@@ -59,6 +59,10 @@
     <div class="row">
 
         <div class="col col-lg-10">
+            {% if domain_data.language == "sql" and introduction != "" %}
+              {% autoescape off %}{{ introduction }}{% endautoescape %}
+            {% endif %}
+
             <div id="inner-text">{% autoescape off %}
                 {% if page_title %}
                     <h1>{{ page_title }}</h1>

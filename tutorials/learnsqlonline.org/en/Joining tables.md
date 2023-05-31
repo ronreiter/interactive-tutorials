@@ -1,3 +1,8 @@
+Introduction
+------------
+
+To discover more courses about data manipulation and SQL functions, register to DataCamp's [SQL](https://datacamp.pxf.io/DKLN45) tutorials. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. [Start Now!](https://datacamp.pxf.io/Kjxv6a)
+
 Tutorial
 --------
 
@@ -117,4 +122,3 @@ Solution
     FROM orders
     JOIN customers ON orders.customer_id = customers.id
     WHERE first_name = 'John';
-

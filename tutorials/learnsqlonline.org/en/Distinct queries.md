@@ -1,3 +1,8 @@
+Introduction
+------------
+
+To discover more intermediate to advanced SQL courses, register to DataCamp's [SQL](https://datacamp.pxf.io/eKR5Wg) tutorials. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. [Start Now!](https://datacamp.pxf.io/Kjxv6a)
+
 Tutorial
 --------
 
@@ -9,13 +14,13 @@ all of the columns for two or more rows exactly match.
 An example of where this can be useful is when we want to get the list of people
 
 Let's look at some examples:
-    
+
     .exec
     CREATE TABLE grades (name TEXT, subject TEXT, grade INTEGER);
-    
+
     INSERT INTO grades (name, subject, grade) VALUES
         ("John", "CompSci", 97), ("Eric", "CompSci", 88), ("Carol", "Arts", 99),
-        ("John", "History", 93), ("Andrew", "History", 82), ("Eric", "History", 87),  
+        ("John", "History", 93), ("Andrew", "History", 82), ("Eric", "History", 87),
         ("Steve", "Physics", 91), ("John", "Physics", 84), ("Barney", "Physics", 97);
 
     SELECT "all names", COUNT(name) FROM grades;
@@ -23,9 +28,9 @@ Let's look at some examples:
     SELECT DISTINCT name FROM grades;
 
 A `DISTINCT` query is very similar to a `GROUP BY` clause with all of the columns selected inside the clause. This
-effectively causes all identical rows to be grouped together. The difference between a `GROUP BY` query and a 
+effectively causes all identical rows to be grouped together. The difference between a `GROUP BY` query and a
 `DISTINCT` query is that you cannot count the number of identical occurrences have been identified for each row with
-a `DISTINCT` query. However, it is more efficient than a `GROUP BY` query most of the times.   
+a `DISTINCT` query. However, it is more efficient than a `GROUP BY` query most of the times.
 
 Exercise
 --------
@@ -38,11 +43,11 @@ CREATE TABLE grades (name TEXT, subject TEXT, grade INTEGER);
 
 INSERT INTO grades (name, subject, grade) VALUES
     ("John", "CompSci", 97), ("Eric", "CompSci", 88), ("Carol", "Arts", 99),
-    ("John", "History", 93), ("Andrew", "History", 82), ("Eric", "History", 87),  
+    ("John", "History", 93), ("Andrew", "History", 82), ("Eric", "History", 87),
     ("Steve", "Physics", 91), ("John", "Physics", 84), ("Barney", "Physics", 97);
 
 -- enter code here
-    
+
 Expected Output
 ---------------
 CompSci
@@ -56,7 +61,7 @@ CREATE TABLE grades (name TEXT, subject TEXT, grade INTEGER);
 
 INSERT INTO grades (name, subject, grade) VALUES
     ("John", "CompSci", 97), ("Eric", "CompSci", 88), ("Carol", "Arts", 99),
-    ("John", "History", 93), ("Andrew", "History", 82), ("Eric", "History", 87),  
+    ("John", "History", 93), ("Andrew", "History", 82), ("Eric", "History", 87),
     ("Steve", "Physics", 91), ("John", "Physics", 84), ("Barney", "Physics", 97);
 
 -- enter code here

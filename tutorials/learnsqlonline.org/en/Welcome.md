@@ -1,3 +1,7 @@
+Get started learning SQL with DataCamp's free [Introduction to SQL](https://datacamp.pxf.io/5gjDNn) tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. [Start Now!](https://datacamp.pxf.io/Kjxv6a)
+
+This site is generously supported by [DataCamp](https://datacamp.pxf.io/Kjxv6a). DataCamp offers online interactive [SQL Tutorials](https://datacamp.pxf.io/eKR5Wg) for Data Science. Join 11+ million other learners and get started learning [SQL for data science](https://datacamp.pxf.io/eKR5Wg) today.
+
 # Welcome
 
 Welcome to the learnsqlonline.org free interactive SQL tutorial.
@@ -33,16 +37,17 @@ learnsqlonline.org is still under construction - If you wish to contribute tutor
 - [[Order by]]
 
 ### Advanced tutorials
-- String operations
-- Inner and outer joins
-- The UNION statement
-- The CASE statement
-- Combining INSERT INTO and SELECT
-- Subqueries
-- Indexing
-- Altering tables
-- Views
-- Window functions
+
+- [String operations](https://datacamp.pxf.io/ZQrAgK)
+- [Inner and outer joins](https://datacamp.pxf.io/ZQrAgK)
+- [The UNION statement](https://datacamp.pxf.io/ZQrAgK)
+- [The CASE statement](https://datacamp.pxf.io/ZQrAgK)
+- [Combining INSERT INTO and SELECT](https://datacamp.pxf.io/ZQrAgK)
+- [Subqueries](https://datacamp.pxf.io/ZQrAgK)
+- [Indexing](https://datacamp.pxf.io/ZQrAgK)
+- [Altering tables](https://datacamp.pxf.io/ZQrAgK)
+- [Views](https://datacamp.pxf.io/ZQrAgK)
+- [Window functions](https://datacamp.pxf.io/ZQrAgK)
 
 ### Contributing Tutorials
 

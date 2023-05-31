@@ -1,3 +1,8 @@
+Introduction
+------------
+
+To discover more interactive courses and gain hands-on experience in SQL, get started with DataCamp's free [Introduction to SQL](https://datacamp.pxf.io/5gjDNn) tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. [Start Now!](https://datacamp.pxf.io/Kjxv6a)
+
 Tutorial
 --------
 

@@ -1,3 +1,8 @@
+Introduction
+------------
+
+To discover more interactive courses and gain hands-on experience in SQL, get started with DataCamp's free [Introduction to SQL](https://datacamp.pxf.io/5gjDNn) tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. [Start Now!](https://datacamp.pxf.io/Kjxv6a)
+
 Tutorial
 --------
 
@@ -45,10 +50,10 @@ Create a table named `students` with a first_name, a last_name (both text column
 
 Tutorial Code
 -------------
--- create your table here  
+-- create your table here
 
-INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);  
-SELECT * FROM students;  
+INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);
+SELECT * FROM students;
 
 Expected Output
 ---------------
@@ -56,11 +61,11 @@ John|Doe|23
 
 Solution
 --------
-CREATE TABLE students (  
-    first_name TEXT,  
-    last_name TEXT,  
-    age INTEGER  
-);  
+CREATE TABLE students (
+    first_name TEXT,
+    last_name TEXT,
+    age INTEGER
+);
 
-INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);  
-SELECT * FROM students;  
+INSERT INTO students (first_name, last_name, age) VALUES ("John", "Doe", 23);
+SELECT * FROM students;

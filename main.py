@@ -25,7 +25,7 @@ courses = json.load(open("courses.json"))
 app = Flask(__name__)
 app.secret_key = constants.SECRET_KEY
 
-sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
+sections = re.compile(r"(Introduction\n[=\-]+(.*)\n*)?Tutorial\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 
 current_domain = os.environ.get("DEFAULT_DOMAIN", constants.LEARNPYTHON_DOMAIN)
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "-d",
         "--domain",
-        help="Default domain when running in development mode",        
+        help="Default domain when running in development mode",
         default=current_domain,
         choices=list(constants.DOMAIN_DATA.keys())
     )
@@ -186,8 +186,9 @@ def init_tutorials():
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
-                    text, code, output, solution = tutorial_sections[0]
+                    _, introduction, text, code, output, solution = tutorial_sections[0]
                     tutorial_dict["page_title"] = tutorial
+                    tutorial_dict["introduction"] = wikify(introduction, language)
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)
                     tutorial_dict["output"] = untab(output)
@@ -292,7 +293,7 @@ def get_filenames_to_watch_and_reload():
             filename = os.path.join(dirname, filename)
             if os.path.isfile(filename):
                 files_to_track.append(filename)
-    
+
     return files_to_track
 
 
