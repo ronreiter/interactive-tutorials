@@ -25,7 +25,7 @@ courses = json.load(open("courses.json"))
 app = Flask(__name__)
 app.secret_key = constants.SECRET_KEY
 
-sections = re.compile(r"Tutorial\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
+sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
 WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
 
 current_domain = os.environ.get("DEFAULT_DOMAIN", constants.LEARNPYTHON_DOMAIN)
