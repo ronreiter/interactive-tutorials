@@ -36,7 +36,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "-d",
         "--domain",
-        help="Default domain when running in development mode",        
+        help="Default domain when running in development mode",
         default=current_domain,
         choices=list(constants.DOMAIN_DATA.keys())
     )
@@ -292,7 +292,7 @@ def get_filenames_to_watch_and_reload():
             filename = os.path.join(dirname, filename)
             if os.path.isfile(filename):
                 files_to_track.append(filename)
-    
+
     return files_to_track
 
 
