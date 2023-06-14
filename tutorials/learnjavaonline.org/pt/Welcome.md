@@ -1,35 +1,36 @@
-# Welcome
+# Bem-vindo
 
-Welcome to the LearnJavaOnline.org Interactive Java Tutorial.
+Bem-vindo ao Tutorial Java Interativo
+[[LearnJavaOnline.org]]. 
 
-Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Java programming language.
+Se você é um programador experiente ou não, este site é destinado a todos que desejam aprender a linguagem de programação Java.
 
-Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
+Basta clicar no capítulo que você deseja começar e seguir as instruções. Boa sorte!
 
-### Learn the Basics
+### Aprenda o básico
 
-- [[Hello, World!]]
-- [[Variables and Types]]
-- [[Conditionals]]
-- [[Arrays]]
-- [[Loops]]
-- [[Functions]]
-- [[Objects]]
-- [[Compiling and Running with Arguments]]
+- [[Hello, World!]] (Olá, Mundo)
+- [[Variables and Types]] (Variáveis e Tipos)
+- [[Conditionals]] (Condicionais)
+- [[Arrays]] (Lista, Matrizes)
+- [[Loops]] (Loops)
+- [[Functions]] (FunçÕes)
+- [[Objects]] (Objetos)
+- [[Compiling and Running with Arguments]] (Compilando e executando com argumentos)
 
-### Advanced Topics (Under Construction)
+### Tópicos Avançados (Em Construção)
 
-- [[Inheritance]]
-- [[Try and Catch]]
-- [[Abstract Classes]]
-- [[Interfaces]]
-- [[Using Generics]]
-- [[Collections]]
+- [[Inheritance]] (Herança)
+- [[Try and Catch]] (Captura de erros)
+- [[Abstract Classes]] (Classes abstratas)
+- [[Interfaces]] 
+- [[Using Generics]] (Usando tipos genéricos)
+- [[Collections]] (Coleções)
 - [[Wrappers and Autoboxing]]
-- [[Exceptions]]
-- [[Generic Types]]
-- [[IO Streams]]
+- [[Exceptions]] (Exceções)
+- [[Generic Types]] (Tipos genéricos)
+- [[IO Streams]] (Fluxo de entrada/saída de dados)
 
-### Contributing Tutorials
+### Tutoriais de Contribuição
 
-Read more here: [[Contributing Tutorials]]
+Leia mais aqui: [[Contributing Tutorials]] (Tutoriais de contribuição)
