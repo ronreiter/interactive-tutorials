@@ -34,16 +34,16 @@ learnsqlonline.org is still under construction - If you wish to contribute tutor
 
 ### Advanced tutorials
 
-- [String operations](https://datacamp.pxf.io/ZQrAgK)
-- [Inner and outer joins](https://datacamp.pxf.io/ZQrAgK)
-- [The UNION statement](https://datacamp.pxf.io/ZQrAgK)
-- [The CASE statement](https://datacamp.pxf.io/ZQrAgK)
-- [Combining INSERT INTO and SELECT](https://datacamp.pxf.io/ZQrAgK)
-- [Subqueries](https://datacamp.pxf.io/ZQrAgK)
-- [Indexing](https://datacamp.pxf.io/ZQrAgK)
-- [Altering tables](https://datacamp.pxf.io/ZQrAgK)
-- [Views](https://datacamp.pxf.io/ZQrAgK)
-- [Window functions](https://datacamp.pxf.io/ZQrAgK)
+- [String operations](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Inner and outer joins](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [The UNION statement](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [The CASE statement](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Combining INSERT INTO and SELECT](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Subqueries](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Indexing](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Altering tables](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Views](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Window functions](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
 
 ### Contributing Tutorials
 
