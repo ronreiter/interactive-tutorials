@@ -1,4 +1,4 @@
-This site is generously supported by [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org). DataCamp offers online interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) for Data Science. Join **575,000** other learners and get started learning Python for data science today!
+This site is generously supported by [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org). DataCamp offers online interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) for Data Science. Join **11 millions** other learners and get started learning Python for data science today!
 
 Good news! You can save 25% off your Datacamp annual subscription with the code [LEARNPYTHON23ALE25 - Click here to redeem your discount!](https://datacamp.pxf.io/Y9Nz7R)
 
