@@ -16,13 +16,13 @@ Function, similar to the ones in math, is a collection of statements that is des
 To call the function, you simply have to write the name of the function with the parenthesis following (if the function requires parameters, the parameters should be written between the parenthesis): 
 
     int squareNumbers(int x){ // Declares function "squareNumbers" that takes in parameter of x.
-        y=x*x; //creates int variable equating to x squared
+        int y=x*x; //creates int variable equating to x squared
         return y; //returns the value of y when the function is called
     }
     
     int main(){ 
-        input = 9; 
-        output = squareNumbers(input); 
+        int input = 9; 
+        int output = squareNumbers(input); 
         //the function is called, resulting in the int variable "output" equating input squared
     }
 
