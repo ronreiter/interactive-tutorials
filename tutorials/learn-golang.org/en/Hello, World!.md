@@ -9,7 +9,7 @@ In each golang program you need to define a package name at the top. So if you n
 
     package main
 
-Go follows a similar pattern as C and has a main function where the execution begins. In go functions are defined using `func` keyword.
+Go follows a similar pattern as C and has a main function where the execution begins. In go, functions are defined using `func` keyword.
 
 This is an example main function
 
