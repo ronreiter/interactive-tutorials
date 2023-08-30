@@ -1,8 +1,8 @@
 Tutorial
 --------
-`static` is a keyword in the C programming language. It can be used with variables and functions.
+`static` 是C编程语言中的一个关键字。它可以与变量和函数一起使用。
 
-### What is a static variable?
+### 什么是静态变量
 By default, variables are local to the scope in which they are defined. Variables can be declared as static to increase their scope up to file containing them. As a result, these variables can be accessed anywhere inside a file.
 
 Consider the following scenario – we want to count the runners participating in a race:

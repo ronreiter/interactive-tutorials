@@ -1,15 +1,14 @@
 Tutorial
 --------
 
-C functions are simple, but because of how C works, the power of functions is a bit limited.
+C 的函数很简单, 但是因为C的工作方式, 函数的力量比较有限
 
-* Functions receive either a fixed or variable amount of arguments.
-* Functions can only return one value, or return no value.
+* 函数接收固定数量或可变数量的参数
+* 函数只能返回一个值，或者不返回任何值
 
-In C, arguments are copied by value to functions, which means that we cannot change the arguments to affect their value outside of
-the function. To do that, we must use pointers, which are taught later on.
+在C语言中, 实参是按值复制到函数中的，我们不能更改实参以影响函数外的实参值。要做到这个，我们必须使用指针，这将在以后说明
 
-Functions are defined using the following syntax:
+函数使用以下的语法进行定义:
 
     int foo(int bar) {
         /* do something */
@@ -20,16 +19,15 @@ Functions are defined using the following syntax:
         foo(1);
     }
 
-The function `foo` we defined receives one argument, which is `bar`. The function receives an integer, multiplies it by two, and returns the result. 
+我们定义函数`foo`, 它接受一个参数`bar`, 这个函数接收一个int类型的值, 返回bar * 2的结果
 
-To execute the function `foo` with 1 as the argument `bar`, we use the following syntax:
+我们使用以下语法进行调用函数foo
 
     foo(1);
 
-In C, functions must be first defined before they are used in the code. They can be either declared first and then implemented later on using a 
-header file or in the beginning of the C file, or they can be implemented in the order they are used (less preferable).
+在C语言中，函数在代码中使用之前必须首先定义。它们可以先声明，然后在使用头文件或在C文件的开头实现，也可以按使用顺序实现（不太可取）
 
-The correct way to use functions is as follows:
+正确使用函数的方法如下：
 
     /* function declaration */
     int foo(int bar);
@@ -43,7 +41,7 @@ The correct way to use functions is as follows:
         return bar + 1;
     }
 
-We can also create functions that do not return a value by using the keyword `void`:
+使用`void`关键词创建一个无返回值函数
 
     void moo() {
         /* do something and don't return a value */
@@ -56,10 +54,9 @@ We can also create functions that do not return a value by using the keyword `vo
 Exercise
 --------
 
-Write a function called `print_big` which receives one argument (an integer) and prints the line `x is big` (where x is the argument) if the argument given
-to the function is a number bigger than 10. 
+编写一个名为`print_big`的函数，该函数接收一个整数参数，如果给定给该函数的参数是大于10的数字，则打印`x is big`（其中x是参数）。
 
-* **Important**: Don't forget to add a newline character `\n` at the end of the printf string.
+* **注意**: 不要忘了在printf中的字符串中添加`\n`
 
 Tutorial Code
 -------------
