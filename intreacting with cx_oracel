@@ -1,0 +1,71 @@
+""" Getting data from db and using it in APIU CALLS Could be challenging today we can talk about using cx_oracle library and fetching information from db to use in api calluses using  JSON,requests,HTTP libraries
+Fetching data from a database and using it to make API calls is a common task in many applications. Today, we will discuss how to achieve this using the cx_Oracle library in Python. We will also use the JSON, requests, and http libraries to facilitate this process.
+Prerequisites:
+Install cx_Oracle library.
+Install requests library.
+An Oracle database up and running with relevant data.
+Access to an API endpoint for making calls"""
+
+#Install the Required Libraries
+#If you haven't already installed these libraries, you can do so using pip:
+
+
+pip install cx_Oracle requests
+2. Establish a Connection to the Oracle Database
+To fetch data from the Oracle database, we first need to establish a connection:
+import cx_Oracle
+
+# Database connection parameters
+db_username = "your_username"
+db_password = "your_password"
+db_dsn = "your_dsn"  # Usually in the format: "host:port/service_name"
+connection = cx_Oracle.connect(db_username, db_password, db_dsn)
+
+cursor = connection.cursor()
+
+#for more security practice you can save the db_username = "your_username"
+db_password = "your_password" in file call config and import it here like this:
+import config as cfg 
+ db_username=cfg.db_username
+db_password=cfg.db_password
+cfg.db
+
+#Now that we've established a connection, we can use a cursor to execute a SQL query and fetch data:
+query = "SELECT * FROM your_table_name WHERE some_condition"
+cursor.execute(query)
+results = cursor.fetchall()
+
+# Assuming each result has two columns: column1 and column2
+for row in results:
+    column1_value = row[0]
+    column2_value = row[1]
+    print(column1_value, column2_value)
+
+    ake an API Call with the Fetched Data
+#Using the requests library, we can now use the fetched data to make an API call:
+import requests
+import json
+
+api_endpoint = "https://api.example.com/data"
+headers = {
+    "Content-Type": "application/json",
+}
+
+for row in results:
+    # Assuming you want to send column1's value as data to the API
+    data = {
+        "key": row[0]
+    }
+from requests.auth import HTTPBasicAuth
+
+    response = requests.post(api_endpoint, headers=headers, data=json.dumps(data)auth=(cfg.db_username, cfg.db_password))
+
+    # Handling the API response
+    if response.status_code == 200:
+        print("Data sent successfully!", response.json())
+    else:
+        print("Error occurred:", response.text)
+5. Close the Database Connection
+It's important to always close the database connection when done:
+cursor.close()
+connection.close()
