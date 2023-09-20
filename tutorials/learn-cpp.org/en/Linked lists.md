@@ -49,7 +49,7 @@ Let's define a linked list:
     public:
         LinkedList()
         {
-            head = nullprt;
+            head = nullptr;
             tail = nullptr;
         }
     
@@ -97,7 +97,7 @@ Let's add this method to the LinkedList class:
 
         void createNode(int value)
         {
-            node *temp = new Node;
+            Node *temp = new Node;
             temp->data = value;
             temp->next = nullptr;
 
@@ -135,7 +135,7 @@ After printing the value of the node, we set the `current` pointer to the next n
 
         void createNode(int value)
         {
-            node *temp = new Node;
+            Node *temp = new Node;
             temp->data = value;
             temp->next = nullptr;
 
@@ -282,7 +282,7 @@ Here is the code:
         delete head;
         head = next_node;
 
-        int retval;
+        return retval;
     }
 
 
