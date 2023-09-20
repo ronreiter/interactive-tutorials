@@ -59,7 +59,7 @@ Replace all occurrences of substring
 Delete all occurrences of substring (replace with empty string)
 
     STRING="to be or not to be"
-    echo ${STRING[@]// not/}        # to be or to be
+    echo ${STRING[@]//not /}        # to be or to be
 
 Replace occurrence of substring if at the beginning of $STRING
 
