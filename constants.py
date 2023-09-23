@@ -17,6 +17,8 @@ LEARNGO_DOMAIN = "learn-golang.org"
 LEARNSCALA_DOMAIN = "learnscala.org"
 LEARNSOLIDITY_DOMAIN = "learnsolidity.org"
 LEARNSQL_DOMAIN = "learnsqlonline.org"
+LEARNTS_DOMAIN = "learn-ts.org"
+
 
 from collections import OrderedDict
 
@@ -260,6 +262,21 @@ DOMAIN_DATA[LEARNJS_DOMAIN] = {
         "analytics" : "UA-22741967-5",
         "language_uppercase" : "JavaScript",
         "default_code" : """// Welcome to the Interactive JavaScript Tutorial.
+// Start by choosing a chapter and
+// write your code in this window.
+
+console.log("Hello, World!");
+"""
+}
+
+DOMAIN_DATA[LEARNTS_DOMAIN] = {
+        "language": "typescript",
+        "language_id": 57,
+        "codemirror_mode": "text/typescript",
+        "prism_mode": "language-javascript",
+        "analytics": "UA-22741967-5",
+        "language_uppercase" : "TypeScript",
+        "default_code": """// Welcome to the Interactive TypeScript Tutorial.
 // Start by choosing a chapter and
 // write your code in this window.
 

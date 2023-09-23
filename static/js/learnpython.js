@@ -205,6 +205,9 @@ function correct() {
 }
 
 function print(text) {
+	if (!text) {
+		return;
+	}
 	output.setValue(text);
 	if ($.trim(tutorialData.output) !== '' && $.trim(tutorialData.output) === $.trim(text)) {
 		correct();
