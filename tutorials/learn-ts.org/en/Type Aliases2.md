@@ -4,9 +4,7 @@ Tutorial
 -------
 Type aliases allow you to create a new name for a type. It can be used to simplify complex types or to avoid repeating the same type definition over and over.
 
-```typescript
-type StringOrNumber = string | number;
-```
+    type StringOrNumber = string | number;
 
 Exercise
 -------
@@ -14,32 +12,26 @@ Define a type alias for an object that can have a `name` (string) and `age` (opt
 
 Tutorial Code
 -------
-```typescript
-// Your type alias here
-
-function filterWithAge(arr: /* Your type alias array */): /* Your type alias array */ {
-    // Your code here
-    return [];
-}
-```
+    // Your type alias here
+    
+    function filterWithAge(arr: /* Your type alias array */): /* Your type alias array */ {
+        // Your code here
+        return [];
+    }
+    console.log(filterWithAge([{name: "Alice"}, {name: "Bob", age: 30}, {name: "Charlie", age: 25}]));
 
 Expected Output
 -------
-Given the array `[{name: "Alice"}, {name: "Bob", age: 30}, {name: "Charlie", age: 25}]`:
-
-```typescript
-[{name: "Bob", age: 30}, {name: "Charlie", age: 25}]
-```
+    [{name: "Bob", age: 30}, {name: "Charlie", age: 25}]
 
 Solution
 -------
-```typescript
-type Person = {
-    name: string;
-    age?: number;
-};
-
-function filterWithAge(arr: Person[]): Person[] {
-    return arr.filter(person => person.age !== undefined);
-}
-```
+    type Person = {
+        name: string;
+        age?: number;
+    };
+    
+    function filterWithAge(arr: Person[]): Person[] {
+        return arr.filter(person => person.age !== undefined);
+    }
+    console.log(filterWithAge([{name: "Alice"}, {name: "Bob", age: 30}, {name: "Charlie", age: 25}]));

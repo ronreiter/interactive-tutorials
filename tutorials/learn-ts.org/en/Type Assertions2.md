@@ -4,10 +4,8 @@ Tutorial
 -------
 Type assertions allow you to override the inferred type of a variable, telling the compiler that you're sure about the type of the variable.
 
-```typescript
-let someValue: any = "this is a string";
-let strLength: number = (someValue as string).length;
-```
+    let someValue: any = "this is a string";
+    let strLength: number = (someValue as string).length;
 
 Exercise
 -------
@@ -15,21 +13,15 @@ Given an `any` type variable that is guaranteed to be a string, use a type asser
 
 Tutorial Code
 -------
-```typescript
-let unknownValue: any = "It's a mystery!";
-// Get the length of unknownValue using a type assertion
-```
+    let unknownValue: any = "It's a mystery!";
+    // Get the length of unknownValue using a type assertion
+    console.log(length);
 
 Expected Output
 -------
-For the length of `unknownValue`:
-
-```typescript
-15
-```
+    15
 
 Solution
 -------
-```typescript
-let length: number = (unknownValue as string).length;
-```
+    let length: number = (unknownValue as string).length;
+    console.log(length);

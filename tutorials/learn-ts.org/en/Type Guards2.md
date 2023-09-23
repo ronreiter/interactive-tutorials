@@ -6,17 +6,15 @@ Type guards allow you to narrow down the type of an object within a conditional 
 
 For instance, the `instanceof` and `typeof` checks act as type guards in TypeScript:
 
-```typescript
-function padLeft(value: string, padding: string | number) {
-    if (typeof padding === "number") {
-        return Array(padding + 1).join(" ") + value;
+    function padLeft(value: string, padding: string | number) {
+        if (typeof padding === "number") {
+            return Array(padding + 1).join(" ") + value;
+        }
+        if (typeof padding === "string") {
+            return padding + value;
+        }
+        throw new Error(`Expected string or number, got '${padding}'.`);
     }
-    if (typeof padding === "string") {
-        return padding + value;
-    }
-    throw new Error(`Expected string or number, got '${padding}'.`);
-}
-```
 
 Exercise
 -------
@@ -24,35 +22,24 @@ Create a function that adds two values. If either of the values is a string, it 
 
 Tutorial Code
 -------
-```typescript
-function addOrConcatenate(a: string | number, b: string | number): string | number {
-    // Your code here
-    return;
-}
-```
+    function addOrConcatenate(a: string | number, b: string | number): string | number {
+        // Your code here
+        return;
+    }
+    console.log(addOrConcatenate(5, 3));
+    console.log(addOrConcatenate("Hello", "World"));
 
 Expected Output
 -------
-Calling `addOrConcatenate(5, 3)`:
-
-```typescript
-8
-```
-
-Calling `addOrConcatenate("Hello", "World")`:
-
-```typescript
-"HelloWorld"
-```
+    8
+    HelloWorld
 
 Solution
 -------
-```typescript
-function addOrConcatenate(a: string | number, b: string | number): string | number {
-    if (typeof a === "string" || typeof b === "string") {
-        return a.toString() + b.toString();
-    } else {
-        return a + b;
+    function addOrConcatenate(a: string | number, b: string | number): string | number {
+        if (typeof a === "string" || typeof b === "string") {
+            return a.toString() + b.toString();
+        } else {
+            return a + b;
+        }
     }
-}
-```

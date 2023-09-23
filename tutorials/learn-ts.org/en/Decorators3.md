@@ -6,23 +6,21 @@ Decorators provide a way to add annotations and metaprogramming syntax for class
 
 A decorator is an expression that evaluates to a function and is prefixed with `@` symbol.
 
-```typescript
-function sealed(target: Function) {
-    Object.seal(target);
-    Object.seal(target.prototype);
-}
-
-@sealed
-class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
+    function sealed(target: Function) {
+        Object.seal(target);
+        Object.seal(target.prototype);
     }
-    greet() {
-        return "Hello, " + this.greeting;
+    
+    @sealed
+    class Greeter {
+        greeting: string;
+        constructor(message: string) {
+            this.greeting = message;
+        }
+        greet() {
+            return "Hello, " + this.greeting;
+        }
     }
-}
-```
 
 In the above example, the `@sealed` decorator prevents adding new properties to the `Greeter` class and prevents removing properties from it.
 
@@ -32,41 +30,35 @@ Create a decorator `@logMethod` that logs the name of the method when it's invok
 
 Tutorial Code
 -------
-```typescript
-// Define your decorator here
-
-class Calculator {
-    @logMethod
-    add(a: number, b: number): number {
-        return a + b;
+    // Define your decorator here
+    
+    class Calculator {
+        @logMethod
+        add(a: number, b: number): number {
+            return a + b;
+        }
     }
-}
-```
+    let result = new Calculator().add(1, 2);
 
 Expected Output
 -------
-When calling `let result = new Calculator().add(1, 2);`, it should log:
-
-```typescript
-"Method invoked: add"
-```
+    Method invoked: add
 
 Solution
 -------
-```typescript
-function logMethod(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
-    const originalMethod = descriptor.value;
-    descriptor.value = function(...args: any[]) {
-        console.log(`Method invoked: ${propertyKey}`);
-        return originalMethod.apply(this, args);
+    function logMethod(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
+        const originalMethod = descriptor.value;
+        descriptor.value = function(...args: any[]) {
+            console.log(`Method invoked: ${propertyKey}`);
+            return originalMethod.apply(this, args);
+        }
+        return descriptor;
     }
-    return descriptor;
-}
-
-class Calculator {
-    @logMethod
-    add(a: number, b: number): number {
-        return a + b;
+    
+    class Calculator {
+        @logMethod
+        add(a: number, b: number): number {
+            return a + b;
+        }
     }
-}
-```
+    let result = new Calculator().add(1, 2);
