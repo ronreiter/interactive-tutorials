@@ -8,30 +8,32 @@ Arithmetic Operators
 -------
 Arithmetic operators allow you to perform mathematical operations between numbers.
 
-- **Addition** (`+`): Adds two numbers.
-    ```typescript
+**Addition** (`+`): Adds two numbers.
+
+
     let sum: number = 5 + 3;  // 8
-    ```
 
-- **Subtraction** (`-`): Subtracts one number from another.
-    ```typescript
+
+**Subtraction** (`-`): Subtracts one number from another.
+
+
     let difference: number = 8 - 5;  // 3
-    ```
 
-- **Multiplication** (`*`): Multiplies two numbers.
-    ```typescript
+
+**Multiplication** (`*`): Multiplies two numbers.
+
+
     let product: number = 4 * 7;  // 28
-    ```
 
-- **Division** (`/`): Divides one number by another.
-    ```typescript
+**Division** (`/`): Divides one number by another.
+
+
     let quotient: number = 20 / 4;  // 5
-    ```
 
-- **Modulus** (`%`): Returns the remainder of a division.
-    ```typescript
+**Modulus** (`%`): Returns the remainder of a division.
+
+
     let remainder: number = 11 % 3;  // 2
-    ```
 
 Comparison Operators
 -------
