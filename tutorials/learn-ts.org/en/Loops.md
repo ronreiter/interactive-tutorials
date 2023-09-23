@@ -73,10 +73,9 @@ Tutorial Code
 
 Expected Output
 -------
-  
-    TypeScript Basics - T. Author  
-    Advanced TypeScript - A. Expert  
-    TypeScript Projects - P. Builder  
+TypeScript Basics - T. Author
+Advanced TypeScript - A. Expert
+TypeScript Projects - P. Builder
 
 
 Solution

@@ -9,7 +9,7 @@ Dive into the chapters below to embark on your TypeScript journey. Each section 
 1. [[Introduction]]
 2. [[Functions]]
 3. [[Loops]]
-4. [[Manipulating Arrays]]
+4. [[Arrays]]
 5. [[Operators]]
 6. [[Classes]]
 7. [[Interfaces]]
