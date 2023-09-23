@@ -1,41 +1,45 @@
 ### Interfaces in TypeScript
 
 Tutorial
--------
-Interfaces define the shape of an object. They ensure strict adherence to a structure.
+-----------
+In TypeScript, interfaces play a pivotal role in defining the shape or structure that objects should adhere to. They don't get compiled into JavaScript and exist only for static type checking. When you define an object based on an interface, the object must fulfill the shape required by that interface.
 
     interface Dog {
         name: string;
         age: number;
     }
 
+Using the above interface, any object declared with type `Dog` should have both a `name` property of type `string` and an `age` property of type `number`.
+
 Exercise
--------
-Define an interface named `Car` with properties `model` (string) and `year` (number). Then, create an object that matches this interface.
+-----------
+Your task is to create an interface named `Car`. This interface should possess two properties: `model`, which will be a string, and `year`, a number. Once you've defined the interface, make an object that fits the criteria set by the interface.
 
 Tutorial Code
--------
-
-    interface Car {
-        model: string;
-        year: number;
-    }
+---------------
+    // write the interface here
 
     let myCar: Car = {
         model: "Toyota",
         year: 2022
     };
 
-Expected Output
--------
-When accessing `myCar.model`:
+    console.log(myCar.model);
 
-    "Tesla"
+Expected Output
+-------------------
+Tesla
 
 Solution
--------
+-----------
+    interface Car {
+        model: string;
+        year: number;
+    }
 
     let myCar: Car = {
         model: "Tesla",
         year: 2023
     };
+
+    console.log(myCar.model);
