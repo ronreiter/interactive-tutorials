@@ -68,6 +68,8 @@ Tutorial Code
     let b: number = 7;
     // write your code here
 
+    console.log(c);
+
 Expected Output
 -------
 36
@@ -78,4 +80,6 @@ Solution
     let b: number = 7;
     // write your code here
     let c: number = (a + b) * 3;
+
+    console.log(c);
 
