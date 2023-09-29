@@ -76,23 +76,31 @@ In this exercise you'll use an existing function, and while adding your own to c
 
 3. Run and see all the functions work together!
 
+<div style="padding: 20px 0;">
+    <a href="https://app.datacamp.com/workspace/new?_tag=template&templateKey=learnpython-functions&utm_source=learnpython.org&utm_medium=docs&utm_term=functions&utm_content=run_code_in_workspace"
+                    style="font-size: 16px; padding: 12px 16px; border-radius: 4px; background: rgba(3, 239, 98); color: #1f2937; font-weight: 600; text-decoration: none;"
+                    target="_blank">
+    Run & Edit Full Tutorial
+    </a>
+</div>
+
 Tutorial Code
 -------------
 
-# Modify this function to return a list of strings as defined above
-def list_benefits():
-    return []
+    # Modify this function to return a list of strings as defined above
+    def list_benefits():
+        return []
 
-# Modify this function to concatenate to each benefit - " is a benefit of functions!"
-def build_sentence(benefit):
-    return ""
+    # Modify this function to concatenate to each benefit - " is a benefit of functions!"
+    def build_sentence(benefit):
+        return ""
 
-def name_the_benefits_of_functions():
-    list_of_benefits = list_benefits()
-    for benefit in list_of_benefits:
-        print(build_sentence(benefit))
+    def name_the_benefits_of_functions():
+        list_of_benefits = list_benefits()
+        for benefit in list_of_benefits:
+            print(build_sentence(benefit))
 
-name_the_benefits_of_functions()
+    name_the_benefits_of_functions()
 
 
 Expected Output
