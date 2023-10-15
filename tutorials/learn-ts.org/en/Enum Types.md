@@ -18,7 +18,6 @@ Create an enum for days of the week and a function that takes a day and returns 
 
 Tutorial Code
 -------
-
     // Your enum here
 
     function classifyDay(day: /* Your enum type */): string {
@@ -26,19 +25,16 @@ Tutorial Code
         return "";
     }
 
+    console.log(classifyDay(Days.Monday));
+    console.log(classifyDay(Days.Saturday));
+
 Expected Output
 -------
-Calling `classifyDay(Days.Monday)`:
-
-    "Weekday"
-
-Calling `classifyDay(Days.Saturday)`:
-
-    "Weekend"
+Weekday
+Weekend
 
 Solution
 -------
-
     enum Days {Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday}
 
     function classifyDay(day: Days): string {
@@ -50,3 +46,6 @@ Solution
                 return "Weekday";
         }
     }
+
+    console.log(classifyDay(Days.Monday));
+    console.log(classifyDay(Days.Saturday));

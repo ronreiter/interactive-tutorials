@@ -14,7 +14,6 @@ Create an interface for a dictionary which has string keys and values can be eit
 
 Tutorial Code
 -------
-
     interface MyDictionary {
         // Your index signature here
     }
@@ -24,15 +23,15 @@ Tutorial Code
         return undefined;
     }
 
+    const dict = { name: "Alice", age: 30 };
+    console.log(getValueFromDict("name", dict));
+
 Expected Output
 -------
-Using the function with a dictionary `{ name: "Alice", age: 30 }` and the key `"name"`:
-
-    "Alice"
+    Alice
 
 Solution
 -------
-
     interface MyDictionary {
         [index: string]: string | number;
     }
@@ -40,3 +39,6 @@ Solution
     function getValueFromDict(key: string, dict: MyDictionary): string | number | undefined {
         return dict[key];
     }
+
+    const dict = { name: "Alice", age: 30 };
+    console.log(getValueFromDict("name", dict));

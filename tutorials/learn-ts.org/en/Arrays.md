@@ -66,11 +66,14 @@ Tutorial Code
 -------
 
     let ages: number[] = [25, 30, 35];
+    // Your code here
+
+    console.log(ages);
 
 
 Expected Output
 -------
-[20, 25, 30]
+[ 20, 25, 30 ]
 
 
 Solution
@@ -79,3 +82,4 @@ Solution
     ages.unshift(20);
     ages.pop();
 
+    console.log(ages);

@@ -14,21 +14,21 @@ Create a generic function named `wrapInArray` that takes an argument of any type
 
 Tutorial Code
 -------
-
     function wrapInArray<T>(value: T): T[] {
         // Your code here
         return [];
     }
 
+    console.log(wrapInArray(42));
+
 Expected Output
 -------
-After calling `wrapInArray(42)`:
-
-    [42]
+    [ 42 ]
 
 Solution
 -------
-
     function wrapInArray<T>(value: T): T[] {
         return [value];
     }
+
+    console.log(wrapInArray(42));

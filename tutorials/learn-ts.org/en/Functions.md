@@ -20,15 +20,16 @@ Tutorial Code
         return 0;
     }
 
+    console.log(multiply(3, 4));
+
 Expected Output
 -------
-After calling `multiply(3, 4)`:
-
     12
 
 Solution
 -------
-
     function multiply(a: number, b: number): number {
         return a * b;
     }
+
+    console.log(multiply(3, 4));

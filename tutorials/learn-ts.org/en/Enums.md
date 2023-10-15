@@ -24,12 +24,12 @@ Tutorial Code
         // Your code to complete the enum
     }
 
-    let month: Months;
+    // Your code here
+
+    console.log(month);
 
 Expected Output
 -------
-When accessing the variable `month`:
-
     2
 
 Solution
@@ -51,3 +51,5 @@ Solution
     }
 
     let month: Months = Months.March;
+
+    console.log(month);

@@ -16,22 +16,24 @@ You are given a variable of type `any` that is supposed to contain a string. Wri
 Tutorial Code
 -------
     let data: any = "Hello, TypeScript!";
-    
+
     function getStringLength(value: any): number {
         // Your code here
         return 0;
     }
 
-    getStringLength(data);
+    console.log(getStringLength(data));
 
 Expected Output
 -------
-    17
+    18
 
 Solution
 -------
+    let data: any = "Hello, TypeScript!";
+
     function getStringLength(value: any): number {
         return (value as string).length;
     }
 
-    getStringLength(data);
+    console.log(getStringLength(data));

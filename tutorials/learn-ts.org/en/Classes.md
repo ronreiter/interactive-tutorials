@@ -45,11 +45,11 @@ Example:
 
     class Animal {
         name: string;
-    
+
         constructor(name: string) {
             this.name = name;
         }
-    
+
         speak(): void {
             console.log(`${this.name} makes a noise.`);
         }
@@ -64,11 +64,11 @@ Tutorial Code
 ---------------
     class Animal {
         name: string;
-    
+
         constructor(name: string) {
             this.name = name;
         }
-    
+
         speak(): void {
             console.log(`${this.name} makes a noise.`);
         }
@@ -77,7 +77,7 @@ Tutorial Code
     class Dog extends Animal {
         // Your code to override the speak method goes here
     }
-    const myDog: Dog = new Dog();
+    const myDog: Dog = new Dog("Rex");
     myDog.speak();
 
 Expected Output
@@ -89,11 +89,11 @@ Solution
 -----------
     class Animal {
         name: string;
-    
+
         constructor(name: string) {
             this.name = name;
         }
-    
+
         speak(): void {
             console.log(`${this.name} makes a noise.`);
         }
@@ -104,5 +104,5 @@ Solution
             console.log(`${this.name} barks`);
         }
     }
-    const myDog: Dog = new Dog();
+    const myDog: Dog = new Dog("Rex");
     myDog.speak();

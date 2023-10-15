@@ -22,24 +22,44 @@ Write a function that calculates the area of a given shape (either a circle or a
 
 Tutorial Code
 -------
+    interface Circle {
+        kind: "circle";
+        radius: number;
+    }
+
+    interface Square {
+        kind: "square";
+        sideLength: number;
+    }
+
+    type Shape = Circle | Square;
 
     function calculateArea(shape: Shape): number {
         // Your code here
         return 0;
     }
 
+    console.log(calculateArea({kind: "circle", radius: 2}))
+    console.log(calculateArea({kind: "square", sideLength: 3}))
+
 Expected Output
 -------
-Calling `calculateArea({kind: "circle", radius: 2})`:
-
-    12.566370614359172  // using πr^2 formula
-
-Calling `calculateArea({kind: "square", sideLength: 3})`:
-
-    9  // using sideLength^2 formula
+    12.566370614359172
+    9
 
 Solution
 -------
+    interface Circle {
+        kind: "circle";
+        radius: number;
+    }
+
+    interface Square {
+        kind: "square";
+        sideLength: number;
+    }
+
+    type Shape = Circle | Square;
 
     function calculateArea(shape: Shape): number {
         switch (shape.kind) {
@@ -49,3 +69,6 @@ Solution
                 return shape.sideLength * shape.sideLength;
         }
     }
+
+    console.log(calculateArea({kind: "circle", radius: 2}))
+    console.log(calculateArea({kind: "square", sideLength: 3}))
