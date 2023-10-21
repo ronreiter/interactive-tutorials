@@ -72,7 +72,7 @@ Tutorial Code
 
 Expected Output
 -------
-36
+    36
 
 Solution
 -------
@@ -82,4 +82,3 @@ Solution
     let c: number = (a + b) * 3;
 
     console.log(c);
-

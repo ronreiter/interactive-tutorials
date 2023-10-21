@@ -28,7 +28,7 @@ Tutorial Code
 
 Expected Output
 -------------------
-Tesla
+  Tesla
 
 Solution
 -----------

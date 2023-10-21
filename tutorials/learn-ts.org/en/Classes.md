@@ -82,7 +82,7 @@ Tutorial Code
 
 Expected Output
 -------------------
-Rex barks
+    Rex barks
 
 
 Solution

@@ -30,8 +30,8 @@ Tutorial Code
 
 Expected Output
 -------
-Weekday
-Weekend
+    Weekday
+    Weekend
 
 Solution
 -------

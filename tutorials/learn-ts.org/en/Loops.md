@@ -51,12 +51,12 @@ The `while` loop continues executing its block as long as its condition remains 
 
 This prints numbers 0, 1, and 2.
 
-Familiarizing yourself with these loop constructs is crucial for robust TypeScript programming. 
+Familiarizing yourself with these loop constructs is crucial for robust TypeScript programming.
 They offer the versatility and power to address a broad range of iteration-based tasks and scenarios.
 
-Exercise  
+Exercise
 -------
-Given an object representing a collection of books, use the `for...in` loop to print out each book's title and author. 
+Given an object representing a collection of books, use the `for...in` loop to print out each book's title and author.
 
 
 Tutorial Code
@@ -73,9 +73,9 @@ Tutorial Code
 
 Expected Output
 -------
-TypeScript Basics - T. Author
-Advanced TypeScript - A. Expert
-TypeScript Projects - P. Builder
+    TypeScript Basics - T. Author
+    Advanced TypeScript - A. Expert
+    TypeScript Projects - P. Builder
 
 
 Solution

@@ -73,7 +73,7 @@ Tutorial Code
 
 Expected Output
 -------
-[ 20, 25, 30 ]
+    [ 20, 25, 30 ]
 
 
 Solution
