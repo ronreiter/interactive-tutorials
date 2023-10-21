@@ -19,22 +19,20 @@ Tutorial Code
             // Your code here
             return 0;
         }
-    
+
         export function areaOfCircle(radius: number): number {
             // Your code here
             return 0;
         }
     }
 
+    console.log(Geometry.areaOfRectangle(10, 5));
+    console.log(Geometry.areaOfCircle(7));
+
 Expected Output
 -------
-Using the `Geometry.areaOfRectangle` with 10 and 5:
-
     50
-
-Using the `Geometry.areaOfCircle` with a radius of 7:
-
-    153.93804002589985 // which is π * r^2
+    153.93804002589985
 
 Solution
 -------
@@ -42,8 +40,11 @@ Solution
         export function areaOfRectangle(width: number, height: number): number {
             return width * height;
         }
-    
+
         export function areaOfCircle(radius: number): number {
             return Math.PI * radius * radius;
         }
     }
+
+    console.log(Geometry.areaOfRectangle(10, 5));
+    console.log(Geometry.areaOfCircle(7));

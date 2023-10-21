@@ -19,8 +19,8 @@ Tutorial Code
         return 0;
     }
 
-    processValue(4);
-    processValue("hello");
+    console.log(processValue(4));
+    console.log(processValue("hello"));
 
 Expected Output
 -------
@@ -37,5 +37,5 @@ Solution
         }
     }
 
-    processValue(4);
-    processValue("hello");
+    console.log(processValue(4));
+    console.log(processValue("hello"));

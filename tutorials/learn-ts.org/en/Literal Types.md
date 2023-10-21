@@ -12,25 +12,21 @@ Define a function that accepts a parameter with a literal type of either "ascend
 
 Tutorial Code
 -------
-
-    function sortOrderMessage(order: /* Your literal type here */): string {
+    function sortOrderMessage(order: any /* Your literal type here */): string {
         // Your code here
         return "";
     }
 
+    console.log(sortOrderMessage("ascending"));
+    console.log(sortOrderMessage("descending"));
+
 Expected Output
 -------
-Calling `sortOrderMessage("ascending")`:
-
-    "The order is set to ascending."
-
-Calling `sortOrderMessage("descending")`:
-
-    "The order is set to descending."
+    The order is set to ascending.
+    The order is set to descending.
 
 Solution
 -------
-
     function sortOrderMessage(order: "ascending" | "descending"): string {
         if (order === "ascending") {
             return "The order is set to ascending.";
@@ -38,3 +34,6 @@ Solution
             return "The order is set to descending.";
         }
     }
+
+    console.log(sortOrderMessage("ascending"));
+    console.log(sortOrderMessage("descending"));

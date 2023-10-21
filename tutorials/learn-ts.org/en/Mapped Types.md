@@ -21,17 +21,34 @@ Tutorial Code
 
     // Your mapped type definition here
 
+    let nullablePoint: NullablePoint = {
+        x: null,
+        y: 5
+    };
+
+    console.log(nullablePoint.x);
+    console.log(nullablePoint.y);
+
 Expected Output
 -------
-The resulting type should allow for the following:
+    null
+    5
+
+Solution
+-------
+    type Point = {
+        x: number;
+        y: number;
+    };
+
+    type NullablePoint = {
+        [P in keyof Point]: Point[P] | null;
+    };
 
     let nullablePoint: NullablePoint = {
         x: null,
         y: 5
     };
 
-Solution
--------
-    type NullablePoint = {
-        [P in keyof Point]: Point[P] | null;
-    };
+    console.log(nullablePoint.x);
+    console.log(nullablePoint.y);

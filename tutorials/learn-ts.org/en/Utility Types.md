@@ -4,13 +4,13 @@ Tutorial
 -------
 TypeScript offers an array of utility types that can transform existing types in various ways, enhancing flexibility and ensuring type safety. Among these utility types, `Partial` and `Required` stand out as especially beneficial for developers.
 
-The `Partial` utility type makes all properties of a provided type optional. This can be helpful in situations where you might not have values for all properties of a type, such as when dealing with updates or partial data fetches. 
+The `Partial` utility type makes all properties of a provided type optional. This can be helpful in situations where you might not have values for all properties of a type, such as when dealing with updates or partial data fetches.
 
     type Point = {
         x: number;
         y: number;
     };
-    
+
     type PartialPoint = Partial<Point>;
 
 With `PartialPoint`, both `x` and `y` properties become optional, so you can have objects like `{ x: 10 }` or `{ y: 5 }` or even `{}` without any type errors.
@@ -51,4 +51,3 @@ Solution
     type CompletePoint = Required<PartialPoint>;
 
     const point: CompletePoint = {x: 10};
-

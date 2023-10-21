@@ -18,13 +18,13 @@ Tutorial Code
     type Rectangle = {
         // Your code to define the properties
     };
-    
+
     function computeArea(rect: Rectangle): number {
         // Your code to compute the area
         return 0;
     }
 
-    computeArea({ width: 10, height: 5 });
+    console.log(computeArea({ width: 10, height: 5 }));
 
 Expected Output
 -------
@@ -36,9 +36,9 @@ Solution
         width: number;
         height: number;
     };
-    
+
     function computeArea(rect: Rectangle): number {
         return rect.width * rect.height;
     }
 
-    computeArea({ width: 10, height: 5 });
+    console.log(computeArea({ width: 10, height: 5 }));

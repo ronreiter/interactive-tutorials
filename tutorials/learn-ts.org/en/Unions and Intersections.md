@@ -20,15 +20,15 @@ Tutorial Code
 -------
     type Car = { type: "car", doors: number };
     type Bike = { type: "bike", hasBell: boolean };
-    
+
     type Vehicle = Car | Bike;
-    
+
     function identifyVehicle(vehicle: Vehicle): string {
         // Your code here
         return "";
     }
 
-    identifyVehicle({ type: "bike", hasBell: true });
+    console.log(identifyVehicle({ type: "bike", hasBell: true }));
 
 Expected Output
 -------
@@ -36,9 +36,13 @@ Expected Output
 
 Solution
 -------
+    type Car = { type: "car", doors: number };
+    type Bike = { type: "bike", hasBell: boolean };
+
+    type Vehicle = Car | Bike;
+
     function identifyVehicle(vehicle: Vehicle): string {
         return vehicle.type;
     }
 
-    identifyVehicle({ type: "bike", hasBell: true });
-
+    console.log(identifyVehicle({ type: "bike", hasBell: true }));

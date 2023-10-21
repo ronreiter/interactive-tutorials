@@ -18,7 +18,7 @@ Tutorial Code
         // Your code here
         return "";
     }
-    displayTuple(["Age", 30])
+    console.log(displayTuple(["Age", 30]));
 
 Expected Output
 -------
@@ -29,4 +29,4 @@ Solution
     function displayTuple(input: [string, number]): string {
         return `The value for ${input[0]} is ${input[1]}.`;
     }
-    displayTuple(["Age", 30])
+    console.log(displayTuple(["Age", 30]));

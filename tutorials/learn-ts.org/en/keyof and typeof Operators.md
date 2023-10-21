@@ -16,22 +16,20 @@ Create a function that updates a property's value in an object, given the object
 
 Tutorial Code
 -------
-
     function updateProperty<T>(obj: T, key: keyof T, value: any): T {
         // Your code here
         return obj;
     }
-    updateProperty({name: "Alice", age: 28}, "name", "Bob");
+    console.log(updateProperty({name: "Alice", age: 28}, "name", "Bob"));
 
 Expected Output
 -------
-    { name: "Bob", age: 28 }
+    { name: 'Bob', age: 28 }
 
 Solution
 -------
-
     function updateProperty<T>(obj: T, key: keyof T, value: any): T {
         obj[key] = value;
         return obj;
     }
-    updateProperty({name: "Alice", age: 28}, "name", "Bob");
+    console.log(updateProperty({name: "Alice", age: 28}, "name", "Bob"));

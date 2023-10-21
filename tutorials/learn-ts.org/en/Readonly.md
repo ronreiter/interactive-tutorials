@@ -16,23 +16,30 @@ Tutorial Code
         x: number;
         y: number;
     };
-    
+
     type ReadonlyPoint = Readonly<Point>;
-    
+
     function modifyReadonlyPoint(point: ReadonlyPoint): void {
         // Try to modify the point here
     }
 
+    modifyReadonlyPoint({ x: 10, y: 20 });
+
 Expected Output
 -------
-TypeScript compiler should throw an error:
-
-    Cannot assign to 'x' because it is a read-only property.
+    prog.ts(9,11): error TS2540: Cannot assign to 'x' because it is a read-only property.
 
 Solution
 -------
-The solution here is conceptual rather than an actual code modification, as it's based on a compile-time error. However, a general approach when you want to "modify" a readonly object is to return a new object with changes:
+    type Point = {
+        x: number;
+        y: number;
+    };
 
-    function newPointFromReadonly(point: ReadonlyPoint, newX: number): Point {
-        return { x: newX, y: point.y };
+    type ReadonlyPoint = Readonly<Point>;
+
+    function modifyReadonlyPoint(point: ReadonlyPoint): void {
+        point.x = 100;
     }
+
+    modifyReadonlyPoint({ x: 10, y: 20 });
