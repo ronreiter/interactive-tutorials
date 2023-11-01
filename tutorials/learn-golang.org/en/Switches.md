@@ -98,7 +98,7 @@ An example code is below:
 
 Exercise
 --------
-In a country, a person is allowed to vote if his/her age is above or equal to 18. Check the userAge variable and print `"Eligible"` if the person is eligible to vote or `"Not Eligible"` if the person is not eligible. 
+In a college course, a score below 70 is considered failing, a score of 70 to 90 is considered acceptable, and a score greater than 90 is considered outstanding. Write a switch statement to check the score variable. Print `"Failing"` if the score is below 70, `"Acceptable"` if the score is between 70-90 inclusive, and `"Outstanding"` if the score is more than 90. 
 
 Tutorial Code
 -------------
@@ -107,14 +107,14 @@ package main
 import "fmt"
 
 func main () {
-    userAge := 22
+    score := 85
 
     // Add your code here.
 }
 
 Expected Output
 ---------------
-Eligible
+Acceptable
 
 Solution
 --------
@@ -123,11 +123,13 @@ package main
 import "fmt"
 
 func main () {
-    userAge := 22
-
-    if userAge >= 18 {
-        fmt.Println("Eligible")
-    } else {
-        fmt.Println("Not Eligible")
+    score := 85
+    switch score {
+    case score > 90:
+        fmt.Println("Outstanding")
+    case score >= 70:
+        fmt.Println("Acceptable")
+    case score < 70:
+        fmt.Println("Failing")
     }
 }
