@@ -1,4 +1,7 @@
-# Java IO Streams
+Tutorial
+--------
+
+## Java IO Streams
 
 Java IO (Input/Output) Streams provide a powerful and flexible way to work with input and output operations in Java. Streams handle the flow of data between a program and an external source, such as a file or network connection. Understanding Java IO Streams is crucial for tasks like reading and writing files, communicating with other programs, and handling input/output efficiently.
 
@@ -14,11 +17,13 @@ Java IO (Input/Output) Streams provide a powerful and flexible way to work with 
 - `Byte Streams`: Operate on raw binary data (bytes).
 - `Character Streams`: Operate on characters and are often more convenient for handling text-based data.
 
-## Exercise
+Exercise
+--------
 Reading and Writing Files using Java IO Streams
 
 
-### Tutorial Code
+Tutorial Code
+-------------
 ```java
 import java.io.*;
 
@@ -29,7 +34,8 @@ public class FileIOExample {
 }
 ```
 
-### Expected Output
+Expected Output
+---------------
 ```text
 File content successfully read and written.
 ```
@@ -39,7 +45,8 @@ Instructions
 2. Use `FileOutputStream` to write the read data into a new file named "output.txt".
 3. Ensure that the program displays the "File content successfully read and written." message if the operation is successful.
 
-### Solution
+Solution
+--------
 ```java
 import java.io.*;
 
