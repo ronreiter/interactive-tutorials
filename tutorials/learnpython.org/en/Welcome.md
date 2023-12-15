@@ -1,4 +1,6 @@
-This site is generously supported by [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offers online interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) for Data Science. Join **575,000** other learners and get started learning Python for data science today!
+This site is generously supported by [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org). DataCamp offers online interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) for Data Science. Join **11 millions** other learners and get started learning Python for data science today!
+
+Good news! You can save 25% off your Datacamp annual subscription with the code [LEARNPYTHON23ALE25 - Click here to redeem your discount!](https://datacamp.pxf.io/Y9Nz7R)
 
 # Welcome
 
@@ -8,7 +10,7 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 You are welcome to join our group on <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> for questions, discussions and updates.
 
-After you complete the tutorials, you can get certified at [LearnX](https://www.learnx.org) and add your certification to your LinkedIn profile. 
+After you complete the tutorials, you can get certified at [LearnX](https://www.learnx.org) and add your certification to your LinkedIn profile.
 
 Just click on the chapter you wish to begin from, and follow the instructions. Good luck!<br>
 
@@ -50,7 +52,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 
 ### Other Python Tutorials
 
-- [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) has tons of great interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) covering data manipulation, data visualization, statistics, machine learning, and more
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) has tons of great interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) covering data manipulation, data visualization, statistics, machine learning, and more
 - Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
 
 ### Contributing Tutorials

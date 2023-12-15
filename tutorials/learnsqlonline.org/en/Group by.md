@@ -112,4 +112,3 @@ Solution
     SELECT first_name, COUNT(*) AS total_orders FROM customers
     JOIN orders ON orders.customer_id = customers.id
     GROUP BY orders.customer_id;
-

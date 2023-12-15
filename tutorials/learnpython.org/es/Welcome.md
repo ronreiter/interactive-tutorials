@@ -9,7 +9,7 @@ La idea de crear la versión en español es que este sitio esté a disposición 
 
 Puede unirse al grupo de <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> para preguntas, discusiones y actualizaciones.
 
-Simplemente haga clic en el capítulo desde el que desea comenzar y después siga las instrucciones. También puede <a href="#" id="chatty-api-open-btn">platicar</a> con otros estudiantes de Python. ¡Buena suerte!  
+Simplemente haga clic en el capítulo desde el que desea comenzar y después siga las instrucciones. También puede <a href="#" id="chatty-api-open-btn">platicar</a> con otros estudiantes de Python. ¡Buena suerte!
 
 Índice
 -----------------
@@ -50,7 +50,7 @@ Simplemente haga clic en el capítulo desde el que desea comenzar y después sig
 
 ### Otros tutoriales de Python
 
-- [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) tiene toneladas de [tutoriales interactivos](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) sobre Python que cubren temas como manipulación de datos, visualización de datos, estadística, aprendizaje automático (machine learning), y más.
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) tiene toneladas de [tutoriales interactivos](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) sobre Python que cubren temas como manipulación de datos, visualización de datos, estadística, aprendizaje automático (machine learning), y más.
 - Lee el curso de After Hours Programming [Tutoriales Python y referencias](http://www.afterhoursprogramming.com/index.php?article=181).
 
 ### Contribuir con tutoriales

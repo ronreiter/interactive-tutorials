@@ -33,16 +33,17 @@ learnsqlonline.org is still under construction - If you wish to contribute tutor
 - [[Order by]]
 
 ### Advanced tutorials
-- String operations
-- Inner and outer joins
-- The UNION statement
-- The CASE statement
-- Combining INSERT INTO and SELECT
-- Subqueries
-- Indexing
-- Altering tables
-- Views
-- Window functions
+
+- [String operations](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Inner and outer joins](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [The UNION statement](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [The CASE statement](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Combining INSERT INTO and SELECT](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Subqueries](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Indexing](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Altering tables](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Views](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
+- [Window functions](https://datacamp.pxf.io/ZQrAgK?sharedId=learnsqlonline.org)
 
 ### Contributing Tutorials
 

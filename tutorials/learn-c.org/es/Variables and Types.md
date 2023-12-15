@@ -10,7 +10,7 @@ C tiene varios tipos de variables, pero hay unos cuantos tipos básicos:
 * Números con punto flotante - números reales (números con fracciones). Definidos usando `float` y `double`.
 * Estructuras - serán explicadas luego, en la sección de estructuras.
 
-Los distintos tipos de variables definen sus límites. Un `char` tiene un rango de -128 a 127, donde un `long` puede tener un rango de -2,147,483,648 a 2,147,483,647 (`long` y otros tipos de datos numéricos pueden tener otro rango en diferentes computadoras, por ejemplo - de –9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 en una computadora de 64 bits).
+Los distintos tipos de variables definen sus límites. Un `char` tiene un rango de -128 a 127, mientras que un `long` puede tener un rango de -2,147,483,648 a 2,147,483,647 (`long` y otros tipos de datos numéricos pueden tener otro rango en diferentes computadoras, por ejemplo - de –9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 en una computadora de 64 bits).
 
 Note que C _no_ tiene un tipo booleano. Usualmente, es definido usando la siguiente notación:
 

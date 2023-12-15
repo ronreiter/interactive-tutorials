@@ -59,6 +59,22 @@
     <div class="row">
 
         <div class="col col-lg-10">
+            {% if domain_data.language == "sql" %}
+                {% if page_title in ["Hello, World!", "Selecting data", "Creating tables"] %}
+                    <p>To discover more interactive courses and gain hands-on experience in SQL, get started with DataCamp's free <a href="https://datacamp.pxf.io/5gjDNn?sharedId=learnsqlonline.org">Introduction to SQL</a> tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/Kjxv6a?sharedId=learnsqlonline.org">Start Now!</a></p>
+                {% elif page_title in ["Inserting rows", "Updating rows", "Deleting rows"] %}
+                    <p>To discover more intermediate courses and gain hands-on experience in SQL, register to DataCamp's <a href="https://datacamp.pxf.io/m5nmQ7?sharedId=learnsqlonline.org">Intermediate SQL</a> tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/Kjxv6a?sharedId=learnsqlonline.org">Start Now!</a></p>
+                {% elif page_title in ["Joining tables", "Group by", "Aggregate functions"] %}
+                    <p>To discover more courses about data manipulation and SQL functions, register to DataCamp's <a href="https://datacamp.pxf.io/DKLN45?sharedId=learnsqlonline.org">SQL</a> tutorials. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/Kjxv6a?sharedId=learnsqlonline.org">Start Now!</a></p>
+                {% elif page_title in ["The HAVING statement", "Distinct queries", "Order by"] %}
+                    <p>To discover more intermediate to advanced SQL courses, register to DataCamp's <a href="https://datacamp.pxf.io/eKR5Wg?sharedId=learnsqlonline.org">SQL</a> tutorials. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/Kjxv6a?sharedId=learnsqlonline.org">Start Now!</a></p>
+                {% elif "<h1>Welcome</h1>" in text %}
+                    <p>Get started learning SQL with DataCamp's free <a href="https://datacamp.pxf.io/5gjDNn?sharedId=learnsqlonline.org">Introduction to SQL</a> tutorial. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/Kjxv6a?sharedId=learnsqlonline.org">Start Now!</a></p>
+                    <p>This site is generously supported by <a href="https://datacamp.pxf.io/Kjxv6a?sharedId=learnsqlonline.org">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/eKR5Wg?sharedId=learnsqlonline.org">SQL Tutorials</a> for Data Science. Join 11+ million other learners and get started learning <a href="https://datacamp.pxf.io/eKR5Wg?sharedId=learnsqlonline.org">SQL for data science</a> today.</p>
+                    <p>Good news! You can save 25% off your Datacamp annual subscription with the code <a href="https://datacamp.pxf.io/Y9Nz7R">LEARNPYTHON23ALE25 - Click here to redeem your discount!</a></p>
+                {% endif %}
+            {% endif %}
+
             <div id="inner-text">{% autoescape off %}
                 {% if page_title %}
                     <h1>{{ page_title }}</h1>
@@ -115,6 +131,10 @@
 
         <div class="col-2 d-none d-lg-block mt-2">
             <div id="google-ad-right">
+                {% if domain_data.language == "sql" %}
+                    <iframe src="https://learnsqlonline-ads.datacamp.com/?page={{page_title}}&language={{language_code}}" frameborder="0" width="160" height="600" scrolling="no" allowtransparancy="true" style="margin-bottom: 10px; border: 0;"></iframe>
+                {% endif %}
+
                 <h4>Sponsors</h4>
                 <hr/>
 {#                <div class="mt-3">#}

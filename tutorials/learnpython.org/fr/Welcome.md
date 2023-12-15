@@ -1,4 +1,4 @@
-Ce site est généreusement soutenu par [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials). DataCamp offre des [Tutoriels Python](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) en ligne interactifs pour la Science des Données. Rejoignez **575&nbsp;000** autres apprenants et commencez à apprendre Python pour la Science des Données aujourd'hui&nbsp;!
+Ce site est généreusement soutenu par [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org). DataCamp offre des [Tutoriels Python](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) en ligne interactifs pour la Science des Données. Rejoignez **575&nbsp;000** autres apprenants et commencez à apprendre Python pour la Science des Données aujourd'hui&nbsp;!
 
 # Bienvenue
 
@@ -21,5 +21,5 @@ Table des Matières
 
 ### Other Python Tutorials
 
-- [DataCamp](https://www.datacamp.com/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) has tons of great interactive [Python Tutorials](https://www.datacamp.com/courses/?utm_source=learnpython_com&utm_campaign=learnpython_tutorials) covering data manipulation, data visualization, statistics, machine learning, and more
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) has tons of great interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) covering data manipulation, data visualization, statistics, machine learning, and more
 - Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
