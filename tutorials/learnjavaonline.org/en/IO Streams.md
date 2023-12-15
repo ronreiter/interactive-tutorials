@@ -1,5 +1,4 @@
-# Tutorial 
-Java IO Streams
+# Java IO Streams
 
 Java IO (Input/Output) Streams provide a powerful and flexible way to work with input and output operations in Java. Streams handle the flow of data between a program and an external source, such as a file or network connection. Understanding Java IO Streams is crucial for tasks like reading and writing files, communicating with other programs, and handling input/output efficiently.
 
