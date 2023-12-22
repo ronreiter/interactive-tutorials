@@ -14,8 +14,7 @@ The traditional `for` loop is composed of an initializer, a condition, and an in
 
   This prints numbers 0 through 4.
 
-`for...of` Loop
-------
+#### `for...of` Loop
 
 Ideal for iterating over elements in arrays or other iterable objects, the `for...of` loop offers simplicity.
 
@@ -26,20 +25,23 @@ Ideal for iterating over elements in arrays or other iterable objects, the `for.
 
   This prints 'apple', 'banana', and 'cherry'.
 
-`for...in` Loop
-------
+#### `for...in` Loop
 
 This loop iterates over the properties (keys) of an object, making it suitable for object property traversal.
 
-    const person = {name: "John", age: 30, city: "New York"};
+    const person = {
+        name: "John", 
+        age: 30, 
+        city: "New York"
+    };
+    
     for (let key in person) {
         console.log(key, person[key]);
     }
 
 This prints 'name John', 'age 30', and 'city New York'.
 
-`while` and `do...while` Loops
-------
+#### `while` and `do...while` Loops
 
 The `while` loop continues executing its block as long as its condition remains `true`. On the other hand, the `do...while` loop ensures the block gets executed at least once before checking the condition.
 

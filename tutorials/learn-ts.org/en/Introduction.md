@@ -8,10 +8,18 @@ The major advantage of using TypeScript is its static typing feature, which help
 
 Let's start with the most basic program: "Hello World". In TypeScript, just like JavaScript, this can be done with a simple `console.log()` statement.
 
-    let message: string = "Hello World";
+    const message: string = "Hello World";
     console.log(message);
 
 The `: string` is a type annotation that tells TypeScript that the `message` variable can only hold a string. This is one of the many features TypeScript adds to JavaScript.
+
+TypeScript also supports formatting strings using the backtick operator. Here is an example:
+
+    const name = "John";
+    const message: string = `Hello ${name}`;
+    console.log(message);
+
+This prints "`Hello John`", because the `name` variable was formatted into the string right after the word `Hello`.
 
 Exercise
 -------

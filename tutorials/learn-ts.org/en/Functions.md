@@ -4,6 +4,9 @@ Tutorial
 -------
 Functions in TypeScript can have typed parameters and return values.
 
+In the following example, the function `add` receives two numbers and returns a number.
+The function defines the types of the parameters and its return value using the `:` operator.
+
     function add(a: number, b: number): number {
         return a + b;
     }
