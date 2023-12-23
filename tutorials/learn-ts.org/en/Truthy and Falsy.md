@@ -17,10 +17,7 @@ will act as `false`. Here are a few examples of falsy variables in TypeScript:
 All other values will be considered "truthy", meaning that when evaluated as a 
 boolean expression, they will act as `true`.
 
-Note that we can also use logical operators on non-boolean operators. They will act as 
-`true` if the values are "truthy" and `false` if the values are "falsy".
-
-The `||` operator can be used to select the first non-falsy value. For example:
+The `||` (logical OR) operator can be used to select the first non-falsy value. For example:
 
 
     const bananas = 3;
