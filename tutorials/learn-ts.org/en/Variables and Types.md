@@ -53,18 +53,18 @@ When you use `let`, you're telling TypeScript that the variable may change its v
 With `const`, the variable must be initialized at the time of declaration, and it cannot be reassigned later. This is useful for values that should not change throughout the application.
 
     const pi: number = 3.14;
-    // pi = 3.15; This would be an error because `pi` is a constant.
+    pi = 3.15; // This would be an error because `pi` is a constant.
 
 
 #### Types
 
 TypeScript is statically typed. This means that the type of a variable is known at compile time. This is different from JavaScript, where types are understood dynamically at runtime.
 
-**Basic Types**:
+##### Basic Types
 
 Here are some basic types in TypeScript:
 
-1. **Number**: All numbers in TypeScript are floating-point values. These can be integers, decimals, etc.
+**Number**: All numbers in TypeScript are floating-point values. These can be integers, decimals, etc.
 
 
     let decimal: number = 6;
@@ -72,18 +72,18 @@ Here are some basic types in TypeScript:
     let binary: number = 0b1010;
     let octal: number = 0o744;
 
-2. **String**: Represents a sequence of characters. TypeScript, like JavaScript, uses double quotes (`"`) or single quotes (`'`) to surround string data.
+**String**: Represents a sequence of characters. TypeScript, like JavaScript, uses double quotes (`"`) or single quotes (`'`) to surround string data.
 
 
     let color: string = "blue";
     color = 'red'; // Both single and double quotes are acceptable.
 
-3. **Boolean**: The most basic datatype is the simple true/false value.
+**Boolean**: The most basic datatype is the simple true/false value.
 
 
     let isDone: boolean = false;
 
-4. **Any**: It can be any type of value. It is useful when you don't want to write a specific type, but its use should be limited to when you really don't know what type there will be.
+**Any**: It can be any type of value. It is useful when you don't want to write a specific type, but its use should be limited to when you really don't know what type there will be.
 
 
     let notSure: any = 4;
