@@ -26,7 +26,7 @@ Each section offers tutorials, example code, exercises, and solutions to consoli
 #### Advanced
 
 1. [[keyof and typeof Operators]]
-2. [[Decorators]]
+2. [[Type Unions and Intersections]]
 3. [[Conditional Types]]
 4. [[Enum Type]]
 5. [[Generics]]
@@ -40,7 +40,7 @@ Each section offers tutorials, example code, exercises, and solutions to consoli
 13. [[Tuple Types]]
 14. [[Type Aliases]]
 15. [[Type Guards]]
-16. [[Unions and Intersections]]
+16. [[Decorators]]
 17. [[Utility Types]]
 18. [[Abstract Classes]]
 
