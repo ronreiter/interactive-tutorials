@@ -41,7 +41,7 @@ Here is an example of how to use `Shape`:
  
     // example for getting a rendering context that has functions to draw 
     // either a circle or a square using different functions
-    context = ...
+    const context = ...
 
     shapes.forEach((shape: Shape) => {
         // we cannot use shape.radius or shape.sideLength here
@@ -63,6 +63,10 @@ Here is an example of how to use `Shape`:
 Exercise
 -------
 Write a function that calculates the area of a given shape (either a circle or a square).
+
+To calculate the radius of a circle, use `Math.PI * shape.radius ** 2`.
+
+To calculate the area of a square, use `shape.sideLength ** 2`.
 
 Tutorial Code
 -------
@@ -108,9 +112,9 @@ Solution
     function calculateArea(shape: Shape): number {
         switch (shape.kind) {
             case "circle":
-                return Math.PI * shape.radius * shape.radius;
+                return Math.PI * shape.radius ** 2;
             case "square":
-                return shape.sideLength * shape.sideLength;
+                return shape.sideLength ** 2;
         }
     }
 
