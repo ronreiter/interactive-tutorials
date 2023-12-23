@@ -2,7 +2,12 @@
 
 Tutorial
 -------
-Discriminated unions, also known as tagged unions or algebraic data types, are a way to combine types with a single shared field, which is typically a literal type, used to discriminate between the other types.
+Discriminated unions, also known as tagged unions or algebraic data types, 
+are a way to combine types with a single shared field, which is typically a 
+literal type, used to discriminate between the other types.
+
+The `kind` variable of a `Circle` object must be equal to the literal `"circle"`. 
+This is how TypeScript knows how to determine between the objects during the compilation process.
 
     interface Circle {
         kind: "circle";
@@ -15,6 +20,45 @@ Discriminated unions, also known as tagged unions or algebraic data types, are a
     }
 
     type Shape = Circle | Square;
+
+Discriminated unions are useful for being able to discriminate between two different objects
+with different types. This is useful when there is different business logic that needs to be
+implemented while determining the type of object at runtime, while still being able to use strong typing
+without using type assertions.
+
+Here is an example of how to use `Shape`:
+
+    const shapes: Shape[] = [
+        {
+            kind: "circle", 
+            radius: 5
+        }, 
+        {
+            kind: "square",
+            sideLength: 10
+        }
+    ];
+ 
+    // example for getting a rendering context that has functions to draw 
+    // either a circle or a square using different functions
+    context = ...
+
+    shapes.forEach((shape: Shape) => {
+        // we cannot use shape.radius or shape.sideLength here
+        // since the compiler doesn't know what type shape is yet
+
+        switch (shape.kind) {
+            case "circle":
+                // here shape is of type Circle
+                context.drawCircle(shape.radius);
+                break;
+            case "square":
+                // here shape is of type Square
+                context.drawSquare(shape.sideLength);
+                break;
+        }
+    });
+
 
 Exercise
 -------
