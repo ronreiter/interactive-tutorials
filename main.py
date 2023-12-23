@@ -389,6 +389,7 @@ def index(title, language="en"):
             site_links = []
             logging.error("cant get site links for %s %s" % (get_host(), language))
 
+        print(request.host)
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
             tutorial_page=tutorial != "Welcome",
@@ -403,6 +404,7 @@ def index(title, language="en"):
             languages=get_languages(),
             language_names=get_language_names(),
             uid=uid,
+            env="dev" if request.host == "localhost:5000" else "prod",
             **current_tutorial_data
         ))
 

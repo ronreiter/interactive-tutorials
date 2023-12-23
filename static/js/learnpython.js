@@ -1,8 +1,9 @@
-var editor;
-var output;
-var originalCode;
-var loading;
-var minimized = false;
+let editor;
+let output;
+let originalCode;
+let loading;
+
+let minimized = false;
 
 (function( jQuery ) {
 
@@ -205,14 +206,19 @@ function correct() {
 }
 
 function print(text) {
+	if (!text) {
+		return;
+	}
 	output.setValue(text);
 	if ($.trim(tutorialData.output) !== '' && $.trim(tutorialData.output) === $.trim(text)) {
 		correct();
 	}
 }
 
+
+
 function load() {
-	loading = $("#loading");
+	const loading = $("#loading");
 	const codeBlocks = $("code");
 	const outputTheme = "xq-light";
 	let mode;
@@ -221,11 +227,11 @@ function load() {
     	if (window.domainData.language === "python") {
     		mode = {
     			name: "python",
-			 	version: 2,
-			 	singleLineStringErrors: false
-    		}
+			 		version: 2,
+			 		singleLineStringErrors: false,
+    		};
 		} else {
-    		mode = window.domainData.codemirror_mode
+    		mode = window.domainData.codemirror_mode;
 		}
 
         editor = CodeMirror.fromTextArea(document.getElementById("code"), {

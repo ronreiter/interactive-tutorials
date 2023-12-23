@@ -97,6 +97,10 @@ textarea {
 
 }
 
+#inner-text > * {
+    margin-bottom: 20px;
+}
+
 .breadcrumb .active {
     font-weight: bold;
     color: black;
