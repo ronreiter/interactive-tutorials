@@ -3,7 +3,8 @@
 Tutorial
 -------
 
-TypeScript considers some values as falsy (which are similar to `false`):
+TypeScript considers some values as "falsy". When evaluated inside a boolean expression, they
+will act as `false`. Here are a few examples of falsy variables in TypeScript:
 
 * `false`
 * `0`
@@ -13,7 +14,8 @@ TypeScript considers some values as falsy (which are similar to `false`):
 * `null`
 * `undefined`
 
-All other values will be considered truthy when evaluated as a boolean expression.
+All other values will be considered "truthy", meaning that when evaluated as a 
+boolean expression, they will act as `true`.
 
 Note that we can also use logical operators on non-boolean operators. They will act as 
 `true` if the values are "truthy" and `false` if the values are "falsy".
@@ -56,7 +58,8 @@ The nullish coalescing operator (`??`)
 
 TypeScript allows to return a "fallback" value if the left side of the operator is 
 either `null` or `undefined`. It is similar to using the logical OR operator `||`
-but will choose the right value only if the left side is `null` or `undefined`
+but will choose the right value only if the left side is either `null` or `undefined`,
+whereas the `||` operator will choose the left side only if the value is truthy.
 
     const apples = 0;
     const oranges = 3;
