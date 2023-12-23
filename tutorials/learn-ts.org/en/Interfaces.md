@@ -11,6 +11,18 @@ In TypeScript, interfaces play a pivotal role in defining the shape or structure
 
 Using the above interface, any object declared with type `Dog` should have both a `name` property of type `string` and an `age` property of type `number`.
 
+An interface may also have optional fields, denoted using the `?` operator, as follows:
+
+    interface Dog {
+        name: string;
+        age: number;
+        vaccinated?: boolean;
+    }
+
+This interface allows omitting the property `vaccinated` if a person does not want to specify
+if his dog was vaccinated or not.
+
+
 Exercise
 -----------
 Your task is to create an interface named `Car`. This interface should possess two properties: `model`, which will be a string, and `year`, a number. Once you've defined the interface, make an object that fits the criteria set by the interface.

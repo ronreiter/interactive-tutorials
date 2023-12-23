@@ -45,8 +45,11 @@ Finding Elements
 You can search for an element using `indexOf()` or check its existence with `includes()`.
 
     let pets: string[] = ["cat", "dog", "bird"];
+    console.log(pets.indexOf("cat"));    // 0
     console.log(pets.indexOf("dog"));    // 1
     console.log(pets.includes("fish"));  // false
+
+Notice that arrays in TypeScript, like in many other languages, have zero-based indices.
 
 Array Length
 -------

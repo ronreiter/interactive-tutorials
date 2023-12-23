@@ -12,15 +12,17 @@ Each section offers tutorials, example code, exercises, and solutions to consoli
 #### Basics
 
 1. [[Introduction]]
-2. [[Functions]]
-3. [[Loops]]
-4. [[Arrays]]
-5. [[Operators]]
-6. [[Classes]]
-7. [[Interfaces]]
-8. [[Enums]]
-9. [[Modules]]
-10. [[Type Assertions]]
+2. [[Variables and Types]]
+3. [[Functions]]
+4. [[Loops]]
+5. [[Arrays]]
+6. [[Operators]]
+7. [[Truthy and Falsy]]
+8. [[Classes]]
+9. [[Interfaces]]
+10. [[Enums]]
+11. [[Modules]]
+12. [[Type Assertions]]
 
 #### Advanced
 
