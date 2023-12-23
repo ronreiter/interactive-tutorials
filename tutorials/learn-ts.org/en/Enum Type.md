@@ -1,4 +1,4 @@
-### Enum Types
+### Enum Type
 
 Tutorial
 -------
