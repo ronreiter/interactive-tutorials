@@ -8,7 +8,9 @@ Sendo você um programador experiente ou não, o site foi pensado a todos os que
 
 A construção do learn-js.org ainda está em andamento... se você quiser contribuir com os tutoriais, por favor, clique em `Tutoriais de Contribuição` ali embaixo.
 
-Por fim, este humilde tradutor te deseja boa sorte e muitas vagas na jornada. :alien:
+Apesar de os tutoriais e os códigos demonstrativos estarem traduzidos, jargões mais específicos de programação e desenvolvimento de software serão mantidos em inglês, afinal esta é uma carreira amplamente globalizada e o aprendizado desse idioma é imprescindível para destacar-se: por isso mesmo **as soluções vão cobrar códigos em inglês.** Faz uma força!
+
+*Por fim, este humilde tradutor te deseja boa sorte e muitas vagas na jornada.* :alien:
 
 ### Começando de Baixo
 
@@ -37,4 +39,4 @@ Por fim, este humilde tradutor te deseja boa sorte e muitas vagas na jornada. :a
 
 ### Tutoriais de Contribuição
 
-Leia mais aqui: [[Tutoriais de Contribuição]]
+Saiba mais em [[Tutoriais de Contribuição]].
