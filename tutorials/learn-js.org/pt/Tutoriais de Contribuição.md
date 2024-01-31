@@ -1,12 +1,28 @@
 Esta seção ainda não existe.
 
-Para contribuir com os tutoriais, basta dar um "fork" no seguinte repositório:
+Para contribuir com os tutoriais, basta dar um "Fork" no seguinte repositório:
 
 [[https://github.com/ronreiter/interactive-tutorials]]
 
-Daí, você cria uma "branch" na qual vai poder adicionar ou editar tutoriais e mandar um "pull request" para o criador, o "ronreiter".
+Daí, você cria uma "Branch" na qual vai poder adicionar ou editar tutoriais e mandar um "Pull Request" para o criador, o "ronreiter".
 
 Para escrever um tutorial, basta dirigir-se à pasta `tutorials`, adentrar a subpasta do domínio desejado, adentrar a subpasta com as iniciais do seu idioma (ou criá-la, se ainda não existir), criar uma página Markdown de nome pertinente e adicioná-la na tela de boas-vindas por meio de hiperlink. Após adicioná-la, garanta que o link funcionou corretamente executando o servidor web "Flask".
+
+#### Iniciais e seus respectivos idiomas:
+
+| Iniciais|Idioma|
+| :--: | :---------: |
+| cn | 普通话 |
+| de | Deutsch |
+| en | English |
+| es | Español |
+| fa | فارسی |
+| fr | Français |
+| it | Italiano |
+| nl | Nederlands |
+| pl | Polski |
+| **pt** | **Português** |
+| tr | Türkçe|
 
 Para que o link atinja a página desejada, use colchetes duplos (`[[`) no arquivo que listará a rota (costuma ser o `Welcome.md`).
 
@@ -14,8 +30,8 @@ Cada tutorial consiste em uma breve explicação conteudista e um exercício suc
 
 Cada tutorial deve seguir a seguinte estrutura:
 
-### Nome do Arquivo.md
-
+    ### Nome do Arquivo.md
+    
     Tutorial
     --------
     Aqui, você pode escrever um texto explicativo sobre alguma funcionalidade.

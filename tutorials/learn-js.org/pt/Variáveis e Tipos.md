@@ -1,14 +1,15 @@
 Tutorial
 --------
 
-Isto é uma variável: uma referência a um valor guardado em um endereço na memória.
+"Variável" é uma referência a um valor guardado em um endereço na memória que pode ser acessada por um nome qualquer.
 
-E como em (quase) toda linguagem dinamicamente tipada, o JavaScript é uma linguagem "duck-typed", logo toda variável é definida pela palavra reservada "`var`" e pode guardar qualquer tipo primitivo a qualquer momento.
+Esses nomes quaisquer podem ser regidos pelas lógicas "camelCase" (como em nomes de variáveis do Java), "snake_case" (como em nomes de variáveis do Python), "CapitalCamelCase" (como em nomes de classes do Java), flatcase (como em nomes de pacotes do Java), UPPER_CASE (como em constantes do C) e kebab-case. O padrão vai depender dos padrões da companhia ou do projeto em que você está trabalhando, a recomendação é apenas não se desviar dele assim que escolhido.
 
-> O TypeScript é um subconjunto do JavaScript que permite a tipagem estática, por isso ele é mais recomendado que o seu irmão amarelo quando se fala na criação de lógica para servidores: torna-se menos provável comportamentos inesperados por mudanças repentinas de tipagem.
-<br>Imagina um número de telefone deixando de ser "String" e virando "Number" do nada, passando a ocupar um valor de trilhões na memória?
+E como em (quase) toda linguagem dinamicamente tipada, o JavaScript é uma linguagem "duck-typed", logo toda variável pode guardar qualquer tipo primitivo a qualquer momento.
 
-Temos um grande acervo de tipos primitivos para usar nas variáveis dos nossos códigos:
+Variáveis podem ser declaradas pelas palavras reservadas "`const`", "`let`" e "`var`". "`const`" cria uma variável constante, o que significa que o valor (e, por consequência, o tipo) daquela variável não mudará de forma alguma, `let` cria uma variável local (visível pelo escopo da função) e `var` cria uma variável global (visível pelo código todo).
+
+Temos um grande acervo de tipos primitivos para usar com as variáveis dos nossos códigos:
 
     const meuNumber = 3;                   // um valor numérico
     const minhaString = "Olá, Mundo!"        // um valor alfanumérico
@@ -16,8 +17,9 @@ Temos um grande acervo de tipos primitivos para usar nas variáveis dos nossos c
 
 Algumas observações sobre os tipos das variáveis em JavaScript:
 
-* No JavaScript, o tipo Number pode apontar tanto para números decimais quanto para inteiros. 
+* O tipo Number pode apontar tanto para números decimais quanto para inteiros. 
 * As variáveis do tipo Boolean só podem apontar para um destes valores: "`true`" ou "`false`".
+* O tipo String pode ser constituído de números ou valores puramente textuais. No entanto, o Number não pode guardar valores textuais de forma alguma. E, claro, se uma string guardar um número, esse número não poderá ser usado em operações aritméticas.
 
 Há dois tipos mais avançados em JavaScript: Vetores e Objetos. Estudaremos ambos em tutoriais futuros.
 
@@ -39,6 +41,11 @@ No entanto, um valor "`null`" é diferente, seu objetivo é explicitar que uma v
 
 
 >retorna `null`
+
+<br>
+
+> Adendo: O TypeScript é um subconjunto do JavaScript que permite a tipagem estática, por isso ele é mais recomendado que o seu irmão amarelo quando se fala na criação de lógica para servidores: torna-se menos provável comportamentos inesperados por mudanças repentinas de tipagem.
+<br>Imagina só um número de telefone deixando de ser "String" e virando "Number" do nada, passando a ocupar um valor trilionário na memória?
 
 Exercise
 --------
