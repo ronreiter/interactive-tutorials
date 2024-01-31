@@ -1,34 +1,38 @@
 Tutorial
 --------
 
-Functions are code blocks that can have arguments, and function have their own scope. In JavaScript, functions are a very important feature of the program, and especially the fact that they can access local variables of a parent function (this is called a closure). 
+Funções são blocos de código reutilizáveis que podem receber argumentos para diversificar retornos.
 
-There are two ways to define functions in JavaScript - named functions and anonymous functions.
+Pense no seguinte: está precisando copiar trechos iguais? Então esses trechos de código podem ser "componentizados" com funções. Além disso, elas têm seu próprio escopo e são uma parte muito importante de um projeto de software, ainda mais considerando o fato de que podem acessar variáveis locais de funções em níveis superiores (processo esse chamado "closure"). 
 
-To define a named function, we use the `function` statement as follows:
+Há duas formas de se declarar funções em JavaScript: funções nomeadas e anônimas.
 
-    function greet(name)
-    {
-        return "Hello " + name + "!";
+Para declarar uma função nomeada, usamos a palavra reservada "`function`" desta forma:
+
+    function cumprimentar(nome) {
+        return `Fala, ${nome}!`;
     }
 
-    console.log(greet("Eric"));      // prints out Hello Eric!
+    console.log(cumprimentar("Nathan"));
+>retorna "Fala, Nathan!"
 
-In this function, the `name` argument to the `greet` function is used inside the function to construct a new string and return it using the `return` statement.
+Nessa função, o parâmetro `nome` da função `cumprimentar` é usado no corpo dela própria para construir uma string que será retornada usando a palavra reservada "`return`". O argumento passado é a string `Nathan`, por isso o retorno acima.
 
-To define an anonymous function, we can alternatively use the following syntax:
+Para definir uma função anônima, podemos usar esta sintaxe:
 
-    var greet = function(name)
-    {
-        return "Hello " + name + "!";
+    var cumprimentar = function(nome) {
+        return `Fala, ${name}!`;
     }
 
-    console.log(greet("Eric"));      // prints out Hello Eric!
+    console.log(cumprimentar("Nathan"));
+>retorna "Fala, Nathan!"
+
+Há uma facilidade proporcionada pelo ES6 chamada "funções seta", mas vamos abordar esse assunto no próximo artigo.
 
 Exercise
 --------
 
-Define a function called `multiplyFive` which accepts a number and returns that number multiplied by 5.
+Defina uma função chamada `multiplyFive` que receba uma variável do tipo Number e a retorne multiplicada por 5.
 
 Tutorial Code
 -------------

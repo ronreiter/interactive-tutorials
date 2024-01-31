@@ -5,6 +5,8 @@ Tutorial
 
 Esses nomes quaisquer podem ser regidos pelas lógicas "camelCase" (como em nomes de variáveis do Java), "snake_case" (como em nomes de variáveis do Python), "CapitalCamelCase" (como em nomes de classes do Java), flatcase (como em nomes de pacotes do Java), UPPER_CASE (como em constantes do C) e kebab-case. O padrão vai depender dos padrões da companhia ou do projeto em que você está trabalhando, a recomendação é apenas não se desviar dele assim que escolhido.
 
+Uma restrição para a nomenclatura das variáveis é que elas não podem assumir palavras reservadas da linguagem. E já que estamos no Brasil, **lembrem-se**, espaços e acentos, em computação, só se usa dentro de variáveis que guardem texto, ou a chance de erros é tremenda!
+
 E como em (quase) toda linguagem dinamicamente tipada, o JavaScript é uma linguagem "duck-typed", logo toda variável pode guardar qualquer tipo primitivo a qualquer momento.
 
 Variáveis podem ser declaradas pelas palavras reservadas "`const`", "`let`" e "`var`". "`const`" cria uma variável constante, o que significa que o valor (e, por consequência, o tipo) daquela variável não mudará de forma alguma, `let` cria uma variável local (visível pelo escopo da função) e `var` cria uma variável global (visível pelo código todo).
@@ -41,6 +43,19 @@ No entanto, um valor "`null`" é diferente, seu objetivo é explicitar que uma v
 
 
 >retorna `null`
+
+Finalizando o tópico, o ES6 trouxe-nos um uso muito interessante das strings com o "template literals", ele entra em jogo quando se está trabalhando com strings de várias linhas ou que mostrem várias outras variáveis e se queira evitar a concatenação excessiva com "+", aspas e espaços.
+Para aplicá-lo, deve-se declarar a string com acentos graves ```| `` |``` em vez de aspas simples ou duplas. Dentro da string, sempre que se for chamar a outra variável, usa-se cifrão e chaves da seguinte forma:
+
+    var nome = "Nathan";
+    var periodo = "tarde";
+    var saudacao = `Boa ${periodo}, ${nome}!`;
+
+    // em vez de
+    // var saudacao = "Boa "+periodo+", "+nome+"!";
+
+    console.log(saudacao)
+>ambos retornam "Boa tarde, Nathan!", mas perceba a complexidade desnecessária da segunda alternativa.
 
 <br>
 

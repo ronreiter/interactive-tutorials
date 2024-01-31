@@ -1,54 +1,65 @@
 Tutorial
 --------
 
-Arrow functions are a feature of ES6, their behavior are generally the same of a function. These are anonymous functions with a special syntax, they haven't their own this, arguments or super. They can't be used as constructors too.
+Funções seta são uma funcionalidade do ES6, elas se comportam como uma função comum. Trata-se de funções anônimas com sintaxe especial, elas não têm "`this`", argumentos ou "`super`". Também não podem ser usadas como construtores.
 
-Arrow functions are often used as callbacks of native JS functions like map, filter or sort. The reason of their name is due to the use of `=>` in the syntax.
+Funções seta são comumente usadas como callbacks de funções nativas do JavaScript, como "`map`", "`filter`" ou "`sort`". Elas têm esse nome por causa do `=>` presente na inicialização.
 
-To define an arrow function, we use the `() => {}` structure as follows:
+Para declarar uma função seta, usamos a estrutura `() => {}` conforme o exemplo:
 
-    const greet = (name) => { return "Hello " + name + "!"; }
-
-    console.log(greet("Eric"));      // prints out Hello Eric!
-
-In this function, the `name` argument to the `greet` function is used inside the function to construct a new string and return it using the `return` statement.
-
-In case that the function only receives one argument, we can omit the parenthesis:
-
-    const greet = name => { return "Hello " + name + "!"; }
-
-    console.log(greet("Eric"));      // prints out Hello Eric!
-
-And, in case that we want to do a explicit return of the function and we have only one line of code, we can avoid the `return` statement and omit brackets too:
-
-    const greet = name => "Hello " + name + "!";
-
-    console.log(greet("Eric"));      // prints out Hello Eric!
-
-Using an arrow as a callback compared to a normal function:
-
-    let numbers = [3, 5, 8, 9, 2];
-
-    // Old way
-    function multiplyByTwo(number){
-        return number * 2;
+    const cumprimentar = (nome) => {
+        return `Fala, ${nome}!`;
     }
 
-    let multipliedNumbers = numbers.map(multiplyByTwo);
+    console.log(cumprimentar("Nathan"));
+>retorna "Fala, Nathan"!
 
-    console.log(multipliedNumbers);              // prints out: 6, 10, 16, 18, 4
+Nessa função, o parâmetro `nome` da função `cumprimentar` é usado no corpo dela própria para construir uma string que será retornada usando a palavra reservada "`return`". O argumento passado é a string `Nathan`, por isso o retorno acima.
 
-    // Using ES6 arrow functions
-    const multiplyByTwo = number => number * 2;
+No caso de a função receber apenas um argumento, os parênteses tornam-se facultativos:
 
-    let multipliedNumbers = numbers.map(multiplyByTwo);
+    const cumprimentar = nome => {
+        return `Fala, ${nome}!`;
+    }
 
-    console.log(multipliedNumbers);              // prints out: 6, 10, 16, 18, 4
+    console.log(cumprimentar("Nathan"));
+>retorna "Fala, Nathan"!
+
+E mais: no caso de querermos um retorno explícito e apenas uma linha for necessária no corpo da função, o uso da palavra reservada "`return`" e das chaves também vira facultativo:
+
+    const cumprimentar = nome => `Fala, ${nome}!`;
+
+    console.log(cumprimentar("Nathan"));
+>retorna "Fala, Nathan"!
+
+Comparando o uso de uma função seta como callback ao de uma função padrão:
+
+    let numeros = [2, 3, 5, 8, 9];
+
+    // Função tradicional
+    function multiplicarPorDois(numero){
+        return numero * 2;
+    }
+
+    let numerosMultiplicados = numeros.map(multiplicarPorDois);
+
+    console.log(numerosMultiplicados);
+>retorna [4, 6, 10, 16, 18]
+
+    let numeros = [2, 3, 5, 8, 9];
+
+    // Função seta
+    const multiplicarPorDois = numero => numero * 2;
+
+    let numerosMultiplicados = numeros.map(multiplicarPorDois);
+
+    console.log(numerosMultiplicados);
+>retorna [4, 6, 10, 16, 18]
 
 Exercise
 --------
 
-Define an arrow function `divideByTwo` which accepts a number and returns that number divided by 2.
+Defina a função seta `divideByTwo`, que recebe um número como parâmetro e retorna a metade desse número.
 
 Tutorial Code
 -------------

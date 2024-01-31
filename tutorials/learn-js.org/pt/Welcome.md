@@ -1,6 +1,6 @@
 # Bem-vindo
 
-Bem-vindo ao tutorial interativo de JavaScript do "learn-js.org"!
+Bem-vindo ao tutorial interativo do "learn-js.org"!
 
 Sendo você um desenvolvedor experiente ou não, o site foi pensado a todos os que queiram melhorar na linguagem de programação *JavaScript*.
 
@@ -8,24 +8,24 @@ Sendo você um desenvolvedor experiente ou não, o site foi pensado a todos os q
 
 A construção do learn-js.org ainda está em andamento... se você quiser contribuir com os tutoriais, por favor, clique em `Tutoriais de Contribuição` ali embaixo.
 
-Apesar de os tutoriais e os códigos demonstrativos estarem traduzidos, jargões mais específicos de programação e desenvolvimento de software serão mantidos em inglês, afinal esta é uma carreira amplamente globalizada e o aprendizado desse idioma é imprescindível para se destacar: por isso mesmo **todas as soluções cobrarão códigos em inglês** (exceto no módulo "Olá, Mundo!"). Faz uma força!
+Apesar de os tutoriais e os códigos demonstrativos estarem traduzidos, jargões mais específicos de programação e desenvolvimento de software serão mantidos em inglês, afinal esta é uma carreira amplamente globalizada e o aprendizado desse idioma é imprescindível para se destacar: por isso mesmo **todas as soluções cobrarão códigos em inglês** (exceto no módulo "Olá, Mundo!").
 
-*Por fim, este humilde tradutor te deseja boa sorte e muitas vagas na jornada.* :alien:
+*Por fim, este [humilde tradutor](https://github.com/ntn-ss) te deseja muito sucesso e vagas na jornada.* :alien:
 
 ### Começando de Baixo
 
 - "[[Olá, Mundo!]]"
 - [[Variáveis e Tipos]]
-- [[Vetores]]
-- [[Manipulação de Vetores]]
 - [[Operadores Aritméticos]]
 - [[Operadores Lógicos]]
+- [[Funções]]
+- [[Funções Seta]]
+- [[Vetores]]
+- [[Manipulação de Vetores]]
 - [[Estruturas de Repetição]]
 - [[Objetos]]
-- [[Funções]]
 - [[Caixas Pop-up]]
 - [[Funções Callback]]
-- [[Funções Seta]]
 
 ### Tutoriais Avançados
 
@@ -37,6 +37,6 @@ Apesar de os tutoriais e os códigos demonstrativos estarem traduzidos, jargões
 - [[Desestruturação]]
 - [[Estruturas de Dados]]
 
-### Tutoriais de Contribuição
+### Quero Ajudar
 
 Saiba mais em [[Tutoriais de Contribuição]].
