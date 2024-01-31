@@ -4,17 +4,17 @@ Para contribuir com os tutoriais, basta dar um "fork" no seguinte repositório:
 
 [[https://github.com/ronreiter/interactive-tutorials]]
 
-Daí você vai poder adicionar ou editar tutoriais e mandar um "pull request" para o criador, "ronreiter".
+Daí, você vai poder adicionar ou editar tutoriais e mandar um "pull request" para o criador, o "ronreiter".
 
 Para escrever um tutorial, basta criar uma página Markdown de nome pertinente sob a pasta `tutorials`, e adicioná-la na tela de boas-vindas por meio de hiperlink. Após adicioná-la, garanta que o link funcionou corretamente executando o servidor web "Flask".
 
-Para que o link atinja a página desejada, use colchetes duplos (`[[`) no arquivo que listará a rota (costuma ser a página `Welcome.md`).
+Para que o link atinja a página desejada, use colchetes duplos (`[[`) no arquivo que listará a rota (costuma ser a `Welcome.md`).
 
-Cada tutorial consiste em uma breve explicação conteudista e um exercício curto para testar o usuário. Assim que o usuário finalize, ele terá de executar o código e verificar se a saída está de acordo com o esperado.
+Cada tutorial consiste em uma breve explicação conteudista e um exercício sucinto para testar o usuário. Assim que o usuário o finalizar, terá de executar o código e verificar se a saída está de acordo com o esperado.
 
 Cada tutorial deve seguir a seguinte estrutura:
 
-### Nome do arquivo.md
+### Nome do Arquivo.md
 
     Tutorial
     --------

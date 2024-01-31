@@ -1,14 +1,14 @@
 # Bem-vindo
 
-Bem-vindo ao tutorial interativo de JavaScript do learn-js.org.
+Bem-vindo ao tutorial interativo de JavaScript do learn-js.org!
 
-Sendo você um programador experiente ou não, o site foi pensado a todos que queiram aprender a linguagem de programação JavaScript.
+Sendo você um programador experiente ou não, o site foi pensado a todos os que queiram aprender a linguagem de programação JavaScript.
 
 É só clicar no capítulo pelo qual você deseja começar e seguir as instruções. Boa sorte!
 
 A construção do learn-js.org ainda está em andamento... se você quiser contribuir com os tutoriais, por favor, clique em `Tutoriais de Contribuição` ali embaixo.
 
-Por fim, o tradutor te deseja boa sorte na jornada. :alien:
+Por fim, este humilde tradutor te deseja boa sorte e muitas vagas na jornada. :alien:
 
 ### Começando de Baixo
 
