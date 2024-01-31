@@ -1,76 +1,82 @@
 Tutorial
 --------
 
-### Pushing and popping
+### Push e Pop
 
-Arrays can also function as a stack. The `push` and `pop` methods insert and remove variables from the end of an array.
+Vetores também podem funcionar como pilhas. Os métodos "`push`" e "`pop`" inserem e removem variáveis diretamente do fim de um vetor, respectivamente.
 
-For example, let's create an empty array and push a few variables.
+Por exemplo, criemos um vetor vazio e povoemo-no com algumas variáveis.
 
-    var myStack = [];
-    myStack.push(1);
-    myStack.push(2);
-    myStack.push(3);
-    console.log(myStack);
+    var minhaPilha = [];
+    minhaPilha.push(1);
+    minhaPilha.push(2);
+    minhaPilha.push(3);
+    console.log(minhaPilha);
 
-This will print out:
+<center>
+Isso retornará:
 
     1,2,3
+</center>
 
-After pushing variables to the array, we can then pop variables off from the end.
+Tendo inserido variáveis no fim do vetor, podemos também removê-las dali.
 
-    console.log(myStack.pop());
-    console.log(myStack);
+    console.log(minhaPilha.pop());
+    console.log(minhaPilha);
 
-This will print out the variable we popped from the array, and what's left of the array:
+<center>
+Esses comandos mostrarão, respectivamente, o que removemos do vetor e o que restou nele:
+</center>
 
-    3           // the result from myStack.pop()
-    1,2         // what myStack contains now
+    3           // resultado de minhaPilha.pop()
+    1,2         // restante de minhaPilha
 
-### Queues using shifting and unshifting
+### Filas usando Unshift e Shift
 
-The `unshift` and `shift` methods are similar to `push` and `pop`, only they work from the beginning of the array. We can use the `push` and `shift` methods consecutively to utilize an array as a queue. For example:
+Os métodos "`unshift`" e "`shift`" assemelham-se aos "`push`" e "`pop`", com a ressalva de trabalharem no começo do vetor. Podemos usar os métodos "`push`" e "`shift`" alternadamente, o que faz o vetor funcionar como uma fila. Veja só:
 
-    var myQueue = [];
-    myQueue.push(1);
-    myQueue.push(2);
-    myQueue.push(3);
+    var minhaFila = [];
+    minhaFila.push(1);
+    minhaFila.push(2);
+    minhaFila.push(3);
 
-    console.log(myQueue.shift());
-    console.log(myQueue.shift());
-    console.log(myQueue.shift());
+    console.log(minhaFila.shift());
+    console.log(minhaFila.shift());
+    console.log(minhaFila.shift());
 
-The `shift` keyword will remove the variables of the array in the exact order they were inserted in, and the output will be:
+A palavra reservada "`shift`" removerá as variáveis do vetor na mesmíssima ordem em que foram inseridas, o que acarretará nos seguintes retornos:
 
     1
     2
     3
 
-The `unshift` method is used to insert a variable at the beginning of an array. For example:
+O método "`unshift`" é usado para inserir uma variável no começo de um vetor. Por exemplo:
 
-    var myArray = [1,2,3];
-    myArray.unshift(0);
-    console.log(myArray);       // will print out 0,1,2,3
+    var meuVetor = [1,2,3];
+    meuVetor.unshift(0);
+    console.log(meuVetor);
+    
+>retorna [0,1,2,3]
 
-### Splicing
+### Splice
 
-Splicing arrays in JavaScript removes a certain part from an array to create a new array, made up from the part we took out. For example, if we wanted to remove the five numbers from the following array beginning from the 3rd index, we would do the following:
+O método Splice dos vetores do JavaScript remove uma determinada parte de um vetor; possibilitando também a criação de um novo a partir da parte que foi removida. Por exemplo, se quiséssemos retirar cinco números do seguinte vetor a partir do índice 3, aplicaríamos o seguinte:
 
-    var myArray = [0,1,2,3,4,5,6,7,8,9];
-    var splice = myArray.splice(3,5);
+    var meuVetor = [0,1,2,3,4,5,6,7,8,9];
+    var splice = meuVetor.splice(3,5);
 
-    console.log(splice);        // will print out 3,4,5,6,7
-    console.log(myArray);       // will print out 0,1,2,8,9
+    console.log(splice);        // retorna [3,4,5,6,7]
+    console.log(meuVetor);       // retorna [0,1,2,8,9]
 
-After splicing the array, it will only contain the part before and after the splicing. The splice is equal to all the variables between 3 and 7 (inclusive), and the remainder of the array, which contains all variables between 0 and 2 (inclusive), and 8 to 9 (inclusive).
+Após aplicar o Splice, o vetor resultante possuirá tudo menos as partes anterior e posterior ao intervalo informado pelos parâmetros. Esse intervalo é fechado, isto é: o 3 e o 7 também foram incluídos. Já o vetor original passou a conter todas as variáveis entre 0 e 2 e 8 e 9.
 
 Exercise
 --------
 
-In this tutorial, you must manipulate the array called `myArray` and do the following:
+Para este desafio, você manipulará o vetor chamado `myArray` e fará o seguinte:
 
-1. Push the number 42 to the end of the array
-2. Shift a variable from the beginning of the array
+1. Inserirá o número 42 ao fim dele
+2. Removerá a variável de seu início
 
 Tutorial Code
 -------------
