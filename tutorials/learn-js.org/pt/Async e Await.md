@@ -1,76 +1,68 @@
 Tutorial
 --------
 
-The `async` and `await` keywords in JavaScript are used to make asynchronous programming easy,
-by introducing something called **coroutines**. A coroutine is a function which can pause
-its execution and return control to the main loop until some event occurs. It is an alternative
-approach for using callback functions, which makes it easier to write, understand and maintain.
+Estas duas palavras reservadas do JavaScript, "`async`" e "`await`", facilitam um bocado a programação assíncrona, por serem a porta de entrada das chamadas **corrotinas**.
 
-### The `await` keyword
+Uma corrotina é uma função que pode pausar sua execução e passar o controle ao fluxo principal até que algum evento ocorra. É uma abordagem alternativa ao uso de funções callback que deixa o código mais fácil de escrever, ler e manter.
 
-The `await` keyword is a special command which tells JavaScript to stop the execution of the
-current function until a Promise resolves, and then return the promise's value. It can be
-seen as an endless loop which checks if the promise has been resolved, and returns the value
-of the resolved promise when it does.
+### A Palavra Reservada "`await`"
 
-The `await` keyword only works inside `async` functions (which are coroutines, as explained before).
-The tricky part about `async` functions is that they return a Promise, instead of a value. This
-means that every time we need to run an `async` function, we need to `await` on it if we want
-to get the return value.
+A palavra reservada "`await`" é um comando especial que diz ao JavaScript em que ponto da função atual deve parar até que o objeto de tipo Promise seja concluído, para só então retornar o valor dessa promessa. Pode-se pensar em um laço infinito que verifica se a promessa concluiu, retornando o valor obtido assim que possível.
 
-Let's revisit the example of `sumAsync` from the Promises tutorial, but with using the sleep
-function instead of setTimeout, so we can implement `sumAsync` using `await` later on.
-The sleep function will return a `Promise` which resolves after `ms` milliseconds, and uses
-setTimeout to work.
+A palavra reservada "`await`" só funciona dentro de funções declaradas com "`async`" (que são corrotinas, como já explicado).
+
+O desafio das funções com "`async`" é que elas sempre retornam promessas em vez de valores. Quer dizer que sempre que formos executar uma função com "`async`", precisamos usar o "`await`" se quisermos fazer operações com o valor retornado.
+
+Revisitemos o exemplo da função `somaAssincrona` do tutorial de promessas, mas definindo a função `dormir` em vez de usando a "`setTimeout`", para que possamos implementar a função `somaAssincrona` usando o "`await`" depois.
+
+A função `dormir` retornará um objeto do tipo `Promise` que concluirá após `ms` milissegundos e usará setTimeout para tal.
 
     .exec
-    function sleep(ms) {
+    function dormir(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
 
-    function sumAsync(x, y) {
+    function somaAssincrona(x, y) {
         return new Promise((resolve, reject) => {
-            sleep(500).then(() => {
+            dormir(500).then(() => {
                 resolve(x + y);
             });
         });
     }
 
-    // let's use the function now
-    sumAsync(5, 7).then((result) => {
-        console.log("The result of the addition is:", result);
+    // agora, abriremos a promessa
+    somaAssincrona(5, 7).then((resultado) => {
+        console.log(`O resultado da adição é ${resultado}.`);
     });
 
-We can make our code `sumAsync` much nicer by simply using `await` on the `sleep` function and then
-returning the result.
+Podemos deixar o código da função `somaAssincrona` bem melhor simplesmente por usar o "`await`" na função `dormir` e retornando o resultado.
 
     .exec
-    function sleep(ms) {
+    function dormir(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
 
-    async function sumAsync(x, y) {
-        // this code waits here for 500 milliseconds
-        await sleep(500);
-        // done waiting. let's calculate and return the value
+    async function somaAssincrona(x, y) {
+        // a função pausa por 500 milissegundos
+        await dormir(500);
+        
+        // terminou. calculemos e retornemos o valor
         return x+y;
     }
 
-    // sumAsync is an async function, which means it returns a Promise.
-    sumAsync(5, 7).then((result) => {
-        console.log("The result of the addition is:", result);
+    // somaAssincrona é uma função assíncrona, quer dizer que retorna uma promessa.
+    somaAssincrona(5, 7).then((resultado) => {
+        console.log(`O resultado da adição é ${resultado}.`);
     });
 
-Since `sumAsync` is a an `async` function, it **implicitly** returns a `Promise`, just like
-the previous example which **explicitly** returns a `Promise`. The two `sumAsync` functions
-are completely identical in their functionality, but the one which is defined using `async`
-is much easier to understand!
+Já que `somaAssincrona` é uma função declarada com "`async`", ela retorna **implicitamente** um objeto do tipo `Promise`, tal qual o exemplo mais acima, que retorna **explicitamente** uma promessa.
+
+Ambas as funções `somaAssincrona` têm funcionalidade idêntica, mas essa última, criada com o "`async`", ficou bem mais fácil de entender!
 
 Exercise
 --------
 
-Write an async function which waits 500 milliseconds and then returns the uppercase
-of a given string. Use the `sleep` function provided.
+Escreva uma função assíncrona via `"async"` e `"await"` que receba uma string como parâmetro e espere 500 milissegundos para retornar essa string toda em letras maiúsculas. Use a função "`sleep`" já disponibilizada.
 
 Tutorial Code
 -------------

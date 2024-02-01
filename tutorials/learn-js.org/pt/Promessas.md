@@ -17,7 +17,7 @@ Isso costuma ser necessário quando queremos obter uma informação de algum ser
 
 Em várias linguagens de programação, como o Python, essa abordagem funcionaria, já que suas funções são síncronas por padrão.
 
-Mas no JavaScript, várias APIs exigirão que uma função espere para poder fazer algo a fim de evitar sobrecarga dos recursos físicos, o que faz delas **assíncronas** por padrão. Resumindo, esse código não vai fazer o que a gente espera, pois já que a função "`fetch`" é assíncrona, ela retornará '**algo**' que não é exatamente a resposta final, mas que _eventualmente_ o será.
+Mas no JavaScript, várias APIs exigirão que uma função espere para poder fazer algo a fim de evitar sobrecarga dos recursos físicos, o que faz delas **assíncronas** por padrão. Resumindo, esse código não vai fazer o que a gente espera, pois já que a função "`fetch`" é assíncrona, ela retornará '**algo**' que não é exatamente a resposta final, mas que *eventualmente* o será.
 >Pense numa API como a "porta de entrada" para contatar uma aplicação X e obter dados dela: elas têm documentação independente (além de, às vezes, exigirem autenticação por "token" e/ou pagamento a fim de fazer manutenções de infraestrutura para serem usadas).
 
 Esse "algo" retornado da função "`fetch`" é o que se chama de "**Promise**" no JavaScript.
@@ -32,20 +32,24 @@ Para que o código mais acima funcionasse, devemos refatorar a função da segui
         });
     }
 
-Perceba que, desta vez, usamos a função "`then`", que é um dos métodos característicos de uma "`Promise`".
+Perceba que, desta vez, usamos a função "`then`", que é um dos métodos característicos de um objeto do tipo "`Promise`".
 
 ### O Objeto "Promise"
 
 Promise é um objeto nativo do JavaScript dotado de duas características:
 
 1. Ele recebe apenas um argumento, que é uma função. Essa função precisa ter dois parâmetros: uma função "`resolve`" e uma função "`reject`". O código escrito dentro do corpo da promessa precisa usar ao menos uma dessas duas funções.
-2. Ela pode ser aguardada usando o método "`then`" (ou similares) ou a palavra reservada "`await`".
+    
+    - Para fins didáticos, referir-me-ei ao "fim" de uma promessa como "conclusão", mas quando uma promessa conclui, seu fim pode ser tanto positivo quanto negativo, como veremos adiante.
+
+2. Ela pode ser aguardada usando o método "`then`" (ou similares) ou a palavra reservada "**`await`**".
 >Para as palavras reservadas "*async*" e "*await*", fizemos um guia em particular.
 
 Em suma, chamamos de função assíncrona toda aquela cujo retorno, em vez de ser o valor que se espera no primeiro momento, será um objeto `Promise` que eventualmente se tornará esse exato valor.
 
 Suponhamos que queremos calcular a soma de dois números, mas escrevendo uma função que retornará uma `Promise` em vez dessa soma.
 
+    .exec
     function somaAssincrona(x, y) {
         const p = new Promise((resolve, reject) => {
             
@@ -66,6 +70,7 @@ Suponhamos que queremos calcular a soma de dois números, mas escrevendo uma fun
 
 Modifiquemos o exemplo para que a solução seja entregue após meio segundo:
 
+    .exec
     function somaAssincrona(x, y) {
         console.log("1. A função 'somaAssincrona' é executada.");
 
@@ -98,7 +103,8 @@ Modifiquemos o exemplo para que a solução seja entregue após meio segundo:
 Em um fluxo síncrono, se quisermos informar ao usuário que algo deu errado e disparar um erro a ser exibido, podemos ativar uma exceção por meio da função "`throw`". Mas no contexto assíncrono das promessas, a gente tem que ativar a função "`reject`".
 
 Digamos que precisamos reescrever a função acima, mas com a promessa guardando uma rejeição formal em caso de recebimento de valor negativo. Teríamos isto:
-
+    
+    .exec
     function somaAssincrona(x, y) {
         return new Promise((resolve, reject) => {
             // rode isto daqui a 500 ms
