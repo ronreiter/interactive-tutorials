@@ -18,6 +18,8 @@ Para declarar uma função nomeada, usamos a palavra reservada "`function`" dest
 
 Nessa função, o parâmetro `nome` da função `cumprimentar` é usado no corpo dela própria para construir uma string que será retornada usando a palavra reservada "`return`". O argumento passado é a string `Nathan`, por isso o retorno acima.
 
+Exato: na perspectiva da função e no interior dela, a variável chama-se "parâmetro", mas na perspectiva do chamamento, a variável chama-se "argumento".
+
 Para definir uma função anônima, podemos usar esta sintaxe:
 
     var cumprimentar = function(nome) {

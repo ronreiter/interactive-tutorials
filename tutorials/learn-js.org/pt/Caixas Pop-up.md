@@ -1,17 +1,21 @@
 Tutorial
 --------
-There are three types of pop-up boxes in javascript: confirm, alert, and prompt. To use any of them, type
+Dispomos de três tipos de caixas pop-up no JavaScript: "`alert`", "`confirm`"  e "`prompt`". Para usar qualquer uma, basta chamá-las:
 
 
-    confirm("Hi!");
-    prompt("Bye!");
-    alert("Hello");
+    alert("Olá.");
+    confirm("Você quer faturar uma grana?");
+    prompt("Qual o seu nome?");
 
-Confirm boxes will return "true" if ok is selected, and return "false" if cancel is selected. Alert boxes will not return anything. Prompt boxes will return whatever is in the text box. Note: prompt boxes also have an optional second parameter, which is the text that will already be in the text box.
+As caixas do tipo "`alert`" não retornam coisa alguma.
+As caixas do tipo "`confirm`" retornarão "`true`" se o usuário clicar em "OK" e retornarão "`false`" se ele clicar em "Cancelar".
+As caixas do tipo "`prompt`" retornarão qualquer coisa que o usuário escrever.
+
+Todas as caixas exibirão o argumento de seu chamamento ao usuário, no entanto as caixas do "`prompt`" têm um outro parâmetro opcional: o texto que já estará dentro da caixa por padrão.
 
 Exercise
 --------
-Make a variable ```test``` set it equal to a prompt box, and type "Hi!" in it (without the quotes) when it pops up. Note: your pop-up blocker must not be enabled.
+Crie uma variável ```test```, defina-a como o retorno de uma caixa do tipo `prompt` e escreva "Hi!" nela (sem aspas) quando ela aparecer. A propósito: seu bloqueador de pop-ups precisa estar desativado.
 
 Tutorial Code
 -------------

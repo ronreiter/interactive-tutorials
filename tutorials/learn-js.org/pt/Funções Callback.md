@@ -1,36 +1,37 @@
 Tutorial
 --------
 
-Callbacks in JavaScript are functions that are passed as arguments to other functions. This is a very important feature of asynchronous programming, and it enables the function that receives the callback to call our code when it finishes a long task, while allowing us to continue the execution of the code.
+No JavaScript, chama-se "funções callback" aquelas que são passadas como argumentos a outras. Essa é uma funcionalidade muitíssimo importante da programação assíncrona, afinal permite que a função que receberá o callback execute nosso código e espere o fim de uma tarefa longa enquanto continuamos com a execução em paralelo.
 
-For example:
+>Adendo: uma função pode receber a si mesma como argumento em seu próprio corpo, ocasionando um fenômeno chamado "recursividade", mas não abordaremos isso aqui por ser um tanto complexo.
+
+Por exemplo:
 
     var callback = function() {
-        console.log("Done!");
+        console.log("Terminei!");
     }
 
     setTimeout(callback, 5000);
 
-This code waits 5 seconds and prints out "Done!" when the 5 seconds are up. Note that this code will not work in the interpreter because it is not designed for handling callbacks.
+Esse código espera 5 segundos (pois o segundo parâmetro de "`setTimeout`" é o tempo em milissegundos) e exibe `"Terminei!"` assim que esse tempo passa. Esse código não vai funcionar bem no compilador pois ele não foi feito para lidar com funções callback.
 
-It is also possible to define callbacks as anonymous functions, like so:
+Também podemos definir funções callback como anônimas, tipo assim:
 
     setTimeout(function() {
-        console.log("Done!");
+        console.log("Terminei!");
     }, 5000);
 
-Like regular functions, callbacks can receive arguments and be executed more than once.
+Como nas funções tradicionais, as funções callback podem receber parâmetros e ser executadas mais de uma vez, e é o que faremos no exercício desta lição.
 
 Exercise
 --------
 
-Define a function called `callback` which receives an argument and prints it out.
+Defina uma função chamada "`callback`" que receberá um parâmetro e o exibirá. Após isso, execute a função "`useCallback`" passando a função recém-criada como argumento.
 
 Tutorial Code
 -------------
 
-function useCallback(callback)
-{
+function useCallback(callback) {
     callback(1);
     callback(2);
     callback(3);
@@ -50,8 +51,7 @@ Expected Output
 
 Solution
 --------
-function useCallback(callback)
-{
+function useCallback(callback) {
     callback(1);
     callback(2);
     callback(3);
