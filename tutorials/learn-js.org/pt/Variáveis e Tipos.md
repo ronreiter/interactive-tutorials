@@ -13,9 +13,9 @@ Variáveis podem ser declaradas pelas palavras reservadas "`const`", "`let`" e "
 
 Temos um grande acervo de tipos primitivos para usar com as variáveis dos nossos códigos:
 
-    const meuNumber = 3;                   // um valor numérico
-    const minhaString = "Olá, Mundo!"        // um valor alfanumérico
-    const meuBoolean = true;               // um valor booleano
+    const meuNumber = 3;                   // Number: um valor numérico
+    const minhaString = "Olá, Mundo!"        // String: um valor alfanumérico
+    const meuBoolean = true;               // Boolean: um valor booleano
 
 Algumas observações sobre os tipos das variáveis em JavaScript:
 
@@ -23,10 +23,12 @@ Algumas observações sobre os tipos das variáveis em JavaScript:
 * As variáveis do tipo Boolean só podem apontar para um destes valores: "`true`" ou "`false`".
 * O tipo String pode ser constituído de números ou valores puramente textuais. No entanto, o Number não pode guardar valores textuais de forma alguma. E, claro, se uma string guardar um número, esse número não poderá ser usado em operações aritméticas.
 
-Há dois tipos mais avançados em JavaScript: Vetores e Objetos. Estudaremos ambos em tutoriais futuros.
+Há dois tipos primitivos mais avançados em JavaScript: Function e Object. Estudaremos ambos em tutoriais futuros.
 
-    const meuArray = [];                    // um vetor
-    const meuObject = {};                  // um objeto
+    function minhaFuncao() {}              // uma função vazia
+    const meuObject = {};                  // um objeto vazio
+
+    const meuArray = [];                   // um vetor, que é apenas objeto especial, vazio
 
 Fora isso, há dois tipos especiais: o Undefined e o Null.
 

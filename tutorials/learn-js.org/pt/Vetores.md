@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-O JavaScript te deixa guardar uma lista de variáveis dentro do tipo Array.
+O JavaScript te deixa guardar uma lista de variáveis dentro de um objeto do tipo Array.
 Isso aí: no JavaScript, o mesmo vetor pode funcionar como as estruturas de dados "lista", "pilha" ou "fila". 
 
 Para definir um vetor, ou você usa o operador colchetes ou instancia um objeto do tipo Array:
