@@ -11,10 +11,10 @@ Para declarar uma função seta, usamos a estrutura `() => {}` conforme o exempl
         return `Fala, ${nome}!`;
     }
 
-    console.log(cumprimentar("Nathan"));
->retorna "Fala, Nathan"!
+    console.log(cumprimentar("Olegário"));
+>retorna "Fala, Olegário"!
 
-Nessa função, o parâmetro `nome` da função `cumprimentar` é usado no corpo dela própria para construir uma string que será retornada usando a palavra reservada "`return`". O argumento passado é a string `Nathan`, por isso o retorno acima.
+Nessa função, o parâmetro `nome` da função `cumprimentar` é usado no corpo dela própria para construir uma string que será retornada usando a palavra reservada "`return`". O argumento passado é a string `Olegário`, por isso o retorno acima.
 
 No caso de a função receber apenas um argumento, os parênteses tornam-se facultativos:
 
@@ -22,15 +22,15 @@ No caso de a função receber apenas um argumento, os parênteses tornam-se facu
         return `Fala, ${nome}!`;
     }
 
-    console.log(cumprimentar("Nathan"));
->retorna "Fala, Nathan"!
+    console.log(cumprimentar("Olegário"));
+>retorna "Fala, Olegário"!
 
 E mais: no caso de querermos um retorno explícito e apenas uma linha for necessária no corpo da função, o uso da palavra reservada "`return`" e das chaves também vira facultativo:
 
     const cumprimentar = nome => `Fala, ${nome}!`;
 
-    console.log(cumprimentar("Nathan"));
->retorna "Fala, Nathan"!
+    console.log(cumprimentar("Olegário"));
+>retorna "Fala, Olegário"!
 
 Comparando o uso de uma função seta como callback ao de uma função padrão:
 

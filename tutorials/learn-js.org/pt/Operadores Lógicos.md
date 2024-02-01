@@ -1,104 +1,136 @@
 Tutorial
 --------
 
-### The `if` statement
+### A Estrutura `If`
 
-The `if` statement allows us to check if an expression is equal to `true` or `false`, and execute different code according to the result.
+A estrutura "`if`" permite que verifiquemos se uma expressão lógica equivale a "`true`" ou "`false`" e executemos diferentes blocos de código a depender da conclusão obtida.
 
-For example, if we want to ask the user whether his name is "John", we can use the `confirm` function.
+Se quisermos perguntar se o nome do usuário é "Davi", podemos usar o retorno da função `confirmar`.
 
-    if (confirm("Are you John Smith?"))
-    {
-        console.log("Hello John, how are you?");
+    if (confirmar("Você é o Davi?")) {
+        console.log("Olá, Davi! Como anda você?");
     } else {
-        console.log("Then what is your name?");
+        console.log("Então, qual o seu nome?");
     }
 
-It is also possible to omit the `else` keyword if we only want to execute a block of code only if a certain expression is true.
+Também podemos suprimir a palavra reservada "`else`" se *apenas* quisermos executar um bloco de código no caso afirmativo de uma expressão lógica.
 
-To evaluate whether two variables are equal, the `==` operator is used. There is also another equality operator in JavaScript, `===`, which does a strict comparison. This means that it will be true only if the two things you are comparing are the same type as well as same content.
+### Operadores de Igualdade e Inequidade
 
-    console.log("1" == 1); // true
-    console.log("1" === 1); // false
+Para avaliar a igualdade entre duas variáveis, o operador `==` entra em jogo. Há, também, outro operador de igualdade no JavaScript: o `===`, que faz uma comparação rigorosa. Ele apenas retorna "`true`" no caso de as duas variáveis comparadas não diferirem nem em valor nem em tipo primitivo.
 
-For example:
+    console.log("1" == 1); // verdadeiro
+    console.log("1" === 1); // falso
 
-    var myNumber = 42;
-    if (myNumber == 42)
-    {
-        console.log("The number is correct.");
+Aplicando:
+
+    var meuNumber = 42;
+    if (meuNumber == 42) {
+        console.log("O número está correto.");
     }
 
-Inequality operators can also be used to evaluate expressions. For example:
+Operadores de inequidade também podem ser usados para avaliar expressões. Por exemplo:
 
-    var foo = 1;
-    var bar = 2;
+    var fulano = 1;
+    var sicrano = 2;
 
-    if (foo < bar)
-    {
-        console.log("foo is smaller than bar.");
+    if (fulano < sicrano) {
+        console.log("Fulano é menor que Sicrano.");
+    } else {
+        console.log("Fulano é maior que Sicrano.");
     }
 
-Two or more expressions can be evaluated together using logical operators to check if two expressions evaluate to `true` together, or at least one of them. To check if two expressions both evaluate to `true`, use the AND operator `&&`. To check if at least one of the expressions evaluate to `true`, use the OR operator `||`.
+Duas ou mais expressões lógicas podem ser avaliadas juntas usando operadores lógicos para verificar se ambas (ou ao menos uma das, ou nenhuma das) expressões equivalem a "`true`" ao mesmo tempo.
 
-    var foo = 1;
-    var bar = 2;
-    var moo = 3;
+Para verificar **se duas operações retornam "`true`" simultaneamente**, use o operador "AND", determinado por "`&&`".
 
-    if (foo < bar && moo > bar)
-    {
-        console.log("foo is smaller than bar AND moo is larger than bar.");
+Para verificar **se ao menos uma delas retorna "`true`"**, use o operador "OR", determinado por "`||`".
+
+    var fulano = 1;
+    var sicrano = 2;
+    var beltrano = 3;
+
+    if (fulano < sicrano && beltrano > sicrano) {
+        console.log("Fulano é menor que Sicrano E Beltrano é maior que Sicrano.");
     }
 
-    if (foo < bar || moo > bar)
-    {
-        console.log("foo is smaller than bar OR moo is larger than bar.");
+    if (fulano < sicrano || beltrano > sicrano) {
+        console.log("Fulano é menor que Sicrano OU Beltrano é maior que Sicrano.");
     }
 
-The NOT operator `!` can also be used likewise:
+O operador de negação, chamado "NOT", determinado por "`!`", pode ser usado da mesma forma:
 
-    var notTrue = false;
-    if (!notTrue)
-    {
-        console.log("not not true is true!");
+    var entendeuNada = true;
+    if (!entendeuNada) {
+        console.log("'Não entendeu nada', logo, entendeu algo!");
     }
 
-### The `switch` statement
+### A Estrutura `Switch`
 
-The `switch` statement is similar to the `switch` statement from the C programming language, but also supports strings. The `switch` statement is used to select between more than two different options, and to run the same code for more than one option. For example:
+A estrutura "`switch`" assemelha-se à de mesmo nome da linguagem de programação C, mas também suporta strings. A estrutura "`switch`" é usada para selecionar entre mais de duas opções diferentes, podendo executar as mesmas instruções para mais de uma opção se necessário. Veja:
 
-    var rank = "Commander";
-    switch(rank)
-    {
-        case "Private":
-        case "Sergeant":
-            console.log("You are not authorized.");
+    var patente = "Marechal";
+    var periodo = "manhã"
+
+    var verificaManha = periodo == 'manhã'
+    
+    switch(patente) {
+        
+        case "Cadete":
+        case "Soldado":
+        case "Taifeiro":
+        case "Cabo":
+            console.log(`Autorização negada para ${patente}s.`);
+            
             break;
-        case "Commander":
-            console.log("Hello commander! what can I do for you today?");
+        
+        case "Sargento":
+        case "Tenente":
+        case "Capitão":
+        case "Major":
+        case "Coronel":
+        case "General":
+            if (verificaManha) {
+                console.log(`Bom dia, ${patente}! Como posso ajudá-lo?`);
+            } else {
+                console.log(`Boa ${periodo}, ${patente}! Como posso ajudá-lo?`);
+            }
+
             break;
-        case "Captain":
-            console.log("Hello captain! I will do anything you wish.");
+
+        case "Marechal":
+            if (verificaManha) {
+                console.log(`Bom dia, ${patente}! Estou às suas ordens!`);
+            } else {
+                console.log(`Boa ${periodo}, ${patente}! Estou às suas ordens!`);
+            }
+
             break;
+
         default:
-            console.log("I don't know what your rank is.");
+            if (verificaManha) {
+                console.log("Bom dia, mas eu nem sei quem você é.");
+            } else {
+                console.log("Boa ${periodo}, mas eu nem sei quem você é.");
+            }
+            
             break;
     }
+>retorna "Bom dia, Marechal! Estou às suas ordens!"
 
-In this example, "Private" and "Sergeant" both trigger the first sentence, "Commander" triggers the second sentence and "Captain" triggers the third. If an unknown rank was evaulated, the `default` keyword defines the action for this case (optional). We must use the `break` statement between every code block to avoid the `switch` from executing the next code block.
+Nesse exemplo, "Cadete", "Soldado", "Taifeiro" e "Cabo" ativam a primeira sentença, enquanto "Sargento", "Tenente", "Capitão", "Major", "Coronel" e "General" ativam a segunda e apenas "Marechal" ativa a terceira. Se uma patente desconhecida for informada, a palavra reservada "`default`" ativa o fluxo a ser seguido nesse caso, mas sua existência é opcional. Precisamos usar a instrução "`break`" entre os blocos de código para evitar que a estrutura "`switch`" execute os próximos.
 
-Using the `switch` statement in general is not recommended, because forgetting the `break` keyword causes very confusing results.
+Em geral, não se recomenda muito o uso de "`switch`", já que esquecer a instrução "`break`" pode causar situações muitíssimo bizarras.
 
 Exercise
 --------
 
-In this exercise, you must construct an `if` inside the `checkNumber` function statement that checks if the number `myNumber` is equal to 42. If that is the case, the function must print out using `console.log` the word `correct`. If myNumber is not equal to 42, the function must print out using `console.log` the word `incorrect`.  You can name the argument passed to a function by supplying the name inside the parentheses.  For example, `function myFunction(myArgument)`.
+Neste exercício, você precisa construir uma estrutura de verificação dentro da função `checkNumber` que verifique se o parâmetro `myNumber` é igual a 42. Em caso afirmativo, a função deve exibir a palavra `correct` via `console.log`. Em caso negativo, a função precisa exibir a palavra `incorrect` da mesma forma. Lembrete: você pode dar nome ao parâmetro recebido pela função informando-o dentro dos parênteses. Por exemplo: `function myFunction(myParameter)`.
 
 Tutorial Code
 -------------
 
-function checkNumber()
-{
+function checkNumber() {
     // TODO: write your code here
 }
 
@@ -116,15 +148,11 @@ correct
 Solution
 --------
 
-function checkNumber(myNumber)
-{
+function checkNumber(myNumber) {
     // TODO: write your code here
-    if (myNumber===42)
-    {
+    if (myNumber===42) {
         console.log("correct");
-    }
-    else
-    {
+    } else {
         console.log("incorrect");
     }
 }

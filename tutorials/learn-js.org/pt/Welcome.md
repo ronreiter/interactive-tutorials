@@ -10,13 +10,13 @@ A construção do learn-js.org ainda está em andamento... se você quiser contr
 
 Apesar de os tutoriais e os códigos demonstrativos estarem traduzidos, jargões mais específicos de programação e desenvolvimento de software serão mantidos em inglês, afinal esta é uma carreira amplamente globalizada e o aprendizado desse idioma é imprescindível para se destacar: por isso mesmo **todas as soluções cobrarão códigos em inglês** (exceto no módulo "Olá, Mundo!").
 
-*Por fim, este [humilde tradutor](https://github.com/ntn-ss) te deseja muito sucesso e vagas na jornada.* :alien:
+*Por fim, este [humilde tradutor](https://github.com/ntn-ss) te deseja muito sucesso e vagas na jornada...* :alien:
 
 ### Começando de Baixo
 
 - "[[Olá, Mundo!]]"
 - [[Variáveis e Tipos]]
-- [[Operadores Aritméticos]]
+- [[Operadores Gerais]]
 - [[Operadores Lógicos]]
 - [[Funções]]
 - [[Funções Seta]]
