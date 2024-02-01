@@ -1,70 +1,71 @@
 Tutorial
 --------
 
-Functions in JavaScript run in a specific context, and using the `this` keyword we have access to it. 
+No JavaScript, as funções rodam em um determinado contexto o qual pode ser acessado pela palavra reservada "`this`". 
 
-All standard functions in the browser run under the Window context. Functions defined under an object or a class (another function) will use the context of the object it was created in. However, we can also change the context of a function at runtime, either before or while executing the function.
+Todas as funções padrão do navegador rodam sob o contexto "`Window`". As funções definidas sob um objeto ou uma classe (que é outra função) usarão o contexto do objeto em que foram criadas. No entanto, também podemos mudar o contexto de uma função a qualquer momento antes, durante ou depois da sua execução.
 
-### Binding a method to an object
+### Atrelando um Método a um Objeto
 
-To bind a function to an object and make it an object method, we can use the `bind` function. Here is a simple example:
+Para atrelar uma função a um objeto e fazer dela um método dele, podemos usar a função "`bind`". Aqui vai um exemplo simples:
 
-    var person = {
-        name : "John"
+    var pessoa = {
+        nome : "Derek"
     };
 
-    function printName()
-    {
-        console.log(this.name);
+    function mostraNome() {
+        console.log(this.nome);
     }
 
-Obviously, we are not able to call `printName()` without associating the function with the object `person`. To do this we must create a bound method of the function printName to person, using the following code:
+Tá na cara que a gente não vai conseguir chamar a função `mostraNome()` sem associar ela ao objeto `pessoa`, e para fazer isso, nós precisamos criar outra função que, por transitividade, associe a função ao objeto da seguinte forma:
 
-    var boundPrintName = printName.bind(person);
-    boundPrintName();    // prints out "John"
+    var mostraNomeAssociado = mostraNome.bind(pessoa);
+    mostraNomeAssociado();
+>exibe "Derek"
 
-### Calling a function with a different context
+### Chamando uma Função de um Contexto Diferente
 
-We can use the `call` and `apply` functions to call a function as if it was bound to an object. The difference between the `call` and `apply` functions is only by how they receive their arguments - the `call` function receives the `this` argument first, and afterwards the arguments of the function, whereas the `apply` function receives the `this` argument first, and an array of arguments to pass on to the function as a second argument to the function.
+Podemos usar as funções "`call`" e "`apply`" para chamar uma função como se estivesse atrelada a um objeto. A diferença entre ambas é apenas a ordem dos argumentos: a função `call` recebe o parâmetro `this` primeiro e depois a função a ser atrelada, enquanto a função "`apply`" recebe como primeiro parâmetro o `this` e um vetor de parâmetros para passar à função como o segundo.
 
-For example, let's call `printName` with `person` as the context using the `call` method:
+Por exemplo, chamemos `mostraNome` sob o contexto `pessoa` usando a função "`call`":
 
-    printName.call(person);      // prints out "John"
+    mostraNome.call(pessoa);
+>retorna "Derek"
 
-### call/apply vs bind
+### "`Call`" e "`Apply`" vs. "`Bind`"
 
-The difference between `call`/`apply` and `bind` is that `bind` returns a new function identical to the old function, except that the value of `this` in the new function is now the object it was bound to.  `call`/`apply` calls the function with `this` being the bound object, but it does not return a new function or change the original, it calls it with a different value for `this`.
+A diferença entre "`call`", "`apply`" e "`bind`" é que o "`bind`" retorna uma nova função idêntica à antiga, com a diferença de que o valor de "`this`" da nova função corresponde ao objeto que lhe foi atrelado. Já "`call`" e "`apply`" chamam a função com o "`this`" já sendo o objeto atrelado, mas sem o retorno de uma nova função ou mudanças na original, apenas a chamam com um valor diferente para o "`this`".
 
 For example:
 
-    var boundPrintName = printName.call(person);    //boundPrintName gets printName's return value (null)
-    boundPrintName();                               //doesn't work because it's not a function, it's null
+    var mostraNomeAssociado = mostraNome.call(pessoa);    // mostraNomeAssociado pega o valor retornado pela função mostraNome (null)
+    mostraNomeAssociado();                               // não funciona porque não é uma função, é um Null
     
-    printName.bind(person);                         //returns a new function, but nothing is using it so it's useless
-    printName();                                    //throws error because this.name is not defined 
+    mostraNome.bind(pessoa);                         // retorna uma função, mas já que nada a está usando, é inútil
+    mostraNome();                                    // dá um erro porque "this.nome" não foi definido no contexto puro de mostraNome 
     
-Think of `call` as executing the return value of `bind`.
+Pense no "`call`" como a execução do valor **retornado** pelo "`bind`".
 
-For example:
+Por exemplo:
 
-    printName.call(person);     //is the same as
-    printName.bind(person)();   //executes the function returned by bind
+    mostraNome.call(pessoa);     // é o mesmo que
+    mostraNome.bind(pessoa)();   // executa a função retornada pelo bind
 
-Or think of `bind` returning a shortcut to `call`.
+Ou pense no "`bind`" como um atalho para o "`call`".
 
-For example:
+Por exemplo:
 
-    var boundPrintName = printName.bind(person); //is the same as
-    var boundPrintName = function()
-    {
-        printName.call(person);
+    var mostraNomeAssociado = mostraNome.bind(pessoa); // é o mesmo que
+
+    var mostraNomeAssociado = function() {
+        mostraNome.call(pessoa);
     }
 
 
 Exercise
 --------
 
-Create bound copies of printFullName and printDetails to person called boundPrintFullName and boundPrintDetails.
+Crie cópias das funções "`printFullName`" e "`printDetails`" atreladas ao objeto "`person`", chamando-as "`boundPrintFullName`" e `"boundPrintDetails"`.
 
 Tutorial Code
 -------------
@@ -75,13 +76,11 @@ var person = {
     age : 23
 };
 
-function printFullName()
-{
+function printFullName() {
     console.log(this.firstName + " " + this.lastName);
 }
 
-function printDetails()
-{
+function printDetails() {
     console.log(this.firstName + " is " + this.age + " years old");
 }
 
@@ -107,13 +106,11 @@ var person = {
     age : 23
 };
 
-function printFullName()
-{
+function printFullName() {
     console.log(this.firstName + " " + this.lastName);
 }
 
-function printDetails()
-{
+function printDetails() {
     console.log(this.firstName + " is " + this.age + " years old");
 }
 

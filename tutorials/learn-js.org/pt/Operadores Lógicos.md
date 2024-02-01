@@ -35,9 +35,9 @@ Operadores de inequidade também podem ser usados para avaliar expressões. Por 
     var sicrano = 2;
 
     if (fulano < sicrano) {
-        console.log("Fulano é menor que Sicrano.");
+        console.log("Fulano é menor que sicrano.");
     } else {
-        console.log("Fulano é maior que Sicrano.");
+        console.log("Fulano é maior que sicrano.");
     }
 
 Duas ou mais expressões lógicas podem ser avaliadas juntas usando operadores lógicos para verificar se ambas (ou ao menos uma das, ou nenhuma das) expressões equivalem a "`true`" ao mesmo tempo.
@@ -51,11 +51,11 @@ Para verificar **se ao menos uma delas retorna "`true`"**, use o operador "OR", 
     var beltrano = 3;
 
     if (fulano < sicrano && beltrano > sicrano) {
-        console.log("Fulano é menor que Sicrano E Beltrano é maior que Sicrano.");
+        console.log("Fulano é menor que sicrano E beltrano é maior que sicrano.");
     }
 
     if (fulano < sicrano || beltrano > sicrano) {
-        console.log("Fulano é menor que Sicrano OU Beltrano é maior que Sicrano.");
+        console.log("Fulano é menor que sicrano OU beltrano é maior que sicrano.");
     }
 
 O operador de negação, chamado "NOT", determinado por "`!`", pode ser usado da mesma forma:
