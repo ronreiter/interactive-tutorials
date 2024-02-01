@@ -1,139 +1,131 @@
 Tutorial
 --------
-Promises are the basics of asynchronous programming in JavaScript, and are very important to master.
+As promessas (`promises`) são essenciais à programação assíncrona com JavaScript, portanto aqueles que desejarem ingressar numa carreira de "Front-end" precisam estudá-las com o máximo de afinco.
 
-### What is Asynchronous Programming?
+### E o que que é "Programação Assíncrona"?
 
-Asynchronous programming, or in short, async programming, is a method of programming which 
-enables different parts of code to run at changing times, instead of immediately.
+A programação assíncrona é um "setor" da programação que permite que diferentes partes do código sejam executadas em períodos diferentes de tempo, em vez de ser tudo imediato, como é o padrão.
 
-This is mostly required when we want to fetch information from some remote server, and write
-code which does something with what the server returned:
+Isso costuma ser necessário quando queremos obter uma informação de algum servidor remoto e integrar a resposta desse servidor à nossa própria aplicação:
 
-    function getServerStatus() {
-        const result = fetch("/server/status");
+    function pegaStatusDoServidor() {
+        const resultado = fetch("/server/status");
 
-        // THIS WILL NOT WORK!
-        console.log("The status from the server is: ", result.ok);
+        // ISTO NÃO FUNCIONARÁ!
+        console.log("O status do servidor é ", resultado.ok);
     }
 
-In many programming languages such as Python, this approach would work, because functions
-are by default synchronous functions.
+Em várias linguagens de programação, como o Python, essa abordagem funcionaria, já que suas funções são síncronas por padrão.
 
-In JavaScript, most APIs which require waiting for a function to do something, 
-are **asynchronous** by default which means that this code will not 
-do what we think it will do, since the `fetch` function is asynchronous, and therefore will 
-return something which is not exactly the result, but will _eventually_ be the result. 
-This "thing" which is returned from the `fetch` function is called a **Promise** in JavaScript.
+Mas no JavaScript, várias APIs exigirão que uma função espere para poder fazer algo a fim de evitar sobrecarga dos recursos físicos, o que faz delas **assíncronas** por padrão. Resumindo, esse código não vai fazer o que a gente espera, pois já que a função "`fetch`" é assíncrona, ela retornará '**algo**' que não é exatamente a resposta final, mas que _eventualmente_ o será.
+>Pense numa API como a "porta de entrada" para contatar uma aplicação X e obter dados dela: elas têm documentação independente (além de, às vezes, exigirem autenticação por "token" e/ou pagamento a fim de fazer manutenções de infraestrutura para serem usadas).
 
-To make the code above work, we will need to write the function in the following manner:
+Esse "algo" retornado da função "`fetch`" é o que se chama de "**Promise**" no JavaScript.
 
-    function getServerStatus() {
-        const result = fetch("/server/status");
+Para que o código mais acima funcionasse, devemos refatorar a função da seguinte forma:
 
-        result.then(function(status) {
-            console.log("The status from the server is: ", status.ok);
+    function pegaStatusDoServidor() {
+        const resultado = fetch("/server/status");
+
+        resultado.then(function(status) {
+            console.log("O status do servidor é ", status.ok);
         });
     }
 
-Notice that we used the `then` function here, which is one of the methods of a `Promise`.
+Perceba que, desta vez, usamos a função "`then`", que é um dos métodos característicos de uma "`Promise`".
 
-### The Promise Object
+### O Objeto "Promise"
 
-A Promise is a native JavaScript object which has two traits:
-1. It receives a single argument which is a function. This function needs to have two arguments,
-a `resolve` function and a `reject` function. The code written inside the promise needs
-to use one of these two functions.
-2. It can be waited on using the `then` method (and other similar methods), or the `await` 
-statement. (The async/await statements have a separate tutorial).
+Promise é um objeto nativo do JavaScript dotado de duas características:
 
-An asynchronous function is defined by a function, which instead of returning the value
-it was supposed to return, it returns a `Promise` object, which will eventually resolve and
-give the user the answer.
+1. Ele recebe apenas um argumento, que é uma função. Essa função precisa ter dois parâmetros: uma função "`resolve`" e uma função "`reject`". O código escrito dentro do corpo da promessa precisa usar ao menos uma dessas duas funções.
+2. Ela pode ser aguardada usando o método "`then`" (ou similares) ou a palavra reservada "`await`".
+>Para as palavras reservadas "*async*" e "*await*", fizemos um guia em particular.
 
-For example, let's say that we would like to calculate the sum of two numbers, but by
-writing a function which returns a `Promise` and not the value.
+Em suma, chamamos de função assíncrona toda aquela cujo retorno, em vez de ser o valor que se espera no primeiro momento, será um objeto `Promise` que eventualmente se tornará esse exato valor.
 
-    .exec
-    function sumAsync(x, y) {
+Suponhamos que queremos calcular a soma de dois números, mas escrevendo uma função que retornará uma `Promise` em vez dessa soma.
+
+    function somaAssincrona(x, y) {
         const p = new Promise((resolve, reject) => {
-            // this resolves the promise we just created with the output of x+y
+            
+            // isto conclui a promessa que recém-criamos retornando x + y
             resolve(x + y);                        
         });
 
-        // This returns the promise, not the value
+        // já isto retorna a própria promessa em vez do valor esperado
         return p;
     }
 
-    // let's use the function now
-    sumAsync(5, 7).then((result) => {
-        console.log("The result of the addition is:", result);
+    // agora, abriremos a promessa (como uma caixa de presentes)
+    somaAssincrona(5, 7).then((resultado) => {
+        console.log(`O resultado da soma é ${resultado}.`);
     });
 
-When can this be very useful? When the calculation needs to happen indirectly, for example
-after waiting a while or when retrieving information from the server using the `fetch`
-command for example.
+"Pra que isso serve"? É para quando o cálculo precisa acontecer indiretamente, como após esperar algum tempo ou após obter dados de um servidor remoto com a função "`fetch`".
 
-Let's modify the example to resolve the solution only after a half a second:
+Modifiquemos o exemplo para que a solução seja entregue após meio segundo:
 
-    .exec
-    function sumAsync(x, y) {
-        console.log("1. sumAsync is executed");
+    function somaAssincrona(x, y) {
+        console.log("1. A função 'somaAssincrona' é executada.");
+
         const p = new Promise((resolve, reject) => {
-            // run this in 500ms from now
+        
+            // isto rodará apenas daqui a 500 ms
             setTimeout(() => {
-                console.log("4. Resolving sumAsync's Promise with the result after 500ms");
+                console.log("4. Concluindo a promessa 'p' da função 'somaAssincrona' com o resultado após 500 ms de espera.");
+
                 resolve(x + y);
+
             }, 500); 
 
-            // we don't need to return anything
-            console.log("2. sumAsync Promise is initialized");            
+            // retornos são desnecessários
+            console.log("2. A promessa 'p' da função 'somaAssincrona' é inicializada.");
         });
-        console.log("3. sumAsync has returned the Promise");
+
+        console.log("3. A função 'somaAssincrona' prepara-se para retornar a promessa 'p' sem saber que fim ela vai ter.");
         return p;
     }
 
-    // let's use the function now
-    sumAsync(5, 7).then((result) => {
-        console.log("5. The result of the addition is:", result);
+    // agora, abriremos a promessa
+    somaAssincrona(5, 7).then((resultado) => {
+        console.log(`5. O resultado da adição é ${resultado}.`);
     });
+>exibe, além das outras linhas, "5. O resultado da adição é 12."
 
-### Rejecting promises
+### Rejeitando Promessas
 
-In a synchronous flow, if we want to tell the user that something went wrong so he can
-catch an exception, we throw an exception using the `throw` argument. When using promises,
-we need to trigger the `reject` function instead.
+Em um fluxo síncrono, se quisermos informar ao usuário que algo deu errado e disparar um erro a ser exibido, podemos ativar uma exceção por meio da função "`throw`". Mas no contexto assíncrono das promessas, a gente tem que ativar a função "`reject`".
 
-Let's say we want to write the same function, but with a rejection if a value is negative:
+Digamos que precisamos reescrever a função acima, mas com a promessa guardando uma rejeição formal em caso de recebimento de valor negativo. Teríamos isto:
 
-    .exec
-    function sumAsync(x, y) {
+    function somaAssincrona(x, y) {
         return new Promise((resolve, reject) => {
-            // run this in 500ms from now
+            // rode isto daqui a 500 ms
             setTimeout(() => {
                 if (x < 0 || y < 0) {
-                    reject("Negative values received");
+                    reject("Erro: valores negativos não são permitidos.");
                 } else {
                     resolve(x + y);
                 }
             }, 500); 
 
-            // we don't need to return anything
+            // sem retornos aqui
         });
     }
 
-    sumAsync(-5, 7).then((result) => {
-        console.log("The result of the addition is:", result);
-    }).catch((error) => {
-        console.log("Error received:", error);
+    somaAssincrona(-5, 7).then((resultado) => {
+        console.log(`O resultado da adição é ${resultado}.`);
+    }).catch((erro) => {
+        console.log(`Erro: ${erro}`);
     });
+>exibe "O resultado da adição é 12."
 
 Exercise
 --------
-Write a function which receives a string, and returns a Promise.
+Escreva uma função que receba uma string como parâmetro e retorne um objeto do tipo Promise.
 
-The promise should resolve with the uppercase version of the string, but should reject
-if the string is null.
+A promessa deve dar "`resolve`" retornando a versão da string toda em letras maiúsculas, mas dar "`reject`" no caso de a string ser nula.
 
 Tutorial Code
 -------------

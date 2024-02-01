@@ -35,7 +35,6 @@ Apesar de as lições e os códigos demonstrativos estarem traduzidos, jargões 
 - [[Contexto de Função]]
 - [[Herança]]
 - [[Desestruturação]]
-- [[Estruturas de Dados]]
 
 ### Quero Ajudar
 
