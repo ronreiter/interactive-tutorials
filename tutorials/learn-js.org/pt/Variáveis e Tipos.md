@@ -7,7 +7,7 @@ Esses nomes quaisquer podem ser regidos pelas lógicas "camelCase" (como em nome
 
 Uma restrição para a nomenclatura das variáveis é que elas não podem assumir palavras reservadas da linguagem. E já que estamos no Brasil, **lembrem-se**, espaços e acentos, em computação, só se usa dentro de variáveis que guardem texto, ou a chance de erros é tremenda!
 
-E como em (quase) toda linguagem dinamicamente tipada, o JavaScript é uma linguagem "duck-typed", logo toda variável pode guardar qualquer tipo primitivo a qualquer momento. Outra oservação: o JavaScript não exige ponto e vírgula a cada fim de linha, apenas estou seguindo o padrão que o criador do repositório determinou em suas lições.
+E como em (quase) toda linguagem dinamicamente tipada, o JavaScript é uma linguagem "duck-typed", logo toda variável pode guardar qualquer tipo primitivo a qualquer momento. Outra observação: o JavaScript não exige ponto e vírgula a cada fim de linha, apenas estou seguindo o padrão que o criador do repositório determinou em suas lições.
 
 Variáveis podem ser declaradas pelas palavras reservadas "`const`", "`let`" e "`var`". "`const`" cria uma variável constante, o que significa que o valor (e, por consequência, o tipo) daquela variável não mudará de forma alguma, `let` cria uma variável local (visível pelo escopo da função) e `var` cria uma variável global (visível pelo código todo).
 
@@ -21,14 +21,14 @@ Algumas observações sobre os tipos das variáveis em JavaScript:
 
 * O tipo Number pode apontar tanto para números decimais quanto para inteiros. 
 * As variáveis do tipo Boolean só podem apontar para um destes valores: "`true`" ou "`false`".
-* O tipo String pode ser constituído de números ou valores puramente textuais. No entanto, o Number não pode guardar valores textuais de forma alguma. E, claro, se uma string guardar um número, esse número não poderá ser usado em operações aritméticas.
+* O tipo String pode ser constituído de números ou valores puramente textuais. No entanto, o tipo Number não pode guardar valores textuais de forma alguma e, claro, se uma string guardar um número, esse número não poderá ser usado em operações aritméticas.
 
 Há dois tipos primitivos mais avançados em JavaScript: Function e Object. Estudaremos ambos em tutoriais futuros.
 
     function minhaFuncao() {}              // uma função vazia
     const meuObject = {};                  // um objeto vazio
 
-    const meuArray = [];                   // um vetor, que é apenas objeto especial, vazio
+    const meuArray = [];                   // um vetor, que é apenas um objeto especial, vazio
 
 Fora isso, há dois tipos especiais: o Undefined e o Null.
 

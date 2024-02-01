@@ -5,7 +5,7 @@ Tutorial
 
 Vetores também podem funcionar como pilhas. Os métodos "`push`" e "`pop`" inserem e removem variáveis diretamente do fim de um vetor, respectivamente.
 
-Por exemplo, criemos um vetor vazio e povoemo-no com algumas variáveis.
+Por exemplo, criemos um vetor vazio e povoemo-lo com algumas variáveis.
 
     var minhaPilha = [];
     minhaPilha.push(1);

@@ -5,7 +5,7 @@ Bem-vindo ao primeiro tutorial. Neste aqui, você aprenderá a escrever sua prim
 
 O JavaScript é uma linguagem poderosíssima. Além de poder ser interpretado por qualquer navegador do mundo, ele também pode ser usado para escrever código nativo para servidores usando o runtime "Node.js".
 
-Enquanto se usa o JavaScript dentro do navegador, pode-se mudar a aparência e os comportamentos da página... mas, neste primeiro momento, a gente vai se concentrar em aprender a linguagem em si: por isso, vamos começar pela função para exibir mensagens e resultados em geral, o famoso "console.log".
+Enquanto se usa o JavaScript dentro do navegador, pode-se mudar a aparência e os comportamentos da página... mas, neste primeiro momento, a gente vai se concentrar em aprender a linguagem em si: por isso, vamos começar pela função para exibir mensagens e resultados em geral: o famoso "console.log".
 
 Exercise
 --------

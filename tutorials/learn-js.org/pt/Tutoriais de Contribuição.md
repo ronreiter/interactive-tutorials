@@ -26,7 +26,7 @@ Para escrever um tutorial, basta dirigir-se à pasta `tutorials`, adentrar a sub
 
 Para que o link atinja a página desejada, use colchetes duplos (`[[`) no arquivo que listará a rota (costuma ser o `Welcome.md`).
 
-Cada tutorial consiste em uma breve explicação conteudista e um exercício sucinto para testar o usuário. Assim que ele o finalizar, terá de executar seu código e verificar se a saída está de acordo com o esperado.
+Cada tutorial consiste em uma breve explicação conteudística e um exercício sucinto para testar o usuário. Assim que ele o finalizar, terá de executar seu código e verificar se a saída está de acordo com o esperado.
 
 Cada tutorial deve seguir a seguinte estrutura:
 
