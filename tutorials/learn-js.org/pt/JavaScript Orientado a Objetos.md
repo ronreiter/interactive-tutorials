@@ -1,41 +1,45 @@
 Tutorial
 --------
 
-JavaScript uses functions as classes to create objects using the `new` keyword. Here is an example:
+Para facilitar a compreensão da associação entre classes e objetos, pense em uma montadora de carros: a montadora "apenas" recebe os insumos (metais, borrachas etc.) e, após submetê-los a uma extensa linha de produção estritamente pensada, verificada e validada, gerando por fim os carros montados, todos sob o mesmo padrão e com as mesmas características.
 
-    function Person(firstName, lastName) {
-        // construct the object using the arguments
-        this.firstName = firstName;
-        this.lastName = lastName;
+Classes são como a montadora, os parâmetros da classe são como os insumos, o método construtor é como a linha de montagem e os carros são como os objetos.
 
-        // a method which returns the full name
-        this.fullName = function() {
-            return this.firstName + " " + this.lastName;
+O JavaScript usa funções como classes para criar objetos por meio das palavras reservadas "`new`" e "`this`". Veja um exemplo:
+
+    function Pessoa(primeiroNome, sobrenome) {
+        // construa o objeto com base nos parâmetros
+        this.primeiroNome = primeiroNome;
+        this.sobrenome = sobrenome;
+
+        // um método que retorne o nome completo
+        this.nomeCompleto = function() {
+            return `${this.primeiroNome} ${this.sobrenome}`;
         }
     }
 
-    var myPerson = new Person("John", "Smith");
-    console.log(myPerson.fullName());            // outputs "John Smith"
+    var umaPessoa = new Pessoa("Thales", "Silva");
+    console.log(umaPessoa.nomeCompleto());
+>retorna "Thales Silva"
 
-Creating an object using the `new` keyword is the same as writing the following code:
+Criar um objeto por meio da palavra reservada "`new`" equivale a executar o seguinte código:
 
-    var myPerson = {
-        firstName : "John",
-        lastName : "Smith",
-        fullName : function()
-        {
-            return this.firstName + " " + this.lastName;
+    var umaPessoa = {
+        primeiroNome: "Thales",
+        sobrenome: "Silva",
+        nomeCompleto: function() {
+            return `${this.primeiroNome} ${this.sobrenome}`;
         }
     }
 
-The difference between the two methods of creating objects is that the first method uses a class to define the object and then the `new` keyword to instantiate it, and the second method immediately creates an instance of the object.
+A diferença entre ambas as formas de criar objetos é que a primeira usa uma classe cujo instanciamento se dá pela palavra reservada "`new`" para fins de padronização em larga escala, já a segunda cria uma só instância de objeto imediatamente.
 
 Exercise
 --------
 
-Create a class called Person which accepts the name of a person as a string, and his/her age as a number. 
+Crie uma classe chamada "`Person`" que aceite o nome da pessoa como string pelo parâmetro "`name`" e sua idade como número pelo parâmetro "`age`". 
 
-The Person class should have a method called `describe` which returns a string with the following syntax: "`name`, `age` years old". So for example, if John is 19 years old then the function `describe` of his object will return "John, 19 years old".
+A classe "`Person`" deve possuir o método "`describe`", que retornará uma string formatada sob a seguinte constituição: "`name`, `age` years old". Isto é, se Jack tiver 25 anos e a função "`describe`" de seu objeto for executada, será exibido o texto "`Jack, 25 years old`".
 
 Tutorial Code
 -------------
@@ -44,6 +48,7 @@ Tutorial Code
 
 var jack = new Person("Jack", 25);
 var jill = new Person("Jill", 24);
+
 console.log(jack.describe());
 console.log(jill.describe());
 
@@ -64,7 +69,9 @@ var Person = function(name, age){
         return this.name + ", " + this.age + " years old";
     }
 }
+
 var jack = new Person("Jack", 25);
 var jill = new Person("Jill", 24);
+
 console.log(jack.describe());
 console.log(jill.describe());
