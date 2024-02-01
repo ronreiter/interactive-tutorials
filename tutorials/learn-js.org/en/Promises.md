@@ -4,11 +4,9 @@ Promises are the basics of asynchronous programming in JavaScript, and are very 
 
 ### What is Asynchronous Programming?
 
-Asynchronous programming, or in short, async programming, is a method of programming which 
-enables different parts of code to run at changing times, instead of immediately.
+Asynchronous programming, or in short, async programming, is a method of programming which enables different parts of code to run at changing times, instead of immediately.
 
-This is mostly required when we want to fetch information from some remote server, and write
-code which does something with what the server returned:
+This is mostly required when we want to fetch information from some remote server, and write code which does something with what the server returned:
 
     function getServerStatus() {
         const result = fetch("/server/status");
@@ -17,13 +15,10 @@ code which does something with what the server returned:
         console.log("The status from the server is: ", result.ok);
     }
 
-In many programming languages such as Python, this approach would work, because functions
-are by default synchronous functions.
+In many programming languages such as Python, this approach would work, because functions are by default synchronous functions.
 
-In JavaScript, most APIs which require waiting for a function to do something, 
-are **asynchronous** by default which means that this code will not 
-do what we think it will do, since the `fetch` function is asynchronous, and therefore will 
-return something which is not exactly the result, but will _eventually_ be the result. 
+In JavaScript, most APIs which require waiting for a function to do something, are **asynchronous** by default which means that this code will not do what we think it will do, since the `fetch` function is asynchronous, and therefore will return something which is not exactly the result, but will _eventually_ be the result.
+
 This "thing" which is returned from the `fetch` function is called a **Promise** in JavaScript.
 
 To make the code above work, we will need to write the function in the following manner:
@@ -47,12 +42,10 @@ to use one of these two functions.
 2. It can be waited on using the `then` method (and other similar methods), or the `await` 
 statement. (The async/await statements have a separate tutorial).
 
-An asynchronous function is defined by a function, which instead of returning the value
-it was supposed to return, it returns a `Promise` object, which will eventually resolve and
+An asynchronous function is defined by a function, which instead of returning the value it was supposed to return, it returns a `Promise` object, which will eventually resolve and
 give the user the answer.
 
-For example, let's say that we would like to calculate the sum of two numbers, but by
-writing a function which returns a `Promise` and not the value.
+For example, let's say that we would like to calculate the sum of two numbers, but by writing a function which returns a `Promise` and not the value.
 
     .exec
     function sumAsync(x, y) {
@@ -70,9 +63,7 @@ writing a function which returns a `Promise` and not the value.
         console.log("The result of the addition is:", result);
     });
 
-When can this be very useful? When the calculation needs to happen indirectly, for example
-after waiting a while or when retrieving information from the server using the `fetch`
-command for example.
+When can this be very useful? When the calculation needs to happen indirectly, for example after waiting a while or when retrieving information from the server using the `fetch` command, for example.
 
 Let's modify the example to resolve the solution only after a half a second:
 
@@ -100,8 +91,7 @@ Let's modify the example to resolve the solution only after a half a second:
 
 ### Rejecting promises
 
-In a synchronous flow, if we want to tell the user that something went wrong so he can
-catch an exception, we throw an exception using the `throw` argument. When using promises,
+In a synchronous flow, if we want to tell the user that something went wrong so he can catch an exception, we throw an exception using the `throw` argument. When using promises,
 we need to trigger the `reject` function instead.
 
 Let's say we want to write the same function, but with a rejection if a value is negative:
