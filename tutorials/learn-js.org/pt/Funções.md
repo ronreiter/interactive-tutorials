@@ -31,6 +31,8 @@ Para definir uma função anônima, podemos usar esta sintaxe:
 
 Há uma facilidade proporcionada pelo ES6 chamada "funções seta", mas vamos abordar esse assunto no próximo artigo.
 
+>No contexto de objetos, as funções recebem o nome alternativo de "métodos", enquanto as variáveis, de "atributos". Esses assuntos serão devidamente abordados em lições futuras.
+
 Exercise
 --------
 

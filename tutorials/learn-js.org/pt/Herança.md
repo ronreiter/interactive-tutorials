@@ -1,88 +1,80 @@
 Tutorial
 --------
 
-JavaScript uses prototype based inheritance. Every object has a `prototype`, and when a method of the object is called then JavaScript tries to find the right function to execute from the prototype object.
+O JavaScript incorpora heranças com base em protótipos. Cada objeto tem seu próprio "`prototype`", e quando um método de um objeto é chamado, o JavaScript tenta encontrar o método correto a se executar do objeto prototype.
 
-### The prototype attribute
+### O Atributo "`Prototype`"
 
-Without using the prototype object, we can define the object Person like this:
+Sem usar o objeto "`prototype`", podemos definir a classe `Pessoa` desta forma:
 
-    function Person(name, age)
-    {
-        this.name = name;
-        this.age = age;
+    function Pessoa(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
 
-        function describe()
-        {
-            return this.name + ", " + this.age + " years old.";
+        function descrever() {
+            return this.nome + ", de " + this.idade + " anos.";
         }
     }
 
-When creating instances of the `Person` object, we create a new copy of all members and methods of the functions. This means that every instance of an object will have its own `name` and `age` properties, as well as its own `describe` function.
+Ao criar instâncias da classe `Pessoa`, criamos cópias de todos os atributos e métodos presentes nela para os objetos instanciados. Isso significa que cada instância da classe possuirá seus próprios atributos `nome` e `idade`, bem como sua própria função `descrever`.
 
-However, if we use the `Person.prototype` object and assign a function to it, it will also work.
+No entanto, se usarmos o objeto "`Pessoa.prototype`" e manipulá-lo, funcionará da mesma forma.
 
-    function Person(name, age)
-    {
-        this.name = name;
-        this.age = age;
+    function Pessoa(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
     }
 
-    Person.prototype.describe = function()
-    {
-        return this.name + ", " + this.age + " years old.";
+    Pessoa.prototype.descrever = function() {
+        return this.nome + ", de " + this.idade + " anos.";
     }
 
-When creating instances of the `Person` object, they will not contain a copy of the `describe` function. Instead, when calling an object method, JavaScript will attempt to resolve the `describe` function first from the object itself, and then using its `prototype` attribute.
+Ao criar instâncias da classe `Pessoa`, elas não carregarão consigo uma cópia do método `descrever`. No entanto, quando esse método lhes for chamado, o JavaScript tentará, num primeiro momento, ativar a função `descrever` delas próprias, e só então vasculhar o seu objeto "`prototype`".
 
-### Inheritance
+### Herança
 
-Let's say we want to create a `Person` object, and a `Student` object derived from `Person`:
+Suponhamos que queiramos criar um objeto `Pessoa` e outro objeto, `Estudante`, que seja derivado dele.
 
-    var Person = function() {};
+    var Pessoa = function() {};
  
-    Person.prototype.initialize = function(name, age)
-    {
-        this.name = name;
-        this.age = age;
+    Pessoa.prototype.inicializar = function(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
     }
 
-    Person.prototype.describe = function()
-    {
-        return this.name + ", " + this.age + " years old.";
+    Pessoa.prototype.descrever = function() {
+        return this.nome + ", " + this.idade + " years old.";
     }
 
-    var Student = function() {};
-    Student.prototype = new Person();
+    var Estudante = function() {};
+    Estudante.prototype = new Pessoa();
 
-    Student.prototype.learn = function(subject)
-    {
-        console.log(this.name + " just learned " + subject);
+    Estudante.prototype.aprender = function(subject) {
+        console.log(this.nome + " acabou de aprender " + subject + ".");
     }
 
-    var me = new Student();
+    var literalmenteEu = new Estudante();
 
-    me.initialize("John", 25);
-    me.learn("Inheritance");
+    literalmenteEu.inicializar("John", 25);
+    literalmenteEu.aprender("Inheritance");
 
-As we can see in this example, the `initialize` method belongs to `Person` and the `learn` method belongs to `Student`, both of which are now part of the `me` object.
+Como podemos ver no exemplo, já que o método `inicializar` pertence à classe `Pessoa` e o `aprender` à `Estudante`, ambos são parte do objeto `literalmenteEu` por transitividade, pois um estudante é, via de regra, uma pessoa.
 
-Keep in mind that there are many ways of doing inheritance in JavaScript, and this is just one of them. 
+Não esqueça de que há várias maneiras de se trabalhar com herança no JavaScript, elucidamos apenas uma delas.
 
 Exercise
 --------
 
-Create an object called `Teacher` derived from the `Person` class, and implement a method called `teach` which receives a string called `subject`, and prints out:
+Crie uma classe chamada "`Teacher`" que seja herdeiro da classe "`Person`" e implemente nele o método `teach`, que receberá a string `subject` como parâmetro e exibirá a seguinte string formatada:
 
-    [teacher's name] is now teaching [subject]
+    `${this.name} is now teaching ${subject}.`
 
 Tutorial Code
 -------------
 
 var Person = function() {};
 
-Person.prototype.initialize = function(name, age)
-{
+Person.prototype.initialize = function(name, age) {
     this.name = name;
     this.age = age;
 }
@@ -97,15 +89,14 @@ him.teach("Inheritance");
 Expected Output
 ---------------
 
-Adam is now teaching Inheritance
+Adam is now teaching Inheritance.
 
 Solution
 --------
 
 var Person = function() {};
 
-Person.prototype.initialize = function(name, age)
-{
+Person.prototype.initialize = function(name, age) {
     this.name = name;
     this.age = age;
 }
@@ -113,9 +104,10 @@ Person.prototype.initialize = function(name, age)
 // TODO: create the class Teacher and a method teach
 var Teacher = function() {
     this.teach = function(subject){
-        console.log(this.name + " is now teaching " + subject);
+        console.log(this.name + " is now teaching " + subject + ".");
     }
 }
+
 Teacher.prototype = new Person();
 var him = new Teacher();
 
