@@ -71,7 +71,7 @@ Tutorial Code
 # your code goes here
 
 multiplywith5 = multiplier_of(5)
-multiplywith5(9)
+print(multiplywith5(9))
 
 Expected Output
 ---------------
