@@ -399,7 +399,11 @@ def index(title, language="en"):
         else:
             ip = request.remote_addr
 
-        match = geolite2.lookup(ip)
+        try:
+            match = geolite2.lookup(ip)
+        except Exception as e:
+            logging.error('error looking up IP %s' % ip)
+            match = None
         is_german_user = match and match.country == 'DE'
 
         return make_response(render_template(
