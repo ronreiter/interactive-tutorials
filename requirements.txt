@@ -1,5 +1,4 @@
 flask
 redis
 gunicorn
-python-geoip-python3
-python-geoip-geolite2
+geoip2

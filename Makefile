@@ -9,3 +9,7 @@ build-local:
 	venv/bin/pip install -r requirements.txt
 run-local:
 	venv/bin/python main.py
+build-docker:
+	docker build . -t learnpython
+run-docker: build-docker
+	docker run -p 5000:5000 learnpython

@@ -10,7 +10,7 @@ import functools
 import logging
 import binascii
 import datetime
-from geoip import geolite2
+import geoip2.database
 
 from flask import Flask, render_template, request, make_response, session, Response
 
@@ -279,6 +279,7 @@ def error404():
         all_data=constants.DOMAIN_DATA,
         language_code="en",
         languages=get_languages(),
+        language_names=get_language_names(),
     ), 404)
 
 
@@ -394,17 +395,19 @@ def index(title, language="en"):
 
         # https://ipinfo.io/1.2.3.4/json - country = DE
         # check if user is German
-        if request.headers.getlist("X-Forwarded-For"):
-            ip = request.headers.getlist("X-Forwarded-For")[0]
+        xff = request.headers.get("X-Forwarded-For")
+        if xff and "," in xff:
+            ip = xff.split(",")[0]
         else:
             ip = request.remote_addr
 
         try:
-            match = geolite2.lookup(ip)
+            with geoip2.database.Reader('GeoLite2-Country.mmdb') as reader:
+                response = reader.country(ip)
         except Exception as e:
-            logging.error('error looking up IP %s' % ip)
-            match = None
-        is_german_user = match and match.country == 'DE'
+            logging.exception('error looking up IP %s' % ip)
+            response = None
+        is_german_user = response and response.country.iso_code == 'DE'
 
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
