@@ -10,6 +10,7 @@ import functools
 import logging
 import binascii
 import datetime
+from geoip import geolite2
 
 from flask import Flask, render_template, request, make_response, session, Response
 
@@ -390,6 +391,17 @@ def index(title, language="en"):
             logging.error("cant get site links for %s %s" % (get_host(), language))
 
         print(request.host)
+
+        # https://ipinfo.io/1.2.3.4/json - country = DE
+        # check if user is German
+        if request.headers.getlist("X-Forwarded-For"):
+            ip = request.headers.getlist("X-Forwarded-For")[0]
+        else:
+            ip = request.remote_addr
+
+        match = geolite2.lookup(ip)
+        is_german_user = match and match.country == 'DE'
+
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
             tutorial_page=tutorial != "Welcome",
@@ -405,6 +417,7 @@ def index(title, language="en"):
             language_names=get_language_names(),
             uid=uid,
             env="dev" if request.host == "localhost:5000" else "prod",
+            is_german_user=is_german_user,
             **current_tutorial_data
         ))
 
