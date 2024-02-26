@@ -1,0 +1,235 @@
+<style>
+    .invalid-tooltip {
+        top: auto;
+    }
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="masterschoolModal" tabindex="-1" role="dialog" aria-labelledby="masterschoolModalTitle"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 680px;">
+    <div class="modal-content">
+      <form id="masterschoolForm" class="needs-validation position-relative" novalidate method="post"
+            action="https://hooks.zapier.com/hooks/catch/5664201/3cbvxsj/">
+        <div class="modal-header">
+          <h5 class="modal-title" id="masterschoolModalTitle"><a href="https://de.masterschool.com/" target="_blank">
+            <img src="/static/img/masterschool.png" style="display: block; width: 150px"/>
+          </a></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container" style="overflow-y: scroll; max-height: 75vh">
+            <h4>Learn to Code with Masterschool for Free!</h4>
+            <p class="mt-3">Are you interested in coding and living in Germany? If you're unemployed or soon to be,
+              enroll
+              in the
+              Masterschool coding program for free —100% funded by the German government, and start building your tech
+              career today.</p>
+
+            <h4>Check if you qualify for free!</h4>
+
+            <div class="form-group">
+              <label>Are you currently registered with the Jobcenter or Agentur für Arbeit?</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="bg0___registered_with_the_jobcente"
+                       id="registeredYes" value="yes" required>
+                <label class="form-check-label" for="registeredYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="bg0___registered_with_the_jobcente" id="registeredNo"
+                       value="no" required>
+                <label class="form-check-label" for="registeredNo">No</label>
+              </div>
+              <div class="invalid-tooltip">
+                Please select an option.
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <div class="form-group">
+                  <label for="fullName">What is your first name?</label>
+                  <input type="text" class="form-control" id="firstName" name="firstname" placeholder="Enter first name"
+                         required
+                         minlength="2">
+                  <div class="invalid-tooltip">
+                    Please provide a valid name.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="form-group">
+                  <label for="fullName">What is your last name?</label>
+                  <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Enter last name"
+                         required
+                         minlength="2">
+                  <div class="invalid-tooltip">
+                    Please provide a valid name.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <div class="form-group">
+                  <label for="age">How old are you?</label>
+                  <input type="number" class="form-control" id="age" name="bg0___age" placeholder="Enter your age"
+                         required min="0"
+                         max="120">
+                  <div class="invalid-tooltip">
+                    Please provide a valid age.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="email">What is your email address?</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                  <div class="invalid-tooltip">
+                    Please provide a valid e-mail address.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="phone">What is your phone number?</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="e.g. +49 69 1234 5678"
+                         required
+                         pattern="^(\+49|0)[1-9\s][\d\s]{9,14}$">
+                  <div class="invalid-tooltip">
+                    Please provide a valid German phone number.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="employmentStatus">What is your current employment status?</label>
+                  <select class="form-control" id="employmentStatus" name="bg0___employment_situation" required>
+                    <option></option>
+                    <option>Unemployed</option>
+                    <option>Soon to be unemployed</option>
+                    <option>Employed</option>
+                    <option>Student</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    Please select your employment status.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="residencyStatus">What is your residency status in Germany?</label>
+                  <select class="form-control" id="residencyStatus" name="bg0___status_in_germany" required>
+                    <option></option>
+                    <option>EU citizen</option>
+                    <option>EU Blue card</option>
+                    <option>Permanent resident ("Aufenthaltstitel")</option>
+                    <option>Temporary stay permit ("Aufenthaltsgestattung")</option>
+                    <option>Family reunification visa ("Familiennachzug")</option>
+                    <option>Work visa ("Arbeitserlaubnis")</option>
+                    <option>Asylum seeker</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    Please select your residency status.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--
+            <p>Thank you for submitting your application.<br>A career consultant from Masterschool will contact you
+              soon.<br>Want to learn more? <a href="https://de.masterschool.com/">https://de.masterschool.com/</a></p>
+              -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <input type="hidden" name="utm_medium" value="referral"/>
+        <input type="hidden" name="utm_source" value="interactive-tutorials"/>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 680px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><a href="https://de.masterschool.com/" target="_blank">
+          <img src="/static/img/masterschool.png" style="display: block; width: 150px"/>
+        </a></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container" style="overflow-y: scroll; max-height: 75vh">
+          <h4 class="mb-3">Thank You!</h4>
+          <p>Thank you for submitting your application.</p>
+          <p>A career consultant from Masterschool will contact you soon.</p>
+          <p>Want to learn more? <a href="https://de.masterschool.com/" target="_blank">https://de.masterschool.com/</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  $('#masterschoolModal').on('hidden.bs.modal', function () {
+    localStorage.setItem("showMasterschoolModal", "false");
+  });
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      const showMasterschoolModal = localStorage.getItem("showMasterschoolModal");
+      if (showMasterschoolModal === "false") {
+        return;
+      } else {
+        $('#masterschoolModal').modal('show');
+      }
+
+      const form = document.querySelector('form');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        form.classList.add('was-validated');
+        if (form.checkValidity() === false) {
+          return false;
+        }
+        $.ajax({
+          url: 'https://hooks.zapier.com/hooks/catch/5664201/3cbvxsj/',
+          type: 'post',
+          data: $('#masterschoolForm').serialize(),
+          success: function () {
+            $('#thankYouModal').modal('show');
+            $('#masterschoolModal').modal('hide');
+          }
+        });
+
+
+      }, false);
+
+    }, false);
+  })();
+</script>
+
+

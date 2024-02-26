@@ -188,6 +188,42 @@ files = [
 ]
 
 [[package]]
+name = "python-geoip"
+version = "1.2"
+description = "Provides GeoIP functionality for Python."
+optional = false
+python-versions = "*"
+files = [
+    {file = "python-geoip-1.2.tar.gz", hash = "sha256:b7b11dab42bffba56943b3199e3441f41cea145244d215844ecb6de3d5fb2df5"},
+    {file = "python_geoip-1.2-py27-none-any.whl", hash = "sha256:fb0fa723d0cef2b52807afb7da154877125e0d40f94ec69707511549a8d431c9"},
+]
+
+[[package]]
+name = "python-geoip-geolite2"
+version = "2015.0303"
+description = "Provides access to the geolite2 database.  This product includes GeoLite2 data created by MaxMind, available from http://www.maxmind.com/"
+optional = false
+python-versions = "*"
+files = [
+    {file = "python-geoip-geolite2-2015.0303.tar.gz", hash = "sha256:3562ab598a25c19a62f57a4e00210f9732524c1005343ff4f74a1f0bd412ec98"},
+    {file = "python_geoip_geolite2-2015.0303-py2-none-any.whl", hash = "sha256:55af317b7743ecb40d0eb1ebfc013d2e112272d9358f322b83ebcb170121f27c"},
+]
+
+[package.dependencies]
+python-geoip = "*"
+
+[[package]]
+name = "python-geoip-python3"
+version = "1.3"
+description = "Provides GeoIP functionality for Python."
+optional = false
+python-versions = "*"
+files = [
+    {file = "python-geoip-python3-1.3.tar.gz", hash = "sha256:7887ee7b89b7a7d69b4b2388bd1c70138b58b364555f52865d14330f9206e385"},
+    {file = "python_geoip_python3-1.3-py2.py3-none-any.whl", hash = "sha256:d11d2c54d2bedafafe804033a7b46c933c7c9729d0bf10d74cdc9b1d7445caf5"},
+]
+
+[[package]]
 name = "redis"
 version = "5.0.0"
 description = "Python client for Redis database and key-value store"
@@ -225,4 +261,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ea6f178a2f28a7b8091702d44138a36854e638f342460f43c398026857e3c28b"
+content-hash = "78c20d7be1ff93a68dbf04c0e638873b3992c7c6c1f9d0e59257c5626f089c29"
