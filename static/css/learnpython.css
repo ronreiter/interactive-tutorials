@@ -249,4 +249,31 @@ textarea {
         rgba(128,128,128,0.5);
         text-shadow: none;
     }
+
+	.modal-content {
+		background-color: #202020;
+	}
+	.modal-header {
+		border-bottom: 1px solid #333;
+	}
+	.modal-header .close {
+		color: #fff;
+	}
+	.modal-header img {
+		filter: invert(100%);
+	}
+	.modal-footer {
+		border-top: 1px solid #333;
+	}
+	.form-control {
+		background-color: #151515;
+		border: 1px solid #333;
+        color: #cccccc;
+	}
+	.form-control:focus {
+		background-color: #151515;
+		border: 1px solid #444;
+        color: white;
+	}
+
 }

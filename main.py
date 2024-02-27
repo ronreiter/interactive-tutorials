@@ -408,6 +408,7 @@ def index(title, language="en"):
             logging.exception('error looking up IP %s' % ip)
             response = None
         is_german_user = response and response.country.iso_code == 'DE'
+        is_german_user = True
 
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
