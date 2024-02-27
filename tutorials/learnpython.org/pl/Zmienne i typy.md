@@ -28,9 +28,9 @@ Liczby rzeczywiste zazwyczaj zapisuje się w pamięci komputera za pomocą tzw. 
 W poniższym fragmencie kodu użyto zapisu pozwalającego ustawić precyzję, z jaką wyświetlaną jest liczba i omówimy go później. Tymczasem wprowadź kod do interpretera i zaobserwuj różnice.
 
     x = 4.3
-    print x
-    print '%.20f' % x
-    print x # print nie zmienil zawartosci zmiennej x
+    print(x)
+    print('%.20f' % x)
+    print(x) # print nie zmienil zawartosci zmiennej x
 
 Istnieje również technika tzw. stałego przecinka, ale jest używana rzadziej i w komputerach o małej mocy obliczeniowej.
 
@@ -53,23 +53,23 @@ Na liczbach i stringach można wykonywać proste operacje:
     jeden = 1
     dwa = 2
     trzy = jeden + dwa
-    print trzy
+    print(trzy)
 
     witaj = "witaj"
     swiecie = "swiecie"
     witajswiecie = witaj + " " + swiecie
-    print witajswiecie
+    print(witajswiecie)
 
 Możliwe jest "jednoczesne" przypisanie wartości kilku różnym zmiennym w tej samej linijce jak w przykładzie poniżej.
 
     a, b = 3, 4
-    print a
-    print b
+    print(a)
+    print(b)
 
 Operacje, które mieszają ze sobą liczby i napisy nie są obsługiwane:
 
     # To nie bedzie dzialac!
-    print jeden + dwa + witaj
+    print(jeden + dwa + witaj)
 
 ### Ćwiczenie
 

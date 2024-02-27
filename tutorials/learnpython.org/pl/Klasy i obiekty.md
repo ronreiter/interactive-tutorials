@@ -8,7 +8,7 @@ Poniżej znajduje się bardzo prosty przykład klasy:
      class MojaKlasa:
           zmienna = "blah"
           def funkcja(self):
-               print "To jest wiadomość wewnątrz klasy."
+               print("To jest wiadomość wewnątrz klasy.")
 
 Nieco później wyjaśnimy, dlaczego powinieneś dołączać "self" jako parametr. Aby stworzyć obiekt będący realizacją klasy trzeba wystarczy przypisać nazwie zmiennej wartość wyrażenia `nazwa_klasy()`.
 
@@ -32,7 +32,7 @@ Tak więc na przykład możesz wypisać napis "ple":
 
     mojobiekt = MojaKlasa()
     mojobiekt.zmienna = "ple"
-    print mojobiekt.zmienna
+    print(mojobiekt.zmienna)
 
 Możesz wielokrotnie tworzyć obiekty należące do tej samej klasy (mające te same zdefiniowane zmienne i funkcje). Jednakże, każdy obiekt zawiera niezależną kopię zmiennej zdefiniowane w klasie. Na przykład jeśli zdefiniujemy inny obiekt klasy `MojaKlasa` i zmienimy wspomnianą wyżej zmienną:
 
@@ -44,8 +44,8 @@ Możesz wielokrotnie tworzyć obiekty należące do tej samej klasy (mające te 
     mojobiekt2 = MojaKlasa()
      mojobiekt2.zmienna = "ploteczka"
 
-    print mojobiekt.zmienna # ple
-    print mojobiekt2.zmienna # ploteczka
+    print(mojobiekt.zmienna) # ple
+    print(mojobiekt2.zmienna) # ploteczka
 
 ### Dostęp do funkcji obiektu
 
@@ -74,8 +74,8 @@ class Pojazd:
 # Ponizej umiesc swoj kod
 
 # sprawdzenie kodu
-print Auto1.opis()
-print Auto2.opis()
+print(Auto1.opis())
+print(Auto2.opis())
 
 Expected Output
 ---------------
