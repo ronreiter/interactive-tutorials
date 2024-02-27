@@ -204,6 +204,7 @@
         return;
       } else {
         $('#masterschoolModal').modal('show');
+        ga('send', 'event', 'masterschool', 'popup');
       }
 
       const form = document.querySelector('form');
