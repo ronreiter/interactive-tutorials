@@ -74,8 +74,15 @@ if isinstance(miIntegral, int) and miIntegral == 20:
 Expected Output
 ---------------
 Cadena: hola
-Flotante: 10
+Flotante: 10.0
 Integral: 20
 
 Solution
 --------
+mystring = "hola"
+myfloat = (float(10))
+myint = 20
+
+print("Cadena: " + mystring)
+print("Flotante: " + str(myfloat))
+print("Integral: " + str(myint))
