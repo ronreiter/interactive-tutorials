@@ -204,7 +204,10 @@
         return;
       } else {
         $('#masterschoolModal').modal('show');
-        ga('send', 'event', 'masterschool', 'popup');
+        ga('send', 'event', {
+          eventCategory: 'Masterschool',
+          eventAction: 'popup',
+        });
       }
 
       const form = document.querySelector('form');
