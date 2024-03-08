@@ -1,6 +1,6 @@
 Tutorial
 --------
-A Foreach loop is used for getting items from an array. That makes this process so easier than using a for loop.
+A Foreach loop is used for getting all items from an array. `foreach` makes that process much easier than using a `for` loop.
 
 Foreach loops are defined like this:
 
