@@ -1,5 +1,5 @@
 $(function() {
-  var template = "<div data-datacamp-exercise data-lang=\"python\" data-height=\"{{height}}\" data-impact-tracking-link=\"\/c\/67577\/1012793\/13294\"><code data-type=\"sample-code\">{{code}}</div></div>",
+  var template = "<div data-datacamp-exercise data-lang=\"python\" data-lang-version=\"3.6\" data-height=\"{{height}}\" data-impact-tracking-link=\"\/c\/67577\/1012793\/13294\"><code data-type=\"sample-code\">{{code}}</div></div>",
       LINEHEIGHT = 14,
       EXTRA = 100;
 

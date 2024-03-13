@@ -62,6 +62,7 @@ Contributors
 - qwong95
 - AddaxSoft
 - derco0n
+- Kjentleman
 - ...<perhaps you>...
 
 <p>This project is supported by:</p>
