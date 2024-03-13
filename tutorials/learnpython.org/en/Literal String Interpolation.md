@@ -35,28 +35,29 @@ Exercise
 --------
 
 Rewrite the code using f-strings to produce the following output:
-    `Hello John Doe. Your new balance is $63.54.`
+    `Hello John Doe. You have 14 fruit.`
 
 Tutorial Code
 -------------
 
 first_name = "John"
 last_name = "Doe"
-balance = 53.44
-deposit = 10.10
+apples = 10
+pears = 4
 
-print("Hello %s %s. Your current balance is $%f" & (first_name, last_name, balance))
+# Rewrite this print statement using f-strings
+print("Hello %s %s. You have %d apples." % (first_name, last_name, apples))
 
 Expected Output
 ---------------
-test_output_contains("Hello John Doe. Your new balance is $63.54.", no_output_msg= "Remember to add the `f` before the string and compute the new balance by adding the deposit")
+test_output_contains("Hello John Doe. You have 14 fruit.", no_output_msg= "Remember to add the `f` before the string and compute the total number of fruit.")
 success_msg('Great work!')
 
 Solution
 --------
 first_name = "John"
 last_name = "Doe"
-balance = 53.44
-deposit = 10.10
+apples = 10
+pears = 4
 
-print(f"Hello {first_name} {last_name}. Your new balance is ${balance + deposit}")
+print(f"Hello {first_name} {last_name}. You have {apples + pears} fruit.")
