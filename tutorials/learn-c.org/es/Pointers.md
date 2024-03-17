@@ -76,13 +76,13 @@ Código del tutorial
 int main() {
   int n = 10;
 
-  /* your code goes here */
+  /* tu código va aquí */
 
-  /* testing code */
+  /* código de prueba */
   if (pointer_to_n != &n) return 1;
   if (*pointer_to_n != 11) return 1;
 
-  printf("Done!\n");
+  printf("Listo!\n");
   return 0;
 }
 ```
