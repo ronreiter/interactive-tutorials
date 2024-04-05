@@ -1,0 +1,17 @@
+You don’t know. Unless 
+you’re cozy with someone on the 
+JVM’s development team, you 
+don’t know how a reference is 
+represented. There are pointers 
+in there somewhere, but you 
+can’t access them. You won’t 
+need to. (OK, if you insist, you 
+might as well just imagine it 
+to be a 64-bit value.) But when 
+you’re talking about memory 
+allocation issues, your Big 
+Concern should be about how 
+many objects (as opposed to 
+object references) you’re creating, 
+and how big they (the objects) 
+really are.

@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+A Java program is a pile 
+of classes (or at least one class). 
+In a Java application, one of 
+the classes must have a main 
+method, used to start-up the 
+program. So as a programmer, 
+you write one or more classes. 
+And those classes are what you 
+=======
+A Java program is a pile 
+of classes (or at least one class). 
+In a Java application, one of 
+the classes must have a main 
+method, used to start-up the 
+program. So as a programmer, 
+you write one or more classes. 
+And those classes are what you 
+>>>>>>> bdba4e67f836629b6b586f629502bb9a2bcf25a1
+deliver.

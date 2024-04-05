@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+This is a sample text file. It contains the word "banana" multiple times.
+Bananas are delicious. I like bananas.
+=======
+This is a sample text file. It contains the word "banana" multiple times.
+Bananas are delicious. I like bananas.
+>>>>>>> bdba4e67f836629b6b586f629502bb9a2bcf25a1

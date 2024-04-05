@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+AccNo: 1, Transaction Type: D, Amount: 200.00
+AccNo: 3, Transaction Type: W, Amount: 300.00
+AccNo: 2, Transaction Type: D, Amount: 100.00
+AccNo: 5, Transaction Type: W, Amount: 50.00
+AccNo: 6, Transaction Type: D, Amount: 20.00
+AccNo: 7, Transaction Type: D, Amount: 80.00
+AccNo: 8, Transaction Type: W, Amount: 30.00
+AccNo: 9, Transaction Type: D, Amount: 50.00
+=======
+AccNo: 1, Transaction Type: D, Amount: 200.00
+AccNo: 3, Transaction Type: W, Amount: 300.00
+AccNo: 2, Transaction Type: D, Amount: 100.00
+AccNo: 5, Transaction Type: W, Amount: 50.00
+AccNo: 6, Transaction Type: D, Amount: 20.00
+AccNo: 7, Transaction Type: D, Amount: 80.00
+AccNo: 8, Transaction Type: W, Amount: 30.00
+AccNo: 9, Transaction Type: D, Amount: 50.00
+>>>>>>> bdba4e67f836629b6b586f629502bb9a2bcf25a1

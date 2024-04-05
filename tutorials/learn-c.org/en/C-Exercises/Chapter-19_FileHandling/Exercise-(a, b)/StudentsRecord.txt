@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+Yusuf_Jamal 19
+Sohail_Raza 14
+Mohammad_Akib_Raza 14
+Minhaz_Ali 18
+Sadik_Raza 9
+Sajid_Ali 7
+Wajid_Ali 5
+Sanaya 2
+Anavya 2
+=======
+Yusuf_Jamal 19
+Sohail_Raza 14
+Mohammad_Akib_Raza 14
+Minhaz_Ali 18
+Sadik_Raza 9
+Sajid_Ali 7
+Wajid_Ali 5
+Sanaya 2
+Anavya 2
+>>>>>>> bdba4e67f836629b6b586f629502bb9a2bcf25a1
+Danish_Raza 2
