@@ -1,1 +1,0 @@
-So far the smallest element in memory on which we were able to operate was a byte.

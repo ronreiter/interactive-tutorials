@@ -1,1 +1,0 @@
-Given student’s records with each record containing id, name and age of a student. Write a C program to read these records and display them in sorted order by the and a and the and an name.
