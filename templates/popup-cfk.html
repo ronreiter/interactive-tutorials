@@ -1,0 +1,62 @@
+<style>
+    .invalid-tooltip {
+        top: auto;
+    }
+</style>
+
+<!-- Modal -->
+<div class="modal fade" id="cfkModal" tabindex="-1" role="dialog" aria-labelledby="cfkModalTitle"
+     aria-hidden="true" style="border-radius: 10px">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 692px">
+    <div class="modal-content" style="overflow: hidden; border-radius: 10px">
+
+      <div class="modal-body" style="padding: 0">
+        <div style="overflow-y: scroll; height: 500px">
+          <div style="display: flex">
+            <div style="flex: 1; padding: 20px; display: flex; flex-direction: column">
+              <img src="/static/img/cfk.png" style="display: block; width: 200px; margin: 0 auto 30px auto"/>
+              <p><strong>Coding for Kids</strong> is an online interactive tutorial that teaches your kids how to code while playing!</p>
+              <p>Receive a 50% discount code by using the promo code:</p>
+              <p class="text-lg-center"><code style="font-size: 20px">2FRHUGWXF0</code></p>
+              <p>Start now and play the first chapter for free, without signing up.</p>
+              <div style="flex: 1"></div>
+              <a href="https://codingforkids.io" target="_blank" type="button" class="btn btn-primary btn-lg">Play Now for Free!</a>
+            </div>
+            <div>
+              <img src="/static/img/cfk-promo.png" style="display: block; height: 500px"/>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  $('#cfkModal').on('hidden.bs.modal', function () {
+    localStorage.setItem("showcfkModal", "false");
+  });
+
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      const showcfkModal = localStorage.getItem("showcfkModal");
+      if (showcfkModal === "false") {
+        return;
+      } else {
+        $('#cfkModal').modal('show');
+        ga('send', 'event', {
+          eventCategory: 'cfk',
+          eventAction: 'popup',
+        });
+      }
+
+    }, false);
+  })();
+</script>
+
+
