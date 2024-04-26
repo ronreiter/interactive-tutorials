@@ -6,3 +6,5 @@ learnpython_env/
 .vscode/
 venv
 app.env
+
+.DS_Store
