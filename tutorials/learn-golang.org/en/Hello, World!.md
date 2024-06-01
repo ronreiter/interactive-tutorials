@@ -3,7 +3,7 @@ Tutorial
 
 Welcome to the first tutorial. This tutorial will guide you through your first go program.
 
-Golang is a modern statistically typed and compiled language from Google.
+Golang is a modern statically typed and compiled language from Google.
 
 In each golang program you need to define a package name at the top. So if you need to import your code into some other program you can use this package name to import. Execution of a golang project starts in the package `"main"`. So let's define our package as main.
 
