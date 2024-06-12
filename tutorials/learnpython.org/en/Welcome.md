@@ -14,6 +14,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 ### Learn the Basics
 
 - [[Hello, World!]]
+- [[Command]]
 - [[Variables and Types]]
 - [[Lists]]
 - [[Basic Operators]]
