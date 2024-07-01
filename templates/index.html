@@ -149,9 +149,13 @@
 {#                    <a href="http://onelink.to/5tw9ex"><img src="/static/img/banners/typetap-banner.png" target="_blank"></a>#}
 {#                </div>#}
                 <div class="mt-3">
-                  <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
-                    <img src="/static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>
-                  </a>
+{#                  <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank"> #}
+{#                      <img src="/static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>#}
+{#                  </a>#}
+                    {% if gruvian_ad %}
+                        {% include "gruvian_ad.html" %}
+                    {% endif %}
+
 {#                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>#}
 {#                    <!-- Interactive Tutorials Right -->#}
 {#                    <ins class="adsbygoogle"#}

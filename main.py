@@ -1,24 +1,25 @@
 # -*- coding: utf-8 -*-
-import json
-import re
-import markdown
-import os
-import cgi
-import urllib.request, urllib.parse, urllib.error
-import time
-import functools
-import logging
 import binascii
+import cgi
 import datetime
+import functools
+import json
+import logging
+import os
+import re
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+
 import geoip2.database
-
-from flask import Flask, render_template, request, make_response, session, Response
-
-
-from ideone import Ideone
+from flask import (Flask, Response, make_response, render_template, request,
+                   session)
+import urllib3
 
 import constants
-
+import markdown
+from ideone import Ideone
 
 courses = json.load(open("courses.json"))
 
@@ -270,6 +271,38 @@ def get_tutorial(tutorial_id, language="en"):
     else:
         return td
 
+pool_manager = urllib3.PoolManager() # using this connection pool reduces latency 
+
+def get_gruvian_ad():
+
+    env = 'dev' if request.host == 'localhost:5000' else 'prod'
+
+    gruvian_api_key = os.environ.get('GRUVIAN_API_KEY', "")
+    
+    if not gruvian_api_key:
+        return None
+
+    url = 'https://api.gruvian.com/v1/auctions'
+
+    request_body = json.dumps(
+        {
+            "network_id": 13,
+            "test_mode": env == 'dev',
+        }
+    )
+
+    headers = {
+        "Authorization": "Bearer " + gruvian_api_key,
+        "Content-Type": "application/json",
+    }
+
+    try:
+        r = pool_manager.request("POST", url, headers=headers, body=request_body)
+        resp_body = json.loads(r.data.decode("utf-8"))
+        return resp_body
+    except Exception:
+        return None
+    
 
 def error404():
     domain_data = get_domain_data()
@@ -409,6 +442,15 @@ def index(title, language="en"):
             response = None
         is_german_user = response and response.country.iso_code == 'DE'
 
+        gruvian_ad = None
+
+        if domain_data['language'] != 'python' and domain_data['language'] != 'sql':
+            # any domain that doesn't have a sponsorship from DataCamp
+            gruvian_ad = get_gruvian_ad()
+
+            if gruvian_ad and not gruvian_ad.get('filled', False):
+                gruvian_ad = None
+
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
             tutorial_page=tutorial != "Welcome",
@@ -425,6 +467,7 @@ def index(title, language="en"):
             uid=uid,
             env="dev" if request.host == "localhost:5000" else "prod",
             is_german_user=is_german_user,
+            gruvian_ad=gruvian_ad,
             **current_tutorial_data
         ))
 
