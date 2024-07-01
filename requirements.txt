@@ -2,3 +2,4 @@ flask
 redis
 gunicorn
 geoip2
+urllib3
