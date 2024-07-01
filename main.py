@@ -13,9 +13,9 @@ import urllib.parse
 import urllib.request
 
 import geoip2.database
+import urllib3
 from flask import (Flask, Response, make_response, render_template, request,
                    session)
-import urllib3
 
 import constants
 import markdown

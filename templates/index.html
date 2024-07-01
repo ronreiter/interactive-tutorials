@@ -153,8 +153,8 @@
 {#                      <img src="/static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>#}
 {#                  </a>#}
                     {% if gruvian_ad %}
-                        <a target="_blank" href="gruvian_ad.click_url">
-                            <img src="{{ gruvian_ad.ad.image.data.url }}" alt="Ad Image" style="width: 100%; margin-bottom: 10px">
+                        <a target="_blank" href="{{gruvian_ad.click_url}}">
+                            <img src="{{ gruvian_ad.ad.image.data.url }}" alt="Ad Image" style="width: 100%; height: auto; margin-bottom: 10px">
                         </a>
                     {% else %}
                         <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
