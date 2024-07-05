@@ -273,7 +273,7 @@ def get_tutorial(tutorial_id, language="en"):
 
 pool_manager = urllib3.PoolManager() # using this connection pool reduces latency 
 
-def get_gruvian_ad():
+def get_gruvian_ad(tag=None):
 
     env = 'dev' if request.host == 'localhost:5000' else 'prod'
 
@@ -287,6 +287,7 @@ def get_gruvian_ad():
     request_body = json.dumps(
         {
             "network_id": 13,
+            "tags": [tag] if tag else [],
             "test_mode": env == 'dev',
         }
     )
@@ -444,9 +445,11 @@ def index(title, language="en"):
 
         gruvian_ad = None
 
-        if domain_data['language'] != 'python' and domain_data['language'] != 'sql':
+        language = domain_data['language']
+
+        if language != 'python' and language != 'sql':
             # any domain that doesn't have a sponsorship from DataCamp
-            gruvian_ad = get_gruvian_ad()
+            gruvian_ad = get_gruvian_ad(language)
 
             if gruvian_ad and not gruvian_ad.get('filled', False):
                 gruvian_ad = None
