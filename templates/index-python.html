@@ -66,6 +66,8 @@
                 <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
                   <img src="/static/img/banners/cfk/promo_mid.png" style="width: 100%; margin-bottom: 10px"/>
                 </a>
+
+                <div style="display: flex; gap: 8px">
                 {% if previous_chapter %}
                 <a class="btn btn-primary pull-left" href="/{{ language_code }}/{{ previous_chapter }}">
                     <i class="fas fa-angle-double-left"></i> Previous Tutorial
@@ -78,10 +80,15 @@
                 </a>
                 {% endif %}
 
-                <a class="btn btn-secondary pull-right mr-2" href="https://www.learnx.org">
-                    Take the Test <i class="fas fa-angle-double-right"></i>
+
+                <a class="btn btn-success pull-right" href="https://codingforkids.io" target="_blank">
+                    Play Coding for Kids Free! <i class="fas fa-angle-double-right"></i>
                 </a>
 
+                <a class="btn btn-secondary pull-right" href="https://www.learnx.org" target="_blank">
+                    Take the Test <i class="fas fa-angle-double-right"></i>
+                </a>
+                </div>
             </div>
 
             <div class="hidden-phone">
