@@ -19,10 +19,18 @@
 
 {% block content %}
 <div class="container" id="main">
+  <div class="row">
+    <div class="col">
+      <a
+        href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython"
+        target="_blank">
+        <img src="/static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
+      </a>
+    </div>
+  </div>
+
     <div class="row">
-
         <div class="col">
-
             {% if page_title %}
             <ul class="breadcrumb" style="margin-top: 10px">
               {% if back_chapter %}
@@ -33,9 +41,6 @@
             {% endif %}
 
             <div class="clearfix">
-              <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
-                <img src="/static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
-              </a>
 {#                <p>Ready to take the test? Head onto <a href="https://www.learnx.org" target="_blank">LearnX</a> and get your Python Certification!</p>#}
                 <p>Get started learning Python with <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org">DataCamp's</a> free <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org">Intro to Python tutorial</a>. Learn Data Science by completing interactive coding challenges and watching videos by expert instructors. <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org">Start Now</a>!</p>
                 <p>This site is generously supported by <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org">DataCamp</a>. DataCamp offers online interactive <a href="https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org">Python Tutorials</a> for Data Science. Join <b>11 million</b> other learners and get started learning Python for data science today!</p>
@@ -80,10 +85,9 @@
                 </a>
                 {% endif %}
 
-
-                <a class="btn btn-success pull-right" href="https://codingforkids.io" target="_blank">
-                    Play Coding for Kids Free! <i class="fas fa-angle-double-right"></i>
-                </a>
+{#                <a class="btn btn-success pull-right" href="https://codingforkids.io" target="_blank">#}
+{#                    Play Coding for Kids Free! <i class="fas fa-angle-double-right"></i>#}
+{#                </a>#}
 
                 <a class="btn btn-secondary pull-right" href="https://www.learnx.org" target="_blank">
                     Take the Test <i class="fas fa-angle-double-right"></i>
