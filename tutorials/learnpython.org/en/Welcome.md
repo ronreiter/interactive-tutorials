@@ -26,6 +26,15 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Dictionaries]]
 - [[Modules and Packages]]
 
+### Coding for Kids
+- [Starting Out](https://codingforkids.io/play/python/intro-level1)
+- [Movement with Functions](https://codingforkids.io/play/python/intro-level2)
+- [Collecting items](https://codingforkids.io/play/python/intro-level3)
+- [Pushing objects](https://codingforkids.io/play/python/intro-level4)
+- [Printing on screen](https://codingforkids.io/play/python/intro-level5)
+- [Building objects](https://codingforkids.io/play/python/intro-level6)
+- [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
+
 ### Data Science Tutorials
 - [[Numpy Arrays]]
 - [[Pandas Basics]]
