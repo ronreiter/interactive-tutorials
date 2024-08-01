@@ -147,9 +147,19 @@
 {#                    <a href="http://onelink.to/5tw9ex"><img src="/static/img/banners/typetap-banner.png" target="_blank"></a>#}
 {#                </div>#}
                 <div class="mt-3">
-                  <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
-                    <img src="/static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>
-                  </a>
+{#                  <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank"> #}
+{#                      <img src="/static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>#}
+{#                  </a>#}
+                    {% if gruvian_ad %}
+                        <a target="_blank" href="{{gruvian_ad.click_url}}">
+                            <img src="{{ gruvian_ad.ad.image.url }}" alt="{{ gruvian_ad.ad.image.alt if gruvian_ad.ad.image.alt else 'Gruvian Ad' }}" style="width: 100%; height: auto; margin-bottom: 10px">
+                        </a>
+                    {% else %}
+                        <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
+                            <img src="/static/img/banners/cfk/promo_high.png" style="width: 100%; margin-bottom: 10px"/>
+                        </a>
+                    {% endif %}
+
 {#                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>#}
 {#                    <!-- Interactive Tutorials Right -->#}
 {#                    <ins class="adsbygoogle"#}
@@ -175,6 +185,13 @@
                   <a href="#" data-toggle="modal" data-target="#masterschoolModal">
                     <img src="/static/img/masterschool.png" style="width: 150px;"/>
                   </a>
+                </div>
+                <hr />
+                <div class="mt-3">
+                    <a href="https://app.gruvian.com/preview/13" class="btn btn-primary btn-block">
+                        Sponsor this Site
+                    </a>
+                    
                 </div>
                 <h4 class="mt-3">Chapters</h4>
                 <hr/>
