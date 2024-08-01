@@ -154,7 +154,7 @@
 {#                  </a>#}
                     {% if gruvian_ad %}
                         <a target="_blank" href="{{gruvian_ad.click_url}}">
-                            <img src="{{ gruvian_ad.ad.image.data.url }}" alt="Ad Image" style="width: 100%; height: auto; margin-bottom: 10px">
+                            <img src="{{ gruvian_ad.ad.image.url }}" alt="{{ gruvian_ad.ad.image.alt if gruvian_ad.ad.image.alt else 'Gruvian Ad' }}" style="width: 100%; height: auto; margin-bottom: 10px">
                         </a>
                     {% else %}
                         <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">

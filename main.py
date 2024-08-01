@@ -286,7 +286,7 @@ def get_gruvian_ad(tag=None):
 
     request_body = json.dumps(
         {
-            "network_id": 13,
+            "format_id": 6,
             "tags": [tag] if tag else [],
             "test_mode": env == 'dev',
         }
