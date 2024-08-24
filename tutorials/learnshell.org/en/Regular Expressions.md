@@ -67,10 +67,8 @@ Start with the following code:
 
 read -p "Enter your email: " email
 
-if [[ $email =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then
-  echo "Valid email"
-else
-  echo "Invalid email"
+if # add you statement here; then
+  # add a if else condition and print out the changes
 fi
 ```
 
