@@ -1,31 +1,41 @@
 Tutorial
 --------
 
-Python to język o wyjątkowo prostej składni. To zachęca programistów do programowania bez (przygotowanych) schematów konstrukcyjnych. Najprostszą instrukcją jest `print` – po prostu wypisuje linijkę tekstu na ekranie.
-Po wypisaniu tekstu zawartego w cudzysłowie automatycznie dodawany jest zank nowego wiersza. Może zmylić to programistów np. C/C++, w których wygląda to inaczej.
+Python jest językiem o wyjątkowo prostej składni, co sprawia, że jest jednym z prostszych do nauki jako pierwszy język programowania. Najprostszą instrukcją, od której zaczniemy jest funkcja `print`, która wypisuje podany tekst na ekranie.
 
-Wersje 2 i 3 Pythona różnie traktują tę instrukcję – w Pythonie 2 `print` nie jest tzw. funkcją i z tego powodu jest wywoływana bez nawiasów. Jednak w Pythonie 3 jest funkcją i trzeba dodatkowo użyć nawiasów okrągłych okalających tekst.
+Istnieją dwie powszechnie używane wersje Pythona, Python 2 i Python 3. Różnią się one wieloma aspektami. W tym kursie będziemy używali wersji Python 3, ponieważ, w porównaniu do Pythona 2, jest on aktywnie rozwijany i często otrzymuje nowe funkcje.
 
-W tym samouczku jest używany Python 2.7, który pozwala wypisać wiersz bez nawiasów.
+Jedną z różnic między wersjami 2 a 3 jest używanie instrukcji `print`. W wersji Python 2 jest ona instrukcją języka, dzięki czemu nie musimy pisać nawiasów chcąc wypisać dany tekst na ekranie. W Pythonie 3 `print` jest tzw. funkcją - funkcje używa się zawsze z nawiasami. Więcej o funkcjach dowiesz się w następnych częściach kursu.
 
-Aby wypisać wiersz, po prostu napisz:
+Aby wypisać linijkę tekstu, napiszemy następujący kod:
 
-    print "Ta linijka tekstu zostanie wypisana."
+    print("Ta linijka tekstu zostanie wypisana.")
+
+Możemy również pisać w naszym kodzie komentarze, które są ignorowane przez komputer. Są one wyłącznie przydatne dla programisty czytającego kod - opisują jego działanie. Komentarze piszemy stawiając znak `#` i pisząc po nim tekst, na przykład:
+
+    # Zapytaj użytkownika o imię
+    print("Hej, jak masz na imię?")
 
 
+Ćwiczenie
+---------
 
-### Ćwiczenie
+Użyj funkcji `print` do wypisania tekstu "Witaj, Swiecie!"
 
-Użyj instrukcji `print` do wypisania tekstu "Witaj Swiecie!"
 
 Tutorial Code
 -------------
-print "Do widzenia Swiecie!"
+
+print("Zegnaj, Swiecie")
+
 
 Expected Output
 ---------------
-Witaj Swiecie!
+
+Witaj, Swiecie!
+
 
 Solution
 --------
-print "Witaj Swiecie!"
+
+print("Witaj, Swiecie!")
