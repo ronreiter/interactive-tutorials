@@ -9,19 +9,19 @@ Pętla `for` "przebiega" przez podany ciąg liczb. Przykład poniżej:
 
     pierwsze = [2,3,5,7]
     for pierwsza in pierwsze:
-        print pierwsza
+        print(pierwsza)
 
 Pętlę `for` możemy zrealizować z użyciem funkcji `range` lub `xrange`. Różnica między nimi polega na tym, że range zwraca nową tablicę liczb zawartych w określonym przedziale, natomiast `xrange` zwraca pojedyńczą liczbę, co czyni ją w pętlach bardziej wydajną. Python 3 używa funkcji `range`, która działa jak `xrange`. Funkcja `xrange` zwracając liczby zaczyna od 0.
 
     # Wypisze liczby 0 1 2 3 4
     for x in xrange(5):
-        print x,
+        print(x,)
 
-    print
+    print()
 
     # Wypisze 3 4 5
     for x in xrange(3,6):
-        print x,
+        print(x,)
 
 ### Pętla "while"
 
@@ -31,7 +31,7 @@ Pętla `while` wykonuje się dopóki pewien warunek logiczny jest spełniony. Pr
 
     licznik = 0
     while licznik < 5:
-        print licznik,
+        print(licznik,)
         licznik += 1  # Ma to taki sam efekt jak licznik = licznik + 1
 
 ### Instrukcje "break" i "continue"
@@ -42,19 +42,19 @@ Pętla `while` wykonuje się dopóki pewien warunek logiczny jest spełniony. Pr
 
     licznik = 0
     while True:
-        print licznik,
+        print(licznik,)
         licznik += 1
         if licznik >= 5:
             break
 
-    print
+    print()
 
     # Wypisze tylko liczby nieparzyste - 1 3 5 7 9
     for x in xrange(10):
         # Sprawdz, czy x jest parzyste
         if x % 2 == 0:
             continue
-        print x,
+        print(x,)
 
 ### Ćwiczenie
 

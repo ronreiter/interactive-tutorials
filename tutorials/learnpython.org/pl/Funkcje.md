@@ -24,10 +24,10 @@ Słowami kluczowymi, które już znasz są `if`, `for` i `while`, ale one nie wy
 Funkcje są definiowane z użyciem słowa kluczowego `def`, po którym umieszcza się nazwę funkcji, a potem nawiasy. Jeżeli funkcja nie wymaga informacji z zewnątrz nawiasy pozostawiamy puste.
 
     def przywitanie():
-        print "Pozdrowienia z mojej funckji!"
+        print("Pozdrowienia z mojej funckji!")
 
     def przywitanie_imienne(imie, zyczenia):
-        print "Witaj" + imie + ". Zycze Tobie " + zyczenia
+        print("Witaj" + imie + ". Zycze Tobie " + zyczenia)
 
     przywitanie() # Wypisze "Pozdrowienia z mojej funckji!"
     przywitanie_imienne("Jacek", "zdrowia") # Wypisze immienne zyczenia
@@ -41,9 +41,9 @@ Przykład:
         else:
             return dzielna / dzielnik
 
-    print dzielenie(5, 0)
-    print "#########################"
-    print dzielenie(10, 2)
+    print(dzielenie(5, 0))
+    print("#########################")
+    print(dzielenie(10, 2))
 
 ### Jak wywoływać funkcje w Pythonie?
 
@@ -56,10 +56,10 @@ Po prostu napisz nazwę funkcji razem z argumentami w nawiasach, jak widać w pr
             return dzielna / dzielnik
 
     def przywitanie():
-        print "Pozdrowienia z mojej funckji!"
+        print("Pozdrowienia z mojej funckji!")
 
     def przywitanie_imienne(imie, zyczenia):
-        print "Witaj", imie, ". Zycze ci", zyczenia
+        print("Witaj", imie, ". Zycze ci", zyczenia)
 
     # brak argumentow i zwracanej wartosci
     przywitanie()
@@ -69,7 +69,7 @@ Po prostu napisz nazwę funkcji razem z argumentami w nawiasach, jak widać w pr
 
     # jak przypisac zmiennej wartosc zwrocona przez funkcje
     x = dzielenie(9, 3)
-    print x
+    print(x)
 
 ### Ćwiczenie
 
@@ -95,7 +95,7 @@ def buduj_zdanie(korzysc):
 def nazwij_korzysci_z_funkcji():
     tabela = lista_korzysci()
     for korzysc in tabela:
-        print buduj_zdanie(korzysc)
+        print(buduj_zdanie(korzysc))
 
 nazwij_korzysci_z_funkcji()
 
@@ -125,6 +125,6 @@ def buduj_zdanie(korzysc):
 def nazwij_korzysci_z_funkcji():
     tabela = lista_korzysci()
     for korzysc in tabela:
-        print buduj_zdanie(korzysc)
+        print(buduj_zdanie(korzysc))
 
 nazwij_korzysci_z_funkcji()

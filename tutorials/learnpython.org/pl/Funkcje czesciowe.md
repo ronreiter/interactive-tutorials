@@ -11,9 +11,9 @@ Przykład:
 
     podwojenie = partial(mnozenie, 2)
 
-    print podwojenie(6)  # 12
-    print podwojenie(11) # 22
-    print podwojenie(7)  # 14
+    print(podwojenie(6))  # 12
+    print(podwojenie(11)) # 22
+    print(podwojenie(7))  # 14
 
 Tutorial Code
 -------------

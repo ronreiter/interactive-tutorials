@@ -9,18 +9,18 @@ Tablicę liczb można sobie wyobrazić jako zmienne ustawione w szereg. Każdej 
     tablica.append(1)
     tablica.append(2)
     tablica.append(3)
-    print tablica[0] # wypisze 1
-    print tablica[1] # wypisze 2
-    print tablica[2] # wypisze 3
+    print(tablica[0]) # wypisze 1
+    print(tablica[1]) # wypisze 2
+    print(tablica[2]) # wypisze 3
 
     # wypisze kolejno 1, 2, 3
     for x in tablica:
-        print x
+        print(x)
 
 Próba wywołania elementu o nieistniejącym adresie wygeneruje wyjątek (czyli błąd).
 
     tablica = [1,2,3]
-    print tablica[10]
+    print(tablica[10])
 
 ### Ćwiczenie
 
@@ -40,9 +40,9 @@ drugie_imie = None
 
 # Ten fragment kodu wypisze wypelnione przez ciebie
 # tablice oraz drugie imie w tablicy imion (Edward).
-print liczby
-print napisy
-print "Drugim imieniem w tablicy jest %s." % drugie_imie
+print(liczby)
+print(napisy)
+print("Drugim imieniem w tablicy jest %s." % drugie_imie)
 
 
 
@@ -69,6 +69,6 @@ napisy.append('swiecie')
 
 drugie_imie = imiona[1]
 
-print (liczby)
-print (napisy)
-print ("Drugim imieniem w tablicy jest %s." % drugie_imie)
+print(liczby)
+print(napisy)
+print("Drugim imieniem w tablicy jest %s." % drugie_imie)
