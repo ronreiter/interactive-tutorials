@@ -13,16 +13,16 @@ Function, similar to the ones in math, is a collection of statements that is des
 * **parameters**: Inputs that the funtion will use. Identify data type followed by variable name. Seperate with `,` for more than one input.
 * **statements**: Lines of code that will perform the function's task.
 
-To call the function, you simply have to write the name of the function with the parenthesis following (if the function requires parameters, the parameters should be written between the parenthesis): 
+To call the function, you simply have to write the name of the function with the parenthesis following (if the function requires parameters, the parameters should be written between the parenthesis):
 
     int squareNumbers(int x){ // Declares function "squareNumbers" that takes in parameter of x.
-        y=x*x; //creates int variable equating to x squared
+        int y=x*x; //creates int variable equating to x squared
         return y; //returns the value of y when the function is called
     }
-    
-    int main(){ 
-        input = 9; 
-        output = squareNumbers(input); 
+
+    int main(){
+        int input = 9;
+        int output = squareNumbers(input);
         //the function is called, resulting in the int variable "output" equating input squared
     }
 
@@ -31,9 +31,10 @@ Another example:
     void helloThere(string name){//void means this function doesn't return anything
         cout << "Hello, " << name;
     }
-    
+
     int main(){
         helloThere("Celina"); //prints out "Hello, Celina"
+        return 0;
     }
 
 Most commonly, functions are placed outside of the Main function.
@@ -47,9 +48,9 @@ Tutorial Code
 
     #include <iostream>
     using namespace std;
-    
+
     // your code goes here (declare function)
-    
+
     int main (){
         int a = 1;
         int b = 4;
@@ -67,11 +68,11 @@ Solution
 
     #include <iostream>
     using namespace std;
-    
+
     void addition(int a, int b, int c){
     cout << a+b+c;
     }
-    
+
     int main (){
     int a = 1;
     int b = 4;
