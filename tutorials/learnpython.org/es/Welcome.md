@@ -47,6 +47,7 @@ Simplemente haga clic en el capítulo desde el que desea comenzar y después sig
 - [Instrospección de código](Code Introspection)
 - [Clausuras](Closures)
 - [Decoradores](Decorators)
+- [Map, Filter, Reduce](Map, Filter, Reduce)
 
 ### Otros tutoriales de Python
 
