@@ -29,7 +29,7 @@ This will print out the variable we popped from the array, and what's left of th
 
 ### Queues using shifting and unshifting
 
-The `unshift` and `shift` methods are similar to `push` and `pop`, only they work from the beginning of the array. We can use the `push` and `shift` methods consecutively to utilize an array as a queue. For example:
+The `unshift` and `shift` methods are similar to `push` and `pop`, only they work from the beginning of the array. We can use the `unshift` and `shift` methods consecutively to utilize an array as a queue. For example:
 
     var myQueue = [];
     myQueue.push(1);
