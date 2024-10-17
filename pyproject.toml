@@ -11,9 +11,6 @@ Flask = "^2.3.3"
 redis = "^5.0.0"
 gunicorn = "^21.2.0"
 python-geoip = "^1.2"
-python-geoip-python3 = "^1.3"
-python-geoip-geolite2 = "^2015.303"
-geoip2 = "^4.8.0"
 
 
 [build-system]

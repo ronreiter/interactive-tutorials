@@ -10,7 +10,6 @@ import functools
 import logging
 import binascii
 import datetime
-import geoip2.database
 
 from flask import Flask, render_template, request, make_response, session, Response
 
@@ -395,19 +394,19 @@ def index(title, language="en"):
 
         # https://ipinfo.io/1.2.3.4/json - country = DE
         # check if user is German
-        xff = request.headers.get("X-Forwarded-For")
-        if xff and "," in xff:
-            ip = xff.split(",")[0]
-        else:
-            ip = request.remote_addr
+        # xff = request.headers.get("X-Forwarded-For")
+        # if xff and "," in xff:
+        #     ip = xff.split(",")[0]
+        # else:
+        #     ip = request.remote_addr
 
-        try:
-            with geoip2.database.Reader('GeoLite2-Country.mmdb') as reader:
-                response = reader.country(ip)
-        except Exception as e:
-            logging.exception('error looking up IP %s' % ip)
-            response = None
-        is_german_user = response and response.country.iso_code == 'DE'
+        # try:
+        #     with geoip2.database.Reader('GeoLite2-Country.mmdb') as reader:
+        #         response = reader.country(ip)
+        # except Exception as e:
+        #     logging.exception('error looking up IP %s' % ip)
+        #     response = None
+        # is_german_user = response and response.country.iso_code == 'DE'
 
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
@@ -424,7 +423,7 @@ def index(title, language="en"):
             language_names=get_language_names(),
             uid=uid,
             env="dev" if request.host == "localhost:5000" else "prod",
-            is_german_user=is_german_user,
+            is_german_user=False,
             **current_tutorial_data
         ))
 
