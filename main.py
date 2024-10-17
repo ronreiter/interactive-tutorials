@@ -3,7 +3,7 @@ import json
 import re
 import markdown
 import os
-import cgi
+import html
 import urllib.request, urllib.parse, urllib.error
 import time
 import functools
@@ -264,7 +264,7 @@ def get_tutorial(tutorial_id, language="en"):
 
     if not td:
         return {
-            "page_title": cgi.escape(tutorial_id),
+            "page_title": html.escape(tutorial_id),
             "text": "Page not found."
         }
     else:
