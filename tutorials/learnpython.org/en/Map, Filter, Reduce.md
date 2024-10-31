@@ -1,7 +1,7 @@
 
 Tutorial
 --------
-Map, Filter, and Reduce are paradigms of functional programming. They allow the programmer (you) to write simpler, shorter code, without neccessarily needing to bother about intricacies like loops and branching.
+Map, Filter, and Reduce are paradigms of functional programming. They allow the programmer (you) to write simpler, shorter code, without necessarily needing to bother about intricacies like loops and branching.
 
 Essentially, these three functions allow you to apply a function across a number of iterables, in one fell swoop. ```map``` and ```filter``` come built-in with Python (in the ```__builtins__``` module) and require no importing. ```reduce```, however, needs to be imported as it resides in the ```functools``` module. Let's get a better understanding of how they all work, starting with ```map```.
 
@@ -17,7 +17,7 @@ Where ```func``` is the function on which each element in ```iterables``` (as ma
 
 Let's see how these rules play out with the following examples.
 
-Say I have a list (```iterable```) of my favourite pet names, all in lower case and I need them in uppercase. Traditonally, in normal pythoning, I would do something like this:
+Say I have a list (```iterable```) of my favourite pet names, all in lower case and I need them in uppercase. Traditionally, in normal pythoning, I would do something like this:
 
     my_pets = ['alfred', 'tabitha', 'william', 'arla']
     uppered_pets = []

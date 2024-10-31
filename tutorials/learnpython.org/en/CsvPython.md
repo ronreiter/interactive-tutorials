@@ -45,7 +45,7 @@ For example:
     with open(filename, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
 
-Here, we first open the CSV file in READ mode and name the file onject as csvfile. We use context manager to open file so that we don't have to worry about closing file. csv.reader function takes file object as input and returns an iterable object. We save the iterable object as csvreader.
+Here, we first open the CSV file in READ mode and name the file object as csvfile. We use context manager to open file so that we don't have to worry about closing file. csv.reader function takes file object as input and returns an iterable object. We save the iterable object as csvreader.
 
 As we know, csvreader is an iterable object and therefore we can iterate using for loop:
 
