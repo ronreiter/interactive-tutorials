@@ -36,7 +36,8 @@ Być może zwróciłeś uwagę na tekst ogranicznony z dwóch stron znakami /* i
 
 W kodzie programu nie możesz umieszczać żadnych polskich znaków diakrytycznych. Wyjątek stanowią jedynie komentarze. Niestety nasz interaktywny kompilator ze względów czysto technicznych nawet tam ich nie akceptuje. Jeśli zobaczysz komunikat *There was an unknown error!*, to najprawdopodobniej przez pomyłkę wstawiłeś gdzieś np. 'ę'. 
 
-### Ćwiczenie
+Exercise
+-------------
 
 Zmień kod programu tak, aby na ekranie zostało wypisany tekst 'Witaj Swiecie'
 
@@ -50,14 +51,14 @@ komentarz w programie*/
 /*Uwaga! komentarzy nie mozna zagniezdzac*/
 
 int main(){
-  printf("Zegnaj Swiecie");
+  printf("Zegnaj Swiecie!");
   return 0;
 }
 
 Expected Output
 ---------------
 
-Witaj Swiecie
+Witaj Swiecie!
 
 Solution
 --------
