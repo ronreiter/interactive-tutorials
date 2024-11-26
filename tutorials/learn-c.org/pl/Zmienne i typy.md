@@ -29,7 +29,8 @@ W C nie ma zmiennych do przechowywania warotości logicznych prawda/fałsz. Uży
 
 Napisy są przechowywane za pomocą tablic znaków oraz możesz tworzyć swoje własne niby-typy, czyli struktury, ale to wyjaśnimy później.
 
-### Ćwiczenie
+Exercise
+-------------
 
 W tym ćwiczeniu muszą zostać wydrukowana suma zmiennych `a`, `b` i `c`.
 
@@ -47,17 +48,8 @@ int main(){
   /*Ponizej umiesc swoj kod*/
 
 
-
   /*ponizej nic nie zmieniaj*/
   printf("Suma zmiennych a, b, i c wynosi %d\n\n", suma);
-  printf("Ponizej mozesz zobaczyc ile bajtow\n");
-  printf("zajmuja poszczegolne typy danych\n");
-  printf("char %d\n", sizeof(char));
-  printf("short int %d\n", sizeof(short int));
-  printf("int %d\n", sizeof(int));
-  printf("long int %d\n", sizeof(long int));
-  printf("float %d\n", sizeof(float));
-  printf("double %d\n", sizeof(double));
 
   return 0;
 }
@@ -66,14 +58,6 @@ Expected Output
 ---------------
 Suma zmiennych a, b, i c wynosi 50
 
-Ponizej mozesz zobaczyc ile bajtow
-zajmuja poszczegolne typy danych
-char 1
-short int 2
-int 4
-long int 4
-float 4
-double 8
 
 Solution
 --------
