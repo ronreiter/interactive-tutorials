@@ -18,6 +18,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Lists]]
 - [[Basic Operators]]
 - [[String Formatting]]
+- [[Literal String Interpolation]]
 - [[Basic String Operations]]
 - [[Conditions]]
 - [[Loops]]
