@@ -13,18 +13,21 @@ Once you have assigned a value to a variable, you can then refer back to it:
 
 There are three main types of variable:
 
-- Strings (a collection of symbols inside speech marks)
+- Strings (a collection of characters inside quotation ("" or '') marks)
 - Booleans (true or false)
 - Numbers (numeric values)
 
-    aString = "I'm a string!"
-    aBoolean = true
-    aNumber = 42
+    my_string = "I'm a string!"
+    my_boolean = true
+    my_number = 42
 
 Exercise
 --------
 
-Define three variables, `myString`, `myBoolean`, and `myNumber`, and set them to "I'm programming!", "true", and "5".
+Define three variables, `my_string`, `my_boolean`, and `my_number`, and set them to "I'm programming!", "true", and "5".
+
+*** Omit the quotation marks on boolean & number
+
 
 Tutorial Code
 -------------
