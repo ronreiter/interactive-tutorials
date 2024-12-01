@@ -102,7 +102,7 @@ shorter, and doesn't require you to specify every object you want to import from
 Modules may be loaded under any name you want. This is useful when importing a module conditionally
 to use the same name in the rest of the code. 
 
-For example, if you have two `draw` modules with slighty different names, you may do the following:
+For example, if you have two `draw` modules with slightly different names, you may do the following:
  
 
     # game.py

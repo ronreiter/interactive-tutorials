@@ -52,7 +52,7 @@ print(format_string % data)
 
 Expected Output
 ---------------
-#test_output_contains("Hello John Doe. Your current balance is $53.44.", no_output_msg= "Make sure you add the `%s` in the correct spaces to the `format_string` to meeet the exercise goals!")
+#test_output_contains("Hello John Doe. Your current balance is $53.44.", no_output_msg= "Make sure you add the `%s` in the correct spaces to the `format_string` to meet the exercise goals!")
 test_object('format_string')
 success_msg('Great work!')
 
