@@ -27,20 +27,29 @@ In this exercise, you will need to add numbers and strings to the correct lists 
 
 You will also have to fill in the variable second_name with the second name in the names list, using the brackets operator `[]`. Note that the index is zero-based, so if you want to access the second item in the list, its index will be 1.
 
+<div style="padding: 20px 0;">
+    <a href="https://app.datacamp.com/workspace/new?_tag=template&templateKey=learnpython-lists&utm_source=learnpython.org&utm_medium=docs&utm_term=lists&utm_content=run_code_in_workspace"
+                    style="font-size: 16px; padding: 12px 16px; border-radius: 4px; background: rgba(3, 239, 98); color: #1f2937; font-weight: 600; text-decoration: none;"
+                    target="_blank">
+    Run & Edit Full Tutorial
+    </a>
+</div>
+
 Tutorial Code
 -------------
-numbers = []
-strings = []
-names = ["John", "Eric", "Jessica"]
+    numbers = []
+    strings = []
+    names = ["John", "Eric", "Jessica"]
 
-# write your code here
-second_name = None
+    # write your code here
+    second_name = None
 
 
-# this code should write out the filled arrays and the second name in the names list (Eric).
-print(numbers)
-print(strings)
-print("The second name on the names list is %s" % second_name)
+    # this code should write out the filled arrays and the second name in the names list (Eric).
+    print(numbers)
+    print(strings)
+    print("The second name on the names list is %s" % second_name)
+
 
 Expected Output
 ---------------
