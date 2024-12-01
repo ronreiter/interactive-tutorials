@@ -12,7 +12,7 @@ Przykładowo powiedzmy, że potrzebujemy stworzyć nową tablicę liczb całkowi
         if slowo != 'nad':
             dlugosc_slow.append(len(slowo))
 
-    print dlugosc_slow
+    print(dlugosc_slow)
 
 Za pomocą listy składanej możemy uprościć cały zapis:
 
@@ -20,7 +20,7 @@ Za pomocą listy składanej możemy uprościć cały zapis:
     slowa = napis.split()
     dlugosc_slow = [len(slowo) for slowo in slowa if slowo != 'nad']
 
-    print dlugosc_slow
+    print(dlugosc_slow)
 
 Jeśli chcemy, to możemy pominąć część z `if`, dzięki czemu operacja będzie przeprowadzona dla wszystkich obiektów.
 
@@ -28,7 +28,7 @@ Jeśli chcemy, to możemy pominąć część z `if`, dzięki czemu operacja będ
     slowa = napis.split()
     dlugosc_slow = [len(slowo) for slowo in slowa]
 
-    print dlugosc_slow
+    print(dlugosc_slow)
 
 ### Ćwiczenie
 
@@ -40,7 +40,7 @@ liczby = [34.6, -203.4, 44.9, 68.3, -12.2, 44.6, 12.7]
 
 nowa = []
 
-print nowa
+print(nowa)
 
 Expected Output
 ---------------
