@@ -1,32 +1,37 @@
-# Welcome
+Tutorial
+--------
+Hello World Function
 
-Welcome to the learncs.org free interactive C# tutorial.
+Exercise
+--------
+Print "Hello World!"
 
-Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the C# programming language.
+Tutorial Code
+-------------
+// Hello World! program
+namespace HelloWorld
+{
+    class Hello {         
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello World!");
+        }
+    }
+}
 
-There is no need to download anything - Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
+Expected Output
+---------------
+Hello World!
 
-learncs.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
-
-### Learn the Basics
-
-- [[Hello, World!]]
-- [[User Input]]
-- [[Variables and Types]]
-- [[Type Conversion]]
-- [[Conditionals]]
-- [[Arrays]]
-- [[Lists]]
-- [[Dictionaries]]
-- [[Strings]]
-- [[For loops]]
-- [[Foreach loops]]
-- [[While loops]]
-- [[Methods]]
-- [[Basic Classes]]
-- [[Class Variables]]
-- [[Class Properties]]
-
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]
+Solution
+--------
+// Hello World! program
+namespace HelloWorld
+{
+    class Hello {         
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello World!");
+        }
+    }
+}
