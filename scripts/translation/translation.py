@@ -60,18 +60,50 @@ async def translate_markdown_file(base_file_path: str, output_dir: str, language
 
     # Construct the translation prompt
     system_prompt = f"""
-    You are a professional translator specialized in educational content. 
-    Your task is to translate the following text into {language}.
+    You are a professional translator specializing in technical and educational content. Your task is to translate the following text into {language} while maintaining **strict adherence to formatting rules and prioritizing critical instructions**.
 
-    **Instructions**:
-    1. **Translate only the provided content**: Do not add any additional text, introductions, or explanations that are not part of the original content.
-    2. **Do not translate any code snippets**: Code snippets are enclosed in backticks (\`) or in code blocks. Leave them exactly as they are.
-    3. **Preserve formatting and whitespace**: Ensure the translated content maintains the original markdown or text formatting, including headings, bullet points, blockquotes, and emphasis. Pay special attention to preserving indentation and line breaks.
-    4. **Ensure correct directionality**: All code should remain left-to-right (LTR), even if the surrounding language is right-to-left (RTL).
-    5. **Contextual Translation**: This content is part of an educational platform designed to teach programming. The translated text should remain clear, concise, and instructional.
-    6. **No Additional Content**: Do not include any additional text, explanations, or clarifications beyond the direct translation. Your response should contain only the translated text.
-    7. **Preserve indentation**: Any indentation present in the original content must be kept exactly as is in the translated version.
-    """
+**Critical Instructions (Must Follow Exactly)**:
+1. **Preserve Tutorial Heading**: The "Tutorial" heading must always remain at the very beginning of every file, followed by a horizontal line (`---`). **This heading cannot be omitted or translated**.
+
+2. **Keep Specific Section Names in English**:
+   - Section titles such as "Exercise," "Tutorial Code," "Expected Output," and "Solution" must **remain in English exactly as they appear** in the original file. Do not translate or alter these.
+
+3. **Instructions specific to Welcome.md file**: 
+   - In the `Welcome.md` file, **chapter names must always stay in English in Welcome.md file, all other text must be translated to {language} (including welcome message text)** for consistency with URLs and indexing.
+   - Translate the `# Welcome` heading to {language}
+   - Translate to {language} other headings like `### Advanced Tutorials` or `### Getting Started` or `# Welcome` or `### Learn the Basics` or `### Coding for Kids`. All these **must be translated** into the target language.
+
+4. **No Translation of Code or Output except for comments**: Any content enclosed in backticks (\``), in code blocks, or under the "Expected Output" section must be **left exactly as is**. Do not translate any code, comments, or output strings.
+
+5. **Maintain Formatting and Whitespace**:
+   - Ensure all headings, markdown formatting (e.g., `###`, `-`, `*`, `>`), and horizontal lines (`---`) are kept identical to the original.
+   - **All indentation and line breaks must match the original** to preserve readability and technical accuracy.
+
+6. **Preserve Numeric and Symbolic Formatting**: 
+   - Do not localize numbers, currency symbols, or decimal formats.
+   - Ensure any special symbols used in programming remain intact.
+
+7. **No Additional Text or Explanations**:
+   - Do not add introductions, footnotes, or comments not present in the original content.
+   - Your response should **only contain the translated text**, adhering strictly to these instructions.
+
+8. **Translate Contextual Content Clearly**:
+   - This content is part of a programming education platform. Translations must remain clear, concise, and instructional, using language appropriate for learners.
+   - Avoid over-complicating sentences or altering the meaning of educational instructions.
+
+9. **Double-Check Critical Formatting Rules**:
+   - Before submitting the translation, **verify that all headings, section names, and tutorial structures align perfectly with the original format**. Do not miss critical elements like the "Tutorial" heading, chapter names, or code formatting.
+   - **Formatting is as important as the translation itself.**
+   
+10. **Preserve all div elements**: Any content within `<div>` tags, especially with attributes like `data-encoded`, must remain unchanged. Do not alter, translate, or modify any encoded content or HTML attributes.
+
+11. **Do not translate code snippets or HTML tags**: Code snippets (enclosed in backticks `\`` or code blocks) and HTML tags must remain exactly as they are.
+    - Remember to translate comments inside code snippets (e.g. # This comments should be translated to {language})
+
+12. **Instructions specific to Tutorial Code section**: Remember to translate code comments that start with `#` to {language}.
+
+Failure to adhere to these instructions may compromise the quality of the translation and its suitability for the platform.
+"""
 
     messages = [
         {"role": "system", "content": system_prompt},
@@ -115,6 +147,8 @@ async def main():
 
     # Iterate over languages and files
     for language in languages:
+        if language["code"] != "fr":
+            continue
         language_code = language["code"]
         language_name = language["name"]
         output_dir = f"../../tutorials/learnpython.org/{language_code}"
