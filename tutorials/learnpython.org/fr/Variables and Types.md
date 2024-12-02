@@ -1,12 +1,12 @@
 Tutorial
 --------
 
-Python est complètement orienté objet et n'est pas "typé statiquement". Vous n'avez pas besoin de déclarer des variables avant de les utiliser ou de déclarer leur type. Chaque variable en Python est un objet.
+Python est complètement orienté objet et n'est pas "typé statiquement". Vous n'avez pas besoin de déclarer des variables avant de les utiliser, ni de déclarer leur type. Chaque variable en Python est un objet.
 
-Ce tutoriel couvrira quelques types de variables de base.
+Ce tutoriel abordera quelques types de variables de base.
 
-### Nombres
-Python prend en charge deux types de nombres - entiers (nombres entiers) et nombres à virgule flottante (décimaux). (Il prend également en charge les nombres complexes, qui ne seront pas expliqués dans ce tutoriel).
+### Numbers
+Python prend en charge deux types de nombres - les entiers (nombres entiers) et les nombres à virgule flottante (décimaux). (Il prend également en charge les nombres complexes, qui ne seront pas expliqués dans ce tutoriel).
 
 Pour définir un entier, utilisez la syntaxe suivante :
 
@@ -20,23 +20,23 @@ Pour définir un nombre à virgule flottante, vous pouvez utiliser l'une des not
     myfloat = float(7)
     print(myfloat)
 
-### Chaînes
+### Strings
 
-Les chaînes sont définies soit avec une apostrophe ou des guillemets.
+Les chaînes de caractères sont définies soit avec des guillemets simples soit avec des guillemets doubles.
 
     mystring = 'hello'
     print(mystring)
     mystring = "hello"
     print(mystring)
 
-La différence entre les deux est que l'utilisation de guillemets rend facile l'inclusion d'apostrophes (alors que cela terminerait la chaîne si vous utilisez des apostrophes simples).
+La différence entre les deux est que l'utilisation de guillemets doubles facilite l'inclusion d'apostrophes (car celles-ci termineraient la chaîne si l'on utilisait des guillemets simples)
 
     mystring = "Don't worry about apostrophes"
     print(mystring)
 
-Il existe des variations supplémentaires pour définir des chaînes qui facilitent l'inclusion d'éléments tels que les retours chariot, les barres obliques inverses, et les caractères Unicode. Ceux-ci sont au-delà de la portée de ce tutoriel, mais sont abordés dans la [documentation Python](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial").
+Il existe des variations supplémentaires pour définir des chaînes qui facilitent l'inclusion de retours chariot, de barres obliques inverses et de caractères Unicode. Celles-ci dépassent le cadre de ce tutoriel, mais sont couvertes dans la [documentation Python](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial").
 
-De simples opérateurs peuvent être exécutés sur les nombres et les chaînes :
+Des opérateurs simples peuvent être exécutés sur des nombres et des chaînes :
 
     one = 1
     two = 2
@@ -48,34 +48,34 @@ De simples opérateurs peuvent être exécutés sur les nombres et les chaînes 
     helloworld = hello + " " + world
     print(helloworld)
 
-Les affectations peuvent être faites sur plus d'une variable "simultanément" sur la même ligne de cette façon :
+Les assignations peuvent s'effectuer sur plus d'une variable "simultanément" sur la même ligne comme ceci
 
     a, b = 3, 4
     print(a, b)
 
-Combiner des opérateurs entre des nombres et des chaînes n'est pas pris en charge :
+Mélanger les opérateurs entre nombres et chaînes n'est pas supporté :
 
     # Cela ne fonctionnera pas !
     one = 1
     two = 2
     hello = "hello"
-
+    
     print(one + two + hello)
 
 
-Exercise
+Exercice
 --------
 
-The target of this exercise is to create a string, an integer, and a floating point number. The string should be named `mystring` and should contain the word "hello". The floating point number should be named `myfloat` and should contain the number 10.0, and the integer should be named `myint` and should contain the number 20.
+L'objectif de cet exercice est de créer une chaîne de caractères, un entier, et un nombre à virgule flottante. La chaîne de caractères doit être nommée `mystring` et doit contenir le mot "hello". Le nombre à virgule flottante doit être nommé `myfloat` et doit contenir le nombre 10.0, et l'entier doit être nommé `myint` et doit contenir le nombre 20.
 
 Tutorial Code
 -------------
-# modifiez ce code
+# change this code
 mystring = None
 myfloat = None
 myint = None
 
-# code de test
+# testing code
 if mystring == "hello":
     print("String: %s" % mystring)
 if isinstance(myfloat, float) and myfloat == 10.0:
@@ -97,12 +97,12 @@ success_msg("Great job!")
 Solution
 --------
 
-# modifiez ce code
+# change this code
 mystring = "hello"
 myfloat = 10.0
 myint = 20
 
-# code de test
+# testing code
 if mystring == "hello":
     print("String: %s" % mystring)
 if isinstance(myfloat, float) and myfloat == 10.0:

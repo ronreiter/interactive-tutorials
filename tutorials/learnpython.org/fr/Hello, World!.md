@@ -1,18 +1,11 @@
 Tutorial
 --------
 
-Python est un langage très simple, et possède une syntaxe très directe.
-Il encourage les programmeurs à coder sans code standard (préparé).
-La directive la plus simple en Python est la directive "print" -
-elle affiche simplement une ligne (et inclut aussi un saut de ligne, contrairement au C).
+Python est un langage très simple, et possède une syntaxe très directe. Il encourage les programmeurs à coder sans code standard (préparé). La directive la plus simple en Python est la directive "print" - elle affiche simplement une ligne (et inclut également une nouvelle ligne, contrairement au C).
 
-Il existe deux grandes versions de Python, Python 2 et Python 3. Python 2 et 3 sont assez différents.
-Ce tutoriel utilise Python 3, car il est plus sémantiquement correct et prend en charge les fonctionnalités plus récentes.
+Il existe deux grandes versions de Python, Python 2 et Python 3. Python 2 et 3 sont assez différents. Ce tutoriel utilise Python 3, car il est plus sémantiquement correct et prend en charge des fonctionnalités plus récentes.
 
-Par exemple, une différence entre Python 2 et 3 est l'instruction `print`.
-En Python 2, l'instruction "print" n'est pas une fonction, et donc elle est
-invoquée sans parenthèses. Cependant, en Python 3, c'est une fonction, et doit être invoquée
-avec des parenthèses.
+Par exemple, une différence entre Python 2 et 3 est l'instruction `print`. En Python 2, l'instruction "print" n'est pas une fonction, et doit donc être invoquée sans parenthèses. Cependant, en Python 3, c'est une fonction, et doit être invoquée avec des parenthèses.
 
 Pour imprimer une chaîne de caractères en Python 3, il suffit d'écrire :
 
@@ -20,18 +13,17 @@ Pour imprimer une chaîne de caractères en Python 3, il suffit d'écrire :
 
 ### Indentation
 
-Python utilise l'indentation pour les blocs, au lieu des accolades. Les tabulations et les espaces sont pris en charge, mais l'indentation standard
-requiert que le code Python standard utilise quatre espaces. Par exemple :
+Python utilise l'indentation pour les blocs, au lieu des accolades. Les tabulations et les espaces sont pris en charge, mais l'indentation standard requiert que le code Python standard utilise quatre espaces. Par exemple :
 
     x = 1
     if x == 1:
         # indenté de quatre espaces
         print("x is 1.")
 
-Exercise
+Exercice
 --------
 
-Use the "print" function to print the line "Hello, World!".
+Utilisez la fonction "print" pour afficher la ligne "Hello, World!".
 
 Tutorial Code
 -------------

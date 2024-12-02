@@ -1,113 +1,128 @@
 Tutorial
 -----------------
 
-Les objets sont une encapsulation de variables et de fonctions en une seule entité. Les objets obtiennent leurs variables et fonctions à partir des classes. Les classes sont essentiellement un modèle pour créer vos objets.
+Les objets sont une encapsulation de variables et fonctions en une seule entité. Les objets obtiennent leurs variables et fonctions à partir de classes. Les classes sont essentiellement un modèle pour créer vos objets.
 
 Une classe très basique ressemblerait à ceci :
 
-    class MyClass:
-        variable = "blah"
+```python
+class MyClass:
+    variable = "blah"
 
-        def function(self):
-            print("This is a message inside the class.")  # C'est un message à l'intérieur de la classe.
+    def function(self):
+        print("Ceci est un message à l'intérieur de la classe.")
+```
 
-Nous expliquerons pourquoi vous devez inclure ce "self" comme paramètre un peu plus tard. Tout d'abord, pour assigner la classe (modèle) ci-dessus à un objet, vous feriez ce qui suit :
+Nous expliquerons pourquoi vous devez inclure ce "self" comme paramètre un peu plus tard. Tout d'abord, pour affecter la classe (modèle) ci-dessus à un objet, vous feriez ce qui suit :
 
-    class MyClass:
-        variable = "blah"
+```python
+class MyClass:
+    variable = "blah"
 
-        def function(self):
-            print("This is a message inside the class.")  # C'est un message à l'intérieur de la classe.
+    def function(self):
+        print("Ceci est un message à l'intérieur de la classe.")
 
-    myobjectx = MyClass()
+myobjectx = MyClass()
+```
 
-Désormais, la variable "myobjectx" contient un objet de la classe "MyClass" qui contient la variable et la fonction définies dans la classe appelée "MyClass".
+La variable "myobjectx" contient maintenant un objet de la classe "MyClass" qui contient la variable et la fonction définies dans la classe appelée "MyClass".
 
-### Accéder aux Variables d'un Objet
+### Accès aux Variables de l'Objet
 
 Pour accéder à la variable à l'intérieur du nouvel objet créé "myobjectx", vous feriez ce qui suit :
 
-    class MyClass:
-        variable = "blah"
+```python
+class MyClass:
+    variable = "blah"
 
-        def function(self):
-            print("This is a message inside the class.")  # C'est un message à l'intérieur de la classe.
+    def function(self):
+        print("Ceci est un message à l'intérieur de la classe.")
 
-    myobjectx = MyClass()
+myobjectx = MyClass()
 
-    myobjectx.variable
+myobjectx.variable
+```
 
-Donc, par exemple, ce qui suit afficherait la chaîne "blah" :
+Par exemple, ce qui suit produirait la chaîne "blah" :
 
-    class MyClass:
-        variable = "blah"
+```python
+class MyClass:
+    variable = "blah"
 
-        def function(self):
-            print("This is a message inside the class.")  # C'est un message à l'intérieur de la classe.
+    def function(self):
+        print("Ceci est un message à l'intérieur de la classe.")
 
-    myobjectx = MyClass()
+myobjectx = MyClass()
 
-    print(myobjectx.variable)
+print(myobjectx.variable)
+```
 
-Vous pouvez créer plusieurs objets différents qui sont de la même classe (ont les mêmes variables et fonctions définies). Cependant, chaque objet contient des copies indépendantes des variables définies dans la classe. Par exemple, si nous devions définir un autre objet avec la classe "MyClass" et ensuite changer la chaîne dans la variable ci-dessus :
+Vous pouvez créer plusieurs objets différents qui sont de la même classe (ayant les mêmes variables et fonctions définies). Cependant, chaque objet contient des copies indépendantes des variables définies dans la classe. Par exemple, si nous devions définir un autre objet avec la classe "MyClass" et ensuite changer la chaîne dans la variable ci-dessus :
 
-    class MyClass:
-        variable = "blah"
+```python
+class MyClass:
+    variable = "blah"
 
-        def function(self):
-            print("This is a message inside the class.")  # C'est un message à l'intérieur de la classe.
+    def function(self):
+        print("Ceci est un message à l'intérieur de la classe.")
 
-    myobjectx = MyClass()
-    myobjecty = MyClass()
+myobjectx = MyClass()
+myobjecty = MyClass()
 
-    myobjecty.variable = "yackity"
+myobjecty.variable = "yackity"
 
-    # Ensuite, imprimez les deux valeurs
-    print(myobjectx.variable)
-    print(myobjecty.variable)
+# Puis imprimez les deux valeurs
+print(myobjectx.variable)
+print(myobjecty.variable)
+```
 
+### Accès aux Fonctions de l'Objet
 
-### Accéder aux Fonctions d'un Objet
+Pour accéder à une fonction dans un objet, vous utilisez une notation similaire à l'accès à une variable :
 
-Pour accéder à une fonction à l'intérieur d'un objet, vous utilisez une notation similaire à celle pour accéder à une variable :
+```python
+class MyClass:
+    variable = "blah"
 
-    class MyClass:
-        variable = "blah"
+    def function(self):
+        print("Ceci est un message à l'intérieur de la classe.")
 
-        def function(self):
-            print("This is a message inside the class.")  # C'est un message à l'intérieur de la classe.
+myobjectx = MyClass()
 
-    myobjectx = MyClass()
+myobjectx.function()
+```
 
-    myobjectx.function()
-
-Ce qui précède afficherait le message, "This is a message inside the class."
+Ce qui précède imprimerait le message, "Ceci est un message à l'intérieur de la classe."
 
 ### __init__()
 
-La fonction `__init__()`, est une fonction spéciale qui est appelée lors de l'initialisation de la classe. Elle est utilisée pour assigner des valeurs dans une classe.
+La fonction `__init__()`, est une fonction spéciale qui est appelée lorsque la classe est initiée.
+Elle est utilisée pour assigner des valeurs dans une classe.
 
-    class NumberHolder:
+```python
+class NumberHolder:
+   
+   def __init__(self, number):
+       self.number = number
        
-       def __init__(self, number):
-           self.number = number
-           
-       def returnNumber(self):
-           return self.number
+   def returnNumber(self):
+       return self.number
 
-    var = NumberHolder(7)
-    print(var.returnNumber()) #Affiche '7'
-    
-Exercise
+var = NumberHolder(7)
+print(var.returnNumber()) # Imprime '7'
+```
+
+Exercice
 --------
 
-We have a class defined for vehicles. Create two new vehicles called car1 and car2.
-Set car1 to be a red convertible worth $60,000.00 with a name of Fer,
-and car2 to be a blue van named Jump worth $10,000.00.
+Nous avons une classe définie pour les véhicules. Créez deux nouveaux véhicules appelés car1 et car2.
+Définissez car1 comme étant un cabriolet rouge d'une valeur de $60,000.00 avec un nom de Fer,
+et car2 comme étant une camionnette bleue nommée Jump d'une valeur de $10,000.00.
 
 Tutorial Code
 -------------
 
+```python
 # define the Vehicle class
 class Vehicle:
     name = ""
@@ -115,24 +130,28 @@ class Vehicle:
     color = ""
     value = 100.00
     def description(self):
-        desc_str = "%s est un %s %s d'une valeur de $%.2f." % (self.name, self.color, self.kind, self.value)
+        desc_str = "%s est un(e) %s %s d'une valeur de $%.2f." % (self.name, self.color, self.kind, self.value)
         return desc_str
-# your code goes here
+# votre code ici
 
-# test code
+# code de test
 print(car1.description())
 print(car2.description())
+```
 
 Expected Output
 ---------------
 
+```python
 #test_output_contains('Fer is a red convertible worth $60000.00.')
 #test_output_contains('Jump is a blue van worth $10000.00.')
 success_msg("Great job!")
+```
 
 Solution
 --------
 
+```python
 # define the Vehicle class
 class Vehicle:
     name = ""
@@ -140,10 +159,10 @@ class Vehicle:
     color = ""
     value = 100.00
     def description(self):
-        desc_str = "%s est un %s %s d'une valeur de $%.2f." % (self.name, self.color, self.kind, self.value)
+        desc_str = "%s est un(e) %s %s d'une valeur de $%.2f." % (self.name, self.color, self.kind, self.value)
         return desc_str
 
-# your code goes here
+# votre code ici
 car1 = Vehicle()
 car1.name = "Fer"
 car1.color = "red"
@@ -156,6 +175,7 @@ car2.color = "blue"
 car2.kind = "van"
 car2.value = 10000.00
 
-# test code
+# code de test
 print(car1.description())
 print(car2.description())
+```

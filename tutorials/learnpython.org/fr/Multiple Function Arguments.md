@@ -1,13 +1,13 @@
 Tutorial
 --------
 
-Chaque fonction en Python reçoit un nombre prédéterminé d'arguments si elle est déclarée normalement, comme ceci :
+Chaque fonction en Python reçoit un nombre prédéfini d'arguments, si déclaré normalement, comme ceci :
 
     def myfunction(first, second, third):
         # faire quelque chose avec les 3 variables
         ...
 
-Il est possible de déclarer des fonctions qui reçoivent un nombre variable d'arguments, en utilisant la syntaxe suivante :
+Il est possible de déclarer des fonctions qui reçoivent un nombre variable d'arguments, en utilisant la syntaxe suivante :
 
     def foo(first, second, third, *therest):
         print("First: %s" % first)
@@ -15,45 +15,45 @@ Il est possible de déclarer des fonctions qui reçoivent un nombre variable d'a
         print("Third: %s" % third)
         print("And all the rest... %s" % list(therest))
 
-La variable "therest" est une liste de variables, qui reçoit tous les arguments donnés à la fonction "foo" après les 3 premiers arguments. Ainsi, appeler `foo(1, 2, 3, 4, 5)` affichera :
+La variable "therest" est une liste de variables qui reçoit tous les arguments donnés à la fonction "foo" après les trois premiers arguments. Ainsi, appeler `foo(1, 2, 3, 4, 5)` affichera :
 
     def foo(first, second, third, *therest):
-        print("First: %s" % (first))
-        print("Second: %s" % (second))
-        print("Third: %s" % (third))
-        print("And all the rest... %s" % (list(therest)))
+        print("First: %s" %(first))
+        print("Second: %s" %(second))
+        print("Third: %s" %(third))
+        print("And all the rest... %s" %(list(therest)))
     
     foo(1, 2, 3, 4, 5)
 
-Il est également possible d'envoyer des arguments de fonctions par mot-clé, de sorte que l'ordre des arguments n'importe pas, en utilisant la syntaxe suivante. Le code suivant donne le résultat suivant : 
-```La somme est : 6
-    Résultat : 1```
+Il est également possible d'envoyer des arguments de fonction par mot-clé, de sorte que l'ordre des arguments n'a pas d'importance, en utilisant la syntaxe suivante. Le code suivant produit la sortie suivante : 
+```The sum is: 6
+    Result: 1```
 
     def bar(first, second, third, **options):
         if options.get("action") == "sum":
-            print("The sum is: %d" % (first + second + third))
+            print("The sum is: %d" %(first + second + third))
     
         if options.get("number") == "first":
             return first
     
     result = bar(1, 2, 3, action = "sum", number = "first")
-    print("Result: %d" % (result))
+    print("Result: %d" %(result))
 
 
 
-La fonction "bar" reçoit 3 arguments. Si un argument supplémentaire "action" est reçu, et qu'il demande la somme des nombres, alors la somme est affichée. Sinon, la fonction sait également qu'elle doit retourner le premier argument, si la valeur du paramètre "number", passée dans la fonction, est égale à "first".
+La fonction "bar" reçoit 3 arguments. Si un argument supplémentaire "action" est reçu et qu'il demande de sommer les nombres, alors la somme est affichée. Sinon, la fonction sait également qu'elle doit renvoyer le premier argument, si la valeur du paramètre "number", passé à la fonction, est égale à "first".
 
-Exercise
+Exercice
 --------
 
-Fill in the `foo` and `bar` functions so they can receive a variable amount of arguments (3 or more)
-The `foo` function must return the amount of extra arguments received.
-The `bar` must return `True` if the argument with the keyword `magicnumber` is worth 7, and `False` otherwise.
+Remplissez les fonctions `foo` et `bar` pour qu'elles puissent recevoir un nombre variable d'arguments (3 ou plus). 
+La fonction `foo` doit retourner le nombre d'arguments supplémentaires reçus. 
+La fonction `bar` doit retourner `True` si l'argument avec le mot-clé `magicnumber` vaut 7, et `False` sinon.
 
 Tutorial Code
 -------------
 
-# éditer le prototype et l'implémentation des fonctions
+# modifiez le prototype et l'implémentation des fonctions
 def foo(a, b, c):
     pass
 
@@ -82,7 +82,7 @@ success_msg("Great work!")
 
 Solution
 --------
-# éditer le prototype et l'implémentation des fonctions
+# modifiez le prototype et l'implémentation des fonctions
 def foo(a, b, c, *args):
     return len(args)
 

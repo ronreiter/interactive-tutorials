@@ -1,25 +1,25 @@
 Tutorial
 --------
 
-Les décorateurs vous permettent de faire des modifications simples aux objets appelables tels que [fonctions](http://www.learnpython.org/en/Functions ""), [méthodes, ou classes](http://www.learnpython.org/en/Classes%20and%20Objects ""). Nous allons nous intéresser aux fonctions pour ce tutoriel. La syntaxe
+Les décorateurs vous permettent de faire des modifications simples aux objets appelables comme les [fonctions](http://www.learnpython.org/en/Functions ""), [méthodes, ou classes](http://www.learnpython.org/en/Classes%20and%20Objects ""). Nous allons nous concentrer sur les fonctions pour ce tutoriel. La syntaxe
 
     @decorator
     def functions(arg):
         return "value"
 
-Est équivalente à :
+est équivalente à :
 
     def function(arg):
         return "value"
-    function = decorator(function) # ceci passe la fonction au décorateur, et la réassigne à la fonction
+    function = decorator(function) # cela passe la fonction au décorateur, et la réassigne aux fonctions
 
-Comme vous l'avez peut-être vu, un décorateur est juste une autre fonction qui prend une fonction et en retourne une. Par exemple, vous pourriez faire ceci :
+Comme vous avez pu le voir, un décorateur est juste une autre fonction qui prend une fonction et en retourne une. Par exemple, vous pourriez faire ceci :
 
     def repeater(old_function):
-        def new_function(*args, **kwds): # Voir learnpython.org/en/Multiple%20Function%20Arguments pour savoir comment *args et **kwds fonctionnent
+        def new_function(*args, **kwds): # Voir learnpython.org/en/Multiple%20Function%20Arguments pour comprendre comment *args et **kwds fonctionnent
             old_function(*args, **kwds) # nous exécutons l'ancienne fonction
-            old_function(*args, **kwds) # nous le faisons deux fois
-        return new_function # nous devons renvoyer la nouvelle fonction, sinon elle ne serait pas réassignée à la valeur
+            old_function(*args, **kwds) # nous la faisons deux fois
+        return new_function # nous devons retourner la new_function, sinon elle ne serait pas réassignée à la valeur
 
 Cela ferait qu'une fonction se répète deux fois.
 
@@ -31,7 +31,7 @@ Cela ferait qu'une fonction se répète deux fois.
     6
     6
 
-Vous pouvez aussi faire en sorte qu'elle change la sortie
+Vous pouvez aussi modifier la sortie
 
     def double_out(old_function):
         def new_function(*args, **kwds):
@@ -49,33 +49,33 @@ et faire des vérifications.
 
     def check(old_function):
         def new_function(arg):
-            if arg < 0: raise (ValueError, "Negative Argument") # Cela provoque une erreur, ce qui est mieux qu'elle fasse la mauvaise chose
+            if arg < 0: raise (ValueError, "Negative Argument") # Cela cause une erreur, ce qui est mieux que de faire la mauvaise chose
             old_function(arg)
         return new_function
 
-Disons que vous voulez multiplier la sortie par un montant variable. Vous pourriez définir le décorateur et l'utiliser comme suit :
+Disons que vous voulez multiplier la sortie par une quantité variable. Vous pourriez définir le décorateur et l'utiliser comme suit : 
 
     def multiply(multiplier):
         def multiply_generator(old_function):
             def new_function(*args, **kwds):
                 return multiplier * old_function(*args, **kwds)
             return new_function
-        return multiply_generator # il renvoie le nouveau générateur
+        return multiply_generator # il retourne le nouveau générateur
     
-    # Utilisation
+    # Usage
     @multiply(3) # multiply n'est pas un générateur, mais multiply(3) l'est
     def return_num(num):
         return num
         
     # Maintenant return_num est décoré et réassigné à lui-même
-    return_num(5) # devrait retourner 15
+    return_num(5) # doit retourner 15
 
- Vous pouvez faire tout ce que vous voulez avec l'ancienne fonction, même l'ignorer complètement ! Les décorateurs avancés peuvent aussi manipuler la chaîne de documentation et le nombre d'arguments.
-Pour des décorateurs sophistiqués, rendez-vous sur <http://wiki.python.org/moin/PythonDecoratorLibrary>.
+Vous pouvez faire tout ce que vous voulez avec l'ancienne fonction, même l'ignorer complètement ! Les décorateurs avancés peuvent également manipuler la chaîne de documentation et le nombre d'arguments.
+Pour des décorateurs élégants, allez sur <http://wiki.python.org/moin/PythonDecoratorLibrary>.
 
-Exercise
+Exercice
 --------
-Make a decorator factory which returns a decorator that decorates functions with one argument. The factory should take one argument, a type, and then returns a decorator that makes function should check if the input is the correct type. If it is wrong, it should print("Bad Type") (In reality, it should raise an error, but error raising isn't in this tutorial). Look at the tutorial code and expected output to see what it is if you are confused (I know I would be.) Using isinstance(object, type_of_object) or type(object) might help.
+Créez une fabrique de décorateurs qui retourne un décorateur qui décore des fonctions avec un argument. La fabrique doit prendre un argument, un type, puis retourner un décorateur qui s'assure que la fonction vérifie si l'entrée est du bon type. Si ce n'est pas le cas, elle doit imprimer("Bad Type") (En réalité, elle devrait lever une erreur, mais la levée d'erreurs n'est pas dans ce tutoriel). Regarder le code du tutoriel et la sortie attendue peut vous aider si vous êtes confus (je sais que je le serais). Utiliser isinstance(object, type_of_object) ou type(object) pourrait aider.
 
 Tutorial Code
 -------------

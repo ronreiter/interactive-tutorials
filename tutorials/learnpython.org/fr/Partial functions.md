@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Vous pouvez créer des fonctions partielles en python en utilisant la fonction `partial` de la bibliothèque `functools`.
+Vous pouvez créer des fonctions partielles en python en utilisant la fonction partielle de la bibliothèque functools.
 
 Les fonctions partielles permettent de dériver une fonction avec x paramètres vers une fonction avec moins de paramètres et des valeurs fixes définies pour la fonction plus limitée.
 
@@ -20,19 +20,19 @@ Ce code retournera 8.
     dbl = partial(multiply, 2)
     print(dbl(4))
 
-Une note importante : les valeurs par défaut commenceront à remplacer les variables à partir de la gauche. Le 2 remplacera x. y vaudra 4 quand `dbl(4)` est appelé. Cela ne fait pas de différence dans cet exemple, mais cela en fait dans l'exemple ci-dessous.
+Une remarque importante : les valeurs par défaut commenceront à remplacer les variables depuis la gauche. Le 2 remplacera x. y sera égal à 4 lorsque dbl(4) est appelé. Cela ne fait aucune différence dans cet exemple, mais cela en fait dans l'exemple ci-dessous.
 
-Exercise
+Exercice
 --------
-Edit the function provided by calling partial() and replacing the first three variables in func(). Then print with the new partial function using only one input variable so that the output equals 60.
+Modifiez la fonction fournie en appelant partial() et en remplaçant les trois premières variables de func(). Puis imprimez avec la nouvelle fonction partielle en utilisant une seule variable d'entrée afin que la sortie soit égale à 60.
 
 Tutorial Code
 -------------
-# Suivant est l'exercice, fonction fournie :
+#Voici l'exercice, fonction fournie :
 from functools import partial
 def func(u, v, w, x):
     return u*4 + v*3 + w*2 + x
-# Entrez votre code ici pour créer et imprimer avec votre fonction partielle
+#Entrez votre code ici pour créer et imprimer avec votre fonction partielle
 
 Expected Output
 ---------------

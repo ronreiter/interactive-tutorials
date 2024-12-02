@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-Les compréhensions de listes sont un outil très puissant, qui permet de créer une nouvelle liste à partir d'une autre liste, en une seule ligne lisible.
+Les List Comprehensions sont un outil très puissant qui crée une nouvelle liste basée sur une autre liste, en une seule ligne lisible.
 
-Par exemple, disons que nous devons créer une liste d'entiers qui spécifie la longueur de chaque mot dans une certaine phrase, mais uniquement si le mot n'est pas le mot "the".
+Par exemple, disons que nous devons créer une liste d'entiers qui spécifient la longueur de chaque mot dans une certaine phrase, mais seulement si le mot n'est pas le mot "the".
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
@@ -14,7 +14,7 @@ Par exemple, disons que nous devons créer une liste d'entiers qui spécifie la 
     print(words)
     print(word_lengths)
 
-En utilisant une compréhension de liste, nous pourrions simplifier ce processus à cette notation :
+En utilisant une list comprehension, nous pourrions simplifier ce processus à cette notation :
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
@@ -22,10 +22,10 @@ En utilisant une compréhension de liste, nous pourrions simplifier ce processus
     print(words)
     print(word_lengths)
 
-Exercise
+Exercice
 --------
 
-Using a list comprehension, create a new list called "newlist" out of the list "numbers", which contains only the positive numbers from the list, as integers.
+Utilisez une list comprehension pour créer une nouvelle liste appelée "newlist" à partir de la liste "numbers", qui contient uniquement les nombres positifs de la liste, en tant qu'entiers.
 
 Tutorial Code
 -------------

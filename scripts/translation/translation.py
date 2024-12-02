@@ -66,7 +66,8 @@ async def translate_markdown_file(base_file_path: str, output_dir: str, language
 1. **Preserve Tutorial Heading**: The "Tutorial" heading must always remain at the very beginning of every file, followed by a horizontal line (`---`). **This heading cannot be omitted or translated**.
 
 2. **Keep Specific Section Names in English**:
-   - Section titles such as "Exercise," "Tutorial Code," "Expected Output," and "Solution" must **remain in English exactly as they appear** in the original file. Do not translate or alter these.
+   - Section titles such as "Tutorial Code," "Expected Output," and "Solution" must **remain in English exactly as they appear** in the original file. Do not translate or alter these.
+   - Exception: The "Exercise" header must be translated to {language}
 
 3. **Instructions specific to Welcome.md file**: 
    - In the `Welcome.md` file, **chapter names must always stay in English in Welcome.md file, all other text must be translated to {language} (including welcome message text)** for consistency with URLs and indexing.
