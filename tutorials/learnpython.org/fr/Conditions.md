@@ -1,14 +1,14 @@
 Tutorial
 --------
 
-Python utilise la logique booléenne pour évaluer les conditions. Les valeurs booléennes True et False sont renvoyées lorsqu'une expression est comparée ou évaluée. Par exemple :
+Python utilise la logique booléenne pour évaluer des conditions. Les valeurs booléennes True et False sont retournées lorsqu'une expression est comparée ou évaluée. Par exemple :
 
     x = 2
     print(x == 2) # affiche True
     print(x == 3) # affiche False
     print(x < 3) # affiche True
 
-Notez que l'affectation de variables se fait en utilisant un seul opérateur égal "=", tandis que la comparaison entre deux variables se fait en utilisant l'opérateur égal double "==". L'opérateur "différent de" est marqué par "!=".
+Remarquez que l'affectation de variables se fait avec un seul opérateur égal "=" alors que la comparaison entre deux variables se fait avec le double opérateur égal "==". L'opérateur "différent de" est marqué par "!=".
 
 ### Opérateurs booléens
 
@@ -17,10 +17,10 @@ Les opérateurs booléens "and" et "or" permettent de construire des expressions
     name = "John"
     age = 23
     if name == "John" and age == 23:
-        print("Your name is John, and you are also 23 years old.")
+        print("Votre nom est John et vous avez aussi 23 ans.")
 
     if name == "John" or name == "Rick":
-        print("Your name is either John or Rick.")
+        print("Votre nom est soit John soit Rick.")
 
 ### L'opérateur "in"
 
@@ -28,11 +28,11 @@ L'opérateur "in" peut être utilisé pour vérifier si un objet spécifié exis
 
     name = "John"
     if name in ["John", "Rick"]:
-        print("Your name is either John or Rick.")
+        print("Votre nom est soit John soit Rick.")
 
-Python utilise l'indentation pour définir des blocs de code, au lieu des accolades. L'indentation standard en Python est de 4 espaces, bien que les tabulations et toute autre taille d'espace fonctionnent, tant que c'est cohérent. Notez que les blocs de code ne nécessitent aucune terminaison.
+Python utilise l'indentation pour définir des blocs de code, au lieu des accolades. L'indentation standard en Python est de 4 espaces, bien que les tabulations et toute autre taille d'espace fonctionnent, tant qu'elle est cohérente. Notez que les blocs de code n'ont pas besoin de terminaison.
 
-Voici un exemple d'utilisation de l'instruction "if" de Python avec des blocs de code :
+Voici un exemple d'utilisation de l'instruction "if" de Python en utilisant des blocs de code :
 
     statement = False
     another_statement = True
@@ -43,19 +43,19 @@ Voici un exemple d'utilisation de l'instruction "if" de Python avec des blocs de
         # faire autre chose
         pass
     else:
-        # faire encore autre chose
+        # faire une autre chose
         pass
 
 Par exemple :
 
     x = 2
     if x == 2:
-        print("x equals two!")
+        print("x égale deux !")
     else:
-        print("x does not equal to two.")
+        print("x n'est pas égal à deux.")
 
-Une instruction est évaluée comme vraie si l'un des éléments suivants est correct :
-1. La variable booléenne "True" est donnée, ou calculée en utilisant une expression, telle qu'une comparaison arithmétique.
+Une déclaration est évaluée comme vraie si l'une des conditions suivantes est correcte :
+1. La variable booléenne "True" est donnée, ou calculée à l'aide d'une expression, comme une comparaison arithmétique.
 2. Un objet qui n'est pas considéré comme "vide" est passé.
 
 Voici quelques exemples d'objets considérés comme vides :
@@ -66,7 +66,7 @@ Voici quelques exemples d'objets considérés comme vides :
 
 ### L'opérateur 'is'
 
-Contrairement à l'opérateur égal double "==", l'opérateur "is" ne compare pas les valeurs des variables, mais les instances elles-mêmes. Par exemple :
+Contrairement à l'opérateur double égal "==", l'opérateur "is" ne correspond pas aux valeurs des variables, mais aux instances elles-mêmes. Par exemple :
 
     x = [1,2,3]
     y = [1,2,3]
@@ -80,10 +80,10 @@ L'utilisation de "not" avant une expression booléenne l'inverse :
     print(not False) # affiche True
     print((not False) == (False)) # affiche False
 
-Exercise
+Exercice
 --------
 
-Change the variables in the first section, so that each if statement resolves as True.
+Modifiez les variables dans la première section, afin que chaque instruction if soit évaluée comme True.
 
 Tutorial Code
 -------------

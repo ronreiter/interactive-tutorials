@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-L'introspection de code est la capacité d'examiner des classes, fonctions et mots-clés pour savoir ce qu'ils sont, ce qu'ils font et ce qu'ils savent.
+L'introspection du code est la capacité d'examiner les classes, fonctions et mots-clés pour savoir ce qu'ils sont, ce qu'ils font et ce qu'ils savent.
 
-Python fournit plusieurs fonctions et utilitaires pour l'introspection de code.
+Python fournit plusieurs fonctions et utilitaires pour l'introspection du code.
 
     help()
     dir() 
@@ -18,7 +18,7 @@ Python fournit plusieurs fonctions et utilitaires pour l'introspection de code.
     __name__ 
     
 
-Souvent, la plus importante est la fonction help, car vous pouvez l'utiliser pour trouver ce que font les autres fonctions.
+Souvent, la plus importante est la fonction help, car vous pouvez l'utiliser pour découvrir ce que font les autres fonctions.
 
 Exercice
 --------
@@ -44,7 +44,7 @@ class Vehicle:
         desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
         return desc_str
 
-# Imprimer une liste de tous les attributs de la classe Vehicle.
+# Imprimez une liste de tous les attributs de la classe Vehicle.
 # Votre code va ici
 
 
@@ -68,5 +68,5 @@ class Vehicle:
         desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
         return desc_str
 
-# Imprimer une liste de tous les attributs de la classe Vehicle.
+# Imprimez une liste de tous les attributs de la classe Vehicle.
 print(dir(Vehicle))

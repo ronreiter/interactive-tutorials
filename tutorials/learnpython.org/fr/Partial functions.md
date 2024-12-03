@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Vous pouvez créer des fonctions partielles en python en utilisant la fonction partielle de la bibliothèque functools.
+Vous pouvez créer des fonctions partielles en Python en utilisant la fonction `partial` de la bibliothèque `functools`.
 
 Les fonctions partielles permettent de dériver une fonction avec x paramètres vers une fonction avec moins de paramètres et des valeurs fixes définies pour la fonction plus limitée.
 
@@ -9,7 +9,7 @@ Importation requise :
 
     from functools import partial
 
-Ce code retournera 8.
+Ce code renverra 8.
 
     from functools import partial
     
@@ -20,11 +20,11 @@ Ce code retournera 8.
     dbl = partial(multiply, 2)
     print(dbl(4))
 
-Une remarque importante : les valeurs par défaut commenceront à remplacer les variables depuis la gauche. Le 2 remplacera x. y sera égal à 4 lorsque dbl(4) est appelé. Cela ne fait aucune différence dans cet exemple, mais cela en fait dans l'exemple ci-dessous.
+Une note importante : les valeurs par défaut commenceront à remplacer les variables en partant de la gauche. Le 2 remplacera x. y sera égal à 4 lorsque `dbl(4)` est appelé. Cela ne fait pas de différence dans cet exemple, mais c'est le cas dans l'exemple ci-dessous.
 
 Exercice
 --------
-Modifiez la fonction fournie en appelant partial() et en remplaçant les trois premières variables de func(). Puis imprimez avec la nouvelle fonction partielle en utilisant une seule variable d'entrée afin que la sortie soit égale à 60.
+Modifiez la fonction fournie en appelant `partial()` et en remplaçant les trois premières variables dans `func()`. Ensuite, imprimez avec la nouvelle fonction partielle en utilisant une seule variable d'entrée pour que la sortie soit égale à 60.
 
 Tutorial Code
 -------------

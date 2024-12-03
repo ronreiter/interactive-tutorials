@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-### Qu'est-ce que les Fonctions ?
+### Qu'est-ce que les fonctions ?
 
-Les fonctions sont un moyen pratique de diviser votre code en blocs utiles, nous permettant de structurer notre code, de le rendre plus lisible, de le réutiliser et de gagner du temps. De plus, les fonctions sont une méthode clé pour définir des interfaces, permettant aux programmeurs de partager leur code.
+Les fonctions sont un moyen pratique de diviser votre code en blocs utiles, ce qui nous permet d'organiser notre code, de le rendre plus lisible, de le réutiliser et de gagner du temps. De plus, les fonctions sont un moyen clé pour définir des interfaces afin que les programmeurs puissent partager leur code.
 
 ### Comment écrit-on des fonctions en Python ?
 
@@ -16,11 +16,11 @@ Un bloc est une zone de code écrite dans le format suivant :
         2nd block line
         ...
 
-Où une ligne de bloc est plus de code Python (même un autre bloc), et l'en-tête du bloc est du format suivant :
+Où une ligne de bloc est davantage de code Python (voire un autre bloc), et l'en-tête de bloc est du format suivant :
 block_keyword block_name(argument1,argument2, ...)
-Des mots-clés de blocs que vous connaissez déjà sont "if", "for" et "while".
+Les mots-clés de blocs que vous connaissez déjà sont "if", "for", et "while".
 
-Les fonctions en Python sont définies en utilisant le mot-clé "def", suivi du nom de la fonction comme nom du bloc.
+Les fonctions en Python sont définies à l'aide du mot-clé de bloc "def", suivi du nom de la fonction en tant que nom du bloc.
 Par exemple :
 
     def my_function():
@@ -34,7 +34,7 @@ Par exemple :
         print("Hello, %s , From My Function!, I wish you %s"%(username, greeting))
 
 
-Les fonctions peuvent renvoyer une valeur à l'appelant, en utilisant le mot-clé "return".
+Les fonctions peuvent renvoyer une valeur à l'appelant, en utilisant le mot-clé 'return'.
 Par exemple :
 
     def sum_two_numbers(a, b):
@@ -68,13 +68,13 @@ Par exemple, appelons les fonctions écrites ci-dessus (dans l'exemple précéde
 Exercice
 --------
 
-Dans cet exercice, vous utiliserez une fonction existante tout en ajoutant la vôtre pour créer un programme entièrement fonctionnel.
+Dans cet exercice, vous allez utiliser une fonction existante et ajouter la vôtre pour créer un programme pleinement fonctionnel.
 
 1. Ajoutez une fonction nommée `list_benefits()` qui renvoie la liste suivante de chaînes : "More organized code", "More readable code", "Easier code reuse", "Allowing programmers to share and connect code together"
 
 2. Ajoutez une fonction nommée `build_sentence(info)` qui reçoit un seul argument contenant une chaîne et renvoie une phrase commençant par la chaîne donnée et se terminant par la chaîne " is a benefit of functions!"
 
-3. Exécutez et observez toutes les fonctions fonctionner ensemble !
+3. Exécutez et voyez toutes les fonctions fonctionner ensemble !
 
 Tutorial Code
 -------------

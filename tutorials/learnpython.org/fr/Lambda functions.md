@@ -1,5 +1,6 @@
 Tutorial
 --------
+
 Normalement, nous définissons une fonction en utilisant le mot-clé def quelque part dans le code et nous l'appelons chaque fois que nous avons besoin de l'utiliser.
 
     def sum(a,b):
@@ -12,11 +13,11 @@ Normalement, nous définissons une fonction en utilisant le mot-clé def quelque
 
 Maintenant, au lieu de définir la fonction quelque part et de l'appeler, nous pouvons utiliser les fonctions lambda de Python, qui sont des fonctions en ligne définies au même endroit où nous les utilisons. Ainsi, nous n'avons pas besoin de déclarer une fonction quelque part et de revisiter le code juste pour une utilisation unique.
 
-Elles n'ont pas besoin d'avoir un nom, c'est pourquoi elles sont aussi appelées fonctions anonymes. Nous définissons une fonction lambda en utilisant le mot-clé lambda.
+Elles n'ont pas besoin d'avoir un nom, c'est pourquoi elles sont également appelées fonctions anonymes. Nous définissons une fonction lambda en utilisant le mot-clé lambda.
 
     your_function_name = lambda inputs : output
 
-Donc, l'exemple de somme ci-dessus utilisant la fonction lambda serait,
+Ainsi, l'exemple de somme ci-dessus utilisant une fonction lambda serait,
 
     a = 1
     b = 2
@@ -24,7 +25,7 @@ Donc, l'exemple de somme ci-dessus utilisant la fonction lambda serait,
     c = sum(a,b)
     print(c)
 
-Ici, nous attribuons la fonction lambda à la variable **sum**, et en donnant les arguments c'est-à-dire a et b, elle fonctionne comme une fonction normale.
+Ici, nous affectons la fonction lambda à la variable **sum**, et en fournissant les arguments c.-à-d. a et b, elle fonctionne comme une fonction normale.
 
 Exercice
 --------
