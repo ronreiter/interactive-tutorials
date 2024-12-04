@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Les listes sont très similaires aux tableaux. Elles peuvent contenir n'importe quel type de variable, et elles peuvent contenir autant de variables que vous le souhaitez. Les listes peuvent également être parcourues de manière très simple. Voici un exemple de comment construire une liste.
+Les listes sont très similaires aux tableaux. Elles peuvent contenir n'importe quel type de variable, et elles peuvent contenir autant de variables que vous le souhaitez. Les listes peuvent également être parcourues de manière très simple. Voici un exemple de création d'une liste.
 
     mylist = []
     mylist.append(1)
@@ -20,12 +20,12 @@ Accéder à un index qui n'existe pas génère une exception (une erreur).
     mylist = [1,2,3]
     print(mylist[10])
 
-Exercice
+Exercise
 --------
 
-Dans cet exercice, vous devrez ajouter des nombres et des chaînes aux listes correctes en utilisant la méthode de liste "append". Vous devez ajouter les nombres 1, 2 et 3 à la liste "numbers", et les mots 'hello' et 'world' à la variable strings.
+Dans cet exercice, vous devrez ajouter des nombres et des chaînes aux listes appropriées en utilisant la méthode "append" des listes. Vous devez ajouter les nombres 1, 2 et 3 à la liste "numbers", et les mots 'hello' et 'world' à la variable strings.
 
-Vous devrez également remplir la variable second_name avec le deuxième nom dans la liste names en utilisant l'opérateur de crochets `[]`. Notez que l'index est basé sur zéro, donc si vous souhaitez accéder au deuxième élément de la liste, son index sera 1.
+Vous devrez également remplir la variable second_name avec le deuxième nom de la liste names, en utilisant l'opérateur crochets `[]`. Notez que l'index est basé sur zéro, donc si vous souhaitez accéder au deuxième élément de la liste, son index sera 1.
 
 Tutorial Code
 -------------
@@ -33,11 +33,11 @@ numbers = []
 strings = []
 names = ["John", "Eric", "Jessica"]
 
-# écrivez votre code ici
+# write your code here
 second_name = None
 
 
-# ce code doit afficher les tableaux remplis et le deuxième nom dans la liste des noms (Eric).
+# this code should write out the filled arrays and the second name in the names list (Eric).
 print(numbers)
 print(strings)
 print("The second name on the names list is %s" % second_name)
@@ -57,7 +57,7 @@ numbers = []
 strings = []
 names = ["John", "Eric", "Jessica"]
 
-# écrivez votre code ici
+# write your code here
 numbers.append(1)
 numbers.append(2)
 numbers.append(3)
@@ -67,7 +67,7 @@ strings.append("world")
 
 second_name = names[1]
 
-# ce code doit afficher les tableaux remplis et le deuxième nom dans la liste des noms (Eric).
+# this code should write out the filled arrays and the second name in the names list (Eric).
 print(numbers)
 print(strings)
 print("The second name on the names list is %s" % second_name)

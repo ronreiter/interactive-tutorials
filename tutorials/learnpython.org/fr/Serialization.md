@@ -3,26 +3,26 @@ Tutorial
 
 Python fournit des bibliothèques JSON intégrées pour encoder et décoder JSON.
 
-En Python 2.5, le module simplejson est utilisé, tandis qu'en Python 2.7, le module json est utilisé. Comme cet interpréteur utilise Python 2.7, nous utiliserons json.
+En Python 2.5, le module simplejson est utilisé, tandis qu'en Python 2.7, le module json est utilisé. Puisque cet interpréteur utilise Python 2.7, nous utiliserons json.
 
 Pour utiliser le module json, il doit d'abord être importé :
 
     import json
 
-Il existe deux formats de base pour les données JSON. Soit sous forme de chaîne de caractères, soit sous forme de structure de données objet. La structure de données objet, en Python, est constituée de listes et de dictionnaires imbriqués les uns dans les autres. La structure de données objet permet d'utiliser des méthodes Python (pour les listes et les dictionnaires) pour ajouter, lister, rechercher et supprimer des éléments de la structure de données. Le format chaîne de caractères est principalement utilisé pour transférer les données vers un autre programme ou les charger dans une structure de données.
+Il existe deux formats de base pour les données JSON. Soit sous forme de chaîne, soit de structure de données objet. La structure de données objet, en Python, est composée de listes et de dictionnaires imbriqués les uns dans les autres. La structure de données objet permet d'utiliser des méthodes Python (pour les listes et dictionnaires) pour ajouter, lister, rechercher et supprimer des éléments de la structure de données. Le format chaîne est principalement utilisé pour passer les données à un autre programme ou charger dans une structure de données.
 
-Pour charger JSON de retour dans une structure de données, utilisez la méthode "loads". Cette méthode prend une chaîne de caractères et la reconvertit en structure de données objet JSON :
+Pour recharger JSON dans une structure de données, utilisez la méthode "loads". Cette méthode prend une chaîne et la transforme de nouveau en structure de données d'objet json :
 
     import json 
     print(json.loads(json_string))
 
-Pour encoder une structure de données en JSON, utilisez la méthode "dumps". Cette méthode prend un objet et renvoie une chaîne de caractères :
+Pour encoder une structure de données en JSON, utilisez la méthode "dumps". Cette méthode prend un objet et retourne une chaîne :
 
     import json
     json_string = json.dumps([1, 2, 3, "a", "b", "c"])
     print(json_string)
 
-Python prend en charge une méthode de sérialisation de données propriétaire de Python appelée pickle (et une alternative plus rapide appelée cPickle).
+Python supporte une méthode de sérialisation de données propriétaire de Python appelée pickle (et une alternative plus rapide appelée cPickle).
 
 Vous pouvez l'utiliser exactement de la même manière.
 
@@ -37,15 +37,14 @@ Tutorial Code
 
 import json
 
-# corriger cette fonction pour qu'elle ajoute
-# le nom donné et la paire de salaire à salaries_json,
-# et le retourne
+# fix this function, so it adds the given name
+# and salary pair to salaries_json, and return it
 def add_employee(salaries_json, name, salary):
-    # Ajoutez votre code ici
+    # Add your code here
 
     return salaries_json
 
-# code de test
+# test code
 salaries = '{"Alfred" : 300, "Jane" : 400 }'
 new_salaries = add_employee(salaries, "Me", 800)
 decoded_salaries = json.loads(new_salaries)
@@ -66,16 +65,15 @@ Solution
 
 import json
 
-# corriger cette fonction pour qu'elle ajoute
-# le nom donné et la paire de salaire à salaries_json,
-# et le retourne
+# fix this function, so it adds the given name
+# and salary pair to salaries_json, and return it
 def add_employee(salaries_json, name, salary):
     salaries = json.loads(salaries_json)
     salaries[name] = salary
 
     return json.dumps(salaries)
 
-# code de test
+# test code
 salaries = '{"Alfred" : 300, "Jane" : 400 }'
 new_salaries = add_employee(salaries, "Me", 800)
 decoded_salaries = json.loads(new_salaries)

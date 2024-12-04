@@ -25,9 +25,9 @@ La variable "therest" est une liste de variables, qui reçoit tous les arguments
     
     foo(1, 2, 3, 4, 5)
 
-Il est également possible de passer des arguments de fonctions par mot-clé, de sorte que l'ordre des arguments n'a pas d'importance, en utilisant la syntaxe suivante. Le code suivant produit la sortie suivante : 
-```The sum is: 6
-    Result: 1```
+Il est également possible d'envoyer des arguments de fonction par mot-clé, de sorte que l'ordre des arguments n'a pas d'importance, en utilisant la syntaxe suivante. Le code suivant donne la sortie suivante : 
+```La somme est : 6
+    Résultat : 1```
 
     def bar(first, second, third, **options):
         if options.get("action") == "sum":
@@ -39,17 +39,21 @@ Il est également possible de passer des arguments de fonctions par mot-clé, de
     result = bar(1, 2, 3, action = "sum", number = "first")
     print("Result: %d" %(result))
 
-La fonction "bar" reçoit 3 arguments. Si un argument supplémentaire "action" est reçu, et qu'il indique de sommer les nombres, alors la somme est affichée. Alternativement, la fonction sait également qu'elle doit renvoyer le premier argument, si la valeur du paramètre "number", passé à la fonction, est égale à "first".
 
-Exercice
+
+La fonction "bar" reçoit 3 arguments. Si un argument supplémentaire "action" est reçu, et qu'il demande de sommer les nombres, alors la somme est affichée. Alternativement, la fonction sait également qu'elle doit renvoyer le premier argument, si la valeur du paramètre "number", passée à la fonction, est égale à "first".
+
+Exercise
 --------
 
-Complétez les fonctions `foo` et `bar` pour qu'elles puissent recevoir un nombre variable d'arguments (3 ou plus). La fonction `foo` doit retourner le nombre d'arguments supplémentaires reçus. La fonction `bar` doit retourner `True` si l'argument avec le mot-clé `magicnumber` vaut 7, et `False` sinon.
+Complétez les fonctions `foo` et `bar` pour qu'elles puissent recevoir un nombre variable d'arguments (3 ou plus).
+La fonction `foo` doit retourner le nombre d'arguments supplémentaires reçus.
+La fonction `bar` doit retourner `True` si l'argument avec le mot-clé `magicnumber` vaut 7, et `False` sinon.
 
 Tutorial Code
 -------------
 
-# éditer le prototype et l'implémentation des fonctions
+# edit the functions prototype and implementation
 def foo(a, b, c):
     pass
 
@@ -57,7 +61,7 @@ def bar(a, b, c):
     pass
 
 
-# code de test
+# test code
 if foo(1, 2, 3, 4) == 1:
     print("Good.")
 if foo(1, 2, 3, 4, 5) == 2:
@@ -78,7 +82,7 @@ success_msg("Great work!")
 
 Solution
 --------
-# éditer le prototype et l'implémentation des fonctions
+# edit the functions prototype and implementation
 def foo(a, b, c, *args):
     return len(args)
 
@@ -86,7 +90,7 @@ def bar(a, b, c, **kwargs):
     return kwargs["magicnumber"] == 7
 
 
-# code de test
+# test code
 if foo(1, 2, 3, 4) == 1:
     print("Good.")
 if foo(1, 2, 3, 4, 5) == 2:

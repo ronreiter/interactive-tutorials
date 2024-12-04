@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-L'introspection du code est la capacité d'examiner les classes, fonctions et mots-clés pour savoir ce qu'ils sont, ce qu'ils font et ce qu'ils savent.
+L'introspection de code est la capacité d'examiner les classes, les fonctions et les mots-clés pour savoir ce qu'ils sont, ce qu'ils font et ce qu'ils savent.
 
-Python fournit plusieurs fonctions et utilitaires pour l'introspection du code.
+Python fournit plusieurs fonctions et utilitaires pour l'introspection de code.
 
     help()
     dir() 
@@ -18,23 +18,23 @@ Python fournit plusieurs fonctions et utilitaires pour l'introspection du code.
     __name__ 
     
 
-Souvent, la plus importante est la fonction help, car vous pouvez l'utiliser pour découvrir ce que font les autres fonctions.
+Souvent, la plus importante est la fonction help, car vous pouvez l'utiliser pour savoir ce que font les autres fonctions.
 
-Exercice
+Exercise
 --------
 
-Imprimez une liste de tous les attributs de l'objet Vehicle donné.
+Imprimer une liste de tous les attributs de l'objet Vehicle donné.
 
 Tutorial Code
 -------------
 
-# Utilisez la fonction help pour voir ce que fait chaque fonction.
-# Supprimez ceci lorsque vous avez terminé.
+# Use the help function to see what each function does.
+# Delete this when you are done.
 help(dir)
 help(hasattr)
 help(id)
 
-# Définir la classe Vehicle.
+# Define the Vehicle class.
 class Vehicle:
     name = ""
     kind = "car"
@@ -44,8 +44,8 @@ class Vehicle:
         desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
         return desc_str
 
-# Imprimez une liste de tous les attributs de la classe Vehicle.
-# Votre code va ici
+# Print a list of all attributes of the Vehicle class.
+# Your code goes here
 
 
 Expected Output
@@ -58,7 +58,7 @@ success_msg("Very nice!")
 Solution
 --------
 
-# Définir la classe Vehicle
+# Define the Vehicle class
 class Vehicle:
     name = ""
     kind = "car"
@@ -68,5 +68,5 @@ class Vehicle:
         desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
         return desc_str
 
-# Imprimez une liste de tous les attributs de la classe Vehicle.
+# Print a list of all attributes of the Vehicle class.
 print(dir(Vehicle))
