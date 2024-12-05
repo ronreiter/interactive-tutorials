@@ -1,7 +1,7 @@
-Tutorial
+Tutoriel
 --------
 
-Il existe deux types de boucles en Python, for et while.
+Il existe deux types de boucles en Python : for et while.
 
 ### La boucle "for"
 
@@ -11,36 +11,36 @@ Les boucles for itèrent sur une séquence donnée. Voici un exemple :
     for prime in primes:
         print(prime)
 
-Les boucles for peuvent itérer sur une séquence de nombres en utilisant les fonctions "range" et "xrange". La différence entre range et xrange est que la fonction range retourne une nouvelle liste avec les nombres de cette plage spécifiée, tandis que xrange retourne un itérateur, ce qui est plus efficace. (Python 3 utilise la fonction range, qui agit comme xrange). Notez que la fonction range est basée sur zéro.
+Les boucles for peuvent itérer sur une séquence de nombres en utilisant les fonctions "range" et "xrange". La différence entre range et xrange est que la fonction range renvoie une nouvelle liste avec des nombres de cette plage spécifiée, tandis que xrange renvoie un itérateur, ce qui est plus efficace. (Python 3 utilise la fonction range, qui agit comme xrange). Notez que la fonction range est basée sur zéro.
 
-    # Affiche les chiffres 0,1,2,3,4
+    # Prints out the numbers 0,1,2,3,4
     for x in range(5):
         print(x)
 
-    # Affiche 3,4,5
+    # Prints out 3,4,5
     for x in range(3, 6):
         print(x)
 
-    # Affiche 3,5,7
+    # Prints out 3,5,7
     for x in range(3, 8, 2):
         print(x)
 
 ### Boucles "while"
 
-Les boucles while répètent tant qu'une certaine condition booléenne est remplie. Par exemple :
+Les boucles while se répètent tant qu'une certaine condition booléenne est remplie. Par exemple :
 
-    # Affiche 0,1,2,3,4
+    # Prints out 0,1,2,3,4
 
     count = 0
     while count < 5:
         print(count)
-        count += 1  # Cela équivaut à count = count + 1
+        count += 1  # This is the same as count = count + 1
 
 ### Instructions "break" et "continue"
 
-**break** est utilisé pour sortir d'une boucle for ou d'une boucle while, tandis que **continue** est utilisé pour passer le bloc actuel et revenir à l'instruction "for" ou "while". Quelques exemples :
+**break** est utilisé pour sortir d'une boucle for ou d'une boucle while, tandis que **continue** est utilisé pour passer le bloc courant et revenir à l'instruction "for" ou "while". Quelques exemples :
 
-    # Affiche 0,1,2,3,4
+    # Prints out 0,1,2,3,4
 
     count = 0
     while True:
@@ -49,40 +49,41 @@ Les boucles while répètent tant qu'une certaine condition booléenne est rempl
         if count >= 5:
             break
 
-    # Affiche uniquement les nombres impairs - 1,3,5,7,9
+    # Prints out only odd numbers - 1,3,5,7,9
     for x in range(10):
-        # Vérifie si x est pair
+        # Check if x is even
         if x % 2 == 0:
             continue
         print(x)
 
-### Peut-on utiliser la clause "else" avec les boucles?
+### Peut-on utiliser la clause "else" avec les boucles ?
 
-Contrairement à des langages comme C, CPP... nous pouvons utiliser **else** pour les boucles. Lorsque la condition de la boucle de l'instruction "for" ou "while" échoue, alors la partie du code dans "else" est exécutée. Si une instruction **break** est exécutée à l'intérieur de la boucle for, alors la partie "else" est ignorée. Notez que la partie "else" est exécutée même s'il y a une instruction **continue**.
+Contrairement aux langages comme C, CPP, etc., nous pouvons utiliser **else** avec les boucles. Lorsque la condition de la boucle "for" ou "while" échoue, alors la partie de code dans "else" est exécutée. Si une instruction **break** est exécutée à l'intérieur de la boucle for, alors la partie "else" est ignorée. Notez que la partie "else" est exécutée même s'il y a une instruction **continue**.
 
 Voici quelques exemples :
 
-    # Affiche 0,1,2,3,4 puis affiche "la valeur de count a atteint 5"
+    # Prints out 0,1,2,3,4 and then it prints "count value reached 5"
 
     count=0
     while(count<5):
         print(count)
         count +=1
     else:
-        print("la valeur de count a atteint %d" %(count))
+        print("count value reached %d" %(count))
 
-    # Affiche 1,2,3,4
+    # Prints out 1,2,3,4
     for i in range(1, 10):
         if(i%5==0):
             break
         print(i)
     else:
-        print("ceci n'est pas imprimé car la boucle for est terminée à cause du break mais pas à cause de l'échec de la condition")
+        print("this is not printed because for loop is terminated because of break but not due to fail in condition")
 
-Exercise
+
+Exercice
 --------
 
-Parcourez et affichez tous les nombres pairs de la liste de nombres dans le même ordre qu'ils sont reçus. N'affichez aucun nombre qui vient après 237 dans la séquence.
+Parcourez et imprimez tous les nombres pairs de la liste des nombres dans l'ordre où ils sont reçus. N'imprimez aucun nombre qui vient après 237 dans la séquence.
 
 Tutorial Code
 -------------

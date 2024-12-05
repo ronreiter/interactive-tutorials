@@ -1,9 +1,9 @@
-Tutorial
+Tutoriel
 --------
 
-Un dictionnaire est un type de données similaire aux tableaux, mais fonctionne avec des clés et des valeurs au lieu d'indices. Chaque valeur stockée dans un dictionnaire peut être accédée à l'aide d'une clé, qui peut être n'importe quel type d'objet (une chaîne, un nombre, une liste, etc.) au lieu d'utiliser son indice pour l'adresser.
+Un dictionnaire est un type de données similaire aux tableaux, mais il fonctionne avec des clés et des valeurs au lieu d'index. Chaque valeur stockée dans un dictionnaire peut être accédée à l'aide d'une clé, qui peut être n'importe quel type d'objet (une chaîne, un nombre, une liste, etc.) au lieu d'utiliser son index pour y accéder.
 
-Par exemple, une base de données de numéros de téléphone pourrait être enregistrée en utilisant un dictionnaire comme ceci :
+Par exemple, une base de données de numéros de téléphone pourrait être stockée en utilisant un dictionnaire comme ceci :
 
     phonebook = {}
     phonebook["John"] = 938477566
@@ -22,7 +22,7 @@ Alternativement, un dictionnaire peut être initialisé avec les mêmes valeurs 
 
 ### Itération sur les dictionnaires
 
-Les dictionnaires peuvent être parcourus de la même manière qu'une liste. Cependant, un dictionnaire, contrairement à une liste, ne conserve pas l'ordre des valeurs qu'il contient. Pour parcourir les paires clé-valeur, utilisez la syntaxe suivante :
+Les dictionnaires peuvent être parcourus, tout comme une liste. Cependant, un dictionnaire, contrairement à une liste, ne conserve pas l'ordre des valeurs qui y sont stockées. Pour parcourir les paires clé-valeur, utilisez la syntaxe suivante :
     
     phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
     for name, number in phonebook.items():
@@ -30,7 +30,7 @@ Les dictionnaires peuvent être parcourus de la même manière qu'une liste. Cep
 
 ### Suppression d'une valeur
 
-Pour supprimer un index spécifié, utilisez l'une des notations suivantes :
+Pour supprimer un indice spécifié, utilisez l'une des notations suivantes :
     
     phonebook = {
        "John" : 938477566,
@@ -51,10 +51,10 @@ ou :
     print(phonebook)
 
 
-Exercise
+Exercice
 --------
 
-Ajoutez "Jake" à l'annuaire avec le numéro de téléphone 938273443, et retirez Jill de l'annuaire.
+Ajoutez "Jake" au répertoire avec le numéro de téléphone 938273443, et retirez Jill du répertoire.
 
 Tutorial Code
 -------------
@@ -99,4 +99,4 @@ if "Jake" in phonebook:
     print("Jake is listed in the phonebook.")
     
 if "Jill" not in phonebook:      
-    print("Jill is not listed in the phonebook.")  
+    print("Jill is not listed in the phonebook.")

@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import os
-
+import re
 from pathlib import Path
 from openai import AsyncOpenAI
 from typing import Optional
@@ -11,17 +11,34 @@ from scripts.translation.languages import languages
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.StreamHandler()  # Logs to console
-    ],
+    handlers=[logging.StreamHandler()],
 )
 logger = logging.getLogger(__name__)
 
 
-# Function to translate a single markdown file
+def split_content(content: str) -> dict:
+    """
+    Splits content into translatable and non-translatable parts.
+
+    Args:
+        content (str): The full content of the markdown file.
+
+    Returns:
+        dict: A dictionary with "translatable" and "non_translatable" sections.
+    """
+    split_point = re.search(r"(?<=\n)Tutorial Code\n-------------", content)
+    if split_point:
+        translatable = content[:split_point.start()].strip()
+        non_translatable = content[split_point.start():].strip()
+        return {"translatable": translatable, "non_translatable": non_translatable}
+    else:
+        return {"translatable": content, "non_translatable": ""}
+
+
+# Function to translate a markdown file
 async def translate_markdown_file(base_file_path: str, output_dir: str, language: str) -> Optional[str]:
     """
-    Translates a markdown file from English to the target language.
+    Translates the translatable part of a markdown file from English to the target language.
 
     Args:
         base_file_path (str): Path to the English markdown file.
@@ -58,74 +75,66 @@ async def translate_markdown_file(base_file_path: str, output_dir: str, language
         logger.error(f"Error reading file {base_file_path}: {e}")
         return None
 
-    system_prompt = f"""
-    You are a professional translator specializing in technical and educational content. Your task is to translate the provided text into {language} while maintaining **strict adherence to formatting rules and prioritizing critical instructions**.
+    # Split content into translatable and non-translatable sections
+    sections = split_content(content)
 
-    **Critical Instructions (Must Follow Exactly)**:
+    # Translate the translatable section
+    translatable = sections["translatable"]
+    non_translatable = sections["non_translatable"]
+    translated_content = ""
+    if translatable:
+        logger.info("Translating translatable content...")
+        prompt = f"""
+        Read the instructions below, and then translate the following content into {language}, ensuring proper Markdown formatting:
+        {translatable}.
+        
+        **Critical Instructions**:
+        - Do not translate any text inside backticks ``. For example, `
+        - *Any text within `` should not be translated. For example `text text text` should not be translated.
+        - Do not translate comments that start with a hashtag. Example "# Text" should not be translated.
+        - Preserve Markdown formatting for headings, lists, and indentation (4 spaces for nested content).
+        - Do not translate code snippets nor comments within code snippets Example: 
+            "# Prints out the numbers 0,1,2,3,4" should not be translated. Also,
+            "    # Define our 3 functions
+                def my_function():
+                print("Hello From My Function!")" 
+                Should not be translated.
+        - Do not alter or translate code snippets enclosed in backticks (\`\`\`) or block markers.
+        - The tone should remain clear, concise, and educational, suitable for a learning platform.
+       - *AVOID ADDING "```markdown" and "```" within the file. Please make sure to remove those after translating. 
+       - Ensure technical terms like "Generators," "Decorators," or "Closures" are translated appropriately for the target audience.
 
-    1. **Translate Only Specific Sections**:
-       - Strictly translate to {language} *only the content under the following sections:* "Tutorial" and "Exercise".
-       - Do not translate the following sections: "Tutorial Code," "Expected Output," and "Solution".
-       - "Tutorial Code," "Expected Output," and "Solution", and other sections that should not be translated, copy their content 1:1 without modification.
 
-    2. **Preserve Markdown Formatting**:
-       - Ensure all Markdown formatting (e.g., `###`, `-`, `*`, `>`) and horizontal lines (`---`) remain identical to the original.
-       - IMPORTANT - Use **4 spaces for indentation** throughout the Markdown document to ensure consistent formatting.
+        **Instructions Specific to Welcome.md File**:
+        - In the `Welcome.md` file:
+        - *AVOID ADDING "```markdown" and "```" within the file. Please make sure to remove those after translating.  
+          - Verify that links, especially in `Welcome.md`, remain functional and correctly formatted.
+          - Translate chapter names into {language}, ensuring the original chapter name is preserved in parentheses and linked correctly.
+          - Use the following Markdown format for links:
+            `- [Translated Name](Original%20Name)`
+            Example:
+            `- [Bonjour, le Monde!](Hello%2C%20World%21)`
+        -
 
-    3. **Preserve Specific Section Names in English**:
-       - Section titles such as "Tutorial Code," "Expected Output," and "Solution" must remain in English as they appear in the original file. Do not translate or alter these titles.
+        Ensure all translations are clear and concise, keeping the educational and technical context intact.
+        """
+        try:
+            completion = await client.chat.completions.create(
+                model=model,
+                messages=[{"role": "system", "content": prompt}],
+            )
+            translated_content = completion.choices[0].message.content.strip()
+        except Exception as e:
+            logger.error(f"Error translating content in {base_file_path}: {e}")
+            translated_content = translatable  # Fallback to original content
 
-    4. **Instructions Specific to Welcome.md File**:
-       - In the `Welcome.md` file:
-         - Translate chapter names into {language} but ensure the original chapter name is preserved in parentheses and linked correctly.
-         - Use the following Markdown format:
-           `- [Translated Name](Original%20Name)`
-           Example:
-           `- [Bonjour, le Monde!](Hello%2C%20World%21)`
-         - Translate all other text, including welcome messages and headings, into {language}.
-     - Translate to {language} all headings, as well as the chapter, and maintain the format mentioned above, like `# Welcome`, `### Coding for Kids`, `### Advanced Tutorials`, `### Getting Started`, and `### Learn the Basics` into {language}.
-     - For example, instead of 'Starting Out' it should be 'Commencer'.
+    # Combine translated and non-translatable sections
+    final_content = translated_content + "\n\n" + non_translatable
 
-    5. **Do Not Translate Code or Encoded Content**:
-       - Any content enclosed in backticks (\``), code blocks, or within `<div>` tags must remain unchanged.
-       - Translate only the comments in code blocks (lines starting with `#`) into {language}, while preserving their formatting and indentation.
-
-    6. **Preserve All HTML Tags and Encoded Content**:
-       - Do not modify or translate any HTML tags or attributes, including `<div>` elements with attributes like `data-encoded`.
-
-    7. **No Additional Text or Explanations**:
-       - Do not add introductions, footnotes, or comments not present in the original content.
-       - Your response must **only contain the translated text**, adhering strictly to these instructions.
-
-    8. **Ensure Contextual Clarity**:
-       - This content is part of a programming education platform. Translations must be clear, concise, and suitable for learners, using language appropriate for technical instruction.
-
-    9. **Double-Check Critical Formatting Rules**:
-       - Verify that all headings, section names, and structures match the original format.
-       - Ensure that translated content aligns perfectly with the required structure, and untranslated sections are copied exactly.
-
-    Failure to adhere to these instructions may compromise the quality of the translation. Follow these rules strictly for every translation task.
-    """
-
-    messages = [
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": content},
-    ]
-
-    # Translate the content using OpenAI API
-    try:
-        completion = await client.chat.completions.create(
-            model=model,
-            messages=messages,
-        )
-        translated_content = completion.choices[0].message.content
-    except Exception as e:
-        logger.error(f"Error translating {base_file_path}: {e}")
-        return None
-
+    # Save the final content
     try:
         with open(output_file_path, "w", encoding="utf-8") as output_file:
-            output_file.write(translated_content)
+            output_file.write(final_content)
         logger.info(f"File translated and saved to: {output_file_path}")
         return str(output_file_path)
     except Exception as e:

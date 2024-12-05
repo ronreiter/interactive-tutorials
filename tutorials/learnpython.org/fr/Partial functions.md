@@ -1,31 +1,30 @@
 Tutorial
 --------
 
-Vous pouvez créer des fonctions partielles en Python en utilisant la fonction partial de la bibliothèque functools.
+Vous pouvez créer des fonctions partielles en Python en utilisant la fonction `partial` de la bibliothèque `functools`.
 
-Les fonctions partielles permettent de dériver une fonction avec x paramètres vers une fonction avec moins de paramètres et des valeurs fixes définies pour la fonction plus limitée.
+Les fonctions partielles permettent de dériver une fonction avec x paramètres vers une fonction avec moins de paramètres, en fixant des valeurs pour la fonction plus restreinte.
 
-Importation requise:
+Importation requise :
 
     from functools import partial
 
-Ce code retournera 8.
+Ce code renverra 8.
 
     from functools import partial
     
     def multiply(x, y):
             return x * y
     
-    # créer une nouvelle fonction qui multiplie par 2
+    # create a new function that multiplies by 2
     dbl = partial(multiply, 2)
     print(dbl(4))
 
-Un point important à noter : les valeurs par défaut commenceront à remplacer les variables depuis la gauche. Le 2 remplacera x. y sera égal à 4 lorsque dbl(4) est appelé. Cela ne fait pas de différence dans cet exemple, mais cela en fait dans l'exemple ci-dessous.
+Une remarque importante : les valeurs par défaut commenceront à remplacer les variables à partir de la gauche. Le 2 remplacera x. y sera égal à 4 lorsque `dbl(4)` sera appelé. Cela n'a pas de différence dans cet exemple, mais cela en a dans l'exemple ci-dessous.
 
-Exercise
+Exercice
 --------
-Modifiez la fonction fournie en appelant partial() et en remplaçant les trois premières variables dans func(). Puis imprimez avec la nouvelle fonction partielle en utilisant une seule variable d'entrée afin que le résultat soit égal à 60.
-
+Modifiez la fonction fournie en appelant `partial()` et en remplaçant les trois premières variables de `func()`. Ensuite, imprimez avec la nouvelle fonction partielle en utilisant une seule variable d'entrée pour que la sortie soit égale à 60.
 
 Tutorial Code
 -------------

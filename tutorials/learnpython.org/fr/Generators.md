@@ -1,41 +1,41 @@
-Tutorial
+Tutoriel
 --------
 
 Les générateurs sont très faciles à implémenter, mais un peu difficiles à comprendre.
 
-Les générateurs sont utilisés pour créer des itérateurs, mais avec une approche différente. Les générateurs sont de simples fonctions qui retournent un ensemble d'éléments itérables, un à la fois, d'une manière particulière.
+Les générateurs sont utilisés pour créer des itérateurs, mais avec une approche différente. Les générateurs sont de simples fonctions qui renvoient un ensemble d'éléments itérables, un à la fois, d'une manière spéciale.
 
-Lorsqu'une itération sur un ensemble d'éléments commence en utilisant l'instruction for, le générateur est exécuté. Une fois que le code de la fonction du générateur atteint une instruction "yield", le générateur cède son exécution à la boucle for, renvoyant une nouvelle valeur de l'ensemble. La fonction génératrice peut générer autant de valeurs (éventuellement infinies) qu'elle le souhaite, en produisant chacune à son tour.
+Lorsqu'une itération sur un ensemble d'éléments commence en utilisant l'instruction for, le générateur est exécuté. Une fois que le code de la fonction du générateur atteint une instruction "yield", le générateur cède son exécution à la boucle for, retournant une nouvelle valeur de l'ensemble. La fonction génératrice peut générer autant de valeurs (éventuellement infinies) qu'elle le souhaite, en les fournissant chacune à son tour.
 
-Voici un exemple simple d'une fonction génératrice qui retourne 7 entiers aléatoires :
+Voici un exemple simple d'une fonction génératrice qui renvoie 7 entiers aléatoires :
 
       import random
       
       def lottery():
-          # retourne 6 nombres entre 1 et 40
+          # renvoie 6 nombres entre 1 et 40
           for i in range(6):
               yield random.randint(1, 40)
       
-          # retourne un 7ème nombre entre 1 et 15
+          # renvoie un 7ème nombre entre 1 et 15
           yield random.randint(1, 15)
       
       for random_number in lottery():
-             print("Et le numéro suivant est... %d!" %(random_number))
+             print("Et le prochain numéro est... %d!" %(random_number))
 
-Cette fonction décide de manière autonome comment générer les nombres aléatoires, et exécute les instructions yield une par une, en se mettant en pause entre chaque pour rendre le contrôle à la boucle principale.
+Cette fonction décide elle-même comment générer les nombres aléatoires et exécute les instructions yield une à une, s'interrompant entre chacune pour céder l'exécution à la boucle for principale.
 
-Exercise
+Exercice
 --------
 
-Écrivez une fonction génératrice qui retourne la série de Fibonacci. Ils sont calculés en utilisant la formule suivante : Les deux premiers nombres de la série sont toujours égaux à 1, et chaque nombre consécutif retourné est la somme des deux derniers nombres.
-Indice : Pouvez-vous utiliser seulement deux variables dans la fonction génératrice ? N'oubliez pas que les affectations peuvent être effectuées simultanément. Le code
+Écrivez une fonction génératrice qui renvoie la série de Fibonacci. Ils sont calculés en utilisant la formule suivante : Les deux premiers nombres de la série sont toujours égaux à 1, et chaque nombre consécutif renvoyé est la somme des deux derniers nombres. 
+Astuce : Pouvez-vous n'utiliser que deux variables dans la fonction génératrice ? Rappelez-vous que les affectations peuvent être faites simultanément. Le code
 
     a = 1
     b = 2
     a, b = b, a
     print(a, b)
 
-permettra d'inverser simultanément les valeurs de a et b.
+échangera simultanément les valeurs de a et b.
 
 Tutorial Code
 -------------

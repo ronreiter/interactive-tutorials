@@ -1,7 +1,7 @@
-Tutorial
+Tutoriel
 --------
 
-Les compréhensions de liste sont un outil très puissant, qui crée une nouvelle liste basée sur une autre liste, en une seule ligne lisible.
+Les compréhensions de listes sont un outil très puissant, qui permet de créer une nouvelle liste basée sur une autre liste, en une seule ligne lisible.
 
 Par exemple, disons que nous devons créer une liste d'entiers qui spécifient la longueur de chaque mot dans une certaine phrase, mais uniquement si le mot n'est pas le mot "the".
 
@@ -14,7 +14,7 @@ Par exemple, disons que nous devons créer une liste d'entiers qui spécifient l
     print(words)
     print(word_lengths)
 
-En utilisant une compréhension de liste, nous pouvons simplifier ce processus avec cette notation :
+En utilisant une compréhension de liste, nous pourrions simplifier ce processus à cette notation :
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
@@ -22,10 +22,10 @@ En utilisant une compréhension de liste, nous pouvons simplifier ce processus a
     print(words)
     print(word_lengths)
 
-Exercise
+Exercice
 --------
 
-En utilisant une compréhension de liste, créez une nouvelle liste appelée "newlist" à partir de la liste "numbers", qui contient uniquement les nombres positifs de la liste, sous forme d'entiers.
+En utilisant une compréhension de liste, créez une nouvelle liste appelée "newlist" à partir de la liste "numbers", qui ne contient que les nombres positifs de la liste, en tant qu'entiers.
 
 Tutorial Code
 -------------

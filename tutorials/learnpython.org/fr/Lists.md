@@ -1,31 +1,31 @@
-Tutorial
+Didacticiel
 --------
 
-Les listes sont très similaires aux tableaux. Elles peuvent contenir n'importe quel type de variable, et elles peuvent contenir autant de variables que vous le souhaitez. Les listes peuvent également être parcourues de manière très simple. Voici un exemple de création d'une liste.
+Les listes sont très similaires aux tableaux. Elles peuvent contenir n'importe quel type de variable, et peuvent contenir autant de variables que vous le souhaitez. Les listes peuvent également être itérées de manière très simple. Voici un exemple de comment construire une liste.
 
     mylist = []
     mylist.append(1)
     mylist.append(2)
     mylist.append(3)
-    print(mylist[0]) # affiche 1
-    print(mylist[1]) # affiche 2
-    print(mylist[2]) # affiche 3
+    print(mylist[0]) # prints 1
+    print(mylist[1]) # prints 2
+    print(mylist[2]) # prints 3
 
-    # affiche 1,2,3
+    # prints out 1,2,3
     for x in mylist:
         print(x)
 
-Accéder à un index qui n'existe pas génère une exception (une erreur).
+Accéder à un indice qui n'existe pas génère une exception (une erreur).
 
     mylist = [1,2,3]
     print(mylist[10])
 
-Exercise
+Exercice
 --------
 
 Dans cet exercice, vous devrez ajouter des nombres et des chaînes aux listes appropriées en utilisant la méthode "append" des listes. Vous devez ajouter les nombres 1, 2 et 3 à la liste "numbers", et les mots 'hello' et 'world' à la variable strings.
 
-Vous devrez également remplir la variable second_name avec le deuxième nom de la liste names, en utilisant l'opérateur crochets `[]`. Notez que l'index est basé sur zéro, donc si vous souhaitez accéder au deuxième élément de la liste, son index sera 1.
+Vous devrez également remplir la variable second_name avec le deuxième nom dans la liste names, en utilisant l'opérateur parenthèses `[]`. Notez que l'indice commence à zéro, donc si vous voulez accéder au deuxième élément de la liste, son indice sera 1.
 
 Tutorial Code
 -------------

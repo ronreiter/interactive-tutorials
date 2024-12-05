@@ -1,10 +1,10 @@
-Tutorial
+Tutoriel
 --------
 
 Chaque fonction en Python reçoit un nombre prédéfini d'arguments, si elle est déclarée normalement, comme ceci :
 
     def myfunction(first, second, third):
-        # faire quelque chose avec les 3 variables
+        # do something with the 3 variables
         ...
 
 Il est possible de déclarer des fonctions qui reçoivent un nombre variable d'arguments, en utilisant la syntaxe suivante :
@@ -15,7 +15,7 @@ Il est possible de déclarer des fonctions qui reçoivent un nombre variable d'a
         print("Third: %s" % third)
         print("And all the rest... %s" % list(therest))
 
-La variable "therest" est une liste de variables, qui reçoit tous les arguments qui ont été donnés à la fonction "foo" après les 3 premiers arguments. Donc appeler `foo(1, 2, 3, 4, 5)` affichera :
+La variable "therest" est une liste de variables, qui reçoit tous les arguments donnés à la fonction "foo" après les 3 premiers arguments. Ainsi, appeler `foo(1, 2, 3, 4, 5)` affichera :
 
     def foo(first, second, third, *therest):
         print("First: %s" %(first))
@@ -25,9 +25,9 @@ La variable "therest" est une liste de variables, qui reçoit tous les arguments
     
     foo(1, 2, 3, 4, 5)
 
-Il est également possible d'envoyer des arguments de fonction par mot-clé, de sorte que l'ordre des arguments n'a pas d'importance, en utilisant la syntaxe suivante. Le code suivant donne la sortie suivante : 
-```La somme est : 6
-    Résultat : 1```
+Il est également possible d'envoyer des arguments de fonction par mot-clé, afin que l'ordre des arguments n'ait pas d'importance, en utilisant la syntaxe suivante. Le code suivant donne la sortie suivante :
+```The sum is: 6
+    Result: 1```
 
     def bar(first, second, third, **options):
         if options.get("action") == "sum":
@@ -39,16 +39,12 @@ Il est également possible d'envoyer des arguments de fonction par mot-clé, de 
     result = bar(1, 2, 3, action = "sum", number = "first")
     print("Result: %d" %(result))
 
+La fonction "bar" reçoit 3 arguments. Si un argument supplémentaire "action" est reçu, et qu'il instruit de sommer les chiffres, alors la somme est affichée. Alternativement, la fonction sait également qu'elle doit retourner le premier argument, si la valeur du paramètre "number", passé à la fonction, est égale à "first".
 
-
-La fonction "bar" reçoit 3 arguments. Si un argument supplémentaire "action" est reçu, et qu'il demande de sommer les nombres, alors la somme est affichée. Alternativement, la fonction sait également qu'elle doit renvoyer le premier argument, si la valeur du paramètre "number", passée à la fonction, est égale à "first".
-
-Exercise
+Exercice
 --------
 
-Complétez les fonctions `foo` et `bar` pour qu'elles puissent recevoir un nombre variable d'arguments (3 ou plus).
-La fonction `foo` doit retourner le nombre d'arguments supplémentaires reçus.
-La fonction `bar` doit retourner `True` si l'argument avec le mot-clé `magicnumber` vaut 7, et `False` sinon.
+Complétez les fonctions `foo` et `bar` afin qu'elles puissent recevoir un nombre variable d'arguments (3 ou plus). La fonction `foo` doit retourner le nombre d'arguments supplémentaires reçus. La fonction `bar` doit retourner `True` si l'argument avec le mot-clé `magicnumber` vaut 7, et `False` sinon.
 
 Tutorial Code
 -------------
