@@ -92,6 +92,12 @@ async def translate_markdown_file(base_file_path: str, output_dir: str, language
         1. **No Additional Markers**:
            - Do not introduce any extraneous markers such as ` ```markdown `, ` ```python `, or similar at the start or end of the output.
            - Ensure the file begins directly with the translated or preserved content, without any added formatting headers.
+           
+        **Instructions Specific to Welcome.md File**:
+        - **IMPORTANT**: Always format links as `- [Translated Name](Original%20Name)` to ensure consistency and functionality.
+          Example: `- [Bonjour, le Monde!](Hello%2C%20World%21)`
+        - Ensure the file does not include unintended formatting elements, such as "```markdown" or similar, at the start or elsewhere.
+        - Translate chapter names into {language}, keeping the original chapter name in parentheses with the correct link format as shown
 
         2. **Code Block and Inline Code Formatting**:
            - **Preserve inline code formatting**:
