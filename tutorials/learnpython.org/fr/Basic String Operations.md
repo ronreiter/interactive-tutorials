@@ -1,56 +1,54 @@
-```markdown
-Tutoriel
+Tutorial
 --------
 
-Les chaînes de caractères sont des morceaux de texte. Elles peuvent être définies comme n'importe quoi entre guillemets :
+Les chaînes (strings) sont des morceaux de texte. Elles peuvent être définies comme tout ce qui se trouve entre des guillemets :
 
     astring = "Hello world!"
     astring2 = 'Hello world!'
 
-Comme vous pouvez le voir, la première chose que vous avez apprise était d'imprimer une phrase simple. Cette phrase a été stockée par Python comme une chaîne de caractères. Cependant, au lieu d'imprimer immédiatement les chaînes, nous allons explorer les différentes choses que vous pouvez leur faire.
-
-Vous pouvez également utiliser des guillemets simples pour attribuer une chaîne de caractères. Cependant, vous rencontrerez des problèmes si la valeur à attribuer contient elle-même des guillemets simples. Par exemple, pour attribuer la chaîne dans ces parenthèses (les guillemets simples sont ' '), vous devez utiliser uniquement les guillemets doubles comme ceci :
+Comme vous pouvez le voir, la première chose que vous avez apprise était d'imprimer une phrase simple. Cette phrase a été stockée par Python sous forme de chaîne. Cependant, au lieu d'imprimer immédiatement des chaînes, nous allons explorer les différentes choses que vous pouvez leur faire.
+Vous pouvez également utiliser des guillemets simples pour attribuer une chaîne. Cependant, vous rencontrerez des problèmes si la valeur à attribuer elle-même contient des guillemets simples. Par exemple, pour attribuer la chaîne dans ces crochets (les guillemets simples sont ' '), vous devez utiliser uniquement des guillemets doubles comme ceci
 
     astring = "Hello world!"
-    print("les guillemets simples sont ' '")
+    print("single quotes are ' '")
 
     print(len(astring))
 
-Cela imprime 12, car "Hello world!" comporte 12 caractères, y compris la ponctuation et les espaces.
+Cela imprime 12, car "Hello world!" fait 12 caractères, y compris la ponctuation et les espaces.
 
     astring = "Hello world!"
     print(astring.index("o"))
 
-Cela imprime 4, car l'emplacement de la première occurrence de la lettre "o" est à 4 caractères du premier caractère. Remarquez comment il y a en fait deux "o" dans la phrase - cette méthode ne reconnaît que le premier.
+Cela imprime 4, car l'emplacement de la première occurrence de la lettre "o" est 4 caractères après le premier caractère. Remarquez comment il y a en réalité deux o dans la phrase - cette méthode ne reconnaît que le premier.
 
-Mais pourquoi n'a-t-il pas imprimé 5 ? Le "o" n'est-il pas le cinquième caractère de la chaîne ? Pour simplifier les choses, Python (et la plupart des autres langages de programmation) commence à 0 au lieu de 1. Ainsi, l'index de "o" est 4.
+Mais pourquoi n'a-t-il pas imprimé 5 ? N'est-ce pas le cinquième caractère dans la chaîne ? Pour simplifier les choses, Python (et la plupart des autres langages de programmation) commence les index à 0 au lieu de 1. Donc l'index de "o" est 4.
 
     astring = "Hello world!"
     print(astring.count("l"))
 
-Pour ceux d'entre vous qui utilisent des polices stupides, c'est un L minuscule, pas un chiffre un. Cela compte le nombre de "l" dans la chaîne. Par conséquent, il devrait imprimer 3.
+Pour ceux d'entre vous qui utilisent des polices de caractères farfelues, c'est un "L" minuscule, pas un chiffre un. Cela compte le nombre de "l" dans la chaîne. Par conséquent, cela devrait imprimer 3.
 
     astring = "Hello world!"
     print(astring[3:7])
 
-Cela imprime un extrait de la chaîne, à partir de l'index 3, et se terminant à l'index 6. Mais pourquoi 6 et non 7 ? Encore une fois, la plupart des langages de programmation le font - cela facilite le calcul à l'intérieur de ces parenthèses.
+Cela imprime une tranche de la chaîne, commençant à l'index 3 et se terminant à l'index 6. Mais pourquoi 6 et non 7 ? Encore une fois, la plupart des langages de programmation font cela - cela simplifie le calcul à l'intérieur de ces crochets.
 
-Si vous mettez juste un numéro dans les crochets, cela vous donnera le caractère unique à cet index. Si vous omettez le premier numéro mais gardez le deux-points, cela vous donnera un extrait du début jusqu'au numéro que vous avez laissé. Si vous omettez le deuxième numéro, cela vous donnera un extrait du premier numéro jusqu'à la fin.
+Si vous n'avez qu'un seul chiffre dans les crochets, cela vous donnera le caractère unique à cet index. Si vous omettez le premier chiffre mais gardez le deux-points, cela vous donnera une tranche allant du début jusqu'au chiffre que vous avez laissé. Si vous omettez le deuxième chiffre, cela vous donnera une tranche du premier chiffre jusqu'à la fin.
 
-Vous pouvez même mettre des numéros négatifs à l'intérieur des crochets. Ils sont un moyen facile de commencer par la fin de la chaîne plutôt que par le début. De cette façon, -3 signifie "3ème caractère à partir de la fin".
+Vous pouvez même mettre des chiffres négatifs à l'intérieur des crochets. C'est un moyen simple de commencer depuis la fin de la chaîne au lieu du début. De cette manière, -3 signifie "3e caractère depuis la fin".
 
     astring = "Hello world!"
     print(astring[3:7:2])
 
-Cela imprime les caractères de la chaîne de 3 à 7 en sautant un caractère. C'est une syntaxe d'extrait étendue. La forme générale est [start:stop:step].
+Cela imprime les caractères de la chaîne de 3 à 7 en sautant un caractère. C'est une syntaxe de tranche étendue. La forme générale est [début:fin:pas].
 
     astring = "Hello world!"
     print(astring[3:7])
     print(astring[3:7:1])
 
-Notez que les deux produisent la même sortie.
+Notez qu'ils produisent tous deux la même sortie
 
-Il n'existe pas de fonction comme strrev en C pour inverser une chaîne. Mais avec le type de syntaxe d'extrait mentionné ci-dessus, vous pouvez facilement inverser une chaîne comme ceci :
+Il n'existe pas de fonction comme strrev en C pour inverser une chaîne. Mais avec le type de syntaxe de tranche mentionné ci-dessus, vous pouvez facilement inverser une chaîne comme ceci
 
     astring = "Hello world!"
     print(astring[::-1])
@@ -61,24 +59,23 @@ Cela
     print(astring.upper())
     print(astring.lower())
 
-Cela crée une nouvelle chaîne avec toutes les lettres converties respectivement en majuscules et en minuscules.
+Cela crée une nouvelle chaîne avec toutes les lettres converties respectivement en majuscules et minuscules.
 
     astring = "Hello world!"
     print(astring.startswith("Hello"))
     print(astring.endswith("asdfasdfasdf"))
 
-Cela est utilisé pour déterminer si la chaîne commence par quelque chose ou se termine par quelque chose, respectivement. Le premier imprime True, car la chaîne commence par "Hello". Le second imprime False, car la chaîne ne se termine certainement pas par "asdfasdfasdf".
+Ceci est utilisé pour déterminer si la chaîne commence par quelque chose ou se termine par quelque chose, respectivement. Le premier imprimera True, car la chaîne commence par "Hello". Le second imprimera False, car la chaîne ne se termine certainement pas par "asdfasdfasdf".
 
     astring = "Hello world!"
     afewwords = astring.split(" ")
 
-Cela divise la chaîne en un ensemble de chaînes regroupées dans une liste. Étant donné que cet exemple se divise à un espace, le premier élément de la liste sera "Hello", et le second sera "world!".
+Cela divise la chaîne en un tas de chaînes regroupées dans une liste. Comme cet exemple divise à un espace, le premier élément de la liste sera "Hello", et le second sera "world!".
 
-Exercice
+Exercise
 --------
 
-Essayez de corriger le code pour imprimer les informations correctes en changeant la chaîne.
-```
+Essayez de corriger le code pour imprimer les bonnes informations en modifiant la chaîne.
 
 Tutorial Code
 -------------

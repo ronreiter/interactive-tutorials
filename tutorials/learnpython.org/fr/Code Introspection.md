@@ -1,7 +1,7 @@
-Tutoriel
+Tutorial
 --------
 
-L'introspection de code est la capacité à examiner des classes, des fonctions et des mots-clés pour savoir ce qu'ils sont, ce qu'ils font et ce qu'ils savent.
+L'introspection de code est la capacité d'examiner des classes, fonctions et mots-clés pour savoir ce qu'ils sont, ce qu'ils font et ce qu'ils connaissent.
 
 Python fournit plusieurs fonctions et utilitaires pour l'introspection de code.
 
@@ -18,7 +18,7 @@ Python fournit plusieurs fonctions et utilitaires pour l'introspection de code.
     __name__ 
     
 
-Souvent, la fonction la plus importante est la fonction help, car vous pouvez l'utiliser pour trouver ce que font les autres fonctions.
+Souvent, la plus importante est la fonction help, car vous pouvez l'utiliser pour découvrir ce que font les autres fonctions.
 
 Exercice
 --------

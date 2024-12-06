@@ -1,47 +1,43 @@
-Tutoriel
+Tutorial
 --------
 
-En programmation, les erreurs arrivent. C'est un fait de la vie. Peut-être que l'utilisateur a donné une mauvaise entrée. Peut-être qu'une ressource réseau était indisponible. Peut-être que le programme a manqué de mémoire. Ou le programmeur a même pu faire une erreur !
+Quand on programme, des erreurs se produisent. C'est simplement un fait de la vie. Peut-être que l'utilisateur a fourni une mauvaise entrée. Peut-être qu'une ressource réseau était indisponible. Peut-être que le programme a manqué de mémoire. Ou le programmeur a même pu faire une erreur !
 
-La solution de Python aux erreurs ce sont les exceptions. Vous avez peut-être déjà vu une exception auparavant.
+La solution de Python aux erreurs est les exceptions. Vous avez peut-être déjà vu une exception.
 
-```python
-print(a)
+    print(a)
+    
+    # erreur
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    NameError: name 'a' is not defined
 
-#error
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'a' is not defined
-```
+Oups ! J'ai oublié d'assigner une valeur à la variable 'a'.
 
-Oups ! Oubli d'assigner une valeur à la variable 'a'.
+Mais parfois, vous ne voulez pas que les exceptions arrêtent complètement le programme. Vous pourriez vouloir faire quelque chose de spécial lorsqu'une exception est levée. Cela se fait dans un bloc *try/except*.
 
-Mais parfois, vous ne voulez pas que les exceptions arrêtent complètement le programme. Vous pourriez vouloir faire quelque chose de particulier lorsque qu'une exception est levée. Cela se fait dans un bloc *try/except*.
+Voici un exemple trivial : Supposons que vous parcourez une liste. Vous devez parcourir 20 nombres, mais la liste est constituée d'une entrée utilisateur et pourrait ne pas contenir 20 nombres. Après avoir atteint la fin de la liste, vous souhaitez simplement que le reste des nombres soit interprété comme un 0. Voici comment vous pourriez faire :
 
-Voici un exemple trivial : Supposons que vous parcourez une liste. Vous devez parcourir 20 nombres, mais la liste est réalisée à partir d'entrées utilisateur et pourrait ne pas contenir 20 nombres. Après avoir atteint la fin de la liste, vous voulez que le reste des nombres soit interprété comme un 0. Voici comment vous pourriez faire cela :
+    def do_stuff_with_number(n):
+        print(n)
+    
+    def catch_this():
+        the_list = (1, 2, 3, 4, 5)
+    
+        for i in range(20):
+            try:
+                do_stuff_with_number(the_list[i])
+            except IndexError: # Levée lors de l'accès à un index inexistant d'une liste
+                do_stuff_with_number(0)
+    
+    catch_this()
 
-```python
-def do_stuff_with_number(n):
-    print(n)
+Voilà, ce n'était pas si difficile ! Vous pouvez faire cela avec n'importe quelle exception. Pour plus de détails sur la gestion des exceptions, consultez la [documentation Python](http://docs.python.org/tutorial/errors.html#handling-exceptions).
 
-def catch_this():
-    the_list = (1, 2, 3, 4, 5)
-
-    for i in range(20):
-        try:
-            do_stuff_with_number(the_list[i])
-        except IndexError: # Levée lors de l'accès à un index non existant d'une liste
-            do_stuff_with_number(0)
-
-catch_this()
-```
-
-Voilà, ce n'était pas trop difficile ! Vous pouvez faire cela avec n'importe quelle exception. Pour plus de détails sur la gestion des exceptions, ne cherchez pas plus loin que les [docs Python](http://docs.python.org/tutorial/errors.html#handling-exceptions).
-
-Exercice
+Exercise
 --------
 
-Gérez toutes les exceptions ! Rappelez-vous les leçons précédentes pour retourner le nom de famille de l'acteur.
+Gérez toutes les exceptions ! Pensez aux leçons précédentes pour retourner le nom de famille de l'acteur.
 
 Tutorial Code
 -------------

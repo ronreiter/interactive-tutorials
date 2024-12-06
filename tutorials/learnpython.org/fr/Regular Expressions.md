@@ -1,30 +1,32 @@
-Tutoriel
+Tutorial
 --------
 
-Les expressions régulières (parfois abrégées en regexp, regex ou re) sont
-un outil pour faire correspondre des modèles dans du texte. En Python, nous avons le module re. 
-Les applications des expressions régulières sont très répandues, mais elles sont 
-assez complexes. Donc, lorsque vous envisagez d'utiliser une regex pour une certaine tâche, 
-pensez aux alternatives et ne recourez aux regex qu'en dernier recours.
+Les expressions régulières (parfois abrégées en regexp, regex, ou re) sont un
+outil pour correspondre à des motifs dans le texte. En Python, nous avons le module re.
+Les applications pour les expressions régulières sont répandues, mais elles sont
+assez complexes, donc lorsque vous envisagez d'utiliser une regex pour une certaine tâche,
+pensez à des alternatives, et considérez les regex comme un dernier recours.
 
-Un exemple de regex est `r"^(From|To|Cc).*?python-list@python.org"` Voici maintenant une
+Un exemple de regex est `r"^(From|To|Cc).*?python-list@python.org"` Maintenant pour une
 explication :
-le symbole accent circonflexe `^` correspond au texte au début d'une ligne. Le groupe suivant, la partie avec `(From|To|Cc)`, signifie que la ligne doit commencer par
-l'un des mots qui sont séparés par le tuyau `|`. Cela s'appelle 
+le caractère circonflexe `^` correspond au texte au début d'une ligne. Le groupe suivant,
+la partie avec `(From|To|Cc)` signifie que la ligne doit commencer par un
+des mots qui sont séparés par le pipe `|`. C'est ce qu'on appelle
 l'opérateur OR, et la regex correspondra si la ligne commence par l'un
-des mots du groupe. Le `.*?` signifie faire correspondre de manière peu gourmande n'importe quel
-nombre de caractères, sauf le caractère de nouvelle ligne `\n`. La partie peu gourmande 
-signifie faire correspondre aussi peu de répétitions que possible. Le caractère `.` 
-désigne n'importe quel caractère non-nouvelle ligne, le `*` signifie répéter 0 ou plus
-de fois, et le caractère `?` le rend peu gourmand.
+des mots dans le groupe. Le `.*?` signifie correspondre de manière non avide à tout
+nombre de caractères, à l'exception du caractère de nouvelle ligne `\n`. La partie non avide
+signifie correspondre à aussi peu de répétitions que possible. Le caractère `.`
+signifie n'importe quel caractère non nouvelle ligne, le `*` signifie répéter 0 ou plus
+de fois, et le caractère `?` le rend non avide.
 
 Ainsi, les lignes suivantes seraient correspondantes à cette regex :
 `From: python-list@python.org`
 `To: !asp]<,.      python-list@python.org`
 
-Une référence complète pour la syntaxe re est disponible dans les [docs python](http://docs.python.org/library/re.html#regular-expression-syntax "RE syntax").
+Une référence complète pour la syntaxe re est disponible dans les [docs python](http://docs.python.org/library/re.html#regular-expression-syntax
+"RE syntax").
 
-En exemple d'une regex "proper" pour la correspondance d’e-mails (comme celle de l’exercice), voir [ceci](http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html).
+Comme exemple d'une regex de correspondance d'e-mail "correcte" (comme celle de l'exercice), voir [ceci](http://www.ex-parrot.com/pdw/Mail-RFC822-Address.html)
 
 Tutorial Code
 -------------

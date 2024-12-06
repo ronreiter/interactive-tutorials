@@ -1,13 +1,13 @@
-Tutoriel
+Tutorial
 --------
 
 Les ensembles sont des listes sans entrées dupliquées. Disons que vous voulez collecter une liste de mots utilisés dans un paragraphe :
 
     print(set("my name is Eric and Eric is my name".split()))
 
-Cela affichera une liste contenant "my", "name", "is", "Eric", et finalement "and". Puisque le reste de la phrase utilise des mots qui sont déjà dans l'ensemble, ils ne sont pas insérés deux fois.
+Cela imprimera une liste contenant "my", "name", "is", "Eric", et finalement "and". Comme le reste de la phrase utilise des mots qui sont déjà dans l'ensemble, ils ne sont pas insérés deux fois.
 
-Les ensembles sont un outil puissant en Python car ils ont la capacité de calculer les différences et les intersections entre d'autres ensembles. Par exemple, disons que vous avez une liste de participants aux événements A et B :
+Les ensembles sont un outil puissant en Python puisqu'ils ont la capacité de calculer les différences et les intersections entre d'autres ensembles. Par exemple, disons que vous avez une liste de participants aux événements A et B :
 
     a = set(["Jake", "John", "Eric"])
     print(a)
@@ -22,7 +22,7 @@ Pour savoir quels membres ont assisté aux deux événements, vous pouvez utilis
     print(a.intersection(b))
     print(b.intersection(a))
 
-Pour savoir quels membres ont assisté seulement à l'un des événements, utilisez la méthode "symmetric_difference" :
+Pour savoir quels membres ont assisté à un seul des événements, utilisez la méthode "symmetric_difference" :
 
     a = set(["Jake", "John", "Eric"])
     b = set(["John", "Jill"])
@@ -30,7 +30,7 @@ Pour savoir quels membres ont assisté seulement à l'un des événements, utili
     print(a.symmetric_difference(b))
     print(b.symmetric_difference(a))
 
-Pour savoir quels membres ont assisté uniquement à un événement et pas à l'autre, utilisez la méthode "difference" :
+Pour savoir quels membres ont assisté à un seul événement et non à l'autre, utilisez la méthode "difference" :
 
     a = set(["Jake", "John", "Eric"])
     b = set(["John", "Jill"])

@@ -1,15 +1,14 @@
-```
-Tutoriel
+Tutorial
 --------
 
-Python utilise la logique booléenne pour évaluer les conditions. Les valeurs booléennes `True` et `False` sont retournées lorsqu'une expression est comparée ou évaluée. Par exemple :
+Python utilise la logique booléenne pour évaluer les conditions. Les valeurs booléennes True et False sont renvoyées lorsqu'une expression est comparée ou évaluée. Par exemple :
 
     x = 2
-    print(x == 2) # imprime True
-    print(x == 3) # imprime False
-    print(x < 3) # imprime True
+    print(x == 2) # affiche True
+    print(x == 3) # affiche False
+    print(x < 3) # affiche True
 
-Notez que l'affectation de variables se fait en utilisant un seul opérateur égal "=", tandis que la comparaison entre deux variables se fait en utilisant le double opérateur égal "==". L'opérateur "non égal" est marqué par "!=".
+Notez que l'affectation de variable se fait en utilisant un seul opérateur égal "=", tandis que la comparaison entre deux variables se fait avec le double opérateur égal "==". L'opérateur "différent de" est marqué par "!=".
 
 ### Opérateurs booléens
 
@@ -18,29 +17,29 @@ Les opérateurs booléens "and" et "or" permettent de construire des expressions
     name = "John"
     age = 23
     if name == "John" and age == 23:
-        print("Votre nom est John, et vous avez aussi 23 ans.")
+        print("Votre nom est John, et vous avez également 23 ans.")
 
     if name == "John" or name == "Rick":
         print("Votre nom est soit John, soit Rick.")
 
 ### L'opérateur "in"
 
-L'opérateur "in" peut être utilisé pour vérifier si un objet spécifié existe dans un conteneur d'objet itérable, tel qu'une liste :
+L'opérateur "in" peut être utilisé pour vérifier si un objet spécifié existe dans un conteneur d'objets itérable, comme une liste :
 
     name = "John"
     if name in ["John", "Rick"]:
         print("Votre nom est soit John, soit Rick.")
 
-Python utilise l'indentation pour définir les blocs de code, au lieu des accolades. L'indentation standard en Python est de 4 espaces, bien que les tabulations et toute autre taille d'espace fonctionneront, tant qu'elle est cohérente. Notez que les blocs de code n'ont pas besoin de terminaison.
+Python utilise l'indentation pour définir les blocs de code, au lieu des accolades. L'indentation standard en Python est de 4 espaces, bien que les tabulations et toute autre taille d'espace fonctionnent, tant que c'est cohérent. Notez que les blocs de code n'ont pas besoin d'être terminés.
 
-Voici un exemple d'utilisation de l'instruction "if" en Python avec des blocs de code :
+Voici un exemple d'utilisation de l'instruction "if" de Python avec des blocs de code :
 
     statement = False
     another_statement = True
     if statement is True:
         # faire quelque chose
         pass
-    elif another_statement is True: # else if
+    elif another_statement is True: # sinon si
         # faire autre chose
         pass
     else:
@@ -51,41 +50,40 @@ Par exemple :
 
     x = 2
     if x == 2:
-        print("x vaut deux !")
+        print("x vaut deux!")
     else:
-        print("x ne vaut pas deux.")
+        print("x n'est pas égal à deux.")
 
 Une instruction est évaluée comme vraie si l'une des conditions suivantes est correcte :
-1. La variable booléenne "True" est donnée, ou calculée à l'aide d'une expression, telle qu'une comparaison arithmétique.
+1. La variable booléenne "True" est donnée, ou calculée à partir d'une expression, telle qu'une comparaison arithmétique.
 2. Un objet qui n'est pas considéré comme "vide" est passé.
 
-Voici quelques exemples d'objets considérés comme vides :
+Voici quelques exemples d'objets qui sont considérés comme vides :
 1. Une chaîne vide : ""
 2. Une liste vide : []
-3. Le numéro zéro : 0
-4. La variable booléenne fausse : False
+3. Le nombre zéro : 0
+4. La variable booléenne false : False
 
 ### L'opérateur 'is'
 
-Contrairement au double opérateur égal "==", l'opérateur "is" ne correspond pas aux valeurs des variables, mais aux instances elles-mêmes. Par exemple :
+Contrairement au double opérateur égal "==", l'opérateur "is" ne compare pas les valeurs des variables, mais les instances elles-mêmes. Par exemple :
 
     x = [1,2,3]
     y = [1,2,3]
-    print(x == y) # imprime True
-    print(x is y) # imprime False
+    print(x == y) # Affiche True
+    print(x is y) # Affiche False
 
 ### L'opérateur "not"
 
 Utiliser "not" avant une expression booléenne l'inverse :
 
-    print(not False) # imprime True
-    print((not False) == (False)) # imprime False
+    print(not False) # Affiche True
+    print((not False) == (False)) # Affiche False
 
 Exercice
 --------
 
-Changez les variables dans la première section, afin que chaque instruction "if" se résolve en True.
-```
+Modifiez les variables dans la première section, de sorte que chaque instruction if se résolve comme True.
 
 Tutorial Code
 -------------

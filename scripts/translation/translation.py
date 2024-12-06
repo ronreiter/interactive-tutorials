@@ -86,37 +86,46 @@ async def translate_markdown_file(base_file_path: str, output_dir: str, language
         logger.info("Translating translatable content...")
         prompt = f"""
         Read the instructions below, and then translate the following content into {language}, ensuring proper Markdown formatting:
-        {translatable}.
-        
+        {translatable}
+
         **Critical Instructions**:
-        - Do not translate any text inside backticks ``. For example, `
-        - *Any text within `` should not be translated. For example `text text text` should not be translated.
-        - Do not translate comments that start with a hashtag. Example "# Text" should not be translated.
-        - Preserve Markdown formatting for headings, lists, and indentation (4 spaces for nested content).
-        - Do not translate code snippets nor comments within code snippets Example: 
-            "# Prints out the numbers 0,1,2,3,4" should not be translated. Also,
-            "    # Define our 3 functions
-                def my_function():
-                print("Hello From My Function!")" 
-                Should not be translated.
-        - Do not alter or translate code snippets enclosed in backticks (\`\`\`) or block markers.
-        - The tone should remain clear, concise, and educational, suitable for a learning platform.
-       - *AVOID ADDING "```markdown" and "```" within the file. Please make sure to remove those after translating. 
-       - Ensure technical terms like "Generators," "Decorators," or "Closures" are translated appropriately for the target audience.
+        1. **No Additional Markers**:
+           - Do not introduce any extraneous markers such as ` ```markdown `, ` ```python `, or similar at the start or end of the output.
+           - Ensure the file begins directly with the translated or preserved content, without any added formatting headers.
 
+        2. **Code Block and Inline Code Formatting**:
+           - **Preserve inline code formatting**:
+             - Code examples indented with 4 spaces must remain as-is. Do not wrap these in backticks (```).
+               - Example:
+                 ```
+                     # This will not work!
+                     one = 1
+                     two = 2
+                     hello = "hello"
 
-        **Instructions Specific to Welcome.md File**:
-        - In the `Welcome.md` file:
-        - *AVOID ADDING "```markdown" and "```" within the file. Please make sure to remove those after translating.  
-          - Verify that links, especially in `Welcome.md`, remain functional and correctly formatted.
-          - Translate chapter names into {language}, ensuring the original chapter name is preserved in parentheses and linked correctly.
-          - Use the following Markdown format for links:
-            `- [Translated Name](Original%20Name)`
-            Example:
-            `- [Bonjour, le Monde!](Hello%2C%20World%21)`
-        -
+                     print(one + two + hello)
+                 ```
+           - **Preserve triple-backtick formatting**:
+             - Code blocks already enclosed in triple backticks (e.g., ```python) must remain unchanged.
 
-        Ensure all translations are clear and concise, keeping the educational and technical context intact.
+        3. **Markdown Structure**:
+           - Ensure headings, lists, and other Markdown elements are preserved exactly as in the original content.
+           - Do not modify or remove existing Markdown syntax unless explicitly instructed.
+
+        4. **Avoid Redundant Backticks**:
+           - Do not add "```" markers to the start or end of files unless explicitly present in the original content.
+           - Avoid formatting issues caused by unnecessary backticks.
+
+        5. **Translation Scope**:
+           - Translate only the explanatory text, comments, and non-code content.
+           - Leave all code snippets, comments inside code, and text within backticks (``) untranslated.
+
+        6. **Tutorial Heading Consistency**:
+           - Ensure that headings such as `Tutorial` and `Tutorial Code` remain untranslated and retain their original formatting (e.g., `Tutorial\n--------`).
+
+        **Additional Notes**:
+        - The output file should not contain any unintended formatting elements, such as "```markdown", at the start or anywhere else unless explicitly included in the original input.
+        - Ensure the translated content is visually and structurally consistent with the source material.
         """
         try:
             completion = await client.chat.completions.create(
