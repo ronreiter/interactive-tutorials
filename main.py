@@ -99,7 +99,7 @@ def pageurl(value, language):
     if value.startswith("http"):
         return value
     else:
-        return urllib.parse.quote("/%s/%s" % (language, value.replace(' ', '_')))
+        return urllib.parse.quote("/%s/%s" % (language, value.replace(' ', '_').replace('.md', '')))
 
 
 def _wikify_one(language, pat):
@@ -148,7 +148,7 @@ def init_tutorials():
             continue
 
         if domain not in constants.DOMAIN_DATA:
-            logging.warning("skipping domain %s beacause no domain data exists" % domain)
+            logging.warning("skipping domain %s because no domain data exists" % domain)
             continue
 
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
@@ -177,17 +177,17 @@ def init_tutorials():
 
                 tutorial_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)
 
-                tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n")
+                tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n" )
 
                 # create links by looking at all lines that are not code lines
                 stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
-                links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(stripped_text)]
-                tutorial_dict["links"] = [(x, pageurl(x, language)) for x in links]
+                links = [x[:-3] for x in tutorials if x.endswith(".md")]  # Use English file names for links
+                tutorial_dict["links"] = [(link[:-3], pageurl(link[:-3], language)) for link in tutorials if link.endswith(".md")]
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
                     text, code, output, solution = tutorial_sections[0]
-                    tutorial_dict["page_title"] = tutorial
+                    tutorial_dict["page_title"] = tutorial_file[:-3]
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)
                     tutorial_dict["output"] = untab(output)
