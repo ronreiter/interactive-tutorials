@@ -3,7 +3,7 @@ services:
   app:
     build: ./
     ports:
-      - "5000:5000"
+      - "5001:5000"
     volumes: ['./:/usr/src/app']
     environment:
     - DEFAULT_DOMAIN=learnpython.org

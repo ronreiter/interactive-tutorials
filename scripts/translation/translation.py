@@ -2,7 +2,7 @@ import asyncio
 import logging
 import os
 import re
-from pathlib import Path
+from pathlib import Path, PosixPath
 from openai import AsyncOpenAI
 from typing import Optional
 from scripts.translation.languages import languages
@@ -96,6 +96,7 @@ async def translate_markdown_file(base_file_path: str, output_dir: str, language
         **Instructions Specific to Welcome.md File**:
         - **IMPORTANT**: Always format links as `- [Translated Name](Original%20Name)` to ensure consistency and functionality.
           Example: `- [Bonjour, le Monde!](Hello%2C%20World%21)`
+        - **IMPORTANT**: *Exclude the Data Science Tutorial* Section completely.
         - Ensure the file does not include unintended formatting elements, such as "```markdown" or similar, at the start or elsewhere.
         - Translate chapter names into {language}, keeping the original chapter name in parentheses with the correct link format as shown
 
@@ -167,6 +168,8 @@ async def main():
         return
 
     markdown_files = list(input_dir_path.glob("*.md"))
+    markdown_files.remove(PosixPath('../tutorials/learnpython.org/en/Numpy Arrays.md'))
+    markdown_files.remove(PosixPath('../tutorials/learnpython.org/en/Pandas Basics.md'))
     if not markdown_files:
         logger.warning(f"No markdown files found in directory: {input_dir}")
         return
