@@ -35,9 +35,6 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [Building objects](https://codingforkids.io/play/python/intro-level6)
 - [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
 
-### Data Science Tutorials
-- [[Numpy Arrays]]
-- [[Pandas Basics]]
 
 ### Advanced Tutorials
 
