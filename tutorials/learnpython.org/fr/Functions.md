@@ -1,51 +1,48 @@
-Tutorial
---------
+# Fonctions
+### Qu'est-ce qu'une Fonction ?
 
-### Qu'est-ce que les fonctions?
+Les fonctions sont un moyen pratique de diviser votre code en blocs utiles, nous permettant de structurer notre code, de le rendre plus lisible, de le réutiliser et de gagner du temps. De plus, les fonctions sont un élément clé pour définir des interfaces afin que les programmeurs puissent partager leur code.
 
-Les fonctions sont un moyen pratique de diviser votre code en blocs utiles, nous permettant d'organiser notre code, de le rendre plus lisible, de le réutiliser et de gagner du temps. De plus, les fonctions sont un moyen clé de définir des interfaces pour que les programmeurs puissent partager leur code.
-
-### Comment écrit-on des fonctions en Python?
+### Comment écrire des fonctions en Python ?
 
 Comme nous l'avons vu dans les tutoriels précédents, Python utilise des blocs.
 
 Un bloc est une zone de code écrite au format :
 
-    block_head:
-        1st block line
-        2nd block line
+    en-tête_du_bloc:
+        1ère ligne du bloc
+        2ème ligne du bloc
         ...
 
-Où une ligne de bloc est plus de code Python (même un autre bloc), et le bloc de tête est du format suivant :
-block_keyword block_name(argument1,argument2, ...)
-Les mots-clés de bloc que vous connaissez déjà sont "if", "for" et "while".
+Où une ligne de bloc est plus de code Python (voire un autre bloc), et l'en-tête du bloc est au format suivant :  
+mot_cle_bloc nom_du_bloc(argument1, argument2, ...)
+Les mots-clés de bloc que vous connaissez déjà sont "if", "for", et "while".
 
-Les fonctions en Python sont définies en utilisant le mot-clé de bloc "def", suivi du nom de la fonction comme nom du bloc.
-Par exemple :
+Les fonctions en Python sont définies à l'aide du mot-clé de bloc "def", suivi du nom de la fonction comme nom du bloc. Par exemple :
 
     def my_function():
         print("Hello From My Function!")
 
 
-Les fonctions peuvent également recevoir des arguments (les variables passées de l'appelant à la fonction).
+Les fonctions peuvent également recevoir des arguments (des variables passées de l'appelant à la fonction).  
 Par exemple :
 
     def my_function_with_args(username, greeting):
-        print("Hello, %s, From My Function!, I wish you %s"%(username, greeting))
+        print("Hello, %s , From My Function!, I wish you %s"%(username, greeting))
 
 
-Les fonctions peuvent retourner une valeur à l'appelant, en utilisant le mot-clé "return".
+Les fonctions peuvent retourner une valeur à l'appelant, en utilisant le mot-clé 'return'.  
 Par exemple :
 
     def sum_two_numbers(a, b):
         return a + b
 
-### Comment appelle-t-on des fonctions en Python?
+### Comment appeler des fonctions en Python ?
 
-Il suffit d'écrire le nom de la fonction suivi de (), en plaçant tous les arguments requis entre les parenthèses.
+Il suffit d'écrire le nom de la fonction suivi de (), en plaçant les arguments requis entre les parenthèses.  
 Par exemple, appelons les fonctions écrites ci-dessus (dans l'exemple précédent) :
 
-    # Définissons nos 3 fonctions
+    # Définir nos 3 fonctions
     def my_function():
         print("Hello From My Function!")
 
@@ -55,26 +52,26 @@ Par exemple, appelons les fonctions écrites ci-dessus (dans l'exemple précéde
     def sum_two_numbers(a, b):
         return a + b
 
-    # afficher un simple salut
+    # imprimer une salutation simple
     my_function()
 
-    # affiche - "Hello, John Doe, From My Function!, I wish you a great year!"
+    # imprime - "Hello, John Doe, From My Function!, I wish you a great year!"
     my_function_with_args("John Doe", "a great year!")
 
-    # après cette ligne, x contiendra la valeur 3!
-    x = sum_two_numbers(1,2)
+    # après cette ligne x contiendra la valeur 3 !
+    x = sum_two_numbers(1,2)  
 
 
-Exercise
+Exercice
 --------
 
-Dans cet exercice, vous utiliserez une fonction existante et ajouterez la vôtre pour créer un programme entièrement fonctionnel.
+Dans cet exercice, vous utiliserez une fonction existante et en ajouterez une propre pour créer un programme pleinement fonctionnel.
 
 1. Ajoutez une fonction nommée `list_benefits()` qui retourne la liste suivante de chaînes de caractères : "More organized code", "More readable code", "Easier code reuse", "Allowing programmers to share and connect code together"
 
-2. Ajoutez une fonction nommée `build_sentence(info)` qui reçoit un seul argument contenant une chaîne de caractères et retourne une phrase commençant par la chaîne donnée et se terminant par la chaîne " is a benefit of functions!"
+2. Ajoutez une fonction nommée `build_sentence(info)` qui reçoit un argument contenant une chaîne de caractères et retourne une phrase commençant par la chaîne donnée et se terminant par la chaîne " is a benefit of functions!"
 
-3. Exécutez et voyez toutes les fonctions fonctionner ensemble!
+3. Exécutez et voyez toutes les fonctions travailler ensemble!
 
 Tutorial Code
 -------------
