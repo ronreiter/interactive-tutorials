@@ -27,11 +27,6 @@ def load_index_json(language_code: str) -> dict:
         return json.load(f)
 
 
-def replace_header(content: str, translated_title: str) -> str:
-    header_pattern = re.compile(r"^Tutorial\n--------", re.MULTILINE)
-    return header_pattern.sub(f"{translated_title}\n--------", content)
-
-
 async def translate_welcome_md(base_file_path: str, output_file_path: str, language_code: str) -> Optional[str]:
     index_json = load_index_json(language_code)
     if not index_json:
@@ -47,16 +42,22 @@ async def translate_welcome_md(base_file_path: str, output_file_path: str, langu
 
     # Prepare the OpenAI API prompt
     prompt = f"""
-    Translate the following `welcome.md` content into {language_code}. Follow these specific rules:
-    - **Markdown Links**: Always format links as `- [Translated Name](Original%20Name)`.
-    - **Remove the "Data Science Tutorials" section entirely.**
-    - **Preserve Code Formatting**: Ensure all code snippets and inline code remain unchanged.
-    - **Formatting**:
-      - Keep headings, lists, and other Markdown structure intact.
-      - Remove markers like "```markdown" or unnecessary backticks.
-    - Translate only explanatory text, comments, and non-code content.
-    - *Do not include the following sections in the Welcome.md file:*
-      - ### Other Python Tutorials and ### Contributing Tutorials
+    Translate the following `welcome.md` content into {language_code}. Follow these precise rules:
+
+    - **Markdown Links Format**:
+      - Always format links like this: `- [Translated Name](Original%20Name)` 
+      - Do not translate anything inside the parentheses `(Original%20Name)`.
+      - Remove ```markdown or ``` from the text.
+
+    - **Section Removal**:
+      - Completely remove the "Data Science Tutorials" section.
+      - Do not add or translate sections that are not present in the original file.
+
+    - **Formatting Rules**:
+      - Keep all code examples intact without changes.
+      - Do not translate URLs or alter Markdown links.
+      - Remove triple backticks (` ``` `) used in code blocks.
+      - Maintain the original structure of headings, lists, and content.
 
     Content:
     {content}
@@ -87,8 +88,9 @@ async def translate_welcome_md(base_file_path: str, output_file_path: str, langu
 async def translate_tutorial(base_file_path: str, output_file_path: str, language_code: str) -> Optional[str]:
     index_json = load_index_json(language_code)
     english_title = Path(base_file_path).stem
-    translated_title = None
 
+    # Look for translated title
+    translated_title = None
     for section_titles in index_json.values():
         if english_title in section_titles:
             translated_title = section_titles[english_title]
@@ -106,7 +108,7 @@ async def translate_tutorial(base_file_path: str, output_file_path: str, languag
         logger.error(f"Tutorial file not found: {base_file_path}")
         return None
 
-    # Split the content using the correct logic
+    # Split the content
     split_point = re.search(r"(?<=\n)Tutorial Code\n-------------", content)
     translatable = content[:split_point.start()].strip() if split_point else content
     non_translatable = content[split_point.start():].strip() if split_point else ""
@@ -121,8 +123,12 @@ async def translate_tutorial(base_file_path: str, output_file_path: str, languag
         
             def function(self):
                 print("This is a message inside the class.")
-    Should be remain untouched.             
-    - Remove the "Tutorial--------" part in the beginning of the pge
+    Should be remain untouched.
+    - **Markdown Headers and Formatting**:
+  - Translate all Markdown headings such as `#`, `##`, `###`, and lists `-` without any changes.
+  - Keep the structure of headers, sections, and lists intact.
+    - Keep the "Tutorial--------" part untouched in its original langauge.
+    - "Exercise--------" should maintain same structure but translated to {language_code}.
     - **Preserve Code Formatting**:
       - Keep code examples as they are, preserving indentation.
       - Do not translate code blocks enclosed in triple backticks (e.g., ```python).
@@ -148,7 +154,7 @@ async def translate_tutorial(base_file_path: str, output_file_path: str, languag
         logger.error(f"Error translating tutorial file {base_file_path}: {e}")
         return None
 
-    final_content = f"# {translated_title}\n{translated_text}\n\n{non_translatable}"
+    final_content = f"{translated_text}\n\n{non_translatable}"
 
     try:
         with open(output_file_path, "w", encoding="utf-8") as f:
@@ -195,9 +201,19 @@ async def main():
         if welcome_file.exists() and not welcome_output.exists():
             await translate_welcome_md(str(welcome_file), str(welcome_output), language_code)
 
-        tutorial_files = [file for file in markdown_files if file.name != "Welcome.md"]
+        excluded_tutorials = {"Numpy Arrays", "Pandas Basics"}
+
+        # Filter tutorial files
+        tutorial_files = [
+            file for file in markdown_files
+            if file.stem not in excluded_tutorials and file.name != "Welcome.md"
+        ]
+
+        # Process and translate each file
         for tutorial_file in tutorial_files:
+            logger.debug(f"Processing tutorial file: {tutorial_file.stem}")
             output_file_path = output_dir / tutorial_file.name
+
             if not output_file_path.exists():
                 await translate_tutorial(str(tutorial_file), str(output_file_path), language_code)
 

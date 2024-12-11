@@ -1,56 +1,61 @@
-# Opérateurs de base
+Tutorial
+--------
+
 Cette section explique comment utiliser les opérateurs de base en Python.
 
-### Opérateurs Arithmétiques
+### Arithmetic Operators       
 
-Tout comme dans d'autres langages de programmation, les opérateurs d'addition, de soustraction, de multiplication et de division peuvent être utilisés avec les nombres.
+Tout comme dans d'autres langages de programmation, les opérateurs d'addition, de soustraction, de multiplication et de division peuvent être utilisés avec des nombres.
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
-Essayez de prédire quel sera le résultat. Est-ce que Python suit l'ordre des opérations ?
+Essayez de prédire quelle sera la réponse. Python suit-il l'ordre des opérations ?
 
-Un autre opérateur disponible est l'opérateur modulo (%) qui retourne le reste entier de la division. dividende % diviseur = reste.
+Un autre opérateur disponible est l'opérateur modulo (%) qui renvoie le reste entier de la division. dividende % diviseur = reste.
 
     remainder = 11 % 3
     print(remainder)
 
-Utiliser deux symboles de multiplication permet de créer une relation de puissance.
+Utiliser deux symboles de multiplication permet d'établir une relation de puissance.
 
     squared = 7 ** 2
     cubed = 2 ** 3
     print(squared)
     print(cubed)
 
-### Utilisation des Opérateurs avec les Chaînes
+### Using Operators with Strings
 
-Python permet de concaténer des chaînes en utilisant l'opérateur d'addition :
+Python supporte la concaténation de chaînes de caractères en utilisant l'opérateur d'addition :
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
 
-Python permet également de multiplier les chaînes pour former une chaîne avec une séquence répétée :
+Python supporte également la multiplication de chaînes de caractères pour former une chaîne avec une séquence répétée :
 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
 
-### Utilisation des Opérateurs avec les Listes
+### Using Operators with Lists
 
-Les listes peuvent être jointes avec les opérateurs d'addition :
+Les listes peuvent être jointes avec l'opérateur d'addition :
 
     even_numbers = [2,4,6,8]
     odd_numbers = [1,3,5,7]
     all_numbers = odd_numbers + even_numbers
     print(all_numbers)
 
-Tout comme pour les chaînes, Python permet de former de nouvelles listes avec une séquence répétée en utilisant l'opérateur de multiplication :
+Tout comme pour les chaînes, Python supporte la formation de nouvelles listes avec une séquence répétée en utilisant l'opérateur de multiplication :
 
     print([1,2,3] * 3)
 
-Exercice
+Exercise
 --------
 
-L'objectif de cet exercice est de créer deux listes appelées `x_list` et `y_list`, qui contiennent 10 instances des variables `x` et `y`, respectivement. Vous devez également créer une liste appelée `big_list`, qui contient les variables `x` et `y`, 10 fois chacune, en concaténant les deux listes que vous avez créées.
+L'objectif de cet exercice est de créer deux listes appelées `x_list` et `y_list`,
+qui contiennent 10 instances des variables `x` et `y`, respectivement.
+Vous devez également créer une liste appelée `big_list`, qui contient
+les variables `x` et `y`, 10 fois chacune, en concaténant les deux listes que vous avez créées.
 
 Tutorial Code
 -------------

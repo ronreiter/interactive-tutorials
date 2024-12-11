@@ -25,6 +25,8 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Classes and Objects]]
 - [[Dictionaries]]
 - [[Modules and Packages]]
+- [[Input and Output]]
+- [[CsvPython]]
 
 ### Coding for Kids
 - [Starting Out](https://codingforkids.io/play/python/intro-level1)
