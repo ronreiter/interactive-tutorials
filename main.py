@@ -18,7 +18,6 @@ from ideone import Ideone
 
 import constants
 
-
 courses = json.load(open("courses.json"))
 
 # Flask app
@@ -49,16 +48,35 @@ if __name__ == '__main__':
 
 LANGUAGES = {
     "en": "English",
-    "pl": "Polski",
-    "fa": "فارسی",
     "es": "Español",
-    "it": "Italiano",
-    "de": "Deutsch",
-    "cn": "普通话",
     "fr": "Français",
+    "de": "Deutsch",
+    "zh": "中文",
+    "he": "עברית",
+    "ar": "العربية",
+    "uk": "Українська",
     "pt": "Português",
-    "tr": "Türkçe",
+    "hi": "हिन्दी",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
     "nl": "Nederlands",
+    "sv": "Svenska",
+    "pl": "Polski",
+    "ru": "Русский",
+    "da": "Dansk",
+    "fi": "Suomi",
+    "no": "Norsk",
+    "tr": "Türkçe",
+    "el": "Ελληνικά",
+    "th": "ไทย",
+    "cs": "Čeština",
+    "hu": "Magyar",
+    "ro": "Română",
+    "bg": "Български",
+    "id": "Bahasa Indonesia",
+    "ms": "Bahasa Melayu",
+    "vi": "Tiếng Việt",
 }
 
 tutorial_data = {}
@@ -158,6 +176,20 @@ def init_tutorials():
             if not os.path.isdir(tutorials_path):
                 continue
 
+                # Load translated titles from index.json
+            index_file_path = os.path.join(tutorials_path, "index.json")
+            try:
+                with open(index_file_path, "r", encoding="utf-8") as f:
+                    translated_titles = json.load(f)
+                    # Flatten the translated titles dictionary
+                    translated_titles = {
+                        key: value for section in translated_titles.values() for key, value in section.items()
+                    }
+                logging.info(f"Loaded index.json for language '{language}' from {index_file_path}")
+            except FileNotFoundError:
+                logging.error(f"index.json not found for language '{language}' at {index_file_path}, skipping.")
+                translated_titles = {}
+
             tutorials = os.listdir(tutorials_path)
 
             # place the index file first
@@ -179,6 +211,10 @@ def init_tutorials():
 
                 tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n" )
 
+                # Assign translated or fallback title
+                localized_title = translated_titles.get(tutorial, tutorial)
+                tutorial_dict["page_title"] = localized_title
+
                 # create links by looking at all lines that are not code lines
                 stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
                 links = [x[:-3] for x in tutorials if x.endswith(".md")]  # Use English file names for links
@@ -187,7 +223,7 @@ def init_tutorials():
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
                     text, code, output, solution = tutorial_sections[0]
-                    tutorial_dict["page_title"] = tutorial_file[:-3]
+                    tutorial_dict["page_title"] = localized_title
                     tutorial_dict["text"] = wikify(text, language)
                     tutorial_dict["code"] = untab(code)
                     tutorial_dict["output"] = untab(output)

@@ -26,7 +26,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Dictionaries]]
 - [[Modules and Packages]]
 - [[Input and Output]]
-- [[CsvPython]]
+
 
 ### Coding for Kids
 - [Starting Out](https://codingforkids.io/play/python/intro-level1)
@@ -53,6 +53,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Closures]]
 - [[Decorators]]
 - [[Map, Filter, Reduce]]
+- [[Parsing CSV Files]]
 
 ### Other Python Tutorials
 

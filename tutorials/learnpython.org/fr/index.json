@@ -1,42 +1,42 @@
 {
     "basics": {
         "Hello, World!": "Bonjour, le monde !",
-        "Variables and Types": "Variables et types",
+        "Variables and Types": "Variables et Types",
         "Lists": "Listes",
         "Basic Operators": "Opérateurs de base",
-        "String Formatting": "Mise en forme des chaînes",
-        "Basic String Operations": "Opérations de base sur les chaînes",
+        "String Formatting": "Mise en forme de chaînes",
+        "Basic String Operations": "Opérations de base sur les chaînes de caractères",
         "Conditions": "Conditions",
         "Loops": "Boucles",
         "Functions": "Fonctions",
         "Classes and Objects": "Classes et objets",
         "Dictionaries": "Dictionnaires",
         "Modules and Packages": "Modules et Packages",
-        "Input and Output": "Entrée et Sortie",
-        "CsvPython": "CsvPython"
+        "Input and Output": "Entrée et Sortie"
     },
     "coding-for-kids": {
         "Starting Out": "Commencer",
-        "Movement with Functions": "Mouvement avec des fonctions",
-        "Collecting items": "Collection d'objets",
+        "Movement with Functions": "Mouvement avec des Fonctions",
+        "Collecting items": "Collection d'articles",
         "Pushing objects": "Pousser des objets",
         "Printing on screen": "Impression à l'écran",
-        "Building objects": "Construire des objets",
+        "Building objects": "Construction d'objets",
         "Apply what you've learned": "Appliquez ce que vous avez appris"
     },
     "advanced": {
         "Generators": "Générateurs",
-        "List Comprehensions": "Compréhensions de liste",
-        "Lambda functions": "Fonctions lambda",
-        "Multiple Function Arguments": "Arguments multiples de fonction",
+        "List Comprehensions": "Compréhensions de Liste",
+        "Lambda functions": "Fonctions Lambda",
+        "Multiple Function Arguments": "Arguments de Fonction Multiples",
         "Regular Expressions": "Expressions Régulières",
-        "Exception Handling": "Gestion des Exceptions",
+        "Exception Handling": "Gestion des exceptions",
         "Sets": "Ensembles",
         "Serialization": "Sérialisation",
         "Partial functions": "Fonctions partielles",
-        "Code Introspection": "Introspection du code",
+        "Code Introspection": "Inspection de code",
         "Closures": "Fermetures",
         "Decorators": "Décorateurs",
-        "Map, Filter, Reduce": "Map, Filter, Reduce"
+        "Map, Filter, Reduce": "Carte, Filtre, Réduire",
+        "Parsing CSV Files": "Analyse des fichiers CSV"
     }
 }

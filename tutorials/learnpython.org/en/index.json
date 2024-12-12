@@ -12,8 +12,7 @@
         "Classes and Objects": "Classes and Objects",
         "Dictionaries": "Dictionaries",
         "Modules and Packages": "Modules and Packages",
-        "Input and Output": "Input and Output",
-        "CsvPython": "CsvPython"
+        "Input and Output": "Input and Output"
     },
     "coding-for-kids": {
         "Starting Out": "Starting Out",
@@ -37,7 +36,8 @@
         "Code Introspection": "Code Introspection",
         "Closures": "Closures",
         "Decorators": "Decorators",
-        "Map, Filter, Reduce": "Map, Filter, Reduce"
+        "Map, Filter, Reduce": "Map, Filter, Reduce",
+        "Parsing CSV Files": "Parsing CSV Files"
     },
     "other-tutorials": {
         "DataCamp": "DataCamp"
