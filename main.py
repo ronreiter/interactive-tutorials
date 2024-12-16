@@ -79,6 +79,16 @@ LANGUAGES = {
     "vi": "Tiếng Việt",
 }
 
+CODING_FOR_KIDS_TITLES = [
+    "Starting Out",
+    "Movement with Functions",
+    "Collecting items",
+    "Pushing objects",
+    "Printing on screen",
+    "Building objects",
+    "Apply what you've learned"
+]
+
 tutorial_data = {}
 
 
@@ -215,10 +225,14 @@ def init_tutorials():
                 localized_title = translated_titles.get(tutorial, tutorial)
                 tutorial_dict["page_title"] = localized_title
 
-                # create links by looking at all lines that are not code lines
-                stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
-                links = [x[:-3] for x in tutorials if x.endswith(".md")]  # Use English file names for links
-                tutorial_dict["links"] = [(link[:-3], pageurl(link[:-3], language)) for link in tutorials if link.endswith(".md")]
+                # Create links based on English titles found in index.json
+                links = [key for key in translated_titles.keys() if key not in CODING_FOR_KIDS_TITLES]
+
+                # Assign only non-codingforkids links
+                tutorial_dict["links"] = [
+                    (translated_titles.get(link, link), pageurl(link, language))
+                    for link in links
+                ]
 
                 tutorial_sections = sections.findall(tutorial_dict["text"])
                 if tutorial_sections:
