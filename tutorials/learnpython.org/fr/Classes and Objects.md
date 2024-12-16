@@ -1,9 +1,9 @@
 Tutorial
 -----------------
 
-Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects.
+Les objets sont une encapsulation de variables et de fonctions en une seule entité. Les objets obtiennent leurs variables et fonctions à partir des classes. Les classes sont essentiellement un modèle pour créer vos objets.
 
-A very basic class would look something like this:
+Une classe très basique ressemblerait à ceci :
 
     class MyClass:
         variable = "blah"
@@ -11,7 +11,7 @@ A very basic class would look something like this:
         def function(self):
             print("This is a message inside the class.")
 
-We'll explain why you have to include that "self" as a parameter a little bit later.  First, to assign the above class(template) to an object you would do the following:
+Nous expliquerons pourquoi vous devez inclure ce "self" comme paramètre un peu plus tard. Tout d'abord, pour assigner la classe (modèle) ci-dessus à un objet, vous feriez ce qui suit :
 
     class MyClass:
         variable = "blah"
@@ -21,11 +21,11 @@ We'll explain why you have to include that "self" as a parameter a little bit la
 
     myobjectx = MyClass()
 
-Now the variable "myobjectx" holds an object of the class "MyClass" that contains the variable and the function defined within the class called "MyClass".
+Maintenant, la variable "myobjectx" contient un objet de la classe "MyClass" qui contient la variable et la fonction définies dans la classe appelée "MyClass".
 
-### Accessing Object Variables
+### Accéder aux variables de l'objet
 
-To access the variable inside of the newly created object "myobjectx" you would do the following:
+Pour accéder à la variable à l'intérieur du nouvel objet créé "myobjectx", vous feriez ce qui suit :
 
     class MyClass:
         variable = "blah"
@@ -37,7 +37,7 @@ To access the variable inside of the newly created object "myobjectx" you would 
 
     myobjectx.variable
 
-So for instance the below would output the string "blah":
+Par exemple, ce qui suit afficherait la chaîne "blah" :
 
     class MyClass:
         variable = "blah"
@@ -49,7 +49,7 @@ So for instance the below would output the string "blah":
 
     print(myobjectx.variable)
 
-You can create multiple different objects that are of the same class(have the same variables and functions defined).  However, each object contains independent copies of the variables defined in the class.  For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:
+Vous pouvez créer plusieurs objets différents de la même classe (ayant les mêmes variables et fonctions définies). Cependant, chaque objet contient des copies indépendantes des variables définies dans la classe. Par exemple, si nous devions définir un autre objet avec la classe "MyClass" et ensuite modifier la chaîne dans la variable ci-dessus :
 
     class MyClass:
         variable = "blah"
@@ -62,14 +62,13 @@ You can create multiple different objects that are of the same class(have the sa
 
     myobjecty.variable = "yackity"
 
-    # Then print out both values
+    # Puis imprimez les deux valeurs
     print(myobjectx.variable)
     print(myobjecty.variable)
 
+### Accéder aux fonctions de l'objet
 
-### Accessing Object Functions
-
-To access a function inside of an object you use notation similar to accessing a variable:
+Pour accéder à une fonction à l'intérieur d'un objet, vous utilisez une notation similaire à celle d'accès à une variable :
 
     class MyClass:
         variable = "blah"
@@ -81,12 +80,11 @@ To access a function inside of an object you use notation similar to accessing a
 
     myobjectx.function()
 
-The above would print out the message, "This is a message inside the class."
+Ce qui précède afficherait le message, "This is a message inside the class."
 
 ### __init__()
 
-The `__init__()` function, is a special function that is called when the class is being initiated.
-It's used for assigning values in a class.
+La fonction `__init__()`, est une fonction spéciale qui est appelée lorsque la classe est en cours d'initialisation. Elle est utilisée pour assigner des valeurs dans une classe.
 
     class NumberHolder:
        
@@ -97,14 +95,12 @@ It's used for assigning values in a class.
            return self.number
 
     var = NumberHolder(7)
-    print(var.returnNumber()) #Prints '7'
+    print(var.returnNumber()) # Affiche '7'
     
-Exercise
+Exercice
 --------
 
-We have a class defined for vehicles. Create two new vehicles called car1 and car2.
-Set car1 to be a red convertible worth $60,000.00 with a name of Fer,
-and car2 to be a blue van named Jump worth $10,000.00.
+Nous avons une classe définie pour les véhicules. Créez deux nouveaux véhicules appelés car1 et car2. Réglez car1 pour être un cabriolet rouge valant 60 000,00 $ avec un nom de Fer, et car2 pour être un van bleu nommé Jump valant 10 000,00 $.
 
 Tutorial Code
 -------------
