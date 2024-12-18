@@ -179,6 +179,10 @@ def init_tutorials():
             logging.warning("skipping domain %s because no domain data exists" % domain)
             continue
 
+        # Ensure English tutorials are preloaded
+        if "en" not in tutorial_data[domain]:
+            tutorial_data[domain]["en"] = {}
+
         for language in os.listdir(os.path.join(os.path.dirname(__file__), "tutorials", domain)):
             tutorial_data[domain][language] = {}
 
@@ -186,12 +190,11 @@ def init_tutorials():
             if not os.path.isdir(tutorials_path):
                 continue
 
-                # Load translated titles from index.json
+            # Load translated titles from index.json
             index_file_path = os.path.join(tutorials_path, "index.json")
             try:
                 with open(index_file_path, "r", encoding="utf-8") as f:
                     translated_titles = json.load(f)
-                    # Flatten the translated titles dictionary
                     translated_titles = {
                         key: value for section in translated_titles.values() for key, value in section.items()
                     }
@@ -227,36 +230,67 @@ def init_tutorials():
 
                 # Create links based on English titles found in index.json
                 links = [key for key in translated_titles.keys() if key not in CODING_FOR_KIDS_TITLES]
-
-                # Assign only non-codingforkids links
                 tutorial_dict["links"] = [
                     (translated_titles.get(link, link), pageurl(link, language))
                     for link in links
                 ]
 
-                tutorial_sections = sections.findall(tutorial_dict["text"])
-                if tutorial_sections:
-                    text, code, output, solution = tutorial_sections[0]
-                    tutorial_dict["page_title"] = localized_title
-                    tutorial_dict["text"] = wikify(text, language)
-                    tutorial_dict["code"] = untab(code)
-                    tutorial_dict["output"] = untab(output)
-                    tutorial_dict["solution"] = untab(solution)
-                    tutorial_dict["is_tutorial"] = True
+                # Preload English tutorial if needed
+                if language != "en":
+                    english_tutorial_data = tutorial_data[domain]["en"].get(tutorial, {})
+
+                    if not english_tutorial_data:
+                        english_tutorial_path = os.path.join(
+                            os.path.dirname(__file__), "tutorials", domain, "en", f"{tutorial}.md"
+                        )
+                        if os.path.isfile(english_tutorial_path):
+                            english_text = open(english_tutorial_path, encoding="utf-8").read()
+                            sections_match = sections.findall(english_text)
+                            if sections_match:
+                                _, code, output, solution = sections_match[0]
+                                english_tutorial_data = {
+                                    "code": untab(code),
+                                    "output": untab(output),
+                                    "solution": untab(solution),
+                                }
+                                # Store preloaded English content
+                                tutorial_data[domain]["en"][tutorial] = english_tutorial_data
                 else:
-                    if tutorial_file != "Welcome.md":
-                        logging.warning("File %s/%s/%s is not a tutorial", domain, language, tutorial_file)
+                    # Extract sections from the current English file
+                    sections_match = sections.findall(tutorial_dict["text"])
+                    if sections_match:
+                        _, code, output, solution = sections_match[0]
+                        tutorial_data[domain]["en"][tutorial] = {
+                            "code": untab(code),
+                            "output": untab(output),
+                            "solution": untab(solution),
+                        }
+                    english_tutorial_data = tutorial_data[domain]["en"].get(tutorial, {})
+
+                # Assign sections from English content
+                tutorial_dict["code"] = english_tutorial_data.get("code", "")
+                tutorial_dict["output"] = english_tutorial_data.get("output", "")
+                tutorial_dict["solution"] = english_tutorial_data.get("solution", "")
+
+                # Assign localized tutorial content
+                tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
+                tutorial_dict["is_tutorial"] = bool(
+                    tutorial_dict["code"] or tutorial_dict["output"] or tutorial_dict["solution"]
+                )
+
+                if not tutorial_dict["is_tutorial"] and tutorial_file != "Welcome.md":
+                    logging.warning("File %s/%s/%s is not a tutorial", domain, language, tutorial_file)
                     tutorial_dict["page_title"] = ""
                     tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
                     tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
-                    tutorial_dict["is_tutorial"] = False
 
+                # Update links and navigation
                 for link in links:
                     if not link in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
-                            "page_title" : link,
+                            "page_title": link,
                             "text": contributing_tutorials,
-                            "code": ""
+                            "code": "",
                         }
 
                     if not "back_chapter" in tutorial_data[domain][language][link]:
@@ -272,8 +306,6 @@ def init_tutorials():
                     if page_index < (num_links - 1):
                         if not "next_chapter" in tutorial_data[domain][language][link]:
                             tutorial_data[domain][language][link]["next_chapter"] = links[page_index + 1].replace(" ", "_")
-
-
 init_tutorials()
 
 
