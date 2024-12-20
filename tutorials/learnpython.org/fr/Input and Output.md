@@ -1,0 +1,1 @@
+There is no content provided for translation. If you have specific text that needs to be translated following the outlined rules, please provide that content, and I'll be happy to assist!

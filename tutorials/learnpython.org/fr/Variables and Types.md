@@ -1,114 +1,66 @@
-Tutorial
---------
+Python est complètement orienté objet, et n'est pas "typé statiquement". Vous n'avez pas besoin de déclarer des variables avant de les utiliser, ni de déclarer leur type. Chaque variable en Python est un objet.
 
-Python est complètement orienté objet et non "typé statiquement". Vous n'avez pas besoin de declarer des variables avant de les utiliser, ni de déclarer leur type. Chaque variable en Python est un objet.
+Ce tutoriel couvrira quelques types de base de variables.
 
-Ce tutoriel passe en revue quelques types essentiels de variables.
+### Numbers
+Python prend en charge deux types de nombres - les entiers (nombres entiers) et les nombres à virgule flottante (décimaux). (Il prend également en charge les nombres complexes, qui ne seront pas expliqués dans ce tutoriel).
 
-### Nombres
-Python prend en charge deux types de nombres - les entiers et les nombres à virgule flottante. (Il prend en charge également les nombres complexes, qui ne seront pas expliqués dans ce tutoriel).
+Pour définir un entier, utilisez la syntaxe suivante :
 
-Pour définir un entier, utilisez la syntaxe suivante&nbsp;:
+    myint = 7
+    print(myint)
 
-    monint = 7
-    print(monint)
+Pour définir un nombre à virgule flottante, vous pouvez utiliser l'une des notations suivantes :
 
-Pour définir un nombre à virgule flottante, vous pouvez utiliser l'une des notations suivantes&nbsp;:
+    myfloat = 7.0
+    print(myfloat)
+    myfloat = float(7)
+    print(myfloat)
 
-    monfloat = 7.0
-    print(monfloat)
-    monfloat = float(7)
-    print(monfloat)
+### Strings
 
-### Chaînes de caractères
+Les chaînes de caractères sont définies soit avec un guillemet simple soit un guillemet double.
 
-Les chaînes de caractères sont définies avec des guillemets (anglais) soit simples, soit doubles.
+    mystring = 'hello'
+    print(mystring)
+    mystring = "hello"
+    print(mystring)
 
-    monstr = 'salut'
-    print(monstr)
-    monstr = "salut"
-    print(monstr)
+La différence entre les deux est que l'utilisation de guillemets doubles facilite l'inclusion d'apostrophes (alors que cela terminerait la chaîne si des guillemets simples étaient utilisés).
 
-La différence entre les deux est que l'utilisation de guillemets doubles facilite l'inclusion des apostrophes (alors qu'elles termineraient la chaîne si l'on utilisait des guillemets simples) :
-
-    monstr = "Je ne m'inquiète pas des apostrophes"
-    print(monstr)
+    mystring = "Don't worry about apostrophes"
+    print(mystring)
     
-On peut toutefois include des `"` ou `'` dans l'une ou l'autre version en utilisant le caractère d'échappement `\` (barre oblique inversée ou "antislash"), comme par exemple `"Il m'a dit \"Bonjour\"."` De même on peut inclure des retours à la ligne en utilisant `"\n"`, et des caractères Unicode. Celà dépasse le cadre de ce tutoriel, on pourra se référer à la [documentation de Python](https://www.afpy.org/doc/python/3.6/tutorial/introduction.html#strings "Les chaînes de caractères dans le Tutoriel Python").
+Il existe des variations supplémentaires pour définir des chaînes qui facilitent l'inclusion d'éléments tels que les retours chariot, les barres obliques inverses et les caractères Unicode. Ceux-ci dépassent le cadre de ce tutoriel, mais sont couverts dans la [documentation Python](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial").
 
-Des opérateurs simples peuvent être appliqués aux nombres et aux chaînes&nbsp;:
+Les opérateurs simples peuvent être exécutés sur les nombres et les chaînes :
 
-    un = 1
-    deux = 2
-    trois = un + deux
-    print(trois)
+    one = 1
+    two = 2
+    three = one + two
+    print(three)
 
     hello = "hello"
     world = "world"
     helloworld = hello + " " + world
     print(helloworld)
 
-Les affectations peuvent être effectuées à plus d'une variable "simultanément" sur la même ligne comme ceci&nbsp;:
+Les affectations peuvent être effectuées sur plus d'une variable "simultanément" sur la même ligne comme ceci
 
     a, b = 3, 4
-    print(a,b)
+    print(a, b)
 
-Ceci est surtout pratique pour permuter deux valeurs (en faisant `a,b = b,a`).
+Le mélange d'opérateurs entre les nombres et les chaînes n'est pas pris en charge :
 
-Le mélange d'opérandes de type numérique et chaînes de caractères n'est pas pris en charge&nbsp;:
-
-    # Ceci ne fonctionnera pas !
-    un = 1
-    deux = 2
+    # Cela ne fonctionnera pas !
+    one = 1
+    two = 2
     hello = "hello"
     
-    print(un + deux + hello)
+    print(one + two + hello)
 
-(Par contre, on peut multiplier une chaîne par un entier pour la "dédoubler" plusieurs fois, par exemple `' ' * 10` va créer une chaine de 10 espaces.) 
 
-Exercise
+Exercice
 --------
 
-L'objectif de cet exercice est de créer une chaîne de caractères, un entier, et un nombre à virgule flottante. La chaîne devra être nommée `mystring` et devra contenir le mot "hello". Le nombre à virgule flottante devra être nommé `myfloat` et devra contenir le nombre 10.0, et le nombre entier devra être nommé `myint` et devra contenir le nombre 20.
-
-Tutorial Code
--------------
-# changez le code ici conformément à l'énoncé :
-mystring = None
-myfloat = None
-myint = None
-
-# code pour vérification : (à ne pas modifier!) 
-if mystring == "hello":
-    print("String: %s" % mystring)
-if isinstance(myfloat, float) and myfloat == 10.0:
-    print("Float: %f" % myfloat)
-if isinstance(myint, int) and myint == 20:
-    print("Integer: %d" % myint)
-
-Expected Output
----------------
-
-test_object('mystring', incorrect_msg="N'oubliez pas de changer correctement la valeur de `mystring` selon la description de l'exercice.")
-test_object('myfloat', incorrect_msg="N'oubliez pas de changer correctement la valeur de `myfloat` selon la description de l'exercice.")
-test_object('myint', incorrect_msg="N'oubliez pas de changer correctement la valeur de `myint` selon la description de l'exercice.")
-test_output_contains("String: hello",no_output_msg= "Vérifiez que votre chaîne correspond exactement à la description de l'exercice.")
-test_output_contains("Float: 10.000000",no_output_msg= "Vérifiez que votre nombre à virgule flottante correspond exactement à la description de l'exercice.")
-test_output_contains("Integer: 20",no_output_msg= "Vérifiez que votre entier correspond exactement à la description de l'exercice.")
-success_msg("Bon travail !")
-
-Solution
---------
-
-# changez le code ici conformément à l'énoncé :
-mystring = "hello"
-myfloat = 10.0
-myint = 20
-
-# code pour vérification : (à ne pas modifier!) 
-if mystring == "hello":
-    print("String: %s" % mystring)
-if isinstance(myfloat, float) and myfloat == 10.0:
-    print("Float: %f" % myfloat)
-if isinstance(myint, int) and myint == 20:
-    print("Integer: %d" % myint)
+Le but de cet exercice est de créer une chaîne de caractères, un entier et un nombre à virgule flottante. La chaîne de caractères doit être appelée `mystring` et doit contenir le mot "hello". Le nombre à virgule flottante doit être appelé `myfloat` et doit contenir le nombre 10.0, et l'entier doit être appelé `myint` et doit contenir le nombre 20.
