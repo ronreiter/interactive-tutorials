@@ -228,14 +228,25 @@ def init_tutorials():
                 localized_title = translated_titles.get(tutorial, tutorial)
                 tutorial_dict["page_title"] = localized_title
 
-                # Create links based on English titles found in index.json
-                links = [key for key in translated_titles.keys() if key not in CODING_FOR_KIDS_TITLES]
-                tutorial_dict["links"] = [
-                    (translated_titles.get(link, link), pageurl(link, language))
-                    for link in links
-                ]
+                # Extract technical sections (code, output, solution)
+                sections_match = sections.findall(tutorial_dict["text"])
+                tutorial_dict["text"] = re.sub(
+                    r"^Tutorial\s*[\=\-]+\n|Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+("
+                    r".*)\n*Solution\n[=\-]+\n*(.*)\n*",
+                    "", tutorial_dict["text"], flags=re.DOTALL
+                )
+                if sections_match:
+                    _, code, output, solution = sections_match[0]
+                    tutorial_dict["code"] = untab(code)
+                    tutorial_dict["output"] = untab(output)
+                    tutorial_dict["solution"] = untab(solution)
 
-                # Preload English tutorial if needed
+                else:
+                    tutorial_dict["code"] = ""
+                    tutorial_dict["output"] = ""
+                    tutorial_dict["solution"] = ""
+
+                # Preload English tutorial if needed (for non-English tutorials)
                 if language != "en":
                     english_tutorial_data = tutorial_data[domain]["en"].get(tutorial, {})
 
@@ -255,25 +266,15 @@ def init_tutorials():
                                 }
                                 # Store preloaded English content
                                 tutorial_data[domain]["en"][tutorial] = english_tutorial_data
-                else:
-                    # Extract sections from the current English file
-                    sections_match = sections.findall(tutorial_dict["text"])
-                    if sections_match:
-                        _, code, output, solution = sections_match[0]
-                        tutorial_data[domain]["en"][tutorial] = {
-                            "code": untab(code),
-                            "output": untab(output),
-                            "solution": untab(solution),
-                        }
-                    english_tutorial_data = tutorial_data[domain]["en"].get(tutorial, {})
 
-                # Assign sections from English content
-                tutorial_dict["code"] = english_tutorial_data.get("code", "")
-                tutorial_dict["output"] = english_tutorial_data.get("output", "")
-                tutorial_dict["solution"] = english_tutorial_data.get("solution", "")
+                    # Assign English sections
+                    tutorial_dict["code"] = english_tutorial_data.get("code", "")
+                    tutorial_dict["output"] = english_tutorial_data.get("output", "")
+                    tutorial_dict["solution"] = english_tutorial_data.get("solution", "")
 
-                # Assign localized tutorial content
                 tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
+
+                # Check if the tutorial has code, output, or solution
                 tutorial_dict["is_tutorial"] = bool(
                     tutorial_dict["code"] or tutorial_dict["output"] or tutorial_dict["solution"]
                 )
@@ -285,8 +286,15 @@ def init_tutorials():
                     tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
 
                 # Update links and navigation
+                links = [key for key in translated_titles.keys() if key not in CODING_FOR_KIDS_TITLES]
+                tutorial_dict["links"] = [
+                    (translated_titles.get(link, link), pageurl(link, language))
+                    for link in links
+                ]
+
+                # Update navigation links
                 for link in links:
-                    if not link in tutorial_data[domain][language]:
+                    if link not in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
                             "page_title": link,
                             "text": contributing_tutorials,

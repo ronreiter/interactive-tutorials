@@ -1,7 +1,4 @@
-Tutorial
---------
-
-Un dictionnaire est un type de données similaire aux tableaux, mais il fonctionne avec des clés et des valeurs au lieu d'index. Chaque valeur stockée dans un dictionnaire peut être accédée en utilisant une clé, qui peut être n'importe quel type d'objet (une chaîne, un nombre, une liste, etc.) au lieu d'utiliser son index pour y accéder.
+Un dictionnaire est un type de données similaire aux tableaux, mais fonctionne avec des clés et des valeurs au lieu d'indices. Chaque valeur stockée dans un dictionnaire peut être accessible à l'aide d'une clé, qui peut être n'importe quel type d'objet (une chaîne, un nombre, une liste, etc.) au lieu d'utiliser son indice pour y accéder.
 
 Par exemple, une base de données de numéros de téléphone pourrait être stockée en utilisant un dictionnaire comme ceci :
 
@@ -20,17 +17,17 @@ Alternativement, un dictionnaire peut être initialisé avec les mêmes valeurs 
     }
     print(phonebook)
 
-### Parcourir les dictionnaires
+### Itération sur les dictionnaires
 
-Les dictionnaires peuvent être parcourus, tout comme une liste. Cependant, un dictionnaire, contrairement à une liste, ne conserve pas l'ordre des valeurs qu'il contient. Pour parcourir les paires clé-valeur, utilisez la syntaxe suivante :
+Les dictionnaires peuvent être parcourus, tout comme une liste. Cependant, un dictionnaire, contrairement à une liste, ne garde pas l'ordre des valeurs qu'il contient. Pour itérer sur les paires clé-valeur, utilisez la syntaxe suivante :
 
     phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
     for name, number in phonebook.items():
         print("Phone number of %s is %d" % (name, number))
 
-### Retirer une valeur
+### Suppression d'une valeur
 
-Pour supprimer un index spécifié, utilisez l'une des notations suivantes :
+Pour supprimer un indice spécifié, utilisez l'une des notations suivantes :
 
     phonebook = {
        "John" : 938477566,
@@ -40,7 +37,7 @@ Pour supprimer un index spécifié, utilisez l'une des notations suivantes :
     del phonebook["John"]
     print(phonebook)
 
-ou :
+ou :
 
     phonebook = {
        "John" : 938477566,
@@ -50,53 +47,7 @@ ou :
     phonebook.pop("John")
     print(phonebook)
 
-
-Exercise
+Exercice
 --------
 
-Ajoutez "Jake" au répertoire téléphonique avec le numéro 938273443, et retirez Jill du répertoire téléphonique.
-
-Tutorial Code
--------------
-
-phonebook = {  
-    "John" : 938477566,
-    "Jack" : 938377264,
-    "Jill" : 947662781
-}  
-# your code goes here
-
-# testing code
-if "Jake" in phonebook:  
-    print("Jake is listed in the phonebook.")
-    
-if "Jill" not in phonebook:      
-    print("Jill is not listed in the phonebook.")  
-
-
-Expected Output
----------------
-
-test_output_contains("Jake is listed in the phonebook.")
-test_output_contains("Jill is not listed in the phonebook.")
-success_msg("Nice work!")
-
-Solution
---------
-
-phonebook = {  
-    "John" : 938477566,
-    "Jack" : 938377264,
-    "Jill" : 947662781
-}  
-
-# your code goes here
-phonebook["Jake"] = 938273443  
-del phonebook["Jill"]  
-
-# testing code
-if "Jake" in phonebook:  
-    print("Jake is listed in the phonebook.")
-    
-if "Jill" not in phonebook:      
-    print("Jill is not listed in the phonebook.")
+Ajoutez "Jake" au carnet d'adresses avec le numéro de téléphone 938273443, et retirez Jill du carnet d'adresses.

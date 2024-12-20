@@ -108,38 +108,35 @@ async def translate_tutorial(base_file_path: str, output_file_path: str, languag
         logger.error(f"Tutorial file not found: {base_file_path}")
         return None
 
-    # Split the content
-    split_point = re.search(r"(?<=\n)Tutorial Code\n-------------", content)
-    translatable = content[:split_point.start()].strip() if split_point else content
-    non_translatable = content[split_point.start():].strip() if split_point else ""
+    # Extract content without "Tutorial" header and up to "Tutorial Code"
+    content = re.sub(r"^Tutorial\n[-=]+\n", "", content, flags=re.MULTILINE)
+    content = re.search(r"(.*?)\nTutorial Code\n[-=]+", content, re.DOTALL)
+
+    if content:
+        content = content.group(1).strip()
 
     # Prepare the translation prompt
     prompt = f"""
     Translate the following tutorial content into {language_code}. Follow these rules:
-    - *Remove completely ```markdown or ```python from the file do not use ``` before code at all*.
-     - For example:
-        class MyClass:
-            variable = "blah"
-        
-            def function(self):
-                print("This is a message inside the class.")
-    Should be remain untouched.
+
     - **Markdown Headers and Formatting**:
-  - Translate all Markdown headings such as `#`, `##`, `###`, and lists `-` without any changes.
-  - Keep the structure of headers, sections, and lists intact.
-    - Keep the "Tutorial--------" part untouched in its original langauge.
-    - "Exercise--------" should maintain same structure but translated to {language_code}.
-    - **Preserve Code Formatting**:
-      - Keep code examples as they are, preserving indentation.
-      - Do not translate code blocks enclosed in triple backticks (e.g., ```python).
+      - Keep all Markdown headings like `#`, `##`, `###`, and lists `-` unchanged.
+      - Keep "Exercise--------" with the same structure but translated to {language_code}.
+
+    - **Preserve Code Blocks and Formatting**:
+      - Leave code examples and indentation unchanged.
+      - Do not add backticks (` ``` `) or translate code snippets.
+
     - **Markdown Structure**:
-      - Keep headings, lists, and other Markdown elements unchanged.
+      - Maintain lists, headings, and links.
+      - Do not change URLs or Markdown links.
+
     - **Translation Scope**:
-      - Translate only the explanatory text and comments.
-      - Leave all code snippets and comments inside code blocks unchanged.
+      - Translate only the explanatory sections.
+      - Leave all code and inline comments unchanged.
 
     Content:
-    {translatable}
+    {content}
     """
 
     client = AsyncOpenAI(api_key=os.environ["openai_api_key"])
@@ -154,11 +151,9 @@ async def translate_tutorial(base_file_path: str, output_file_path: str, languag
         logger.error(f"Error translating tutorial file {base_file_path}: {e}")
         return None
 
-    final_content = f"{translated_text}\n\n{non_translatable}"
-
     try:
         with open(output_file_path, "w", encoding="utf-8") as f:
-            f.write(final_content)
+            f.write(translated_text)
         logger.info(f"Translated tutorial file saved to: {output_file_path}")
         return output_file_path
     except Exception as e:

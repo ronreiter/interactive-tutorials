@@ -1,9 +1,6 @@
-Tutorial
------------------
+Les objets sont une encapsulation de variables et de fonctions en une seule entité. Les objets obtiennent leurs variables et fonctions à partir de classes. Les classes sont essentiellement un modèle pour créer vos objets.
 
-Les objets sont une encapsulation de variables et de fonctions en une seule entité. Les objets obtiennent leurs variables et fonctions à partir des classes. Les classes sont essentiellement un modèle pour créer vos objets.
-
-Une classe très basique ressemblerait à ceci :
+Une classe très basique ressemblerait à quelque chose comme ceci :
 
     class MyClass:
         variable = "blah"
@@ -11,7 +8,7 @@ Une classe très basique ressemblerait à ceci :
         def function(self):
             print("This is a message inside the class.")
 
-Nous expliquerons pourquoi vous devez inclure ce "self" comme paramètre un peu plus tard. Tout d'abord, pour assigner la classe (modèle) ci-dessus à un objet, vous feriez ce qui suit :
+Nous expliquerons pourquoi vous devez inclure ce "self" en tant que paramètre un peu plus tard. Tout d'abord, pour assigner la classe (modèle) ci-dessus à un objet, vous feriez ce qui suit :
 
     class MyClass:
         variable = "blah"
@@ -23,7 +20,7 @@ Nous expliquerons pourquoi vous devez inclure ce "self" comme paramètre un peu 
 
 Maintenant, la variable "myobjectx" contient un objet de la classe "MyClass" qui contient la variable et la fonction définies dans la classe appelée "MyClass".
 
-### Accéder aux variables de l'objet
+### Accéder aux variables d'un objet
 
 Pour accéder à la variable à l'intérieur du nouvel objet créé "myobjectx", vous feriez ce qui suit :
 
@@ -37,7 +34,7 @@ Pour accéder à la variable à l'intérieur du nouvel objet créé "myobjectx",
 
     myobjectx.variable
 
-Par exemple, ce qui suit afficherait la chaîne "blah" :
+Ainsi, par exemple, ce qui suit afficherait la chaîne "blah" :
 
     class MyClass:
         variable = "blah"
@@ -49,7 +46,7 @@ Par exemple, ce qui suit afficherait la chaîne "blah" :
 
     print(myobjectx.variable)
 
-Vous pouvez créer plusieurs objets différents de la même classe (ayant les mêmes variables et fonctions définies). Cependant, chaque objet contient des copies indépendantes des variables définies dans la classe. Par exemple, si nous devions définir un autre objet avec la classe "MyClass" et ensuite modifier la chaîne dans la variable ci-dessus :
+Vous pouvez créer plusieurs objets différents qui sont de la même classe (ont les mêmes variables et fonctions définies). Cependant, chaque objet contient des copies indépendantes des variables définies dans la classe. Par exemple, si nous devions définir un autre objet avec la classe "MyClass" et ensuite changer la chaîne dans la variable ci-dessus :
 
     class MyClass:
         variable = "blah"
@@ -66,9 +63,10 @@ Vous pouvez créer plusieurs objets différents de la même classe (ayant les m�
     print(myobjectx.variable)
     print(myobjecty.variable)
 
-### Accéder aux fonctions de l'objet
 
-Pour accéder à une fonction à l'intérieur d'un objet, vous utilisez une notation similaire à celle d'accès à une variable :
+### Accéder aux fonctions d'un objet
+
+Pour accéder à une fonction à l'intérieur d'un objet, vous utilisez une notation similaire à celle de l'accès à une variable :
 
     class MyClass:
         variable = "blah"
@@ -84,7 +82,8 @@ Ce qui précède afficherait le message, "This is a message inside the class."
 
 ### __init__()
 
-La fonction `__init__()`, est une fonction spéciale qui est appelée lorsque la classe est en cours d'initialisation. Elle est utilisée pour assigner des valeurs dans une classe.
+La fonction `__init__()`, est une fonction spéciale qui est appelée lorsque la classe est initiée.
+Elle est utilisée pour assigner des valeurs dans une classe.
 
     class NumberHolder:
        
@@ -95,64 +94,11 @@ La fonction `__init__()`, est une fonction spéciale qui est appelée lorsque la
            return self.number
 
     var = NumberHolder(7)
-    print(var.returnNumber()) # Affiche '7'
+    print(var.returnNumber()) #Prints '7'
     
 Exercice
 --------
 
-Nous avons une classe définie pour les véhicules. Créez deux nouveaux véhicules appelés car1 et car2. Réglez car1 pour être un cabriolet rouge valant 60 000,00 $ avec un nom de Fer, et car2 pour être un van bleu nommé Jump valant 10 000,00 $.
-
-Tutorial Code
--------------
-
-# define the Vehicle class
-class Vehicle:
-    name = ""
-    kind = "car"
-    color = ""
-    value = 100.00
-    def description(self):
-        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
-        return desc_str
-# your code goes here
-
-# test code
-print(car1.description())
-print(car2.description())
-
-Expected Output
----------------
-
-#test_output_contains('Fer is a red convertible worth $60000.00.')
-#test_output_contains('Jump is a blue van worth $10000.00.')
-success_msg("Great job!")
-
-Solution
---------
-
-# define the Vehicle class
-class Vehicle:
-    name = ""
-    kind = "car"
-    color = ""
-    value = 100.00
-    def description(self):
-        desc_str = "%s is a %s %s worth $%.2f." % (self.name, self.color, self.kind, self.value)
-        return desc_str
-
-# your code goes here
-car1 = Vehicle()
-car1.name = "Fer"
-car1.color = "red"
-car1.kind = "convertible"
-car1.value = 60000.00
-
-car2 = Vehicle()
-car2.name = "Jump"
-car2.color = "blue"
-car2.kind = "van"
-car2.value = 10000.00
-
-# test code
-print(car1.description())
-print(car2.description())
+Nous avons une classe définie pour les véhicules. Créez deux nouveaux véhicules appelés car1 et car2.
+Définissez car1 comme étant une décapotable rouge valant $60,000.00 avec un nom de Fer,
+et car2 comme un van bleu nommé Jump valant $10,000.00.
