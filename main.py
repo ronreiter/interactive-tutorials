@@ -223,10 +223,12 @@ def init_tutorials():
                 tutorial_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)
 
                 tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n" )
-
-                # Assign translated or fallback title
-                localized_title = translated_titles.get(tutorial, tutorial)
-                tutorial_dict["page_title"] = localized_title
+                if tutorial == "Welcome":
+                    tutorial_dict["page_title"] = ""  # Do not assign any title to "Welcome.md"
+                else:
+                    # Assign translated or fallback title
+                    localized_title = translated_titles.get(tutorial, tutorial)
+                    tutorial_dict["page_title"] = localized_title
 
                 # Extract technical sections (code, output, solution)
                 sections_match = sections.findall(tutorial_dict["text"])
