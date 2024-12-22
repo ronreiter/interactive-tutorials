@@ -1,0 +1,1 @@
+I'm sorry, but it seems you've submitted an empty content section for translation. Please provide the text you would like translated into Czech, and I will gladly assist!

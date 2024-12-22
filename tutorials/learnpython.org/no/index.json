@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Hallo, Verden!",
+        "Variables and Types": "Variabler og typer",
+        "Lists": "Lister",
+        "Basic Operators": "Grunnleggende Operatører",
+        "String Formatting": "Strengformatering",
+        "Basic String Operations": "Grunnleggende String-operasjoner",
+        "Conditions": "Betingelser",
+        "Loops": "Løkker",
+        "Functions": "Funksjoner",
+        "Classes and Objects": "Klasser og objekter",
+        "Dictionaries": "Ordbøker",
+        "Modules and Packages": "Moduler og Pakker",
+        "Input and Output": "Inndata og utdata"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Starterpakken",
+        "Movement with Functions": "Bevegelse med funksjoner",
+        "Collecting items": "Samle objekter",
+        "Pushing objects": "Skyve objekter",
+        "Printing on screen": "Skrive ut på skjermen",
+        "Building objects": "Bygge objekter",
+        "Apply what you've learned": "Bruk det du har lært"
+    },
+    "advanced": {
+        "Generators": "Generatorer",
+        "List Comprehensions": "Listforståelse",
+        "Lambda functions": "Lambda-funksjoner",
+        "Multiple Function Arguments": "Flere Funksjonsargumenter",
+        "Regular Expressions": "Regulære uttrykk",
+        "Exception Handling": "Unntakshåndtering",
+        "Sets": "Mengder",
+        "Serialization": "Serialisering",
+        "Partial functions": "Partialfunksjoner",
+        "Code Introspection": "Kodeintrospeksjon",
+        "Closures": "Lukkefunksjoner",
+        "Decorators": "Dekoratorer",
+        "Map, Filter, Reduce": "Kartlegg, Filtrer, Reduser",
+        "Parsing CSV Files": "Parsing av CSV-filer"
+    }
+}

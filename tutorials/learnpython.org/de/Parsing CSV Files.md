@@ -1,0 +1,1 @@
+It seems you've provided a template or placeholder "None" for the tutorial content. Please provide the actual content you'd like to be translated into German, and I'll be happy to help you with that!

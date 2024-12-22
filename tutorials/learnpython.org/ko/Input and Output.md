@@ -1,0 +1,1 @@
+There is no content provided for translation. If you have any text you would like translated into Korean, please provide it, and I will be happy to assist you!

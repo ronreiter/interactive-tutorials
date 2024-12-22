@@ -1,0 +1,1 @@
+It appears there is no content provided to translate. If you have specific tutorial content that you would like translated, please provide it and I will be happy to assist you.

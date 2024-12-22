@@ -1,0 +1,1 @@
+Nincs fordítandó tartalom. Kérlek, adj meg szöveget az átalakításhoz.

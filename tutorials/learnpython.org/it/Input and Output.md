@@ -1,0 +1,1 @@
+It seems there is no tutorial content provided for translation. Please supply the content you would like translated into Italian, following the guidelines you've mentioned.

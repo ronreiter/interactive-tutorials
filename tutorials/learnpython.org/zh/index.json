@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "你好，世界！",
+        "Variables and Types": "变量和类型",
+        "Lists": "列表",
+        "Basic Operators": "基本运算符",
+        "String Formatting": "字符串格式化",
+        "Basic String Operations": "基本字符串操作",
+        "Conditions": "条件",
+        "Loops": "循环",
+        "Functions": "函数",
+        "Classes and Objects": "类和对象",
+        "Dictionaries": "字典",
+        "Modules and Packages": "模块和包",
+        "Input and Output": "输入和输出"
+    },
+    "coding-for-kids": {
+        "Starting Out": "开始启程",
+        "Movement with Functions": "带有功能的移动",
+        "Collecting items": "收集物品",
+        "Pushing objects": "推物体",
+        "Printing on screen": "屏幕打印",
+        "Building objects": "构建对象",
+        "Apply what you've learned": "运用所学"
+    },
+    "advanced": {
+        "Generators": "生成器",
+        "List Comprehensions": "列表推导式",
+        "Lambda functions": "Lambda 函数",
+        "Multiple Function Arguments": "多个函数参数",
+        "Regular Expressions": "正则表达式",
+        "Exception Handling": "异常处理",
+        "Sets": "集合",
+        "Serialization": "序列化",
+        "Partial functions": "偏函数",
+        "Code Introspection": "代码自省",
+        "Closures": "闭包",
+        "Decorators": "装饰器",
+        "Map, Filter, Reduce": "映射、过滤、归约",
+        "Parsing CSV Files": "解析CSV文件"
+    }
+}

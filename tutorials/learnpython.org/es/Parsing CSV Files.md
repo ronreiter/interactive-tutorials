@@ -1,0 +1,1 @@
+Un contenido de "None" indica que no hay contenido proporcionado para traducir o transformar. Si tienes contenido específico que deseas traducir o necesitas otra asistencia, por favor proporciona más detalles.

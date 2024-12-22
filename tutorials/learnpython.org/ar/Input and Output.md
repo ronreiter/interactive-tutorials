@@ -1,0 +1,1 @@
+The content provided appears to be empty. Please supply the tutorial content you would like translated into Arabic, and I will follow the specified guidelines.

@@ -1,0 +1,1 @@
+Parece que o conteúdo da seção de tutorial que você deseja traduzir está vazio. Se você puder fornecer o texto explicativo que gostaria de traduzir para o português, ficarei feliz em ajudá-lo!

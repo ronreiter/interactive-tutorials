@@ -1,0 +1,1 @@
+Det verkar som att det inte finns något innehåll att översätta. Om du har en specifik text eller ett stycke som du vill ha översatt, vänligen inkludera det så hjälper jag dig gärna.

@@ -1,0 +1,1 @@
+There's nothing to translate as the content provided is "None". If you have specific text that you would like translated, please provide it, and I'd be happy to assist!

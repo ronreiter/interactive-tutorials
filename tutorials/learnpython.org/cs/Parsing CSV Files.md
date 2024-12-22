@@ -1,0 +1,1 @@
+I'm sorry, but it seems that you provided a placeholder "None" for the content you wish to have translated. Could you please provide the actual tutorial content that needs translation into Czech (cs)?

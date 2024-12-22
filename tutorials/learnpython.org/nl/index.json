@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Hallo, Wereld!",
+        "Variables and Types": "Variabelen en Typen",
+        "Lists": "Lijsten",
+        "Basic Operators": "Basisoperatoren",
+        "String Formatting": "Stringopmaak",
+        "Basic String Operations": "Basisbewerkingen met Strings",
+        "Conditions": "Voorwaarden",
+        "Loops": "Lussen",
+        "Functions": "Functies",
+        "Classes and Objects": "Klassen en Objecten",
+        "Dictionaries": "Woordenboeken",
+        "Modules and Packages": "Modules en Pakketten",
+        "Input and Output": "Invoer en Uitvoer"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Beginnen",
+        "Movement with Functions": "Beweging met Functies",
+        "Collecting items": "Objecten verzamelen",
+        "Pushing objects": "Objecten duwen",
+        "Printing on screen": "Afdrukken op scherm",
+        "Building objects": "Objecten bouwen",
+        "Apply what you've learned": "Pas toe wat je hebt geleerd"
+    },
+    "advanced": {
+        "Generators": "Generatoren",
+        "List Comprehensions": "Lijstbegrippen",
+        "Lambda functions": "Lambdafuncties",
+        "Multiple Function Arguments": "Meerdere Functie-Argumenten",
+        "Regular Expressions": "Reguliere Expressies",
+        "Exception Handling": "Foutafhandeling",
+        "Sets": "Verzamelingen",
+        "Serialization": "Serialisatie",
+        "Partial functions": "Partiële functies",
+        "Code Introspection": "Code-introspectie",
+        "Closures": "Sluitingen",
+        "Decorators": "Decorators",
+        "Map, Filter, Reduce": "Kaart, Filter, Reduce",
+        "Parsing CSV Files": "Parsen van CSV-bestanden"
+    }
+}

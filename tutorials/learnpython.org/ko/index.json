@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "안녕, 세상!",
+        "Variables and Types": "변수와 타입",
+        "Lists": "목록",
+        "Basic Operators": "기본 연산자",
+        "String Formatting": "문자열 포맷팅",
+        "Basic String Operations": "기본 문자열 연산",
+        "Conditions": "조건",
+        "Loops": "루프",
+        "Functions": "기능",
+        "Classes and Objects": "클래스와 객체",
+        "Dictionaries": "사전",
+        "Modules and Packages": "모듈과 패키지",
+        "Input and Output": "입력과 출력"
+    },
+    "coding-for-kids": {
+        "Starting Out": "시작하기",
+        "Movement with Functions": "함수와 함께하는 움직임",
+        "Collecting items": "수집품 모으기",
+        "Pushing objects": "물체 밀기",
+        "Printing on screen": "스크린에 출력하기",
+        "Building objects": "객체 생성",
+        "Apply what you've learned": "배운 것을 적용하세요"
+    },
+    "advanced": {
+        "Generators": "제너레이터",
+        "List Comprehensions": "리스트 내포",
+        "Lambda functions": "람다 함수",
+        "Multiple Function Arguments": "여러 함수 인수",
+        "Regular Expressions": "정규 표현식",
+        "Exception Handling": "예외 처리",
+        "Sets": "집합",
+        "Serialization": "직렬화",
+        "Partial functions": "부분 함수",
+        "Code Introspection": "코드 내성",
+        "Closures": "클로저",
+        "Decorators": "데코레이터",
+        "Map, Filter, Reduce": "맵, 필터, 리듀스",
+        "Parsing CSV Files": "CSV 파일 파싱"
+    }
+}

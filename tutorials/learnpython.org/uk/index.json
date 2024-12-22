@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Привіт, Світ!",
+        "Variables and Types": "Змінні та типи",
+        "Lists": "Списки",
+        "Basic Operators": "Базові оператори",
+        "String Formatting": "Форматування рядків",
+        "Basic String Operations": "Базові Операції з Рядками",
+        "Conditions": "Умови",
+        "Loops": "Цикли",
+        "Functions": "Функції",
+        "Classes and Objects": "Класи та об'єкти",
+        "Dictionaries": "Словники",
+        "Modules and Packages": "Модулі та пакети",
+        "Input and Output": "Введення та виведення"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Початок",
+        "Movement with Functions": "Рух з функціями",
+        "Collecting items": "Збирання предметів",
+        "Pushing objects": "Переміщення об'єктів",
+        "Printing on screen": "Друк на екрані",
+        "Building objects": "Створення об'єктів",
+        "Apply what you've learned": "Застосуйте те, що ви дізналися"
+    },
+    "advanced": {
+        "Generators": "Генератори",
+        "List Comprehensions": "Спискові вирази",
+        "Lambda functions": "Лямбда-функції",
+        "Multiple Function Arguments": "Кілька аргументів функції",
+        "Regular Expressions": "Регулярні вирази",
+        "Exception Handling": "Обробка Винятків",
+        "Sets": "Множини",
+        "Serialization": "Серіалізація",
+        "Partial functions": "Часткові функції",
+        "Code Introspection": "Кодова інтроспекція",
+        "Closures": "Замикання",
+        "Decorators": "Декоратори",
+        "Map, Filter, Reduce": "Карта, Фільтр, Зведення",
+        "Parsing CSV Files": "Розбір CSV-файлів"
+    }
+}

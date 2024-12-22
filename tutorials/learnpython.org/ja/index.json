@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "こんにちは、世界！",
+        "Variables and Types": "変数と型",
+        "Lists": "リスト",
+        "Basic Operators": "基本演算子",
+        "String Formatting": "文字列のフォーマット",
+        "Basic String Operations": "基本的な文字列操作",
+        "Conditions": "条件",
+        "Loops": "ループ",
+        "Functions": "関数",
+        "Classes and Objects": "クラスとオブジェクト",
+        "Dictionaries": "辞書",
+        "Modules and Packages": "モジュールとパッケージ",
+        "Input and Output": "入力と出力"
+    },
+    "coding-for-kids": {
+        "Starting Out": "はじめに",
+        "Movement with Functions": "関数による移動",
+        "Collecting items": "アイテムの収集",
+        "Pushing objects": "オブジェクトを押す",
+        "Printing on screen": "画面に印刷",
+        "Building objects": "オブジェクトの構築",
+        "Apply what you've learned": "学んだことを応用する"
+    },
+    "advanced": {
+        "Generators": "ジェネレーター",
+        "List Comprehensions": "リスト内包表記",
+        "Lambda functions": "ラムダ関数",
+        "Multiple Function Arguments": "複数の関数引数",
+        "Regular Expressions": "正規表現",
+        "Exception Handling": "例外処理",
+        "Sets": "セット",
+        "Serialization": "直列化",
+        "Partial functions": "部分関数",
+        "Code Introspection": "コード内省",
+        "Closures": "クロージャー",
+        "Decorators": "デコレータ",
+        "Map, Filter, Reduce": "マップ、フィルター、リデュース",
+        "Parsing CSV Files": "CSVファイルの解析"
+    }
+}

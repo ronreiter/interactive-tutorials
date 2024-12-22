@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Ahoj, světe!",
+        "Variables and Types": "Proměnné a typy",
+        "Lists": "Seznamy",
+        "Basic Operators": "Základní operátory",
+        "String Formatting": "Formátování řetězců",
+        "Basic String Operations": "Základní operace s řetězci",
+        "Conditions": "Podmínky",
+        "Loops": "Smyčky",
+        "Functions": "Funkce",
+        "Classes and Objects": "Třídy a objekty",
+        "Dictionaries": "Slovníky",
+        "Modules and Packages": "Moduly a balíčky",
+        "Input and Output": "Vstup a výstup"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Začínáme",
+        "Movement with Functions": "Pohyb s funkcemi",
+        "Collecting items": "Sbírání předmětů",
+        "Pushing objects": "Přesouvání objektů",
+        "Printing on screen": "Tisk na obrazovce",
+        "Building objects": "Vytváření objektů",
+        "Apply what you've learned": "Aplikujte, co jste se naučili"
+    },
+    "advanced": {
+        "Generators": "Generátory",
+        "List Comprehensions": "Porozumění seznamům",
+        "Lambda functions": "Lambda funkce",
+        "Multiple Function Arguments": "Více argumentů funkce",
+        "Regular Expressions": "Regulární výrazy",
+        "Exception Handling": "Zpracování výjimek",
+        "Sets": "Sady",
+        "Serialization": "Serializace",
+        "Partial functions": "Částečné funkce",
+        "Code Introspection": "Kontrola kódu",
+        "Closures": "Uzávěry",
+        "Decorators": "Dekorátory",
+        "Map, Filter, Reduce": "Mapa, Filtr, Redukce",
+        "Parsing CSV Files": "Parsování souborů CSV"
+    }
+}

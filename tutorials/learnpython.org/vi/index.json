@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Xin chào, Thế giới!",
+        "Variables and Types": "Biến và Kiểu dữ liệu",
+        "Lists": "Danh sách",
+        "Basic Operators": "Toán Tử Cơ Bản",
+        "String Formatting": "Định dạng Chuỗi",
+        "Basic String Operations": "Các thao tác chuỗi cơ bản",
+        "Conditions": "Điều kiện",
+        "Loops": "Vòng lặp",
+        "Functions": "Chức năng",
+        "Classes and Objects": "Các Lớp và Đối Tượng",
+        "Dictionaries": "Từ điển",
+        "Modules and Packages": "Mô-đun và Gói",
+        "Input and Output": "Nhập và Xuất"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Bắt Đầu",
+        "Movement with Functions": "Chuyển động với Hàm số",
+        "Collecting items": "Thu thập vật phẩm",
+        "Pushing objects": "Đẩy các đối tượng",
+        "Printing on screen": "In ra màn hình",
+        "Building objects": "Tạo đối tượng",
+        "Apply what you've learned": "Áp dụng những gì bạn đã học"
+    },
+    "advanced": {
+        "Generators": "Máy phát điện",
+        "List Comprehensions": "Hiểu Biểu Thức Danh Sách",
+        "Lambda functions": "Hàm Lambda",
+        "Multiple Function Arguments": "Nhiều Đối Số Hàm",
+        "Regular Expressions": "Biểu thức Chính quy",
+        "Exception Handling": "Xử lý Ngoại lệ",
+        "Sets": "Tập hợp",
+        "Serialization": "Tuần tự hóa",
+        "Partial functions": "Hàm một phần",
+        "Code Introspection": "Khám Phá Mã Nguồn",
+        "Closures": "Đóng gói",
+        "Decorators": "Trình trang trí",
+        "Map, Filter, Reduce": "Bản đồ, Bộ lọc, Giảm thiểu",
+        "Parsing CSV Files": "Phân Tích Tệp CSV"
+    }
+}

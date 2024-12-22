@@ -1,0 +1,1 @@
+I'm sorry, but it seems like you've provided a placeholder text "None" without any substantial content to translate. Could you please provide the text you want to be translated into Arabic?

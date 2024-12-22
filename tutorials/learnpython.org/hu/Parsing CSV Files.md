@@ -1,0 +1,1 @@
+It looks like there is no tutorial content for me to translate. Please provide the text you would like translated into Hungarian, and I will be happy to assist.
