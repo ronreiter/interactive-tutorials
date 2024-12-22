@@ -134,9 +134,6 @@ async def main():
         if lang["code"] == "en":
             continue
 
-        if lang["code"] != "fr":
-            continue
-
         target_language = lang["name"]
         output_dir = Path(output_base_dir) / lang["code"]
         output_dir.mkdir(parents=True, exist_ok=True)

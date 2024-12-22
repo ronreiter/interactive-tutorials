@@ -184,9 +184,6 @@ async def main():
         if language_code == "en":
             continue
 
-        if language_code != "fr":
-            continue
-
         output_dir = Path(f"{output_base_dir}/{language_code}")
         output_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f"Processing translations for {language_name} ({language_code})...")
