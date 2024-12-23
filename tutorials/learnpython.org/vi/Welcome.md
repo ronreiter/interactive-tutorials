@@ -1,4 +1,3 @@
-```markdown
 # Chào mừng
 
 Chào mừng bạn đến với khóa học tương tác Python trên LearnPython.org.
@@ -61,4 +60,3 @@ Chỉ cần nhấp vào chương bạn muốn bắt đầu và làm theo hướn
 ### Đóng góp khóa học
 
 Đọc thêm tại đây: [Đóng góp khóa học](Contributing%20Tutorials)
-```

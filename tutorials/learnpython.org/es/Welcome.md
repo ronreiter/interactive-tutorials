@@ -1,4 +1,3 @@
-```markdown
 # Bienvenido
 
 Bienvenido al tutorial interactivo de Python de LearnPython.org.
@@ -62,4 +61,3 @@ Simplemente haz clic en el capítulo del que deseas comenzar, y sigue las instru
 ### Contribuir con Tutoriales
 
 Lee más aquí: [[Contribuir con Tutoriales]]
-```

@@ -1,62 +1,62 @@
-# مرحبًا
+# مرحباً
 
-مرحبًا بكم في موقع LearnPython.org لتعلم اللغة البرمجية Python بطريقة تفاعلية.
+مرحباً بك في موقع LearnPython.org التعليمي التفاعلي للغة بايثون.
 
-سواء كنت مبرمجًا ذو خبرة أو لا، فإن هذا الموقع مخصص للجميع الذين يرغبون في تعلم لغة البرمجة Python.<br>
+سواء كنت مبرمجاً ذو خبرة أو لا، فإن هذا الموقع موجه لأي شخص يرغب في تعلم لغة البرمجة بايثون.<br>
 
-يمكنك الانضمام إلى مجموعتنا على <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> لطرح الأسئلة والمناقشات والتحديثات.
+يمكنك الانضمام إلى مجموعتنا على <a href="http://www.facebook.com/groups/180708015327157/">فيسبوك</a> لطرح الأسئلة والمناقشات والحصول على التحديثات.
 
-بعد إكمال الدروس التعليمية، يمكنك الحصول على شهادة من [LearnX](https://www.learnx.org) وإضافتها إلى ملفك الشخصي في LinkedIn.
+بعد إتمام الدروس، يمكنك الحصول على شهادة من [LearnX](https://www.learnx.org) وإضافتها إلى ملفك الشخصي على LinkedIn.
 
-ما عليك سوى النقر على الفصل الذي ترغب بالبدء منه، واتباع التعليمات. حظاً موفقاً!<br>
+ما عليك سوى النقر على الفصل الذي ترغب في البدء منه واتباع الإرشادات. حظاً موفقاً!<br>
 
-### تعلم الأساسيات
+### تعلّم الأساسيات
 
-- [مرحبا بالعالم!](Hello,%20World!)
+- [!مرحبا بالعالم](Hello%2C%20World%21)
 - [المتغيرات والأنواع](Variables%20and%20Types)
-- [القوائم](Lists)
+- [قوائم](Lists)
 - [المشغلين الأساسيين](Basic%20Operators)
 - [تنسيق السلاسل](String%20Formatting)
-- [عمليات السلاسل الأساسية](Basic%20String%20Operations)
+- [العمليات الأساسية على السلاسل](Basic%20String%20Operations)
 - [الشروط](Conditions)
 - [الحلقات](Loops)
 - [الدوال](Functions)
-- [الفئات والكائنات](Classes%20and%20Objects)
+- [الكائنات والفصول](Classes%20and%20Objects)
 - [القواميس](Dictionaries)
 - [الوحدات والحزم](Modules%20and%20Packages)
 - [الإدخال والإخراج](Input%20and%20Output)
 
 ### البرمجة للأطفال
 
-- [البداية](https://codingforkids.io/play/python/intro-level1)
-- [الحركة مع الدوال](https://codingforkids.io/play/python/intro-level2)
+- [البدء](https://codingforkids.io/play/python/intro-level1)
+- [الحركة بالدوال](https://codingforkids.io/play/python/intro-level2)
 - [جمع العناصر](https://codingforkids.io/play/python/intro-level3)
-- [دفع الأشياء](https://codingforkids.io/play/python/intro-level4)
+- [دفع الأجسام](https://codingforkids.io/play/python/intro-level4)
 - [الطباعة على الشاشة](https://codingforkids.io/play/python/intro-level5)
-- [بناء الأشياء](https://codingforkids.io/play/python/intro-level6)
+- [بناء الأجسام](https://codingforkids.io/play/python/intro-level6)
 - [تطبيق ما تعلمته](https://codingforkids.io/play/python/intro-level7)
 
-### الدروس المتقدمة
+### دروس متقدمة
 
-- [المولّدات](Generators)
+- [مولدات](Generators)
 - [فهم القوائم](List%20Comprehensions)
-- [الدوال المجهولة](Lambda%20functions)
-- [الوسائط المتعددة للوظائف](Multiple%20Function%20Arguments)
-- [التعبيرات العادية](Regular%20Expressions)
+- [الدوال اللامية](Lambda%20functions)
+- [متعدد الوسائط الوظائف](Multiple%20Function%20Arguments)
+- [التعبيرات النمطية](Regular%20Expressions)
 - [معالجة الاستثناءات](Exception%20Handling)
 - [المجموعات](Sets)
 - [التسلسل](Serialization)
-- [الدوال الجزئية](Partial%20functions)
-- [استكشاف الكود](Code%20Introspection)
-- [الإغلاقات](Closures)
+- [الوظائف الجزئية](Partial%20functions)
+- [استكشاف الأكواد](Code%20Introspection)
+- [الإغلاق](Closures)
 - [المزخرفات](Decorators)
-- [الخريطة، الفلترة, التقليل](Map,%20Filter,%20Reduce)
+- [الخريطة، والفلتر، والتقليص](Map%2C%20Filter%2C%20Reduce)
 - [تحليل ملفات CSV](Parsing%20CSV%20Files)
 
-### دروس Python أخرى
+### دروس بايثون أخرى
 
-- لدى [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) الكثير من [دروس Python](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) التفاعلية الممتازة التي تغطي معالجة البيانات، وتمثيل البيانات الإحصائية، وتعلم الآلة، والمزيد
-- قراءة [دروس ومراجع Python](http://www.afterhoursprogramming.com/index.php?article=181) من دورة After Hours Programming
+- يحتوي [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) على الكثير من دروس [بايثون التفاعلية](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) الرائعة والتي تغطي معالجة البيانات، وتصوير البيانات، والإحصائيات، وتعلم الآلة، والمزيد
+- اقرأ الدورة من [دروس بايثون والمراجع](http://www.afterhoursprogramming.com/index.php?article=181) على موقع After Hours Programming
 
 ### المساهمة في الدروس
 

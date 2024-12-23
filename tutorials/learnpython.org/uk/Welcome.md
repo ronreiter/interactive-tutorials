@@ -1,16 +1,14 @@
-```   
 # Ласкаво просимо
 
-Ласкаво просимо до інтерактивного уроку Python на LearnPython.org.
+Ласкаво просимо до інтерактивного підручника з Python на LearnPython.org.
 
-Чи ви досвідчений програміст чи ні, цей вебсайт призначений для всіх, хто бажає вивчити мову програмування Python.<br>
+Чи ви досвідчений програміст, чи ні, цей вебсайт призначений для всіх, хто бажає вивчити мову програмування Python.<br>
 
-Ви можете приєднатися до нашої групи на <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> для запитань, обговорень та оновлень.
+Ви можете приєднатися до нашої групи на <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> для питань, обговорень та оновлень.
 
-Після завершення уроків ви можете отримати сертифікацію на [LearnX](https://www.learnx.org) і додати яку в свій профіль LinkedIn.
+Після завершення підручників ви можете отримати сертифікацію на [LearnX](https://www.learnx.org) і додати її до свого профілю в LinkedIn.
 
-Просто натисніть на розділ, з якого ви хочете почати, і дотримуйтесь інструкцій. Удачі!<br>
-
+Просто натисніть на розділ, з якого хочете почати, і дотримуйтесь інструкцій. Успіху!<br>
 
 ### Вивчайте основи
 
@@ -28,7 +26,6 @@
 - [[Modules and Packages]]
 - [[Input and Output]]
 
-
 ### Програмування для дітей
 - [Starting Out](https://codingforkids.io/play/python/intro-level1)
 - [Movement with Functions](https://codingforkids.io/play/python/intro-level2)
@@ -38,8 +35,7 @@
 - [Building objects](https://codingforkids.io/play/python/intro-level6)
 - [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
 
-
-### Просунуті уроки
+### Поглиблені підручники
 
 - [[Generators]]
 - [[List Comprehensions]]
@@ -56,12 +52,11 @@
 - [[Map, Filter, Reduce]]
 - [[Parsing CSV Files]]
 
-### Інші уроки з Python
+### Інші підручники з Python
 
-- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) має безліч чудових інтерактивних [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org), які охоплюють обробку даних, візуалізацію даних, статистику, машинне навчання та інше
-- Курси за [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) від After Hours Programming
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) має безліч чудових інтерактивних [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org), що охоплюють обробку даних, візуалізацію даних, статистику, машинне навчання та багато іншого
+- Прочитайте курс [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) з After Hours Programming
 
-### Як Додати Уроки
+### Доповнення підручників
 
-Докладніше тут: [[Contributing Tutorials]]
-```
+Дізнайтеся більше тут: [[Contributing Tutorials]]

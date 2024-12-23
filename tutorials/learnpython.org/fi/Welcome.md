@@ -1,67 +1,62 @@
-```markdown
 # Tervetuloa
 
-Tervetuloa LearnPython.org:n interaktiiviseen Python-oppaaseen.
+Tervetuloa LearnPython.org interaktiiviseen Python-oppaaseen.
 
-Riippumatta siitä, oletko kokenut ohjelmoija vai et, tämä sivusto on tarkoitettu kaikille, jotka haluavat oppia Python-ohjelmointikielen.<br>
+Olitpa sitten kokenut ohjelmoija tai et, tämä verkkosivusto on tarkoitettu kaikille, jotka haluavat oppia Python-ohjelmointikieltä.<br>
 
-Olet tervetullut liittymään ryhmäämme <a href="http://www.facebook.com/groups/180708015327157/">Facebookissa</a> kysymyksiä, keskusteluja ja päivityksiä varten.
+Olet tervetullut liittymään ryhmäämme <a href="http://www.facebook.com/groups/180708015327157/">Facebookissa</a> kysymyksiä, keskustelua ja päivityksiä varten.
 
-Kun olet suorittanut oppaat, voit saada sertifikaatin [LearnX](https://www.learnx.org) suoritetuista tutkinnoista ja lisätä sen LinkedIn-profiiliisi.
+Kun olet suorittanut oppaat, voit saada todistuksen [LearnX](https://www.learnx.org) ja lisätä todistuksesi LinkedIn-profiiliisi.
 
-Valitse vain luku, josta haluat aloittaa, ja seuraa ohjeita. Onnea matkaan!<br>
-
+Klikkaa vain lukua, josta haluat aloittaa, ja seuraa ohjeita. Onnea matkaan!<br>
 
 ### Opi perusteet
 
-- [[Hello, World!]]
-- [[Muuttujat ja tyypit]]
-- [[Listat]]
-- [[Perusoperaattorit]]
-- [[Merkkijonon muotoilu]]
-- [[Perusmerkkijono-operaatiot]]
-- [[Ehdot]]
-- [[Silmukat]]
-- [[Funktiot]]
-- [[Luokat ja oliot]]
-- [[Sanakirjat]]
-- [[Moduulit ja paketit]]
-- [[Syöte ja tuloste]]
+- [Hello, World!](Hello,%20World!)
+- [Muuttujat ja tyypit](Variables%20and%20Types)
+- [Listat](Lists)
+- [Perusoperaattorit](Basic%20Operators)
+- [Merkkijonojen muotoilu](String%20Formatting)
+- [Perusmerkkijonotoiminnot](Basic%20String%20Operations)
+- [Ehdot](Conditions)
+- [Silmukat](Loops)
+- [Funktiot](Functions)
+- [Luokat ja objektit](Classes%20and%20Objects)
+- [Sanakirjat](Dictionaries)
+- [Moduulit ja paketit](Modules%20and%20Packages)
+- [Syöte ja tuloste](Input%20and%20Output)
 
-
-### Koodaus lapsille
-- [Starting Out](https://codingforkids.io/play/python/intro-level1)
-- [Movement with Functions](https://codingforkids.io/play/python/intro-level2)
-- [Collecting items](https://codingforkids.io/play/python/intro-level3)
-- [Pushing objects](https://codingforkids.io/play/python/intro-level4)
-- [Printing on screen](https://codingforkids.io/play/python/intro-level5)
-- [Building objects](https://codingforkids.io/play/python/intro-level6)
-- [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
-
+### Koodaaminen lapsille
+- [Aloitetaan](https://codingforkids.io/play/python/intro-level1)
+- [Liikkuminen funktioilla](https://codingforkids.io/play/python/intro-level2)
+- [Esineiden kerääminen](https://codingforkids.io/play/python/intro-level3)
+- [Esineiden työntäminen](https://codingforkids.io/play/python/intro-level4)
+- [Tulostaminen näytölle](https://codingforkids.io/play/python/intro-level5)
+- [Esineiden rakentaminen](https://codingforkids.io/play/python/intro-level6)
+- [Sovella oppimaasi](https://codingforkids.io/play/python/intro-level7)
 
 ### Edistyneet oppaat
 
-- [[Generaattorit]]
-- [[Listan käsittely]]
-- [[Lambda-funktiot]]
-- [[Useita funktioargumentteja]]
-- [[Säännölliset lausekkeet]]
-- [[Poikkeuskäsittely]]
-- [[Joukot]]
-- [[Sarjoitus]]
-- [[Osittaiset funktiot]]
-- [[Koodin introspektio]]
-- [[Sulkemiset]]
-- [[Koristelut]]
-- [[Map, Filter, Reduce]]
-- [[CSV-tiedostojen jäsentäminen]]
+- [Generaattorit](Generators)
+- [Listan ymmärrys](List%20Comprehensions)
+- [Lambda-funktiot](Lambda%20functions)
+- [Useita funktion argumentteja](Multiple%20Function%20Arguments)
+- [Säännölliset lausekkeet](Regular%20Expressions)
+- [Poikkeuskäsittely](Exception%20Handling)
+- [Joukot](Sets)
+- [Serialisointi](Serialization)
+- [Osittaiset funktiot](Partial%20functions)
+- [Koodin introspektio](Code%20Introspection)
+- [Sulkeet](Closures)
+- [Koristelijat](Decorators)
+- [Map, Filter, Reduce](Map,%20Filter,%20Reduce)
+- [CSV-tiedostojen jäsentäminen](Parsing%20CSV%20Files)
 
 ### Muut Python-oppaat
 
-- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) tarjoaa paljon loistavia interaktiivisia [Python-opetuksia](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org), jotka kattavat tietojen käsittelyn, tiedon visualisoinnin, tilastotieteen, koneoppimisen ja paljon muuta
-- Lue After Hours Programmingin [Python-oppaat ja viitteet](http://www.afterhoursprogramming.com/index.php?article=181) -kurssi
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) tarjoaa runsaasti erinomaisia interaktiivisia [Python-oppaat](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org), joissa käsitellään datan käsittelyä, visualisointia, tilastotiedettä, koneoppimista ja paljon muuta
+- Lue [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) kurssi After Hours Programmingilta
 
-### Oppaiden tekeminen
+### Oppaiden kehittäminen
 
-Lue lisää täältä: [[Oppaiden tekeminen]]
-```
+Lue lisää täältä: [Oppaiden kehittäminen](Contributing%20Tutorials)

@@ -1,23 +1,23 @@
 # ברוכים הבאים
 
-ברוכים הבאים להדרכה האינטראקטיבית של LearnPython.org לשפת התכנות Python.
+ברוכים הבאים להדרכת Python האינטראקטיבית של LearnPython.org.
 
-בין אם אתם מתכנתים מנוסים ובין אם לא, האתר הזה מיועד לכל מי שמעוניין ללמוד את שפת התכנות Python.<br>
+בין אם אתם מתכנתים מנוסים או לא, אתר זה מיועד לכל מי שמעוניין ללמוד את שפת התכנות Python.<br>
 
-אתם מוזמנים להצטרף לקבוצה שלנו ב-<a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> לשאלות, דיונים ועדכונים.
+אתם מוזמנים להצטרף לקבוצה שלנו ב- <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> לשאלות, דיונים ועדכונים.
 
-לאחר שתשלים את ההדרכות, תוכל לקבל הסמכה ב-[LearnX](https://www.learnx.org) ולהוסיף את ההסמכה שלך לפרופיל ה-LinkedIn שלך.
+לאחר שתסיימו את ההדרכות, תוכלו לקבל תעודה ב-[LearnX](https://www.learnx.org) ולהוסיף את התעודה לפרופיל ה-LinkedIn שלכם.
 
-פשוט לחץ על הפרק שממנו תרצה להתחיל ופעל לפי ההוראות. בהצלחה!<br>
+פשוט לחצו על הפרק שבו תרצו להתחיל, ופעלו לפי ההוראות. בהצלחה!<br>
 
-### למד את הבסיס
+### לימוד הבסיס
 
 - [שלום, עולם!](Hello,%20World!)
 - [משתנים וסוגים](Variables%20and%20Types)
 - [רשימות](Lists)
-- [אופרטורים בסיסיים](Basic%20Operators)
+- [מפעילים בסיסיים](Basic%20Operators)
 - [עיצוב מחרוזות](String%20Formatting)
-- [פעולות בסיסיות על מחרוזות](Basic%20String%20Operations)
+- [פעולות מחרוזת בסיסיות](Basic%20String%20Operations)
 - [תנאים](Conditions)
 - [לולאות](Loops)
 - [פונקציות](Functions)
@@ -26,38 +26,37 @@
 - [מודולים וחבילות](Modules%20and%20Packages)
 - [קלט ופלט](Input%20and%20Output)
 
-### תכנות לילדים
-
-- [מתחילים](https://codingforkids.io/play/python/intro-level1)
+### קידוד לילדים
+- [תחילת העבודה](https://codingforkids.io/play/python/intro-level1)
 - [תנועה עם פונקציות](https://codingforkids.io/play/python/intro-level2)
-- [איסוף חפצים](https://codingforkids.io/play/python/intro-level3)
+- [איסוף פריטים](https://codingforkids.io/play/python/intro-level3)
 - [דחיפת אובייקטים](https://codingforkids.io/play/python/intro-level4)
 - [הדפסה על המסך](https://codingforkids.io/play/python/intro-level5)
 - [בניית אובייקטים](https://codingforkids.io/play/python/intro-level6)
-- [יישם את מה שלמדת](https://codingforkids.io/play/python/intro-level7)
+- [יישום מה שלמדתם](https://codingforkids.io/play/python/intro-level7)
 
 ### הדרכות מתקדמות
 
-- [גנרטורים](Generators)
-- [רשימות בנויות](List%20Comprehensions)
+- [יוצרי](Generators)
+- [הבנת רשימה](List%20Comprehensions)
 - [פונקציות למבדה](Lambda%20functions)
-- [טענות פונקציה מרובות](Multiple%20Function%20Arguments)
+- [ארגומנטים מרובים לפונקציה](Multiple%20Function%20Arguments)
 - [ביטויים רגולריים](Regular%20Expressions)
 - [טיפול בחריגות](Exception%20Handling)
 - [קבוצות](Sets)
 - [סיריאליזציה](Serialization)
 - [פונקציות חלקיות](Partial%20functions)
-- [חקירה בקוד](Code%20Introspection)
+- [בדיקת קוד](Code%20Introspection)
 - [סגירות](Closures)
-- [דקורטורים](Decorators)
-- [מפה, פילטר, הפחת](Map,%20Filter,%20Reduce)
-- [פענוח קבצי CSV](Parsing%20CSV%20Files)
+- [מעטרים](Decorators)
+- [מפה, פילטר, רדוקציה](Map,%20Filter,%20Reduce)
+- [ניתוח קבצי CSV](Parsing%20CSV%20Files)
 
-### הדרכות פייתון אחרות
+### הדרכות Python אחרות
 
-- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) מציע המון הדרכות אינטראקטיביות מעולות על [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) בנושאי מניפולציה של נתונים, ויזואליזציה של נתונים, סטטיסטיקה, למידת מכונה ועוד
-- קרא את [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) קורס מתוכנית לימודים של After Hours Programming
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) מציע המון הדרכות אינטראקטיביות מעולות ב-[הדרכות Python](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) כולל מניפולציה של נתונים, ויזואליזציה של נתונים, סטטיסטיקה, למידת מכונה ועוד
+- לקריאה נוספת, עיינו בקורס [הדרכות Python והפניות](http://www.afterhoursprogramming.com/index.php?article=181) מתכנות לאחר שעות העבודה
 
-### תרומה להדרכות
+### תרומת הדרכות
 
-קרא עוד כאן: [תרומה להדרכות](Contributing%20Tutorials)
+קראו עוד כאן: [תרומת הדרכות](Contributing%20Tutorials)

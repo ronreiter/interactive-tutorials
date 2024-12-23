@@ -1,65 +1,62 @@
 # ยินดีต้อนรับ
 
-ยินดีต้อนรับสู่เว็บไซต์สอนภาษา Python แบบอินเทอร์แอคทีฟของ LearnPython.org
+ยินดีต้อนรับสู่การเรียนรู้การเขียนโปรแกรมภาษา Python แบบโต้ตอบที่เว็บไซต์ LearnPython.org
 
-ไม่ว่าคุณจะเป็นโปรแกรมเมอร์ที่มีประสบการณ์หรือไม่ เว็บไซต์นี้มีไว้สำหรับทุกคนที่ต้องการเรียนรู้ภาษาโปรแกรม Python<br>
+ไม่ว่าคุณจะเป็นโปรแกรมเมอร์ที่มีประสบการณ์หรือไม่ก็ตาม เว็บไซต์นี้เหมาะสำหรับทุกคนที่ต้องการเรียนรู้ภาษาโปรแกรม Python<br>
 
-คุณสามารถเข้าร่วมกลุ่มของเราใน <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> สำหรับคำถาม, การอภิปราย และอัพเดต
+คุณสามารถเข้าร่วมกลุ่มของเราบน <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> เพื่อสอบถาม พูดคุย และอัพเดตข่าวสารต่างๆ
 
-หลังจากที่คุณเรียนจบบทเรียน คุณสามารถรับการรับรองได้ที่ [LearnX](https://www.learnx.org) และเพิ่มการรับรองไปยังโปรไฟล์ LinkedIn ของคุณ
+หลังจากที่คุณเรียนรู้บทเรียนต่างๆ เสร็จแล้ว คุณสามารถรับใบรับรองที่ [LearnX](https://www.learnx.org) และเพิ่มใบรับรองของคุณในโปรไฟล์ LinkedIn ของคุณได้
 
-เพียงคลิกที่บทที่คุณต้องการเริ่มต้นและทำตามคำแนะนำ ขอให้โชคดี!<br>
-
+เพียงคลิกที่บทที่คุณต้องการเริ่มและปฏิบัติตามคำแนะนำ ขอให้โชคดี!<br>
 
 ### เรียนรู้พื้นฐาน
 
-- [[Hello, World!]]
-- [[Variables and Types]]
-- [[Lists]]
-- [[Basic Operators]]
-- [[String Formatting]]
-- [[Basic String Operations]]
-- [[Conditions]]
-- [[Loops]]
-- [[Functions]]
-- [[Classes and Objects]]
-- [[Dictionaries]]
-- [[Modules and Packages]]
-- [[Input and Output]]
-
+- [สวัสดี ชาวโลก!](Hello,%20World!)
+- [ตัวแปรและประเภท](Variables%20and%20Types)
+- [การจัดการกับลิสต์](Lists)
+- [ผู้ดำเนินการพื้นฐาน](Basic%20Operators)
+- [การจัดรูปแบบสตริง](String%20Formatting)
+- [การดำเนินการสตริงพื้นฐาน](Basic%20String%20Operations)
+- [เงื่อนไข](Conditions)
+- [ลูป](Loops)
+- [ฟังก์ชัน](Functions)
+- [คลาสและออบเจ็กต์](Classes%20and%20Objects)
+- [พจนานุกรม](Dictionaries)
+- [โมดูลและแพ็กเกจ](Modules%20and%20Packages)
+- [การรับและแสดงผลลัพธ์](Input%20and%20Output)
 
 ### การเขียนโปรแกรมสำหรับเด็ก
 - [เริ่มต้น](https://codingforkids.io/play/python/intro-level1)
-- [การเคลื่อนที่ด้วยฟังก์ชัน](https://codingforkids.io/play/python/intro-level2)
-- [การเก็บสะสมไอเทม](https://codingforkids.io/play/python/intro-level3)
-- [ดันวัตถุ](https://codingforkids.io/play/python/intro-level4)
-- [พิมพ์ข้อมูลบนหน้าจอ](https://codingforkids.io/play/python/intro-level5)
-- [สร้างวัตถุ](https://codingforkids.io/play/python/intro-level6)
-- [ประยุกต์ใช้สิ่งที่คุณได้เรียนรู้](https://codingforkids.io/play/python/intro-level7)
-
+- [การเคลื่อนไหวด้วยฟังก์ชัน](https://codingforkids.io/play/python/intro-level2)
+- [การเก็บรวบรวมวัตถุ](https://codingforkids.io/play/python/intro-level3)
+- [การผลักดันวัตถุ](https://codingforkids.io/play/python/intro-level4)
+- [การพิมพ์บนหน้าจอ](https://codingforkids.io/play/python/intro-level5)
+- [การสร้างวัตถุ](https://codingforkids.io/play/python/intro-level6)
+- [ใช้สิ่งที่คุณได้เรียนรู้](https://codingforkids.io/play/python/intro-level7)
 
 ### บทเรียนขั้นสูง
 
-- [[Generators]]
-- [[List Comprehensions]]
-- [[Lambda functions]]
-- [[Multiple Function Arguments]]
-- [[Regular Expressions]]
-- [[Exception Handling]]
-- [[Sets]]
-- [[Serialization]]
-- [[Partial functions]]
-- [[Code Introspection]]
-- [[Closures]]
-- [[Decorators]]
-- [[Map, Filter, Reduce]]
-- [[Parsing CSV Files]]
+- [ตัวสร้าง](Generators)
+- [การประมวลผลลิสต์](List%20Comprehensions)
+- [ฟังก์ชันแลมบ์ดา](Lambda%20functions)
+- [อาร์กิวเมนต์ฟังก์ชันหลายตัว](Multiple%20Function%20Arguments)
+- [นิพจน์ประจำ](Regular%20Expressions)
+- [การจัดการข้อยกเว้น](Exception%20Handling)
+- [เซ็ต](Sets)
+- [การทำซีเรียลไลเซชัน](Serialization)
+- [ฟังก์ชันบางส่วน](Partial%20functions)
+- [การตรวจสอบโค้ด](Code%20Introspection)
+- [การปิด](Closures)
+- [เครื่องตกแต่ง](Decorators)
+- [Map, Filter, Reduce](Map,%20Filter,%20Reduce)
+- [การแยกไฟล์ CSV](Parsing%20CSV%20Files)
 
-### บทเรียน Python อื่น ๆ
+### บทเรียน Python อื่นๆ
 
-- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) มีบทเรียน [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) แบบอินเทอร์แอคทีฟมากมายที่ครอบคลุมการจัดการข้อมูล, การสร้างภาพข้อมูล, สถิติ, การเรียนรู้ของเครื่อง และอื่น ๆ
-- อ่าน [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) จาก After Hours Programming
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) มีบทเรียน [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) ที่ยอดเยี่ยมมากมายเกี่ยวกับการจัดการข้อมูล, การสร้างภาพข้อมูล, สถิติ, การเรียนรู้ของเครื่อง และอื่นๆ
+- อ่านคอร์ส [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) จาก After Hours Programming
 
-### การร่วมเขียนบทเรียน
+### การแบ่งปันบทเรียน
 
-อ่านเพิ่มเติมที่: [[Contributing Tutorials]]
+อ่านเพิ่มเติมที่นี่: [การแบ่งปันบทเรียน](Contributing%20Tutorials)
