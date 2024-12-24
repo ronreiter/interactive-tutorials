@@ -1,62 +1,65 @@
-# Üdvözlet
+# Üdvözöljük
 
-Üdvözöljük a LearnPython.org interaktív Python oktatóanyagában.
+Üdvözöljük a LearnPython.org interaktív Python oktatóanyagon.
 
-Akár tapasztalt programozó vagy, akár nem, ez a weboldal mindazoknak készült, akik szeretnék elsajátítani a Python programozási nyelvet.<br>
+Akár tapasztalt programozó vagy, akár nem, ez a weboldal mindenki számára készült, aki meg szeretné tanulni a Python programozási nyelvet.<br>
 
-Örömmel várjuk, hogy csatlakozz csoportunkhoz a <a href="http://www.facebook.com/groups/180708015327157/">Facebookon</a>, ahol kérdéseket tehet fel, részt vehet a vitákban és értesülhet a legújabb hírekről.
+Csatlakozhatsz a csoportunkhoz a <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> oldalán kérdésekkel, beszélgetésekkel és frissítésekkel kapcsolatban.
 
-Miután befejezted az oktatóanyagokat, tanúsítványt szerezhetsz a [LearnX](https://www.learnx.org)-nél, és hozzáadhatod a tanúsítványt a LinkedIn profilodhoz.
+Miután befejezted az oktatóanyagokat, megszerezheted a tanúsítványt a [LearnX](https://www.learnx.org) oldalán, és hozzáadhatod a LinkedIn profilodhoz.
 
-Egyszerűen kattints arra a fejezetre, amellyel szeretnéd kezdeni, és kövesd az utasításokat. Sok sikert!<br>
+Csak kattints arra a fejezetre, amelyikkel kezdeni szeretnél, és kövesd az utasításokat. Sok szerencsét!<br>
 
-### Alapok megtanulása
 
-- [- [Helló, Világ!](Hello,%20World!)]
-- [- [Változók és Típusok](Variables%20and%20Types)]
-- [- [Listák](Lists)]
-- [- [Alapvető Operátorok](Basic%20Operators)]
-- [- [Szöveg Formázása](String%20Formatting)]
-- [- [Alapvető Szövegműveletek](Basic%20String%20Operations)]
-- [- [Feltételek](Conditions)]
-- [- [Ciklusok](Loops)]
-- [- [Funkciók](Functions)]
-- [- [Osztályok és Objektumok](Classes%20and%20Objects)]
-- [- [Szótárak](Dictionaries)]
-- [- [Modulok és Csomagok](Modules%20and%20Packages)]
-- [- [Bemenet és Kimenet](Input%20and%20Output)]
+### Tanuld meg az alapokat
+
+- [Helló Világ!](Hello%2C%20World%21)
+- [Változók és típusok](Variables%20and%20Types)
+- [Listák](Lists)
+- [Alapvető műveletek](Basic%20Operators)
+- [Szövegformázás](String%20Formatting)
+- [Alapvető szövegműveletek](Basic%20String%20Operations)
+- [Feltételek](Conditions)
+- [Ciklusok](Loops)
+- [Függvények](Functions)
+- [Osztályok és objektumok](Classes%20and%20Objects)
+- [Szótárak](Dictionaries)
+- [Modulok és csomagok](Modules%20and%20Packages)
+- [Bemenet és kimenet](Input%20and%20Output)
+
 
 ### Kódolás gyerekeknek
-- [Kezdés](https://codingforkids.io/play/python/intro-level1)
-- [Mozgás funkciókkal](https://codingforkids.io/play/python/intro-level2)
+- [Első lépések](https://codingforkids.io/play/python/intro-level1)
+- [Mozgás függvényekkel](https://codingforkids.io/play/python/intro-level2)
 - [Tárgyak gyűjtése](https://codingforkids.io/play/python/intro-level3)
 - [Tárgyak tolása](https://codingforkids.io/play/python/intro-level4)
-- [Képernyőre nyomtatás](https://codingforkids.io/play/python/intro-level5)
+- [Kiírás a képernyőre](https://codingforkids.io/play/python/intro-level5)
 - [Tárgyak építése](https://codingforkids.io/play/python/intro-level6)
-- [Alkalmazd, amit megtanultál](https://codingforkids.io/play/python/intro-level7)
+- [Alkalmazd, amit tanultál](https://codingforkids.io/play/python/intro-level7)
+
 
 ### Haladó oktatóanyagok
 
-- [- [Generátorok](Generators)]
-- [- [Lista Értékelések](List%20Comprehensions)]
-- [- [Lambda függvények](Lambda%20functions)]
-- [- [Többszörös Függvény Paraméterek](Multiple%20Function%20Arguments)]
-- [- [Reguláris Kifejezések](Regular%20Expressions)]
-- [- [Kivételkezelés](Exception%20Handling)]
-- [- [Halmazok](Sets)]
-- [- [Szerializáció](Serialization)]
-- [- [Részleges függvények](Partial%20functions)]
-- [- [Kódbetekintés](Code%20Introspection)]
-- [- [Zárványok](Closures)]
-- [- [Dekorátorok](Decorators)]
-- [- [Map, Filter, Reduce](Map,%20Filter,%20Reduce)]
-- [- [CSV Fájlok Elemzése](Parsing%20CSV%20Files)]
+- [Generátorok](Generators)
+- [Listaértelmezések](List%20Comprehensions)
+- [Lambda függvények](Lambda%20functions)
+- [Többszörös függvényargumentumok](Multiple%20Function%20Arguments)
+- [Reguláris kifejezések](Regular%20Expressions)
+- [Kivételkezelés](Exception%20Handling)
+- [Halmazok](Sets)
+- [Szerializálás](Serialization)
+- [Részleges függvények](Partial%20functions)
+- [Kód introspekció](Code%20Introspection)
+- [Zárványok](Closures)
+- [Dekorátorok](Decorators)
+- [Map, Filter, Reduce](Map%2C%20Filter%2C%20Reduce)
+- [CSV fájlok elemzése](Parsing%20CSV%20Files)
 
 ### Egyéb Python oktatóanyagok
 
-- A [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) rengeteg nagyszerű interaktív [Python Oktatóanyagot](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) kínál az adatok manipulációja, az adatvizualizáció, a statisztika, a gépi tanulás és még több területen
-- Olvasd el a [Python Oktatóanyagok és Referenciák](http://www.afterhoursprogramming.com/index.php?article=181) tanfolyamot az After Hours Programming jóvoltából
+- A [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) számos kiváló, interaktív [Python oktatóanyagot](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) kínál adatmanipuláció, adatvizualizáció, statisztika, gépi tanulás és egyéb területeken
+- Olvasd el az [After Hours Programming Python oktatóanyagot és referenciákat](http://www.afterhoursprogramming.com/index.php?article=181)
 
 ### Oktatóanyagok hozzájárulása
 
-További információ itt: [- [Oktatóanyagok hozzájárulása](Contributing%20Tutorials)]
+Olvass tovább itt: [Oktatóanyagok hozzájárulása](Contributing%20Tutorials)

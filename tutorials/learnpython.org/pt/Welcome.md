@@ -50,7 +50,7 @@ Basta clicar no capítulo que deseja começar e seguir as instruções. Boa sort
 - [Introspecção de Código](Code%20Introspection)
 - [Closures](Closures)
 - [Decoradores](Decorators)
-- [Map, Filter, Reduce](Map%2C%20Filter%2C%20Reduce)
+- [Mapa, Filtro, Reduzir](Map%2C%20Filter%2C%20Reduce)
 - [Análise de Arquivos CSV](Parsing%20CSV%20Files)
 
 ### Outros Tutoriais de Python

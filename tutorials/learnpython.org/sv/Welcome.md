@@ -13,7 +13,7 @@ Klicka bara på kapitlet du vill börja med och följ instruktionerna. Lycka til
 
 ### Lär dig grunderna
 
-- [Hello, World!](Hello,%20World!)
+- [Olá, Mundo!](Hello,%20World!)
 - [Variabler och typer](Variables%20and%20Types)
 - [Listor](Lists)
 - [Grundläggande operatorer](Basic%20Operators)

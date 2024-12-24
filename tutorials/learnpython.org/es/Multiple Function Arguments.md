@@ -2,7 +2,7 @@
 
 Cada función en Python recibe un número predefinido de argumentos, si se declara normalmente, como este ejemplo:
 
-```python
+```
 def myfunction(first, second, third):
     # do something with the 3 variables
     ...
@@ -10,7 +10,7 @@ def myfunction(first, second, third):
 
 Es posible declarar funciones que reciban un número variable de argumentos, utilizando la siguiente sintaxis:
 
-```python
+```
 def foo(first, second, third, *therest):
     print("First: %s" % first)
     print("Second: %s" % second)
@@ -20,7 +20,7 @@ def foo(first, second, third, *therest):
 
 La variable "therest" es una lista de variables que recibe todos los argumentos que se le pasen a la función "foo" después de los primeros 3 argumentos. Entonces, llamar a `foo(1, 2, 3, 4, 5)` imprimirá:
 
-```python
+```
 def foo(first, second, third, *therest):
     print("First: %s" %(first))
     print("Second: %s" %(second))

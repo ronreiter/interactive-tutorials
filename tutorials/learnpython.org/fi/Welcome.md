@@ -12,7 +12,7 @@ Klikkaa vain lukua, josta haluat aloittaa, ja seuraa ohjeita. Onnea matkaan!<br>
 
 ### Opi perusteet
 
-- [Hello, World!](Hello,%20World!)
+- [Hei, maailma!](Hello,%20World!)
 - [Muuttujat ja tyypit](Variables%20and%20Types)
 - [Listat](Lists)
 - [Perusoperaattorit](Basic%20Operators)
