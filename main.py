@@ -190,19 +190,6 @@ def init_tutorials():
             if not os.path.isdir(tutorials_path):
                 continue
 
-            # Load translated titles from index.json
-            index_file_path = os.path.join(tutorials_path, "index.json")
-            try:
-                with open(index_file_path, "r", encoding="utf-8") as f:
-                    translated_titles = json.load(f)
-                    translated_titles = {
-                        key: value for section in translated_titles.values() for key, value in section.items()
-                    }
-                logging.info(f"Loaded index.json for language '{language}' from {index_file_path}")
-            except FileNotFoundError:
-                logging.error(f"index.json not found for language '{language}' at {index_file_path}, skipping.")
-                translated_titles = {}
-
             tutorials = os.listdir(tutorials_path)
 
             # place the index file first
@@ -222,85 +209,127 @@ def init_tutorials():
 
                 tutorial_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)
 
-                tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n" )
-                if tutorial == "Welcome":
-                    tutorial_dict["page_title"] = ""  # Do not assign any title to "Welcome.md"
-                else:
+                tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n")
+
+                if domain == "learnpython.org":
+                    # Handle logic specific for `learnpython.org`
+                    if "en" not in tutorial_data[domain]:
+                        tutorial_data[domain]["en"] = {}
+
+                    # Load translated titles from index.json for learnpython.org
+                    index_file_path = os.path.join(tutorials_path, "index.json")
+                    try:
+                        with open(index_file_path, "r", encoding="utf-8") as f:
+                            translated_titles = json.load(f)
+                            translated_titles = {key: value for section in translated_titles.values() for key, value in section.items()}
+                        logging.info(f"Loaded index.json for language '{language}' from {index_file_path}")
+                    except FileNotFoundError:
+                        logging.error(f"index.json not found for language '{language}' at {index_file_path}, skipping.")
+                        translated_titles = {}
+
                     # Assign translated or fallback title
                     localized_title = translated_titles.get(tutorial, tutorial)
                     tutorial_dict["page_title"] = localized_title
 
-                # Extract technical sections (code, output, solution)
-                sections_match = sections.findall(tutorial_dict["text"])
-                tutorial_dict["text"] = re.sub(
-                    r"^Tutorial\s*[\=\-]+\n|Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+("
-                    r".*)\n*Solution\n[=\-]+\n*(.*)\n*",
-                    "", tutorial_dict["text"], flags=re.DOTALL
-                )
-                if sections_match:
-                    _, code, output, solution = sections_match[0]
-                    tutorial_dict["code"] = untab(code)
-                    tutorial_dict["output"] = untab(output)
-                    tutorial_dict["solution"] = untab(solution)
+                    # Extract technical sections (code, output, solution) for learnpython.org
+                    sections_match = sections.findall(tutorial_dict["text"])
+                    tutorial_dict["text"] = re.sub(
+                        r"^Tutorial\s*[\=\-]+\n|Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+("
+                        r".*)\n*Solution\n[=\-]+\n*(.*)\n*",
+                        "", tutorial_dict["text"], flags=re.DOTALL
+                    )
+                    if sections_match:
+                        _, code, output, solution = sections_match[0]
+                        tutorial_dict["code"] = untab(code)
+                        tutorial_dict["output"] = untab(output)
+                        tutorial_dict["solution"] = untab(solution)
+                        tutorial_dict["is_tutorial"] = True
+                    else:
+                        tutorial_dict["code"] = ""
+                        tutorial_dict["output"] = ""
+                        tutorial_dict["solution"] = ""
+                        tutorial_dict["is_tutorial"] = False
 
-                else:
-                    tutorial_dict["code"] = ""
-                    tutorial_dict["output"] = ""
-                    tutorial_dict["solution"] = ""
+                    # Preload English tutorial if needed (for non-English tutorials)
+                    if language != "en":
+                        english_tutorial_data = tutorial_data[domain]["en"].get(tutorial, {})
 
-                # Preload English tutorial if needed (for non-English tutorials)
-                if language != "en":
-                    english_tutorial_data = tutorial_data[domain]["en"].get(tutorial, {})
+                        if not english_tutorial_data:
+                            english_tutorial_path = os.path.join(
+                                os.path.dirname(__file__), "tutorials", domain, "en", f"{tutorial}.md"
+                            )
+                            if os.path.isfile(english_tutorial_path):
+                                english_text = open(english_tutorial_path, encoding="utf-8").read()
+                                sections_match = sections.findall(english_text)
+                                if sections_match:
+                                    _, code, output, solution = sections_match[0]
+                                    english_tutorial_data = {
+                                        "code": untab(code),
+                                        "output": untab(output),
+                                        "solution": untab(solution),
+                                        "is_tutorial": True
+                                    }
+                                    # Store preloaded English content
+                                    tutorial_data[domain]["en"][tutorial] = english_tutorial_data
 
-                    if not english_tutorial_data:
-                        english_tutorial_path = os.path.join(
-                            os.path.dirname(__file__), "tutorials", domain, "en", f"{tutorial}.md"
-                        )
-                        if os.path.isfile(english_tutorial_path):
-                            english_text = open(english_tutorial_path, encoding="utf-8").read()
-                            sections_match = sections.findall(english_text)
-                            if sections_match:
-                                _, code, output, solution = sections_match[0]
-                                english_tutorial_data = {
-                                    "code": untab(code),
-                                    "output": untab(output),
-                                    "solution": untab(solution),
-                                }
-                                # Store preloaded English content
-                                tutorial_data[domain]["en"][tutorial] = english_tutorial_data
+                        # Assign English sections
+                        tutorial_dict["code"] = english_tutorial_data.get("code", "")
+                        tutorial_dict["output"] = english_tutorial_data.get("output", "")
+                        tutorial_dict["solution"] = english_tutorial_data.get("solution", "")
+                        tutorial_dict["is_tutorial"] = english_tutorial_data.get("is_tutorial", "")
 
-                    # Assign English sections
-                    tutorial_dict["code"] = english_tutorial_data.get("code", "")
-                    tutorial_dict["output"] = english_tutorial_data.get("output", "")
-                    tutorial_dict["solution"] = english_tutorial_data.get("solution", "")
-
-                tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
-
-                # Check if the tutorial has code, output, or solution
-                tutorial_dict["is_tutorial"] = bool(
-                    tutorial_dict["code"] or tutorial_dict["output"] or tutorial_dict["solution"]
-                )
-
-                if not tutorial_dict["is_tutorial"] and tutorial_file != "Welcome.md":
-                    logging.warning("File %s/%s/%s is not a tutorial", domain, language, tutorial_file)
-                    tutorial_dict["page_title"] = ""
                     tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
-                    tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
 
-                # Update links and navigation
-                links = [key for key in translated_titles.keys() if key not in CODING_FOR_KIDS_TITLES]
-                tutorial_dict["links"] = [
-                    (translated_titles.get(link, link), pageurl(link, language))
-                    for link in links
-                ]
+                    # Check if the tutorial has code, output, or solution
+                    tutorial_dict["is_tutorial"] = bool(
+                        tutorial_dict["code"] or tutorial_dict["output"] or tutorial_dict["solution"]
+                    )
 
-                # Update navigation links
+                    if not tutorial_dict["is_tutorial"] and language == "en":
+                        logging.warning("File %s/%s/%s is not a tutorial", domain, language, tutorial_file)
+                        tutorial_dict["page_title"] = ""
+                        tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
+                        tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
+
+                    # Update links and navigation for learnpython.org
+                    links = [key for key in translated_titles.keys() if key not in CODING_FOR_KIDS_TITLES]
+                    tutorial_dict["links"] = [
+                        (translated_titles.get(link, link), pageurl(link, language))
+                        for link in links
+                    ]
+                else:
+                    # For other domains, standard mechanism for links and navigation
+                    tutorial_dict["page_title"] = tutorial
+
+                    # Create links by looking at all lines that are not code lines
+                    stripped_text = "\n".join([x for x in tutorial_dict["text"].split("\n") if not x.startswith("    ")])
+                    links = [x[0].strip("|") if x[0] else x[1] for x in WIKI_WORD_PATTERN.findall(stripped_text)]
+                    tutorial_dict["links"] = [(x, pageurl(x, language)) for x in links]
+
+                    tutorial_sections = sections.findall(tutorial_dict["text"])
+                    if tutorial_sections:
+                        text, code, output, solution = tutorial_sections[0]
+                        tutorial_dict["page_title"] = tutorial
+                        tutorial_dict["text"] = wikify(text, language)
+                        tutorial_dict["code"] = untab(code)
+                        tutorial_dict["output"] = untab(output)
+                        tutorial_dict["solution"] = untab(solution)
+                        tutorial_dict["is_tutorial"] = True
+                    else:
+                        if tutorial_file != "Welcome.md":
+                            logging.warning("File %s/%s/%s is not a tutorial", domain, language, tutorial_file)
+                        tutorial_dict["page_title"] = ""
+                        tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
+                        tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
+                        tutorial_dict["is_tutorial"] = False
+
+                num_links = len(links)
                 for link in links:
                     if link not in tutorial_data[domain][language]:
                         tutorial_data[domain][language][link] = {
                             "page_title": link,
                             "text": contributing_tutorials,
-                            "code": "",
+                            "code": ""
                         }
 
                     if not "back_chapter" in tutorial_data[domain][language][link]:
@@ -308,7 +337,6 @@ def init_tutorials():
                     elif not link.startswith("http"):
                         logging.info("Warning! duplicate links to tutorial %s from tutorial %s/%s", link, language, tutorial)
 
-                    num_links = len(links)
                     page_index = links.index(link)
                     if page_index > 0:
                         if not "previous_chapter" in tutorial_data[domain][language][link]:
