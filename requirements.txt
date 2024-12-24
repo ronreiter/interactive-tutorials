@@ -1,5 +1,4 @@
-flask~=3.1.0
+flask
 redis
 gunicorn
 geoip2
-openai~=1.55.3
