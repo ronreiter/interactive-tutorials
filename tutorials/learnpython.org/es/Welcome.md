@@ -1,63 +1,63 @@
 # Bienvenido
 
-Bienvenido al tutorial interactivo de Python de LearnPython.org.
+Bienvenido al tutorial interactivo de Python en LearnPython.org.
 
-Ya sea que seas un programador experimentado o no, este sitio web está destinado a todos los que deseen aprender el lenguaje de programación Python.<br>
+Ya sea que seas un programador experimentado o no, este sitio web está diseñado para todos aquellos que deseen aprender el lenguaje de programación Python.<br>
 
-Estás invitado a unirte a nuestro grupo en <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> para preguntas, discusiones y actualizaciones.
+Eres bienvenido para unirte a nuestro grupo en <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> para preguntas, discusiones y actualizaciones.
 
-Después de completar los tutoriales, puedes certificarte en [LearnX](https://www.learnx.org) y agregar tu certificación a tu perfil de LinkedIn.
+Después de completar los tutoriales, puedes obtener una certificación en [LearnX](https://www.learnx.org) y agregar tu certificación a tu perfil de LinkedIn.
 
-Simplemente haz clic en el capítulo del que deseas comenzar, y sigue las instrucciones. ¡Buena suerte!<br>
+Simplemente haz clic en el capítulo con el que deseas comenzar y sigue las instrucciones. ¡Buena suerte!<br>
 
-### Aprende lo Básico
+### Aprender los Fundamentos
 
-- [[¡Hola, Mundo!]]
-- [[Variables y Tipos]]
-- [[Listas]]
-- [[Operadores Básicos]]
-- [[Formato de Cadenas]]
-- [[Operaciones Básicas con Cadenas]]
-- [[Condiciones]]
-- [[Bucles]]
-- [[Funciones]]
-- [[Clases y Objetos]]
-- [[Diccionarios]]
-- [[Módulos y Paquetes]]
-- [[Entrada y Salida]]
+- [¡Hola, Mundo!](Hello,%20World!)
+- [Variables y Tipos](Variables%20and%20Types)
+- [Listas](Lists)
+- [Operadores Básicos](Basic%20Operators)
+- [Formateo de Cadenas](String%20Formatting)
+- [Operaciones Básicas con Cadenas](Basic%20String%20Operations)
+- [Condiciones](Conditions)
+- [Bucles](Loops)
+- [Funciones](Functions)
+- [Clases y Objetos](Classes%20and%20Objects)
+- [Diccionarios](Dictionaries)
+- [Módulos y Paquetes](Modules%20and%20Packages)
+- [Entrada y Salida](Input%20and%20Output)
 
 ### Programación para Niños
 
-- [Comenzando](https://codingforkids.io/play/python/intro-level1)
-- [Movimiento con Funciones](https://codingforkids.io/play/python/intro-level2)
-- [Recolectando objetos](https://codingforkids.io/play/python/intro-level3)
-- [Empujando objetos](https://codingforkids.io/play/python/intro-level4)
-- [Imprimir en pantalla](https://codingforkids.io/play/python/intro-level5)
-- [Construyendo objetos](https://codingforkids.io/play/python/intro-level6)
-- [Aplicar lo que has aprendido](https://codingforkids.io/play/python/intro-level7)
+- [Starting Out](https://codingforkids.io/play/python/intro-level1)
+- [Movement with Functions](https://codingforkids.io/play/python/intro-level2)
+- [Collecting items](https://codingforkids.io/play/python/intro-level3)
+- [Pushing objects](https://codingforkids.io/play/python/intro-level4)
+- [Printing on screen](https://codingforkids.io/play/python/intro-level5)
+- [Building objects](https://codingforkids.io/play/python/intro-level6)
+- [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
 
 ### Tutoriales Avanzados
 
-- [[Generadores]]
-- [[Comprensiones de Listas]]
-- [[Funciones Lambda]]
-- [[Múltiples Argumentos de Función]]
-- [[Expresiones Regulares]]
-- [[Manejo de Excepciones]]
-- [[Conjuntos]]
-- [[Serialización]]
-- [[Funciones Parciales]]
-- [[Introspección de Código]]
-- [[Clausuras]]
-- [[Decoradores]]
-- [[Map, Filter, Reduce]]
-- [[Parseo de Archivos CSV]]
+- [Generadores](Generators)
+- [Comprensiones de Listas](List%20Comprehensions)
+- [Funciones Lambda](Lambda%20functions)
+- [Múltiples Argumentos de Funciones](Multiple%20Function%20Arguments)
+- [Expresiones Regulares](Regular%20Expressions)
+- [Manejo de Excepciones](Exception%20Handling)
+- [Conjuntos](Sets)
+- [Serialización](Serialization)
+- [Funciones Parciales](Partial%20functions)
+- [Introspección de Código](Code%20Introspection)
+- [Clausuras](Closures)
+- [Decoradores](Decorators)
+- [Map, Filter, Reduce](Map,%20Filter,%20Reduce)
+- [Análisis de Archivos CSV](Parsing%20CSV%20Files)
 
 ### Otros Tutoriales de Python
 
-- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) tiene montones de excelentes [Tutoriales de Python](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) que cubren manipulación de datos, visualización de datos, estadísticas, aprendizaje automático y más.
-- Lee el curso [Tutoriales y Referencias de Python](http://www.afterhoursprogramming.com/index.php?article=181) de After Hours Programming
+- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) tiene muchos [Tutoriales Interactivos de Python](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) sobre manipulación de datos, visualización de datos, estadística, aprendizaje automático, y más
+- Lee el curso de [Tutoriales y Referencias de Python](http://www.afterhoursprogramming.com/index.php?article=181) de After Hours Programming
 
 ### Contribuir con Tutoriales
 
-Lee más aquí: [[Contribuir con Tutoriales]]
+Lee más aquí: [Contributing Tutorials](Contributing%20Tutorials)

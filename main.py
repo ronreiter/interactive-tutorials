@@ -285,11 +285,14 @@ def init_tutorials():
                         tutorial_dict["code"] or tutorial_dict["output"] or tutorial_dict["solution"]
                     )
 
-                    if not tutorial_dict["is_tutorial"] and language == "en":
-                        logging.warning("File %s/%s/%s is not a tutorial", domain, language, tutorial_file)
-                        tutorial_dict["page_title"] = ""
-                        tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
-                        tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
+                    if tutorial_file == "Welcome.md":
+                        tutorial_dict["page_title"] = ''
+                    else:
+                        if not tutorial_dict["is_tutorial"] and language == "en":
+                            logging.warning("File %s/%s/%s is not a tutorial", domain, language, tutorial_file)
+                            tutorial_dict["page_title"] = ""
+                            tutorial_dict["text"] = wikify(tutorial_dict["text"], language)
+                            tutorial_dict["code"] = constants.DOMAIN_DATA[domain]["default_code"]
 
                     # Update links and navigation for learnpython.org
                     links = [key for key in translated_titles.keys() if key not in CODING_FOR_KIDS_TITLES]

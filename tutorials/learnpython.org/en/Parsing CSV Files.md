@@ -158,5 +158,50 @@ Example:
             writer.writerow({'firstname' : 'Henry', 'last_name': 'Smith'})
 
 
+Exercise
+--------
 
+In this exercise, you will be working with CSV data. Your task is to create a Python program that reads data from a CSV file and writes it to another CSV file, ensuring that only rows where the value in the first column is greater than 50 are included in the output file.
 
+Tutorial Code
+-------------
+
+    import csv
+    
+    # Open the input CSV file
+    with open('inputfile.csv', mode='r') as infile:
+        reader = csv.reader(infile)
+        # Open the output CSV file
+        with open('outputfile.csv', mode='w') as outfile:
+            writer = csv.writer(outfile)
+            # Write header
+            header = next(reader)
+            writer.writerow(header)
+            # Write rows where the value in the first column is greater than 50
+            for row in reader:
+                if int(row[0]) > 50:  # Assuming the first column contains numeric values
+                    writer.writerow(row)
+
+Expected Output
+---------------
+
+    Due to the limitations of this IDE, this solution cannot be tested here, as it requires access to external files. However, you should expect that a new file named `outputfile.csv` will be created, and it will contain the same rows as the input file, except only the rows where the first column contains a value greater than 50.
+
+Solution
+--------
+
+    import csv
+    
+    # Open the input CSV file
+    with open('inputfile.csv', mode='r') as infile:
+        reader = csv.reader(infile)
+        # Open the output CSV file
+        with open('outputfile.csv', mode='w') as outfile:
+            writer = csv.writer(outfile)
+            # Write header
+            header = next(reader)
+            writer.writerow(header)
+            # Write rows where the value in the first column is greater than 50
+            for row in reader:
+                if int(row[0]) > 50:  # Assuming the first column contains numeric values
+                    writer.writerow(row)
