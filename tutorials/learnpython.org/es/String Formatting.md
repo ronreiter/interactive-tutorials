@@ -1,60 +1,38 @@
-Formateo de Cadenas
------------------
+Python utiliza el formato de cadena al estilo C para crear nuevas cadenas formateadas. El operador "%" se usa para formatear un conjunto de variables encerradas en una "tupla" (una lista de tamaño fijo), junto con una cadena de formato que contiene texto normal junto con "especificadores de argumentos", símbolos especiales como "%s" y "%d".
 
-Tutorial
---------
+Supongamos que tienes una variable llamada "name" con tu nombre de usuario, y luego quisieras imprimir un saludo para ese usuario.
 
-Python usa un estilo de formato de cadenas parecido a C para crear nuevas cadenas de texto. El operador "%" es usado para dar este formato y fijar las variables encerradas en una "tupla" (una lista inmutable la cual no puede ser reasignada) juntos con una cadena con formato, que contiene el texto normal junto con "argumentos especificados", como los símbolos especiales "%s" y "%d". 
+    # Esto imprime "Hello, John!"
+    name = "John"
+    print("Hello, %s!" % name)
 
-Digamos que tienes una variable llamada "nombre" con tu nombre de usuario en ella y querrás darle un saludo al usuario.
-
-    # Esto imprime "Hola, Juan!"
-    nombre = "Juan"
-    print("Hola, %s!" % nombre)
-
-Para usar dos o más especificadores de argumento, usa un tupla (con parentesis):
+Para usar dos o más especificadores de argumentos, utiliza una tupla (paréntesis):
 
     # Esto imprime "John is 23 years old."
-    nombre = "John"
-    edad = 23
-    print("%s tiene %d años." % (nombre, edad))
+    name = "John"
+    age = 23
+    print("%s is %d years old." % (name, age))
 
-Cualquier objeto del cual no sea una cadena puede ser formateado usando el operador %s. La cadena que retorne de un método "repr" de ese objeto, será formateada como cadena, por ejemplo:
+Cualquier objeto que no sea una cadena también puede formatearse usando el operador %s. La cadena que devuelve el método "repr" de ese objeto se formatea como la cadena. Por ejemplo:
 
-    # Esto muestra lo siguiente: Una Lista: [1, 2, 3]
-    milista = [1,2,3]
-    print("Una lista: %s" % milista)
+    # Esto imprime: A list: [1, 2, 3]
+    mylist = [1,2,3]
+    print("A list: %s" % mylist)
 
-Aquí hay algunos especificadores de argumentos básicos como debes saber:
+Estos son algunos especificadores de argumentos básicos que debes conocer:
 
-    %s - Cadena (O cualquier objeto, como los números al representarlos en una cadena de texto)
-    %d - Integrales
-    %f - Números de punto flotante
-    %.<numero de digitos>f - Números de punto flotante con una cantidad de números fijos a la derecha del punto.
-    %x/%X - Integral con representacion hex (minúscula/mayúscula)
+`%s - Cadena (o cualquier objeto con una representación de cadena, como números)`
 
-### Ejercicios
+`%d - Enteros`
 
-Deberás escribir una cadena de formato el cual pone los datos usando las siguientes sintaxis:
-    Hola Juan Pérez. Tu balance es de 53.44$.
+`%f - Números de punto flotante`
 
-Tutorial Code
--------------
+`%.<número de dígitos>f - Números de punto flotante con una cantidad fija de dígitos a la derecha del punto.`
 
-datos = ("Juan", "Perez", 53.44)
-format_string = "Hola "
+`%x/%X - Enteros en representación hexadecimal (minúsculas/mayúsculas)`
 
-print(format_string % datos)
-
-Expected Output
----------------
-
-Hola Juan Perez. Tu balance es de 53.44$.
-
-Solution
+Exercise
 --------
 
-datos = ("Juan", "Perez", 53.44)
-format_string = "Hola %s %s. Tu balance es de %d."
-
-print(format_string % datos)
+Necesitarás escribir una cadena de formato que imprima los datos usando la siguiente sintaxis:
+    `Hello John Doe. Your current balance is $53.44.`

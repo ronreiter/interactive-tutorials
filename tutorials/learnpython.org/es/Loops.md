@@ -1,101 +1,84 @@
-Tutorial
---------
+Hay dos tipos de bucles en Python, for y while.
 
-Hay dos tipos de búcles en Python, "for" y "while".
+### El bucle "for"
 
-### El búcle "for"
+Los bucles for iteran sobre una secuencia dada. Aquí hay un ejemplo:
 
-Los búcles For iteran sobre una secuencia. Aquí un ejemplo:
+    primes = [2, 3, 5, 7]
+    for prime in primes:
+        print(prime)
 
-    primos = [2,3,5,7]
-    for prime in primos:
-        print primos
+Los bucles for pueden iterar sobre una secuencia de números usando las funciones "range" y "xrange". La diferencia entre range y xrange es que la función range devuelve una nueva lista con números de ese rango específico, mientras que xrange devuelve un iterador, lo cual es más eficiente. (Python 3 usa la función range, que actúa como xrange). Ten en cuenta que la función range es basada en cero.
 
-Los bucles pueden iterar sobre una secuencia de números usando las funciones de "range" y "xrange". La diferencia entre rango y range es que la función de rango devuelve una nueva lista con números que el rango especifica, donde xrange devuelve un iterador, el cual es muy eficiente. (Python 3 usa la función range, el cual actúa como xrange). Nota que la función xrange comienza desde el índice cero.
+    # Imprime los números 0,1,2,3,4
+    for x in range(5):
+        print(x)
 
-    # Muestra todos los números entre 0,1,2,3,4
-    for x in xrange(5):
-        print x
+    # Imprime 3,4,5
+    for x in range(3, 6):
+        print(x)
 
-    # Muestra 3,4,5
-    for x in xrange(3,6):
-        print x
+    # Imprime 3,5,7
+    for x in range(3, 8, 2):
+        print(x)
 
-### El búcle "while"
+### Bucles "while"
 
-Mientras que los búcles While, a diferencia de los For, se repiten tantas veces como se cumpla una condición booleana (operador lógico). Por ejemplo:
+Los bucles while se repiten mientras se cumpla una cierta condición booleana. Por ejemplo:
 
-    # Muestra 0,1,2,3,4
+    # Imprime 0,1,2,3,4
 
     count = 0
     while count < 5:
-        print count
-        count += 1  # Esto es lo mismo que escribir:  count = count + 1
+        print(count)
+        count += 1  # Esto es lo mismo que count = count + 1
 
 ### Sentencias "break" y "continue"
 
-**break** es usado para salir de un búcle o un búcle while, donde **continue** es usado para saltar el bloque actual, y el retorno de las sentencias "for" o "while". Aquí unos ejemplos:
+**break** se utiliza para salir de un bucle for o while, mientras que **continue** se utiliza para saltar el bloque actual y volver a la sentencia "for" o "while". Algunos ejemplos:
 
-    # Muestra 0,1,2,3,4
+    # Imprime 0,1,2,3,4
 
     count = 0
     while True:
-        print count
+        print(count)
         count += 1
         if count >= 5:
             break
 
-    # Muestra solo números impares - 1,3,5,7,9
-    for x in xrange(10):
-        # Chequéa si x es numero par
+    # Imprime solo números impares - 1,3,5,7,9
+    for x in range(10):
+        # Verificar si x es par
         if x % 2 == 0:
             continue
-        print x
+        print(x)
 
-### Ejercicio
+### ¿Podemos usar la cláusula "else" en bucles?
 
-Crea un búcle que muestre todos los números pares de los números de la lista en el mismo orden que es recibido, pero que sean menores al número "412" (sin incluirlo). Separe e ignore todos los números mayores a 412 en la sentencia. (Note que habra números superiores a 412.)
+A diferencia de lenguajes como C, CPP... podemos usar **else** en bucles. Cuando la condición del bucle de la sentencia "for" o "while" falla, entonces se ejecuta la parte del código en "else". Si se ejecuta una sentencia **break** dentro del bucle for, entonces se omite la parte "else". 
+Ten en cuenta que la parte "else" se ejecuta incluso si hay una sentencia **continue**.
 
-Tutorial Code
--------------
+Aquí hay algunos ejemplos:
 
-numeros = [
-    951, 402, 984, 651, 360, 69, 408, 319, 601, 485, 980, 507, 725, 547, 544,
-    615, 83, 165, 141, 501, 263, 617, 865, 575, 219, 390, 984, 592, 236, 105, 942, 941,
-    386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
-    399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
-    815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,
-    958, 609, 842, 451, 688, 753, 854, 685, 93, 857, 440, 380, 126, 721, 328, 753, 470,
-    743, 527
-]
+    # Imprime 0,1,2,3,4 y luego imprime "el valor de count alcanzó 5"
 
-#  your code goes here
+    count=0
+    while(count<5):
+        print(count)
+        count +=1
+    else:
+        print("el valor de count alcanzó %d" %(count))
+
+    # Imprime 1,2,3,4
+    for i in range(1, 10):
+        if(i%5==0):
+            break
+        print(i)
+    else:
+        print("esto no se imprime porque el bucle for se termina debido a un break pero no por fallar en la condición")
 
 
-Expected Output
----------------
-
-402
-360
-408
-390
-236
-386
-344
-236
-328
-162
-248
-104
-58
-24
-380
-126
-328
-
-Solution
+Ejercicio
 --------
 
-for x in numeros:
-    if x % 2 == 0 and x <= 412:
-        print(x)
+Recorre e imprime todos los números pares de la lista de números en el mismo orden en que se reciben. No imprimas ningún número que venga después de 237 en la secuencia.

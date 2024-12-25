@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Привет, мир!",
+        "Variables and Types": "Переменные и типы",
+        "Lists": "Списки",
+        "Basic Operators": "Базовые операторы",
+        "String Formatting": "Форматирование строк",
+        "Basic String Operations": "Базовые операции со строками",
+        "Conditions": "Условия",
+        "Loops": "Циклы",
+        "Functions": "Функции",
+        "Classes and Objects": "Классы и объекты",
+        "Dictionaries": "Словари",
+        "Modules and Packages": "Модули и пакеты",
+        "Input and Output": "Ввод и вывод"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Начало",
+        "Movement with Functions": "Движение с функциями",
+        "Collecting items": "Сбор предметов",
+        "Pushing objects": "Перемещение объектов",
+        "Printing on screen": "Печать на экране",
+        "Building objects": "Создание объектов",
+        "Apply what you've learned": "Примените то, что вы узнали"
+    },
+    "advanced": {
+        "Generators": "Генераторы",
+        "List Comprehensions": "Списковые включения",
+        "Lambda functions": "Лямбда-функции",
+        "Multiple Function Arguments": "Множественные Аргументы Функции",
+        "Regular Expressions": "Регулярные выражения",
+        "Exception Handling": "Обработка Исключений",
+        "Sets": "Наборы",
+        "Serialization": "Сериализация",
+        "Partial functions": "Частичные функции",
+        "Code Introspection": "Анализ кода",
+        "Closures": "Замыкания",
+        "Decorators": "Декораторы",
+        "Map, Filter, Reduce": "Карта, Фильтр, Уменьшение",
+        "Parsing CSV Files": "Парсинг CSV-файлов"
+    }
+}

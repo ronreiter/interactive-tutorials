@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Hei, maailma!",
+        "Variables and Types": "Muuttujat ja tyypit",
+        "Lists": "Listat",
+        "Basic Operators": "Perusoperaattorit",
+        "String Formatting": "Merkkijonon muotoilu",
+        "Basic String Operations": "Perusteet merkkijonojen käsittelystä",
+        "Conditions": "Ehdot",
+        "Loops": "Silmukat",
+        "Functions": "Toiminnot",
+        "Classes and Objects": "Luokat ja oliot",
+        "Dictionaries": "Sanakirjat",
+        "Modules and Packages": "Moduulit ja paketit",
+        "Input and Output": "Syöte ja tuloste"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Aloittamassa",
+        "Movement with Functions": "Liike toiminnoilla",
+        "Collecting items": "Esineiden kerääminen",
+        "Pushing objects": "Objektien työntäminen",
+        "Printing on screen": "Tulostaminen näytölle",
+        "Building objects": "Rakennusobjektit",
+        "Apply what you've learned": "Sovella oppimaasi"
+    },
+    "advanced": {
+        "Generators": "Generaattorit",
+        "List Comprehensions": "Luettelon ymmärtäminen",
+        "Lambda functions": "Lambda-funktiot",
+        "Multiple Function Arguments": "Useita funktioargumentteja",
+        "Regular Expressions": "Säännölliset lausekkeet",
+        "Exception Handling": "Poikkeusten Käsittely",
+        "Sets": "Joukot",
+        "Serialization": "Sarjoittaminen",
+        "Partial functions": "Osittaisfunktiot",
+        "Code Introspection": "Koodin introspektio",
+        "Closures": "Sulkeet",
+        "Decorators": "Koristimet",
+        "Map, Filter, Reduce": "Kartta, Suodatus, Vähennys",
+        "Parsing CSV Files": "CSV-tiedostojen jäsentäminen"
+    }
+}

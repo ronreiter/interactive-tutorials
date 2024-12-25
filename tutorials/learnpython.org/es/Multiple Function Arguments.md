@@ -1,101 +1,54 @@
-Tutorial
---------
-Cada función en Python recibe un predeterminado número de argumentos, si es declarada normalmente, como esta:
+# Funciones en Python
 
-    def myfunction(first, second, third):
-        # Haz algo con las tres variables
-        ...
+Cada función en Python recibe un número predefinido de argumentos, si se declara normalmente, como este ejemplo:
 
-Es posible declarar funciones que reciban un número variable de argumentos, usando la siguiente sintaxis:
+```
+def myfunction(first, second, third):
+    # do something with the 3 variables
+    ...
+```
 
-    def foo(first, second, third, *therest):
-        print("First: %s" % first)
-        print("Second: %s" % second)
-        print("Third: %s" % third)
-        print("And all the rest... %s" % list(therest))
+Es posible declarar funciones que reciban un número variable de argumentos, utilizando la siguiente sintaxis:
 
-La variable "therest" es una lista de variables, que recibe todos los argumentos que fueron dados a la función "foo" después de los tres primeros argumentos. Así que llamando `foo(1,2,3,4,5)` imprimiremos:
+```
+def foo(first, second, third, *therest):
+    print("First: %s" % first)
+    print("Second: %s" % second)
+    print("Third: %s" % third)
+    print("And all the rest... %s" % list(therest))
+```
 
-    def foo(first, second, third, *therest):
-        print("First: %s" %(first))
-        print("Second: %s" %(second))
-        print("Third: %s" %(third))
-        print("And all the rest... %s" %(list(therest)))
+La variable "therest" es una lista de variables que recibe todos los argumentos que se le pasen a la función "foo" después de los primeros 3 argumentos. Entonces, llamar a `foo(1, 2, 3, 4, 5)` imprimirá:
 
-    foo(1,2,3,4,5)
+```
+def foo(first, second, third, *therest):
+    print("First: %s" %(first))
+    print("Second: %s" %(second))
+    print("Third: %s" %(third))
+    print("And all the rest... %s" %(list(therest)))
+    
+foo(1, 2, 3, 4, 5)
+```
 
-También es posible enviar argumentos de funciones por clave, para que el orden del argumento no importa, usando la siguiente sintaxis. El siguiente código produce la siguiente salida:
+También es posible enviar argumentos a las funciones mediante palabras clave, de modo que el orden de los argumentos no importe, utilizando la siguiente sintaxis. El siguiente código produce la siguiente salida:
+```La suma es: 6
+    Resultado: 1```
 
-```The sum is: 6
-    Result: 1```
+```python
+def bar(first, second, third, **options):
+    if options.get("action") == "sum":
+        print("The sum is: %d" %(first + second + third))
+    
+    if options.get("number") == "first":
+        return first
 
-    def bar(first, second, third, **options):
-        if options.get("action") == "sum":
-            print("The sum is: %d" %(first + second + third))
+result = bar(1, 2, 3, action = "sum", number = "first")
+print("Result: %d" %(result))
+```
 
-        if options.get("number") == "first":
-            return first
-
-    result = bar(1, 2, 3, action = "sum", number = "first")
-    print("Result: %d" %(result))
-
-
-
-La función "bar" recibe tres argumentos. Si se recibe un argumento "action" adicional, y ordena que se haga un resumen de los números,  se imprimirá el resumen. Alternativamente, la función tambien debe devolver el primer argumento, si el valor del parámetro "number", pasado a la función, es igual a "first".
+La función "bar" recibe 3 argumentos. Si se recibe un argumento adicional "action" que indica sumar los números, entonces se imprime la suma. Alternativamente, la función también sabe que debe devolver el primer argumento si el valor del parámetro "number", pasado a la función, es igual a "first".
 
 Exercise
 --------
 
-Rellena las funciones `foo` y `bar` para que puedan recibir una cantidad variable de argumentos (tres o más)
-La función `foo` debe devolver la cantidad de argumentos extra recibidos.
-`bar` debe devolver `True` si el argumento con la clave `magicnumber` vale 7, y `False` en cualquier otro caso.
-
-Tutorial Code
--------------
-
-# Edita el prototipo de las funciones y la implementación
-def foo(a, b, c):
-    pass
-
-def bar(a, b, c):
-    pass
-
-
-# Código de Test
-if foo(1,2,3,4) == 1:
-    print("Good.")
-if foo(1,2,3,4,5) == 2:
-    print("Better.")
-if bar(1,2,3,magicnumber = 6) == False:
-    print("Great.")
-if bar(1,2,3,magicnumber = 7) == True:
-    print("Awesome!")
-
-Expected Output
----------------
-
-test_output_contains("Good.")
-test_output_contains("Better.")
-test_output_contains("Great.")
-test_output_contains("Awesome!")
-success_msg("Great work!")
-
-Solution
---------
-# Edita el prototipo de las funciones y la implementación
-def foo(a, b, c, *args):
-    return len(args)
-
-def bar(a, b, c, **kwargs):
-    return kwargs["magicnumber"] == 7
-
-
-# Código de Test
-if foo(1,2,3,4) == 1:
-    print("Good.")
-if foo(1,2,3,4,5) == 2:
-    print("Better.")
-if bar(1,2,3,magicnumber = 6) == False:
-    print("Great.")
-if bar(1,2,3,magicnumber = 7) == True:
-    print("Awesome!")
+Complete las funciones `foo` y `bar` para que puedan recibir una cantidad variable de argumentos (3 o más). La función `foo` debe devolver la cantidad de argumentos adicionales recibidos. La función `bar` debe devolver `True` si el argumento con la palabra clave `magicnumber` es igual a 7, y `False` en caso contrario.

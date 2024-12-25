@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "สวัสดี, ชาวโลก!",
+        "Variables and Types": "ตัวแปรและประเภท",
+        "Lists": "รายการ",
+        "Basic Operators": "ตัวดำเนินการพื้นฐาน",
+        "String Formatting": "การจัดรูปแบบสตริง",
+        "Basic String Operations": "การดำเนินการพื้นฐานของสตริง",
+        "Conditions": "เงื่อนไข",
+        "Loops": "ลูป",
+        "Functions": "ฟังก์ชัน",
+        "Classes and Objects": "คลาสและออบเจกต์",
+        "Dictionaries": "พจนานุกรม",
+        "Modules and Packages": "โมดูลและแพ็กเกจ",
+        "Input and Output": "อินพุตและเอาต์พุต"
+    },
+    "coding-for-kids": {
+        "Starting Out": "เริ่มต้น",
+        "Movement with Functions": "การเคลื่อนไหวด้วยฟังก์ชัน",
+        "Collecting items": "รวบรวมไอเท็ม",
+        "Pushing objects": "ผลักดันวัตถุ",
+        "Printing on screen": "การพิมพ์บนหน้าจอ",
+        "Building objects": "การสร้างอ็อบเจ็กต์",
+        "Apply what you've learned": "ประยุกต์ใช้สิ่งที่คุณได้เรียนรู้"
+    },
+    "advanced": {
+        "Generators": "ตัวสร้าง",
+        "List Comprehensions": "การสร้างรายการแบบสั้น",
+        "Lambda functions": "ฟังก์ชัน Lambda",
+        "Multiple Function Arguments": "หลายอาร์กิวเมนต์ในฟังก์ชัน",
+        "Regular Expressions": "นิพจน์ตามปกติ",
+        "Exception Handling": "การจัดการข้อยกเว้น",
+        "Sets": "ชุด",
+        "Serialization": "การทำให้เป็นอนุกรม",
+        "Partial functions": "ฟังก์ชันบางส่วน",
+        "Code Introspection": "การตรวจสอบโค้ด",
+        "Closures": "Closure",
+        "Decorators": "เดกอเรเตอร์",
+        "Map, Filter, Reduce": "แผนที่, กรอง, ลด",
+        "Parsing CSV Files": "การแยกไฟล์ CSV"
+    }
+}

@@ -48,3 +48,55 @@ The sys module provides various functions for output formatting but here we lear
     print "a is : %d, b is %0.4f,c is %s" % (a,b,c)
 
 The output must be self explanatory.
+
+Exercise
+--------
+
+Write a program that asks the user to input their name, age, and country. The program should then print out a message that includes this information in a sentence. The program should include:
+
+1. Taking a name as input using `raw_input()`.
+2. Taking an age as input using `input()`, and converting it to an integer.
+3. Taking a country name as input using `raw_input()`.
+4. Formatting the output to display a sentence that includes the name, age, and country.
+
+The program should demonstrate input handling and string formatting in Python.
+
+Tutorial Code
+-------------
+
+    # Taking the name input using raw_input()
+    name = raw_input("Enter your name: ")
+    
+    # Taking the age input using input() and converting it to integer
+    age = int(input("Enter your age: "))
+    
+    # Taking the country input using raw_input()
+    country = raw_input("Enter your country: ")
+    
+    # Displaying the formatted sentence with name, age, and country
+    print("Hello, my name is {}, I am {} years old, and I am from {}.".format(name, age, country))
+
+
+Expected Output
+---------------
+
+    Enter your name: John
+    Enter your age: 25
+    Enter your country: USA
+    Hello, my name is John, I am 25 years old, and I am from USA.
+    
+
+Solution
+-------------
+
+    # Taking the name input using raw_input()
+    name = raw_input("Enter your name: ")
+    
+    # Taking the age input using input() and converting it to integer
+    age = int(input("Enter your age: "))
+    
+    # Taking the country input using raw_input()
+    country = raw_input("Enter your country: ")
+    
+    # Displaying the formatted sentence with name, age, and country
+    print("Hello, my name is {}, I am {} years old, and I am from {}.".format(name, age, country)) name is {}, I am {} years old, and I am from {}.".format(name, age, country))

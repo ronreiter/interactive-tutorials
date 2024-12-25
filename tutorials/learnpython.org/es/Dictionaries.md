@@ -1,83 +1,54 @@
-Tutorial
---------
+Un diccionario es un tipo de dato similar a los arrays, pero funciona con claves y valores en lugar de índices. Cada valor almacenado en un diccionario se puede acceder utilizando una clave, que puede ser cualquier tipo de objeto (una cadena, un número, una lista, etc.) en lugar de usar su índice para referenciarlo.
 
-Un diccionario es un tipo de dato similar a los arreglos, pero trabajan con llaves y valores en vez de índices. Cada valor está almacenado en un diccionario que puede ser accedido usando una llave, el cual es cualquier tipo de objeto (cadena, número, lista, etc) en vez de usar un indice para acceder al mismo.
+Por ejemplo, una base de datos de números telefónicos podría almacenarse utilizando un diccionario como este:
 
-Por ejemplo una base de datos de números de teléfonos puede estar almacenada en un diccionario como este:
+    phonebook = {}
+    phonebook["John"] = 938477566
+    phonebook["Jack"] = 938377264
+    phonebook["Jill"] = 947662781
+    print(phonebook)
 
-    librotelefonico = {}
-    librotelefonico["Juan"] = 938477566
-    librotelefonico["Jack"] = 938377264
-    librotelefonico["Jill"] = 947662781
+Alternativamente, un diccionario puede inicializarse con los mismos valores en la siguiente notación:
 
-De manera alternativa, un diccionario puede ser inicializado con el mismo valor en la anotación siguiente:
-
-    librotelefonico = {
-        "Juan" : 938477566,
+    phonebook = {
+        "John" : 938477566,
         "Jack" : 938377264,
         "Jill" : 947662781
     }
+    print(phonebook)
 
-### Iterando en los diccionarios
+### Iterar sobre diccionarios
 
-Los diccionarios pueden ser iterados de la misma manera que una lista. Sin embargo, en un diccionario no se guardan el orden de los valores almacenados. Para iterar sobre las llaves y valores usa la siguiente sintaxis:
+Los diccionarios pueden iterarse, al igual que una lista. Sin embargo, un diccionario, a diferencia de una lista, no mantiene el orden de los valores almacenados en él. Para iterar sobre pares clave-valor, use la siguiente sintaxis:
 
-    for name, number in librotelefonico.iteritems():
-        print "Número telefónico de %s esta en %d" % (name, number)
+    phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
+    for name, number in phonebook.items():
+        print("Phone number of %s is %d" % (name, number))
 
-### Eliminando valores
+### Eliminar un valor
 
-Para eliminar el índice específico, usa tanto una como la siguiente notación:
+Para eliminar un índice específico, use cualquiera de las siguientes notaciones:
 
-    del librotelefonico["Juan"]
+    phonebook = {
+       "John" : 938477566,
+       "Jack" : 938377264,
+       "Jill" : 947662781
+    }
+    del phonebook["John"]
+    print(phonebook)
 
 o:
 
-    librotelefonico.pop("Juan")
-
-### Ejercicio
-
-Agrega "Jake" al libro telefónico con el número 938273443, y elimina a Jill del mismo libro.
-
-Tutorial Code
--------------
-
-librotelefonico = {
-    "Juan" : 938477566,
-    "Jack" : 938377264,
-    "Jill" : 947662781
-}
-
-# Escribe tú código aquí
+    phonebook = {
+       "John" : 938477566,
+       "Jack" : 938377264,
+       "Jill" : 947662781
+    }
+    phonebook.pop("John")
+    print(phonebook)
 
 
-# Probando el código
-if "Jake" in librotelefonico:
-    print "Jake esta listado en el libro telefonico."
-if "Jill" not in librotelefonico:
-    print "Jill no esta listada en el libro telefonico."
-
-Expected Output
----------------
-
-Jake is listed in the libro telefonico.
-Jill is not listed in the libro telefonico.
-
-Solution
+Ejercicio
 --------
 
-librotelefonico = {
-    "Juan" : 938477566,
-    "Jack" : 938377264,
-    "Jill" : 947662781
-}
-
-# Escribe tú código aquí
-librotelefonico["Jake"] = 938273443
-librotelefonico.pop("Jill")
-
-# Probando el código
-if "Jake" in librotelefonico:
-    print "Jake esta listado en el libro telefonico."
-if "Jill" not in librotelefonico:
-    print "Jill no esta listada en el libro telefonico."
+Añade "Jake" al directorio telefónico con el número 938273443, y elimina a Jill del directorio telefónico.

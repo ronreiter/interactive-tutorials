@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Hej, världen!",
+        "Variables and Types": "Variabler och Typer",
+        "Lists": "Listor",
+        "Basic Operators": "Grundläggande operatorer",
+        "String Formatting": "Strängformatering",
+        "Basic String Operations": "Grundläggande Strängoperationer",
+        "Conditions": "Villkor",
+        "Loops": "Loopar",
+        "Functions": "Funktioner",
+        "Classes and Objects": "Klasser och objekt",
+        "Dictionaries": "Ordböcker",
+        "Modules and Packages": "Moduler och Paket",
+        "Input and Output": "Inmatning och Utmatning"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Börja Från Början",
+        "Movement with Functions": "Rörelse med funktioner",
+        "Collecting items": "Samla föremål",
+        "Pushing objects": "Skjuta objekt",
+        "Printing on screen": "Skriva ut på skärmen",
+        "Building objects": "Bygga objekt",
+        "Apply what you've learned": "Tillämpa det du har lärt dig"
+    },
+    "advanced": {
+        "Generators": "Generatorer",
+        "List Comprehensions": "Lista-komprehensioner",
+        "Lambda functions": "Lambda-funktioner",
+        "Multiple Function Arguments": "Flera Funktionsargument",
+        "Regular Expressions": "Reguljära uttryck",
+        "Exception Handling": "Felhantering",
+        "Sets": "Mängder",
+        "Serialization": "Serialisering",
+        "Partial functions": "Partiella funktioner",
+        "Code Introspection": "Kodintrospektion",
+        "Closures": "Avslutningar",
+        "Decorators": "Dekoratorer",
+        "Map, Filter, Reduce": "Map, Filter, Reduce",
+        "Parsing CSV Files": "Parsing av CSV-filer"
+    }
+}

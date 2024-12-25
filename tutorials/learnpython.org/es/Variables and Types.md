@@ -1,81 +1,66 @@
-Tutorial
---------
+Python es completamente orientado a objetos y no tiene un "tipado estático". No necesitas declarar variables antes de usarlas ni declarar su tipo. Cada variable en Python es un objeto.
 
-Python es completamente orientado a objetos, y no es "escrito estáticamente". No necesitas declarar variables o el tipo antes de usarlas. Cada variable en Python es un objeto y así cada objeto soporta las siguientes instrucciones:
+Este tutorial revisará algunos tipos básicos de variables.
 
-**help(object)** - Muestra información de cómo usar objetos.
+### Numbers
+Python soporta dos tipos de números - enteros (números completos) y números de punto flotante (decimales). (También soporta números complejos, que no se explicarán en este tutorial).
 
-**dir(object)** - muestra la estructura interna del objeto - con sus metodos y miembros.
-
-Este tutorial irá a través de algunos tipos básicos de variables.
-
-### Números
-Python soporta dos tipos de números - enteros o integrales (integer) y números de punto flotante (float). (Tambien soporta números complejos, los cuales no se explicarán en este tutorial). 
-
-Para definir un integral, usa la siguiente sintaxis:
+Para definir un entero, usa la siguiente sintaxis:
 
     myint = 7
+    print(myint)
 
-Para definir un número de punto flotante, debes usar una de las siguientes notaciones:
+Para definir un número de punto flotante, puedes usar una de las siguientes notaciones:
 
-    midecimal = 7.0
-    midecimal = float(7)
+    myfloat = 7.0
+    print(myfloat)
+    myfloat = float(7)
+    print(myfloat)
 
-### Cadenas
+### Strings
 
-Las cadenas están definidas con comillas sencillas o compuestas.
+Las cadenas se definen ya sea con comillas simples o dobles.
 
-    micadena = 'Hola'
-    micadena = "Hola"
+    mystring = 'hello'
+    print(mystring)
+    mystring = "hello"
+    print(mystring)
 
-La diferencia entre las dos es que usando doble comillas lo hace más fácil de incluir los apostofres (de lo contrario concluirá la cadena si se usa doble comillas)
+La diferencia entre ambas es que usar comillas dobles facilita incluir apóstrofes (mientras que estos terminarían la cadena si se usan comillas simples).
 
-        micadena = "No te preocupes de los 'apostofres' usando comillas dobles"
+    mystring = "Don't worry about apostrophes"
+    print(mystring)
+    
+Hay variaciones adicionales para definir cadenas que facilitan incluir cosas como retornos de carro, barras invertidas y caracteres Unicode. Estas van más allá del alcance de este tutorial, pero están cubiertas en la [documentación de Python](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial").
 
-Existen variaciones para definir cadenas de texto que hacen más sencillo incluir otros símbolos como un salto de línea, una contrabarra o caracteres Unicode. Este tema no se cubre en este tutorial, pero puedes conseguir más información en [Python documentation](http://docs.python.org/tutorial/introduction.html#strings "Strings in Python Tutorial"). 
+Se pueden ejecutar operadores simples en números y cadenas:
 
-Los operadores simples pueden ser ejecutados en números o cadenas:
+    one = 1
+    two = 2
+    three = one + two
+    print(three)
 
-    uno = 1
-    dos = 2
-    tres = uno + dos
+    hello = "hello"
+    world = "world"
+    helloworld = hello + " " + world
+    print(helloworld)
 
-    hola = "hola"
-    mundo = "mundo"
-    holamundo = hola + " " + mundo
-
-Se puede asignar a más de una variable simultaneamente en la misma línea, como se muestra aquí
+Las asignaciones se pueden hacer a más de una variable "simultáneamente" en la misma línea, como esta:
 
     a, b = 3, 4
+    print(a, b)
 
-Mezclando operadores entre los numeros y cadenas que no son soportadas:
+No se soporta la mezcla de operadores entre números y cadenas:
 
-    # Esto no funcionará!
-    print uno + dos + hola
-
-
-### Ejercicio
-
-El objetivo de este ejercicio es crear una cadena de texto, un número entero y uno flotante. La cadena de texto debe nombrarse como "mystring" y debe de contener la palabra "hello". El número flotante deberá llamarse "myfloat" y debe de contener el número 10; el entero debe de llamarse "myint" y deberá contener el número 20.
-
-Tutorial Code
--------------
-# Escribe tu propio código aquí
+    # ¡Esto no funcionará!
+    one = 1
+    two = 2
+    hello = "hello"
+    
+    print(one + two + hello)
 
 
-# probando el código
-if micadena == "hola":
-    print "Cadena: %s" % micadena
-if isinstance(miflotante, float) and miflotante == 10.0:
-    print "Flotante: %d" % miflotante
-if isinstance(miIntegral, int) and miIntegral == 20:
-    print "Integral: %d" % miIntegral
-
-Expected Output
----------------
-Cadena: hola
-Flotante: 10
-Integral: 20
-
-Solution
+Exercise
 --------
+
+El objetivo de este ejercicio es crear una cadena, un entero y un número de punto flotante. La cadena debe llamarse `mystring` y debe contener la palabra "hello". El número de punto flotante debe llamarse `myfloat` y debe contener el número 10.0, y el entero debe llamarse `myint` y debe contener el número 20.

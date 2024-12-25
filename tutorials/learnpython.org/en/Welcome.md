@@ -25,6 +25,8 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Classes and Objects]]
 - [[Dictionaries]]
 - [[Modules and Packages]]
+- [[Input and Output]]
+
 
 ### Coding for Kids
 - [Starting Out](https://codingforkids.io/play/python/intro-level1)
@@ -35,9 +37,6 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [Building objects](https://codingforkids.io/play/python/intro-level6)
 - [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
 
-### Data Science Tutorials
-- [[Numpy Arrays]]
-- [[Pandas Basics]]
 
 ### Advanced Tutorials
 
@@ -54,6 +53,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Closures]]
 - [[Decorators]]
 - [[Map, Filter, Reduce]]
+- [[Parsing CSV Files]]
 
 ### Other Python Tutorials
 

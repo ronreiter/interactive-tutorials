@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Halo, Dunia!",
+        "Variables and Types": "Variabel dan Tipe",
+        "Lists": "Daftar",
+        "Basic Operators": "Operator Dasar",
+        "String Formatting": "Pemformatan String",
+        "Basic String Operations": "Operasi Dasar String",
+        "Conditions": "Kondisi",
+        "Loops": "Loops",
+        "Functions": "Fungsi",
+        "Classes and Objects": "Kelas dan Objek",
+        "Dictionaries": "Kamus",
+        "Modules and Packages": "Modul dan Paket",
+        "Input and Output": "Masukan dan Keluaran"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Memulai",
+        "Movement with Functions": "Gerakan dengan Fungsi",
+        "Collecting items": "Mengumpulkan barang",
+        "Pushing objects": "Mendorong objek",
+        "Printing on screen": "Mencetak di layar",
+        "Building objects": "Membangun objek",
+        "Apply what you've learned": "Terapkan apa yang telah Anda pelajari"
+    },
+    "advanced": {
+        "Generators": "Generator",
+        "List Comprehensions": "Pemahaman Daftar",
+        "Lambda functions": "Fungsi Lambda",
+        "Multiple Function Arguments": "Argumen Fungsi Berganda",
+        "Regular Expressions": "Ekspresi Reguler",
+        "Exception Handling": "Penanganan Pengecualian",
+        "Sets": "Himpunan",
+        "Serialization": "Serialisasi",
+        "Partial functions": "Fungsi Parsial",
+        "Code Introspection": "Introspeksi Kode",
+        "Closures": "Penutupan",
+        "Decorators": "Dekorator",
+        "Map, Filter, Reduce": "Peta, Filter, Reduksi",
+        "Parsing CSV Files": "Memparsing File CSV"
+    }
+}

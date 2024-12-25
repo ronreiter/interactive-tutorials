@@ -1,106 +1,75 @@
-Tutorial
---------
+Strings son fragmentos de texto. Se pueden definir como cualquier cosa entre comillas:
 
-Las cadenas son bits de texto; estas pueden ser definidas como cualquier cosa entre comillas:
+    astring = "Hello world!"
+    astring2 = 'Hello world!'
 
-    unacadena = "Hola Mundo!"
+Como puedes ver, lo primero que aprendiste fue a imprimir una oración simple. Esta oración fue almacenada por Python como una cadena de texto. Sin embargo, en lugar de imprimir cadenas inmediatamente, exploraremos las varias cosas que puedes hacer con ellas.
+También puedes usar comillas simples para asignar una cadena. Sin embargo, enfrentarás problemas si el valor que se va a asignar contiene comillas simples. Por ejemplo, para asignar la cadena en este paréntesis (comillas simples son ' ') necesitas usar comillas dobles de esta manera
 
-Como puedes ver, la primera cosa que aprendes es la de mostrar una simple oración. Esta oración es procesada por Python como una cadena. Sin embargo, en vez de imprimir la cadena inmediatamente, debemos explorar varias cosas que puedes hacerle.
+    astring = "Hello world!"
+    print("single quotes are ' '")
 
-    print len(unacadena)
+    print(len(astring))
 
-Esta muestra 12, porque "Hola mundo!" es de 12 caracteres incluyendo puntuación y espacios.
+Eso imprime 12, porque "Hello world!" tiene 12 caracteres, incluyendo puntuación y espacios.
 
-    print unacadena.index("o")
+    astring = "Hello world!"
+    print(astring.index("o"))
 
-Esto imprime 1, porque la ubicación de la primera letra que imprime, en este caso la letra "o" esta en el primer caracter a partir del primero. Nota que aunque hay dos "o" en la frase, este método solo reconocerá al primero.
+Eso imprime 4, porque la ubicación de la primera aparición de la letra "o" está a 4 caracteres del primer carácter. Observa cómo en realidad hay dos "o" en la frase, pero este método solo reconoce el primero.
 
-Pero ¿Por qué no imprime 2? ¿No es "o" el segundo caracter de la cadena? Para hacer las cosas mas sencillas, Python (y mucho de los otros lenguajes de programación) comienzan con 0 en vez de 1. Asi que el lugar de "o" es 1.
+¿Pero por qué no imprimió 5? ¿No es "o" el quinto carácter de la cadena? Para simplificar las cosas, Python (y la mayoría de los otros lenguajes de programación) comienzan las cosas en 0 en lugar de 1. Por lo tanto, el índice de "o" es 4.
 
-    print unacadena.count("l")
+    astring = "Hello world!"
+    print(astring.count("l"))
 
-Para quienes estén usando fuentes especiales, tal como la 'l' minúscula, en vez del número uno. Este cuenta el número de eles en la cadena, así que debe mostrar 1.
+Para aquellos que usan fuentes extrañas, eso es una "l" minúscula, no un número uno. Esto cuenta el número de "l" en la cadena. Por lo tanto, debería imprimir 3.
 
-    print astring[3:7]
+    astring = "Hello world!"
+    print(astring[3:7])
 
-Esto imprime una sección de la cadena, comenzando en el indice 3, y terminando en el 6. Pero ¿Por qué el 6 y no el 7? De nuevo, la mayoría de los lenguajes de programación hacen esto - facilita la forma de hacer matemáticas dentro de esos corchetes.
+Esto imprime un segmento de la cadena, comenzando en el índice 3 y terminando en el índice 6. ¿Pero por qué 6 y no 7? Nuevamente, la mayoría de los lenguajes de programación hacen esto, lo que facilita hacer cálculos dentro de esos corchetes.
 
-Si hay solamente un número entre los corchetes, devolverá el caracter que esté en ese índice. Si dejas en blanco el primer número pero mantienes los dos puntos, devolverá una porción desde el índice 0 hasta el número que quedó. Si dejas en blanco el segundo número, devolverá una porción desde el primer número hasta el final.
+Si solo pones un número en los corchetes, te dará un único carácter en ese índice. Si omites el primer número pero mantienes el dos puntos, te dará un segmento desde el inicio hasta el número que dejaste. Si omites el segundo número, te dará una porción desde el primer número hasta el final.
 
-Incluso es posible poner números negativos en los corchetes. Son una forma sencilla de comenzar la cadena por el final en lugar de por el principio. De esta forma -3 significa "el tercer caracter desde el final".
+Incluso puedes poner números negativos dentro de los corchetes. Son una forma fácil de comenzar desde el final de la cadena en lugar del principio. De esta manera, -3 significa "tercer carácter desde el final".
 
-    print astring.upper()
-    print astring.lower()
+    astring = "Hello world!"
+    print(astring[3:7:2])
 
-Esto muestra nuevas cadenas con todas las letras convertidas de mayúsculas a minúsculas respectivamente.
+Esto imprime los caracteres de la cadena del 3 al 7 saltando un carácter. Esta es la sintaxis extendida de corte. La forma general es [start:stop:step].
 
-    print astring.startswith("Hola")
-    print astring.endswith("asdfasdfasdf")
+    astring = "Hello world!"
+    print(astring[3:7])
+    print(astring[3:7:1])
 
-Esto se usa para determinar si la cadena empieza con algo o termina con algo, respectivamente. La primera imprimirá True porque la cadena empieza con "Hola". La segunda imprimirá False porque la cadena no termina con "asdfasdfasdf".
+Observa que ambos producen el mismo resultado.
 
+No existe una función como strrev en C para invertir una cadena. Pero con el tipo de sintaxis de corte mencionada anteriormente, puedes fácilmente invertir una cadena así
+
+    astring = "Hello world!"
+    print(astring[::-1])
+
+Esto
+
+    astring = "Hello world!"
+    print(astring.upper())
+    print(astring.lower())
+
+Esto crea una nueva cadena con todas las letras convertidas a mayúsculas y minúsculas, respectivamente.
+
+    astring = "Hello world!"
+    print(astring.startswith("Hello"))
+    print(astring.endswith("asdfasdfasdf"))
+
+Esto se utiliza para determinar si la cadena comienza con algo o termina con algo, respectivamente. El primero imprimirá True, ya que la cadena comienza con "Hello". El segundo imprimirá False, ya que la cadena ciertamente no termina con "asdfasdfasdf".
+
+    astring = "Hello world!"
     afewwords = astring.split(" ")
 
-Esto separa la cadena en un montón de cadenas agrupadas en una lista. Ya que este ejemplo hace una separación con un espacio; el primer elemento en la lista sera "Hola", y el segundo "Mundo!". 
+Esto divide la cadena en un montón de cadenas agrupadas en una lista. Dado que este ejemplo se divide en un espacio, el primer elemento de la lista será "Hello", y el segundo será "world!".
 
-### Ejercicio
-
-Intenta arreglar el código para mostrar la información correcta al cambiar la cadena.
-
-Tutorial Code
--------------
-
-s = "Hola ahi! Que debe ser esta cadena?"
-
-# Longitud debe ser 35
-print "Longitud de s = %d" % len(s)
-
-# Primer evento de "a" deberá estar en el lugar 3
-print "Primer evento de la letra a = %d" % s.index("a")
-
-# El número de a's deberá ser 5
-print "a ocurre %d veces" % s.count("a")
-
-# Slicing the string into bits
-print "The first five characters are '%s'" % s[:5] # Start to 5
-print "The next five characters are '%s'" % s[5:10] # 5 to 10
-print "The thirteenth character is '%s'" % s[12] # Just number 12
-
-print "The last five characters are '%s'" % s[-5:] # 5th-from-last to end
-
-# Convert everything to uppercase
-print "String in uppercase: %s" % s.upper()
-
-# Convert everything to lowercase
-print "String in lowercase: %s" % s.lower()
-
-# Check how a string starts
-if s.startswith("Str"):
-    print "String starts with 'Str'. Good!"
-
-# Check how a string ends
-if s.endswith("ome!"):
-    print "String ends with 'ome!'. Good!"
-
-# Split the string into three separate strings,
-# each containing only a word
-print "Split the words of the string: %s" % s.split(" ")
-
-Expected Output
----------------
-
-Length of s = 35
-The first occurrence of the letter a = 3
-a occurs 5 times
-The first five characters are 'Strin'
-The next five characters are 'gs ar'
-The thirteenth character is 'a'
-The last five characters are 'some!'
-String in uppercase: STRINGS ARE AWESOME!
-String in lowercase: strings are awesome!
-String starts with 'Str'. Good!
-String ends with 'ome!'. Good!
-Split the words of the string: ['Strings', 'are', 'awesome!']
-
-Solution
+Ejercicio
 --------
+
+Trata de corregir el código para imprimir la información correcta cambiando la cadena.

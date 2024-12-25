@@ -1,151 +1,83 @@
-Tutorial
---------
-
-Python hace uso de variables booleanas para evaluar condiciones. 
-Cuando una expresión es comparada o evaluada, los valores que se retornan son falso o verdadero. Por ejemplo:
+Python utiliza la lógica booleana para evaluar condiciones. Los valores booleanos True y False se devuelven cuando una expresión es comparada o evaluada. Por ejemplo:
 
     x = 2
-    print x == 2 # Imprimira en pantalla TRUE
-    print x == 3 # Imprimira en pantalla FALSE
-    print x < 3  # Imprimira en pantalla TRUE
+    print(x == 2) # imprime True
+    print(x == 3) # imprime False
+    print(x < 3) # imprime True
 
-Nota: para asignar valores a una variable se utiliza el operador de igualdad "=", mientras que para comparar las variables entre ellas se hace uso de dos signos de igualdad "==". El operador que invierte el valor de comparar dos variables se realiza con  "!="
+Observe que la asignación de variables se realiza utilizando un único operador igual "=", mientras que la comparación entre dos variables se realiza utilizando el doble operador igual "==". El operador "no igual" se marca como "!=".
 
-### Operadores boleanos
-Los operadores boleanos "y " (and) y "o " (or) permite construir complejas expresiones boleanas, por ejemplo:
+### Operadores booleanos
+
+Los operadores booleanos "and" y "or" permiten construir expresiones booleanas complejas, por ejemplo:
 
     name = "John"
     age = 23
     if name == "John" and age == 23:
-        print "tu nombre es John, y tu tienes 23 años."
+        print("Tu nombre es John y también tienes 23 años.")
 
     if name == "John" or name == "Rick":
-        print "Tu nombre es John o puede ser Rick."
+        print("Tu nombre es John o Rick.")
 
 ### El operador "in"
 
-El operador "in" puede ser usado para checar si un objeto especifico existe mientras el mismo objeto itera tanto en un contenedor, como en una lista:
+El operador "in" podría usarse para verificar si un objeto específico existe dentro de un contenedor de objetos iterable, como una lista:
 
+    name = "John"
     if name in ["John", "Rick"]:
-        print "Su nombre puede ser John or Rick."
+        print("Tu nombre es John o Rick.")
 
-Python usa la indentacion para definir bloques de código, en lugar de llaves o paréntesis. El estandar de indentacion de python es 4 espacios, aunque el tab y algunos otros espacios funcionará, siempre y cuando sean consistentes, es decir, que tengan el mismo tipo de sangrado (separación). Los bloques de código no necesitan de una terminación.
+Python utiliza la indentación para definir bloques de código, en lugar de llaves. La indentación estándar de Python es de 4 espacios, aunque las tabulaciones y cualquier otro tamaño de espacio funcionarán, siempre y cuando sea consistente. Observe que los bloques de código no necesitan ninguna terminación.
 
-Este es un ejemplo de como usar en python la declaración de la sentencia "if" usando bloques de códigos:
+Aquí hay un ejemplo de cómo usar la declaración "if" de Python utilizando bloques de código:
 
-    if <declariación a evaluar>:
-        <líneas de código>
-        ....
-        ....
-    elseif <alguna otra declaración a evuluar>: # else if
-        <líneas de código del elseif>
-        ....
-        ....
+    statement = False
+    another_statement = True
+    if statement is True:
+        # hacer algo
+        pass
+    elif another_statement is True: # else if
+        # hacer otra cosa
+        pass
     else:
-        <código>
-        ....
-        ....
+        # hacer una cosa diferente
+        pass
 
 Por ejemplo:
 
     x = 2
     if x == 2:
-        print "x igual dos!"
+        print("¡x es igual a dos!")
     else:
-        print "x no es igual a dos."
+        print("x no es igual a dos.")
 
-Una declaración es evaluada como verdadera, si solo su iteración o flujo es correcta:
-- El resultado verdadero de una variable booleana se obtiene, o se calcula utilizando una expresión, como una compración aritmética.
-- Un objeto que no es considerado "vacío" hace que continúe el código.
+Una declaración se evalúa como verdadera si se cumple una de las siguientes condiciones:
+1. Se da la variable booleana "True", o se calcula utilizando una expresión, como una comparación aritmética.
+2. Se pasa un objeto que no se considera "vacío".
 
-Se presenta algunos ejemplos donde los objetos son considerados como vacíos:
+Aquí hay algunos ejemplos de objetos que se consideran vacíos:
+1. Una cadena vacía: ""
+2. Una lista vacía: []
+3. El número cero: 0
+4. La variable booleana falsa: False
 
-- Una Cadena vacia: ""
-- Una lista vacia: []
-- El numero cero: 0
-- La variable boelana falsa: False
+### El operador 'is'
 
-### El operador "is"
-
-A diferencia del doble operador de igualdad "==", el operador "is" no iguala solamente los valores de las varialbes, sino los iguala entre ellos. Por ejemplo
+A diferencia del operador de doble igual "==", el operador "is" no compara los valores de las variables, sino las instancias en sí. Por ejemplo:
 
     x = [1,2,3]
     y = [1,2,3]
-    print x == y # Imprime en pantalla TRUE
-    print x is y # Imprime en pantalla FALSE
+    print(x == y) # Imprime True
+    print(x is y) # Imprime False
 
 ### El operador "not"
 
-Usando "not" delante de una expresión booleana se invierte el operador de igualdad:
+Usar "not" antes de una expresión booleana la invierte:
 
-    print not False # Imprime en pantalla TRUE
-    print (not False) == (False) # Imprime en pantalla FALSE
+    print(not False) # Imprime True
+    print((not False) == (False)) # Imprime False
 
-### Ejercicios
-
-Cambia las variables de la primera sección, tanto que el código en la sección se ejecute a través de un "if"
-
-Tutorial Code
--------------
-
-    # Cambia este codigo
-    number = 10
-    second_number = 10
-    first_array = []
-    second_array = [1,2,3]
-    
-    # No cambies este código
-    if number > 15:
-        print("1")
-    
-    if first_array:
-        print("2")
-    
-    if len(second_array) == 2:
-        print("3")
-
-    if len(first_array) + len(second_array) == 5:
-        print("4")
-    
-    if first_array and first_array[0] == 1:
-        print("5")
-
-    if not second_number:
-        print("6")
-
-Expected Output
----------------
-
-1
-2
-3
-4
-5
-6
-
-Solution
+Ejercicio
 --------
 
-# cambia este codigo
-number = 20
-second_number = 0
-first_array = [1,1,2]
-second_array = [1,2]
-
-if number > 15:
-    print("1")
-
-if first_array:
-    print("2")
-
-if len(second_array) == 2:
-    print("3")
-
-if len(first_array) + len(second_array) == 5:
-    print("4")
-
-if first_array and first_array[0] == 1:
-    print("5")
-
-if not second_number:
-    print("6")
+Cambia las variables en la primera sección para que cada declaración if se resuelva como True.

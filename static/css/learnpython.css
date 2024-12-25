@@ -17,6 +17,7 @@ footer#dock {
     left: 0;
     right: 0;
     border-top: 2px solid #eee;
+    z-index: 200;
 
 }
 footer#dock .footer-toggle {

@@ -1,0 +1,45 @@
+{
+    "basics": {
+        "Hello, World!": "Hello, World!",
+        "Variables and Types": "Variables and Types",
+        "Lists": "Lists",
+        "Basic Operators": "Basic Operators",
+        "String Formatting": "String Formatting",
+        "Basic String Operations": "Basic String Operations",
+        "Conditions": "Conditions",
+        "Loops": "Loops",
+        "Functions": "Functions",
+        "Classes and Objects": "Classes and Objects",
+        "Dictionaries": "Dictionaries",
+        "Modules and Packages": "Modules and Packages",
+        "Input and Output": "Input and Output"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Starting Out",
+        "Movement with Functions": "Movement with Functions",
+        "Collecting items": "Collecting items",
+        "Pushing objects": "Pushing objects",
+        "Printing on screen": "Printing on screen",
+        "Building objects": "Building objects",
+        "Apply what you've learned": "Apply what you've learned"
+    },
+    "advanced": {
+        "Generators": "Generators",
+        "List Comprehensions": "List Comprehensions",
+        "Lambda functions": "Lambda functions",
+        "Multiple Function Arguments": "Multiple Function Arguments",
+        "Regular Expressions": "Regular Expressions",
+        "Exception Handling": "Exception Handling",
+        "Sets": "Sets",
+        "Serialization": "Serialization",
+        "Partial functions": "Partial functions",
+        "Code Introspection": "Code Introspection",
+        "Closures": "Closures",
+        "Decorators": "Decorators",
+        "Map, Filter, Reduce": "Map, Filter, Reduce",
+        "Parsing CSV Files": "Parsing CSV Files"
+    },
+    "other-tutorials": {
+        "DataCamp": "DataCamp"
+    }
+}

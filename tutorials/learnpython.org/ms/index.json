@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Hello, Dunia!",
+        "Variables and Types": "Pembolehubah dan Jenis",
+        "Lists": "Senarai",
+        "Basic Operators": "Pengendali Asas",
+        "String Formatting": "Pemformatan Rentetan",
+        "Basic String Operations": "Operasi Asas Rentetan",
+        "Conditions": "Keadaan",
+        "Loops": "Gelung",
+        "Functions": "Fungsi",
+        "Classes and Objects": "Kelas dan Objek",
+        "Dictionaries": "Kamus-kamus",
+        "Modules and Packages": "Modul dan Pakej",
+        "Input and Output": "Input dan Output"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Bermula",
+        "Movement with Functions": "Gerakan dengan Fungsi",
+        "Collecting items": "Mengumpul barangan",
+        "Pushing objects": "Menolak objek",
+        "Printing on screen": "Cetakan pada skrin",
+        "Building objects": "Membina objek",
+        "Apply what you've learned": "Terapkan apa yang anda pelajari"
+    },
+    "advanced": {
+        "Generators": "Generator",
+        "List Comprehensions": "List Komprehensi",
+        "Lambda functions": "Fungsi Lambda",
+        "Multiple Function Arguments": "Argumen Fungsi Berganda",
+        "Regular Expressions": "Ungkapan Biasa",
+        "Exception Handling": "Pengendalian Pengecualian",
+        "Sets": "Set",
+        "Serialization": "Pensiriapan",
+        "Partial functions": "Fungsi separa",
+        "Code Introspection": "Introspeksi Kod",
+        "Closures": "Penutupan",
+        "Decorators": "Penghias",
+        "Map, Filter, Reduce": "Peta, Tapis, Kurangkan",
+        "Parsing CSV Files": "Parsing Fail CSV"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Bonjour, le monde !",
+        "Variables and Types": "Variables et Types",
+        "Lists": "Listes",
+        "Basic Operators": "Opérateurs de base",
+        "String Formatting": "Mise en forme de chaînes",
+        "Basic String Operations": "Opérations de Base sur les Chaînes de Caractères",
+        "Conditions": "Conditions",
+        "Loops": "Boucles",
+        "Functions": "Fonctions",
+        "Classes and Objects": "Classes et Objets",
+        "Dictionaries": "Dictionnaires",
+        "Modules and Packages": "Modules et packages",
+        "Input and Output": "Entrée et sortie"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Commencer",
+        "Movement with Functions": "Mouvement avec des Fonctions",
+        "Collecting items": "Collection d'articles",
+        "Pushing objects": "Pousser des objets",
+        "Printing on screen": "Impression à l'écran",
+        "Building objects": "Construction d'objets",
+        "Apply what you've learned": "Appliquez ce que vous avez appris"
+    },
+    "advanced": {
+        "Generators": "Générateurs",
+        "List Comprehensions": "Compréhensions de listes",
+        "Lambda functions": "Fonctions Lambda",
+        "Multiple Function Arguments": "Arguments Multiples de Fonction",
+        "Regular Expressions": "Expressions régulières",
+        "Exception Handling": "Gestion des exceptions",
+        "Sets": "Ensembles",
+        "Serialization": "Sérialisation",
+        "Partial functions": "Fonctions partielles",
+        "Code Introspection": "Introspection de Code",
+        "Closures": "Fermetures",
+        "Decorators": "Décorateurs",
+        "Map, Filter, Reduce": "Carte, Filtre, Réduire",
+        "Parsing CSV Files": "Analyser des fichiers CSV"
+    }
+}
