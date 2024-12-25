@@ -1,6 +1,6 @@
-List Comprehensions היא כלי חזק מאוד, המאפשר ליצור רשימה חדשה מבוססת על רשימה אחרת, בשורה אחת וקריאה.
+List Comprehensions הוא כלי חזק מאוד, המייצר רשימה חדשה בהתבסס על רשימה אחרת, בשורה אחת קריאה.
 
-לדוגמה, נניח שעלינו ליצור רשימה של מספרים שלמים המצביעים על האורך של כל מילה במשפט מסוים, אבל רק אם המילה אינה המילה "the".
+לדוגמה, נניח שאנו צריכים ליצור רשימה של מספרים שלמים המציינים את האורך של כל מילה במשפט מסוים, אך רק אם המילה אינה המילה "the".
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
@@ -11,7 +11,7 @@ List Comprehensions היא כלי חזק מאוד, המאפשר ליצור רש�
     print(words)
     print(word_lengths)
 
-בעזרת List Comprehension, נוכל לפשט את התהליך לנוטציה הבאה:
+באמצעות List Comprehension, נוכל לפשט תהליך זה לנוטרציה זו:
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
@@ -19,7 +19,7 @@ List Comprehensions היא כלי חזק מאוד, המאפשר ליצור רש�
     print(words)
     print(word_lengths)
 
-Exercise
+תרגיל
 --------
 
-באמצעות List Comprehension, צרו רשימה חדשה בשם "newlist" מתוך הרשימה "numbers", המכילה רק את המספרים החיוביים ברשימה, כמספרים שלמים.
+באמצעות List Comprehension, צרו רשימה חדשה בשם "newlist" מתוך הרשימה "numbers", המכילה רק את המספרים החיוביים מהרשימה, כמספרים שלמים.

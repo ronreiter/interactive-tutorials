@@ -1,12 +1,12 @@
-You can create partial functions in python by using the partial function from the functools library.
+אתה יכול ליצור פונקציות חלקיות בפייתון על ידי השימוש בפונקציה החלקית מתוך הספרייה functools.
 
-פונקציות חלקיות מאפשרות לגזור פונקציה עם x פרמטרים לפונקציה עם פחות פרמטרים וערכים קבועים שנקבעו עבור הפונקציה המצומצמת.
+פונקציות חלקיות מאפשרות לגזור פונקציה עם x פרמטרים לפונקציה עם פחות פרמטרים וערכים קבועים שהוגדרו לפונקציה המוגבלת.
 
-Import required:
+ייבוא נדרש:
 
     from functools import partial
 
-This code will return 8.
+הקוד הזה יחזיר 8.
 
     from functools import partial
     
@@ -17,9 +17,10 @@ This code will return 8.
     dbl = partial(multiply, 2)
     print(dbl(4))
 
-הערה חשובה: הערכים הברירת מחדל יתחילו להחליף משתנים מהשמאל. ה-2 יחליף את x. y יהיה שווה ל-4 כאשר dbl(4) נקראת. אין זה משנה בדוגמה זו, אך זה משנה בדוגמה למטה.
+הערה חשובה: הערכים המוגדרים יחליפו משתנים מהשמאל. ה-2 יחליף את x.
+y יהיה שווה ל-4 כאשר dbl(4) נקרא. אין הבדל בדוגמה זו, אבל יש דוגמה בהמשך שבה זה משנה.
 
-Exercise
+תרגיל
 --------
-
-Edit the function provided by calling partial() and replacing the first three variables in func(). Then print with the new partial function using only one input variable so that the output equals 60.
+ערוך את הפונקציה המסופקת על ידי קריאת partial() והחלפת שלושת המשתנים הראשונים ב-func(). לאחר מכן הדפס באמצעות הפונקציה החלקית החדשה תוך שימוש במשתנה קלט אחד בלבד כך שהתוצאה תהיה שווה ל-60.
+```

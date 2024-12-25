@@ -1,50 +1,50 @@
-### What is CSV?
-CSV הוא ראשי תיבות של 'Comma Separated Values'. פורמט CSV הוא הפורמט היבוא והיצוא הנפוץ ביותר עבור מסדי נתונים וגיליונות אלקטרוניים. קובץ CSV הוא קובץ טקסט פשוט שמכיל רשימת נתונים. לרוב משתמשים בתו הפסיק (,) כדי להפריד בין הנתונים, אך לפעמים משתמשים בתווים אחרים כמו נקודה פסיק או טאבים.
+### מהו CSV?
+CSV מייצג 'Comma Separated Values' או 'ערכים מופרדים בפסיקים'. פורמט CSV הוא הנפוץ ביותר לייבוא וייצוא עבור מאגרי נתונים וגיליונות אלקטרוניים. קובץ CSV הוא קובץ טקסט פשוט המכיל רשימת נתונים. הם משתמשים לרוב בתו הפסיק (,) כדי להפריד נתונים, אך לפעמים משתמשים בתווים אחרים כמו נקודה-פסיק או טאבים.
 
 נתוני CSV לדוגמה:
 
 ...
- column 1 name,column 2 name, column 3 name
-first row data 1,first row data 2,first row data 3
-second row data 1,second row data 2,second row data 3
+שם עמודה 1, שם עמודה 2, שם עמודה 3
+נתוני שורה ראשונה 1, נתוני שורה ראשונה 2, נתוני שורה ראשונה 3
+נתוני שורה שנייה 1, נתוני שורה שנייה 2, נתוני שורה שנייה 3
 ...
 
 ### מודול CSV ב-Python
-למרות של-Python יש פונקציה מובנית בשם open() לעבודה עם קבצי CSV או כל קובץ טקסט פשוט אחר, קיים מודול ייעודי בשם csv אשר מיישם מחלקות לקריאה וכתיבה של נתונים בפורמט csv, מה שמקל על העבודה עם קבצי CSV.
+בעוד של-Python יש את הפונקציה המובנית open() לעבוד עם קובצי CSV או כל קובץ טקסט רגיל אחר, ישנו מודול csv ייעודי המיישם מחלקות לקריאה וכתיבה של נתונים בפורמט csv מה שמקל על העבודה עם קובצי CSV.
 
 ### פונקציות חשובות במודול CSV
 
-    csv.field_size_limit – מחזירה את הגודל המקסימלי של שדה
-    csv.get_dialect – מקבל את הדיאלקט המקושר לשם
-    csv.list_dialects – מציג את כל הדיאלקטים הרשומים
-    csv.reader – קורא נתונים מקובץ csv
-    csv.register_dialect - מקשר דיאלקט לשם
-    csv.writer – כותב נתונים לקובץ csv
-    csv.unregister_dialect - מוחק את הדיאלקט המקושר לשם רישום הדיאלקטים
-    csv.QUOTE_ALL - מצטט הכל, ללא תלות בסוג.
+    csv.field_size_limit – מחזירה את גודל השדה המרבי
+    csv.get_dialect – מקבלת את הדיאלקט המשויך לשם
+    csv.list_dialects – מציגה את כל הדיאלקטים הרשומים
+    csv.reader – קוראת נתונים מקובץ csv
+    csv.register_dialect - משייכת דיאלקט לשם
+    csv.writer – כותבת נתונים לקובץ csv
+    csv.unregister_dialect - מוחקת את הדיאלקט המשויך לשם מרישום הדיאלקטים
+    csv.QUOTE_ALL - מצטט הכל, ללא קשר לסוג.
     csv.QUOTE_MINIMAL - מצטט שדות עם תווים מיוחדים
-    csv.QUOTE_NONNUMERIC - מצטט את כל השדות שאינם מספרים
-    csv.QUOTE_NONE – לא מצטט כלום במוצא
+    csv.QUOTE_NONNUMERIC - מצטט את כל השדות שאינם ערכים מספריים
+    csv.QUOTE_NONE – לא מצטט שום דבר בפלט
 
 ### איך משתמשים במודול csv?
-קודם כל ייבא את מודול csv לתוך תוכנית ה-python שלך.
+קודם כל, ייבאו את מודול csv בתוכנית ה-python שלכם.
 
-    import csv
+import csv
 
-עם פונקציות writer ו-reader תוכל לערוך, לשנות ולהמיר את הנתונים בקובץ CSV.
+פונקציות writer ו-reader מאפשרות לערוך, לשנות ולהתאים את הנתונים שבקובץ CSV.
 
-איך לקרוא קובץ CSV :-
+איך לקרוא קובץ CSV:
 
-כדי לקרוא נתונים מקבצי CSV אנו משתמשים בפונקציה reader ליצירת אובייקט reader.
+כדי לקרוא נתונים מקובצי CSV אנו משתמשים בפונקציה reader ליצירת אובייקט קורא.
 
 לדוגמה:
 
     with open(filename, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
 
-כאן, אנו פותחים קודם את קובץ ה-CSV במצב קריאה ומציינים את אובייקט הקובץ כ-csvfile. אנו משתמשים במנהל קונטקסט לפתיחת הקובץ כדי שלא נצטרך לדאוג לסגור את הקובץ. פונקציית csv.reader מקבלת את אובייקט הקובץ כקלט ומחזירה אובייקט איטרטיבי. אנו שומרים את האובייקט האיטרטיבי כ-csvreader.
+כאן, אנו קודם פותחים את קובץ ה-CSV במצב קריאה ומגדירים את האובייקט כ-csvfile. אנו משתמשים במנהל הקשר לפתיחת הקובץ כדי שלא נצטרך לדאוג לסגירתו. הפונקציה csv.reader לוקחת את אובייקט הקובץ כקלט ומחזירה אובייקט איטראבילי. אנו שומרים את האובייקט האיטראבילי כ-csvreader.
 
-כפי שאנו יודעים, csvreader הוא אובייקט איטרטיבי ולכן אנחנו יכולים לעבור עם לולאת for:
+כפי שאנו יודעים, csvreader הוא אובייקט איטראבילי ולכן אנו יכולים לאתר אותו באמצעות לולאת for:
 
 דוגמה 1:
 
@@ -53,11 +53,11 @@ second row data 1,second row data 2,second row data 3
         for row in csvreader:
             print(row)
 
-הקוד למעלה ידפיס את כל השורות שקראנו מקובץ ה-csv. שים לב שאנו פותחים את הקובץ במצב 'r' כשכבר קיים.
+הקוד לעיל ידפיס את כל השורות שקראנו מקובץ ה-csv. שימו לב שאנו פותחים את הקובץ במצב 'r' כשהוא כבר קיים.
 
 מה הלאה?
 
-csvreader הוא אובייקט איטרטיבי. לכן, שיטת .next() מחזירה את השורה הנוכחית ומקדמת את האיטרטור לשורה הבאה.
+cvreader הוא אובייקט איטראבילי. לכן, השיטה .next() מחזירה את השורה הנוכחית ומקדמת את האיטרטור לשורה הבאה.
 
 דוגמה 2:
 
@@ -67,94 +67,90 @@ csvreader הוא אובייקט איטרטיבי. לכן, שיטת .next() מח�
         for row in csvreader:
             print(row)
 
-בדוגמה 1, תראה את כל השורות מודפסות במסוף יחד עם הכותרת. בדוגמה 2, שיטת .next() קוראת את הכותרת לאובייקט fields ומקדמת את האיטרטור לשורה הבאה, ולכן כל השורות מודפסות מלבד הכותרת.
+בדוגמה 1, תראו את כל השורות מודפסות על המסוף יחד עם הכותרת. בדוגמה 2, השיטה .next() קוראת את הכותרת באובייקט fields ומקדמת את האיטרטור לשורה הבאה ולכן כל השורות מודפסות חוץ מהכותרת.
 
-איך לכתוב לקובץ CSV
+איך לכתוב לקובץ CSV-
 
-לכתיבה לקובץ csv, מודול csv מספק את פונקציית csv.writer. לכתיבת נתונים, אנו פותחים תחילה את קובץ ה-CSV במצב כתיבה ('w'). אובייקט הקובץ נקרא csvfile. אנו שומרים את אובייקט csv.writer כ-csvwriter.
+כדי לכתוב לקובץ csv, מודול csv מספק את הפונקציה csv.writer. כדי לכתוב נתונים, אנו קודם פותחים את קובץ ה-CSV במצב כתיבה ('w'). אובייקט הקובץ מוגדר כ-csvfile. אנו שומרים את האובייקט השייך ל-csv.writer כ-csvwriter.
 
 דוגמה:
-    #declare header
-    fields = ['column1','column2', 'column3']
+    #הגדרת כותרת
+    fields = ['עמודה1', 'עמודה2', 'עמודה3']
 
-    #declare rows
+    #הגדרת שורות
     rows = [["foo", "bar", "spam"],
            ["oof", "rab", "maps"],
            ["writerow", "isn't", "writerows"]]
 
     filename = "university_records.csv"
-    
+
     with open(filename, 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
         csvwriter.writerow(fields)
         csvwriter.writerows(rows)
 
-בדוגמה שמעל, פונקציית writerow() תכתוב שורה בודדת שהיא אובייקט fields, בעוד ששיטת writerows() תכתוב את כל רשימת השורות שנמצאת למעלה לתוך קובץ ה-csv.
+בדוגמה לעיל, הפונקציה writerow() תכתוב שורה בודדת המוגדרת כ-ob של השדות fields בעוד השיטה writerows() תכתוב את כל רשימת השורות המוגדרת למעלה לתוך קובץ ה-csv.
 
-כעת, הבה נתקדם צעד אחד קדימה. קרא תוכן של קובץ csv אחד וכתוב לתוך קובץ csv אחר.
+כעת בואו נעלה שלב. קרא תוכן של קובץ csv אחד וכתוב לקובץ csv אחר.
 
-דוגמה:
+Example:
 
-    with open('newfilename.csv', 'w') as f2:
-        with open('mycsvfile.csv', mode='r') as f1:
-            reader = csv.reader(f1)
-            csvwriter = csv.writer(f2)
-            header = next(reader)  # store the headers and advance reader pointer
-            csvwriter.writerow(header) #writes the header into new file
-            for row in reader:
-                csvwriter.writerow(row)
+עם open('newfilename.csv', 'w') כ f2:
+מידע עם open('mycsvfile.csv', mode='r') כ f1:
+קורא = csv.reader(f1)
+csvwriter = csv.writer(f2)
+כותרת = next(reader) # חנות המודעות ומצביע הקורא המתמשך
+csvwriter.writerow(header) # כותב את הכותרת לקובץ החדש
+לשורה בקורא:
+csvwriter.writerow(שורה)
 
-כאן, אנו פותחים את 'newfilename.csv' במצב 'W' כ-f2 ואת 'mycsvfile.csv' במצב 'r' כ-f1. אנו עושים שימוש בפונקציות .next(), .reader(), .writer(), .writerow() של מודול csv. בעזרת .next(), אנו מקדמים את מצביע הקריאה ומשתמשים ב-csvwriter.writerow() כדי לכתוב את השורה הנכנסת אחת בכל פעם.
+כאן, אנו פותחים 'newfilename.csv' במצב "W" כ f2 ופותחים 'mycsvfile.csv' במצב r כ f1. אנו עושים שימוש ב .next(), .reader(),.writer(), .writerow() פונקציות מודול csv. באמצעות .next() אנו מקדמים את מצביע הקורא ובאמצעות csvwriter.writerow() אנו כותבים שורה נכנסת אחת בכל פעם.
 
 ### מחלקות DictReader ו-DictWriter ב-Python
 
-להלן שתי מחלקות חשובות ב-python לקריאה וכתיבה לקבצי csv.
+להלן שתי מחלקות חשובות ב-python לקריאה וכתיבה של קבצי csv.
 
-csv.Dictwriter class
-csv.DictReader class
+מחלקת csv.Dictwriter
+מחלקת csv.DictReader
 
-ה-DictReader ו-DictWriter הן מחלקות הזמינות ב-Python לקריאה וכתיבה לקבצי CSV. למרות שהן דומות לפונקציות הקריאה והכתיבה, המחלקות האלה משתמשות באובייקטים של מילון לקריאה וכתיבה לקבצי csv.
+DictReader ו-DictWriter הן מחלקות הזמינות ב-Python עבור קריאה וכתיבה ל-CSV. למרות שהן דומות לפונקציות reader וה-writer, מחלקות אלו משתמשות באובייקטי מילון לקריאה וכתיבה לקבצי csv.
 
 DictReader:
 
-יוצרת אובייקט שמפה את המידע הנקרא למילון שהמפתחות שלו ניתנים על ידי פרמטר fieldnames. פרמטר זה הוא אופציונלי, אך כשלא מצוין בקובץ, השורה הראשונה של הנתונים הופכת למפתחות של המילון.
+זה יוצר אובייקט שמפנה את המידע שנקרא למילון שלמפתחותיו ניתנים על ידי פרמטר fieldnames. פרמטר זה אינו חובה, אך כאשר לא מצוין בקובץ, נתוני השורה הראשונה הופכים למפתחות של המילון.
 
-דוגמה לקובץ CSV (info.csv)
+דוגמה csv(info.csv)
 
 .....
-firstname, lastname
+שם פרטי, שם משפחה
 foo, bar
 foo1, bar1
 .....
 
 דוגמה:
 
-        import csv
-        with open('info.csv') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            print(row['firstname'], row['lastname'])
+import csv with open('info.csv') כסיימות CSVקובץ קורא = csv.DictReader(csvfile) לשורה בקורא:
+הדפס (שורה ['שם פרטי'], שורה ['שם משפחה'])
 
 DictWriter:
 
-מחלקת csv.DictWriter פועלת כמו כותב רגיל אבל ממפה מילונים ב-Python לשורות CSV. פרמטר fieldnames הוא רצף של מפתחות שמזהים את הסדר שבו הערכים במילון המועבר לפונקציה writerow() נכתבים לקובץ ה-CSV. המחלקה מוגדרת כ-csv.DictWriter(csvfile, fieldnames, restval='', extrasaction='raise', dialect='excel', *args, **kwds)
+מחלקת csv.DictWriter פועלת כמו writer רגיל אך מפנה מילוני Python לשורות CSV. פרמטר fieldnames הוא רצף של מפתחות שמזהים את הסדר שבו ערכים במלון המועברים לשיטת writerow() נכתבים לקובץ ה-CSV. המחלקה מוגדרת כ: csv.DictWriter(csvfile, fieldnames, restval='', extrasaction='raise', dialect='excel', *args, **kwds)
 
 דוגמה:
 
-        import csv
-        f = open('info.csv', 'w')
-        with f:
-            
-            fnames = ['firstname', 'lastname']
-            writer = csv.DictWriter(f, fieldnames=fnames)    
+import csv f = open('info.csv', 'w') עם f:
 
-            writer.writeheader()
-            writer.writerow({'firstname' : 'Rob', 'last_name': 'Scott'})
-            writer.writerow({'firstname' : 'Tom', 'last_name': 'Brown'})
-            writer.writerow({'firstname' : 'Henry', 'last_name': 'Smith'})
+fnames ['שם פרטי', 'שם משפחה']
+מְחַבֵּר = csv.DictWriter(f, fieldnames=fnames)
+
+מחבר.writeheader()
+מחבר.writerow({'firstname' : 'Rob', 'last_name': 'Scott'})
+מחבר.writerow({'firstname' : 'Tom', 'last_name': 'Brown'})
+מחבר.writerow({'firstname' : 'Henry', 'last_name': 'Smith'})
 
 
 תרגיל
 --------
 
-בתרגיל זה, תעבדו עם נתוני CSV. המשימה שלכם היא ליצור תוכנית Python שקוראת נתונים מקובץ CSV וכותבת אותם לקובץ CSV אחר, תוך הבטחה שרק שורות בהן הערך בעמודה הראשונה גדול מ-50 ייכללו בקובץ הפלט.
+בתרגיל הזה, תעבוד עם נתוני CSV. המשימה שלך היא ליצור תוכנית Python שקוראת נתונים מתוך קובץ CSV וכותבת אותו לקובץ CSV אחר, תוך הבטחה כי רק שורות שבהן הערך בעמודה הראשונה גדול מ-50 ייכללו בקובץ הפלט.
+```
