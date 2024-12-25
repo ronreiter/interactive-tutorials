@@ -1,1 +1,58 @@
-It seems there is no tutorial content provided for translation. Please provide the content you would like to have translated into Thai, following the specified rules.
+การรับข้อมูลและแสดงผลในรูปแบบที่ต้องการมีบทบาทสำคัญในด้านการเขียนโค้ดเชิงปฏิสัมพันธ์ ดังนั้นเรามาให้ความสำคัญกับการรับและแสดงผลข้อมูลของประเภทต่าง ๆ
+
+### raw_input()
+ใช้เพื่อรับข้อมูลจนกว่าจะถึงจุดสิ้นสุดของบรรทัด โปรดทราบว่าไม่ควรมีช่องว่าง การรับข้อมูลจะสิ้นสุดด้วยตัวอักขระบรรทัดใหม่และหากมีช่องว่างในบรรทัดข้อมูลจะทำให้เกิดข้อผิดพลาด
+
+    # Prints out the input received from stdin
+    astring=raw_input()# give hello as input
+    print raw_input()
+
+หลังจากรับข้อมูลแล้วเราสามารถแปลงเป็นประเภทข้อมูลที่เราต้องการโดยใช้ฟังก์ชันเช่น int(), float(), str()
+
+    num=int(raw_input())
+    print num
+    decimalnum=raw_input()
+    decimalnum=float(raw_input()
+    print decimalnum
+
+### input()
+ใช้เฉพาะเพื่อรับอินพุตที่เป็นจำนวนเต็ม ข้อได้เปรียบของ input() เหนือ raw_input() สามารถดูได้จากตัวอย่างด้านล่าง
+
+    #give 2*2 as input
+    a=input()
+    b=raw_input() #note that int(raw_input()) results in error
+    print a #prints 4
+    print b #prints 2*2
+
+### วิธีการรับข้อมูลสองหรือมากกว่าสองประเภทจากบรรทัดเดียวที่แยกด้วยช่องว่าง?
+ที่นี่เราจะใช้ฟังก์ชัน split() และ map()
+
+    #give two integers in first line and more than two integers in third line
+    a, b = map(int, raw_input().split())
+    array = raw_input().split()
+    sum = 0
+    for each in array:
+        sum = sum + int(each)
+    print(a, b, sum)  # prints first two integers from first line and sum of integers of second line
+
+### การจัดรูปแบบการแสดงผล
+คุณอาจสังเกตเห็นแล้วว่า print statement จะแทรกบรรทัดใหม่โดยอัตโนมัติ การใช้เครื่องหมายจุลภาคเช่นในโค้ดข้างต้นจะทำให้ค่าถูกพิมพ์ในบรรทัดเดียวโดยแยกด้วยช่องว่าง โมดูล sys จัดเตรียมฟังก์ชันต่าง ๆ สำหรับการจัดรูปแบบการแสดงผล แต่ที่นี่เราจะเรียนรู้วิธีใช้ความรู้พื้นฐานในการจัดรูปแบบเพื่อให้ออกมาในแบบที่เราต้องการ มาดูตัวอย่างบางส่วนเพื่อเรียนรู้การจัดรูปแบบการแสดงผล
+
+    a = 5
+    b = 0.63
+    c = "hello"
+    print "a is : %d, b is %0.4f,c is %s" % (a,b,c)
+
+ผลลัพธ์ต้องเป็นที่อธิบายด้วยตัวเอง
+
+Exercise
+--------
+
+เขียนโปรแกรมที่ถามผู้ใช้ให้ป้อนชื่อ, อายุ, และประเทศ โปรแกรมควรพิมพ์ข้อความที่รวมข้อมูลเหล่านี้ในประโยค โปรแกรมควรรวม:
+
+1. การรับชื่อโดยใช้ `raw_input()`.
+2. การรับอายุตามที่ป้อนโดยใช้ `input()` และแปลงเป็นจำนวนเต็ม.
+3. การรับชื่อประเทศโดยใช้ `raw_input()`.
+4. การจัดรูปแบบการแสดงผลเพื่อแสดงประโยคที่รวมชื่อ, อายุ และประเทศ
+
+โปรแกรมควรแสดงการจัดการอินพุตและการจัดรูปแบบสตริงใน Python.
