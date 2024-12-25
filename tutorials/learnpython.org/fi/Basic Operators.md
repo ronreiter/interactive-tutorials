@@ -1,39 +1,39 @@
-Tämä osio selittää, kuinka käyttää perusoperaattoreita Pythonissa.
+This section explains how to use basic operators in Python.
 
-### Arithmetic Operators       
+### Aritmeettiset operaattorit
 
-Kuten muissakin ohjelmointikielissä, yhteenlasku-, vähennyslasku-, kertolasku- ja jakolaskuoperaattoreita voidaan käyttää numeroiden kanssa.<br>
+Kuten muissa ohjelmointikielissä, yhteen-, vähennys-, kerto- ja jakolaskuoperaattoreita voidaan käyttää numeroiden kanssa.<br>
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
-Koeta ennustaa, mikä vastaus on. Seuraako Python laskujärjestyssääntöjä?
+Yritä ennustaa, mikä vastaus on. Seuraako Python laskujärjestystä?
 
-Toinen käytettävissä oleva operaattori on modulo (%) -operaattori, joka palauttaa jaon jakojäännöksen. osamäärä % jakaja = jakojäännös.
+Toinen käytettävissä oleva operaattori on jakojäännösoperaattori (%), joka palauttaa jaon kokonaisjäännöksen. dividendti % jakaja = jäännös.
 
     remainder = 11 % 3
     print(remainder)
 
-Kahden kertolaskusymbolin käyttäminen muodostaa potenssisuhteen.
+Kahden kertolaskusymbolin käyttäminen muodostaa potenssikuvion.
 
     squared = 7 ** 2
     cubed = 2 ** 3
     print(squared)
     print(cubed)
 
-### Using Operators with Strings
+### Operaattoreiden käyttö merkkijonoissa
 
 Python tukee merkkijonojen yhdistämistä yhteenlaskuoperaattorilla:
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
 
-Python tukee myös merkkijonojen kertomista, jolloin muodostuu toistuva sekvenssi:
+Python tukee myös merkkijonojen kertomista muodostaen toistuvan merkkijonojonon:
 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
 
-### Using Operators with Lists
+### Operaattoreiden käyttö listoissa
 
 Listoja voidaan yhdistää yhteenlaskuoperaattorilla:
 
@@ -42,14 +42,11 @@ Listoja voidaan yhdistää yhteenlaskuoperaattorilla:
     all_numbers = odd_numbers + even_numbers
     print(all_numbers)
 
-Kuten merkkijonoissa, Python tukee uusien listojen muodostamista toistuvalla sekvenssillä kertolaskuoperaattorin avulla:
+Kuten merkkijonoissa, Python tukee uusien lista-olioiden muodostamista toistuvalla kuviolla kertolaskuoperaattorilla:
 
     print([1,2,3] * 3)
 
-Exercise
+Harjoitus
 --------
 
-Tämän harjoituksen tavoitteena on luoda kaksi listaa nimeltä `x_list` ja `y_list`, 
-jotka sisältävät 10 esiintymää muuttujista `x` ja `y`, vastaavasti. 
-Sinun on myös luotava lista nimeltä `big_list`, joka sisältää 
-muuttujat `x` ja `y` 10 kertaa kumpikin, yhdistämällä luomasi kaksi listaa.
+Tämän harjoituksen tavoitteena on luoda kaksi listaa nimeltä `x_list` ja `y_list`, jotka sisältävät 10 esiintymää muuttujista `x` ja `y` vastaavasti. Sinun tulee myös luoda lista nimeltä `big_list`, joka sisältää muuttujat `x` ja `y` 10 kertaa kukin, yhdistämällä luomasi kaksi listaa.

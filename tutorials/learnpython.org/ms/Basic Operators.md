@@ -1,55 +1,54 @@
-Kandungan bahagian ini menerangkan cara menggunakan operator asas dalam Python.
+Tutorial--------
+    
+Bahagian ini menerangkan cara menggunakan pengendali asas dalam Python.
 
-### Arithmetic Operators       
+### Pengendali Aritmetik  
 
-Seperti bahasa pengaturcaraan lain, operator penambahan, penolakan, pendaraban, dan pembahagian boleh digunakan dengan nombor.<br>
+Sama seperti bahasa pengaturcaraan lain, pengendali tambah, tolak, darab, dan bahagi boleh digunakan dengan nombor.<br>
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
-Cuba ramalkan apakah jawapannya. Adakah python mengikuti aturan operasi?
+Cuba ramalkan apa jawapannya. Adakah Python mengikuti aturan operasi?
 
-Satu lagi operator yang tersedia ialah operator modulo (%) yang mengembalikan baki integer pembahagian. dividend % divisor = baki.
+Pengendali lain yang tersedia ialah pengendali modulo (%) yang mengembalikan baki integer pembahagian. dividend % divisor = baki.
 
     remainder = 11 % 3
     print(remainder)
 
-Menggunakan dua simbol pendaraban membuat hubungan kuasa.
+Menggunakan dua simbol darab membentuk hubungan kuasa.
 
     squared = 7 ** 2
     cubed = 2 ** 3
     print(squared)
     print(cubed)
 
-### Menggunakan Operator dengan String
+### Menggunakan Pengendali dengan Rentetan
 
-Python menyokong penggabungan string menggunakan operator penambahan:
+Python menyokong menggabungkan rentetan menggunakan pengendali tambah:
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
 
-Python juga menyokong pendaraban string untuk membentuk string dengan jujukan berulang:
+Python juga menyokong pendaraban rentetan untuk membentuk rentetan dengan urutan berulang:
 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
 
-### Menggunakan Operator dengan Senarai
+### Menggunakan Pengendali dengan Senarai
 
-Senarai boleh digabungkan dengan operator penambahan:
+Senarai boleh disatukan dengan pengendali tambah:
 
     even_numbers = [2,4,6,8]
     odd_numbers = [1,3,5,7]
     all_numbers = odd_numbers + even_numbers
     print(all_numbers)
 
-Seperti dalam string, Python menyokong pembentukan senarai baru dengan jujukan berulang menggunakan operator pendaraban:
+Seperti dalam rentetan, Python menyokong pembentukan senarai baru dengan urutan berulang menggunakan pengendali pendaraban:
 
     print([1,2,3] * 3)
 
 Latihan
 --------
 
-Matlamat latihan ini adalah untuk mencipta dua senarai yang dipanggil `x_list` dan `y_list`,
-yang mengandungi 10 contoh pembolehubah `x` dan `y`, masing-masing.
-Anda juga dikehendaki mencipta senarai yang dipanggil `big_list`, yang mengandungi
-pembolehubah `x` dan `y`, masing-masing 10 kali, dengan menggabungkan dua senarai yang telah anda cipta.
+Matlamat latihan ini adalah untuk mencipta dua senarai yang dipanggil `x_list` dan `y_list`, yang mengandungi 10 contoh pemboleh ubah `x` dan `y` masing-masing. Anda juga dikehendaki mencipta senarai yang dipanggil `big_list`, yang mengandungi pemboleh ubah `x` dan `y`, 10 kali setiap satu, dengan menggabungkan dua senarai yang anda telah cipta.

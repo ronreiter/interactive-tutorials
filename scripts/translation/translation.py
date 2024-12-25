@@ -120,8 +120,12 @@ async def translate_tutorial(base_file_path: str, output_file_path: str, languag
     Translate the following tutorial content into {language_code}. Follow these rules:
 
     - **Markdown Headers and Formatting**:
-      - Keep all Markdown headings like `#`, `##`, `###`, and lists `-` unchanged.
+      -While the format must remain consistent, ensure that the header (e.g. ### Header) is translated into {language_code}. 
+      Keep all Markdown elements such as headings (#, ##, ###, etc.) and lists (-) unchanged. 
+      Do not modify the structure or formatting of the Markdown content. 
+      Translate only the textual content within these elements where appropriate.
       - Keep "Exercise--------" with the same structure but translated to {language_code}.
+      - Other headers such as "Tutorial--------" must stay exactly the same in the original language.
 
     - **Preserve Code Blocks and Formatting**:
       - Leave code examples and indentation unchanged.

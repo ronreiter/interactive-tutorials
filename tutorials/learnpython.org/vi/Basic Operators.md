@@ -1,28 +1,57 @@
-This section explains how to use basic operators in Python.
+Certainly! Here's the translated content following your specified guidelines:
 
-### Arithmetic Operators
+    Nội dung phần này giải thích cách sử dụng các toán tử cơ bản trong Python.
 
-Giống như bất kỳ ngôn ngữ lập trình nào khác, các toán tử cộng, trừ, nhân và chia có thể được sử dụng với các con số.
+### Arithmetic Operators       
 
-Hãy thử dự đoán kết quả là gì. Python có tuân thủ thứ tự hoạt động không?
+Giống như bất kỳ ngôn ngữ lập trình nào khác, các toán tử cộng, trừ, nhân và chia có thể được sử dụng với số.
 
-Một toán tử khác có sẵn là toán tử modulo (%) trả về phần dư nguyên của phép chia. thương % chia = phần dư.
+    number = 1 + 2 * 3 / 4.0
+    print(number)
 
-Sử dụng hai ký hiệu nhân tạo ra mối quan hệ lũy thừa.
+Hãy thử dự đoán kết quả sẽ là gì. Python có tuân theo thứ tự thực hiện không?
+
+Một toán tử khác có sẵn là toán tử modulo (%) để trả về phần dư của phép chia nguyên. Số bị chia % số chia = phần dư.
+
+    remainder = 11 % 3
+    print(remainder)
+
+Sử dụng hai ký hiệu nhân thể hiện mũ.
+
+    squared = 7 ** 2
+    cubed = 2 ** 3
+    print(squared)
+    print(cubed)
 
 ### Using Operators with Strings
 
 Python hỗ trợ nối chuỗi bằng toán tử cộng:
 
-Python cũng hỗ trợ nhân chuỗi để tạo một chuỗi có dãy lặp lại:
+    helloworld = "hello" + " " + "world"
+    print(helloworld)
+
+Python cũng hỗ trợ nhân chuỗi để tạo ra chuỗi với một dãy lặp lại:
+
+    lotsofhellos = "hello" * 10
+    print(lotsofhellos)
 
 ### Using Operators with Lists
 
-Danh sách có thể được nối với toán tử cộng:
+Danh sách có thể được nối với nhau bằng toán tử cộng:
 
-Tương tự như trong chuỗi, Python hỗ trợ tạo các danh sách mới với một dãy lặp lại bằng cách sử dụng toán tử nhân:
+    even_numbers = [2,4,6,8]
+    odd_numbers = [1,3,5,7]
+    all_numbers = odd_numbers + even_numbers
+    print(all_numbers)
+
+Giống như với chuỗi, Python hỗ trợ tạo danh sách mới với một dãy lặp lại bằng toán tử nhân:
+
+    print([1,2,3] * 3)
 
 Exercise
 --------
 
-Mục tiêu của bài tập này là tạo ra hai danh sách gọi là `x_list` và `y_list` phải chứa 10 lần các biến `x` và `y`, tương ứng. Bạn cũng cần tạo danh sách gọi là `big_list`, chứa 10 lần mỗi biến `x` và `y`, bằng cách nối hai danh sách mà bạn đã tạo.
+Mục tiêu của bài tập này là tạo hai danh sách gọi là `x_list` và `y_list`,
+chứa 10 phần tử là biến `x` và `y` tương ứng.
+Bạn cũng cần tạo một danh sách gọi là `big_list`, chứa
+các biến `x` và `y`, mỗi biến 10 lần, bằng cách nối hai danh sách mà bạn đã tạo.

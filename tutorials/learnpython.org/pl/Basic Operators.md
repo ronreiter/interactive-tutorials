@@ -1,34 +1,34 @@
-Ta sekcja wyjaśnia, jak używać podstawowych operatorów w Pythonie.
+This section explains how to use basic operators in Python.
 
 ### Operatory Arytmetyczne
 
-Podobnie jak w innych językach programowania, można używać operatorów dodawania, odejmowania, mnożenia i dzielenia z liczbami.<br>
+Podobnie jak w innych językach programowania, operatory dodawania, odejmowania, mnożenia i dzielenia mogą być używane z liczbami.
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
-Spróbuj przewidzieć, jaka będzie odpowiedź. Czy Python przestrzega kolejności działań?
+Spróbuj przewidzieć, jaka będzie odpowiedź. Czy Python przestrzega kolejności operacji?
 
-Dostępny jest także operator modulo (%), który zwraca resztę z dzielenia całkowitego. dzielna % dzielnik = reszta.
+Innym dostępnym operatorem jest operator modulo (%), który zwraca resztę z dzielenia. Divisor % Dzielenie = reszta.
 
     remainder = 11 % 3
     print(remainder)
 
-Użycie dwóch symboli mnożenia oznacza potęgowanie.
+Użycie dwóch symboli mnożenia tworzy potęgowanie.
 
     squared = 7 ** 2
     cubed = 2 ** 3
     print(squared)
     print(cubed)
 
-### Używanie Operatorów z Łańcuchami
+### Używanie Operatorów z Napisami
 
-Python obsługuje łączenie łańcuchów za pomocą operatora dodawania:
+Python obsługuje łączenie napisów za pomocą operatora dodawania:
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
 
-Python także obsługuje mnożenie łańcuchów, aby utworzyć łańcuch z powtarzającą się sekwencją:
+Python obsługuje także mnożenie napisów, aby utworzyć napis z powtarzającą się sekwencją:
 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
@@ -42,12 +42,11 @@ Listy mogą być łączone za pomocą operatorów dodawania:
     all_numbers = odd_numbers + even_numbers
     print(all_numbers)
 
-Podobnie jak w przypadku łańcuchów, Python obsługuje tworzenie nowych list z powtarzającą się sekwencją przy użyciu operatora mnożenia:
+Podobnie jak w przypadku napisów, Python obsługuje tworzenie nowych list z powtarzającą się sekwencją za pomocą operatora mnożenia:
 
     print([1,2,3] * 3)
 
 Ćwiczenie
 --------
 
-Celem tego ćwiczenia jest utworzenie dwóch list o nazwach `x_list` i `y_list`,
-które zawierają po 10 instancji zmiennych `x` i `y`. Wymagane jest również utworzenie listy o nazwie `big_list`, która zawiera zmienne `x` i `y` po 10 razy każda, przez połączenie dwóch stworzonych list.
+Celem tego ćwiczenia jest utworzenie dwóch list o nazwach `x_list` i `y_list`, które zawierają 10 wystąpień zmiennych `x` i `y`, odpowiednio. Jesteś także zobowiązany do utworzenia listy o nazwie `big_list`, która zawiera zmienne `x` i `y`, po 10 razy każdą, poprzez połączenie dwóch stworzonych list.

@@ -1,15 +1,15 @@
-Esta seção explica como usar operadores básicos em Python.
+This section explains how to use basic operators in Python.
 
-### Operadores Aritméticos
+### Operadores Aritméticos       
 
-Assim como em outras linguagens de programação, os operadores de adição, subtração, multiplicação e divisão podem ser utilizados com números.<br>
+Assim como em qualquer outra linguagem de programação, os operadores de adição, subtração, multiplicação e divisão podem ser usados com números.<br>
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
 Tente prever qual será a resposta. O Python segue a ordem das operações?
 
-Outro operador disponível é o operador de módulo (%) que retorna o restante inteiro da divisão. Dividendo % divisor = resto.
+Outro operador disponível é o operador de módulo (%), que retorna o restante inteiro da divisão. dividendo % divisor = resto.
 
     remainder = 11 % 3
     print(remainder)
@@ -23,26 +23,26 @@ Usar dois símbolos de multiplicação cria uma relação de potência.
 
 ### Usando Operadores com Strings
 
-Python suporta a concatenação de strings usando o operador de adição:
+O Python suporta a concatenação de strings usando o operador de adição:
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
 
-Python também suporta a multiplicação de strings para formar uma string com uma sequência repetida:
+O Python também suporta a multiplicação de strings para formar uma sequência repetida:
 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
 
 ### Usando Operadores com Listas
 
-Listas podem ser unidas com o operador de adição:
+Listas podem ser unidas com os operadores de adição:
 
     even_numbers = [2,4,6,8]
     odd_numbers = [1,3,5,7]
     all_numbers = odd_numbers + even_numbers
     print(all_numbers)
 
-Assim como em strings, Python suporta a formação de novas listas com uma sequência repetida usando o operador de multiplicação:
+Assim como em strings, o Python suporta formar novas listas com uma sequência repetida usando o operador de multiplicação:
 
     print([1,2,3] * 3)
 

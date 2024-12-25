@@ -1,28 +1,52 @@
-Dieser Abschnitt erklärt, wie man grundlegende Operatoren in Python verwendet.
+Diese Abschnitt erklärt, wie man grundlegende Operatoren in Python verwendet.
 
-### Arithmetic Operators
+### Arithmetische Operatoren
 
-Wie in anderen Programmiersprachen können die Operatoren für Addition, Subtraktion, Multiplikation und Division mit Zahlen verwendet werden.<br>
+Wie in vielen anderen Programmiersprachen können die Operatoren zur Addition, Subtraktion, Multiplikation und Division mit Zahlen verwendet werden.<br>
 
-Versuchen Sie vorherzusagen, was das Ergebnis sein wird. Befolgt Python die Rangfolge der Operatoren?
+    number = 1 + 2 * 3 / 4.0
+    print(number)
 
-Ein weiterer verfügbarer Operator ist der Modulo (%) Operator, der den ganzzahligen Rest der Division zurückgibt. dividend % divisor = rest.
+Versuchen Sie vorherzusagen, was das Ergebnis sein wird. Befolgt Python die Punkt-vor-Strich-Rechnung?
 
-Die Verwendung von zwei Multiplikationssymbolen stellt eine Potenzbeziehung her.
+Ein weiterer verfügbarer Operator ist der Modulo-Operator (%), der den ganzzahligen Rest der Division zurückgibt. Dividend % Divisor = Rest.
 
-### Using Operators with Strings
+    remainder = 11 % 3
+    print(remainder)
 
-Python unterstützt das Zusammenfügen von Zeichenfolgen mit dem Additionsoperator:
+Die Verwendung von zwei Multiplikationssymbolen stellt eine Potenzierung dar.
+
+    squared = 7 ** 2
+    cubed = 2 ** 3
+    print(squared)
+    print(cubed)
+
+### Verwenden von Operatoren mit Zeichenfolgen
+
+Python unterstützt das Konkatenieren von Zeichenfolgen mit dem Additionsoperator:
+
+    helloworld = "hello" + " " + "world"
+    print(helloworld)
 
 Python unterstützt auch das Multiplizieren von Zeichenfolgen, um eine Zeichenfolge mit einer sich wiederholenden Sequenz zu bilden:
 
-### Using Operators with Lists
+    lotsofhellos = "hello" * 10
+    print(lotsofhellos)
+
+### Verwenden von Operatoren mit Listen
 
 Listen können mit dem Additionsoperator verbunden werden:
 
-Genauso wie bei Zeichenfolgen unterstützt Python das Bilden neuer Listen mit einer sich wiederholenden Sequenz durch den Multiplikationsoperator:
+    even_numbers = [2,4,6,8]
+    odd_numbers = [1,3,5,7]
+    all_numbers = odd_numbers + even_numbers
+    print(all_numbers)
 
-Exercise
+Wie bei Zeichenfolgen unterstützt Python die Bildung neuer Listen mit einer sich wiederholenden Sequenz mithilfe des Multiplikationsoperators:
+
+    print([1,2,3] * 3)
+
+Übung
 --------
 
-Das Ziel dieser Übung ist es, zwei Listen namens `x_list` und `y_list` zu erstellen, die jeweils 10 Instanzen der Variablen `x` bzw. `y` enthalten. Sie sollen außerdem eine Liste namens `big_list` erstellen, die die Variablen `x` und `y` jeweils 10 Mal enthält, indem Sie die beiden erstellten Listen zusammenfügen.
+Das Ziel dieser Übung ist es, zwei Listen namens `x_list` und `y_list` zu erstellen, die jeweils 10 Instanzen der Variablen `x` und `y` enthalten. Sie müssen auch eine Liste namens `big_list` erstellen, die die Variablen `x` und `y` jeweils 10-mal enthält, indem Sie die beiden erstellten Listen zusammenfügen.

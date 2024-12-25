@@ -1,31 +1,52 @@
-This section explains how to use basic operators in Python.
+Dette avsnittet forklarer hvordan man bruker grunnleggende operatorer i Python.
 
-### Arithmetic Operators       
+### Aritmetiske Operatører       
 
-Akkurat som i andre programmeringsspråk kan man bruke tillegg, subtraksjon, multiplikasjon og divisjonsoperatorer med tall.<br>
+Akkurat som i andre programmeringsspråk, kan tillegg, subtraksjon, multiplikasjon og divisjonsoperatorer brukes med tall.<br>
 
-Prøv å forutsi hva svaret vil være. Følger Python reglene for operatorprioritering?
+    number = 1 + 2 * 3 / 4.0
+    print(number)
 
-En annen operator som er tilgjengelig er modulo (%) operatoren, som returnerer heltallsresten av divisjonen. dividend % divisor = rest.
+Forsøk å forutsi hva svaret vil være. Følger Python operasjonsrekkefølge?
 
-Ved å bruke to multiplikasjonssymboler skapes et potensforhold.
+En annen tilgjengelig operator er modulo (%) operatoren, som returnerer heltallsresten av divisjonen. dividende % divisor = rest.
 
-### Using Operators with Strings
+    remainder = 11 % 3
+    print(remainder)
 
-Python støtter å sammenføye strenger ved bruk av tilleggsoperatoren:
+Bruk av to multiplikasjonssymboler gjør et potensforhold.
 
-Python støtter også multiplikasjon av strenger for å danne en streng med en gjentagende sekvens:
+    squared = 7 ** 2
+    cubed = 2 ** 3
+    print(squared)
+    print(cubed)
 
-### Using Operators with Lists
+### Bruke Operatører med Strenger
 
-Lister kan sammenføyes med tilleggsoperatoren:
+Python støtter sammenkjedede strenger ved hjelp av tilleggsoperatoren:
 
-Akkurat som med strenger støtter Python å danne nye lister med en gjentagende sekvens ved bruk av multiplikasjonsoperatoren:
+    helloworld = "hello" + " " + "world"
+    print(helloworld)
+
+Python støtter også multiplikasjon av strenger for å danne en streng med en gjentatt sekvens:
+
+    lotsofhellos = "hello" * 10
+    print(lotsofhellos)
+
+### Bruke Operatører med Lister
+
+Lister kan kobles sammen med tilleggsoperatorer:
+
+    even_numbers = [2,4,6,8]
+    odd_numbers = [1,3,5,7]
+    all_numbers = odd_numbers + even_numbers
+    print(all_numbers)
+
+Akkurat som i strenger, støtter Python dannelsen av nye lister med en gjentatt sekvens ved hjelp av multiplikasjonsoperatoren:
+
+    print([1,2,3] * 3)
 
 Øvelse
 --------
 
-Målet med denne øvelsen er å lage to lister kalt `x_list` og `y_list`,
-som inneholder 10 instanser av variablene `x` og `y`, henholdsvis.
-Du må også lage en liste kalt `big_list`, som inneholder
-variablene `x` og `y`, 10 ganger hver, ved å sammenføye de to listene du har laget.
+Målet med denne øvelsen er å lage to lister kalt `x_list` og `y_list`, som inneholder 10 forekomster av variablene `x` og `y`, henholdsvis. Du er også pålagt å lage en liste kalt `big_list`, som inneholder variablene `x` og `y`, 10 ganger hver, ved å sammenkoble de to listene du har opprettet.

@@ -1,15 +1,15 @@
 Cette section explique comment utiliser les opérateurs de base en Python.
 
-### Arithmetic Operators       
+### Opérateurs Arithmétiques
 
-Tout comme dans d'autres langages de programmation, les opérateurs d'addition, de soustraction, de multiplication et de division peuvent être utilisés avec des nombres.<br>
+Tout comme dans n'importe quel autre langage de programmation, les opérateurs d'addition, de soustraction, de multiplication et de division peuvent être utilisés avec des nombres.<br>
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
-Essayez de prédire quel sera le résultat. Python suit-il l'ordre des opérations ?
+Essayez de prédire quel sera le résultat. Est-ce que python suit l'ordre des opérations ?
 
-Un autre opérateur disponible est l'opérateur modulo (%) qui retourne le reste entier de la division. dividende % diviseur = reste.
+Un autre opérateur disponible est l'opérateur modulo (%) qui renvoie le reste entier de la division. dividende % diviseur = reste.
 
     remainder = 11 % 3
     print(remainder)
@@ -21,9 +21,9 @@ Utiliser deux symboles de multiplication crée une relation de puissance.
     print(squared)
     print(cubed)
 
-### Using Operators with Strings
+### Utilisation des opérateurs avec les chaînes de caractères
 
-Python prend en charge la concaténation de chaînes en utilisant l'opérateur d'addition :
+Python prend en charge la concaténation de chaînes de caractères en utilisant l'opérateur d'addition :
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
@@ -33,9 +33,9 @@ Python prend également en charge la multiplication de chaînes pour former une 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
 
-### Using Operators with Lists
+### Utilisation des opérateurs avec les listes
 
-Les listes peuvent être jointes avec les opérateurs d'addition :
+Les listes peuvent être rejointes avec les opérateurs d'addition :
 
     even_numbers = [2,4,6,8]
     odd_numbers = [1,3,5,7]
@@ -46,7 +46,10 @@ Tout comme pour les chaînes, Python prend en charge la formation de nouvelles l
 
     print([1,2,3] * 3)
 
-Exercice
+Exercise
 --------
 
-L'objectif de cet exercice est de créer deux listes appelées `x_list` et `y_list`, qui contiennent 10 instances des variables `x` et `y`, respectivement. Vous devez également créer une liste appelée `big_list`, qui contient les variables `x` et `y`, 10 fois chacune, en concaténant les deux listes que vous avez créées.
+L'objectif de cet exercice est de créer deux listes appelées `x_list` et `y_list`,
+qui contiennent chacune 10 instances des variables `x` et `y`, respectivement.
+Vous devez également créer une liste appelée `big_list`, qui contient
+les variables `x` et `y`, 10 fois chacune, en concaténant les deux listes que vous avez créées.

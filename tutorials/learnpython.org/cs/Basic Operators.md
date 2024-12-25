@@ -1,15 +1,15 @@
-Tato sekce vysvětluje, jak používat základní operátory v Pythonu.
+This section explains how to use basic operators in Python.
 
 ### Aritmetické operátory       
 
-Stejně jako v jiných programovacích jazycích mohou být s čísly používány operátory sčítání, odčítání, násobení a dělení.<br>
+Stejně jako v jiných programovacích jazycích lze operátory pro sčítání, odčítání, násobení a dělení používat s čísly.<br>
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
-Zkuste předpovědět, jaká bude odpověď. Dodržuje Python pořadí operací?
+Zkuste odhadnout, jaká bude odpověď. Dodržuje python pořadí operací?
 
-Dalším dostupným operátorem je modulo (%) operátor, který vrací celočíselný zbytek dělení. Dividend % divisor = remainder.
+Další dostupný operátor je modulo (%) operátor, který vrací celočíselný zbytek dělení. dividend % divisor = zbytek.
 
     remainder = 11 % 3
     print(remainder)
@@ -21,35 +21,32 @@ Použití dvou symbolů násobení vytváří mocninný vztah.
     print(squared)
     print(cubed)
 
-### Používání operátorů s řetězci
+### Použití operátorů s řetězci
 
-Python podporuje zřetězení řetězců pomocí sčítacího operátoru:
+Python podporuje spojování řetězců pomocí sčítacího operátoru:
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
 
-Python také podporuje násobení řetězců pro vytvoření řetězce s opakujícím se vzorem:
+Python také podporuje násobení řetězců k vytvoření řetězce s opakující se sekvencí:
 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
 
-### Používání operátorů s listy
+### Použití operátorů se seznamy
 
-Listy mohou být spojovány sčítacím operátorem:
+Seznamy mohou být spojeny pomocí sčítacího operátoru:
 
     even_numbers = [2,4,6,8]
     odd_numbers = [1,3,5,7]
     all_numbers = odd_numbers + even_numbers
     print(all_numbers)
 
-Stejně jako u řetězců, Python podporuje tvorbu nových listů s opakujícím se vzorem použitím násobicího operátoru:
+Stejně jako u řetězců, Python podporuje vytvoření nových seznamů s opakující se sekvencí pomocí násobícího operátoru:
 
     print([1,2,3] * 3)
 
 Cvičení
 --------
 
-Cílem tohoto cvičení je vytvořit dva seznamy nazvané `x_list` a `y_list`,
-které obsahují 10 instancí proměnných `x` a `y`, v uvedeném pořadí.
-Také je třeba vytvořit seznam nazvaný `big_list`, který obsahuje
-proměnné `x` a `y`, každou 10krát, spojením dvou seznamů, které jste vytvořili.
+Cílem tohoto cvičení je vytvořit dva seznamy nazvané `x_list` a `y_list`, které obsahují 10 instance proměnných `x` a `y`, respektive. Je také požadováno vytvořit seznam nazvaný `big_list`, který obsahuje proměnné `x` a `y` 10krát každou, spojením dvou seznamů, které jste vytvořili.
