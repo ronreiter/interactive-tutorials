@@ -19,7 +19,7 @@ The loop will stop iterating once the boolean condition evaluates to false.
 Examples
 --------
 
-The following code prints numbers from 1 to 9.
+The following code prints numbers from 0 to 9.
 
 	package main
 
