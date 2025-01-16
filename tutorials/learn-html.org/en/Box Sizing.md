@@ -37,11 +37,11 @@ To include the border you need to include the border code; border: size type col
 
 Exercise
 --------
-1.Make a div called box1
-2.Make the border 2px
-3.Make the border solid
-4.Make the border pink
-5.Add box-sizing:border-box;
+1. Make a div called box1
+2. Make the border 2px
+3. Make the border solid
+4. Make the border pink
+5. Add box-sizing:border-box;
 
 Tutorial Code
 -------------
