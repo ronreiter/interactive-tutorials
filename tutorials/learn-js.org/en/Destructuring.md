@@ -47,10 +47,7 @@ With arrays:
     let three = numbers[1];
 
     // ES6 Destructuring
-    let [two, three] = numbers;
-
-    // We can give them other names too
-    let [two: positionZero, three: positionOne] = numbers;
+    let [positionZero,positionOne] = numbers;
 
     console.log(positionZero)       // prints '2'
     console.log(positionOne)        // prints '3'
