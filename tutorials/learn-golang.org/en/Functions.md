@@ -1,26 +1,26 @@
 Tutorial
 --------
-Functions provide a way to divide your code into logical blocks and reuse them minimising the time and effort and improve the managability of the code. 
+Functions provide a way to divide your code into logical blocks and reuse them, minimising the time and effort, and improving the manageability of the code. 
 
 ## Functions in Go
 
 Functions in golang are defined using the `func` keyword. 
 
-The syntax to define a function in go
+The syntax to define a function in go is:
 
     func <name of the function> (<inputs to the function>) (<datatypes of return values from the function>) {
         // your code here
     }
 
-Let's write a add function using this syntax
+Let's write a add function using this syntax:
 
     func add (a int, b int) int {
         return a + b
     }
 
-## How to call a function in your code
+## How to call a function in your code?
 
-Calling a function is as easy as writing the function name and giving it the arguments. Now for an example let's call our add function in the main method.
+Calling a function is as easy as writing the function name and giving it the arguments. Now for an examplem let's call our add function in the main method.
 
     package main
 
@@ -32,7 +32,7 @@ Calling a function is as easy as writing the function name and giving it the arg
         fmt.Println(sum)        // prints 8
 	}
 
-Go also let's you ignore specific fields in the return values using the `_` variable. 
+Go also lets you ignore specific fields in the return values using the `_` variable. 
 
     package main
 
@@ -49,7 +49,7 @@ Go also let's you ignore specific fields in the return values using the `_` vari
 	}
 
 
-We can also add named return values so that we dont need to deliberately return something in the function. But beware, use this only in small functions.
+We can also add named return values so that we don't need to deliberately return something in the function. But beware, use this only in small functions.
 
     package main
 
@@ -68,7 +68,7 @@ We can also add named return values so that we dont need to deliberately return 
 
 Exercise
 --------
-In this exercise, your will be given a integer slice as a input. Write a function with name `sumAll` that loops through all the numbers in the slice and returns the sum of the numbers. 
+In this exercise, you will be given an integer slice as an input. Write a function with name `sumAll` that loops through all the numbers in the slice and returns the sum of the numbers. 
 
 Tutorial Code
 -------------
