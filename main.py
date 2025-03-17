@@ -410,7 +410,6 @@ def index(title, language="en"):
 
         return make_response(render_template(
             "index-python.html" if (language == "en" and domain_data["language"] == "python") else \
-            "index-js.html" if (language == "en" and domain_data["language"] == "javascript") else \
             "index.html", 
             tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
