@@ -16,6 +16,7 @@ integration, code refactoring, automatic indentation, syntax highlighting, compa
 * Atom (Free) - [[https://atom.io/]]
 * JetBrains WebStorm (Commercial) - [[https://www.jetbrains.com/webstorm/]]
 * Sublime Text (Commercial) - [[https://www.sublimetext.com/]]
+* CodeLobster (Free and Commercial) - [[https://codelobster.com/]]
 * Notepad++ (Windows only) - [[https://notepad-plus-plus.org/download/v7.html]]
 
 In this tutorial you won't actually need an IDE, because all coding is done online.
