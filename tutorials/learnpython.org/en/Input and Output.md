@@ -45,7 +45,7 @@ The sys module provides various functions for output formatting but here we lear
     a = 5
     b = 0.63
     c = "hello"
-    print "a is : %d, b is %0.4f,c is %s" % (a,b,c)
+    print("a is : %d, b is %0.4f,c is %s" % (a,b,c))
 
 The output must be self explanatory.
 
