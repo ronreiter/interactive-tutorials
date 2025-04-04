@@ -3,36 +3,27 @@ Tutorial
 Taking Input and showing Output in required way plays an important role in interactive coding. So lets focus on input and
 output of various data types.
 
-###raw_input()
+###input()
 this is used to take input as long as it reached end of line.Note that there should not be any spaces.Taking input terminates with a new line character and if there are any spaces in the input line it results in error
 
     # Prints out the input received from stdin
-    astring=raw_input()# give hello as input
-    print raw_input()
+    astring=input()# give hello as input
+    print(input())
 
 after taking the input we can convert them to our required data type using functions like int(),float(),str()
 
-    num=int(raw_input())
+    num=int(input())
     print num
-    decimalnum=raw_input()
-    decimalnum=float(raw_input()
+    decimalnum=input()
+    decimalnum=float(input()
     print decimalnum
-
-###input()
-this is especially used to input integers. The advantage of input() over raw_input() can be cleared with the following example
-
-    #give 2*2 as input
-    a=input()
-    b=raw_input() #note that int(raw_input()) results in error
-    print a #prints 4
-    print b #prints 2*2
 
 ###how to take two two or more data types as input from a single line separated by spaces?
 Here we make use split() and map() functions
 
     #give two integers in first line and more than two integers in third line
-    a, b = map(int, raw_input().split())
-    array = raw_input().split()
+    a, b = map(int, input().split())
+    array = input().split()
     sum = 0
     for each in array:
         sum = sum + int(each)
@@ -54,9 +45,9 @@ Exercise
 
 Write a program that asks the user to input their name, age, and country. The program should then print out a message that includes this information in a sentence. The program should include:
 
-1. Taking a name as input using `raw_input()`.
+1. Taking a name as input using `input()`.
 2. Taking an age as input using `input()`, and converting it to an integer.
-3. Taking a country name as input using `raw_input()`.
+3. Taking a country name as input using `input()`.
 4. Formatting the output to display a sentence that includes the name, age, and country.
 
 The program should demonstrate input handling and string formatting in Python.
@@ -64,14 +55,14 @@ The program should demonstrate input handling and string formatting in Python.
 Tutorial Code
 -------------
 
-    # Taking the name input using raw_input()
-    name = raw_input("Enter your name: ")
+    # Taking the name input using input()
+    name = input("Enter your name: ")
     
     # Taking the age input using input() and converting it to integer
     age = int(input("Enter your age: "))
     
-    # Taking the country input using raw_input()
-    country = raw_input("Enter your country: ")
+    # Taking the country input using input()
+    country = input("Enter your country: ")
     
     # Displaying the formatted sentence with name, age, and country
     print("Hello, my name is {}, I am {} years old, and I am from {}.".format(name, age, country))
@@ -89,14 +80,14 @@ Expected Output
 Solution
 -------------
 
-    # Taking the name input using raw_input()
-    name = raw_input("Enter your name: ")
+    # Taking the name input using input()
+    name = input("Enter your name: ")
     
     # Taking the age input using input() and converting it to integer
     age = int(input("Enter your age: "))
     
-    # Taking the country input using raw_input()
-    country = raw_input("Enter your country: ")
+    # Taking the country input using input()
+    country = input("Enter your country: ")
     
     # Displaying the formatted sentence with name, age, and country
     print("Hello, my name is {}, I am {} years old, and I am from {}.".format(name, age, country)) name is {}, I am {} years old, and I am from {}.".format(name, age, country))
