@@ -8,15 +8,10 @@ C tiene varios tipos de variables, pero hay unos cuantos tipos básicos:
 * Enteros - números enteros los cuales pueden ser positivos o negativos. Definidos usando `char`, `int`, `short`, `long` o `long long`.
 * Enteros sin signo - números enteros los cuales solo pueden ser positivos. Definidos usando `unsigned char`, `unsigned int`, `unsigned short`, `unsigned long` o `unsigned long long`.
 * Números con punto flotante - números reales (números con fracciones). Definidos usando `float` y `double`.
+* Booleanos - o verdadero o falso: o `true` o `false`. Definidos usando `bool`. En versiones viejas de C, el tipo `char` se usaba para representar a los booleanos.
 * Estructuras - serán explicadas luego, en la sección de estructuras.
 
 Los distintos tipos de variables definen sus límites. Un `char` tiene un rango de -128 a 127, mientras que un `long` puede tener un rango de -2,147,483,648 a 2,147,483,647 (`long` y otros tipos de datos numéricos pueden tener otro rango en diferentes computadoras, por ejemplo - de –9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 en una computadora de 64 bits).
-
-Note que C _no_ tiene un tipo booleano. Usualmente, es definido usando la siguiente notación:
-
-    #define BOOL char
-    #define FALSE 0
-    #define TRUE 1
 
 C usa arreglos de caractéres para definir strings, y será explicado en la sección de Strings.
 
