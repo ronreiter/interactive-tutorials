@@ -32,7 +32,7 @@ Calling a function is as easy as writing the function name and giving it the arg
         fmt.Println(sum)        // prints 8
 	}
 
-Go also let's you ignore specific fields in the return values using the `_` variable. 
+Go also lets you ignore specific fields in the return values using the `_` variable. 
 
     package main
 
@@ -68,7 +68,7 @@ We can also add named return values so that we dont need to deliberately return 
 
 Exercise
 --------
-In this exercise, your will be given a integer slice as a input. Write a function with name `sumAll` that loops through all the numbers in the slice and returns the sum of the numbers. 
+In this exercise, you will be given an integer slice as a input. Write a function with name `sumAll` that loops through all the numbers in the slice and returns the sum of the numbers. 
 
 Tutorial Code
 -------------
