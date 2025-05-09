@@ -75,7 +75,7 @@ Comparison operators allow you to compare two values.
 For example, to check if a number is between 3 and 7, we can write:
 
     const number = 5;
-    const between = number > 5 && number < 7;
+    const between = number > 3 && number < 7;
     const numberIsNotZero = number !== 0;
 
 
