@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. Each value stored in a dictionary can be accessed using a key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it.
+لۇغەت سانلار گۇرپىسىغا ئوخشايدىغان سانلىق مەلۇمات تىپى ، ئەمما كۆرسەتكۈچنىڭ ئورنىغا ئاچقۇچ ۋە قىممەت بىلەن ئىشلەيدۇ. لۇغەتتە ساقلانغان ھەر بىر قىممەتنى كۆرسەتكۈچ ئارقىلىق ئۇنى ھەل قىلىشنىڭ ئورنىغا ھەر قانداق جىسىم (تىزما ، سان ، تىزىملىك قاتارلىقلار) ئاچقۇچ ئارقىلىق زىيارەت قىلغىلى بولىدۇ.
 
-For example, a database of phone numbers could be stored using a dictionary like this:
+مەسىلەن ، تېلېفون نومۇرى سانلىق مەلۇمات ئامبىرىنى مۇشۇنىڭغا ئوخشاش لۇغەت ئارقىلىق ساقلىغىلى بولىدۇ:
 
     phonebook = {}
     phonebook["John"] = 938477566
@@ -11,7 +11,7 @@ For example, a database of phone numbers could be stored using a dictionary like
     phonebook["Jill"] = 947662781
     print(phonebook)
 
-Alternatively, a dictionary can be initialized with the same values in the following notation:
+ئۇنىڭدىن باشقا ، تۆۋەندىكى ئىزاھاتتا ئوخشاش قىممەت بىلەن لۇغەتنى قوزغىتىشقا بولىدۇ:
 
     phonebook = {
         "John" : 938477566,
@@ -20,17 +20,17 @@ Alternatively, a dictionary can be initialized with the same values in the follo
     }
     print(phonebook)
 
-### Iterating over dictionaries
+### لۇغەتلەرنى تەكرارلاش
 
-Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:
+لۇغەتلەرنى تىزىملىككە ئوخشاش تەكرارلىغىلى بولىدۇ. قانداقلا بولمىسۇن ، لۇغەت تىزىملىككە ئوخشىمايدىغىنى ، ئۇنىڭدا ساقلانغان قىممەتلەرنىڭ تەرتىپىنى ساقلىمايدۇ. ھالقىلىق قىممەت جۈپلىرىنى تەكرارلاش ئۈچۈن ، تۆۋەندىكى گرامماتىكىنى ئىشلىتىڭ:
     
     phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
     for name, number in phonebook.items():
         print("Phone number of %s is %d" % (name, number))
 
-### Removing a value
+### قىممەتنى ئېلىۋېتىش
 
-To remove a specified index, use either one of the following notations:
+كۆرسىتىلگەن كۆرسەتكۈچنى ئۆچۈرۈش ئۈچۈن ، تۆۋەندىكى ئىزاھلارنىڭ بىرىنى ئىشلىتىڭ:
     
     phonebook = {
        "John" : 938477566,
@@ -40,7 +40,7 @@ To remove a specified index, use either one of the following notations:
     del phonebook["John"]
     print(phonebook)
 
-or:
+ياكى:
     
     phonebook = {
        "John" : 938477566,
@@ -51,10 +51,10 @@ or:
     print(phonebook)
 
 
-Exercise
+چېنىقىش
 --------
 
-Add "Jake" to the phonebook with the phone number 938273443, and remove Jill from the phonebook.
+938273443 تېلېفون نومۇرى بىلەن تېلېفون دەپتىرىگە «Jake» نى قوشۇڭ ، تېلېفوننى Jill نى ئېلىۋېتىڭ.
 
 Tutorial Code
 -------------

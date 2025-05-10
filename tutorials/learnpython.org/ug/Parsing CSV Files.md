@@ -1,21 +1,21 @@
 Tutorial
 --------
 
-### What is CSV?
-CSV stands for 'Comma Separated Values'. CSV format is the most common import and export format for databases and spreadsheets. A CSV file is a simple text file that contains a list of data. They mostly use the comma(,) character to delimit data, but sometimes use other characters i.e semicolons or tabs.
+### CSV دېگەن نېمە؟
+CSV «پەش ئايرىلغان قىممەت» نى كۆرسىتىدۇ. CSV فورماتى ساندان ۋە ئېلېكترونلۇق جەدۋەل ئۈچۈن ئەڭ كۆپ ئۇچرايدىغان ئىمپورت-ئېكىسپورت شەكلى. CSV ھۆججىتى سانلىق مەلۇمات تىزىملىكىنى ئۆز ئىچىگە ئالغان ئاددىي تېكىست ھۆججىتى. ئۇلار كۆپىنچە پەش (،) ھەرپنى ئىشلىتىپ سانلىق مەلۇماتنى ئايرىيدۇ ، ئەمما بەزىدە باشقا ھەرپلەرنى يەنى يېرىم چېكىت ياكى بەتكۈچنى ئىشلىتىدۇ.
 
-Sample CSV data:
+CSV سانلىق مەلۇماتلىرى:
 
 ...
-column 1 name,column 2 name, column 3 name
-first row data 1,first row data 2,first row data 3
-second row data 1,second row data 2,second row data 3
+1-ستون ئىسمى ، 2-ستون ئىسمى ، 3-ستون ئىسمى
+بىرىنچى قۇر سانلىق مەلۇمات 1 ، بىرىنچى قۇر سانلىق مەلۇمات 2 ، بىرىنچى قۇر سانلىق مەلۇمات 3
+ئىككىنچى قۇر سانلىق مەلۇمات 1 ، ئىككىنچى قۇر سانلىق مەلۇمات 2 ، ئىككىنچى قۇر سانلىق مەلۇمات 3
 ...
 
-### CSV module in Python
-While Python have the built-in open() function to work with CSV files or any other plain text file, there is a dedicated csv module which implements classes to read and write data in csv format that makes working with CSV files much easier.
+Python دىكى ### CSV مودۇلى
+Python نىڭ ئىچىگە CSV ھۆججىتى ياكى باشقا ئاددىي تېكىست ھۆججىتى بىلەن ئىشلەش ئۈچۈن قاچىلانغان ئوچۇق () ئىقتىدارى بولسىمۇ ، ئەمما مەخسۇس csv مودۇلى بار بولۇپ ، دەرسلەرنى csv فورماتىدا ئوقۇش ۋە يېزىش دەرسلىرىنى يولغا قويۇپ ، CSV ھۆججىتى بىلەن ئىشلەشنى تېخىمۇ ئاسانلاشتۇرىدۇ.
 
-### CSV module important functions
+### CSV بۆلەك مۇھىم ئىقتىدارلىرى
 
     csv.field_size_limit – return maximum field size
     csv.get_dialect – get the dialect which is associated with the name
@@ -29,40 +29,40 @@ While Python have the built-in open() function to work with CSV files or any oth
     csv.QUOTE_NONNUMERIC - Quote all fields that aren't numbers value
     csv.QUOTE_NONE – Don't quote anything in output
 
-### How do you use csv module?
-first import csv module in your python program.
+### csv مودۇلىنى قانداق ئىشلىتىسىز؟
+python پروگراممىڭىزدا ئالدى بىلەن csv مودۇلى ئەكىرىڭ.
 
     import csv
 
-writer and reader functions allow you to edit, modify, and transform the data in a CSV file.
+يازغۇچى ۋە ئوقۇرمەنلەرنىڭ ئىقتىدارلىرى CSV ھۆججىتىدىكى سانلىق مەلۇماتلارنى تەھرىرلەش ، ئۆزگەرتىش ۋە ئۆزگەرتىشكە يول قويىدۇ.
 
-How to Read a CSV File :-
+CSV ھۆججىتىنى قانداق ئوقۇش: -
 
-To read data from CSV files we use reader function to generate a reader object.
+CSV ھۆججىتىدىكى سانلىق مەلۇماتلارنى ئوقۇش ئۈچۈن بىز ئوقۇرمەنلەر ئىقتىدارىنى ئىشلىتىپ ئوقۇرمەن ئوبيېكتى ھاسىل قىلىمىز.
 
-For example:
+مەسىلەن:
 
     with open(filename, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
 
-Here, we first open the CSV file in READ mode and name the file onject as csvfile. We use context manager to open file so that we don't have to worry about closing file. csv.reader function takes file object as input and returns an iterable object. We save the iterable object as csvreader.
+بۇ يەردە ، بىز ئالدى بىلەن ئوقۇش شەكلىدە CSV ھۆججىتىنى ئاچىمىز ھەمدە ھۆججەتنىڭ مەزمۇنىنى csvfile دەپ ئاتايمىز. ھۆججەتنى ئېچىش ئۈچۈن مەزمۇن باشقۇرغۇچىنى ئىشلىتىمىز. csv.reader ئىقتىدارى ھۆججەت ئوبيېكتىنى كىرگۈزۈش شەكلىدە ئېلىپ ، تەكرارلىنىدىغان ئوبيېكتنى قايتۇرىدۇ. تەكرارلىنىدىغان ئوبيېكتنى csvreader قىلىپ ساقلايمىز.
 
-As we know, csvreader is an iterable object and therefore we can iterate using for loop:
+بىلگىنىمىزدەك ، csvreader تەكرارلىنىدىغان ئوبيېكت ، شۇڭلاشقا بىز ئايلانما ئىشلىتىش ئارقىلىق تەكرارلىيالايمىز:
 
-example 1:
+مىسال 1:
 
     with open(filename, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
         for row in csvreader:
             print(row)
 
-Above code will print all the rows we read from csv file. Please note that we open file with 'r' mode when it already exists.
+ئۈستىدىكى كود بىز csv ھۆججىتىدىن ئوقۇغان بارلىق قۇرلارنى بېسىپ چىقىرىدۇ. شۇنىڭغا دىققەت قىلىڭكى ، ھۆججەت مەۋجۇت بولغاندا «r» ھالىتى بىلەن ئاچىمىز.
 
-What's next?
+كېيىنكىسى نېمە؟
 
-cvreader is an iterable object. Hence, .next() method returns the current row and advances the iterator to the next row.
+cvreader بولسا تەكرارلىنىدىغان ئوبيېكت. شۇڭلاشقا ، .next () ئۇسۇلى نۆۋەتتىكى قۇرنى قايتۇرىدۇ ۋە تەكرارلىغۇچنى كېيىنكى قۇرغا ئىلگىرى سۈرىدۇ.
 f
-example 2:
+مىسال 2:
 
     with open(filename, 'r') as csvfile:
         csvreader = csv.reader(csvfile)
@@ -70,14 +70,14 @@ example 2:
         for row in csvreader:
             print(row)
 
-In example 1, you would see all rows printed on console along with header. In example 2, .next() method reads header in fields object and advances the iterator to next row and therefore all rows are printed except the header.
+1-مىسالدا ، بارلىق قۇرلارنىڭ ماۋزۇ بىلەن بىللە كونترول سۇپىسىغا بېسىلغانلىقىنى كۆرىسىز. مەسىلەن ، 2.
 
 
-How to write in a CSV File-
+CSV ھۆججىتىگە قانداق يېزىش-
 
-To write in a csv file, csv module provides csv.writer function. To write data, we first open the CSV file in WRITE mode('w'). The file object is named as csvfile. We save the csv.writer object as csvwriter.
+Csv ھۆججىتىگە يېزىش ئۈچۈن ، csv مودۇلى csv.writer ئىقتىدارىنى تەمىنلەيدۇ. سانلىق مەلۇمات يېزىش ئۈچۈن ، بىز ئالدى بىلەن CSV ھۆججىتىنى WRITE ھالەتتە ('w') ئاچىمىز. ھۆججەت ئوبيېكتىنىڭ ئىسمى csvfile. بىز csv.writer ئوبيېكتىنى csvwriter قىلىپ ساقلايمىز.
 
-Example:
+مىسال:
     #declare header
     fields = ['column1','column2', 'column3']
 
@@ -93,11 +93,11 @@ Example:
         csvwriter.writerow(fields)
         csvwriter.writerows(rows)
 
-In above example, writerow() function will write a single row which is fields object whereas writerows() method will write entire list of rows defined above into csv file.
+يۇقارقى مىسالدا ، يازغۇچى () فۇنكسىيەسى بىر قۇر قۇرنى يېزىپ قويىدۇ ، بۇ بولسا يازغۇچىلار () ئۇسۇلى يۇقىرىدا ئېنىقلانغان قۇرلارنىڭ تىزىملىكىنى csv ھۆججىتىگە يازىدۇ.
 
-Now let us go a step ahead. Read content of one csv file and write into another csv file.
+ئەمدى بىز بىر قەدەم ئىلگىرىلەيلى. بىر csv ھۆججىتىنىڭ مەزمۇنىنى ئوقۇڭ ۋە باشقا csv ھۆججىتىگە يېزىڭ.
 
-Example:
+مىسال:
 
     with open('newfilename.csv', 'w') as f2:
         with open('mycsvfile.csv', mode='r') as f1:
@@ -108,30 +108,30 @@ Example:
             for row in reader:
                 csvwriter.writerow(row)
 
-Here, we are opening 'newfilename.csv' in 'W' mode as f2 and opening 'mycsvfile.csv' in 'r' mode as f1. We are making use of .next(), .reader(),.writer(), .writerow() functions of csv module. Using .next(), we are advancing the reader pointer and using csvwriter.writerow() we are writing incoming row one at a time.
+بۇ يەردە بىز «newfilename.csv» نى «W» شەكلىدە f2 قىلىپ ئېچىۋاتىمىز ، «r» ھالەتتە «mycsvfile.csv» نى f1 قىلىپ ئاچىمىز. بىز csv مودۇلىنىڭ .next () ، .reader () ،. يازغۇچى () ، .writerow () فۇنكسىيەسىنى ئىشلىتىۋاتىمىز. .Next () نى ئىشلىتىپ ، ئوقۇرمەن كۆرسەتكۈچىنى ئىلگىرى سۈرۈۋاتىمىز ۋە csvwriter.writerow () ئارقىلىق بىز بىر قۇر كەلگەن قۇرنى بىر-بىرلەپ يېزىۋاتىمىز.
 
-### DictReader and DictWriter classes in Python
+### Python دىكى DictReader ۋە DictWriter دەرسلىرى
 
-below are two important classes in python to read and write csv files.
+تۆۋەندىكىسى python دىكى csv ھۆججىتىنى ئوقۇش ۋە يېزىشتىكى ئىككى مۇھىم دەرس.
 
-csv.Dictwriter class
-csv.DictReader class
+csv.Dictwriter سىنىپى
+csv.DictReader سىنىپى
 
-The DictReader and DictWriter are classes available in Python for reading and writing to CSV. Although they are similar to the reader and writer functions, these classes use dictionary objects to read and write to csv files.
+DictReader ۋە DictWriter بولسا Python دا CSV نى ئوقۇش ۋە يېزىش ئۈچۈن ئىشلىتىلىدىغان دەرسلەر. گەرچە ئۇلار ئوقۇرمەن ۋە يازغۇچى فۇنكسىيەسىگە ئوخشايدىغان بولسىمۇ ، بۇ دەرسلەر لۇغەت ئوبيېكتلىرىنى ئىشلىتىپ csv ھۆججىتىنى ئوقۇش ۋە يېزىش ئۈچۈن ئىشلىتىدۇ.
 
 DictReader:
 
-It creates an object which maps the information read into a dictionary whose keys are given by the fieldnames parameter. This parameter is optional, but when not specified in the file, the first row data becomes the keys of the dictionary.
+ئۇ ئوقۇلغان ئۇچۇرلارنى لۇغەتكە خەرىتىلەيدىغان ئوبيېكت قۇرىدۇ ، ئۇنىڭ ئاچقۇچلىرى مەيدان ئىسمى پارامېتىرى تەرىپىدىن بېرىلگەن. بۇ پارامېتىر ئىختىيارى بولىدۇ ، ئەمما ھۆججەتتە كۆرسىتىلمىگەندە ، بىرىنچى قۇر سانلىق مەلۇمات لۇغەتنىڭ ئاچقۇچىغا ئايلىنىدۇ.
 
-Example csv(info.csv)
+مىسال csv (info.csv)
 
 .....
-firstname, lastname
+فامىلىسى ، فامىلىسى
 foo, bar
 foo1, bar1
 .....
 
-Example:
+مىسال:
 
         import csv
         with open('info.csv') as csvfile:
@@ -141,9 +141,9 @@ Example:
 
 DictWriter:
 
-The csv.DictWriter class operates like a regular writer but maps Python dictionaries into CSV rows. The fieldnames parameter is a sequence of keys that identify the order in which values in the dictionary passed to the writerow() method are written to the CSV file. The class is defined as csv.DictWriter(csvfile, fieldnames, restval='', extrasaction='raise', dialect='excel', *args, **kwds)
+Csv.DictWriter سىنىپى ئادەتتىكى يازغۇچىغا ئوخشاش مەشغۇلات قىلىدۇ ، ئەمما Python لۇغىتىنى CSV قۇرغا خەرىتىلەيدۇ. مەيدان ئىسمى پارامېتىرى بولسا لۇغەتتىكى قىممەتنىڭ يازغۇچى () ئۇسۇلىغا ئۆتكەن تەرتىپلەرنىڭ CSV ھۆججىتىگە يېزىلىش تەرتىپىنى پەرقلەندۈرىدىغان ئاچقۇچلارنىڭ رەت تەرتىپى. بۇ سىنىپ csv.DictWriter (csvfile ، مەيدان ئىسمى ، restval = '', extrasaction = 'raise', dialect = 'excel', * args, ** kwds) دەپ ئېنىقلىما بېرىلگەن.
 
-Example:
+مىسال:
 
         import csv
         f = open('info.csv', 'w')
@@ -158,10 +158,10 @@ Example:
             writer.writerow({'firstname' : 'Henry', 'last_name': 'Smith'})
 
 
-Exercise
+چېنىقىش
 --------
 
-In this exercise, you will be working with CSV data. Your task is to create a Python program that reads data from a CSV file and writes it to another CSV file, ensuring that only rows where the value in the first column is greater than 50 are included in the output file.
+بۇ مانېۋىردا سىز CSV سانلىق مەلۇماتلىرى بىلەن ئىشلەيسىز. سىزنىڭ ۋەزىپىڭىز بولسا Python پروگراممىسىنى قۇرۇش بولۇپ ، ئۇ CSV ھۆججىتىدىكى سانلىق مەلۇماتلارنى ئوقۇيدۇ ۋە ئۇنى باشقا CSV ھۆججىتىگە يازىدۇ ، پەقەت بىرىنچى ئىستوندىكى قىممىتى 50 دىن يۇقىرى بولغان قۇرلارنىڭ چىقىرىش ھۆججىتىگە كىرىشىگە كاپالەتلىك قىلىش.
 
 Tutorial Code
 -------------

@@ -1,17 +1,17 @@
 Tutorial
 --------
 
-There are two types of loops in Python, for and while.
+Python دا ۋە بىر مەزگىل ئىچىدە ئىككى خىل ھالقا بار.
 
-### The "for" loop
+### "for" loop
 
-For loops iterate over a given sequence. Here is an example:
+دەۋرىيلىنىش ئۈچۈن بېرىلگەن تەرتىپ بويىچە تەكرارلاڭ. بۇ يەردە بىر مىسال بار:
 
     primes = [2, 3, 5, 7]
     for prime in primes:
         print(prime)
 
-For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the range function is zero based.
+ئايلانما ھالقىلاردا «دائىرە» ۋە «xrange» فۇنكسىيەسى ئارقىلىق سانلار رەت تەرتىپىدە تەكرارلىنالايدۇ. دائىرە بىلەن xrange نىڭ پەرقى شۇكى ، دائىرە ئىقتىدارى يېڭى تىزىملىكنى شۇ دائىرە سانى بىلەن قايتۇرىدۇ ، ھالبۇكى xrange بولسا تېخىمۇ ئۈنۈملۈك بولغان تەكرارلىغۇچنى قايتۇرىدۇ. (Python 3 xrange غا ئوخشاش ھەرىكەت فۇنكسىيەسىنى ئىشلىتىدۇ). دائىرە فۇنكسىيەسىنىڭ نۆلنى ئاساس قىلغانلىقىغا دىققەت قىلىڭ.
 
     # Prints out the numbers 0,1,2,3,4
     for x in range(5):
@@ -25,9 +25,9 @@ For loops can iterate over a sequence of numbers using the "range" and "xrange" 
     for x in range(3, 8, 2):
         print(x)
 
-### "while" loops
+### "while" loop
 
-While loops repeat as long as a certain boolean condition is met. For example:
+ھالبۇكى مەلۇم بولان شەرتى ھازىرلانسىلا ئايلانما تەكرارلىنىدۇ. مەسىلەن:
 
     # Prints out 0,1,2,3,4
 
@@ -36,9 +36,9 @@ While loops repeat as long as a certain boolean condition is met. For example:
         print(count)
         count += 1  # This is the same as count = count + 1
 
-### "break" and "continue" statements
+### "بۇزۇش" ۋە "داۋاملاشتۇرۇش" بايانلىرى
 
-**break** is used to exit a for loop or a while loop, whereas **continue** is used to skip the current block, and return to the "for" or "while" statement. A few examples:
+** break ** ئايلانما ياكى بىر ئاز دەۋرىيلىنىشتىن چېكىنىش ئۈچۈن ئىشلىتىلىدۇ ، ئەمما ** داۋاملاشتۇرۇش ** نۆۋەتتىكى بۆلەكتىن ئاتلاپ ئۆتۈپ ، «for» ياكى «while» جۈملىسىگە قايتىدۇ. بىر قانچە مىسال:
 
     # Prints out 0,1,2,3,4
 
@@ -56,12 +56,12 @@ While loops repeat as long as a certain boolean condition is met. For example:
             continue
         print(x)
 
-### Can we use "else" clause for loops?
+### ئايلانما ئۈچۈن «باشقا» ماددىسىنى ئىشلىتەمدۇق؟
 
-Unlike languages like C,CPP.. we can use **else** for loops. When the loop condition of "for" or "while" statement fails then code part in "else" is executed. If a **break** statement is executed inside the for loop then the "else" part is skipped.
-Note that the "else" part is executed even if there is a **continue** statement.
+C ، CPP غا ئوخشاش تىللارغا ئوخشىمايدىغىنىمىز ، بىز ئايلانما ** ئۈچۈن ** باشقا ** نى ئىشلىتەلەيمىز. «For» ياكى «while» جۈملىسىنىڭ ئايلانما ھالىتى مەغلۇپ بولغاندا ، «باشقا» دىكى كود قىسمى ئىجرا بولىدۇ. ئەگەر ئايلانما ئىچىدە ** break ** جۈملىسى ئىجرا قىلىنسا ئۇنداقتا «باشقا» قىسمى ئاتلاپ كېتىدۇ.
+شۇنىڭغا دىققەت قىلىڭكى ، «باشقا» قىسمى ** داۋاملاشتۇرۇش ** جۈملىسى بولغان تەقدىردىمۇ ئىجرا بولىدۇ.
 
-Here are a few examples:
+بۇ يەردە بىر قانچە مىسال بار:
 
     # Prints out 0,1,2,3,4 and then it prints "count value reached 5"
 
@@ -81,10 +81,10 @@ Here are a few examples:
         print("this is not printed because for loop is terminated because of break but not due to fail in condition")
 
 
-Exercise
+چېنىقىش
 --------
 
-Loop through and print out all even numbers from the numbers list in the same order they are received. Don't print any numbers that come after 237 in the sequence.
+رەتكە تىزىپ ، سانلار تىزىملىكىدىكى بارلىق سانلارنى تاپشۇرۇۋالغان تەرتىپ بويىچە بېسىپ چىقىرىڭ. تەرتىپ بويىچە 237 دىن كېيىن كەلگەن سانلارنى بېسىپ چىقارماڭ.
 
 Tutorial Code
 -------------

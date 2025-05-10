@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-List Comprehensions is a very powerful tool, which creates a new list based on another list, in a single, readable line.
+تىزىملىكنى چۈشىنىش ئىنتايىن كۈچلۈك قورال بولۇپ ، ئۇ باشقا تىزىملىككە ئاساسەن يېڭى تىزىملىك قۇرالايدۇ ، يەككە ، ئوقۇغىلى بولىدىغان قۇر.
 
-For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
+مەسىلەن ، بىز ھەر بىر سۆزنىڭ ئۇزۇنلۇقىنى مەلۇم جۈملىدە بەلگىلەيدىغان پۈتۈن سانلار تىزىملىكى قۇرۇشىمىز كېرەكلىكىنى ئېيتايلى ، ئەمما بۇ سۆز «the» سۆزى بولمىسا.
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
@@ -14,7 +14,7 @@ For example, let's say we need to create a list of integers which specify the le
     print(words)
     print(word_lengths)
 
-Using a list comprehension, we could simplify this process to this notation:
+تىزىملىكنى چۈشىنىش ئارقىلىق ، بۇ ئىزاھاتقا بۇ جەرياننى ئاددىيلاشتۇرالايمىز:
 
     sentence = "the quick brown fox jumps over the lazy dog"
     words = sentence.split()
@@ -22,10 +22,10 @@ Using a list comprehension, we could simplify this process to this notation:
     print(words)
     print(word_lengths)
 
-Exercise
+چېنىقىش
 --------
 
-Using a list comprehension, create a new list called "newlist" out of the list "numbers", which contains only the positive numbers from the list, as integers.
+تىزىملىكنى چۈشىنىش ئارقىلىق تىزىملىكتىن «يېڭى تىزىملىك» دەپ ئاتىلىدىغان يېڭى تىزىملىك قۇرۇڭ ، بۇ تىزىملىكتىكى ئاكتىپ سانلارنىلا ئۆز ئىچىگە ئالىدۇ.
 
 Tutorial Code
 -------------

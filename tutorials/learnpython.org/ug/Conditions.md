@@ -1,18 +1,18 @@
 Tutorial
 --------
 
-Python uses boolean logic to evaluate conditions. The boolean values True and False are returned when an expression is compared or evaluated. For example:
+Python شارائىتنى باھالاش ئۈچۈن ئاق رەڭلىك لوگىكا ئىشلىتىدۇ. Boolean قىممىتى True ۋە False ئىپادىلەش سېلىشتۇرۇلغاندا ياكى باھالانغاندا قايتۇرۇلىدۇ. مەسىلەن:
 
     x = 2
     print(x == 2) # prints out True
     print(x == 3) # prints out False
     print(x < 3) # prints out True
 
-Notice that variable assignment is done using a single equals operator "=", whereas comparison between two variables is done using the double equals operator "==". The "not equals" operator is marked as "!=".
+ئۆزگىرىشچان تاپشۇرۇقنىڭ تەڭ باراۋەر تىجارەتچى "=" ئارقىلىق ئېلىپ بېرىلىدىغانلىقىغا دىققەت قىلىڭ ، ھالبۇكى ئىككى ئۆزگەرگۈچى مىقدارنى سېلىشتۇرۇش قوش تەڭلىك مەشغۇلاتچىسى "==" ئارقىلىق ئېلىپ بېرىلىدۇ. «باراۋەر ئەمەس» تىجارەتچى «! =» دەپ بەلگە قويۇلغان.
 
-### Boolean operators
+### Boolean مەشغۇلاتچىلىرى
 
-The "and" and "or" boolean operators allow building complex boolean expressions, for example:
+"ۋە" ۋە "ياكى" بولان تىجارەتچىلىرى مۇرەككەپ بولان ئىپادىسىنى قۇرۇشقا يول قويىدۇ ، مەسىلەن:
 
     name = "John"
     age = 23
@@ -22,17 +22,17 @@ The "and" and "or" boolean operators allow building complex boolean expressions,
     if name == "John" or name == "Rick":
         print("Your name is either John or Rick.")
 
-### The "in" operator
+### «in» مەشغۇلاتچىسى
 
-The "in" operator could be used to check if a specified object exists within an iterable object container, such as a list:
+«In» مەشغۇلاتچىسى تىزىملىك قاتارلىق تەكرارلىنىدىغان ئوبيېكت قاچىسى ئىچىدە مەلۇم جىسىمنىڭ بار-يوقلۇقىنى تەكشۈرۈشكە ئىشلىتىلىدۇ:
 
     name = "John"
     if name in ["John", "Rick"]:
         print("Your name is either John or Rick.")
 
-Python uses indentation to define code blocks, instead of brackets. The standard Python indentation is 4 spaces, although tabs and any other space size will work, as long as it is consistent. Notice that code blocks do not need any termination.
+Python تىرناقنىڭ ئورنىغا كود بۆلەكلىرىگە ئېنىقلىما بېرىدۇ. ئۆلچەملىك Python كۆرسەتكۈچ 4 بوشلۇق ، گەرچە بەتكۈچ ۋە باشقا بوشلۇق چوڭلۇقى ماس كەلسىلا ئىشلەيدۇ. كود بۆلەكلىرىنىڭ ھېچقانداق ئاخىرلىشىشقا ئېھتىياجلىق ئەمەسلىكىگە دىققەت قىلىڭ.
 
-Here is an example for using Python's "if" statement using code blocks:
+بۇ يەردە Python نىڭ «if» جۈملىسىنى كود بۆلەكلىرى ئارقىلىق ئىشلىتىشنىڭ بىر مىسالى:
 
     statement = False
     another_statement = True
@@ -46,7 +46,7 @@ Here is an example for using Python's "if" statement using code blocks:
         # do another thing
         pass
 
-For example:
+مەسىلەن:
 
     x = 2
     if x == 2:
@@ -54,36 +54,36 @@ For example:
     else:
         print("x does not equal to two.")
 
-A statement is evaulated as true if one of the following is correct:
-1. The "True" boolean variable is given, or calculated using an expression, such as an arithmetic comparison.
-2. An object which is not considered "empty" is passed.
+تۆۋەندىكىلەرنىڭ بىرى توغرا بولسا ، بىر بايان راست دەپ باھالىنىدۇ:
+1.
+2. «قۇرۇق» دەپ قارالمىغان جىسىم ئۆتۈپ كەتتى.
 
-Here are some examples for objects which are considered as empty:
-1. An empty string: ""
-2. An empty list: []
-3. The number zero: 0
-4. The false boolean variable: False
+بۇ يەردە قۇرۇق دەپ قارالغان ئوبيېكتلارغا ئائىت بىر قانچە مىسال بار:
+1. قۇرۇق قۇر: ""
+2. قۇرۇق تىزىملىك: []
+3. نۆل سان: 0
+4. يالغان رەڭ ئۆزگەرگۈچى مىقدار: يالغان
 
 ### The 'is' operator
 
-Unlike the double equals operator "==", the "is" operator does not match the values of the variables, but the instances themselves. For example:
+قوش تەڭلىك مەشغۇلاتچىسى "==" غا ئوخشىمايدىغىنى ، "is" مەشغۇلاتچىسى ئۆزگەرگۈچى مىقدارنىڭ قىممىتىگە ماس كەلمەيدۇ ، بەلكى ئەھۋالنىڭ ئۆزى. مەسىلەن:
 
     x = [1,2,3]
     y = [1,2,3]
     print(x == y) # Prints out True
     print(x is y) # Prints out False
 
-### The "not" operator
+### «ئەمەس» تىجارەتچى
 
-Using "not" before a boolean expression inverts it:
+ئاقىلانە ئىپادىلەشتىن بۇرۇن «ئەمەس» نى ئىشلىتىش:
 
     print(not False) # Prints out True
     print((not False) == (False)) # Prints out False
 
-Exercise
+چېنىقىش
 --------
 
-Change the variables in the first section, so that each if statement resolves as True.
+بىرىنچى بۆلەكتىكى ئۆزگەرگۈچى مىقدارنى ئۆزگەرتىڭ ، ئەگەر ھەر بىر جۈملە توغرا بولسا ھەل بولىدۇ.
 
 Tutorial Code
 -------------

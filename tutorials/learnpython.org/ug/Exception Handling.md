@@ -1,12 +1,12 @@
 Tutorial
 --------
-When programming, errors happen. It's just a fact of life.
-Perhaps the user gave bad input. Maybe a network resource was
-unavailable. Maybe the program ran out of memory. Or the programmer
-may have even made a mistake!
+پروگرامما تۈزگەندە خاتالىق يۈز بېرىدۇ. بۇ پەقەت ھاياتلىقنىڭ پاكىتلىرى.
+بەلكىم ئىشلەتكۈچى ناچار كىرگۈزگەن بولۇشى مۇمكىن. بەلكىم تور مەنبەسى بولۇشى مۇمكىن
+ئىشلەتكىلى بولمايدۇ. بەلكىم پروگراممىنىڭ ئەستە تۇتۇش قابىلىيىتى تۈگىگەن بولۇشى مۇمكىن. ياكى پروگراممېر
+ھەتتا خاتالىق سادىر قىلغان بولۇشى مۇمكىن!
 
-Python's solution to errors are exceptions. You might have seen an
-exception before.
+Python نىڭ خاتالىقلارنى ھەل قىلىشى بۇنىڭ سىرتىدا. بەلكىم سىز كۆرگەن بولۇشىڭىز مۇمكىن
+بۇنىڭدىن مۇستەسنا.
 
     print(a)
     
@@ -15,17 +15,17 @@ exception before.
       File "<stdin>", line 1, in <module>
     NameError: name 'a' is not defined
 
-Oops! Forgot to assign a value to the 'a' variable.
+ئاپلا! «A» ئۆزگەرگۈچى مىقدارغا قىممەت بېرىشنى ئۇنتۇپ قالدى.
 
-But sometimes you don't want exceptions to completely stop the
-program. You might want to do something special when an exception
-is raised. This is done in a *try/except* block.
+ئەمما بەزىدە مۇستەسنا ئەھۋاللارنىڭ پۈتۈنلەي توختىتىلىشىنى خالىمايسىز
+پروگرامما. بۇنىڭدىن مۇستەسنا ۋاقىتتا ئالاھىدە بىر ئىش قىلماقچى بولۇشىڭىز مۇمكىن
+كۆتۈرۈلگەن. بۇ * سىناقتىن باشقا * سىناقتا ئېلىپ بېرىلىدۇ.
 
-Here's a trivial example: Suppose you're iterating over a list. You
-need to iterate over 20 numbers, but the list is made from user input,
-and might not have 20 numbers in it. After you reach the end of the
-list, you just want the rest of the numbers to be interpreted as a 0.
-Here's how you could do that:
+بۇ يەردە ئۇششاق-چۈششەك مىسال بار: پەرەز قىلايلى. سەن
+20 دىن ئارتۇق ساننى تەكرارلاش كېرەك ، ئەمما بۇ تىزىملىك ئىشلەتكۈچى كىرگۈزۈشتىن ياسالغان ،
+ھەمدە ئۇنىڭدا 20 سان بولماسلىقى مۇمكىن. ئاخىرلاشقاندىن كېيىن
+تىزىملىك ، قالغان سانلارنىڭ 0 دەپ ئىزاھلىنىشىنى ئۈمىد قىلىسىز.
+بۇنى قانداق قىلالايسىز:
 
     def do_stuff_with_number(n):
         print(n)
@@ -41,14 +41,14 @@ Here's how you could do that:
     
     catch_this()
 
-There, that wasn't too hard! You can do that with any exception. For
-more details on handling exceptions, look no further than the 
-[Python Docs](http://docs.python.org/tutorial/errors.html#handling-exceptions)
+ئۇ يەردە ، بۇ بەك تەس ئەمەس ئىدى! سىز بۇنىڭدىن مۇستەسنا ھالدا قىلالايسىز. For
+بۇنىڭدىن مۇستەسنا ئىشلارنى بىر تەرەپ قىلىشقا ئائىت تېخىمۇ كۆپ تەپسىلاتلارنى كۆرۈڭ 
+[Python Docs] (http://docs.python.org/tutorial/errors.html#handling-exceptions)
 
-Exercise
+چېنىقىش
 --------
 
-Handle all the exception! Think back to the previous lessons to return the last name of the actor.
+بارلىق مۇستەسنا ئىشلارنى بىر تەرەپ قىلىڭ! ئالدىنقى دەرسلەرنى قايتا ئويلاپ ، ئارتىسنىڭ فامىلىسىنى قايتۇرۇڭ.
 
 Tutorial Code
 -------------

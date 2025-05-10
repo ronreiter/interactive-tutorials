@@ -1,16 +1,16 @@
 Tutorial
 --------
-Taking Input and showing Output in required way plays an important role in interactive coding. So lets focus on input and
-output of various data types.
+كىرگۈزۈش ۋە لازىملىق ئۇسۇلدا چىقىرىشنى كۆرسىتىش ئۆز-ئارا كودلاشتا مۇھىم رول ئوينايدۇ. شۇڭا دىققەتنى كىرگۈزۈشكە ۋە
+ھەر خىل سانلىق مەلۇمات تىپلىرىنىڭ چىقىرىلىشى.
 
-###input()
-this is used to take input as long as it reached end of line.Note that there should not be any spaces.Taking input terminates with a new line character and if there are any spaces in the input line it results in error
+### input ()
+بۇ قۇرنىڭ ئاخىرىغا بارسىلا كىرگۈزۈشكە ئىشلىتىلىدۇ. بوشلۇق بولماسلىقى كېرەكلىكىنى ئەسكەرتىڭ. كىرگۈزۈش يېڭى قۇر ھەرپ بىلەن ئاخىرلىشىدۇ ، ئەگەر كىرگۈزۈش لىنىيىسىدە بوشلۇق بولسا خاتالىق كېلىپ چىقىدۇ
 
     # Prints out the input received from stdin
     astring=input()# give hello as input
     print(input())
 
-after taking the input we can convert them to our required data type using functions like int(),float(),str()
+كىرگۈزۈشنى ئالغاندىن كېيىن int () ، float () ، str () قاتارلىق ئىقتىدارلارنى ئىشلىتىپ ئۇلارنى لازىملىق سانلىق مەلۇمات تىپىمىزغا ئايلاندۇرالايمىز.
 
     num=int(input())
     print num
@@ -18,8 +18,8 @@ after taking the input we can convert them to our required data type using funct
     decimalnum=float(input()
     print decimalnum
 
-###how to take two two or more data types as input from a single line separated by spaces?
-Here we make use split() and map() functions
+### بوشلۇق ئارقىلىق ئايرىلغان بىر قۇردىن كىرگۈزۈش سۈپىتىدە ئىككى ياكى ئۇنىڭدىن ئارتۇق سانلىق مەلۇمات تۈرىنى قانداق ئېلىش كېرەك؟
+بۇ يەردە بۆلۈش () ۋە خەرىتە () ئىقتىدارلىرىنى ئىشلىتىمىز
 
     #give two integers in first line and more than two integers in third line
     a, b = map(int, input().split())
@@ -29,28 +29,28 @@ Here we make use split() and map() functions
         sum = sum + int(each)
     print(a, b, sum)  # prints first two integers from first line and sum of integers of second line
 
-###Output formatting
-You might have already noticed that print statement automatically inserts a new line. The use of comma like in the above code prints the values in a single line separated by a space.
-The sys module provides various functions for output formatting but here we learn how to use basic knowledge of formatting to output in our required way. Lets see a few examples to learn output formatting
+### چىقىرىش فورماتى
+باسما باياناتىنىڭ ئاپتوماتىك ھالدا يېڭى قۇر قىستۇرغانلىقىنى ھېس قىلغان بولۇشىڭىز مۇمكىن. يۇقارقى كودتىكىگە ئوخشاش پەشنىڭ ئىشلىتىلىشى بوشلۇق بىلەن ئايرىلغان يەككە قۇردىكى قىممەتلەرنى بېسىپ چىقىرىدۇ.
+Sys مودۇلى چىقىرىش فورماتى ئۈچۈن ھەر خىل ئىقتىدارلار بىلەن تەمىنلەيدۇ ، ئەمما بۇ يەردە فورماتلاشنىڭ ئاساسلىق بىلىملىرىنى تەلەپ بويىچە چىقىرىش ئۈچۈن ئىشلىتىشنى ئۆگىنىمىز. چىقىرىش فورماتىنى ئۆگىنىدىغان بىر قانچە مىسالنى كۆرۈپ باقايلى
 
     a = 5
     b = 0.63
     c = "hello"
     print("a is : %d, b is %0.4f,c is %s" % (a,b,c))
 
-The output must be self explanatory.
+چىقىرىش چوقۇم ئۆزى چۈشەندۈرۈشى كېرەك.
 
-Exercise
+چېنىقىش
 --------
 
-Write a program that asks the user to input their name, age, and country. The program should then print out a message that includes this information in a sentence. The program should include:
+ئىشلەتكۈچىدىن ئۇلارنىڭ ئىسمى ، يېشى ۋە دۆلىتىنى كىرگۈزۈشىنى تەلەپ قىلىدىغان پروگرامما يېزىڭ. پروگرامما ئاندىن بۇ ئۇچۇرلارنى جۈملىگە ئۆز ئىچىگە ئالغان ئۇچۇرنى بېسىپ چىقىرىشى كېرەك. بۇ پروگرامما تۆۋەندىكىلەرنى ئۆز ئىچىگە ئېلىشى كېرەك:
 
-1. Taking a name as input using `input()`.
-2. Taking an age as input using `input()`, and converting it to an integer.
-3. Taking a country name as input using `input()`.
-4. Formatting the output to display a sentence that includes the name, age, and country.
+1. «كىرگۈزۈش ()» ئارقىلىق ئىسىم سۈپىتىدە كىرگۈزۈش.
+2. `input () using ئارقىلىق ياشنى كىرگۈزۈش ، ھەمدە ئۇنى سانغا ئايلاندۇرۇش.
+3. `input () using ئارقىلىق دۆلەت نامىنى كىرگۈزۈش.
+4. ئىسىم ، ياش ۋە دۆلەتنى ئۆز ئىچىگە ئالغان جۈملىنى كۆرسىتىش ئۈچۈن چىقىرىشنى فورماتلاش.
 
-The program should demonstrate input handling and string formatting in Python.
+بۇ پروگرامما Python دا كىرگۈزۈش بىر تەرەپ قىلىش ۋە تىزما فورماتنى كۆرسىتىشى كېرەك.
 
 Tutorial Code
 -------------

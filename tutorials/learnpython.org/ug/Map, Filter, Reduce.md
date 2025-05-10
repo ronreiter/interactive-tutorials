@@ -1,12 +1,12 @@
 
 Tutorial
 --------
-Map, Filter, and Reduce are paradigms of functional programming. They allow the programmer (you) to write simpler, shorter code, without neccessarily needing to bother about intricacies like loops and branching.
+خەرىتە ، سۈزگۈچ ۋە ئازايتىش ئىقتىدار پروگرامما تۈزۈشنىڭ ئۈلگىسى. ئۇلار پروگراممېر (سىز) نىڭ تېخىمۇ ئاددىي ، قىسقا كود يېزىشىغا يول قويىدۇ ، ھالقا ۋە شاخلىنىش قاتارلىق ئىنچىكە ھالقىلارنىڭ ھاجىتى يوق.
 
-Essentially, these three functions allow you to apply a function across a number of iterables, in one fell swoop. ```map``` and ```filter``` come built-in with Python (in the ```__builtins__``` module) and require no importing. ```reduce```, however, needs to be imported as it resides in the ```functools``` module. Let's get a better understanding of how they all work, starting with ```map```.
+ماھىيەتتە ، بۇ ئۈچ ئىقتىدار سىزنى بىر نەچچە قېتىم تەكرارلاش ئارقىلىق بىر نەچچە فۇنكىسىيەدە ئىقتىدار ئىشلىتەلەيسىز. "خەرىتە" ۋە "سۈزگۈچ" Python بىلەن قاچىلانغان ("__builtins__" مودۇلىدا) ، ئىمپورت قىلىشنى تەلەپ قىلمايدۇ. `` `````, however, need to imported as it as resides in `` functools``` module. «خەرىتە» دىن باشلاپ ، ئۇلارنىڭ ھەممىسىنىڭ قانداق ئىشلەيدىغانلىقىنى تېخىمۇ ياخشى چۈشىنىۋالايلى.
 
-#### Map
-The ```map()``` function in python has the following syntax:
+#### خەرىتە
+Python دىكى `` map () `` فۇنكسىيەسىنىڭ تۆۋەندىكى گرامماتىكىسى بار:
 
 ```map(func, *iterables)```
 
@@ -111,15 +111,15 @@ While ```map()``` passes each element in the iterable through a function and ret
 
 ```filter(func, iterable)```
 
-The following points are to be noted regarding ```filter()```:
+`` Filter () `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` ``
 
-1. Unlike ```map()```, only one iterable is required.
-2. The ```func``` argument is required to return a boolean type. If it doesn't, ```filter``` simply returns the ```iterable``` passed to it. Also, as only one iterable is required, it's implicit that ```func``` must only take one argument.
-3. ```filter``` passes each element in the iterable through ```func``` and returns **only** the ones that evaluate to true. I mean, it's right there in the name --  a "filter".
+1. "خەرىتە ()" گە ئوخشىمايدىغىنى ، پەقەت بىرلا تەكرارلاش تەلەپ قىلىنىدۇ.
+2. «فۇنكسىيە» تالاش-تارتىشى ئاق رەڭنى قايتۇرۇش تەلەپ قىلىنىدۇ. ئەگەر ئۇنداق بولمىسا ، "سۈزگۈچ" پەقەت ئۇنىڭغا قايتۇرۇلغان "قايتىلانما" نى قايتۇرىدۇ. ئۇنىڭدىن باشقا ، پەقەت بىرلا تەكرارلىنىشقا ئېھتىياجلىق بولغاچقا ، «فۇنكسىيە» پەقەت بىرلا تالاش-تارتىش قىلىشى كېرەك.
+3. مېنىڭ دېمەكچى بولغىنىم ، ئۇ دەل شۇ يەردە - «سۈزگۈچ».
 
-Let's see some examples
+بەزى مىساللارنى كۆرۈپ باقايلى
 
-The following is a list (```iterable```) of the scores of 10 students in a Chemistry exam. Let's filter out those who passed with scores more than 75...using ```filter```.
+تۆۋەندىكىسى خىمىيىلىك ئىمتىھاندا 10 ئوقۇغۇچىنىڭ ئېرىشكەن نومۇرى (`` iterable``). «` سۈزگۈچ »ئارقىلىق 75 دىن ئارتۇق نومۇر بىلەن ئۆتكەنلەرنى سۈزۈپ چىقايلى.
 
     # Python 3
     scores = [66, 90, 68, 59, 76, 60, 88, 74, 81, 65]
@@ -131,7 +131,7 @@ The following is a list (```iterable```) of the scores of 10 students in a Chemi
 
     print(over_75)
 
-The next example will be a palindrome detector. A "palindrome" is a word, phrase, or sequence that reads the same backwards as forwards. Let's filter out words that are palindromes from a tuple (```iterable```) of suspected palindromes.
+كېيىنكى مىسال پالېندروم تەكشۈرگۈچ بولىدۇ. «پەلەمپەيسىمان سۆز» بىر سۆز ، ئىبارە ياكى تەرتىپ بولۇپ ، ئالدى تەرەپكە ئوخشاش ئوقۇلىدۇ. گۇمانلىق پالېندرومنىڭ بىر توپى (`` iterable```) دىن palindromes بولغان سۆزلەرنى سۈزۈپ چىقايلى.
 
     # Python 3
     dromes = ("demigod", "rewire", "madam", "freer", "anutforajaroftuna", "kiosk")
@@ -140,22 +140,22 @@ The next example will be a palindrome detector. A "palindrome" is a word, phrase
 
     print(palindromes)
 
-Which should output ```['madam', 'anutforajaroftuna']```. 
+Which should output `` ['madam', 'anutforajaroftuna'] ``. 
 
-Pretty neat huh? Finally, ```reduce()```
+چىرايلىق رەتلىك ھە؟ ئاخىرىدا ، `` `` (`` `)
 
-#### Reduce
+#### ئازايتىش
 ```reduce``` applies a function **of two arguments** cumulatively to the elements of an iterable, optionally starting with an initial argument. It has the following syntax:
 
 ```reduce(func, iterable[, initial])```
 
-Where ```func``` is the function on which each element in the ```iterable``` gets cumulatively applied to, and ```initial``` is the optional value that gets placed before the elements of the iterable in the calculation, and serves as a default when the iterable is empty. The following should be noted about ```reduce()```:
-1. ```func``` requires two arguments, the first of which is the first element in ```iterable``` (if ```initial``` is not supplied) and the second element in ```iterable```. If ```initial``` is supplied, then it becomes the first argument to ```func``` and the first element in ```iterable``` becomes the second element.
-2. ```reduce``` "reduces" (I know, forgive me) ```iterable``` into a single value. 
+`` فۇنكسىيە`` بولسا `` قايتىلانغىلى بولىدىغان`` دىكى ھەر بىر ئېلېمېنتنىڭ ھەممىسىگە قوللىنىلىدىغان فۇنكسىيە بولۇپ ، `` ````````````````````````````````````````````````````````````````````````````````````````````````````````` `` `` `` `` `` `` `` ``
+1. ئەگەر `` ``````````````````````````````````````````````````````````````````````````````````
+2. `` `````` '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' 
 
-As usual, let's see some examples.
+ئادەتتىكىگە ئوخشاش ، بەزى مىساللارنى كۆرۈپ باقايلى.
 
-Let's create our own version of Python's built-in ```sum()``` function. The ```sum()``` function returns the sum of all the items in the iterable passed to it.
+ئۆزىمىزنىڭ Python نىڭ ئىچىگە قاچىلانغان `` sum () `` فۇنكسىيەسىنى ئۆزىمىز قۇرايلى. `` Sum () `` فۇنكسىيەسى ئۇنىڭغا تەكرارلانغان بارلىق تۈرلەرنىڭ يىغىندىسىنى قايتۇرىدۇ.
 
 
     # Python 3
@@ -170,13 +170,13 @@ Let's create our own version of Python's built-in ```sum()``` function. The ```s
     print(result)
 
 
-The result, as you'll expect is ```68```.
+نەتىجە ، سىز ئويلىغاندەك `` 68``.
 
-So, what happened?
+ئۇنداقتا ، نېمە ئىش بولدى؟
 
-As usual, it's all about iterations: ```reduce``` takes the first and second elements in ```numbers``` and passes them to ```custom_sum``` respectively. ```custom_sum``` computes their sum and returns it to ```reduce```. ```reduce``` then takes that result and applies it as the first element to ```custom_sum``` and takes the next element (third) in ```numbers``` as the second element to ```custom_sum```. It does this continuously (cumulatively) until ```numbers``` is exhausted. 
+ئادەتتىكىگە ئوخشاش ، بۇلارنىڭ ھەممىسى تەكرارلىنىشقا مۇناسىۋەتلىك: "ئازايتىش" "سان" دىكى بىرىنچى ۋە ئىككىنچى ئېلېمېنتلارنى ئېلىپ ، ئۇلارنى ئايرىم-ئايرىم ھالدا "Custom_sum" غا يۆتكەيدۇ. `` custom_sum``` ئۇلارنىڭ سوممىسىنى ھېسابلاپ ، ئۇنى `` ```` گە قايتۇرىدۇ. `` ````` ئاندىن بۇ نەتىجىنى ئېلىپ ، ئۇنى «Custom_sum» نىڭ بىرىنچى ئېلېمېنتى سۈپىتىدە قوللىنىدۇ ۋە «سان» دىكى كېيىنكى ئېلېمېنتنى (ئۈچىنچى) نى «ئېلېمېنت» نىڭ ئىككىنچى ئېلېمېنتى سۈپىتىدە «Custom_sum» غا ئالىدۇ. `` ```````````````````````````````````````````````````````````````````````` 
 
-Let's see what happens when I use the optional ```initial``` value.
+ئىختىيارىي `` initial`` قىممىتىنى ئىشلەتكەندە نېمە ئىش يۈز بېرىدىغانلىقىنى كۆرۈپ باقايلى.
 
 
     # Python 3
@@ -191,14 +191,14 @@ Let's see what happens when I use the optional ```initial``` value.
     print(result)
 
 
-The result, as you'll expect, is ```78``` because ```reduce```, initially, uses ```10``` as the first argument to ```custom_sum```.
+نەتىجە ، سىز ئويلىغاندەك ، `` 78`` ، چۈنكى `` ````````````````````````````````````````````````````````````````````````````
 
 
-That's all about Python's Map, Reduce, and Filter. Try on the below exercises to help ascertain your understanding of each function.
+بۇلارنىڭ ھەممىسى Python نىڭ خەرىتىسى ، ئازايتىش ۋە سۈزگۈچكە مۇناسىۋەتلىك. تۆۋەندىكى ئىقتىدارلارنى ئىشلىتىپ سىناپ بېقىڭ ، ھەر بىر ئىقتىدارغا بولغان چۈشەنچىڭىزنى ئېنىقلاڭ.
 
-Exercise
+چېنىقىش
 --------
-In this exercise, you'll use each of ```map```, ```filter```, and ```reduce``` to fix broken code. 
+بۇ مانېۋىردا بۇزۇلغان كودنى ئوڭشاش ئۈچۈن «خەرىتە» ، «سۈزگۈچ» ۋە «ئازايتىش» نىڭ ھەر بىرىنى ئىشلىتىسىز. 
 
 Tutorial Code
 -------------

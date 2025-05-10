@@ -1,65 +1,65 @@
 # Welcome
 
-Welcome to the LearnPython.org interactive Python tutorial.
+LearnPython.org ئۆز-ئارا تەسىر كۆرسىتىدىغان Python دەرسلىكىنى قارشى ئالىمىز.
 
-Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language.<br>
+مەيلى سىز تەجرىبىلىك پروگراممېر بولۇڭ ياكى بولمىسۇن ، بۇ تور بېكەت Python پروگرامما تىلىنى ئۆگىنىشنى خالايدىغان ھەممە ئادەم ئۈچۈن لايىھەلەنگەن. <br>
 
-You are welcome to join our group on <a href="http://www.facebook.com/groups/180708015327157/">Facebook</a> for questions, discussions and updates.
+سوئال ، مۇلاھىزە ۋە يېڭىلاش ئۈچۈن <a href = "http://www.facebook.com/groups/180708015327157/"> Facebook </a> دىكى گۇرۇپپىمىزغا قوشۇلۇشىڭىزنى قارشى ئالىمىز.
 
-After you complete the tutorials, you can get certified at [LearnX](https://www.learnx.org) and add your certification to your LinkedIn profile.
+دەرسلىكلەرنى تاماملىغاندىن كېيىن ، [LearnX] (https://www.learnx.org) دىن گۇۋاھنامە ئالالايسىز ھەمدە گۇۋاھنامىڭىزنى LinkedIn ئارخىپىڭىزغا قوشالايسىز.
 
-Just click on the chapter you wish to begin from, and follow the instructions. Good luck!<br>
+سىز باشلىماقچى بولغان باپنى چېكىپ ، كۆرسەتمىگە ئەمەل قىلىڭ. ياخشىمۇسىز! <br>
 
 
-### Learn the Basics
+### ئاساسىي بىلىملەرنى ئۆگىنىڭ
 
-- [[Hello, World!]]
-- [[Variables and Types]]
-- [[Lists]]
-- [[Basic Operators]]
+- [[ياخشىمۇسىز ، دۇنيا!]]
+- [[ئۆزگەرگۈچى مىقدار ۋە تىپلار]]
+- [[تىزىملىك]]
+- [[ئاساسىي مەشغۇلاتچىلار]]
 - [[String Formatting]]
-- [[Basic String Operations]]
-- [[Conditions]]
+- [[ئاساسىي تىزما مەشغۇلاتلىرى]]
+- [[شەرتلەر]]
 - [[Loops]]
-- [[Functions]]
-- [[Classes and Objects]]
-- [[Dictionaries]]
-- [[Modules and Packages]]
-- [[Input and Output]]
+- [[فۇنكسىيە]]
+- [[دەرسلەر ۋە ئوبيېكتلار]]
+- [[لۇغەتلەر]]
+- [[مودۇل ۋە ئورالمىلار]]
+- [[كىرگۈزۈش ۋە چىقىرىش]]
 
 
-### Coding for Kids
-- [Starting Out](https://codingforkids.io/play/python/intro-level1)
-- [Movement with Functions](https://codingforkids.io/play/python/intro-level2)
-- [Collecting items](https://codingforkids.io/play/python/intro-level3)
-- [Pushing objects](https://codingforkids.io/play/python/intro-level4)
-- [Printing on screen](https://codingforkids.io/play/python/intro-level5)
-- [Building objects](https://codingforkids.io/play/python/intro-level6)
-- [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
+### بالىلار ئۈچۈن كودلاش
+- [باشلاش] (https://codingforkids.io/play/python/intro-level1)
+- [فۇنكسىيە بىلەن ھەرىكەت] (https://codingforkids.io/play/python/intro-level2)
+- [تۈرلەرنى يىغىش] (https://codingforkids.io/play/python/intro-level3)
+- [ئىتتىرىش ئوبيېكتى] (https://codingforkids.io/play/python/intro-level4)
+- [ئېكراندا بېسىش] (https://codingforkids.io/play/python/intro-level5)
+- [قۇرۇلۇش ئوبيېكتى] (https://codingforkids.io/play/python/intro-level6)
+- [ئۆگەنگەنلىرىڭىزنى ئىشلىتىڭ] (https://codingforkids.io/play/python/intro-level7)
 
 
-### Advanced Tutorials
+### ئالىي دەرسلىك
 
-- [[Generators]]
-- [[List Comprehensions]]
-- [[Lambda functions]]
-- [[Multiple Function Arguments]]
-- [[Regular Expressions]]
-- [[Exception Handling]]
+- [[گېنېراتورلار]]
+- [[تىزىملىك چۈشەنچىسى]]
+- [[لامبدا ئىقتىدارلىرى]]
+- [[كۆپ ئىقتىدارلىق تالاش-تارتىشلار]]
+- [[دائىملىق ئىپادىلەر]]
+- [[مۇستەسنا بىر تەرەپ قىلىش]]
 - [[Sets]]
 - [[Serialization]]
-- [[Partial functions]]
-- [[Code Introspection]]
-- [[Closures]]
-- [[Decorators]]
-- [[Map, Filter, Reduce]]
-- [[Parsing CSV Files]]
+- [[قىسمەن ئىقتىدارلار]]
+- [[كود تونۇشتۇرۇش]]
+- [[تاقاش]]
+- [[بېزەكچىلەر]]
+- [[خەرىتە ، سۈزگۈچ ، ئازايتىش]]
+- [[CSV ھۆججەتلىرىنى تەھلىل قىلىش]]
 
-### Other Python Tutorials
+### باشقا Python دەرسلىكى
 
-- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) has tons of great interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) covering data manipulation, data visualization, statistics, machine learning, and more
-- Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
+- [DataCamp] (https://datacamp.pxf.io/c/67577/1012793/13294? كونترول قىلىش ، سانلىق مەلۇماتنى تەسۋىرلەش ، ستاتىستىكا ، ماشىنا ئۆگىنىش ۋە باشقىلار
+- سائەتلىك پروگرامما تۈزۈشتىن [Python دەرسلىكى ۋە پايدىلانما] (http://www.afterhoursprogramming.com/index.php?article=181) دەرسلىكىنى ئوقۇڭ
 
-### Contributing Tutorials
+### تۆھپە قوشۇش دەرسلىكى
 
-Read more here: [[Contributing Tutorials]]
+بۇ يەرنى تېخىمۇ كۆپ ئوقۇڭ: [[دەرسلىكلەرنى تۆھپە قوشۇش]]

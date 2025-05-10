@@ -1,6 +1,6 @@
 Tutorial
 --------
-Normally we define a function using the def keyword somewhere in the code and call it whenever we need to use it.
+ئادەتتە بىز كودتىكى مەلۇم بىر جايدا def ھالقىلىق سۆزنى ئىشلىتىپ فۇنكسىيەگە ئېنىقلىما بېرىمىز ۋە ئۇنى ئىشلىتىشكە ئېھتىياجلىق بولغاندا تېلېفون قىلىمىز.
 
     def sum(a,b):
         return a + b
@@ -10,13 +10,13 @@ Normally we define a function using the def keyword somewhere in the code and ca
     c = sum(a,b)
     print(c)
 
-Now instead of defining the function somewhere and calling it, we can use python's lambda functions, which are inline functions defined at the same place we use it. So we don't need to declare a function somewhere and revisit the code just for a single time use. 
+ھازىر بۇ ئىقتىدارنى بىر يەرگە ئېنىقلاپ ، ئۇنى چاقىرىشنىڭ ئورنىغا ، بىز python نىڭ lambda فۇنكسىيەسىنى ئىشلىتەلەيمىز ، بۇ ئىقتىدارلار بىز ئىشلەتكەن ئورۇنغا ئېنىقلىما بېرىلگەن. شۇڭا بىز بىر يەردە فۇنكسىيە ئېلان قىلىپ ، بىر قېتىم ئىشلىتىش ئۈچۈن كودنى قايتا زىيارەت قىلىشىمىزنىڭ ھاجىتى يوق. 
 
-They don't need to have a name, so they also called anonymous functions. We define a lambda function using the keyword lambda.
+ئۇلارنىڭ ئىسمى بولۇشىنىڭ ھاجىتى يوق ، شۇڭا ئۇلار نامسىز ئىقتىدارلارنىمۇ ئاتىدى. بىز lambda ھالقىلىق سۆزنى ئىشلىتىپ lambda ئىقتىدارىنى ئېنىقلايمىز.
 
     your_function_name = lambda inputs : output
 
-So the above sum example using lambda function would be,
+شۇڭا lambda ئىقتىدارىنى ئىشلىتىپ يۇقارقى يىغىنچاق مىسال بولىدۇ ،
 
     a = 1
     b = 2
@@ -24,13 +24,13 @@ So the above sum example using lambda function would be,
     c = sum(a,b)
     print(c)
 
-Here we are assigning the lambda function to the variable **sum**, and upon giving the arguments i.e. a and b, it works like a normal function.
+بۇ يەردە بىز ئۆزگەرگۈچى مىقدار ** sum ** غا lambda فۇنكىسىيەسىنى تەقسىملەۋاتىمىز ، تالاش-تارتىشلارنى يەنى a ۋە b نى بەرگەندىن كېيىن ، ئۇ نورمال ئىقتىدارغا ئوخشاش ئىشلەيدۇ.
 
 
 
-Exercise
+چېنىقىش
 --------
-Write a program using lambda functions to check if a number in the given list is odd. Print "True" if the number is odd or "False" if not for each element.
+Lambda فۇنكسىيەسىنى ئىشلىتىپ پروگرامما يېزىڭ ، بېرىلگەن تىزىملىكتىكى ساننىڭ غەلىتە ياكى ئەمەسلىكىنى تەكشۈرۈڭ. ئەگەر سان غەلىتە بولسا «True» نى بېسىڭ ياكى ھەر بىر ئېلېمېنت بولمىسا «يالغان» نى بېسىڭ.
 
 Tutorial Code
 -------------

@@ -1,29 +1,29 @@
 Tutorial
 --------
 
-In programming, a module is a piece of software that has a specific functionality. 
-For example, when building a ping pong game, one module may be responsible for the game logic, and 
-another module draws the game on the screen. Each module consists of a different
-file, which may be edited separately.
+پروگرامما تۈزۈشتە ، مودۇل مەلۇم ئىقتىدارغا ئىگە يۇمشاق دېتال. 
+مەسىلەن ، پىڭ پوڭ ئويۇنى قۇرغاندا ، بىر مودۇل ئويۇن لوگىكىسىغا مەسئۇل بولۇشى مۇمكىن ، ۋە 
+باشقا بىر بۆلەك ئويۇننى ئېكرانغا سىزىدۇ. ھەر بىر بۆلەك ئوخشىمىغان
+ھۆججەتنى ئايرىم تەھرىرلەشكە بولىدۇ.
 
-### Writing modules
+### يېزىش مودۇلى
 
-Modules in Python are just Python files with a .py extension. The name of the module is the same as the file name.
-A Python module can have a set of functions, classes, or variables defined and implemented. 
-The example above includes two files:
+Python دىكى مودۇللار پەقەت .py كېڭەيتىلگەن Python ھۆججىتى. بۆلەكنىڭ ئىسمى ھۆججەت ئىسمى بىلەن ئوخشاش.
+Python مودۇلىدا ئېنىقلانغان ۋە يولغا قويۇلغان بىر يۈرۈش ئىقتىدار ، سىنىپ ياكى ئۆزگەرگۈچى مىقدار بولىدۇ. 
+يۇقىرىدىكى مىسال ئىككى ھۆججەتنى ئۆز ئىچىگە ئالىدۇ:
 
-mygame/
+mygame /
 
-- mygame/game.py
+- mygame / game.py
 
-- mygame/draw.py
+- mygame / draw.py
     
  
-The Python script `game.py` implements the game. It uses the function `draw_game` from the file `draw.py`,
-or in other words, the `draw` module that implements the logic for drawing the game on the screen.
+Python script `game.py` ئويۇننى ئىجرا قىلىدۇ. ئۇ «draw.py» ھۆججىتىدىن «draw_game» ئىقتىدارىنى ئىشلىتىدۇ ،
+ياكى باشقىچە قىلىپ ئېيتقاندا ، ئويۇننى ئېكراندا سىزىشنىڭ لوگىكىسىنى ئىجرا قىلىدىغان «سىزىش» مودۇلى.
 
-Modules are imported from other modules using the `import` command. In this example, the `game.py` script may
-look something like this:
+بۆلەكلەر «ئىمپورت» بۇيرۇقىنى ئىشلىتىپ باشقا مودۇللاردىن ئىمپورتلىنىدۇ. بۇ مىسالدا `game.py` قوليازمىسى بولۇشى مۇمكىن
+مۇنداق بىر نەرسىنى كۆرۈڭ:
 
     # game.py
     # import the draw module
@@ -41,7 +41,7 @@ look something like this:
     if __name__ == '__main__':
         main()
 
-The `draw` module may look something like this:
+«سىزىش» مودۇلى مۇنداق بولۇشى مۇمكىن:
 
     # draw.py
     
@@ -51,21 +51,21 @@ The `draw` module may look something like this:
     def clear_screen(screen):
         ...
 
-In this example, the `game` module imports the `draw` module, which enables it to use functions implemented
-in that module. The `main` function uses the local function `play_game` to run the game, and then 
-draws the result of the game using a function implemented in the `draw` module called `draw_game`. To use
-the function `draw_game` from the `draw` module, we need to specify in which module the function is
-implemented, using the dot operator. To reference the `draw_game` function from the `game` module,
-we need to import the `draw` module and then call `draw.draw_game()`. 
+بۇ مىسالدا ، «ئويۇن» مودۇلى «سىزىش» مودۇلىنى ئەكىرىدۇ ، ئۇ ئىجرا قىلىنغان ئىقتىدارلارنى ئىشلىتەلەيدۇ
+بۇ بۆلەكتە. `Main` فۇنكسىيەسى يەرلىك ئويۇن` play_game` نى ئىشلىتىپ ئويۇننى باشقۇرىدۇ 
+«draw_game» دەپ ئاتىلىدىغان «سىزىش» مودۇلىدا ئىجرا قىلىنغان ئىقتىدارنى ئىشلىتىپ ئويۇننىڭ نەتىجىسىنى سىزىدۇ. ئىشلىتىش
+«سىزىش» مودۇلىدىكى «draw_game» فۇنكىسىيەسى ، فۇنكسىيەنىڭ قايسى مودۇل ئىكەنلىكىنى ئېنىقلىشىمىز كېرەك
+چېكىت مەشغۇلاتچىسى ئارقىلىق يولغا قويۇلغان. «ئويۇن» مودۇلىدىكى «draw_game» ئىقتىدارىنى پايدىلىنىش ئۈچۈن ،
+بىز «سىزىش» مودۇلىنى ئەكىرىپ ئاندىن «draw.draw_game ()» دەپ چاقىرىشىمىز كېرەك. 
 
-When the `import draw` directive runs, the Python interpreter looks for a file in the directory in which the script was executed with the module name and a `.py` suffix. In this case it will look for `draw.py`. If it is found, it will be imported. If it's not found, it will continue looking for built-in modules.
+«ئەكىرىش سىزىش» كۆرسەتمىسى ئىجرا بولغاندا ، Python تەرجىمانى مۇندەرىجە ئىچىدىكى مۇندەرىجە نامى ۋە `.py` قوشۇمچىسى بىلەن ھۆججەتنى ئىزدەيدۇ. بۇ ئەھۋالدا ئۇ «draw.py» نى ئىزدەيدۇ. ئەگەر تېپىلسا ، ئىمپورت قىلىنىدۇ. ئەگەر تېپىلمىسا ، ئىچىگە ئورۇنلاشتۇرۇلغان مودۇللارنى داۋاملىق ئىزدەيدۇ.
 
-You may have noticed that when importing a module, a `.pyc` file is created. This is a compiled Python file. 
-Python compiles files into Python bytecode so that it won't have to parse the files each time modules are loaded. If a `.pyc` file exists, it gets loaded instead of the `.py` file. This process is transparent to the user.
+مودۇل ئەكىرىگەندە `.pyc` ھۆججىتىنىڭ قۇرۇلغانلىقىغا دىققەت قىلغان بولۇشىڭىز مۇمكىن. بۇ تۈزۈلگەن Python ھۆججىتى. 
+Python ھۆججەتلەرنى Python bytecode غا توپلايدۇ ، بۇنداق بولغاندا ھەر قېتىم مودۇللار يۈكلەنگەندە ھۆججەتلەرنى تەھلىل قىلىشقا بولمايدۇ. ئەگەر .pyc` ھۆججىتى بولسا ، .py ھۆججىتىنىڭ ئورنىغا يۈكلىنىدۇ. بۇ جەريان ئىشلەتكۈچىگە ئوچۇق.
 
-### Importing module objects to the current namespace
+### نۆۋەتتىكى ئىسىم بوشلۇقىغا مودۇل ئوبيېكتلىرىنى ئەكىرىش
 
-A namespace is a system where every object is named and can be accessed in Python. We import the function `draw_game` into the main script's namespace by using the `from` command.
+ئىسىم بوشلۇقى ھەر بىر جىسىمنىڭ ئىسمى قويۇلغان ۋە Python دا زىيارەت قىلغىلى بولىدىغان سىستېما. «From_game» فۇنكسىيەسىنى «from» بۇيرۇقىنى ئىشلىتىپ ئاساسلىق قوليازمىنىڭ ئىسىم بوشلۇقىغا ئەكىرىمىز.
 
     # game.py
     # import the draw module
@@ -76,14 +76,14 @@ A namespace is a system where every object is named and can be accessed in Pytho
         draw_game(result)
 
 
-You may have noticed that in this example, the name of the module does not precede `draw_game`, because we've specified the module name using the `import` command.
+سىز بۇ مىسالدا مودۇلنىڭ نامىنىڭ «draw_game» نىڭ ئالدىدا ئەمەسلىكىنى بايقىغان بولۇشىڭىز مۇمكىن ، چۈنكى بىز «ئىمپورت» بۇيرۇقىنى ئىشلىتىپ مودۇل نامىنى بەلگىلىدۇق.
 
-The advantages of this notation is that you don't have to reference the module over and over. However, a namespace cannot have two objects with the same name, so the `import` command may replace an existing object in the namespace.
+بۇ ئىزاھاتنىڭ ئەۋزەللىكى شۇكى ، مودۇلنى قايتا-قايتا پايدىلىنىشىڭىزنىڭ ھاجىتى يوق. قانداقلا بولمىسۇن ، ئىسىم بوشلۇقى ئوخشاش ئىسىمدىكى ئىككى جىسىمغا ئىگە بولالمايدۇ ، شۇڭا «ئىمپورت» بۇيرۇقى ئىسىم بوشلۇقىدىكى مەۋجۇت ئوبيېكتنىڭ ئورنىنى ئېلىشى مۇمكىن.
 
 
-### Importing all objects from a module
+### بارلىق ئوبيېكتلارنى مودۇلدىن ئەكىرىش
 
-You can use the `import *` command to import all the objects in a module like this:
+سىز «ئىمپورت *» بۇيرۇقىنى ئىشلىتىپ مودۇلدىكى بارلىق ئوبيېكتلارنى ئەكىرىسىز:
 
     # game.py
     # import the draw module
@@ -93,16 +93,16 @@ You can use the `import *` command to import all the objects in a module like th
         result = play_game()
         draw_game(result)
 
-This might be a bit risky as changes in the module may affect the module which imports it, but it is 
-shorter, and doesn't require you to specify every object you want to import from the module.
+بۇ بەلكىم سەل خەتەرلىك بولۇشى مۇمكىن ، چۈنكى مودۇلدىكى ئۆزگىرىشلەر ئۇنى ئىمپورت قىلىدىغان مودۇلغا تەسىر قىلىشى مۇمكىن ، ئەمما ئۇ شۇنداق 
+قىسقا ، ھەمدە سىز مودۇلدىن ئەۋەتمەكچى بولغان ھەر بىر ئوبيېكتنى بەلگىلىشىڭىزنى تەلەپ قىلمايدۇ.
 
 
-### Custom import name
+### ئىختىيارى ئىمپورت ئىسمى
 
-Modules may be loaded under any name you want. This is useful when importing a module conditionally
-to use the same name in the rest of the code. 
+مودۇللار سىز خالىغان ئىسىم ئاستىدا يۈكلىنىشى مۇمكىن. بۇ مودۇلنى شەرتلىك ئىمپورت قىلغاندا پايدىلىق
+قالغان كودلاردا ئوخشاش ئىسىمنى ئىشلىتىش. 
 
-For example, if you have two `draw` modules with slighty different names, you may do the following:
+مەسىلەن ، ئەگەر سىزدە ئوخشىمىغان ئىسىملار بىلەن ئىككى «سىزىش» مودۇلى بولسا ، تۆۋەندىكى ئىشلارنى قىلالايسىز:
  
 
     # game.py
@@ -122,10 +122,10 @@ For example, if you have two `draw` modules with slighty different names, you ma
 
 ### Module initialization
 
-The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded again, so local variables inside the module act as a "singleton," meaning they are initialized only once.
+تۇنجى قېتىم ئىجرا بولۇۋاتقان Python قوليازمىسىغا مودۇل يۈكلەنگەندە ، ئۇ مودۇلدىكى كودنى بىر قېتىم ئىجرا قىلىش ئارقىلىق باشلىنىدۇ. ئەگەر كودىڭىزدىكى باشقا بىر مودۇل ئوخشاش مودۇلنى قايتا ئىمپورتلىسا ، ئۇ قايتا يۈكلەنمەيدۇ ، شۇڭا مودۇل ئىچىدىكى يەرلىك ئۆزگەرگۈچى مىقدارلار «يەككە يەككە» رولىنى ئوينايدۇ ، يەنى ئۇلار پەقەت بىرلا قېتىم باشلانغان.
 
-You can then use this to initialize objects. 
-For example:
+ئاندىن بۇنى ئىشلىتىپ ئوبيېكتلارنى قوزغىتالايسىز. 
+مەسىلەن:
 
 
     # draw.py
@@ -145,30 +145,30 @@ For example:
     main_screen = Screen()
 
 
-### Extending module load path
+### مودۇل يۈك يولىنى كېڭەيتىش
 
-There are a couple of ways to tell the Python interpreter where to look for modules, aside from the
-default local directory and built-in modules. You can use the environment variable `PYTHONPATH` to specify additional directories to look for modules like this:
+Python تەرجىمانىغا مودۇلنى نەدىن ئىزدەشنى ئېيتىشنىڭ بىر قانچە خىل ئۇسۇلى بار
+سۈكۈتتىكى يەرلىك مۇندەرىجە ۋە ئىچىگە ئورۇنلاشتۇرۇلغان بۆلەكلەر. سىز مۇھىت ئۆزگەرگۈچى `PYTHONPATH` نى ئىشلىتىپ قوشۇمچە مۇندەرىجىلەرنى بەلگىلىسىڭىز بولىدۇ.
 
     PYTHONPATH=/foo python game.py
 
-This executes `game.py`, and enables the script to load modules from the `foo` directory, as well
-as the local directory.
+بۇ `game.py` نى ئىجرا قىلىدۇ ، ھەمدە قوليازما ھۆججىتىنى` foo` مۇندەرىجىسىدىن يۈكلەيدۇ.
+يەرلىك مۇندەرىجە سۈپىتىدە.
 
-You may also use the `sys.path.append` function. Execute it *before* running the `import` command:
+سىز يەنە sys.path.append` ئىقتىدارىنى ئىشلىتەلەيسىز. «Import» بۇيرۇقىنى ئىجرا قىلىشتىن بۇرۇن * ئىجرا قىلىڭ:
 
     sys.path.append("/foo")
 
-Now the `foo` directory has been added to the list of paths where modules are looked for.
+ھازىر «foo» مۇندەرىجىسى مودۇل ئىزدەيدىغان يوللار تىزىملىكىگە قوشۇلدى.
 
 
-### Exploring built-in modules
+### ئىچىگە ئورۇنلاشتۇرۇلغان مودۇل ئۈستىدە ئىزدىنىش
 
-Check out the full list of built-in modules in the Python standard library [here](https://docs.python.org/3/library/).
+Python ئۆلچەملىك كۇتۇپخانىسىدىكى ئىچكى بۆلەكلەرنىڭ تولۇق تىزىملىكىنى كۆرۈڭ (https://docs.python.org/3/library/).
 
-Two very important functions come in handy when exploring modules in Python - the `dir` and `help` functions.
+Python دىكى مودۇل - «dir» ۋە «ياردەم» فۇنكسىيەسىنى تەكشۈرگەندە ئىنتايىن مۇھىم ئىككى ئىقتىدار پايدىلىق.
 
-To import the module `urllib`, which enables us to create read data from URLs, we `import` the module:
+URL دىن ئوقۇش سانلىق مەلۇماتلىرىنى قۇرالايدىغان «urllib» مودۇلىنى ئەكىرىش ئۈچۈن ، بىز مودۇلنى «ئەكىرىمىز»:
 
     # import the library
     import urllib
@@ -176,7 +176,7 @@ To import the module `urllib`, which enables us to create read data from URLs, w
     # use it
     urllib.urlopen(...)
     
-We can look for which functions are implemented in each module by using the `dir` function:
+بىز «dir» فۇنكسىيەسىنى ئىشلىتىپ ھەر بىر بۆلەكتە قايسى ئىقتىدارلارنىڭ ئىجرا قىلىنىدىغانلىقىنى ئىزدەيمىز:
 
     >>> import urllib
     >>> dir(urllib)
@@ -193,39 +193,39 @@ We can look for which functions are implemented in each module by using the `dir
     'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 
     'urlopen', 'urlretrieve']
 
-When we find the function in the module we want to use, we can read more about it with the `help` function, using the Python interpreter:
+بىز ئىشلەتمەكچى بولغان بۆلەكتىكى ئىقتىدارنى تاپقىنىمىزدا ، Python تەرجىمانى ئارقىلىق «ياردەم» ئىقتىدارى بىلەن بۇ توغرىلىق تېخىمۇ كۆپ ئۇچۇرلارنى ئوقۇيالايمىز:
 
     help(urllib.urlopen)
 
-### Writing packages
+### بوغچا يېزىش
 
-Packages are namespaces containing multiple packages and modules. They're just directories, but with certain requirements.
+بوغچا بىر نەچچە بوغچا ۋە مودۇلنى ئۆز ئىچىگە ئالغان ئىسىم بوشلۇقى. ئۇلار پەقەت مۇندەرىجە ، ئەمما بەزى تەلەپلەر بار.
 
-Each package in Python is a directory which **MUST** contain a special file called `__init__.py`. This file, which can be empty, indicates that the directory it's in is a Python package. That way it can be imported the same way as a module.
+Python دىكى ھەر بىر بولاق مۇندەرىجە بولۇپ ، ** MUST ** `__init __. Py` دەپ ئاتىلىدىغان ئالاھىدە ھۆججەتنى ئۆز ئىچىگە ئالىدۇ. قۇرۇق بولالايدىغان بۇ ھۆججەت ئۇنىڭ ئىچىدىكى مۇندەرىجىنىڭ Python بولىقى ئىكەنلىكىنى كۆرسىتىدۇ. بۇنداق بولغاندا ئۇنى مودۇلغا ئوخشاش ئىمپورت قىلغىلى بولىدۇ.
 
-If we create a directory called `foo`, which marks the package name, we can then create a module inside that 
-package called `bar`. Then we add the `__init__.py` file inside the `foo` directory.
+ئەگەر بوغچا نامىغا بەلگە قويغان «foo» دەپ ئاتىلىدىغان مۇندەرىجە قۇرساق ، ئۇنىڭ ئىچىدە مودۇل قۇرالايمىز 
+بوغچا `bar` دەپ ئاتىلىدۇ. ئاندىن `foo` مۇندەرىجىسىگە` __init __. Py` ھۆججىتىنى قوشىمىز.
 
-To use the module `bar`, we can import it in two ways:
+مودۇل `bar` نى ئىشلىتىش ئۈچۈن ئۇنى ئىككى خىل ئۇسۇلدا ئەكىرىمىز:
 
     import foo.bar
 
-or:
+ياكى:
 
     from foo import bar
 
-In the first example above, we have to use the `foo` prefix whenever we access the module `bar`. In the second example, we don't, because we've imported the module to our module's namespace.
+يۇقىرىدىكى بىرىنچى مىسالدا ، بىز «bar» مودۇلىغا كىرگەندە «foo» ئالدى قوشۇلغۇچىسىنى ئىشلىتىشىمىز كېرەك. ئىككىنچى مىسالدا ، بىز ئۇنداق قىلمايمىز ، چۈنكى بىز مودۇلنى مودۇلىمىزنىڭ ئىسىم بوشلۇقىغا ئەكىرىپ قويدۇق.
 
-The `__init__.py` file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the `__all__` variable like so:
+«__Init __. Py`» ھۆججىتى يەنە «__all__» ئۆزگەرگۈچى مىقدارنى بېسىپ ئۆتۈپ ، باشقا مودۇللارنىڭ ئىچكى قىسمىنى ساقلاپ قېلىش بىلەن بىرگە ، قايسى مودۇللارنىڭ API سۈپىتىدە ئېكسپورت قىلىنىدىغانلىقىنى قارار قىلالايدۇ.
 
     __init__.py:
 
     __all__ = ["bar"]
 
-Exercise
+چېنىقىش
 --------
 
-In this exercise, print an alphabetically sorted list of all the functions in the `re` module containing the word `find`.
+بۇ مەشىقتە ، «تېپىش» سۆزىنى ئۆز ئىچىگە ئالغان «re» مودۇلىدىكى بارلىق ئىقتىدارلارنىڭ ئېلىپبە تەرتىپى بويىچە رەتلەنگەن تىزىملىكىنى بېسىڭ.
 
 Tutorial Code
 -------------

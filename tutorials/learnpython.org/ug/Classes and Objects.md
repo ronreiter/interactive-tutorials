@@ -1,9 +1,9 @@
 Tutorial
 -----------------
 
-Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects.
+ئوبيېكت ئۆزگەرگۈچى مىقدار ۋە ئىقتىدارلارنىڭ يەككە گەۋدىگە ئايلىنىشىدۇر. ئوبيېكتلار ئۆزگىرىشچان ۋە ئىقتىدارلىرىنى دەرسلەردىن ئالىدۇ. دەرسلەر ماھىيەتتە ئوبيېكتلىرىڭىزنى يارىتىشنىڭ قېلىپى.
 
-A very basic class would look something like this:
+ناھايىتى ئاساسىي بىر دەرس مۇنداق بولىدۇ:
 
     class MyClass:
         variable = "blah"
@@ -11,7 +11,7 @@ A very basic class would look something like this:
         def function(self):
             print("This is a message inside the class.")
 
-We'll explain why you have to include that "self" as a parameter a little bit later.  First, to assign the above class(template) to an object you would do the following:
+نېمە ئۈچۈن بۇ «ئۆزى» نى ئازراق كېيىن پارامېتىر قىلىپ قوشۇشىڭىز كېرەكلىكىنى چۈشەندۈرۈپ ئۆتىمىز.  بىرىنچى ، يۇقارقى سىنىپ (قېلىپ) نى ئوبيېكتقا تەقسىملەش ئۈچۈن تۆۋەندىكى ئىشلارنى قىلالايسىز:
 
     class MyClass:
         variable = "blah"
@@ -21,11 +21,11 @@ We'll explain why you have to include that "self" as a parameter a little bit la
 
     myobjectx = MyClass()
 
-Now the variable "myobjectx" holds an object of the class "MyClass" that contains the variable and the function defined within the class called "MyClass".
+ھازىر ئۆزگەرگۈچى مىقدار «myobjectx» «MyClass» سىنىپىنىڭ ئوبيېكتىنى ساقلايدۇ ، ئۇنىڭدا «MyClass» دەپ ئاتىلىدىغان ئۆزگەرگۈچى مىقدار ۋە فۇنكسىيە بار.
 
-### Accessing Object Variables
+### ئوبيېكت ئۆزگەرگۈچى مىقدارنى زىيارەت قىلىش
 
-To access the variable inside of the newly created object "myobjectx" you would do the following:
+يېڭىدىن ياسالغان ئوبيېكت «myobjectx» نىڭ ئىچىدىكى ئۆزگەرگۈچى مىقدارنى زىيارەت قىلىش ئۈچۈن تۆۋەندىكى ئىشلارنى قىلالايسىز:
 
     class MyClass:
         variable = "blah"
@@ -37,7 +37,7 @@ To access the variable inside of the newly created object "myobjectx" you would 
 
     myobjectx.variable
 
-So for instance the below would output the string "blah":
+مەسىلەن ، تۆۋەندىكىسى «bla» ھەرىپىنى چىقىرىدۇ:
 
     class MyClass:
         variable = "blah"
@@ -49,7 +49,7 @@ So for instance the below would output the string "blah":
 
     print(myobjectx.variable)
 
-You can create multiple different objects that are of the same class(have the same variables and functions defined).  However, each object contains independent copies of the variables defined in the class.  For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:
+ئوخشاش بىر تۈردىكى (ئوخشاش ئۆزگەرگۈچى مىقدار ۋە فۇنكسىيە ئېنىقلانغان) ئوخشاش بولمىغان جىسىملارنى قۇرالايسىز.  قانداقلا بولمىسۇن ، ھەر بىر ئوبيېكت سىنىپتا ئېنىقلانغان ئۆزگەرگۈچى مىقدارنىڭ مۇستەقىل كۆپەيتىلگەن نۇسخىسىنى ئۆز ئىچىگە ئالىدۇ.  مەسىلەن ، بىز «MyClass» سىنىپى بىلەن باشقا بىر ئوبيېكتنى ئېنىقلاپ ، ئاندىن يۇقىرىدىكى ئۆزگەرگۈچى مىقداردىكى تىزمىنى ئۆزگەرتمەكچى بولساق:
 
     class MyClass:
         variable = "blah"
@@ -67,9 +67,9 @@ You can create multiple different objects that are of the same class(have the sa
     print(myobjecty.variable)
 
 
-### Accessing Object Functions
+### ئوبيېكت ئىقتىدارلىرىنى زىيارەت قىلىش
 
-To access a function inside of an object you use notation similar to accessing a variable:
+ئۆزگەرگۈچى مىقدارنى زىيارەت قىلىشقا ئوخشاش ئىزاھاتنى ئىشلىتىدىغان ئوبيېكتنىڭ ئىچىدىكى ئىقتىدارغا ئېرىشىش ئۈچۈن:
 
     class MyClass:
         variable = "blah"
@@ -81,12 +81,12 @@ To access a function inside of an object you use notation similar to accessing a
 
     myobjectx.function()
 
-The above would print out the message, "This is a message inside the class."
+يۇقىرىقىلار «بۇ دەرس ئىچىدىكى ئۇچۇر» دېگەن خەتنى بېسىپ چىقىرىدۇ.
 
-### __init__()
+### __init __ ()
 
-The `__init__()` function, is a special function that is called when the class is being initiated.
-It's used for assigning values in a class.
+`__Init __ ()` فۇنكسىيەسى ، دەرس باشلانغاندا چاقىرىلىدىغان ئالاھىدە ئىقتىدار.
+ئۇ بىر سىنىپتا قىممەت تەقسىملەش ئۈچۈن ئىشلىتىلىدۇ.
 
     class NumberHolder:
        
@@ -99,12 +99,12 @@ It's used for assigning values in a class.
     var = NumberHolder(7)
     print(var.returnNumber()) #Prints '7'
     
-Exercise
+چېنىقىش
 --------
 
-We have a class defined for vehicles. Create two new vehicles called car1 and car2.
-Set car1 to be a red convertible worth $60,000.00 with a name of Fer,
-and car2 to be a blue van named Jump worth $10,000.00.
+بىزنىڭ ماشىنىلارغا ئېنىقلىما بېرىلگەن سىنىپىمىز بار. Car1 ۋە car2 دەپ ئاتىلىدىغان ئىككى يېڭى ماشىنا ياساڭ.
+Car1 نى Fer نىڭ ئىسمى بىلەن 60،000 دوللار قىممىتىدىكى قىزىل ئايلاندۇرغىلى بولىدىغان قىلىپ تەڭشەڭ.
+ھەمدە car2 نىڭ باھاسى 10،000.00 دوللارلىق كۆك رەڭلىك يۈك ماشىنىسى.
 
 Tutorial Code
 -------------

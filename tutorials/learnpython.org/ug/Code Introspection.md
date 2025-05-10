@@ -1,9 +1,9 @@
 Tutorial
 --------
 
-Code introspection is the ability to examine classes, functions and keywords to know what they are, what they do and what they know.
+كودنى تەكشۈرۈش دەرس ، ئىقتىدار ۋە ئاچقۇچلۇق سۆزلەرنى تەكشۈرۈش ئىقتىدارى بولۇپ ، ئۇلارنىڭ نېمە ئىكەنلىكىنى ، نېمە قىلىۋاتقانلىقىنى ۋە نېمىنى بىلىدىغانلىقىنى بىلىدۇ.
 
-Python provides several functions and utilities for code introspection.
+Python كودنى تەكشۈرۈش ئۈچۈن بىر قانچە ئىقتىدار ۋە ئىقتىدار بىلەن تەمىنلەيدۇ.
 
     help()
     dir() 
@@ -18,12 +18,12 @@ Python provides several functions and utilities for code introspection.
     __name__ 
     
 
-Often the most important one is the help function, since you can use it to find what other functions do.
+ھەمىشە ئەڭ مۇھىمى ياردەم ئىقتىدارى ، چۈنكى سىز ئۇنى ئىشلىتىپ باشقا ئىقتىدارلارنىڭ نېمە ئىش قىلىدىغانلىقىنى تاپالايسىز.
 
-Exercise
+چېنىقىش
 --------
 
-Print a list of all attributes of the given Vehicle object.
+بېرىلگەن ماشىنا ئوبيېكتىنىڭ بارلىق خاسلىقلىرىنىڭ تىزىملىكىنى بېسىڭ.
 
 Tutorial Code
 -------------

@@ -1,37 +1,37 @@
 Tutorial
 --------
 
-Python is a very simple language, and has a very straightforward syntax.
-It encourages programmers to program without boilerplate (prepared) code.
-The simplest directive in Python is the "print" directive -
-it simply prints out a line (and also includes a newline, unlike in C).
+Python ئىنتايىن ئاددىي تىل بولۇپ ، ناھايىتى تۈز گرامماتىكىسى بار.
+ئۇ پروگراممېرلارنى پار قازان (تەييار) كودسىز پروگرامما تۈزۈشكە ئىلھاملاندۇرىدۇ.
+Python دىكى ئەڭ ئاددىي كۆرسەتمە «بېسىپ چىقىرىش» كۆرسەتمىسى -
+ئۇ پەقەت بىر قۇر بېسىپ چىقىرىدۇ (ھەمدە C غا ئوخشىمايدىغىنى يېڭى لىنىيىنىمۇ ئۆز ئىچىگە ئالىدۇ).
 
-There are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different.
-This tutorial uses Python 3, because it more semantically correct and supports newer features.
+Python 2 ۋە Python 3 دىن ئىبارەت ئىككى چوڭ Python نۇسخىسى بار. Python 2 ۋە 3 ئوخشىمايدۇ.
+بۇ دەرسلىكتە Python 3 ئىشلىتىلگەن ، چۈنكى ئۇ تېخىمۇ مەنىلىك ھالدا يېڭى ئىقتىدارلارنى قوللايدۇ.
 
-For example, one difference between Python 2 and 3 is the `print` statement.
-In Python 2, the "print" statement is not a function, and therefore it is
-invoked without parentheses. However, in Python 3, it is a function, and must be invoked
-with parentheses.
+مەسىلەن ، Python 2 بىلەن 3 نىڭ پەرقى «print» جۈملىسى.
+Python 2 دە «بېسىپ چىقىرىش» جۈملىسى ئىقتىدار ئەمەس ، شۇڭا ئۇ شۇنداق
+تىرناقسىز چاقىرىلىدۇ. قانداقلا بولمىسۇن ، Python 3 دە ئۇ بىر ئىقتىدار ، چوقۇم مۇراجىئەت قىلىش كېرەك
+تىرناق بىلەن.
 
-To print a string in Python 3, just write:
+Python 3 دا بىر قۇرنى بېسىش ئۈچۈن ، يېزىڭ:
 
     print("This line will be printed.")
 
 ### Indentation
 
-Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard
-indentation requires standard Python code to use four spaces. For example:
+Python ئەگرى تىرناقنىڭ ئورنىغا بۆلەكلەرگە بەلگە ئىشلىتىدۇ. بەتكۈچ ۋە بوشلۇقنى قوللايدۇ ، ئەمما ئۆلچەملىك
+بەلگە تۆت بوشلۇق ئىشلىتىش ئۈچۈن ئۆلچەملىك Python كودىنى تەلەپ قىلىدۇ. مەسىلەن:
 
     x = 1
     if x == 1:
         # indented four spaces
         print("x is 1.")
 
-Exercise
+چېنىقىش
 --------
 
-Use the "print" function to print the line "Hello, World!".
+«بېسىش» ئىقتىدارىنى ئىشلىتىپ «ياخشىمۇسىز ، دۇنيا!» دېگەن قۇرنى بېسىڭ.
 
 Tutorial Code
 -------------

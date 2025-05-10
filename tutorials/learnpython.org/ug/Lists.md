@@ -1,7 +1,7 @@
 Tutorial
 --------
 
-Lists are very similar to arrays. They can contain any type of variable, and they can contain as many variables as you wish. Lists can also be iterated over in a very simple manner. Here is an example of how to build a list.
+تىزىملىك سانلار گۇرپىسىغا ناھايىتى ئوخشايدۇ. ئۇلار ھەر قانداق ئۆزگەرگۈچى مىقدارنى ئۆز ئىچىگە ئالىدۇ ، ئۇلار سىز خالىغان ئۆزگەرگۈچى مىقدارنى ئۆز ئىچىگە ئالىدۇ. تىزىملىكلەرنىمۇ ناھايىتى ئاددىي ئۇسۇلدا تەكرارلىغىلى بولىدۇ. بۇ يەردە قانداق قىلىپ تىزىملىك قۇرۇشنىڭ بىر مىسالى بار.
 
     mylist = []
     mylist.append(1)
@@ -15,17 +15,17 @@ Lists are very similar to arrays. They can contain any type of variable, and the
     for x in mylist:
         print(x)
 
-Accessing an index which does not exist generates an exception (an error).
+مەۋجۇت بولمىغان كۆرسەتكۈچكە ئېرىشىش بۇنىڭ سىرتىدا (خاتالىق).
 
     mylist = [1,2,3]
     print(mylist[10])
 
-Exercise
+چېنىقىش
 --------
 
-In this exercise, you will need to add numbers and strings to the correct lists using the "append" list method. You must add the numbers 1,2, and 3 to the "numbers" list, and the words 'hello' and 'world' to the strings variable.
+بۇ مانېۋىردا سىز «قوشۇش» تىزىملىك ئۇسۇلىنى ئىشلىتىپ توغرا تىزىملىككە سان ۋە تىزمىلارنى قوشۇشىڭىز كېرەك. سىز چوقۇم «سان» تىزىملىكىگە 1,2 ، 3 دېگەن سانلارنى ، «ئۆزگەرگۈچى» ۋە «دۇنيا» دېگەن سۆزلەرنى ھەرپ تىزمىسىغا قوشۇشىڭىز كېرەك.
 
-You will also have to fill in the variable second_name with the second name in the names list, using the brackets operator `[]`. Note that the index is zero-based, so if you want to access the second item in the list, its index will be 1.
+سىز يەنە تىرناق مەشغۇلاتچىسى `[]` نى ئىشلىتىپ ئۆزگەرگۈچى ئىككىنچى_ ئىسىمنى ئىسىم تىزىملىكىدىكى ئىككىنچى ئىسىم بىلەن تولدۇرۇشىڭىز كېرەك. شۇنىڭغا دىققەت قىلىڭكى ، كۆرسەتكۈچ نۆلنى ئاساس قىلىدۇ ، شۇڭا تىزىملىكتىكى ئىككىنچى تۈرگە كىرمەكچى بولسىڭىز ، ئۇنىڭ كۆرسەتكۈچى 1 بولىدۇ.
 
 Tutorial Code
 -------------

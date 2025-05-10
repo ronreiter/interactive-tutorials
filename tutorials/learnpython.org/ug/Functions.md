@@ -1,49 +1,49 @@
 Tutorial
 --------
 
-### What are Functions?
+### ئىقتىدار دېگەن نېمە؟
 
-Functions are a convenient way to divide your code into useful blocks, allowing us to order our code, make it more readable, reuse it and save some time. Also functions are a key way to define interfaces so programmers can share their code.
+ئىقتىدارلار كودىڭىزنى پايدىلىق بۆلەكلەرگە بۆلۈشنىڭ قۇلايلىق ئۇسۇلى بولۇپ ، بىزنىڭ كودىمىزنى زاكاز قىلىشىمىزغا ، ئۇنى تېخىمۇ ئاسان ئوقۇشقا ، قايتا ئىشلىتىشكە ۋە بىر ئاز ۋاقىت تېجەپ بېرىدۇ. ئىقتىدارلار يەنە كۆرۈنمە يۈزىگە ئېنىقلىما بېرىشنىڭ ئاچقۇچلۇق ئۇسۇلى ، پروگراممېرلار ئۇلارنىڭ كودىنى ئورتاقلىشالايدۇ.
 
-### How do you write functions in Python?
+### Python دا ئىقتىدارلارنى قانداق يازىسىز؟
 
-As we have seen on previous tutorials, Python makes use of blocks.
+ئالدىنقى دەرسلىكلەردە كۆرگىنىمىزدەك ، Python بۆلەكلەردىن پايدىلىنىدۇ.
 
-A block is a area of code of written in the format of:
+بىر بۆلەك: فورماتتا يېزىلغان كود رايونى.
 
     block_head:
         1st block line
         2nd block line
         ...
 
-Where a block line is more Python code (even another block), and the block head is of the following format:
-block_keyword block_name(argument1,argument2, ...)
-Block keywords you already know are "if", "for", and "while".
+بىر بۆلەك سىزىق تېخىمۇ كۆپ Python كودى (ھەتتا باشقا بىر بۆلەك) بولسا ، بۆلەك بېشى تۆۋەندىكى فورماتتا:
+block_keyword block_name (argument1, argument2, ...)
+سىز بىلگەن ئاچقۇچلۇق سۆزلەرنى «ئەگەر» ، «ئۈچۈن» ۋە «بىر مەزگىل» دىن ئىبارەت.
 
-Functions in python are defined using the block keyword "def", followed with the function's name as the block's name.
-For example:
+بوغما يىلاندىكى ئىقتىدارلار توسۇش ئاچقۇچلۇق سۆز «def» ئارقىلىق ئېنىقلىنىدۇ ، ئاندىن فۇنكىسىيەنىڭ ئىسمى توساقنىڭ ئىسمى بولىدۇ.
+مەسىلەن:
 
     def my_function():
         print("Hello From My Function!")
 
 
-Functions may also receive arguments (variables passed from the caller to the function).
-For example:
+فۇنكسىيە يەنە تالاش-تارتىشلارنى قوبۇل قىلىشى مۇمكىن (چاقىرغۇچىدىن ئىقتىدارغا ئۆزگەرگۈچى مىقدار).
+مەسىلەن:
 
     def my_function_with_args(username, greeting):
         print("Hello, %s , From My Function!, I wish you %s"%(username, greeting))
 
 
-Functions may return a value to the caller, using the keyword- 'return' .
-For example:
+ئىقتىدار ئاچقۇچلۇق سۆز- «قايتۇرۇش» ئارقىلىق تېلېفون ئۇرغۇچىغا قىممەت قايتۇرىدۇ.
+مەسىلەن:
 
     def sum_two_numbers(a, b):
         return a + b
 
-### How do you call functions in Python?
+### Python دىكى ئىقتىدارلارنى قانداق دەيسىز؟
 
-Simply write the function's name followed by (), placing any required arguments within the brackets.
-For example, lets call the functions written above (in the previous example):
+فۇنكسىيەنىڭ نامىنى () دىن كېيىن يېزىڭ ، لازىملىق تالاش-تارتىشلارنى تىرناق ئىچىگە قويۇڭ.
+مەسىلەن ، يۇقىرىدا يېزىلغان ئىقتىدارلارغا تېلېفون قىلايلى (ئالدىنقى مىسالدا):
 
     # Define our 3 functions
     def my_function():
@@ -65,16 +65,16 @@ For example, lets call the functions written above (in the previous example):
     x = sum_two_numbers(1,2)  
 
 
-Exercise
+چېنىقىش
 --------
 
-In this exercise you'll use an existing function, and while adding your own to create a fully functional program.
+بۇ مانېۋىردا سىز بار بولغان ئىقتىدارنى ئىشلىتىسىز ، ھەمدە ئۆزىڭىزنى قوشقاندا تولۇق ئىقتىدارلىق پروگرامما قۇرىسىز.
 
-1. Add a function named `list_benefits()` that returns the following list of strings: "More organized code", "More readable code", "Easier code reuse", "Allowing programmers to share and connect code together"
+1. تۆۋەندىكى تىزىملىكلەرنى قايتۇرىدىغان «list_benefits ()» دېگەن ئىقتىدارنى قوشۇڭ: «تېخىمۇ تەشكىللىك كود» ، «تېخىمۇ كۆپ ئوقۇغىلى بولىدىغان كود» ، «ئاسان كودنى قايتا ئىشلىتىش» ، «پروگراممېرلارنىڭ كودنى ئورتاقلىشىشى ۋە ئۇلىنىشىغا يول قويۇش».
 
-2. Add a function named `build_sentence(info)` which receives a single argument containing a string and returns a sentence starting with the given string and ending with the string " is a benefit of functions!"
+2. "build_sentence (info)" دېگەن فۇنكسىيەنى قوشۇڭ ، ئۇ بىر قۇرنى ئۆز ئىچىگە ئالغان يەككە تالاش-تارتىشنى قوبۇل قىلىدۇ ھەمدە بېرىلگەن ھەرپتىن باشلانغان ۋە ھەرپ تىزمىسى بىلەن ئاخىرلاشقان جۈملىنى قايتۇرىدۇ "ئىقتىدارنىڭ پايدىسى!"
 
-3. Run and see all the functions work together!
+3. يۈگۈرۈپ بارلىق ئىقتىدارلارنىڭ بىرلىكتە ئىشلەۋاتقانلىقىنى كۆرۈڭ!
 
 Tutorial Code
 -------------

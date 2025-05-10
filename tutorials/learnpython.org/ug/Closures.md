@@ -1,11 +1,11 @@
 Tutorial
 --------
 
-A Closure is a function object that remembers values in enclosing scopes even if they are not present in memory. Let us get to it step by step
+يېپىلىش فۇنكسىيە ئوبيېكتى بولۇپ ، گەرچە ئۇلار ئىچكى ساقلىغۇچتا بولمىسىمۇ ، قورشاۋ دائىرىسىدىكى قىممەتلەرنى ئەستە ساقلايدۇ. ئۇنىڭغا قەدەممۇ-قەدەم يېتىپ بارايلى
 
-Firstly, a **Nested Function** is a function defined inside another function. It's very important to note that the nested functions can access the variables of the enclosing scope. However, at least in python, they are only readonly. However, one can use the "nonlocal" keyword explicitly with these variables in order to modify them.
+بىرىنچىدىن ، ** ئۇلانغان ئىقتىدار ** باشقا ئىقتىدارنىڭ ئىچىدە ئېنىقلانغان ئىقتىدار. دىققەت قىلىشقا تېگىشلىكى شۇكى ، ئۇلانغان ئىقتىدارلار ئۆز ئىچىگە ئالغان دائىرىنىڭ ئۆزگەرگۈچى مىقدارلىرىنى زىيارەت قىلالايدۇ. قانداقلا بولمىسۇن ، بوغما يىلاندا ئۇلار پەقەت ئوقۇشقا بولىدۇ. قانداقلا بولمىسۇن ، بۇ ئۆزگەرگۈچى مىقدارلار ئارقىلىق «يەرلىك بولمىغان» ئاچقۇچلۇق سۆزنى ئوچۇق-ئاشكارە ئىشلىتەلەيسىز.
 
-For example:
+مەسىلەن:
 
     def transmit_to_space(message):
         "This is the enclosing function"
@@ -17,7 +17,7 @@ For example:
     
     print(transmit_to_space("Test message"))
 
-This works well as the 'data_transmitter' function can access the 'message'. To demonstrate the use of the "nonlocal" keyword, consider this
+بۇ «data_transmitter» ئىقتىدارى «ئۇچۇر» نى زىيارەت قىلالايدۇ. «يەرلىك بولمىغان» ئاچقۇچلۇق سۆزنىڭ ئىشلىتىلىشىنى كۆرسىتىش ئۈچۈن ، بۇنى ئويلاڭ
 
     def print_msg(number):
         def printer():
@@ -30,9 +30,9 @@ This works well as the 'data_transmitter' function can access the 'message'. To 
     
     print_msg(9)
 
-Without the nonlocal keyword, the output would be "3 9", however, with its usage, we get "3 3", that is the value of the "number" variable gets modified.
+يەرلىك بولمىغان ھالقىلىق سۆز بولمىسا ، چىقىرىش «3 9» بولىدۇ ، ئەمما ، ئۇنىڭ ئىشلىتىلىشى بىلەن بىز «3 3» گە ئېرىشىمىز ، يەنى «سان» ئۆزگەرگۈچى مىقدارنىڭ قىممىتى ئۆزگەرتىلىدۇ.
 
-Now, how about we return the function object rather than calling the nested function within. (Remember that even functions are objects. (It's Python.))
+ھازىر ، بىز ئۇۋىغان ئىقتىدارنى چاقىرىشتىن كۆرە ، فۇنكسىيە ئوبيېكتىنى قايتۇرىمىز. (ھەتتا ئىقتىدارلارنىڭمۇ ئوبيېكت ئىكەنلىكىنى ئېسىڭىزدە تۇتۇڭ. (بۇ Python.))
 
     def transmit_to_space(message):
         "This is the enclosing function"
@@ -41,7 +41,7 @@ Now, how about we return the function object rather than calling the nested func
             print(message)
         return data_transmitter
 
-And we call the function as follows:
+بىز بۇ ئىقتىدارنى تۆۋەندىكىدەك دەيمىز:
 
 
       def transmit_to_space(message):
@@ -54,16 +54,16 @@ And we call the function as follows:
   	  fun2 = transmit_to_space("Burn the Sun!")
   	  fun2()
 
-Even though the execution of the "transmit_to_space()" was completed, the message was rather preserved. This technique by which the data is attached to some code even after end of those other original functions is called as closures in python
+گەرچە «transmit_to_space ()» نىڭ ئىجرا قىلىنىشى تاماملانغان بولسىمۇ ، ئۇچۇر بىر قەدەر ساقلانغان. بۇ باشقا ئەسلى ئىقتىدارلار ئاخىرلاشقاندىن كېيىنمۇ بەزى كودلارغا سانلىق مەلۇمات ئۇلىنىدىغان بۇ تېخنىكا بوغما يىلاننى تاقاش دەپ ئاتىلىدۇ
 
-ADVANTAGE : Closures can avoid use of global variables and provides some form of data hiding.(Eg. When there are few methods in a class, use closures instead).
+تەكلىپ: تاقاش يەرشارى ئۆزگەرگۈچى مىقدارنى ئىشلىتىشتىن ساقلىنالايدۇ ۋە مەلۇم شەكىلدىكى سانلىق مەلۇماتلارنى يوشۇرۇش بىلەن تەمىنلەيدۇ. (مەسىلەن ، بىر سىنىپتا ئۇسۇل ئاز بولسا ، ئۇنىڭ ئورنىغا تاقاشنى ئىشلىتىڭ).
 
-Also, Decorators in Python make extensive use of closures.
+شۇنداقلا ، Python دىكى بېزەكچىلەر تاقاشتىن كەڭ كۆلەمدە پايدىلىنىدۇ.
 
-Exercise
+چېنىقىش
 --------
 
-Make a nested loop and a python closure to make functions to get multiple multiplication functions using closures. That is using closures, one could make functions to create multiply_with_5() or multiply_with_4() functions using closures.
+ئۇۋا ھالقىسى ۋە بوغما يىلان تاقاپ ، تاقاش ئارقىلىق كۆپ كۆپەيتىش ئىقتىدارىغا ئېرىشىش ئۈچۈن ئىقتىدار قىلىڭ. يەنى تاقاشنى ئىشلىتىۋاتىدۇ ، تاقاش ئارقىلىق multiply_with_5 () ياكى multiply_with_4 () فۇنكسىيەسىنى قۇرغىلى بولىدۇ.
 
 Tutorial Code
 -------------

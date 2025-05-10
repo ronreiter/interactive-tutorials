@@ -1,45 +1,45 @@
 Tutorial
 --------
 
-Python uses C-style string formatting to create new, formatted strings. The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like "%s" and "%d".
+Python C ئۇسلۇبىدىكى فورماتنى ئىشلىتىپ يېڭى ، فورماتلانغان تىزمىلارنى ھاسىل قىلىدۇ. «%» مەشغۇلاتچىسى «توپ» (مۇقىم چوڭلۇق تىزىملىكى) ئىچىگە ئورالغان بىر يۈرۈش ئۆزگەرگۈچى مىقدارنى فورماتلاشقا ئىشلىتىلىدۇ ، بۇ فورمات تىزمىسى بىلەن بىللە ، «تالاش-تارتىش بەلگىلىگۈچىلەر» بىلەن نورمال تېكىستنى ئۆز ئىچىگە ئالىدۇ ، «% s» ۋە «% d» غا ئوخشاش ئالاھىدە بەلگىلەرنى ئۆز ئىچىگە ئالىدۇ.
 
-Let's say you have a variable called "name" with your user name in it, and you would then like to print(out a greeting to that user.)
+ئالايلۇق ، ئىشلەتكۈچى ئىسمىڭىز بىلەن «ئىسىم» دەپ ئاتىلىدىغان ئۆزگەرگۈچى مىقدار بار ، ئاندىن بېسىپ چىقارماقچى (ئۇ ئىشلەتكۈچىگە سالام يوللاڭ.)
 
     # This prints out "Hello, John!"
     name = "John"
     print("Hello, %s!" % name)
 
-To use two or more argument specifiers, use a tuple (parentheses):
+ئىككى ياكى ئۇنىڭدىن ئارتۇق تالاش-تارتىش بەلگىلىرىنى ئىشلىتىش ئۈچۈن ، بىر جۈپ (تىرناق) ئىشلىتىڭ:
 
     # This prints out "John is 23 years old."
     name = "John"
     age = 23
     print("%s is %d years old." % (name, age))
 
-Any object which is not a string can be formatted using the %s operator as well. The string which returns from the "repr" method of that object is formatted as the string. For example:
+ھەرپ تىزمىسى بولمىغان ھەر قانداق نەرسىنى% s مەشغۇلاتچىسى ئارقىلىقمۇ فورماتلىغىلى بولىدۇ. ئۇ ئوبيېكتنىڭ «repr» ئۇسۇلىدىن قايتىدىغان ھەرپ تىزمىسى تىزما شەكلىدە فورماتلىنىدۇ. مەسىلەن:
 
     # This prints out: A list: [1, 2, 3]
     mylist = [1,2,3]
     print("A list: %s" % mylist)
 
-Here are some basic argument specifiers you should know:
+بۇ يەردە سىز بىلىشكە تېگىشلىك بىر قىسىم ئاساسلىق دەلىللىگۈچىلەر بار:
 
 
-`%s - String (or any object with a string representation, like numbers)`
+"% s - تىزما (ياكى سانغا ئوخشاش ھەرپ تىزمىسى بار ھەر قانداق جىسىم)"
 
-`%d - Integers`
+`% d - Integers`
 
-`%f - Floating point numbers`
+"% f - لەيلىمە چېكىتلىك سان"
 
-`%.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot.`
+"%. <رەقەم سانى> f - چېكىتنىڭ ئوڭ تەرىپىگە مۇقىم مىقداردىكى لەيلىمە چېكىتلىك سانلار."
 
-`%x/%X - Integers in hex representation (lowercase/uppercase)`
+"% x /% X - ئالتە تەرەپلىك ئىپادىلەشتىكى پۈتۈن سان (كىچىك ھەرپ / چوڭ ھەرپ)"
 
 
-Exercise
+چېنىقىش
 --------
 
-You will need to write a format string which prints out the data using the following syntax:
+تۆۋەندىكى گرامماتىكىدىن پايدىلىنىپ سانلىق مەلۇماتلارنى بېسىپ چىقىرىدىغان فورمات تىزمىسىنى يېزىشىڭىز لازىم:
     `Hello John Doe. Your current balance is $53.44.`
 
 Tutorial Code

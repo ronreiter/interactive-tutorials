@@ -1,61 +1,61 @@
 Tutorial
 --------
 
-This section explains how to use basic operators in Python.
+بۇ بۆلەك Python دىكى ئاساسىي مەشغۇلاتچىلارنى قانداق ئىشلىتىشنى چۈشەندۈرۈپ بېرىدۇ.
 
-### Arithmetic Operators       
+### ھېسابلاش مەشغۇلاتچىلىرى       
 
-Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.<br>
+باشقا پروگرامما تىللىرىغا ئوخشاش ، قوشۇش ، ئېلىش ، كۆپەيتىش ۋە بۆلۈش مەشغۇلاتلىرىنى سان بىلەن ئىشلىتىشكە بولىدۇ. <br>
 
     number = 1 + 2 * 3 / 4.0
     print(number)
 
-Try to predict what the answer will be.  Does python follow order of operations?
+بۇنىڭ جاۋابىنىڭ نېمە بولىدىغانلىقىنى پەرەز قىلىپ بېقىڭ.  بوغما يىلان مەشغۇلات تەرتىپىگە ئەمەل قىلامدۇ؟
 
-Another operator available is the modulo (%) operator, which returns the integer remainder of the division. dividend % divisor = remainder.
+ئىشلەتكىلى بولىدىغان يەنە بىر تىجارەتچى بۆلەكنىڭ پۈتۈن ساننى قايتۇرىدىغان مودۇل (%) مەشغۇلاتچىسى. dividend% divisor = قالدۇق.
 
     remainder = 11 % 3
     print(remainder)
 
-Using two multiplication symbols makes a power relationship.
+ئىككى كۆپەيتىش بەلگىسىنى ئىشلىتىش كۈچ مۇناسىۋىتى ھاسىل قىلىدۇ.
 
     squared = 7 ** 2
     cubed = 2 ** 3
     print(squared)
     print(cubed)
 
-### Using Operators with Strings
+### ھەرپ تىزمىسى بىلەن مەشغۇلاتچىلارنى ئىشلىتىش
 
-Python supports concatenating strings using the addition operator:
+Python قوشۇش مەشغۇلاتچىسى ئارقىلىق تۇتاشتۇرۇش لىنىيىسىنى قوللايدۇ:
 
     helloworld = "hello" + " " + "world"
     print(helloworld)
 
-Python also supports multiplying strings to form a string with a repeating sequence:
+Python يەنە كۆپەيتىش تىزمىسىنى كۆپەيتىشنى قوللايدۇ.
 
     lotsofhellos = "hello" * 10
     print(lotsofhellos)
 
-### Using Operators with Lists
+### تىزىملىك بىلەن مەشغۇلاتچىلارنى ئىشلىتىش
 
-Lists can be joined with the addition operators:
+تىزىملىكنى قوشۇمچە تىجارەتچىلەر بىلەن بىرلەشتۈرگىلى بولىدۇ:
 
     even_numbers = [2,4,6,8]
     odd_numbers = [1,3,5,7]
     all_numbers = odd_numbers + even_numbers
     print(all_numbers)
 
-Just as in strings, Python supports forming new lists with a repeating sequence using the multiplication operator:
+خۇددى تىزمىلاردىكىگە ئوخشاش ، Python كۆپەيتىش مەشغۇلاتچىسى ئارقىلىق تەكرارلانغان تەرتىپ بىلەن يېڭى تىزىملىك ھاسىل قىلىشنى قوللايدۇ:
 
     print([1,2,3] * 3)
 
-Exercise
+چېنىقىش
 --------
 
-The target of this exercise is to create two lists called `x_list` and `y_list`,
-which contain 10 instances of the variables `x` and `y`, respectively.
-You are also required to create a list called `big_list`, which contains
-the variables `x` and `y`, 10 times each, by concatenating the two lists you have created.
+بۇ مانېۋىرنىڭ مەقسىتى «x_list» ۋە «y_list» دەپ ئاتىلىدىغان ئىككى تىزىملىك قۇرۇش.
+بۇنىڭدا ئايرىم-ئايرىم ھالدا «x» ۋە «y» ئۆزگەرگۈچى مىقدارنىڭ 10 مىسالى بار.
+سىز يەنە «big_list» دەپ ئاتىلىدىغان تىزىملىك قۇرۇشىڭىز تەلەپ قىلىنىدۇ
+سىز قۇرغان ئىككى تىزىملىكنى بىرلەشتۈرۈش ئارقىلىق «x» ۋە «y» ئۆزگەرگۈچى مىقدارلار ھەر قېتىمدا 10 قېتىم.
 
 Tutorial Code
 -------------

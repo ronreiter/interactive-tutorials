@@ -1,15 +1,15 @@
 Tutorial
 --------
 
-You can create partial functions in python by using the partial function from the functools library.
+فۇنكسىيە ئامبىرىدىكى قىسمەن ئىقتىدارنى ئىشلىتىپ بوغما يىلاندا قىسمەن ئىقتىدارلارنى قۇرالايسىز.
 
-Partial functions allow one to derive a function with x parameters to a function with fewer parameters and fixed values set for the more limited function.
+قىسمەن ئىقتىدارلار x پارامېتىرلىرى بىلەن فۇنكسىيەنى بىر ئاز پارامېتىر ۋە تېخىمۇ چەكلىك ئىقتىدار ئۈچۈن بېكىتىلگەن مۇقىم قىممەتكە ئىگە ئىقتىدارغا ئېرىشتۈرەلەيدۇ.
 
-Import required:
+ئىمپورت تەلەپ قىلىنىدۇ:
 
     from functools import partial
 
-This code will return 8.
+بۇ كود 8 نى قايتۇرىدۇ.
 
     from functools import partial
     
@@ -20,12 +20,12 @@ This code will return 8.
     dbl = partial(multiply, 2)
     print(dbl(4))
 
-An important note:  the default values will start replacing variables from the left.  The 2 will replace x.
-y will equal 4 when dbl(4) is called.  It does not make a difference in this example, but it does in the example below.
+مۇھىم ئەسكەرتىش: سۈكۈتتىكى قىممەتلەر سولدىن ئۆزگەرگۈچى مىقدارنى ئالماشتۇرۇشقا باشلايدۇ.  2 بولسا x نىڭ ئورنىنى ئالىدۇ.
+dbl (4) چاقىرىلغاندا y 4 گە تەڭ بولىدۇ.  ئۇ بۇ مىسالدا ھېچقانداق پەرقى يوق ، ئەمما تۆۋەندىكى مىسالدا قىلىدۇ.
 
-Exercise
+چېنىقىش
 --------
-Edit the function provided by calling partial() and replacing the first three variables in func(). Then print with the new partial function using only one input variable so that the output equals 60.
+قىسمەن () چاقىرىش ۋە فۇنكسىيە () دىكى ئالدىنقى ئۈچ ئۆزگەرگۈچى مىقدارنى ئالماشتۇرۇش ئارقىلىق تەمىنلەنگەن ئىقتىدارنى تەھرىرلەڭ. ئاندىن يېڭى قىسمەن ئىقتىدار بىلەن پەقەت بىرلا كىرگۈزگۈچى ئۆزگەرگۈچى مىقدارنى بېسىپ چىقىرىڭ ، بۇنداق بولغاندا چىقىرىش 60 گە تەڭ.
 
 
 Tutorial Code

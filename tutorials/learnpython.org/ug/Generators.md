@@ -1,13 +1,13 @@
 Tutorial
 --------
 
-Generators are very easy to implement, but a bit difficult to understand.
+گېنېراتورلارنى يولغا قويۇش ناھايىتى ئاسان ، ئەمما چۈشىنىش بىر ئاز قىيىن.
 
-Generators are used to create iterators, but with a different approach. Generators are simple functions which return an iterable set of items, one at a time, in a special way.
+گېنېراتورلار تەكرارلىغۇچ ياساشقا ئىشلىتىلىدۇ ، ئەمما باشقىچە ئۇسۇل بىلەن. گېنېراتورلار ئاددىي ئىقتىدارلار بولۇپ ، تەكرارلىنىدىغان بىر يۈرۈش تۈرلەرنى بىر-بىرلەپ ئالاھىدە ئۇسۇلدا قايتۇرىدۇ.
 
-When an iteration over a set of item starts using the for statement, the generator is run. Once the generator's function code reaches a "yield" statement, the generator yields its execution back to the for loop, returning a new value from the set. The generator function can generate as many values (possibly infinite) as it wants, yielding each one in its turn.
+بىر يۈرۈش تۈر ئۈستىدىكى تەكرارلىنىش باياننى ئىشلىتىشكە باشلىغاندا ، گېنېراتور ئىجرا بولىدۇ. گېنېراتورنىڭ ئىقتىدار كودى «ھوسۇل» باياناتىغا يەتكەندىن كېيىن ، گېنېراتور ئىجرا قىلىنىشىنى قايتىدىن دەۋرىيلىككە قايتۇرىدۇ ، يۈرۈشلۈكتىن يېڭى قىممەت قايتۇرىدۇ. گېنېراتور ئىقتىدارى ئۆزى خالىغانچە قىممەت ھاسىل قىلالايدۇ (چەكسىز بولۇشى مۇمكىن) ، ھەر بىرسىنى ئۆز نۆۋىتىدە بېرىدۇ.
 
-Here is a simple example of a generator function which returns 7 random integers:
+بۇ يەردە 7 ئىختىيارى پۈتۈن ساننى قايتۇرىدىغان گېنېراتور ئىقتىدارىنىڭ ئاددىي بىر مىسالى بار:
 
       import random
       
@@ -22,20 +22,20 @@ Here is a simple example of a generator function which returns 7 random integers
       for random_number in lottery():
              print("And the next number is... %d!" %(random_number))
 
-This function decides how to generate the random numbers on its own, and executes the yield statements one at a time, pausing in between to yield execution back to the main for loop.
+بۇ ئىقتىدار تاسادىپىي سانلارنى قانداق قىلىپ ئۆزلۈكىدىن ھاسىل قىلىشنى قارار قىلىدۇ ھەمدە مەھسۇلات باياناتىنى بىر-بىرلەپ ئىجرا قىلىدۇ ، ئارىلىقتا توختاپ نەتىجىنى ئاساسىي ھالقا ئايلاندۇرىدۇ.
 
-Exercise
+چېنىقىش
 --------
 
-Write a generator function which returns the Fibonacci series. They are calculated using the following formula: The first two numbers of the series is always equal to 1, and each consecutive number returned is the sum of the last two numbers.
-Hint: Can you use only two variables in the generator function? Remember that assignments can be done simultaneously. The code
+Fibonacci يۈرۈشلۈكىنى قايتۇرىدىغان گېنېراتور ئىقتىدارىنى يېزىڭ. ئۇلار تۆۋەندىكى فورمۇلا ئارقىلىق ھېسابلىنىدۇ: يۈرۈشلۈك ئالدىنقى ئىككى سان ھەمىشە 1 گە تەڭ ، ئۇدا قايتۇرۇلغان ھەر بىر سان ئاخىرقى ئىككى ساننىڭ يىغىندىسى.
+ئەسكەرتىش: گېنېراتور ئىقتىدارىدا پەقەت ئىككى ئۆزگەرگۈچى مىقدارنى ئىشلىتەمسىز؟ تاپشۇرۇقنى بىرلا ۋاقىتتا قىلغىلى بولىدىغانلىقىنى ئېسىڭىزدە تۇتۇڭ. كود
 
     a = 1
     b = 2
     a, b = b, a
     print(a, b)
 
-will simultaneously switch the values of a and b.
+بىرلا ۋاقىتتا a ۋە b نىڭ قىممىتىنى ئالماشتۇرىدۇ.
 
 Tutorial Code
 -------------

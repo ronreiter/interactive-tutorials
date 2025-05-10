@@ -1,81 +1,81 @@
 Tutorial
 --------
 
-Strings are bits of text. They can be defined as anything between quotes:
+ھەرپ تىزمىسى بولسا بىر پارچە تېكىست. ئۇلارنى نەقىللەر ئارىسىدىكى ھەر قانداق نەرسە دەپ ئېنىقلىما بېرىشكە بولىدۇ:
 
     astring = "Hello world!"
     astring2 = 'Hello world!'
 
-As you can see, the first thing you learned was printing a simple sentence. This sentence was stored by Python as a string. However, instead of immediately printing strings out, we will explore the various things you can do to them.
-You can also use single quotes to assign a string. However, you will face problems if the value to be assigned itself contains single quotes. For example to assign the string in these bracket(single quotes are ' ') you need to use double quotes only like this
+كۆرگىنىڭىزدەك ، سىز تۇنجى ئۆگەنگەن نەرسە ئاددىي بىر جۈملە بېسىش. بۇ جۈملە Python تەرىپىدىن بىر قۇر سۈپىتىدە ساقلانغان. قانداقلا بولمىسۇن ، تىزمىلارنى بېسىپ چىقىرىشنىڭ ئورنىغا ، سىز ئۇلارغا قىلالايدىغان ھەر خىل ئىشلارنى تەتقىق قىلىمىز.
+سىز يەنە بىر جۈملە ئارقىلىق بىر قۇر بەلگىلەشكە بولىدۇ. قانداقلا بولمىسۇن ، ئۆزىگە تەقسىم قىلىنىدىغان قىممەتنىڭ يەككە سۆزى بولسا مەسىلىلەرگە دۇچ كېلىسىز. مەسىلەن ، بۇ تىرناق ئىچىدىكى ھەرپ تىزمىسىنى تەقسىملەش ئۈچۈن (تاق تىرناق '') سىز پەقەت مۇشۇنىڭغا ئوخشاش قوش تىرناق ئىشلىتىشىڭىز كېرەك
 
     astring = "Hello world!"
     print("single quotes are ' '")
 
     print(len(astring))
 
-That prints out 12, because "Hello world!" is 12 characters long, including punctuation and spaces.
+بۇ 12 نى بېسىپ چىقىرىدۇ ، چۈنكى «ياخشىمۇسىز دۇنيا!». تىنىش بەلگىلىرى ۋە بوشلۇقنى ئۆز ئىچىگە ئالغان 12 ھەرپ.
 
     astring = "Hello world!"
     print(astring.index("o"))
 
-That prints out 4, because the location of the first occurrence of the letter "o" is 4 characters away from the first character. Notice how there are actually two o's in the phrase - this method only recognizes the first.
+بۇ 4 نى بېسىپ چىقىرىدۇ ، چۈنكى «o» ھەرىپىنىڭ تۇنجى قېتىم پەيدا بولغان ئورنى بىرىنچى ھەرپتىن 4 ھەرپ يىراقلىقتا. بۇ جۈملىدە ئەمەلىيەتتە ئىككى o نىڭ قانداق بولىدىغانلىقىغا دىققەت قىلىڭ - بۇ ئۇسۇل پەقەت بىرىنچىسىنىلا تونۇيدۇ.
 
-But why didn't it print out 5? Isn't "o" the fifth character in the string? To make things more simple, Python (and most other programming languages) start things at 0 instead of 1. So the index of "o" is 4.
+ئەمما نېمىشقا 5 نى بېسىپ چىقارمىدى؟ «O» قۇردىكى بەشىنچى ھەرپ ئەمەسمۇ؟ ئىشلارنى تېخىمۇ ئاددىيلاشتۇرۇش ئۈچۈن ، Python (ۋە باشقا پروگرامما تىللىرىنىڭ كۆپىنچىسى) ئىشلارنى 1 نىڭ ئورنىغا 0 دىن باشلايدۇ. شۇڭا «o» نىڭ كۆرسەتكۈچى 4.
 
     astring = "Hello world!"
     print(astring.count("l"))
 
-For those of you using silly fonts, that is a lowercase L, not a number one. This counts the number of l's in the string. Therefore, it should print 3.
+ئەخمەق خەت نۇسخىسىنى ئىشلىتىۋاتقانلار ئۈچۈن ، بۇ كىچىك ھەرپ L ، بىرىنچى نومۇر ئەمەس. بۇ قۇردىكى l نىڭ سانىنى سانايدۇ. شۇڭلاشقا ، ئۇ 3 نى بېسىشى كېرەك.
 
     astring = "Hello world!"
     print(astring[3:7])
 
-This prints a slice of the string, starting at index 3, and ending at index 6. But why 6 and not 7? Again, most programming languages do this - it makes doing math inside those brackets easier.
+بۇ بىر بۆلەك تىزمىنى بېسىپ ، 3-كۆرسەتكۈچتىن باشلىنىپ ، 6-كۆرسەتكۈچتە ئاخىرلىشىدۇ. ئەمما نېمىشقا 6 ئەمەس ، 7 بولىدۇ؟ يەنە كېلىپ كۆپىنچە پروگرامما تىلى بۇنى قىلىدۇ - بۇ تىرناق ئىچىدىكى ماتېماتىكىنى قىلىشنى ئاسانلاشتۇرىدۇ.
 
-If you just have one number in the brackets, it will give you the single character at that index. If you leave out the first number but keep the colon, it will give you a slice from the start to the number you left in. If you leave out the second number, it will give you a slice from the first number to the end.
+ئەگەر تىرناق ئىچىدە پەقەت بىرلا سان بولسا ، ئۇ سىزگە بۇ كۆرسەتكۈچتىكى يەككە ھەرپنى بېرىدۇ. ئەگەر بىرىنچى نومۇرنى قالدۇرۇپ قويسىڭىز ، ئەمما قوش چېكىتنى ساقلىسىڭىز ، ئۇ باشتىن-ئاخىر سىز قالدۇرغان سانغا بىر پارچە بېرىدۇ. ئىككىنچى نومۇرنى قالدۇرسىڭىز ، ئۇ بىرىنچى نومۇردىن ئاخىرىغىچە سىزگە بىر پارچە بېرىدۇ.
 
-You can even put negative numbers inside the brackets. They are an easy way of starting at the end of the string instead of the beginning. This way, -3 means "3rd character from the end".
+تىرناق ئىچىگە سەلبىي سانلارنى قويسىڭىزمۇ بولىدۇ. ئۇلار باشلىنىشنىڭ ئورنىغا قۇرنىڭ ئاخىرىدا باشلاشنىڭ ئاسان ئۇسۇلى. بۇ ئۇسۇل ، -3 «ئاخىرىدىن 3-ھەرپ» مەنىسىنى بىلدۈرىدۇ.
 
     astring = "Hello world!"
     print(astring[3:7:2])
 
-This prints the characters of string from 3 to 7 skipping one character. This is extended slice syntax. The general form is [start:stop:step].
+بۇ ھەرپنىڭ ھەرپلىرىنى 3 دىن 7 گىچە بېسىپ بېرىدۇ. بۇ كېڭەيتىلگەن بۆلەك گرامماتىكىسى. ئومۇمىي شەكلى [باشلاش: توختىتىش: قەدەم].
 
     astring = "Hello world!"
     print(astring[3:7])
     print(astring[3:7:1])
 
-Note that both of them produce same output
+شۇنىڭغا دىققەت قىلىڭكى ، ھەر ئىككىلىسى ئوخشاش مەھسۇلات چىقىرىدۇ
 
-There is no function like strrev in C to reverse a string. But with the above mentioned type of slice syntax you can easily reverse a string like this
+C دا strrev غا ئوخشاش فۇنكسىيە يوق. ئەمما يۇقىرىدا تىلغا ئېلىنغان بۆلەك گرامماتىكىسى بىلەن بۇنداق تىزمىنى ئاسانلا ئۆزگەرتەلەيسىز
 
     astring = "Hello world!"
     print(astring[::-1])
 
-This
+بۇ
 
     astring = "Hello world!"
     print(astring.upper())
     print(astring.lower())
 
-These make a new string with all letters converted to uppercase and lowercase, respectively.
+بۇلار ھەرپلەر ئايرىم-ئايرىم ھالدا چوڭ ۋە كىچىك ھەرپكە ئۆزگەرتىلگەن يېڭى تىزما ھاسىل قىلىدۇ.
 
     astring = "Hello world!"
     print(astring.startswith("Hello"))
     print(astring.endswith("asdfasdfasdf"))
 
-This is used to determine whether the string starts with something or ends with something, respectively. The first one will print True, as the string starts with "Hello". The second one will print False, as the string certainly does not end with "asdfasdfasdf".
+بۇ قۇرنىڭ مەلۇم بىر ئىش بىلەن باشلىنىدىغان ياكى ئاخىرلاشمايدىغانلىقىنى ئېنىقلاشقا ئىشلىتىلىدۇ. بىرىنچىسى True نى بېسىپ چىقىرىدۇ ، چۈنكى بۇ تىزما «ياخشىمۇسىز» دىن باشلىنىدۇ. ئىككىنچىسى False نى بېسىپ چىقىرىدۇ ، چۈنكى بۇ قۇر ئەلۋەتتە «asdfasdfasdf» بىلەن ئاخىرلاشمايدۇ.
 
     astring = "Hello world!"
     afewwords = astring.split(" ")
 
-This splits the string into a bunch of strings grouped together in a list. Since this example splits at a space, the first item in the list will be "Hello", and the second will be "world!".
+بۇ تىزمىنى بىر گۇرۇپپا گۇرۇپپىلارغا ئايرىيدۇ. بۇ مىسال بوشلۇققا بۆلۈنگەچكە ، تىزىملىكتىكى بىرىنچى تۈر «ياخشىمۇسىز» ، ئىككىنچىسى «دۇنيا!» بولىدۇ.
 
-Exercise
+چېنىقىش
 --------
 
-Try to fix the code to print out the correct information by changing the string.
+كودنى توغرىلاپ توغرا ئۇچۇرنى بېسىپ چىقىرىشقا تىرىشىڭ.
 
 Tutorial Code
 -------------

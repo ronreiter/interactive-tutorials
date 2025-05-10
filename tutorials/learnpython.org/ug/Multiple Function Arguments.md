@@ -1,13 +1,13 @@
 Tutorial
 --------
 
-Every function in Python receives a predefined number of arguments, if declared normally, like this:
+Python دىكى ھەر بىر ئىقتىدار نورمال ئېلان قىلىنسا ، ئالدىن بېكىتىلگەن سانلارنى قوبۇل قىلىدۇ:
 
     def myfunction(first, second, third):
         # do something with the 3 variables
         ...
 
-It is possible to declare functions which receive a variable number of arguments, using the following syntax:
+تۆۋەندىكى گرامماتىكىنى ئىشلىتىپ ئۆزگىرىشچان سانلارنى قوبۇل قىلىدىغان ئىقتىدارلارنى ئېلان قىلىشقا بولىدۇ:
 
     def foo(first, second, third, *therest):
         print("First: %s" % first)
@@ -15,7 +15,7 @@ It is possible to declare functions which receive a variable number of arguments
         print("Third: %s" % third)
         print("And all the rest... %s" % list(therest))
 
-The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling `foo(1, 2, 3, 4, 5)` will print out:
+«Therest» ئۆزگەرگۈچى مىقدار ئۆزگىرىشچان تىزىملىك بولۇپ ، ئالدىنقى 3 تالاش-تارتىشتىن كېيىن «foo» ئىقتىدارىغا بېرىلگەن بارلىق تالاش-تارتىشلارنى قوبۇل قىلىدۇ. شۇڭا «foo» (1 ، 2 ، 3 ، 4 ، 5) نى چاقىرىش بېسىپ چىقىرىلىدۇ:
 
     def foo(first, second, third, *therest):
         print("First: %s" %(first))
@@ -25,7 +25,7 @@ The "therest" variable is a list of variables, which receives all arguments whic
     
     foo(1, 2, 3, 4, 5)
 
-It is also possible to send functions arguments by keyword, so that the order of the argument does not matter, using the following syntax. The following code yields the following output: 
+تۆۋەندىكى گرامماتىكىنى ئىشلىتىپ فۇنكسىيە تالاش-تارتىشلىرىنى ئاچقۇچلۇق سۆز ئارقىلىق ئەۋەتىشكىمۇ بولىدۇ. تۆۋەندىكى كود تۆۋەندىكىدەك ئۈنۈم بېرىدۇ: 
 ```The sum is: 6
     Result: 1```
 
