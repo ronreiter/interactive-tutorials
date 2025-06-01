@@ -1,13 +1,13 @@
 Tutorial
 --------
 
-Python دىكى ھەر بىر ئىقتىدار نورمال ئېلان قىلىنسا ، ئالدىن بېكىتىلگەن سانلارنى قوبۇل قىلىدۇ:
+Python دىكى ھەر بىر فونكىسىە نورمال ئېنىقلانسا، ئالدىن بېكىتىلگەن سانلارنى قوبۇل قىلىدۇ:
 
     def myfunction(first, second, third):
         # do something with the 3 variables
         ...
 
-تۆۋەندىكى گرامماتىكىنى ئىشلىتىپ ئۆزگىرىشچان سانلارنى قوبۇل قىلىدىغان ئىقتىدارلارنى ئېلان قىلىشقا بولىدۇ:
+تۆۋەندىكى گرامماتىكىنى ئىشلىتىپ ئۆزگىرىشچان سانلارنى قوبۇل قىلىدىغان فونكىسىيەنى ئېنىقلاشقا بولىدۇ:
 
     def foo(first, second, third, *therest):
         print("First: %s" % first)
@@ -15,7 +15,7 @@ Python دىكى ھەر بىر ئىقتىدار نورمال ئېلان قىلى�
         print("Third: %s" % third)
         print("And all the rest... %s" % list(therest))
 
-«Therest» ئۆزگەرگۈچى مىقدار ئۆزگىرىشچان تىزىملىك بولۇپ ، ئالدىنقى 3 تالاش-تارتىشتىن كېيىن «foo» ئىقتىدارىغا بېرىلگەن بارلىق تالاش-تارتىشلارنى قوبۇل قىلىدۇ. شۇڭا «foo» (1 ، 2 ، 3 ، 4 ، 5) نى چاقىرىش بېسىپ چىقىرىلىدۇ:
+«Therest» ئۆزگەرگۈچى مىقدار بىر تىزىملىك بولۇپ ، ئالدىنقى 3 مىقداردىن كېيىن «foo» فونكىسىيەسىگە بېرىلگەن بارلىق مىقدارلارنى قوبۇل قىلىدۇ. شۇڭا «foo (1 ، 2 ، 3 ، 4 ، 5)» نى چاقىرىش تۆۋەندىكىلەرنى بېسىپ چىقىرىلىدۇ:
 
     def foo(first, second, third, *therest):
         print("First: %s" %(first))
@@ -25,7 +25,7 @@ Python دىكى ھەر بىر ئىقتىدار نورمال ئېلان قىلى�
     
     foo(1, 2, 3, 4, 5)
 
-تۆۋەندىكى گرامماتىكىنى ئىشلىتىپ فۇنكسىيە تالاش-تارتىشلىرىنى ئاچقۇچلۇق سۆز ئارقىلىق ئەۋەتىشكىمۇ بولىدۇ. تۆۋەندىكى كود تۆۋەندىكىدەك ئۈنۈم بېرىدۇ: 
+تۆۋەندىكى گرامماتىكىنى ئىشلىتىپ فۇنكسىيە مىقدارلىرىنى ئاچقۇچلۇق سۆز ئارقىلىق ئەۋەتىشكىمۇ بولىدۇ. تۆۋەندىكى كود تۆۋەندىكىدەك ئۈنۈم بېرىدۇ: 
 ```The sum is: 6
     Result: 1```
 
@@ -41,14 +41,14 @@ Python دىكى ھەر بىر ئىقتىدار نورمال ئېلان قىلى�
 
 
 
-The "bar" function receives 3 arguments. If an additional "action" argument is received, and it instructs on summing up the numbers, then the sum is printed out. Alternatively, the function also knows it must return the first argument, if the value of the "number" parameter, passed into the function, is equal to "first".
+«bar» فۇنكىيەسى 3 مىقدار تاپشۇرۇۋالىدۇ. ئەگەر قوشۇمچە «action» مىقدارى قوبۇل قىلىنسا، ھەمدە ئۇ سانلارنى يىغىنچاقلاشقا بۇيرۇلسا ، ئۇنداقتا بۇ يىغىندا بېسىپ چىقىرىلىدۇ. ئۇنىڭدىن باشقا ، بۇ فونكىسىە يەنە چوقۇم بىرىنچى مىقدارنى قايتۇرىدىغانلىقىنى بىلىدۇ ، ئەگەر فونكىسىەگە ئۆتكەن «سان» پارامېتىرىنىڭ قىممىتى «بىرىنچى» بىلەن تەڭ بولغان تەقدىردە.
 
-Exercise
+كۆنۈكمە
 --------
 
-Fill in the `foo` and `bar` functions so they can receive a variable amount of arguments (3 or more)
-The `foo` function must return the amount of extra arguments received.
-The `bar` must return `True` if the argument with the keyword `magicnumber` is worth 7, and `False` otherwise.
+«Foo» ۋە «bar» فۇنكىسىيەسىنى تولدۇرۇڭ ، ئۇلار ئوخشىمىغان ساندىكى مىقدارلارنى قوبۇل قىلالايدۇ (3 ياكى ئۇنىڭدىن يۇقىرى)
+"Foo" فۇنكىسىسى قوبۇل قىلىنغان قوشۇمچە مىقدارلارنىڭ سانىنى قايتۇرۇشى كېرەك.
+ئەگەر «magicnumber» ھالقىلىق سۆز بىلەن بولغان مىقدار 7 بولسا ، «bar» چوقۇم «True» نى قايتۇرۇشى كېرەك.
 
 Tutorial Code
 -------------
