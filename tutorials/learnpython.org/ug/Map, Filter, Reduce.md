@@ -1,23 +1,24 @@
 
 Tutorial
 --------
-خەرىتە ، سۈزگۈچ ۋە ئازايتىش ئىقتىدار پروگرامما تۈزۈشنىڭ ئۈلگىسى. ئۇلار پروگراممېر (سىز) نىڭ تېخىمۇ ئاددىي ، قىسقا كود يېزىشىغا يول قويىدۇ ، ھالقا ۋە شاخلىنىش قاتارلىق ئىنچىكە ھالقىلارنىڭ ھاجىتى يوق.
+خەرىتە ، سۈزگۈچ ۋە ئازايتىش فۇنكىسىيەلىرى بولسا پروگرامما تۈزۈشنىڭ ئۈلگىسى. ئۇلار پروگراممېر (سىز) نىڭ تېخىمۇ ئاددىي ، قىسقا كود يېزىشىغا يول قويىدۇ.  ھالقا ۋە شاخلىنىش قاتارلىق ئىنچىكە ھالقىلارنى ئىشلىتىشىڭىزنىڭ ھاجىتى يوق.
 
-ماھىيەتتە ، بۇ ئۈچ ئىقتىدار سىزنى بىر نەچچە قېتىم تەكرارلاش ئارقىلىق بىر نەچچە فۇنكىسىيەدە ئىقتىدار ئىشلىتەلەيسىز. "خەرىتە" ۋە "سۈزگۈچ" Python بىلەن قاچىلانغان ("__builtins__" مودۇلىدا) ، ئىمپورت قىلىشنى تەلەپ قىلمايدۇ. `` `````, however, need to imported as it as resides in `` functools``` module. «خەرىتە» دىن باشلاپ ، ئۇلارنىڭ ھەممىسىنىڭ قانداق ئىشلەيدىغانلىقىنى تېخىمۇ ياخشى چۈشىنىۋالايلى.
+
+ماھىيەتتە ، بۇ ئۈچ فۇنكىسىيەلەر سىزنىڭ بىر فۇنكىسىيە بىلەنلا بىر نەچچە تەكرارلانمىلارنى ئىشلىتىشىڭىزگە يول قۇيىدۇ. "خەرىتە" ۋە "سۈزگۈچ" Python بىلەن بىللە قاچىلانغان بۇلۇپ ("__builtins__" مودۇلىدا) ، ئىمپورت قىلىشنى تەلەپ قىلمايدۇ. ئازايتىش ، ئەمما فۇنكسىيە مودۇلىدا بولغاچقا ئىمپورت قىلىشقا توغرا كېلىدۇ. «خەرىتە» دىن باشلاپ ، ئۇلارنىڭ ھەممىسىنىڭ قانداق ئىشلەيدىغانلىقىنى تېخىمۇ ياخشى چۈشىنىۋالايلى.
 
 #### خەرىتە
-Python دىكى `` map () `` فۇنكسىيەسىنىڭ تۆۋەندىكى گرامماتىكىسى بار:
+Python دىكى `` ()map ``  فۇنكسىيەسىنىڭ تۆۋەندىكى گرامماتىكىسى بار:
 
 ```map(func, *iterables)```
 
-Where ```func``` is the function on which each element in ```iterables``` (as many as they are) would be applied on. Notice the asterisk(```*```) on ```iterables```? It means there can be as many iterables as possible, in so far ```func``` has that exact number as required input arguments. Before we move on to an example, it's important that you note the following:
+بۇ يەردە `` func``` بولسا `` itebles`` دىكى ھەر بىر ئېلېمېنتنىڭ ئىشلىتىلىشى. `` Iterbles`` دىكى يۇلتۇز بەلگىسى (`` `` ``) غا دىققەت قىلىڭ؟ ئۇنىڭ مەنىسى ئىمكانقەدەر كۆپ تەكرارلانغىلى بولىدىغانلىقىدىن دېرەك بېرىدۇ ، ھازىرغا قەدەر «فۇنكسىيە» تەلەپ قىلىنغان كىرگۈزۈش ئۆزگەرگۈچى مىقدرلىرىدەك ئېنىق سانغا ئىگە. بىر مىسالغا ئۆتۈشتىن بۇرۇن ، تۆۋەندىكىلەرگە دىققەت قىلىشىڭىز كېرەك:
 
-1. In Python 2, the ```map()``` function returns a list. In Python 3, however, the function returns a ```map object``` which is a generator object. To get the result as a list, the built-in ```list()``` function can be called on the map object. i.e. ```list(map(func, *iterables))```
-2. The number of arguments to ```func``` must be the number of ```iterables``` listed. 
+1. Python 2 دە ، `` ()map `` فۇنكسىيە بىر تىزىملىكنى قايتۇرىدۇ. Python 3 دە ، بۇ ئىقتىدار ياسىغۇچى ئوبيېكتى بولغان «خەرىتە ئوبيېكتى» نى قايتۇرىدۇ. نەتىجىنى تىزىملىك ​​سۈپىتىدە ئېلىش ئۈچۈن ، `()list`` فۇنكسىيەسىنى خەرىتە ئوبيېكتىغا چاقىرىشقا بولىدۇ. يەنى `` تىزىملىك ​​(خەرىتە (فۇنكسىيە ، * تەكرارلاش)) ``
+2. «فۇنكسىيە» گە مۇناسىۋەتلىك ئۆزگەرگۈچى مىقدارلارنىڭ سانى چوقۇم «قايتىلانما» نىڭ سانىغا تەڭ بولۇشى كېرەك.
 
-Let's see how these rules play out with the following examples.
+تۆۋەندىكى مىساللار بىلەن بۇ قائىدىلەرنىڭ قانداق رول ئوينايدىغانلىقىنى كۆرۈپ باقايلى.
 
-Say I have a list (```iterable```) of my favourite pet names, all in lower case and I need them in uppercase. Traditonally, in normal pythoning, I would do something like this:
+مېنىڭ ئەڭ ياخشى كۆرىدىغان ئەرمەك ھايۋانلىرىمنىڭ تىزىملىكى بار (`` iterable```) ،خەتلەرنىڭ ھەممىسى كىچىك يېزىلغان ، ئەمما مەن ئۇلارنى چوڭ ھەرپتە يېزىشىم لازىم. كىلاسسىك ئۇسۇلدا ، نورمال پايسوندا، مەن مۇنداق بىر ئىشنى قىلاتتىم:
 
     my_pets = ['alfred', 'tabitha', 'william', 'arla']
     uppered_pets = []
@@ -28,9 +29,9 @@ Say I have a list (```iterable```) of my favourite pet names, all in lower case 
 
     print(uppered_pets)
 
-Which would then output ```['ALFRED', 'TABITHA', 'WILLIAM', 'ARLA']```
+مۇنداق نەتىجە چىقاتتى: ```['ALFRED', 'TABITHA', 'WILLIAM', 'ARLA']```
 
-With ```map()``` functions, it's not only easier, but it's also much more flexible. I simply do this:
+``()map`` فۇنكسىيەسى بىلەن ، بۇ ئاسان بولۇپلا قالماي ، يەنە تېخىمۇ جانلىق. مەن پەقەت مۇنداق قىلىمەن:
 
     # Python 3
     my_pets = ['alfred', 'tabitha', 'william', 'arla']
@@ -39,13 +40,13 @@ With ```map()``` functions, it's not only easier, but it's also much more flexib
 
     print(uppered_pets)
 
-Which would also output the same result. Note that using the defined ```map()``` syntax above, ```func``` in this case is ```str.upper``` and ```iterables``` is the ```my_pets``` list -- just one iterable. Also note that we did not call the ```str.upper``` function (doing this: ```str.upper()```), as the map function does that for us on _each element in the ```my_pets``` list_.
+بۇمۇ ئوخشاش نەتىجىنى چىقىرىدۇ. شۇنىڭغا دىققەت قىلىڭكى ، يۇقىرىدا ئېنىقلانغان «()map» گرامماتىكىسىنى ئىشلەتكەندە ، «func» بۇ ئەھۋالدا «str.upper» ۋە «قايتىشچانلىقى» بولسا «my_pets» تىزىملىكى - پەقەت بىرلا تەكرارلانما. شۇنىڭغا دىققەت قىلىڭكى ، بىز «str.upper» فۇنكىسىيەسىنى (بۇنى قىلىش: `` str.upper () ``) دەپ ئاتىمىدۇق ، چۈنكى خەرىتە ئىقتىدارى بىزگە «my_pets» تىزىملىكىدىكى ھەر بىر ئېلېمېنتنى بېرىدۇ.
 
-What's more important to note is that the ```str.upper``` function requires only **one** argument by definition and so we passed just **one** iterable to it. So, _if the function you're passing requires two, or three, or n arguments_, then _you need to pass in two, three or n iterables to it_. Let me clarify this with another example.
+دىققەت قىلىشقا تىگىشلىك بولغىنى شۇكى ، `` str.upper``` فۇنكسىيەسى پەقەت ** بىر ** ئۆزگەرگۈچى مىقدار تەلەپ قىلىدۇ ، شۇڭا بىز ئۇنىڭغا پەقەت ** بىر ** تەكرارلانما بەردۇق. شۇڭا ، _ ئەگەر سىز يەتكۈزىدىغان فۇنكىسىيە ئىككى ياكى ئۈچ ياكى n كىرگۈزۈش مىقدارى تەلەپ قىلسا ، ئۇنداقتا _ سىز ئۇنىڭغا ئىككى ، ئۈچ ياكى n تەكرارلاشتا ئۆتۈشىڭىز كېرەك.
 
-Say I have a list of circle areas that I calculated somewhere, all in five decimal places. And I need to round each element in the list up to its position decimal places, meaning that I have to round up the first element in the list to one decimal place, the second element in the list to two decimal places, the third element in the list to three decimal places, etc. With ```map()``` this is a piece of cake. Let's see how.
+مەن بىر يەردە ھېسابلىغان چەمبەر رايونىنىڭ تىزىملىكى بار ، ھەممىسى ئونلۇق كەسىر چىكىتىدىن كىيىنكى بەش خانىدە. ھەمدە مەن تىزىملىكتىكى ھەر بىر ئېلېمېنتنى ئۇنىڭ ئونلۇق ئورنىغا توغرىلىشىم كېرەك ، يەنى مەن تىزىملىكتىكى بىرىنچى ئېلېمېنتنى ئون خانىلىق ئورۇنغا ، تىزىملىكتىكى ئىككىنچى ئېلېمېنتنى يۈز خانىلىق ئورۇنغا ، تىزىملىكتىكى ئۈچىنچى ئېلېمېنتنى مىڭ خانىلىق ئورۇنغا ئايلاندۇرۇشىم كېرەك. بىز ``()map``` نى ئىشلەتسەك، بۇ بەك ئاسان. كۆرۈپ باقايلى:
 
-Python already blesses us with the ```round()``` built-in function that takes two arguments -- the number to round up and the number of decimal places to round the number up to. So, since the function requires **two** arguments, we need to pass in **two** iterables.
+Python ئاللىبۇرۇن بىزگە ``()round `` `فۇنكسىيەسىنى بەرگەن بۇلۇپ ئۇ ئىككى كىرگۈزگۈچى مىقدارنى ئۆز ئىچىگە ئالىدۇ. چۈنكى ، بۇ فۇنكىسىيە ** ئىككى ** كىرگۈزگۈچى مىقدار تەلەپ قىلىدىغان بولغاچقا ، بىز ** ئىككى ** تەكرارلاشى بېرىپ ئۆتۈشىمىز كېرەك.
 
     # Python 3
 
@@ -55,15 +56,29 @@ Python already blesses us with the ```round()``` built-in function that takes tw
 
     print(result)
 
-See the beauty of ```map()```? Can you imagine the flexibility this evokes?
+"()map" نىڭ گۈزەللىكىنى كۆرۈڭ؟ بۇنىڭ ئىشلىتىشنىڭ جانلىقلىقىنى تەسەۋۋۇر قىلالامسىز؟
 
-The ```range(1, 7)``` function acts as the second argument to the ```round``` function (the number of required decimal places per iteration). So as ```map``` iterates through ```circle_areas```, during the first iteration, the first element of ```circle_areas```, ```3.56773``` is passed along with the first element of ```range(1,7)```, ```1``` to ```round```, making it effectively become ```round(3.56773, 1)```. During the second iteration, the second element of ```circle_areas```, ```5.57668``` along with the second element of ```range(1,7)```, ```2``` is passed to ```round``` making it translate to ```round(5.57668, 2)```. This happens until the end of the ```circle_areas``` list is reached.
+«range(1, 7)» فۇنكىسىيەسى «round» فۇنكىسىيەسىنىڭ ئىككىنچى پارامېتىرىلىق (ھەر بىر قېتىملىق تەكرارلاشتا كېرەكلىك ئۆنچكە سانلار سانى) رولىنى ئۆتەيدۇ. شۇڭا map فۇنكىسىيەسى «circle_areas» تىزىمىدىن ئۆتكەندە، تۇنجى قېتىملىق تەكرارلاش ۋاقتىدا «circle_areas» تىزىمىنىڭ تۇنجى ئېلېمېنتى «3.56773» ۋە «range(1,7)» نىڭ تۇنجى ئېلېمېنتى «1» نى «round» فۇنكىسىيەسىگە يوللىنىدۇ، بۇنىڭ بىلەن ئۇ ئەمەلىيەتتە «round(3.56773, 1)» بولىدۇ.
 
-I'm sure you're wondering: "What if I pass in an iterable less than or more than the length of the first iterable? That is, what if I pass ```range(1, 3)``` or ```range(1, 9999)``` as the second iterable in the above function". And the answer is simple: nothing! Okay, that's not true. "Nothing" happens in the sense that the ```map()``` function will not raise any exception, it will simply iterate over the elements until it can't find a second argument to the function, at which point it simply stops and returns the result.
+1)```. ئىككىنچى قېتىملىق تەكرارلاش ۋاقتىدا، «`circle_areas`» تىزىمىنىڭ ئىككىنچى ئېلېمېنتى «`5.57668`» ۋە «`range(1,7)`» نىڭ ئىككىنچى ئېلېمېنتى «`2`» «`round`» فۇنكىسىيەسىگە يوللىنىدۇ، بۇ ئەمەلىي جەھەتتە «`round(5.57668, 2)`» غا تەڭ بولىدۇ. بۇ جەريان «`circle_areas`» تىزىمىنىڭ ئاخىرىغىچە داۋام قىلىدۇ.
 
-So, for example, if you evaluate ```result = list(map(round, circle_areas, range(1, 3)))```, you won't get any error even as the length of ```circle_areas``` and the length of ```range(1, 3)``` differ. Instead, this is what Python does: It takes the first element of ```circle_areas``` and the first element of ```range(1,3)``` and passes it to ```round```. ```round``` evaluates it then saves the result. Then it goes on to the second iteration, second element of ```circle_areas``` and second element of ```range(1,3)```, ```round``` saves it again. Now, in the third iteration (```circle_areas``` has a third element), Python takes the third element of ```circle_areas``` and then tries to take the third element of ```range(1,3)``` but since ```range(1,3)``` does not have a third element, Python simply stops and returns the result, which in this case would simply be ```[3.6, 5.58]```. 
 
-Go ahead, try it.
+سىز «نمىشقا» دەپ ئويلىنىۋاتقىنىڭىزغا ئىشىنىمەن: «ئەگەر بىرلەشتۈرۈلگەن ئىككىنچى تىزىم، بىرىنچى تىزىمنىڭ ئۇزۇنلۇقىدىن ئاز ياكى كۆپ بولسا قانداق بولىدۇ؟ باشقاچە ئېيتقاندا، ئەگەر يۇقىرىقى فۇنكىسىيەدە ئىككىنچى تىزىم سۈپىتىدە «`range(1, 3)`» ياكى «`range(1, 9999)`» نى يوللىسام قانداق بولىدۇ؟»
+
+جاۋاب ئاددىي: «ھېچ نەرسە!» — بولسا، بۇ توغرا ئەمەس. «ھېچ نەرسە» دېگەن گەپ «`map()`» فۇنكىسىيەسى ھېچقانداق خاتالىق چىقارمايدۇ، دېگەن مەنىدە. ئۇ پەقەت ئىككىنچى پارامېتىر (تۈزۈلگەن تىزىمنىڭ ئىككىنچى بۆلىكى) توشقانچە تەكرارلايدۇ، ئەمما ئۇنىڭدىن كېيىن ئۇ توختايدۇ ۋە شۇغىلدىكى نەتىجىنى قايتۇرىدۇ.
+
+
+مەسىلەن، ئەگەر سىز «result = list(map(round, circle_areas, range(1, 3)))» نى باھالاسىڭىز، «circle_areas» بىلەن «range(1, 3)» نىڭ ئۇزۇنلۇقى پەرقلىق بولسىمۇ، Python ھېچقانداق خاتالىق چىقارمايدۇ.
+
+بۇنىڭ ئورنىغا Python نېمىش قىلىدۇ؟ ئۇ «circle_areas» نىڭ تۇنجى ئېلېمېنتىنى ۋە «range(1,3)» نىڭ تۇنجى ئېلېمېنتىنى ئېلىپ «round» فۇنكىسىيىسىگە يوللايدۇ. «round» بۇنى ھېسابلاپ، نەتىجىنى ساقلايدۇ.
+
+كېيىن ئۇ ئىككىنچى قېتىملىق تەكرارلاشقا ئۆتىدۇ: «circle_areas» نىڭ ئىككىنچى ئېلېمېنتى ۋە «range(1,3)» نىڭ ئىككىنچى ئېلېمېنتى «round» غا يوللىنىدۇ، «round» نەتىجىنى يەنە ساقلايدۇ.
+
+ئاندىن ئۈچۈنچى قېتىملىق تەكرارلاشقا كەلگەندە (چۈنكى «circle_areas» تا ئۈچۈنچى ئېلېمېنت بار)، Python بۇ ئۈچۈنچى ئېلېمېنتنى ئېلىدۇ، ئەمما «range(1,3)» تا ئۈچۈنچى ئېلېمېنت يوق بولغانلىقتىن، Python پەقەت توختايدۇ ۋە شۇغىچە ئېلىنغان نەتىجىلەرنى قايتۇرىدۇ.
+
+بۇ ئەھۋالدا نەتىجە «[3.6, 5.58]» بولىدۇ.
+
+مەزكۇر كودنى Python دا سىناپ كۆرۈڭ:
 
     # Python 3
 
@@ -74,9 +89,14 @@ Go ahead, try it.
     print(result)
 
 
-The same thing happens if ```circle_areas``` is less than the length of the second iterable. Python simply stops when it can't find the next element in one of the iterables. 
+ئەگەر «`circle_areas`» نىڭ ئۇزۇنلۇقى ئىككىنچى تىزىمدىن ئاز بولسىمۇ، ئۇنداقتا ئوخشاشلا نەرسە كۆرۈلىدۇ. Python ئىككى تىزىمنىڭ بىرىدىن كېيىنكى ئېلېمېنتىنى تاپالمىغان ۋاقتى توختايدۇ، ھېچقانداق خاتالىق چىقمىيدۇ.
 
-To consolidate our knowledge of the ```map()``` function, we are going to use it to implement our own custom ```zip()``` function. The ```zip()``` function is a function that takes a number of iterables and then creates a tuple containing each of the elements in the iterables. Like ```map()```, in Python 3, it returns a generator object, which can be easily converted to a list by calling the built-in ```list``` function on it. Use the below interpreter session to get a grip of ```zip()``` before we create ours with ```map()```
+
+«map()» فۇنكىسىيەسى ھەققىدە بىلىملىرىمىزنى مۇقىملاشتۇرۇش ئۈچۈن، بىز ئۇنى ئىشلىتىپ ئۆزىڭلارنىڭ «zip()» فۇنكىسىيىسىنى قۇرۇپ چىقىمىز.
+
+«zip()» فۇنكىسىيەسى — بىر قانچە تىزىم (iterables) نى قوبۇل قىلىپ، ئۇلارنىڭ ھەر بىر ئورنىدىكى ئېلېمېنتلىرىدىن بىر تۇتاش tuple قۇرۇپ چىقىدىغان فۇنكىسىيە. «map()» فۇنكىسىيەسىگە ئوخشاش، Python 3 تا «zip()» بولسا بىر generator (يېتىلگەن ئوبيېكت) قايتۇرىدۇ، بۇنى «list» دېگەن بويىچە تىزىمگە ئايلاندۇرغىلى بولىدۇ.
+
+تۆۋەندىكى Python ئىزاھلاش مۇھىتى (interpreter) نى ئىشلىتىپ، «zip()» قانداق ئىشләйدىغىنىنى چۈشەنىۋېلىڭ، كېيىن «map()» ئارقىلىق ئۆز «zip» فۇنكىسىيىسىمىزنى ياسىيمىز:
 
     # Python 3
 
@@ -87,9 +107,9 @@ To consolidate our knowledge of the ```map()``` function, we are going to use it
     
     print(results)
 
-As a bonus, can you guess what would happen in the above session if ```my_strings``` and ```my_numbers``` are not of the same length? No? try it! Change the length of one of them.
+يەنىمۇ ئىلگىرلىگەن ھالدا، تەخمىن قىلايلى: ئەگەر «my_strings» ۋە «my_numbers» نىڭ ئۇزۇنلۇقى بىر-بىرىگە ماس كەلمىسىچە نېمە بولىدۇ؟ تەخمىن قىلالامدىڭىزمۇ؟ يوقمۇ؟ ئۇنداقتا سىناپ كۆرۈڭ! ئۇلارنىڭ بىرىنىڭ ئۇزۇنلۇقىنى ئۆزگەرتىپ باققانمۇ؟
 
-Onto our own custom ```zip()``` function!
+ئاندىن، ئۆزىمىزنىڭ «zip()» فۇنكىسىيىسىنى قۇرايلى!
 
     # Python 3
 
@@ -100,21 +120,22 @@ Onto our own custom ```zip()``` function!
 
     print(results)
 
-Just look at that! We have the same result as ```zip```. 
+بۇنىڭغا قارىڭ! نەتىجە «`zip`» بىلەن ئوخشاش چىقتى.
 
-Did you also notice that I didn't even need to create a function using the ```def my_function()``` standard way? That's how flexible ```map()```, and Python in general, is! I simply used a ```lambda``` function. This is not to say that using the standard function definition method (of ```def function_name()```) isn't allowed, it still is. I simply preferred to write less code (be "Pythonic").
 
-That's all about map. Onto ```filter()```
+سىز دىققەت قىلدىڭىزمۇ، مەن ھەتتا «def my_function()» دىگەن ئەڭ ئەنئەنىۋى ئۇسۇل بىلەن فۇنكىسىيە ياساشقا مۇھتاج بولمىدىم؟ بۇ «map()» نىڭ ۋە Python نىڭ قانچىلىك يېڭىلىققا ياراتقانلىقىنىڭ دەلىلى! مەن پەقەت «lambda» فۇنكىسىيىسىنى ئىشلەتتىم. بۇنىڭ مەنىسى، «def function_name()» ئارقىلىق فۇنكىسىيە تەييارلاشقا بولمايدۇ دېگەنلىك ئەمەس؛ بولىدۇ، ئەمما مەن ئازراق كود يېزىشنى (ياڭىچە، «Pythonic» ئۇسلۇبتا) تاللىدىم.
 
-#### Filter
-While ```map()``` passes each element in the iterable through a function and returns the result of all elements having passed through the function, ```filter()```, first of all, requires the function to return boolean values (true or false) and then passes each element in the iterable through the function, "filtering" away those that are false. It has the following syntax:
+«map» ھەققىدە شۇ قەدەر بولسۇن. ھازىر بولسا «filter()» غا ئۆتىمىز!
+
+#### سۈزگۈچ
+«map()» فۇنكىسىيەسى تىزىمدىكى ھەر بىر ئېلېمېنتنى بىر فۇنكىسىيە ئارقىلىق ئۆتكۈزۈپ، بارلىق ئېلېمېنتلەرنىڭ فۇنكىسىيە ئارقىلىق ئۆتكەن نەتىجىسىنى قايتۇرۇدىغان بولسا، «filter()» ئەڭ ئاۋۋال فۇنكىسىيەنىڭ نەتىجىسىنىڭ (True ياكى False) بولىشىنى تەلەپ قىلىدۇ. ئۇ تىزىمدىكى ھەر بىر ئېلېمېنتنى فۇنكىسىيە ئارقىلىق ئۆتكۈزۈپ، نەتىجىسى «True» بولغانلارنى قالدۇرۇپ، «False» بولغانلارنى «filter» قىلىپ چىقىرىدۇ. ئۇنىڭ تۈزۈلمىسى تۆۋەندىكىچە:
 
 ```filter(func, iterable)```
 
 `` Filter () `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` `` ``
 
 1. "خەرىتە ()" گە ئوخشىمايدىغىنى ، پەقەت بىرلا تەكرارلاش تەلەپ قىلىنىدۇ.
-2. «فۇنكسىيە» تالاش-تارتىشى ئاق رەڭنى قايتۇرۇش تەلەپ قىلىنىدۇ. ئەگەر ئۇنداق بولمىسا ، "سۈزگۈچ" پەقەت ئۇنىڭغا قايتۇرۇلغان "قايتىلانما" نى قايتۇرىدۇ. ئۇنىڭدىن باشقا ، پەقەت بىرلا تەكرارلىنىشقا ئېھتىياجلىق بولغاچقا ، «فۇنكسىيە» پەقەت بىرلا تالاش-تارتىش قىلىشى كېرەك.
+2. «فۇنكسىيە» نىڭ ئىككىلىك سان قايتۇرۇشنى تەلەپ قىلىنىدۇ. ئەگەر ئۇنداق بولمىسا ، "سۈزگۈچ" پەقەت ئۇنىڭغا قايتۇرۇلغان "قايتىلانما" نى قايتۇرىدۇ. ئۇنىڭدىن باشقا ، پەقەت بىرلا تەكرارلىنىشقا ئېھتىياجلىق بولغاچقا ، «فۇنكسىيە» گە پەقەت بىرلا مىقدار بېرىلىشى كېرەك.
 3. مېنىڭ دېمەكچى بولغىنىم ، ئۇ دەل شۇ يەردە - «سۈزگۈچ».
 
 بەزى مىساللارنى كۆرۈپ باقايلى
@@ -145,13 +166,16 @@ Which should output `` ['madam', 'anutforajaroftuna'] ``.
 چىرايلىق رەتلىك ھە؟ ئاخىرىدا ، `` `` (`` `)
 
 #### ئازايتىش
-```reduce``` applies a function **of two arguments** cumulatively to the elements of an iterable, optionally starting with an initial argument. It has the following syntax:
+«reduce» فۇنكىسىيەسى ئىككى پارامېتىرلىك بىر فۇنكىسىيەنى تىزىمدىكى ئېلېمېنتلارغا بىر-بىر قىلىپ ئىلگىرىلەشلىك (كومۇلاتىپ) شەكىلدە قوللايدۇ، ھەمدە تاللاشچە بىر باشلانغۇچ پارامېتىر بىلەن باشلاشقا بولىدۇ. ئۇنىڭ تۈزۈلمىسى تۆۋەندىكىچە:
 
 ```reduce(func, iterable[, initial])```
 
-`` فۇنكسىيە`` بولسا `` قايتىلانغىلى بولىدىغان`` دىكى ھەر بىر ئېلېمېنتنىڭ ھەممىسىگە قوللىنىلىدىغان فۇنكسىيە بولۇپ ، `` ````````````````````````````````````````````````````````````````````````````````````````````````````````` `` `` `` `` `` `` `` ``
-1. ئەگەر `` ``````````````````````````````````````````````````````````````````````````````````
-2. `` `````` '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' '' 
+`بۇ يەردە «func» — تىزىمدىكى ھەر بىر ئېلېمېنتقا كومۇلاتىپ قوللىنىلىدىغان فۇنكىسىيە، «initial» بولسا تاللاشچە قىممەت بولۇپ، ھېسابلاش جەريانىدا تىزىم ئېلېمېنتلىرىدىن بۇرۇن قويۇلىدۇ ۋە تىزىم بوش بولغاندا دەفتەر قىممەت (default) رولىنى ئوينايدۇ.
+
+«reduce()» ھەققىدە تۆۋەندىكىلەرنى دىققەت قىلىش كېرەك:
+1. «func» ئىككى پارامېتىرنى تەلەپ قىلىدۇ، بۇنىڭدىن بىرى تىزىمدىكى تۇنجى ئېلېمېنت (ئەگەر «initial» بېرىلمىگەن بولسا)، يەنە بىرى تىزىمدىكى ئىككىنچى ئېلېمېنت بولىدۇ. ئەگەر «initial» بېرىلگەن بولسا، ئۇ «func» نىڭ تۇنجى پارامېتىرىغا ئايلانىدۇ، تىزىمدىكى تۇنجى ئېلېمېنت بولسا ئىككىنچى پارامېتىرغا ئايلانىدۇ.
+
+2. «reduce» تىزىمنى بىرلا قىممەتكە «قىسقىرتىدۇ» (بۇنى بىلىمەن، كەچۈرۈڭ).
 
 ئادەتتىكىگە ئوخشاش ، بەزى مىساللارنى كۆرۈپ باقايلى.
 
@@ -174,7 +198,8 @@ Which should output `` ['madam', 'anutforajaroftuna'] ``.
 
 ئۇنداقتا ، نېمە ئىش بولدى؟
 
-ئادەتتىكىگە ئوخشاش ، بۇلارنىڭ ھەممىسى تەكرارلىنىشقا مۇناسىۋەتلىك: "ئازايتىش" "سان" دىكى بىرىنچى ۋە ئىككىنچى ئېلېمېنتلارنى ئېلىپ ، ئۇلارنى ئايرىم-ئايرىم ھالدا "Custom_sum" غا يۆتكەيدۇ. `` custom_sum``` ئۇلارنىڭ سوممىسىنى ھېسابلاپ ، ئۇنى `` ```` گە قايتۇرىدۇ. `` ````` ئاندىن بۇ نەتىجىنى ئېلىپ ، ئۇنى «Custom_sum» نىڭ بىرىنچى ئېلېمېنتى سۈپىتىدە قوللىنىدۇ ۋە «سان» دىكى كېيىنكى ئېلېمېنتنى (ئۈچىنچى) نى «ئېلېمېنت» نىڭ ئىككىنچى ئېلېمېنتى سۈپىتىدە «Custom_sum» غا ئالىدۇ. `` ```````````````````````````````````````````````````````````````````````` 
+ئەڭ ئادەتتىكىدەك، بۇنىڭمۇ ھەممىسى تەكرارلاشقا دائىر: «reduce» بىرىنچى ۋە ئىككىنچى «numbers» تىزىمدىكى ئېلېمېنتلارنى ئېلىپ، ئۇلارنى custom\_sum فۇنكىسىيەسىگە ئاپىرىدۇ. custom\_sum ئۇلارنىڭ يىغىندىسىنى ھېسابلاپ، نەتىجىنى «reduce» غا قايتۇرىدۇ. «reduce» بۇ نەتىجىنى custom\_sum نىڭ بىرىنچى پارامېتىرىغا ئايلاندۇرىپ، كېيىنكى (ئۈچۈنچى) «numbers» ئېلېمېنتىنى ئىككىنچى پارامېتىر قىلىپ custom\_sum غا يوللايدۇ. بۇ جەريان «numbers» تاماملانغانچە داۋام قىلىدۇ.
+
 
 ئىختىيارىي `` initial`` قىممىتىنى ئىشلەتكەندە نېمە ئىش يۈز بېرىدىغانلىقىنى كۆرۈپ باقايلى.
 
@@ -191,14 +216,14 @@ Which should output `` ['madam', 'anutforajaroftuna'] ``.
     print(result)
 
 
-نەتىجە ، سىز ئويلىغاندەك ، `` 78`` ، چۈنكى `` ````````````````````````````````````````````````````````````````````````````
+كۇتۇلغانچە، نەتىجە 78 بولىدۇ، چۈنكى «reduce» دەسلەپتە 10 نى custom\_sum نىڭ تۇنجى پارامېتىرىغا ئىشلىتىدۇ.
 
 
-بۇلارنىڭ ھەممىسى Python نىڭ خەرىتىسى ، ئازايتىش ۋە سۈزگۈچكە مۇناسىۋەتلىك. تۆۋەندىكى ئىقتىدارلارنى ئىشلىتىپ سىناپ بېقىڭ ، ھەر بىر ئىقتىدارغا بولغان چۈشەنچىڭىزنى ئېنىقلاڭ.
+بۇلارنىڭ ھەممىسى Python نىڭ خەرىتىسى ، ئازايتىش ۋە سۈزگۈچكە مۇناسىۋەتلىك. تۆۋەندىكى ئىقتىدارلارنى ئىشلىتىپ سىناپ بېقىڭ ، ھەر بىر ئىقتىدارغا بولغان چۈشەنچىڭىزنى چوڭقۇرلاشتۇرۇڭ.
 
-چېنىقىش
+كۆنۈكمە
 --------
-بۇ مانېۋىردا بۇزۇلغان كودنى ئوڭشاش ئۈچۈن «خەرىتە» ، «سۈزگۈچ» ۋە «ئازايتىش» نىڭ ھەر بىرىنى ئىشلىتىسىز. 
+بۇ مەشىقتە بۇزۇلغان كودنى ئوڭشاش ئۈچۈن «خەرىتە» ، «سۈزگۈچ» ۋە «ئازايتىش» نىڭ ھەر بىرىنى ئىشلىتىسىز. 
 
 Tutorial Code
 -------------
