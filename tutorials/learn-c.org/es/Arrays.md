@@ -1,18 +1,18 @@
 Tutorial
 --------
 
-Los arreglos son variables especiales los cuales pueden sostener más de un valor bajo el mismo nombre de variable, organizado con un índice. Los arreglos son definidos usando una
+Los arreglos son variables especiales los cuales pueden contener más de un valor bajo el mismo nombre de variable, organizado con un índice. Los arreglos son definidos usando una
 sintáxis muy directa:
 
-    /* define un arreglo de 10 enteros */
+    /* Crea un arreglo(array) con 10 números enteros */
     int numbers[10];
 
-Para acceder a un número del arreglo se usa la misma sintáxis. Nótese que los arreglos en C empiezan en 0, lo cual significa que si
-definimos un arreglo de tamaño 10, entonces se definen las celdas de 0 a 9 (inclusive). `numbers[10]` no es un valor.
+Para acceder al número de un arreglo se usa la misma sintáxis. Nota que el índice de un arreglos en C empieza en el índice 0, lo cual significa que si
+definimos un arreglo de tamaño 10, entonces se crean las celdas de 0 a 9 (No del 1 al 10). `numbers[10]` no es un valor.
 
     int numbers[10];
 
-    /* popular el arreglo */
+    /* Promedio del arreglo */
     numbers[0] = 10;
     numbers[1] = 20;
     numbers[2] = 30;
@@ -21,11 +21,11 @@ definimos un arreglo de tamaño 10, entonces se definen las celdas de 0 a 9 (inc
     numbers[5] = 60;
     numbers[6] = 70;
 
-    /* imprime el 7mo número del arreglo, el cual tiene un índice de 6 */
-    printf("El 7mo número en el arreglo es %d", numbers[6]);
+    /* Imprime el séptimo número del arreglo, el cual tiene un índice de 6 */
+    printf("El séptimo número en el arreglo es %d", numbers[6]);
 
-Los arreglos pueden tener un solo tipo de variable, porque son implementados como una secuencia de valores en la memoria de la computadora.
-Por eso, acceder una celda específica del arreglo es muy eficiente.
+Los arreglos pueden tener solo un tipo de variable, porque son implementados como una secuencia de valores en la memoria de la computadora.
+Por eso, acceder una única celda específica del arreglo es muy eficiente.
 
 Ejercicio
 --------
@@ -53,12 +53,12 @@ Tutorial Code
       return 0;
     }
 
-Expected Output
+Output esperado
 ---------------
 
     El promedio de las 3 calificaciones es: 85
 
-Solution
+Solucion
 --------
 
     #include <stdio.h>
