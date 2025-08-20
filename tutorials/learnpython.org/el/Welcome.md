@@ -1,6 +1,6 @@
 # Καλώς Ήρθες
 
-Καλώς ήρθες στο διαδραστικό Python tutorial του LearnPython.org.
+Καλώς ήρθες στο διαδραστικό Python tutorial του LearnPython.org. Αυτός ο ιστότοπος υποστηρίζεται με υπερηφάνεια από το [μάθημα "Μάθε Python" του Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Θέλεις να μάθεις Python από την αρχή μέχρι το τέλος; [Γίνε μέλος και χρησιμοποίησε τον κωδικό LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) για 25% έκπτωση τον πρώτο χρόνο!
 
 Είτε είσαι έμπειρος προγραμματιστής είτε όχι, αυτός ο ιστότοπος προορίζεται για όλους όσους θέλουν να μάθουν την γλώσσα προγραμματισμού Python.<br>
 

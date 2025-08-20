@@ -1,6 +1,6 @@
 # Добре дошли
 
-Добре дошли в интерактивния Python урок на LearnPython.org.  
+Добре дошли в интерактивния Python урок на LearnPython.org. Този сайт е гордо подкрепен от [курса „Научи Python“ на Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Ако искате да научите Python от начало до край, [станете член и използвайте кода LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) за 25% отстъпка през първата година!  
 
 Независимо дали сте опитен програмист или не, този уебсайт е предназначен за всеки, който желае да научи езика за програмиране Python.<br>
 

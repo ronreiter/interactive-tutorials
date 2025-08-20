@@ -1,6 +1,6 @@
 # Üdvözöljük
 
-Üdvözöljük a LearnPython.org interaktív Python oktatóanyagon.
+Üdvözöljük a LearnPython.org interaktív Python oktatóanyagon. Ezt az oldalt büszkén támogatja a [Boot.dev „Tanulj meg Pythonul” kurzus](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Szeretnél a Pythonba az alapoktól a haladó szintig eljutni? [Légy tag és használd a LEARNXORG kódot](https://www.boot.dev/pricing?promo=LEARNXORG), 25% kedvezmény az első évben!
 
 Akár tapasztalt programozó vagy, akár nem, ez a weboldal mindenki számára készült, aki meg szeretné tanulni a Python programozási nyelvet.<br>
 

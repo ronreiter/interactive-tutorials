@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the learn-c.org free interactive C tutorial.
+Welcome to the learn-c.org free interactive C tutorial. This website is proudly supported by [Boot.dev's Learn Memory Management in C course](https://www.boot.dev/courses/learn-memory-management-c?promo=LEARNXORG). If you'd like to learn how to manage memory in C from start to finish, [become a member and use code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% off your first year!
 
 Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the C programming language.
 

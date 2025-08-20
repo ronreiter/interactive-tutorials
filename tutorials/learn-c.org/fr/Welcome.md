@@ -1,6 +1,6 @@
 # Bienvenue
 
-Bienvenue dans ce tutoriel C interactif gratuit learn-c.org.
+Bienvenue dans ce tutoriel C interactif gratuit learn-c.org. Ce site est fièrement soutenu par le [cours Boot.dev "Apprenez la gestion mémoire en C"](https://www.boot.dev/courses/learn-memory-management-c?promo=LEARNXORG). Pour maîtriser la gestion de la mémoire en C de A à Z, [devenez membre et utilisez le code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) pour -25% la première année !
 
 Que vous soyez ou non un programmeur expérimenté, ce site Web est destiné à tous ceux qui désirent apprendre le langage de programmation&nbsp;C.
 

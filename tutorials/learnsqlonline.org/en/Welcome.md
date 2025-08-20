@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the learnsqlonline.org free interactive SQL tutorial.
+Welcome to the learnsqlonline.org free interactive SQL tutorial. This website is proudly supported by [Boot.dev's Learn SQL course](https://www.boot.dev/courses/learn-sql?promo=LEARNXORG). If you'd like to learn SQL and databases from start to finish, [become a member and use code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% off your first year!
 
 SQL (pronouned either as S-Q-L or Sequel) is a powerful language for querying and analyzing any amount of data in the world.
 It is the most important tool for developers, analysts and data scientists alike for being able to deal with data.

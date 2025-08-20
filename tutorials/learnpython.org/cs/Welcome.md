@@ -1,6 +1,6 @@
 # Vítejte
 
-Vítejte na interaktivním Python tutoriálu na LearnPython.org.
+Vítejte na interaktivním Python tutoriálu na LearnPython.org. Tento web je hrdě podporován [kurzem „Naučte se Python“ od Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Pokud se chcete naučit Python od začátku do konce, [staňte se členem a použijte kód LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) pro 25% slevu na první rok!
 
 Ať už jste zkušený programátor nebo ne, tento web je určen pro každého, kdo si přeje naučit se programovací jazyk Python.<br>
 

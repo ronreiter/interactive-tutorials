@@ -1,6 +1,6 @@
 # Welkom
 
-Welkom bij de interactieve Python-tutorial van LearnPython.org.
+Welkom bij de interactieve Python-tutorial van LearnPython.org. Deze site wordt met trots ondersteund door de [Boot.dev-cursus "Leer Python"](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Wil je Python van A tot Z leren? [Word lid en gebruik de code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) voor 25% korting in het eerste jaar!
 
 Of je nu een ervaren programmeur bent of niet, deze website is bedoeld voor iedereen die de programmeertaal Python wil leren.<br>
 

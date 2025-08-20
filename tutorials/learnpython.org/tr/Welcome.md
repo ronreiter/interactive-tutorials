@@ -1,6 +1,6 @@
 # Hoş Geldiniz
 
-LearnPython.org interaktif Python eğitimine hoş geldiniz.
+LearnPython.org interaktif Python eğitimine hoş geldiniz. Bu site, [Boot.dev’in "Python Öğren" kursu](https://www.boot.dev/courses/learn-python?promo=LEARNXORG) tarafından gururla desteklenmektedir. Python’u baştan sona öğrenmek ister misiniz? [Üye olun ve LEARNXORG kodunu kullanın](https://www.boot.dev/pricing?promo=LEARNXORG) — ilk yıl %25 indirim!
 
 Deneyimli bir programcı olsanız da olmasanız da, bu web sitesi Python programlama dilini öğrenmek isteyen herkes için tasarlanmıştır.<br>
 

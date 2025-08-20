@@ -1,6 +1,6 @@
 # Velkommen
 
-Velkommen til den interaktive Python-tutorial på LearnPython.org.
+Velkommen til den interaktive Python-tutorial på LearnPython.org. Dette site er stolt støttet af [Boot.dev’s kursus "Lær Python"](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Vil du lære Python fra A til Z? [Bliv medlem og brug koden LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% rabat første år!
 
 Uanset om du er en erfaren programmør eller ej, er denne hjemmeside tiltænkt alle, der ønsker at lære programmeringssproget Python. <br>
 
