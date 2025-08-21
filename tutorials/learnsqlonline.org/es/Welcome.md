@@ -1,6 +1,6 @@
 # Español
 
-Bienvenidos a learnsqlonline.org sobre SQL.
+Bienvenidos a learnsqlonline.org sobre SQL. Este sitio está orgullosamente respaldado por el [curso Aprende SQL de Boot.dev](https://www.boot.dev/courses/learn-sql?promo=LEARNXORG). Si quieres aprender SQL y bases de datos de principio a fin, [hazte miembro y usa el código LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) para obtener un 25% de descuento en tu primer año.
 
 SQL (pronunciado como S-Q-L o Sequel) es un lenguaje poderoso para consultar y analizar cualquier cantidad de datos en el mundo.
 Es la herramienta más importante para los desarrolladores, analistas y científicos de datos por igual para poder tratar con los datos.

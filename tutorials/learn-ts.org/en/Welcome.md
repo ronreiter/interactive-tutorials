@@ -1,9 +1,10 @@
 ### Welcome to Learn TypeScript - the Interactive TypeScript Tutorial
 
-Welcome to learn-ts.org - the Interactive TypeScript tutorial. 
-Whether you are new to TypeScript or aiming to deepen your knowledge, 
-this guide is curated for learners of all levels. 
-TypeScript, as a superset of JavaScript, brings static typing and several other powerful 
+Welcome to learn-ts.org - the Interactive TypeScript tutorial. This website is proudly supported by [Boot.dev's Learn TypeScript course](https://www.boot.dev/courses/learn-typescript?promo=LEARNXORG). If you'd like to learn TypeScript from start to finish, [become a member and use code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% off your first year!
+
+Whether you are new to TypeScript or aiming to deepen your knowledge,
+this guide is curated for learners of all levels.
+TypeScript, as a superset of JavaScript, brings static typing and several other powerful
 features to the table, enhancing the development experience and ensuring more robust applications.
 
 Dive into the chapters below to embark on your TypeScript journey. 

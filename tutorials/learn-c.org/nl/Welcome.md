@@ -1,6 +1,6 @@
 # Welkom
 
-Welkom op Learn-c.org een gratis en interactieve C tutorial.
+Welkom op Learn-c.org, een gratis en interactieve C-tutorial. Deze site wordt met trots ondersteund door de [Boot.dev-cursus „Leer geheugenbeheer in C”](https://www.boot.dev/courses/learn-memory-management-c?promo=LEARNXORG). Wil je geheugenbeheer in C van A tot Z beheersen? [Word lid en gebruik de code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) voor 25% korting in het eerste jaar!
 
 Of u nu een doorgewinterde progammeur bent of niet, deze website is bedoeld voor iedereen die wenst om de C programeertaal onder de knie te krijgen.
 

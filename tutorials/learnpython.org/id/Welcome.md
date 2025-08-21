@@ -1,6 +1,6 @@
 # Selamat Datang
 
-Selamat datang di tutorial interaktif Python di LearnPython.org.
+Selamat datang di tutorial interaktif Python di LearnPython.org. Situs ini didukung dengan bangga oleh [kursus "Belajar Python" dari Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Ingin belajar Python dari awal hingga mahir? [Jadilah member dan gunakan kode LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) untuk diskon 25% di tahun pertama!
 
 Apakah Anda seorang programmer berpengalaman atau bukan, situs web ini ditujukan untuk semua orang yang ingin mempelajari bahasa pemrograman Python.<br>
 

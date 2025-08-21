@@ -1,6 +1,6 @@
 # ברוכים הבאים
 
-ברוכים הבאים להדרכת Python האינטראקטיבית של LearnPython.org.
+ברוכים הבאים להדרכת Python האינטראקטיבית של LearnPython.org. אתר זה נתמך בגאווה על ידי [הקורס "למדו Python" של Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). רוצים ללמוד Python מקצה לקצה? [הצטרפו כחברים והשתמשו בקוד LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) לקבלת 25% הנחה בשנה הראשונה!
 
 בין אם אתם מתכנתים מנוסים או לא, אתר זה מיועד לכל מי שמעוניין ללמוד את שפת התכנות Python.<br>
 
