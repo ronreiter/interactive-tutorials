@@ -20,6 +20,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Loops]]
 - [[Array-Comparison]]
 - [[Shell Functions]]
+- [[elif]]
 
 ### Advanced Tutorials
 
