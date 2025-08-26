@@ -18,6 +18,7 @@ learn-golang.org is still under construction - If you wish to contribute tutoria
 - [[Loops]]
 - [[Functions]]
 - [[The fmt module]]
+- [[Comments_Constants]]
 
 ### Contributing Tutorials
 
