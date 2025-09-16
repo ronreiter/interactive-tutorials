@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Szia, Világ!",
+        "Variables and Types": "Változók és típusok",
+        "Lists": "Listák",
+        "Basic Operators": "Alapműveletek",
+        "String Formatting": "String formázás",
+        "Basic String Operations": "Alapvető karakterlánc műveletek",
+        "Conditions": "Feltételek",
+        "Loops": "Ciklusok",
+        "Functions": "Függvények",
+        "Classes and Objects": "Osztályok és objektumok",
+        "Dictionaries": "Szótárak",
+        "Modules and Packages": "Modulok és csomagok",
+        "Input and Output": "Bemenet és kimenet"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Elindulás",
+        "Movement with Functions": "Funkciók szerinti mozgás",
+        "Collecting items": "Tárgyak gyűjtése",
+        "Pushing objects": "Tárgyak tolása",
+        "Printing on screen": "Képernyőre nyomtatás",
+        "Building objects": "Objektumok létrehozása",
+        "Apply what you've learned": "Alkalmazd, amit tanultál"
+    },
+    "advanced": {
+        "Generators": "Generátorok",
+        "List Comprehensions": "Listakomprehenziók",
+        "Lambda functions": "Lambda függvények",
+        "Multiple Function Arguments": "Több függvényargumentum",
+        "Regular Expressions": "Reguláris kifejezések",
+        "Exception Handling": "Kivételkezelés",
+        "Sets": "Halmazok",
+        "Serialization": "Sorosítás",
+        "Partial functions": "Részleges függvények",
+        "Code Introspection": "Kód introspekciója",
+        "Closures": "Zárványok",
+        "Decorators": "Dekorátorok",
+        "Map, Filter, Reduce": "Térkép, Szűrés, Redukálás",
+        "Parsing CSV Files": "CSV-fájlok elemzése"
+    }
+}

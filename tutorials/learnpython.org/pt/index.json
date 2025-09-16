@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Olá, Mundo!",
+        "Variables and Types": "Variáveis e Tipos",
+        "Lists": "Listas",
+        "Basic Operators": "Operadores Básicos",
+        "String Formatting": "Formatação de Strings",
+        "Basic String Operations": "Operações Básicas com Strings",
+        "Conditions": "Condições",
+        "Loops": "Laços",
+        "Functions": "Funções",
+        "Classes and Objects": "Classes e Objetos",
+        "Dictionaries": "Dicionários",
+        "Modules and Packages": "Módulos e Pacotes",
+        "Input and Output": "Entrada e Saída"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Começando",
+        "Movement with Functions": "Movimento com Funções",
+        "Collecting items": "Coletando itens",
+        "Pushing objects": "Empurrando objetos",
+        "Printing on screen": "Imprimindo na tela",
+        "Building objects": "Construindo objetos",
+        "Apply what you've learned": "Aplique o que você aprendeu"
+    },
+    "advanced": {
+        "Generators": "Geradores",
+        "List Comprehensions": "Compreensões de Lista",
+        "Lambda functions": "Funções Lambda",
+        "Multiple Function Arguments": "Múltiplos Argumentos de Função",
+        "Regular Expressions": "Expressões Regulares",
+        "Exception Handling": "Tratamento de Exceções",
+        "Sets": "Conjuntos",
+        "Serialization": "Serialização",
+        "Partial functions": "Funções parciais",
+        "Code Introspection": "Introspecção de Código",
+        "Closures": "Closures",
+        "Decorators": "Decoradores",
+        "Map, Filter, Reduce": "Mapa, Filtro, Reduzir",
+        "Parsing CSV Files": "Analisando Arquivos CSV"
+    }
+}

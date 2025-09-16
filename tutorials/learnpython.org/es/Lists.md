@@ -1,46 +1,25 @@
-Tutorial
---------
+Los listas son muy similares a los arrays. Pueden contener cualquier tipo de variable, y pueden contener tantas variables como desees. Las listas también se pueden iterar de una manera muy simple. Aquí hay un ejemplo de cómo construir una lista.
 
-Las listas son muy similares a los arreglos. Estas pueden contener cualquier tipo de variable y pueden soportar todas las variables que desees. Los elementos de la lista pueden ser iterados de manera simple ! (se explicará mas adelante en el tutorial) o accediendo a ellos via un indice basado en cero. Aquí hay un ejemplo de cómo crear una lista.
-
-
-    miLista = []
-    miLista.append(1)
-    miLista.append(2)
-    miLista.append(3)
-    print miLista[0] # imprime 1
-    print miLista[1] # imprime 2
-    print miLista[2] # imprime 3
+    mylist = []
+    mylist.append(1)
+    mylist.append(2)
+    mylist.append(3)
+    print(mylist[0]) # prints 1
+    print(mylist[1]) # prints 2
+    print(mylist[2]) # prints 3
 
     # prints out 1,2,3
-    for x in miLista:
+    for x in mylist:
         print(x)
 
-Accediendo a un indice que no exista generará un error.
+Acceder a un índice que no existe genera una excepción (un error).
 
-    miLista = [1,2,3]
-    print miLista[10]
+    mylist = [1,2,3]
+    print(mylist[10])
 
-### Ejercicio
-
-Crear una lista llamada "numeros" que contengan los números 1, 2, y 3 (en ese orden).
-Crea una lista llamada "cadenas" la cual contenga "hola" y "mundo" (en ese orden).
-Intenta usar el método de "append" para agregar objetos.
-
-Tutorial Code
--------------
-# modificando el codigo
-numeros = []
-cadenas = []
-
-# probando codigo
-print numeros
-print cadenas
-
-Expected Output
----------------
-[1, 2, 3]
-['hola', 'mundo']
-
-Solution
+Exercise
 --------
+
+En este ejercicio, necesitarás agregar números y cadenas a las listas correctas usando el método "append" de listas. Debes agregar los números 1, 2 y 3 a la lista "numbers", y las palabras 'hello' y 'world' a la variable strings.
+
+También tendrás que completar la variable second_name con el segundo nombre en la lista names, usando el operador de corchetes `[]`. Ten en cuenta que el índice es basado en cero, por lo que si quieres acceder al segundo elemento en la lista, su índice será 1.

@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Γειά σου, Κόσμε!",
+        "Variables and Types": "Μεταβλητές και Τύποι",
+        "Lists": "Λίστες",
+        "Basic Operators": "Βασικοί Τελεστές",
+        "String Formatting": "Μορφοποίηση Συμβολοσειράς",
+        "Basic String Operations": "Βασικές Λειτουργίες Συμβολοσειράς",
+        "Conditions": "Συνθήκες",
+        "Loops": "Βρόχοι",
+        "Functions": "Λειτουργίες",
+        "Classes and Objects": "Κλάσεις και Αντικείμενα",
+        "Dictionaries": "Λεξικά",
+        "Modules and Packages": "Μονάδες και Πακέτα",
+        "Input and Output": "Είσοδος και Έξοδος"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Ξεκινώντας",
+        "Movement with Functions": "Κίνηση με Συναρτήσεις",
+        "Collecting items": "Συλλογή αντικειμένων",
+        "Pushing objects": "Μετακίνηση αντικειμένων",
+        "Printing on screen": "Εκτύπωση στην οθόνη",
+        "Building objects": "Κατασκευή αντικειμένων",
+        "Apply what you've learned": "Εφαρμόστε όσα έχετε μάθει"
+    },
+    "advanced": {
+        "Generators": "Γεννήτριες",
+        "List Comprehensions": "Κατανοήσεις Λιστών",
+        "Lambda functions": "Συναρτήσεις Lambda",
+        "Multiple Function Arguments": "Πολλαπλά Ορίσματα Συνάρτησης",
+        "Regular Expressions": "Κανονικές Εκφράσεις",
+        "Exception Handling": "Διαχείριση Εξαιρέσεων",
+        "Sets": "Σύνολα",
+        "Serialization": "Σειριοποίηση",
+        "Partial functions": "Μερικές συναρτήσεις",
+        "Code Introspection": "Αυτοεπιθεώρηση Κώδικα",
+        "Closures": "Κλεισίματα",
+        "Decorators": "Διακοσμητές",
+        "Map, Filter, Reduce": "Χάρτης, Φίλτρο, Μείωση",
+        "Parsing CSV Files": "Ανάλυση αρχείων CSV"
+    }
+}

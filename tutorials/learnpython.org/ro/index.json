@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Bună, lume!",
+        "Variables and Types": "Variabile și tipuri",
+        "Lists": "Liste",
+        "Basic Operators": "Operatori de bază",
+        "String Formatting": "Formatarea Șirurilor de Caractere",
+        "Basic String Operations": "Operațiuni de bază cu șiruri de caractere",
+        "Conditions": "Condiții",
+        "Loops": "Bucle",
+        "Functions": "Funcții",
+        "Classes and Objects": "Clase și Obiecte",
+        "Dictionaries": "Dicționare",
+        "Modules and Packages": "Module și Pachete",
+        "Input and Output": "Intrare și Ieșire"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Începând",
+        "Movement with Functions": "Mișcare cu Funcții",
+        "Collecting items": "Colectarea obiectelor",
+        "Pushing objects": "Împingerea obiectelor",
+        "Printing on screen": "Afișarea pe ecran",
+        "Building objects": "Crearea obiectelor",
+        "Apply what you've learned": "Aplică ceea ce ai învățat"
+    },
+    "advanced": {
+        "Generators": "Generatoare",
+        "List Comprehensions": "Compresii de liste",
+        "Lambda functions": "Funcții lambda",
+        "Multiple Function Arguments": "Argumente Multiple pentru Funcții",
+        "Regular Expressions": "Expresii regulate",
+        "Exception Handling": "Gestionarea Excepțiilor",
+        "Sets": "Seturi",
+        "Serialization": "Serializare",
+        "Partial functions": "Funcții parțiale",
+        "Code Introspection": "Introspecție a codului",
+        "Closures": "Închideri",
+        "Decorators": "Decoratori",
+        "Map, Filter, Reduce": "Hartă, Filtru, Reduce",
+        "Parsing CSV Files": "Parcurgerea fișierelor CSV"
+    }
+}

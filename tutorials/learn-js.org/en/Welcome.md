@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the learn-js.org interactive JavaScript tutorial.
+Welcome to the learn-js.org interactive JavaScript tutorial. This website is proudly supported by [Boot.dev's Learn JavaScript course](https://www.boot.dev/courses/learn-javascript?promo=LEARNXORG). If you'd like to learn JavaScript from start to finish, [become a member and use code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% off your first year!
 
 Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the JavaScript programming language.
 

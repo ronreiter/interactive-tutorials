@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "नमस्ते, दुनिया!",
+        "Variables and Types": "वेरिएबल्स और प्रकार",
+        "Lists": "सूचियाँ",
+        "Basic Operators": "मूलभूत ऑपरेटर",
+        "String Formatting": "स्त्रिंग फॉर्मेटिंग",
+        "Basic String Operations": "बुनियादी स्ट्रिंग ऑपरेशन्स",
+        "Conditions": "शर्तें",
+        "Loops": "लूप्स",
+        "Functions": "फंक्शन्स",
+        "Classes and Objects": "कक्षाएं और ऑब्जेक्ट्स",
+        "Dictionaries": "शब्दकोश",
+        "Modules and Packages": "मॉड्यूल और पैकेज",
+        "Input and Output": "इनपुट और आउटपुट"
+    },
+    "coding-for-kids": {
+        "Starting Out": "शुरुआत करना",
+        "Movement with Functions": "फंक्शंस के साथ आंदोलन",
+        "Collecting items": "चीजें एकत्र करना",
+        "Pushing objects": "वस्तुओं को धक्का देना",
+        "Printing on screen": "स्क्रीन पर प्रिंटिंग",
+        "Building objects": "वस्तुओं का निर्माण",
+        "Apply what you've learned": "जो आपने सीखा उसे लागू करें"
+    },
+    "advanced": {
+        "Generators": "जनरेटर्स",
+        "List Comprehensions": "सूची समझ (List Comprehensions)",
+        "Lambda functions": "लैम्ब्डा फ़ंक्शंस",
+        "Multiple Function Arguments": "कई फ़ंक्शन तर्क",
+        "Regular Expressions": "नियमित अभिव्यक्तियाँ",
+        "Exception Handling": "अपवाद प्रबंधन",
+        "Sets": "सेट्स",
+        "Serialization": "सिरीयलाइज़ेशन",
+        "Partial functions": "आंशिक फलन",
+        "Code Introspection": "कोड अंतर्दृष्टि",
+        "Closures": "क्लोज़र्स",
+        "Decorators": "डेकोरेटर",
+        "Map, Filter, Reduce": "नक्शा, फिल्टर, घटाएं",
+        "Parsing CSV Files": "CSV फाइलों का पार्सिंग"
+    }
+}

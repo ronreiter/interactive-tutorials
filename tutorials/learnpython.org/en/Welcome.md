@@ -1,6 +1,6 @@
 # Welcome
 
-Welcome to the LearnPython.org interactive Python tutorial.
+Welcome to the LearnPython.org interactive Python tutorial. This website is proudly supported by [Boot.dev's Learn Python course](https://www.boot.dev/courses/learn-code-python?promo=LEARNXORG). If you'd like to learn Python from start to finish, [become a member and use code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% off your first year!
 
 Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the Python programming language.<br>
 
@@ -25,6 +25,8 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Classes and Objects]]
 - [[Dictionaries]]
 - [[Modules and Packages]]
+- [[Input and Output]]
+
 
 ### Coding for Kids
 - [Starting Out](https://codingforkids.io/play/python/intro-level1)
@@ -35,9 +37,6 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [Building objects](https://codingforkids.io/play/python/intro-level6)
 - [Apply what you've learned](https://codingforkids.io/play/python/intro-level7)
 
-### Data Science Tutorials
-- [[Numpy Arrays]]
-- [[Pandas Basics]]
 
 ### Advanced Tutorials
 
@@ -54,6 +53,7 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Closures]]
 - [[Decorators]]
 - [[Map, Filter, Reduce]]
+- [[Parsing CSV Files]]
 
 ### Other Python Tutorials
 

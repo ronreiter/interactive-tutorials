@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "مرحبًا، أيها العالم!",
+        "Variables and Types": "المتغيرات والأنواع",
+        "Lists": "القوائم",
+        "Basic Operators": "المشغلون الأساسيون",
+        "String Formatting": "تنسيق السلاسل",
+        "Basic String Operations": "عمليات النصوص الأساسية",
+        "Conditions": "الشروط",
+        "Loops": "الحلقات",
+        "Functions": "الوظائف",
+        "Classes and Objects": "الفئات والكائنات",
+        "Dictionaries": "القواميس",
+        "Modules and Packages": "الوحدات والحزم",
+        "Input and Output": "الإدخال والإخراج"
+    },
+    "coding-for-kids": {
+        "Starting Out": "البداية",
+        "Movement with Functions": "الحركة مع الوظائف",
+        "Collecting items": "جمع العناصر",
+        "Pushing objects": "دفع الأجسام",
+        "Printing on screen": "الطباعة على الشاشة",
+        "Building objects": "بناء الكائنات",
+        "Apply what you've learned": "طبق ما تعلمته"
+    },
+    "advanced": {
+        "Generators": "المولدات",
+        "List Comprehensions": "تراكيب القوائم",
+        "Lambda functions": "الدوال اللامبدا",
+        "Multiple Function Arguments": "متعددة الحجج الوظيفية",
+        "Regular Expressions": "التعابير النمطية",
+        "Exception Handling": "معالجة الاستثناءات",
+        "Sets": "المجموعات",
+        "Serialization": "التسلسل",
+        "Partial functions": "الدوال الجزئية",
+        "Code Introspection": "استبطان الشيفرة",
+        "Closures": "الإغلاقات",
+        "Decorators": "المُزَيِّنات",
+        "Map, Filter, Reduce": "خريطة، تصفية، تقليل",
+        "Parsing CSV Files": "تحليل ملفات CSV"
+    }
+}

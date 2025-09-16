@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Hej, Verden!",
+        "Variables and Types": "Variabler og Typer",
+        "Lists": "Lister",
+        "Basic Operators": "Grundlæggende Operatører",
+        "String Formatting": "Strengformatering",
+        "Basic String Operations": "Grundlæggende Strengoperationer",
+        "Conditions": "Betingelser",
+        "Loops": "Løkker",
+        "Functions": "Funktioner",
+        "Classes and Objects": "Klasser og objekter",
+        "Dictionaries": "Ordbøger",
+        "Modules and Packages": "Moduler og Pakker",
+        "Input and Output": "Input og output"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Starter ud",
+        "Movement with Functions": "Bevægelse med Funktioner",
+        "Collecting items": "Indsamling af genstande",
+        "Pushing objects": "Skubbe objekter",
+        "Printing on screen": "Udskrivning på skærm",
+        "Building objects": "Bygning af objekter",
+        "Apply what you've learned": "Anvend det, du har lært"
+    },
+    "advanced": {
+        "Generators": "Generatorer",
+        "List Comprehensions": "Lister Forståelse",
+        "Lambda functions": "Lambda-funktioner",
+        "Multiple Function Arguments": "Flere Funktionsargumenter",
+        "Regular Expressions": "Regulære Udtryk",
+        "Exception Handling": "Undtagelseshåndtering",
+        "Sets": "Sæt",
+        "Serialization": "Serialisering",
+        "Partial functions": "Delvise funktioner",
+        "Code Introspection": "Kodeintrospektion",
+        "Closures": "Lukninger",
+        "Decorators": "Dekoratorer",
+        "Map, Filter, Reduce": "Kort, Filter, Reducer",
+        "Parsing CSV Files": "Parsing CSV-filer"
+    }
+}

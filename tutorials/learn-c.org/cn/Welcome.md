@@ -1,6 +1,6 @@
 # 欢迎
 
-欢迎来到learn-c.org的免费交互式C语言教程。
+欢迎来到learn-c.org的免费交互式C语言教程。本站由 [Boot.dev 的《C 语言内存管理》课程](https://www.boot.dev/courses/learn-memory-management-c?promo=LEARNXORG) 荣誉赞助支持。想系统掌握 C 的内存管理？[成为会员并使用优惠码 LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) 可享第一年 25% 折扣！
 
 这个网站都是为每个希望学习C语言的人准备的，无论你是否是一个有经验的程序员。
 

@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "שלום, עולם!",
+        "Variables and Types": "משתנים וסוגים",
+        "Lists": "רשימות",
+        "Basic Operators": "אופרטורים בסיסיים",
+        "String Formatting": "עיצוב מחרוזות",
+        "Basic String Operations": "פעולות בסיסיות על מחרוזות",
+        "Conditions": "תנאים",
+        "Loops": "לולאות",
+        "Functions": "פונקציות",
+        "Classes and Objects": "מחלקות ואובייקטים",
+        "Dictionaries": "מילונים",
+        "Modules and Packages": "מודולים וחבילות",
+        "Input and Output": "קלט ופלט"
+    },
+    "coding-for-kids": {
+        "Starting Out": "מתחילים",
+        "Movement with Functions": "תנועה עם פונקציות",
+        "Collecting items": "איסוף פריטים",
+        "Pushing objects": "דחיפת אובייקטים",
+        "Printing on screen": "הדפסה על המסך",
+        "Building objects": "בניית אובייקטים",
+        "Apply what you've learned": "יישם את מה שלמדת"
+    },
+    "advanced": {
+        "Generators": "גנרטורים",
+        "List Comprehensions": "הבנת רשימות",
+        "Lambda functions": "פונקציות למבדה",
+        "Multiple Function Arguments": "ארגומנטים מרובים לפונקציות",
+        "Regular Expressions": "ביטויים רגולריים",
+        "Exception Handling": "טיפול בחריגות",
+        "Sets": "סטים",
+        "Serialization": "סדרתיות",
+        "Partial functions": "פונקציות חלקיות",
+        "Code Introspection": "בדיקת קוד",
+        "Closures": "סגירות",
+        "Decorators": "דקורטורים",
+        "Map, Filter, Reduce": "מפה, מסנן, צמצם",
+        "Parsing CSV Files": "ניתוח קבצי CSV"
+    }
+}

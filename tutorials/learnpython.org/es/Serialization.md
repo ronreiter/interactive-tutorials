@@ -1,28 +1,25 @@
-Tutorial
---------
+Python proporciona bibliotecas JSON integradas para codificar y decodificar JSON.
 
-Python provee libreías JSON embebidas para codificar y decodificar JSON.
+En Python 2.5, se usa el módulo simplejson, mientras que en Python 2.7, se usa el módulo json. Dado que este intérprete utiliza Python 2.7, estaremos usando json.
 
-En Python 2.5 se usa el módulo simplejson, mientras que en Python 2.7 es empleado el módulo json. Cómo éste intérprete usar Python 2.7, json será el que usemos.
-
-Para poder usar el módulo json, primero debemos importarlo:
+Para utilizar el módulo json, primero debe ser importado:
 
     import json
 
-Hay dos formatos básicos para los datos JSON, como cadena u objeto datastructure. El objeto datastructure, en Python, consiste en listas y diccionarios anidados uno dentro de otros. Los objetos datastructure permiten usar los métodos python para listas y diccionarios para agregar, listar, buscar y eliminar elementos del datastructure. El formato de cadena de texto se usa principalmente para pasar datos entre programas o cargarlos en un datastructure.
+Existen dos formatos básicos para los datos JSON: ya sea en una cadena o en la estructura de datos de objeto. La estructura de datos de objeto, en Python, consiste en listas y diccionarios anidados entre sí. La estructura de datos de objeto permite usar métodos de Python (para listas y diccionarios) para agregar, enumerar, buscar y eliminar elementos de la estructura de datos. El formato de cadena se utiliza principalmente para pasar los datos a otro programa o cargar en una estructura de datos.
 
-Para cargar un JSON de vuelta a una estructura de datos hay que usar el método "loads". Éste método coge un string y lo regreso dentro de un objeto datastructure de json:
+Para cargar JSON de nuevo a una estructura de datos, use el método "loads". Este método toma una cadena y la convierte de nuevo en la estructura de datos de objeto json:
 
-    import json
+    import json 
     print(json.loads(json_string))
 
-Para codificar una estructura de datos a JSON, hay que usar el método "dumps". Éste método coge un objeto y devuelve una cadena de texto:
+Para codificar una estructura de datos a JSON, use el método "dumps". Este método toma un objeto y devuelve una cadena:
 
     import json
     json_string = json.dumps([1, 2, 3, "a", "b", "c"])
     print(json_string)
 
-Python soporta un método de serialización de datos patentado llamado pickle (y una alternativa más rápida lamada cPickle).
+Python admite un método de serialización de datos propietario de Python llamado pickle (y una alternativa más rápida llamada cPickle).
 
 Puedes usarlo exactamente de la misma manera.
 
@@ -30,53 +27,4 @@ Puedes usarlo exactamente de la misma manera.
     pickled_string = pickle.dumps([1, 2, 3, "a", "b", "c"])
     print(pickle.loads(pickled_string))
 
-El objetivo de este ejercicio es imprimir la cadena JSON con el par clave-valor "Me" : 800 añadido.
-
-Tutorial Code
--------------
-
-import json
-
-# Arregla esta función, para que pueda añadirse el nombre
-# y el par salarial a salaries_json, y devolverlo
-def add_employee(salaries_json, name, salary):
-    # Add your code here
-
-    return salaries_json
-
-# test code
-salaries = '{"Alfred" : 300, "Jane" : 400 }'
-new_salaries = add_employee(salaries, "Me", 800)
-decoded_salaries = json.loads(new_salaries)
-print(decoded_salaries["Alfred"])
-print(decoded_salaries["Jane"])
-print(decoded_salaries["Me"])
-
-Expected Output
----------------
-
-test_output_contains("300")
-test_output_contains("400")
-test_output_contains("800")
-success_msg("Great work!")
-
-Solution
---------
-
-import json
-
-# Arregla esta función, para que pueda añadirse el nombre
-# y el par salarial a salaries_json, y devolverlo
-def add_employee(salaries_json, name, salary):
-    salaries = json.loads(salaries_json)
-    salaries[name] = salary
-
-    return json.dumps(salaries)
-
-# test code
-salaries = '{"Alfred" : 300, "Jane" : 400 }'
-new_salaries = add_employee(salaries, "Me", 800)
-decoded_salaries = json.loads(new_salaries)
-print(decoded_salaries["Alfred"])
-print(decoded_salaries["Jane"])
-print(decoded_salaries["Me"])
+El objetivo de este ejercicio es imprimir la cadena JSON con el par clave-valor "Me" : 800 añadido a ella.

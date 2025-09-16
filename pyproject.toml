@@ -13,6 +13,9 @@ gunicorn = "^21.2.0"
 python-geoip = "^1.2"
 
 
+[tool.poetry.group.dev.dependencies]
+openai = "^1.58.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

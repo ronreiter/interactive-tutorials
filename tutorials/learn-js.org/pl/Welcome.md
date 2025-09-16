@@ -1,7 +1,7 @@
 Polski
 ------
 
-Witaj w interaktywnym samouczku Java Script na stronie learnpython.org.
+Witaj w interaktywnym samouczku JavaScript na stronie learn-js.org. Ta strona jest dumnie wspierana przez [kurs „Naucz się JavaScriptu” od Boot.dev](https://www.boot.dev/courses/learn-javascript?promo=LEARNXORG). Chcesz nauczyć się JavaScriptu od A do Z? [Zostań członkiem i użyj kodu LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG), aby uzyskać 25% zniżki w pierwszym roku!
 
 Niezależnie od tego, czy masz doświadczenie w programowaniu, ta strona jest przeznaczona dla każdego, kto chce nauczyć się języka programowania Python.
 

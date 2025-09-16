@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Здравей, свят!",
+        "Variables and Types": "Променливи и типове",
+        "Lists": "Списъци",
+        "Basic Operators": "Основни оператори",
+        "String Formatting": "Форматиране на низове",
+        "Basic String Operations": "Основни операции със стрингове",
+        "Conditions": "Условия",
+        "Loops": "Цикли",
+        "Functions": "Функции",
+        "Classes and Objects": "Класове и обекти",
+        "Dictionaries": "Речници",
+        "Modules and Packages": "Модули и пакети",
+        "Input and Output": "Вход и изход"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Начало",
+        "Movement with Functions": "Движение с функции",
+        "Collecting items": "Събиране на предмети",
+        "Pushing objects": "Преместване на обекти",
+        "Printing on screen": "Печат на екрана",
+        "Building objects": "Създаване на обекти",
+        "Apply what you've learned": "Приложете наученото"
+    },
+    "advanced": {
+        "Generators": "Генератори",
+        "List Comprehensions": "Списъчни разбивки",
+        "Lambda functions": "Ламбда функции",
+        "Multiple Function Arguments": "Множество Функционални Аргументи",
+        "Regular Expressions": "Регулярни изрази",
+        "Exception Handling": "Обработка на изключения",
+        "Sets": "Множества",
+        "Serialization": "Сериализация",
+        "Partial functions": "Частични функции",
+        "Code Introspection": "Инспекция на кода",
+        "Closures": "Затваряния",
+        "Decorators": "Декоратори",
+        "Map, Filter, Reduce": "Карта, Филтър, Намали",
+        "Parsing CSV Files": "Парсиране на CSV файлове"
+    }
+}

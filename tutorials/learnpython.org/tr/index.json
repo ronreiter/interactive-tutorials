@@ -1,0 +1,42 @@
+{
+    "basics": {
+        "Hello, World!": "Merhaba, Dünya!",
+        "Variables and Types": "Değişkenler ve Türler",
+        "Lists": "Listeler",
+        "Basic Operators": "Temel Operatörler",
+        "String Formatting": "String Biçimlendirme",
+        "Basic String Operations": "Temel Dize İşlemleri",
+        "Conditions": "Koşullar",
+        "Loops": "Döngüler",
+        "Functions": "Fonksiyonlar",
+        "Classes and Objects": "Sınıflar ve Nesneler",
+        "Dictionaries": "Sözlükler",
+        "Modules and Packages": "Modüller ve Paketler",
+        "Input and Output": "Girdi ve Çıktı"
+    },
+    "coding-for-kids": {
+        "Starting Out": "Başlarken",
+        "Movement with Functions": "Fonksiyonlarla Hareket",
+        "Collecting items": "Eşya Toplama",
+        "Pushing objects": "Nesneleri İtme",
+        "Printing on screen": "Ekrana yazdırma",
+        "Building objects": "Nesne Oluşturma",
+        "Apply what you've learned": "Öğrendiklerinizi Uygulayın"
+    },
+    "advanced": {
+        "Generators": "Jeneratörler",
+        "List Comprehensions": "Liste Anlamaları",
+        "Lambda functions": "Lambda fonksiyonları",
+        "Multiple Function Arguments": "Birden Fazla Fonksiyon Argümanı",
+        "Regular Expressions": "Düzenli İfadeler",
+        "Exception Handling": "İstisna Yönetimi",
+        "Sets": "Kümeleme",
+        "Serialization": "Serileştirme",
+        "Partial functions": "Kısmi fonksiyonlar",
+        "Code Introspection": "Kod İncelemesi",
+        "Closures": "Kapanışlar",
+        "Decorators": "Dekoratörler",
+        "Map, Filter, Reduce": "Harita, Filtre, Azalt",
+        "Parsing CSV Files": "CSV Dosyalarını Ayrıştırma"
+    }
+}

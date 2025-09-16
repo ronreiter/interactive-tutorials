@@ -31,7 +31,7 @@ After we are done using the dynamically allocated struct, we can release it usin
 
     free(myperson);
 
-Note that the free does not delete the `myperson` variable itself, it simply releases the data that it points to. The `myperson` variable will still point to somewhere in the memory - but after calling `myperson` we are not allowed to access that area anymore. We must not use that pointer again until we allocate new data using it.
+Note that the free does not delete the `myperson` variable itself, it simply releases the data that it points to. The `myperson` variable will still point to somewhere in the memory - but after calling `free(myperson)` we are not allowed to access that area anymore. We must not use that pointer again until we allocate new data using it.
 
 Exercise
 --------

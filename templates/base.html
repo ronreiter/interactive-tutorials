@@ -172,11 +172,11 @@
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-{% if is_german_user %}
-  {% include "popup-cfk.html" %}
-{% else %}
-  {% include "popup-cfk.html" %}
-{% endif %}
+{#{% if is_german_user %}#}
+{#  {% include "popup-cfk.html" %}#}
+{#{% else %}#}
+{#  {% include "popup-cfk.html" %}#}
+{#{% endif %}#}
 
 
 <script src="/static/js/prism.js"></script>
@@ -204,7 +204,7 @@
 <script src="/static/js/bootstrap.min.js"></script>
 <script src="/static/js/bootbox.min.js"></script>
 
-{% if domain_data.language == "python" and domain_data.language_code == 'en'  %}
+{% if domain_data.language == "python" %}
 <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
 <script src="/static/js/datacamp.js"></script>
 {% endif %}
