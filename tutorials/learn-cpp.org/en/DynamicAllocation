@@ -1,0 +1,48 @@
+
+# Dynamic Allocation in C++
+
+## Tutorial
+Dynamic memory allocation in C++ allows memory to be allocated at runtime using the `new` keyword. This is useful when the size of data is unknown until the program is running. Once dynamically allocated, memory must be manually deallocated using the `delete` keyword to avoid memory leaks.
+
+### Key points:
+- Use `new` to allocate memory.
+- Use `delete` to free memory when it’s no longer needed.
+- It’s typically allocated on the heap.
+
+## Exercise
+Write a program that dynamically allocates memory for an integer, assigns it a value, and then prints that value. Afterward, deallocate the memory using `delete`.
+
+## Tutorial Code
+```cpp
+#include <iostream>
+
+int main() {
+    int* ptr = nullptr; // Dynamically allocate memory for an int
+    
+    // Assign a value to the allocated memory
+    
+    // Print the value
+    
+    // Deallocate memory
+    
+    return 0;
+}
+```
+
+## Expected Output
+```
+The value of the dynamically allocated integer is: 42
+```
+
+## Solution
+```cpp
+#include <iostream>
+
+int main() {
+    int* ptr = new int;  // Dynamically allocate memory for an int
+    *ptr = 42;           // Assign a value to the allocated memory
+    std::cout << "The value of the dynamically allocated integer is: " << *ptr << std::endl;
+    delete ptr;          // Deallocate memory
+    return 0;
+}
+```
