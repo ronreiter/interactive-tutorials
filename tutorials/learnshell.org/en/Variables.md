@@ -12,7 +12,7 @@ Referencing the variables
 A backslash "\\" is used to escape special character meaning
 
     PRICE_PER_APPLE=5
-    echo "The price of an Apple today is: \$HK $PRICE_PER_APPLE"
+    echo "The price of an Apple today is: \$ $PRICE_PER_APPLE"
 
 Encapsulating the variable name with ${} is used to avoid ambiguity
 
@@ -27,7 +27,8 @@ Encapsulating the variable name with "" will preserve any white space values
 Variables can be assigned with the value of a command output. This is referred to as substitution. Substitution can be done by encapsulating the command with `` (known as back-ticks) or with $()
 
     FILELIST=`ls`
-    FileWithTimeStamp=/tmp/my-dir/file_$(/bin/date +%Y-%m-%d).txt
+    echo "The current directory contains the following files and folders:"$FILELIST
+    echo "The current directory contains the following files and folders:"$(`ls`)
 
 Note that when the script runs, it will run the command inside the $() parenthesis and capture its output.
 
