@@ -15,6 +15,7 @@ learn-golang.org is still under construction - If you wish to contribute tutoria
 - [[Arrays]]
 - [[Slices]]
 - [[If-Else]]
+- [[Switches]]
 - [[Loops]]
 - [[Functions]]
 - [[The fmt module]]
