@@ -54,7 +54,7 @@ In the last module, we checked if it's raining and we gave a message if it is ra
     }
 
 ## Example
-Let's write an example code to check if the user's name is `John` or not
+Let's write an example code to check if the user's name is `John` or not.
 
     userName := "John"
 
@@ -66,7 +66,7 @@ Let's write an example code to check if the user's name is `John` or not
     }
 
     // let's try again changing the username variable
-    userName := "Mathew"
+    userName = "Mathew"
 
     // prints You are not John
     if userName == "John" {
