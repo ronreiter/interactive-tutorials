@@ -1,0 +1,45 @@
+{
+  "basics": {
+    "Hello, World!": "سالام، دۇنيا!",
+    "Variables and Types": "ئۆزگەرگۈچىلەر ۋە تۈرلەر",
+    "Lists": "تىزىملىكلەر",
+    "Basic Operators": "ئاساسىي ئەمەللەر",
+    "String Formatting": "ھەرىپلەر فورماتى",
+    "Basic String Operations": "ئاساسىي ھەرىپ مەشغۇلاتلىرى",
+    "Conditions": "شەرتلەر",
+    "Loops": "ھالقىلار",
+    "Functions": "فۇنكسىيەلەر",
+    "Classes and Objects": "دەرىجە ۋە ئوبيېكتلار",
+    "Dictionaries": "لۇغەتلەر",
+    "Modules and Packages": "مودۇللار ۋە بوغچىلار",
+    "Input and Output": "كىرگۈزۈش ۋە چىقىرىش"
+  },
+  "coding-for-kids": {
+    "Starting Out": "باشلاش",
+    "Movement with Functions": "فۇنكسىيە بىلەن ھەرىكەت",
+    "Collecting items": "نەرسىلەرنى يىغىش",
+    "Pushing objects": "نەرسىلەرنى ئېتىش",
+    "Printing on screen": "ئېكرانغا چىقىرىش",
+    "Building objects": "ئوبىكىت قۇرۇش",
+    "Apply what you've learned": "ئۆگەنگەنلىرىڭىزنى قوللىنىڭ"
+  },
+  "advanced": {
+    "Generators": "ياسىغۇچىلار",
+    "List Comprehensions": "تىزىملىك چۈشىنىش",
+    "Lambda functions": "لامبدا فۇنكسىيەلەر",
+    "Multiple Function Arguments": "كۆپ فۇنكسىيە پارامىتىرلىرى",
+    "Regular Expressions": "دائىملىق ئىپادىلەر",
+    "Exception Handling": "خاتالىق باشقۇرۇش",
+    "Sets": "يۈرۈشلەر",
+    "Serialization": "تەرتىپلەش",
+    "Partial functions": "قىسمەن فۇنكسىيەلەر",
+    "Code Introspection": "كود تەكشۈرۈش",
+    "Closures": "يېپىق فۇنكسىيەلەر",
+    "Decorators": "بېزەگۈچىلەر",
+    "Map, Filter, Reduce": "خەرىتە، سۈزگۈچ، ئازايتىش",
+    "Parsing CSV Files": "CSV ھۆججەتلىرىنى يىشىش"
+  },
+  "other-tutorials": {
+    "DataCamp": "DataCamp"
+  }
+}
