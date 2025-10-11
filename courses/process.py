@@ -4,6 +4,7 @@ import json
 import re
 
 data = {}
+print("Hello World");
 
 for f in glob.glob("*.csv"):
     d = csv.DictReader(open(f))
