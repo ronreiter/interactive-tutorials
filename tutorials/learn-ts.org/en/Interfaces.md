@@ -32,7 +32,7 @@ Tutorial Code
     // write the interface here
 
     let myCar: Car = {
-        model: "Toyota",
+        model: "Tesla",
         year: 2022
     };
 
@@ -40,7 +40,7 @@ Tutorial Code
 
 Expected Output
 -------------------
-  Tesla
+Tesla
 
 Solution
 -----------
