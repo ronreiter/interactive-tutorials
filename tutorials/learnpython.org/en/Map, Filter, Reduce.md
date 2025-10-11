@@ -217,7 +217,7 @@ my_numbers = [4, 6, 9, 23, 5]
 
 # Fix all three respectively.
 map_result = list(map(lambda x: x, my_floats))
-filter_result = list(filter(lambda name: name, my_names, my_names))
+filter_result = list(filter(lambda name: name, my_names))
 reduce_result = reduce(lambda num1, num2: num1 * num2, my_numbers, 0)
 
 print(map_result)
