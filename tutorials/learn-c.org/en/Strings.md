@@ -5,7 +5,7 @@ Tutorial
 
 Strings in C are actually arrays of characters. Although using pointers in C is an advanced subject, fully explained later on, we will use pointers to a character array to define simple strings, in the following manner:
 
-    char * name = "John Smith";
+    const char * name = "John Smith";
 
 This method creates a string which we can only use for reading. 
 If we wish to define a string which can be manipulated, we will need to define it as a local character array:
@@ -28,7 +28,7 @@ does not know the length of the string - only the compiler knows it according to
 
 We can use the `printf` command to format a string together with other strings, in the following manner:
 
-    char * name = "John Smith";
+    const char * name = "John Smith";
     int age = 27;
 
     /* prints out 'John Smith is 27 years old.' */
@@ -40,7 +40,7 @@ Notice that when printing strings, we must add a newline (`\n`) character so tha
 
 The function 'strlen' returns the length of the string which has to be passed as an argument:
 
-    char * name = "Nikhil";
+    const char * name = "Nikhil";
     printf("%d\n",strlen(name));        
 
 ### String comparison
@@ -49,7 +49,7 @@ The function `strncmp` compares between two strings, returning the number 0 if t
 The arguments are the two strings to be compared, and the maximum comparison length. There is also an unsafe version of this function
 called `strcmp`, but it is not recommended to use it. For example:
 
-    char * name = "John";
+    const char * name = "John";
 
     if (strncmp(name, "John", 4) == 0) {
         printf("Hello, John!\n");
@@ -110,7 +110,7 @@ Solution
     #include <stdio.h>
     #include <string.h>
     int main() {
-      char * first_name = "John";
+      const char * first_name = "John";
       char last_name[] = "Doe";
       char name[100];
 
