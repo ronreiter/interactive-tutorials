@@ -46,6 +46,8 @@ Tutorial Code
 
     #include <stdio.h>
 
+    /* define your function here (don't forget to declare it) */
+
     int main() {
         /* testing code */
         printf("0! = %i\n", factorial(0));
@@ -53,8 +55,7 @@ Tutorial Code
         printf("3! = %i\n", factorial(3));
         printf("5! = %i\n", factorial(5));
     }
-    
-    /* define your function here (don't forget to declare it) */
+ 
 
 Expected Output
 ---------------
