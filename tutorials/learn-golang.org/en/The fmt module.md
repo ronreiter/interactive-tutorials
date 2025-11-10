@@ -77,7 +77,7 @@ func main() {
 
 Expected Output
 ---------------
-Lord of the Rings is Leonardo's favourite movie
+Tenet is Nolan's favourite movie
 
 Solution
 --------
@@ -86,8 +86,8 @@ package main
 import "fmt"
 
 func main() {
-    name := "Leonardo"
-    movie := "Lord of the Rings"
+    name := "Nolan"
+    movie := "Tenet"
 
     fmt.Printf("%s is %s's favourite movie", movie, name)
 }
