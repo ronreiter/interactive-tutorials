@@ -1,6 +1,6 @@
 # Witamy
 
-Witamy w interaktywnym tutorialu Pythona na LearnPython.org. Ta strona jest dumnie wspierana przez [kurs "Naucz się Pythona" od Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Chcesz nauczyć się Pythona od A do Z? [Zostań członkiem i użyj kodu LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG), aby uzyskać 25% zniżki w pierwszym roku!
+Witamy w interaktywnym tutorialu Pythona na LearnPython.org.
 
 Niezależnie od tego, czy jesteś doświadczonym programistą, czy nie, ta strona jest przeznaczona dla wszystkich, którzy chcą nauczyć się języka programowania Python.<br>
 
