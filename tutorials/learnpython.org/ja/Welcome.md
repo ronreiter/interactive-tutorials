@@ -1,6 +1,6 @@
 # ようこそ
 
-LearnPython.orgのインタラクティブなPythonチュートリアルへようこそ。 本サイトは[Boot.devの「Pythonを学ぶ」コース](https://www.boot.dev/courses/learn-python?promo=LEARNXORG)によって支援されています。 はじめからしっかりPythonを学びたい方は、[メンバーになりコード LEARNXORG を使用](https://www.boot.dev/pricing?promo=LEARNXORG)して初年度25%オフをご利用ください。
+LearnPython.orgのインタラクティブなPythonチュートリアルへようこそ。
 
 あなたが経験豊富なプログラマーであろうとなかろうと、このウェブサイトはPythonプログラミング言語を学びたいすべての人を対象としています。<br>
 

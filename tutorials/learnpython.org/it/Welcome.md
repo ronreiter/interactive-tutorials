@@ -1,6 +1,6 @@
 # Benvenuto
 
-Benvenuto al tutorial interattivo di Python su LearnPython.org. Questo sito è orgogliosamente supportato dal [corso Impara Python di Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Se vuoi imparare Python dall’inizio alla fine, [diventa membro e usa il codice LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) per il 25% di sconto sul primo anno!
+Benvenuto al tutorial interattivo di Python su LearnPython.
 
 Che tu sia un programmatore esperto o meno, questo sito è destinato a chiunque desideri imparare il linguaggio di programmazione Python.<br>
 
