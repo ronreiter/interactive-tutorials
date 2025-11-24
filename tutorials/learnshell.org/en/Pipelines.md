@@ -19,7 +19,7 @@ Then you want to see only the first 10 results
 
 Grep searches for patterns in each file. Patterns is one or more patterns separated by newline characters, and grep prints each line that matches a pattern. Typically patterns should be quoted when grep is used in a shell command.
 
-    ls / | grep  # This will grab any line/file that has a matching pattern in it
+    ls / | grep 'pattern' # This will grab any line/filename that has a matching pattern in it
 
 Exercise
 --------
