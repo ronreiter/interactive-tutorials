@@ -57,9 +57,11 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 
 ### Other Python Tutorials
 
-- [DataCamp](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) has tons of great interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/1012793/13294?sharedId=learnpython.org) covering data manipulation, data visualization, statistics, machine learning, and more
+- [DataCamp](https://datacamp.pxf.io/c/67577/2990824/13294?sharedid=learnpython.org) has tons of great interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/2990824/13294?sharedid=learnpython.org) covering data manipulation, data visualization, statistics, machine learning, and more
 - Read [Python Tutorials and References](http://www.afterhoursprogramming.com/index.php?article=181) course from After Hours Programming
 
 ### Contributing Tutorials
 
 Read more here: [[Contributing Tutorials]]
+
+This site is generously supported by [DataCamp](https://datacamp.pxf.io/c/67577/2990824/13294?sharedid=learnpython.org). DataCamp offers online interactive [Python Tutorials](https://datacamp.pxf.io/c/67577/2990824/13294?sharedid=learnpython.org) for Data Science. Join over 17 million other learners and get started learning Python for data science today!
