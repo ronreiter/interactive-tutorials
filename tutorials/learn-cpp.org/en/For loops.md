@@ -55,7 +55,19 @@ Some other modern programming languages reference to the technique in the exampl
     }
 
     /*
-      Warning: the example above will reference the original memory of arr[] and has write-access!
+      The example above will creates a new integer n and copies the array element's value in every iteration.
+      Any modification to n inside the loop would only change the local copy n and would not affect the original
+      array element in arr
+    */
+
+    for(int &n : arr)
+    {
+        n = n + 1;
+        cout << n << endl;
+    }
+
+    /*
+      Warning: This example above will reference the original memory of arr[] and has write-access!
       
       As you often don't need to write to that adress-space, you should consider to access it read-only for safety reasons.
       To avoid write-access, you might consider using a const-reference like shown below,

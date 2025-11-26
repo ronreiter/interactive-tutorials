@@ -209,7 +209,7 @@ def init_tutorials():
 
                 tutorial_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)
 
-                tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n")
+                tutorial_dict["text"] = open(tutorial_path, encoding="utf-8").read().replace("\r\n", "\n")
 
                 if domain == "learnpython.org":
                     # Handle logic specific for `learnpython.org`
