@@ -8,7 +8,7 @@ une boucle foreach.
 
 ### Boucle for
 
-Les boudles for sont très utiles quand on a besoin d'itérer sur un
+Les boucles for sont très utiles quand on a besoin d'itérer sur un
 tableau et de faire référence aux membres du tableau en utilisant un
 index mobile. Par exemple, disons qu'on a une liste de nombres
 impairs. Pour les imprimer, on doit faire référence à chaque élément
@@ -37,7 +37,7 @@ La première ligne de la boucle for définit 3 parties:
 
 ### Boucle foreach
 
-La boucle foreach itére sur un élément itérable tel qu'un tableau ou
+La boucle foreach itère sur un élément itérable tel qu'un tableau ou
 un objet, en fournissant les membres un par un à une variable spécifique.
 
 Par exemple, disons que nous souhaitons créer une liste de tous les
@@ -53,7 +53,7 @@ variable `$odd_number`.
       echo $odd_number . "\n";
     }
 
-Quand on itére parmi des tableaux à clés, on peut utiliser la syntaxe
+Quand on itère parmi des tableaux à clés, on peut utiliser la syntaxe
 suivante :
 
     $phone_numbers = [
