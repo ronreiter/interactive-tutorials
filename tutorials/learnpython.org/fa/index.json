@@ -1,0 +1,45 @@
+{
+    "basics": {
+        "Hello, World!": "سلام، دنیا!",
+        "Variables and Types": "متغیرها و نوع‌ها",
+        "Lists": "لیست‌ها",
+        "Basic Operators": "عملگرهای پایه",
+        "String Formatting": "قالب‌بندی رشته",
+        "Basic String Operations": "عملیات متنی پایه",
+        "Conditions": "شرایط",
+        "Loops": "حلقه‌ها",
+        "Functions": "توابع",
+        "Classes and Objects": "کلاس‌ها و شیءها",
+        "Dictionaries": "دیکشنری‌ها",
+        "Modules and Packages": "ماژول‌ها و بسته‌ها",
+        "Input and Output": "ورودی و خروجی"
+    },
+    "coding-for-kids": {
+        "Starting Out": "شروع",
+        "Movement with Functions": "حرکت با توابع",
+        "Collecting items": "جمع‌آوری آیتم‌ها",
+        "Pushing objects": "هل دادن اشیاء",
+        "Printing on screen": "چاپ روی صفحه",
+        "Building objects": "ساخت اشیاء",
+        "Apply what you've learned": "اعمال آنچه آموخته‌اید"
+    },
+    "advanced": {
+        "Generators": "ژنراتورها",
+        "List Comprehensions": "لیست کامپرهنشن",
+        "Lambda functions": "توابع lambda",
+        "Multiple Function Arguments": "آرگومان‌های چندگانه تابع",
+        "Regular Expressions": "عبارات منظم",
+        "Exception Handling": "مدیریت استثنا",
+        "Sets": "مجموعه‌ها",
+        "Serialization": "سریال‌سازی",
+        "Partial functions": "توابع جزئی",
+        "Code Introspection": "بازبینی کد",
+        "Closures": "closure‌ها",
+        "Decorators": "دکوراتورها",
+        "Map, Filter, Reduce": "Map، Filter، Reduce",
+        "Parsing CSV Files": "تحلیل فایل‌های CSV"
+    },
+    "other-tutorials": {
+        "DataCamp": "DataCamp"
+    }
+}

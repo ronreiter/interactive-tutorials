@@ -5247,6 +5247,13 @@ window.CodeMirror = (function() {
       if (code <= 0xff) return lowTypes.charAt(code);
       else if (0x590 <= code && code <= 0x5f4) return "R";
       else if (0x600 <= code && code <= 0x6ff) return arabicTypes.charAt(code - 0x600);
+      // Treat Arabic Supplement, Arabic Extended-A and Presentation Forms
+      // (which contain Persian/Farsi-specific letters) as AL ("r")
+      // so Persian text is handled like Arabic for bidi ordering.
+      else if ((0x750 <= code && code <= 0x77f) ||
+        (0xfb50 <= code && code <= 0xfdff) ||
+        (0xfe70 <= code && code <= 0xfeff)) return "r";
+      else if (0x700 <= code && code <= 0x8ac) return "r";
       else if (0x700 <= code && code <= 0x8ac) return "r";
       else return "L";
     }

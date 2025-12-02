@@ -1,6 +1,7 @@
 languages = [
     {"code": "en", "name": "English", "native_name": "English"},
     {"code": "es", "name": "Spanish", "native_name": "Español"},
+    {"code": "fa", "name": "Persian", "native_name": "فارسی"},
     {"code": "fr", "name": "French", "native_name": "Français"},
     {"code": "de", "name": "German", "native_name": "Deutsch"},
     {"code": "zh", "name": "Chinese", "native_name": "中文"},
