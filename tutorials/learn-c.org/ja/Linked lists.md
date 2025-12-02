@@ -1,37 +1,29 @@
 チュートリアル
 -------------
 
-### Introduction
+### イントロダクション
 
-Linked lists are the best and simplest example of a dynamic data structure that uses pointers for its implementation.
-However, understanding pointers is crucial to understanding how linked lists work, so if you've skipped the pointers
-tutorial, you should go back and redo it. You must also be familiar with dynamic memory allocation and structures.
+連結リストは、ポインタを用いて実装する動的データ構造の最も優れた、そして最もシンプルな例です。
+しかし、連結リストの仕組みを理解するには、ポインタを理解することが重要です。そのため、ポインタのチュートリアルをスキップした場合は、戻ってもう一度学習してください。また、動的メモリ割り当てと構造についても理解しておく必要があります。
 
-Essentially, linked lists function as an array that can grow and shrink as needed, from any point in the array.
+基本的に、連結リストは、配列内の任意の位置から必要に応じて拡大または縮小できる配列として機能します。
 
-Linked lists have a few advantages over arrays:
+連結リストには、配列に比べていくつかの利点があります。
 
-1. Items can be added or removed from the middle of the list
-2. There is no need to define an initial size
+1. リストの途中から項目を追加または削除できます。
+2. 初期サイズを定義する必要はありません。
 
-However, linked lists also have a few disadvantages:
+しかし、連結リストにはいくつかの欠点もあります。
 
-1. There is no "random" access - it is impossible to reach the nth item in the array without first iterating over
-all items up until that item. This means we have to start from the beginning of the list and count how many times
-we advance in the list until we get to the desired item.
-2. Dynamic memory allocation and pointers are required, which complicates the code and increases the risk of
-memory leaks and segment faults.
-3. Linked lists have a much larger overhead over arrays, since linked list items are dynamically allocated (which
-is less efficient in memory usage) and each item in the list also must store an additional pointer.
+1. 「ランダム」アクセスが不可能です。配列のn番目の項目に到達するには、まずその項目までのすべての項目を反復処理する必要があります。つまり、リストの先頭から始めて、目的の項目に到達するまでリスト内を何回進んだかを数える必要があります。
+2. 動的なメモリ割り当てとポインタが必要となるため、コードが複雑になり、メモリリークやセグメントフォールトのリスクが高まります。
+3. 連結リストは配列よりもオーバーヘッドがはるかに大きくなります。これは、連結リストの項目が動的に割り当てられるため（メモリ使用効率が低い）、リスト内の各項目に追加のポインタを格納する必要があるためです。
 
-### What is a linked list?
+### リンクリストとは何か？
 
-A linked list is a set of dynamically allocated nodes, arranged in such a way that each node contains one value
-and one pointer. The pointer always points to the next member of the list. If the pointer is NULL, then it is
-the last node in the list.
+リンクリストは、動的に割り当てられたノードの集合であり、各ノードが1つの値と1つのポインタを持つように配置されています。ポインタは常にリストの次のメンバーを指します。ポインタがNULLの場合、リストの最後のノードを指します。
 
-A linked list is held using a local pointer variable which points to the first item of the list. If that pointer
-is also NULL, then the list is considered to be empty.
+リンクリストは、リストの最初の項目を指すローカルポインタ変数を使用して保持されます。そのポインタもNULLの場合、リストは空であるとみなされます。
 
         ------------------------------              ------------------------------
         |              |             |            \ |              |             |
@@ -39,16 +31,16 @@ is also NULL, then the list is considered to be empty.
         |              |             |            / |              |             |
         ------------------------------              ------------------------------
 
-Let's define a linked list node:
+リンク リスト ノードを定義する:
 
     typedef struct node {
         int val;
         struct node * next;
     } node_t;
 
-Notice that we are defining the struct in a recursive manner, which is possible in C. Let's name our node type `node_t`.
+構造体を再帰的に定義していることに注意してください。これはC言語でも可能です。ノード型の名前を「node_t」としましょう。
 
-Now we can use the nodes. Let's create a local variable which points to the first item of the list (called `head`).
+これでノードを使用できるようになりました。リストの最初の項目を指すローカル変数（「head」）を作成しましょう。
 
     node_t * head = NULL;
     head = (node_t *) malloc(sizeof(node_t));
@@ -59,10 +51,10 @@ Now we can use the nodes. Let's create a local variable which points to the firs
     head->val = 1;
     head->next = NULL;
 
-We've just created the first variable in the list. We must set the value, and the next item to be empty, if we want
-to finish populating the list. Notice that we should always check if malloc returned a NULL value or not.
+リストの最初の変数を作成しました。リストへのデータの追加を完了するには、値を設定し、次の項目を空にする必要があります。
+malloc が NULL 値を返したかどうかを常に確認する必要があることに注意してください。
 
-To add a variable to the end of the list, we can just continue advancing to the next pointer:
+リストの末尾に変数を追加するには、次のポインタまで進み続けます。
 
     node_t * head = NULL;
     head = (node_t *) malloc(sizeof(node_t));
@@ -71,14 +63,11 @@ To add a variable to the end of the list, we can just continue advancing to the 
     head->next->val = 2;
     head->next->next = NULL;
 
-This can go on and on, but what we should actually do is advance to the last item of the list, until the `next` variable
-will be `NULL`.
+これを延々と続けることもできますが、実際に行うべきことは、`next` 変数が `NULL` になるまで、リストの最後の項目まで進むことです。
 
-### Iterating over a list
+### リストの反復処理
 
-Let's build a function that prints out all the items of a list. To do this, we need to use a `current` pointer
-that will keep track of the node we are currently printing. After printing the value of the node, we set the `current`
-pointer to the next node, and print again, until we've reached the end of the list (the next node is NULL).
+リストのすべての項目を出力する関数を作成しましょう。そのためには、現在出力中のノードを追跡する「current」ポインタを使用する必要があります。ノードの値を出力した後、「current」ポインタを次のノードに設定し、リストの末尾に達するまで（次のノードはNULLです）、再度出力します。
 
     void print_list(node_t * head) {
         node_t * current = head;
@@ -89,10 +78,9 @@ pointer to the next node, and print again, until we've reached the end of the li
         }
     }
 
-### Adding an item to the end of the list
+### リストの最後に項目を追加する
 
-To iterate over all the members of the linked list, we use a pointer called `current`. We set it to start from the head
-and then in each step, we advance the pointer to the next item in the list, until we reach the last item.
+連結リストのすべてのメンバーを反復処理するには、「current」というポインタを使用します。このポインタを先頭から開始するように設定し、各ステップでポインタをリストの次の項目に進め、最後の項目に到達するまで続けます。
 
     void push(node_t * head, int val) {
         node_t * current = head;
@@ -100,27 +88,25 @@ and then in each step, we advance the pointer to the next item in the list, unti
             current = current->next;
         }
 
-        /* now we can add a new variable */
+        /* 新しい変数を追加できるようになった */
         current->next = (node_t *) malloc(sizeof(node_t));
         current->next->val = val;
         current->next->next = NULL;
     }
 
-The best use cases for linked lists are stacks and queues, which we will now implement:
+リンク リストの最適な使用例はスタックとキューです。これらをここで実装します。
 
-### Adding an item to the beginning of the list (pushing to the list)
+### リストの先頭にアイテムを追加する（リストにプッシュする）
 
-To add to the beginning of the list, we will need to do the following:
+リストの先頭に追加するには、以下の手順が必要です。
 
-1. Create a new item and set its value
-2. Link the new item to point to the head of the list
-3. Set the head of the list to be our new item
+1. 新しい項目を作成し、その値を設定します。
+2. 新しい項目をリストの先頭にリンクします。
+3. リストの先頭を新しい項目に設定します。
 
-This will effectively create a new head to the list with a new value, and keep the rest of the list linked to it.
+これにより、リストに新しい値を持つ新しいヘッドが作成され、リストの残りの部分はそれにリンクされたままになります。
 
-Since we use a function to do this operation, we want to be able to modify the head variable. To do this, we must
-pass a pointer to the pointer variable (a double pointer) so we will be able to modify the pointer itself.
-
+この操作には関数を使用するため、ヘッド変数を変更できるようにする必要があります。そのためには、ポインタ変数へのポインタ（ダブルポインタ）を渡す必要があります。これにより、ポインタ自体を変更できるようになります。
 
     void push(node_t ** head, int val) {
         node_t * new_node;
@@ -132,15 +118,15 @@ pass a pointer to the pointer variable (a double pointer) so we will be able to 
     }
 
 
-### Removing the first item (popping from the list)
+### 最初の項目を削除する（リストからポップする）
 
-To pop a variable, we will need to reverse this action:
+変数をポップするには、このアクションを逆に実行する必要があります。
 
-1. Take the next item that the head points to and save it
-2. Free the head item
-3. Set the head to be the next item that we've stored on the side
+1. ヘッドが指している次の項目を取得して保存します。
+2. ヘッド項目を解放します。
+3. サイドに格納した次の項目をヘッドに設定します。
 
-Here is the code:
+コードは次のとおりです。
 
     int pop(node_t ** head) {
         int retval = -1;
@@ -159,29 +145,27 @@ Here is the code:
     }
 
 
-### Removing the last item of the list
+### リストの最後の項目を削除する
 
-Removing the last item from a list is very similar to adding it to the end of the list, but with one big exception -
-since we have to change one item before the last item, we actually have to look two items ahead and see if the next
-item is the last one in the list:
+リストから最後の項目を削除することは、リストの末尾に追加することと非常に似ていますが、大きな違いが 1 つあります。最後の項目の 1 つ前の項目を変更する必要があるため、実際には 2 つ先の項目を調べて、次の項目がリストの最後の項目であるかどうかを確認する必要があります。:
 
 
     int remove_last(node_t * head) {
         int retval = 0;
-        /* if there is only one item in the list, remove it */
+        /* リストに項目が1つしかない場合はそれを削除します */
         if (head->next == NULL) {
             retval = head->val;
             free(head);
             return retval;
         }
 
-        /* get to the second to last node in the list */
+        /* リストの最後から2番目のノードに移動する */
         node_t * current = head;
         while (current->next->next != NULL) {
             current = current->next;
         }
         
-        /* now current points to the second to last item of the list, so let's remove current->next */
+        /* 現在、currentはリストの最後から2番目の項目を指しているので、current->nextを削除します */
         retval = current->next->val;
         free(current->next);
         current->next = NULL;
@@ -190,20 +174,19 @@ item is the last one in the list:
     }
 
 
-### Removing a specific item
+### 特定のアイテムを削除する
 
-To remove a specific item from the list, either by its index from the beginning of the list or by its value, we will
-need to go over all the items, continuously looking ahead to find out if we've reached the node before the item
-we wish to remove. This is because we need to change the location to where the previous node points to as well.
+リストから特定の項目を削除するには、リストの先頭からのインデックス、または値のいずれかで、すべての項目を調べ、削除したい項目の前のノードに到達しているかどうかを確認する必要があります。
+これは、前のノードが指している場所にも位置を変更する必要があるためです。
 
-Here is the algorithm:
+アルゴリズムは次のとおり:
 
-1. Iterate to the node before the node we wish to delete
-2. Save the node we wish to delete in a temporary pointer
-3. Set the previous node's next pointer to point to the node after the node we wish to delete
-4. Delete the node using the temporary pointer
+1. 削除したいノードの前のノードまで反復処理する
+2. 削除したいノードを一時ポインタに保存する
+3. 前のノードの次のポインタを、削除したいノードの次のノードを指すように設定する
+4. 一時ポインタを使ってノードを削除する
 
-There are a few edge cases we need to take care of, so make sure you understand the code.
+いくつかのエッジケースに対処する必要があるので、コードの内容を理解しておいてください。
 
     int remove_by_index(node_t ** head, int n) {
         int i = 0;
@@ -240,8 +223,7 @@ There are a few edge cases we need to take care of, so make sure you understand 
 演習
 ----
 
-You must implement the function `remove_by_value` which receives a double pointer to the head and removes the first
-item in the list which has the value `val`.
+先頭へのダブルポインタを受け取り、リスト内の値 `val` を持つ最初の項目を削除する関数 `remove_by_value` を実装する必要があります。
 
 チュートリアル コード
 -------------------
@@ -280,7 +262,7 @@ item in the list which has the value `val`.
     }
 
     int remove_by_value(node_t ** head, int val) {
-        /* TODO: fill in your code here */
+        /* TODO: ここにコードを入力してください */
     }
 
     int main() {

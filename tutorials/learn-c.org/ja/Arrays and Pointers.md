@@ -1,30 +1,30 @@
 チュートリアル
 -------------
 
-In a previous tutorial on [[Pointers]], you learned that a pointer to a given data type can store the address of any variable of that particular data type. For example, in the following code, the pointer variable `pc` stores the address of the character variable `c`.
+以前の[[ポインタ]]に関するチュートリアルでは、特定のデータ型へのポインタは、そのデータ型の任意の変数のアドレスを格納できることを学びました。例えば、次のコードでは、ポインタ変数 `pc` は文字変数 `c` のアドレスを格納しています。
 
     char c = 'A';
     char *pc = &c;
 
-Here, `c` is a scalar variable that can store only a single value. However, you are already familiar with arrays that can hold multiple values of the same data type in a contiguously allocated memory block. So, you might wonder, can we have pointers to arrays too? Indeed, we can.
+ここで、`c` は単一の値しか格納できないスカラー変数です。しかし、連続して割り当てられたメモリブロックに同じデータ型の複数の値を保持できる配列については既にご存知でしょう。では、配列へのポインタも使用できるのだろうかと疑問に思うかもしれません。はい、可能です。
 
-Let us start with an example code and look at its output. We will discuss its behavior subsequently.
+まずはサンプルコードとその出力を見てみましょう。その後、その動作について説明します。
 
     char vowels[] = {'A', 'E', 'I', 'O', 'U'};
     char *pvowels = vowels;
     int i;
 
-    // Print the addresses
+    // 住所を印刷する
     for (i = 0; i < 5; i++) {
         printf("&vowels[%d]: %p, pvowels + %d: %p, vowels + %d: %p\n", i, &vowels[i], i, pvowels + i, i, vowels + i);
     }
 
-    // Print the values
+    // 値を印刷する
     for (i = 0; i < 5; i++) {
         printf("vowels[%d]: %c, *(pvowels + %d): %c, *(vowels + %d): %c\n", i, vowels[i], i, *(pvowels + i), i, *(vowels + i));
     }
 
-A typical output of the above code is shown below.
+上記コードの典型的な出力を以下に示します。
 
 >&vowels[0]: 0x7ffee146da17, pvowels + 0: 0x7ffee146da17, vowels + 0: 0x7ffee146da17
 >
@@ -48,19 +48,18 @@ A typical output of the above code is shown below.
 
 
 
-As you rightly guessed, `&vowels[i]` gives the memory location of the *i*th element of the array `vowels`. Moreover, since this is a character array, each element occupies one byte so that the consecutive memory addresses are separated by a single byte. We also created a pointer, `pvowels`, and assigned the address of the array `vowels` to it. `pvowels + i` is a valid operation; although in general, this may not always be meaningful (explored further in [[Pointer Arithmetics]] ). In particular, the output shown above indicates that `&vowels[i]` and `pvowels + i` are equivalent. Feel free to alter the data types of the array and pointer variables to test this out.
+ご想像のとおり、`&vowels[i]` は配列 `vowels` の *i* 番目の要素のメモリ位置を表します。さらに、これは文字配列であるため、各要素は 1 バイトを占有し、連続するメモリアドレスは 1 バイトで区切られます。また、ポインタ `pvowels` を作成し、配列 `vowels` のアドレスをそれに代入しました。`pvowels + i` は有効な演算ですが、一般的には必ずしも意味を持つとは限りません ([[ポインタ演算]] で詳しく説明します)。特に、上記の出力は `&vowels[i]` と `pvowels + i` が同等であることを示しています。配列変数とポインタ変数のデータ型を自由に変更して、これをテストしてみてください。
 
-If you look carefully at the previous code, you will notice that we also used another apparently surprising notation: `vowels + i`. Moreover, `pvowels + i` and `vowels + i` returns the same thing &mdash; address of the *i*th element of the array `vowels`. On the other hand, `*(pvowels + i)` and `*(vowels + i)` both return the *i*th element of the array `vowels`. Why is that so?
+前のコードをよく見ると、`vowels + i` という、一見意外な記法も使われていることに気づくでしょう。さらに、`pvowels + i` と `vowels + i` は同じもの、つまり配列 `vowels` の *i* 番目の要素のアドレスを返します。一方、`*(pvowels + i)` と `*(vowels + i)` はどちらも配列 `vowels` の *i* 番目の要素を返します。なぜでしょうか？
 
-This is because the name of an array itself is a (constant) pointer to the first element of the array. In other words, the notations `vowels`, `&vowels[0]`, and `vowels + 0` all point to the same location.
+これは、配列の名前自体が配列の最初の要素への（定数）ポインタであるためです。つまり、`vowels`、`&vowels[0]`、`vowels + 0` という記法はすべて同じ位置を指しているのです。
 
+配列の動的メモリ割り当て
+------------------------
 
-Dynamic Memory Allocation for Arrays
-------------------------------------
+ここまでで、ポインタを使って配列を走査できることをご理解いただけたと思います。さらに、ブロックポインタを使って（連続した）メモリを動的に確保できることも分かりました。これら2つの要素を組み合わせることで、配列のメモリを動的に確保することができます。これは以下のコードで示されています。
 
-By now we know that we can traverse an array using pointers. Moreover, we also know that we can dynamically allocate (contiguous) memory using blocks pointers. These two aspects can be combined to dynamically allocate memory for an array. This is illustrated in the following code.
-
-    // Allocate memory to store five characters
+    // 5文字を格納するためのメモリを割り当てる
     int n = 5;
     char *pvowels = (char *) malloc(n * sizeof(char));
     int i;
@@ -79,20 +78,20 @@ By now we know that we can traverse an array using pointers. Moreover, we also k
 
     free(pvowels);
 
-In the above code, we allocated five contiguous bytes of memory to store five characters. Subsequently, we used array notations to traverse the blocks of memory as if `pvowels` is an array. However, remember that `pvowels` actually is a pointer. Pointers and arrays, in general, are not the same thing.
+上記のコードでは、5文字を格納するために連続する5バイトのメモリを割り当てました。その後、配列表記法を使用して、`pvowels` が配列であるかのようにメモリブロックを走査しました。ただし、`pvowels` は実際にはポインタであることに注意してください。一般的に、ポインタと配列は同じではありません。
 
-So when is this useful? Remember that while declaring an array, the number of elements that it would contain must be known beforehand. Therefore, in some scenarios it might happen that the space allocated for an array is either less than the desired space or more. However, by using dynamic memory allocation, one can allocate just as much memory as required by a program. Moreover, unused memory can be freed as soon as it is no longer required by invoking the `free()` function. On the down side, with dynamic memory allocation, one must responsibly call `free()` wherever relevant. Otherwise, memory leaks would occur.
+では、これはどのような場合に便利なのでしょうか？ 配列を宣言する際には、その要素数を事前に把握しておく必要があることを覚えておいてください。そのため、場合によっては、配列に割り当てられる領域が目的の領域よりも少なかったり、多すぎたりすることがあります。しかし、動的メモリ割り当てを使用すれば、プログラムに必要なだけのメモリを割り当てることができます。さらに、未使用のメモリは不要になったらすぐに「free()」関数を呼び出して解放できます。ただし、動的メモリ割り当ての欠点は、必要な場合に「free()」を責任を持って呼び出す必要があることです。そうしないと、メモリリークが発生します。
 
-We conclude this tutorial by looking at dynamic memory allocation for a two-dimensional array. This can be generalized to *n*-dimensions in a similar way. Unlike one-dimensional arrays, where we used a pointer, in this case we require a pointer to a pointer, as shown below.
+このチュートリアルの最後に、2次元配列の動的メモリ割り当てについて見ていきます。これは同様の方法でn次元配列にも一般化できます。1次元配列ではポインタを使用していましたが、この場合は以下に示すように、ポインタへのポインタが必要になります。
 
     int nrows = 2;
     int ncols = 5;
     int i, j;
 
-    // Allocate memory for nrows pointers
+    // nrowsポインタにメモリを割り当てる
     char **pvowels = (char **) malloc(nrows * sizeof(char *));
 
-    // For each row, allocate memory for ncols elements
+    // 各行にncols要素のメモリを割り当てる
     pvowels[0] = (char *) malloc(ncols * sizeof(char));
     pvowels[1] = (char *) malloc(ncols * sizeof(char));
 
@@ -116,18 +115,18 @@ We conclude this tutorial by looking at dynamic memory allocation for a two-dime
         printf("\n");
     }
 
-    // Free individual rows
+    // 個々の行を解放する
     free(pvowels[0]);
     free(pvowels[1]);
 
-    // Free the top-level pointer
+    // トップレベルのポインタを解放する
     free(pvowels);
 
 
 演習
 ----
 
-The first seven rows of [Pascal's triangle](http://mathworld.wolfram.com/PascalsTriangle.html) are shown below. Note that row *i* contains *i* elements. Therefore, to store the numbers from the first three rows, one would require 1 + 2 + 3 = 6 memory slots.
+[パスカルの三角形](http://mathworld.wolfram.com/PascalsTriangle.html)の最初の7行を以下に示します。行*i*には*i*個の要素が含まれていることに注意してください。したがって、最初の3行の数値を格納するには、1 + 2 + 3 = 6個のメモリスロットが必要になります。
 
 >1
 >
@@ -143,7 +142,7 @@ The first seven rows of [Pascal's triangle](http://mathworld.wolfram.com/Pascals
 >
 >1 6 15 20 15 6 1
 
-Complete the skeleton code given below to store the numbers from the first three rows of Pascal's triangle in a two-dimensional &quot;array&quot; using dynamic memory allocation. Note that you must allocate exactly six memory slots to store those six numbers. No extra memory should be allocated. At the end of your program, free all the memory blocks used in this program.
+パスカルの三角形の最初の3行の数値を、動的メモリ割り当てを用いて、2次元「配列」に格納するためのスケルトンコードを以下に示す。これらの6つの数値を格納するには、正確に6つのメモリスロットを割り当てる必要があることに注意する。余分なメモリは割り当てない。プログラムの最後に、このプログラムで使用したすべてのメモリブロックを解放する。
 
 
 チュートリアル コード
@@ -154,12 +153,12 @@ Complete the skeleton code given below to store the numbers from the first three
 
     int main() {
         int i, j;
-        /* TODO: define the 2D pointer variable here */
+        /* TODO: ここで2Dポインタ変数を定義する */
 
-        /* TODO: complete the following line to allocate memory for holding three rows */
+        /* TODO: 3行を保持するためのメモリを割り当てるには、次の行を完成させる */
         pnumbers = (int **) malloc();
 
-        /* TODO: allocate memory for storing the individual elements in a row */
+        /* TODO: 行内の個々の要素を格納するためのメモリを割り当てる */
         pnumbers[0] = (int *) malloc(1 * sizeof(int));
 
         pnumbers[0][0] = 1;
@@ -177,10 +176,10 @@ Complete the skeleton code given below to store the numbers from the first three
         }
 
         for (i = 0; i < 3; i++) {
-            /* TODO: free memory allocated for each row */
+            /* TODO: 各行に割り当てられたメモリを解放する */
         }
 
-        /* TODO: free the top-level pointer */
+        /* TODO: トップレベルのポインタを解放する */
 
       return 0;
     }
@@ -200,13 +199,13 @@ Complete the skeleton code given below to store the numbers from the first three
 
     int main() {
         int i, j;
-        /* TODO: define the 2D pointer variable here */
+        /* TODO: 行内の個々の要素を格納するためのメモリを割り当てる */
         int **pnumbers;
 
-        /* TODO: Complete the following line to allocate memory for holding three rows */
+        /* TODO: 3行を保持するためのメモリを割り当てるには、次の行を完成させる */
         pnumbers = (int **) malloc(3  *sizeof(int *));
 
-        /* TODO: Allocate memory for storing the individual elements in a row */
+        /* TODO: 行内の個々の要素を格納するためのメモリを割り当てる */
         pnumbers[0] = (int *) malloc(1 * sizeof(int));
         pnumbers[1] = (int *) malloc(2 * sizeof(int));
         pnumbers[2] = (int *) malloc(3 * sizeof(int));
