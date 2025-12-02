@@ -3,7 +3,7 @@
 
 ### Introduction
 
-A Binary Tree is a type of data structure in which each node has at most two children (left child and right child). Binary trees are used to implement binary search trees and binary heaps, and are used for efficient searching and sorting. A binary tree is a special case of a K-ary tree, where k is 2. Common operations for binary trees include insertion, deletion, and traversal. The difficulty of performing these operations varies if the tree is balanced and also whether the nodes are leaf nodes or branch nodes. For **balanced trees** the depth of the left and right subtrees of every node differ by 1 or less. This allows for a predictable **depth** also known as **height**. This is the measure of a node from root to leaf, where root is 0 and sebsequent nodes are (1,2..n). This can be expressed by the integer part of log<sub>2</sub>(n) where n is the number of nodes in the tree.
+二分木は、各ノードが最大 2 つの子 (左の子と右の子) を持つデータ構造のタイプです。二分木は、二分探索木と二分ヒープの実装に使用され、効率的な検索とソートに使用されます。二分木は、k が 2 である K 分木の特殊なケースです。二分木の一般的な操作には、挿入、削除、トラバーサルがあります。これらの操作を実行する難易度は、木がバランスが取れているかどうか、またノードがリーフ ノードであるかブランチ ノードであるかによって異なります。**バランスの取れた木** では、各ノードの左と右のサブツリーの深さの差は 1 以下です。これにより、**深さ** (高さ** とも呼ばれる) を予測できるようになります。これは、ルートからリーフまでのノードの測定値で、ルートが 0、後続のノードが (1,2..n) です。これは、log<sub>2</sub>(n) の整数部分で表すことができます。ここで、n は木内のノードの数です。
 
             g                  s                  9
            / \                / \                / \
@@ -11,15 +11,15 @@ A Binary Tree is a type of data structure in which each node has at most two chi
          / \                    / \                /  \
         c   d                  t   y              11  15
 
-The operations performed on trees requires searching in one of two main ways: Depth First Search and Breadth-first search. **Depth-first search (DFS)** is an algorithm for traversing or searching tree or graph data structures. One starts at the root and explores as far as possible along each branch before backtracking. There are three types of depth first search traversal: **pre-order** visit, left, right, **in-order** left, visit, right, **post-order** left, right, visit. **Breadth-first search (BFS)** is an algorithm for traversing or searching tree or graph structures. In level-order, where we visit every node on a level before going to a lower level.<br>
+ツリーに対して実行される操作には、深さ優先探索と幅優先探索という 2 つの主な方法のいずれかによる検索が必要です。**深さ優先探索 (DFS)** は、ツリーまたはグラフのデータ構造を走査または検索するためのアルゴリズムです。ルートから開始し、各ブランチに沿って可能な限り探索してからバックトラックします。深さ優先探索の走査には、**前順序** 訪問、左、右、**内順序** 訪問、右、**後順序** 左、右、訪問の 3 つの種類があります。**幅優先探索 (BFS)** は、ツリーまたはグラフの構造を走査または検索するためのアルゴリズムです。レベル順序では、下位レベルに移動する前に、そのレベルのすべてのノードを訪問します。<br>
 
 
 演習
 ----
 
-Below is an implementation of a binary tree that has insertion and printing capabilities. This tree is ordered but not balanced. This example maintains its ordering at insertion time.
+以下は、挿入と出力の機能を持つ二分木の実装です。この木は順序付けされていますが、バランスはとれていません。この例では、挿入時に順序付けが維持されます。
 
-Change the print routine to depth-first search **pre-order**.
+出力ルーチンを深さ優先探索の **pre-order** に変更してください。
 
 
 チュートリアル コード
@@ -42,7 +42,7 @@ Change the print routine to depth-first search **pre-order**.
     int main()
     {
       node_t * test_list = (node_t *) malloc(sizeof(node_t));
-      /* set values explicitly, alternative would be calloc() */
+      /* 値を明示的に設定する代わりにcalloc()を使用する */
       test_list->val = 0;
       test_list->left = NULL;
       test_list->right = NULL;
@@ -60,7 +60,7 @@ Change the print routine to depth-first search **pre-order**.
     {
       if (tree->val == 0)
       {
-        /* insert on current (empty) position */
+        /* 現在の（空の）位置に挿入する */
         tree->val = val;
       }
       else
@@ -75,7 +75,7 @@ Change the print routine to depth-first search **pre-order**.
           else
           {
             tree->left = (node_t *) malloc(sizeof(node_t));
-            /* set values explicitly, alternative would be calloc() */
+            /* 値を明示的に設定する代わりにcalloc()を使用する */
             tree->left->val = val;
             tree->left->left = NULL;
             tree->left->right = NULL;
@@ -85,7 +85,7 @@ Change the print routine to depth-first search **pre-order**.
         {
           if (val >= tree->val)
           {
-            /* insert right */
+            /* 右に挿入 */
             if (tree->right != NULL)
             {
               insert(tree->right,val);
@@ -93,7 +93,7 @@ Change the print routine to depth-first search **pre-order**.
             else
             {
               tree->right = (node_t *) malloc(sizeof(node_t));
-              /* set values explicitly, alternative would be calloc() */
+              /* 値を明示的に設定する代わりにcalloc()を使用する */
               tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
@@ -103,11 +103,11 @@ Change the print routine to depth-first search **pre-order**.
       }
     }
     
-    /* depth-first search */
+    /* 深さ優先探索 */
     void printDFS(node_t * current)
     {
-      /* change the code here */
-      if (current == NULL)         return;   /* security measure */
+      /* ここでコードを変更してください */
+      if (current == NULL)         return;   /* セキュリティ対策 */
       if (current->left != NULL)   printDFS(current->left);
       if (current != NULL)         printf("%d ", current->val);
       if (current->right != NULL)  printDFS(current->right);
@@ -139,7 +139,7 @@ Change the print routine to depth-first search **pre-order**.
     int main()
     {
       node_t * test_list = (node_t *) malloc(sizeof(node_t));
-      /* set values explicitly, alternative would be calloc() */
+      /* 値を明示的に設定する代わりにcalloc()を使用する */
       test_list->val = 0;
       test_list->left = NULL;
       test_list->right = NULL;
@@ -157,7 +157,7 @@ Change the print routine to depth-first search **pre-order**.
     {
       if (tree->val == 0)
       {
-        /* insert on current (empty) position */
+        /* 現在の（空の）位置に挿入する */
         tree->val = val;
       }
       else
@@ -172,7 +172,7 @@ Change the print routine to depth-first search **pre-order**.
           else
           {
             tree->left = (node_t *) malloc(sizeof(node_t));
-            /* set values explicitly, alternative would be calloc() */
+            /* 値を明示的に設定する代わりにcalloc()を使用する */
             tree->left->val = val;
             tree->left->left = NULL;
             tree->left->right = NULL;
@@ -182,7 +182,7 @@ Change the print routine to depth-first search **pre-order**.
         {
           if (val >= tree->val)
           {
-            /* insert right */
+            /* 右に挿入 */
             if (tree->right != NULL)
             {
               insert(tree->right,val);
@@ -190,7 +190,7 @@ Change the print routine to depth-first search **pre-order**.
             else
             {
               tree->right = (node_t *) malloc(sizeof(node_t));
-              /* set values explicitly, alternative would be calloc() */
+              /* 値を明示的に設定する代わりにcalloc()を使用する */
               tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
@@ -200,11 +200,11 @@ Change the print routine to depth-first search **pre-order**.
       }
     }
     
-    /* depth-first search */
+    /* 深さ優先探索 */
     void printDFS(node_t * current)
     {
-      /* change the code here */
-      if (current == NULL)         return;   /* security measure */
+      /* ここでコードを変更してください */
+      if (current == NULL)         return;   /* セキュリティ対策 */
       if (current != NULL)         printf("%d ", current->val);
       if (current->left != NULL)   printDFS(current->left);
       if (current->right != NULL)  printDFS(current->right);
