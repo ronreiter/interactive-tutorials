@@ -42,7 +42,7 @@
     int main()
     {
       node_t * test_list = (node_t *) malloc(sizeof(node_t));
-      /* 値を明示的に設定する代わりにcalloc()を使用する */
+      /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
       test_list->val = 0;
       test_list->left = NULL;
       test_list->right = NULL;
@@ -75,7 +75,7 @@
           else
           {
             tree->left = (node_t *) malloc(sizeof(node_t));
-            /* 値を明示的に設定する代わりにcalloc()を使用する */
+            /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
             tree->left->val = val;
             tree->left->left = NULL;
             tree->left->right = NULL;
@@ -94,7 +94,7 @@
             else
             {
               tree->right = (node_t *) malloc(sizeof(node_t));
-              /* 値を明示的に設定する代わりにcalloc()を使用する */
+              /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
               tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
@@ -104,7 +104,6 @@
       }
     }
     
-    /* 深さ優先探索 */
     /* 深さ優先探索 */
     void printDFS(node_t * current)
     {
@@ -141,7 +140,7 @@
     int main()
     {
       node_t * test_list = (node_t *) malloc(sizeof(node_t));
-      /* 値を明示的に設定する代わりにcalloc()を使用する */
+      /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
       test_list->val = 0;
       test_list->left = NULL;
       test_list->right = NULL;
@@ -174,7 +173,7 @@
           else
           {
             tree->left = (node_t *) malloc(sizeof(node_t));
-            /* 値を明示的に設定する代わりにcalloc()を使用する */
+            /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
             tree->left->val = val;
             tree->left->left = NULL;
             tree->left->right = NULL;
@@ -192,7 +191,7 @@
             else
             {
               tree->right = (node_t *) malloc(sizeof(node_t));
-              /* 値を明示的に設定する代わりにcalloc()を使用する */
+              /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
               tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
