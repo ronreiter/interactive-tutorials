@@ -11,7 +11,7 @@
          / \                    / \                /  \
         c   d                  t   y              11  15
 
-ツリーに対して実行される操作には、深さ優先探索と幅優先探索という 2 つの主な方法のいずれかによる検索が必要です。**深さ優先探索 (DFS)** は、ツリーまたはグラフのデータ構造を走査または検索するためのアルゴリズムです。ルートから開始し、各ブランチに沿って可能な限り探索してからバックトラックします。深さ優先探索の走査には、**前順序** 訪問、左、右、**内順序** 訪問、右、**後順序** 左、右、訪問の 3 つの種類があります。**幅優先探索 (BFS)** は、ツリーまたはグラフの構造を走査または検索するためのアルゴリズムです。レベル順序では、下位レベルに移動する前に、そのレベルのすべてのノードを訪問します。<br>
+ツリーに対して実行される操作には、深さ優先探索と幅優先探索という 2 つの主な方法のいずれかによる検索が必要です。**深さ優先探索 (DFS)** は、ツリーまたはグラフのデータ構造を走査または検索するためのアルゴリズムです。ルートから開始し、各ブランチに沿ってあり能な限り探索してからバックトラックします。深さ優先探索の走査には、**前順序** 訪問、左、右、**内順序** 訪問、右、**後順序** 左、右、訪問の 3 つの種類があります。**幅優先探索 (BFS)** は、ツリーまたはグラフの構造を走査または検索するためのアルゴリズムです。レベル順序では、下位レベルに移動する前に、そのレベルのすべてのノードを訪問します。<br>
 
 
 演習
@@ -42,7 +42,7 @@
     int main()
     {
       node_t * test_list = (node_t *) malloc(sizeof(node_t));
-      /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
+      /* 値を明示的に設定する代わりに、calloc()を使用する方法もあり */
       test_list->val = 0;
       test_list->left = NULL;
       test_list->right = NULL;
@@ -75,7 +75,7 @@
           else
           {
             tree->left = (node_t *) malloc(sizeof(node_t));
-            /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
+            /* 値を明示的に設定する代わりに、calloc()を使用する方法もあり */
             tree->left->val = val;
             tree->left->left = NULL;
             tree->left->right = NULL;
@@ -94,7 +94,7 @@
             else
             {
               tree->right = (node_t *) malloc(sizeof(node_t));
-              /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
+              /* 値を明示的に設定する代わりに、calloc()を使用する方法もあり */
               tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
@@ -140,7 +140,7 @@
     int main()
     {
       node_t * test_list = (node_t *) malloc(sizeof(node_t));
-      /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
+      /* 値を明示的に設定する代わりに、calloc()を使用する方法もあり */
       test_list->val = 0;
       test_list->left = NULL;
       test_list->right = NULL;
@@ -173,7 +173,7 @@
           else
           {
             tree->left = (node_t *) malloc(sizeof(node_t));
-            /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
+            /* 値を明示的に設定する代わりに、calloc()を使用する方法もあり */
             tree->left->val = val;
             tree->left->left = NULL;
             tree->left->right = NULL;
@@ -191,7 +191,7 @@
             else
             {
               tree->right = (node_t *) malloc(sizeof(node_t));
-              /* 値を明示的に設定する代わりに、calloc()を使用する方法も可 */
+              /* 値を明示的に設定する代わりに、calloc()を使用する方法もあり */
               tree->right->val = val;
               tree->right->left = NULL;
               tree->right->right = NULL;
