@@ -1,37 +1,12 @@
 チュートリアル
 -------------
-You previously learned what is a pointer and how to manipulate pointers. In this tutorial you will be learning the arithmetic operations on pointers.
-There are multiple arithmetic operations that can be applied on C pointers: ++, --, -, +
+以前、ポインタとは何か、そしてポインタの操作方法を学びました。このチュートリアルでは、ポインタに対する算術演算について学習します。
+C言語のポインタには、++、--、-、+ といった複数の算術演算を適用できます。
 
-### Incrementing a Pointer with (++)
+### (++) によるポインタのインクリメント
 
-Just like any variable the ++ operation increases the value of that variable. In our case here the variable is a pointer hence when we increase its value we are increasing the address in the memory that pointer points to. 
-Let's combine this operation with an array in our example:
-
-	#include <stdio.h>
-	
-	int main()
-	{
-	    int intarray[5] = {10,20,30,40,50};
-	    
-	    int i;
-	    for(i = 0; i < 5; i++)
-	        printf("intarray[%d] has value %d - and address @ %x\n", i, intarray[i], &intarray[i]);
-	    
-	    
-	    int *intpointer = &intarray[3]; //point to the 4th element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 4th element
-	    
-	    intpointer++; //now increase the pointer's address so it points to the 5th elemnt in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
-	    
-	    return 0;
-	}
-
-
-### Decreasing a Pointer with (--)
-
-Just like in our previous example we increased the pointer's pointed-to address by one using the ++ operator, we can decrease the address pointed-to by one using the decrement operator (--).
+他の変数と同様に、++ 演算はその変数の値を増加させます。今回の場合、変数はポインタなので、その値を増加させると、ポインタが指すメモリ内のアドレスが増加します。
+この演算を例に、配列と組み合わせてみましょう:
 
 	#include <stdio.h>
 	
@@ -44,17 +19,43 @@ Just like in our previous example we increased the pointer's pointed-to address 
 	        printf("intarray[%d] has value %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
-	    int *intpointer = &intarray[4]; //point to the 5th element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
+	    int *intpointer = &intarray[3]; // 配列の4番目の要素を指す
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 4番目の要素のアドレスを出力する
 	    
-	    intpointer--; //now decrease the point's address so it points to the 4th element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 4th element
+	    intpointer++; // ポインタのアドレスを増やして配列の5番目の要素を指すようにします。
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 5番目の要素のアドレスを出力する
 	    
 	    return 0;
 	}
 
-### Adding Pointers with (+)
-We previously increased a pointer's pointed-to address by one. We can also increase it by an integer value such:
+
+### (--) によるポインタの減少
+
+前の例で ++ 演算子を使用してポインターの指すアドレスを 1 つ増やしたのと同様に、デクリメント演算子 (--) を使用して、指すアドレスを 1 つ減らすことができます。
+
+	#include <stdio.h>
+	
+	int main()
+	{
+	    int intarray[5] = {10,20,30,40,50};
+	    
+	    int i;
+	    for(i = 0; i < 5; i++)
+	        printf("intarray[%d] has value %d - and address @ %x\n", i, intarray[i], &intarray[i]);
+	    
+	    
+	    int *intpointer = &intarray[4]; // 配列の5番目の要素を指す
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 5番目の要素のアドレスを出力する
+	    
+	    intpointer--; // ポイントのアドレスを減らして、配列の4番目の要素を指すようにする
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 4番目の要素のアドレスを出力する
+	    
+	    return 0;
+	}
+
+### (+) でポインタを追加する
+
+先ほど、ポインタの指すアドレスを1ずつ増やしました。次のように整数値で増やすこともできます。
 
 	#include <stdio.h>
 	
@@ -67,22 +68,22 @@ We previously increased a pointer's pointed-to address by one. We can also incre
 	        printf("intarray[%d] has value: %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
-	    int *intpointer = &intarray[1]; //point to the 2nd element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 2nd element
+	    int *intpointer = &intarray[1]; // 配列の2番目の要素を指す
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 2番目の要素のアドレスを出力する
 	    
-	    intpointer += 2; //now shift by two the point's address so it points to the 4th element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the addres of the 4th element
+	    intpointer += 2; // ポイントのアドレスを2つシフトして、配列の4番目の要素を指すようにします。
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 4番目の要素のアドレスを出力する
 	    
 	    return 0;
 	}
 
-Note how in the output the address shifted by 8 steps in the memory. You might be wondering why?
-The answer is simple: Because our pointer is an int-pointer and the size of an int variable is 4 bytes the memory is shift-able by 4 blocks.
-In our code we shifted by 2 (added +2) to the initial address so that makes them 2 x 4 byte = 8.
+出力では、メモリ内でアドレスが8ステップシフトしていることに注目してください。なぜだろうと疑問に思うかもしれません。
+答えは簡単です。ポインタがint型ポインタであり、int型変数のサイズが4バイトであるため、メモリは4ブロックシフト可能です。
+コードでは、最初のアドレスに2（+2）シフトしたので、2 x 4バイト = 8になります。
 
-### Subtracting Pointers with (-)
+### (-) によるポインタの減算
 
-Similarly we can subtract:
+同様に引き算もできます:
 
 	#include <stdio.h>
 	
@@ -95,23 +96,24 @@ Similarly we can subtract:
 	        printf("intarray[%d] has value: %d - and address @ %x\n", i, intarray[i], &intarray[i]);
 	    
 	    
-	    int *intpointer = &intarray[4]; //point to the 5th element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
+	    int *intpointer = &intarray[4]; // 配列の5番目の要素を指す
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 5番目の要素のアドレスを出力する
 	    
-	    intpointer -= 2; //now shift by two the point's address so it points to the 3rd element in the array
-	    printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 3rd element
+	    intpointer -= 2; // ポイントのアドレスを2つシフトして、配列の3番目の要素を指すようにする
+	    printf("address: %x - has value %d\n", intpointer, *intpointer); // 3番目の要素のアドレスを出力する
 	    
 	    return 0;
 	}
 
-again the address is shifted by blocks of 4bytes (in case of int).
+ここでも、アドレスは 4 バイトのブロック単位でシフトされます (int の場合)。
 
-### Other Operations
-There are more operations such as comparison >, <, ==. The idea is very similar of comparing variables, but in this case we are comparing memory address.
+### その他の操作
+
+他にも比較演算（>、<、==など）があります。考え方は変数の比較と非常に似ていますが、この場合はメモリアドレスを比較します。
 
 演習
 ----
-Copy last three addresses of intarray into parray which is an array of pointers to an int.
+intarray の最後の 3 つのアドレスを、int へのポインターの配列である parray にコピーします。
 
 チュートリアル コード
 -------------------
@@ -122,17 +124,17 @@ Copy last three addresses of intarray into parray which is an array of pointers 
         //-----------------------^
         int *pointer = &intarray[2];
 
-        // Array of 3 pointers
+        // 3つのポインタの配列
         int *parray[3];
 
-        // Copy last three addresses of intarray into parray
-        // Use parray and pointer
+		// intarray の最後の3つのアドレスを parray にコピーします
+		// parray とポインタを使用します
         int i;
         for (i = 0; i < 3; i++) {
             // Insert code here
         }
 
-        // Test code
+        // テスト コード
         for (i = 0; i < 3; i++) {
             if (parray[i] == &pointer[i]) {
                 printf("Matched!\n");
