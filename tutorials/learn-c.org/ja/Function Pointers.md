@@ -1,32 +1,31 @@
 チュートリアル
 -------------
 
-Remember pointers? We used them to point to an array of chars then make a string out of them.
-Then things got more interesting when we learned how to control these pointers.
-Now it is time to do something even more interesting with pointers, using them to point to and call functions.
+ポインタを覚えていますか？文字の配列を指し示し、それを文字列に変換するためにポインタを使いました。
+その後、ポインタの制御方法を学んだことで、さらに面白くなりました。
+次は、ポインタを使って関数を指し示したり呼び出したりしてみましょう。
 
-### Why point to a function?
+### なぜ関数を指すのか?
 
-The first question that may come to your mind is why would we use pointers to call a function when we can simply call a function by its name: `function();` - that's a great question! Now imagine the `sort` function where you need to sort an array. Sometimes you want to order array elements in an ascending order or descending order. How would you choose? Function pointers!
+おそらく最初に頭に浮かぶ疑問は、関数名で関数を呼び出すのになぜポインタを使うのか、ということでしょう。`function();` と書けばいいのですから。これは良い質問です！ では、配列をソートする必要がある `sort` 関数を想像してみてください。配列の要素を昇順または降順に並べ替えたい場合があります。どちらを選びますか？ 関数ポインタです！
 
-
-### Function Pointer Syntax
+### 関数ポインタ構文
 
     void (*pf)(int);
 
-I agree with you. This definitely is very complicated, or so you may think. Let's re-read that code and try to understand it point by point. Read it inside-out. `*pf` is the pointer to a function. `void` is the return type of that function, and finally `int` is the argument type of that function. Got it? Good.
+ま、そうでしょうね。確かに非常に複雑ですね。少なくとも、そう思われるかもしれません。では、コードをもう一度読んで、一つ一つ理解してみましょう。隅々まで読んでみてください。`*pf` は関数へのポインタです。`void` はその関数の戻り値の型、そして `int` はその関数の引数の型です。分かりましたか？いいですね。
 
-Let's insert pointers into the function pointer and try to read it again:
+関数ポインタにポインタを挿入して、もう一度読み取ってみます:
 
     char* (*pf)(int*)
 
-Again:
-1. `*pf` is the function pointer.
-2. `char*` is the return type of that function.
-3. `int*` is the type of the argument.
+繰り返します
+1. `*pf` は関数ポインタです。
+2. `char*` はその関数の戻り値の型です。
+3. `int*` は引数の型です。
 
-Ok enough with theory. Let's get our hands dirty with some real code.
-See this example:
+理論はもう十分です。実際のコードで実際に試してみましょう。
+次の例をご覧ください。
 
     #include <stdio.h>
     void someFunction(int arg)
@@ -44,16 +43,16 @@ See this example:
 		printf("Wow that was cool. Back to main now!\n\n");
     }
 
-Remember `sort()` we talked about earlier? We can do the same with it.
-Instead of ordering a set in an ascending way we can do the opposite using our own comparison function as follows:
+先ほど説明した `sort()` を覚えていますか？これを使って同じことができます。
+集合を昇順で並べ替える代わりに、次のように独自の比較関数を使って逆の順序付けを行うことができます。
 
     #include <stdio.h>
-	#include <stdlib.h> //for qsort()
+    #include <stdlib.h> //for qsort()
 
     int compare(const void* left, const void* right)
     {
 		return (*(int*)right - *(int*)left);
-		// go back to ref if this seems complicated: http://www.cplusplus.com/reference/cstdlib/qsort/
+		// 複雑に思える場合は、ref に戻ってください: http://www.cplusplus.com/reference/cstdlib/qsort/
     }
     main()
     {
@@ -71,13 +70,13 @@ Instead of ordering a set in an ascending way we can do the opposite using our o
 		}
     }
 
-Let's remember again. Why do we use function pointers?
-1. To allow programmers to use libraries for different usages -> "Flexibility"
+もう一度思い出してみましょう。なぜ関数ポインタを使うのでしょうか？
+1. プログラマーが様々な用途でライブラリを利用できるようにするため -> 「柔軟性」
 
 
 演習
 ----
-Complete the array of pointers to functions and call each function using its pointer from the array. Array of pointers to functions? Yes you can do that!
+関数へのポインタの配列を完成させ、配列内のポインタを使って各関数を呼び出します。関数へのポインタの配列？ はい、できますよ！
 
 チュートリアル コード
 -------------------

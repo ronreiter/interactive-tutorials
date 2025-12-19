@@ -1,28 +1,28 @@
 チュートリアル
 -------------
 
-Bit masking is simply the process of storing data truly as bits, as opposed to storing it as chars/ints/floats.  It is incredibly useful for storing certain types of data compactly and efficiently.
+ビットマスクとは、データをchar/int/float型ではなく、ビットとして保存するプロセスです。特定の種類のデータをコンパクトかつ効率的に保存するのに非常に便利です。
 
-The idea for bit masking is based on boolean logic.  For those not familiar, boolean logic is the manipulation of 'true' (1) and 'false' (0) through logical operations (that take 0s and 1s as their argument).  We are concerned with the following operations:
+ビットマスクの考え方はブール論理に基づいています。ブール論理とは、論理演算（0と1を引数として取る）によって「真」（1）と「偽」（0）を操作することです。ここでは以下の演算について考えます。
 
-* NOT a - the final value is the opposite of the input value (1 -> 0, 0 -> 1)
-* a AND b - if both values are 1, the final value is 1, otherwise the final value is 0
-* a OR b - if either value is 1, the final value is 1, otherwise the final value is 0
-* a XOR b - if one value is 1 and the other value is 0, the final value is 1, otherwise the final value is 0
+* NOT a - 最終値は入力値の反対になります (1 -> 0、0 -> 1)
+* a AND b - 両方の値が 1 の場合、最終値は 1 になります。それ以外の場合は、最終値は 0 になります。
+* a OR b - どちらかの値が 1 の場合、最終値は 1 になります。それ以外の場合は、最終値は 0 になります。
+* a XOR b - 一方の値が 1 でもう一方の値が 0 の場合、最終値は 1 になります。それ以外の場合は、最終値は 0 になります。
 
-In computing, one of these true/false values is a *bit*.  Primitives in C (`int`, `float`, etc) are made up of some number of bits, where that number is a multiple of 8.  For example, an `int` may be at least 16 bits in size, where a `char` may be 8 bits.  8 bits is typically referred to as a *byte*.  C guarantees that certain primitives are [at least some number](http://en.wikipedia.org/wiki/C_data_types#Basic_types) of bytes in size.  The introduction of `stdint.h`  in C11 allows the programmer to specify integer types that are exactly some number of bytes, which is extremely useful when using masks.
+コンピューティングにおいて、これらの真偽値の1つは*ビット*です。C言語のプリミティブ（`int`、`float`など）は、8の倍数のビット数で構成されます。例えば、`int`は少なくとも16ビットのサイズであるのに対し、`char`は8ビットです。8ビットは通常*バイト*と呼ばれます。C言語では、特定のプリミティブが[少なくともあるバイト数](http://en.wikipedia.org/wiki/C_data_types#Basic_types)バイトのサイズであることが保証されています。C11で導入された`stdint.h`により、プログラマーは正確にあるバイト数の整数型を指定できるようになりました。これはマスクを使用する際に非常に便利です。
 
-Bit masks are often used when setting flags.  Flags are values that can be in two states, such as 'on/off' and 'moving/stationary'.
+ビットマスクはフラグを設定する際によく使用されます。フラグとは、「オン/オフ」や「移動/静止」など、2つの状態を取ることができる値です。
 
-### Setting bit n
+### ビット n の設定
 
-Setting bit `n` is as simple as ORing the value of the storage variable with the value `2^n`.
+ビット `n` を設定するのは、ストレージ変数の値と、値 `2^n` の OR 演算を行うのと同じくらい簡単です。
 
 ```
 storage |= 1 << n;
 ```
 
-As an example, here is the setting of bit 3 where `storage` is a char (8 bits):
+例として、`storage` が char (8 ビット) の場合のビット 3 の設定を次に示します。
 
 ```
 01000010
@@ -32,17 +32,17 @@ As an example, here is the setting of bit 3 where `storage` is a char (8 bits):
 01001010
 ```
 
-The `2^n` logic places the '1' value at the proper bit in the mask itself, allowing access to that same bit in the storage variable.
+`2^n` ロジックは、マスク自体の適切なビットに '1' の値を配置し、ストレージ変数内の同じビットにアクセスできるようにします。
 
-### Clearing bit n
+### ビット n をクリアする
 
-Clearing bit `n` is the result of ANDing the value of the storage variable with the inverse (NOT) of the value `2^n`:
+ビット `n` をクリアすることは、ストレージ変数の値と値 `2^n` の逆数 (NOT) との AND 演算の結果です。
 
 ```
 storage &= ~(1 << n);
 ```
 
-Here's the example again:
+もう一度例を挙げます。
 
 ```
 01001010
@@ -52,9 +52,9 @@ Here's the example again:
 01000010
 ```
 
-### Flipping bit n
+### 反転ビット n
 
-Flipping bit `n` is the result of XORing the value of the storage variable with `2^n`:
+ビット `n` の反転は、ストレージ変数の値と `2^n` の XOR 演算の結果です。
 
 ```
 storage ^= 1 << n;
@@ -68,9 +68,9 @@ storage ^= 1 << n;
 01001010    01000010
 ```
 
-### Checking bit n
+### ビット n をチェック
 
-Checking a bit is ANDing the value of `2^n` with the bit storage:
+ビットをチェックすることは、ビットストレージと `2^n` の値の AND 演算です。
 
 ```
 bit = storage & (1 << n);
@@ -87,7 +87,7 @@ bit = storage & (1 << n);
 演習
 ----
 
-Use bit masks to manipulate some flags.
+ビットマスクを使用して一部のフラグを操作します。
 
 
 チュートリアル コード
@@ -95,7 +95,7 @@ Use bit masks to manipulate some flags.
     #include <stdio.h>
     #include <assert.h>
 
-    /* Finish initializing the flags */
+    /* フラグの初期化を完了する */
 
     const short FLAG_ON          = 1 << 0; // 1  (0x01)
     const short FLAG_MOVEMENT    = 1 << 1; // 2  (0x02)
@@ -107,21 +107,21 @@ Use bit masks to manipulate some flags.
     int main() {
       short attributes = 0;
 
-      /* Set the attributes ON, TRANSPARENT, and BROKEN */
+      /* 属性をON、TRANSPARENT、BROKENに設定する */
 
       assert(attributes == (FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN));
 
-      /* Modify (set/clear/toggle) so the only attributes are ON and ALIVE */
+      /* 属性がONとALIVEのみになるように変更（設定/クリア/切り替え）します */
 
       assert(attributes == (FLAG_ON | FLAG_ALIVE));
 
-      /* Check if the ALIVE flag is set */
+      /* ALIVEフラグが設定されているかどうかを確認する */
       assert(/* ??? */);
 
-      /* Check if the BROKEN flag is not set */
+      /* BROKENフラグが設定されていないか確認する */
       assert(/* ??? */);
 
-      /* Modify so only the EDIBLE attribute is set */
+      /* EDIBLE属性のみが設定されるように変更します */
 
       assert(attributes == FLAG_EDIBLE);
 
@@ -138,7 +138,7 @@ Use bit masks to manipulate some flags.
     #include <stdio.h>
     #include <assert.h>
 
-    /* Finish initializing the flags */
+    /* フラグの初期化を完了する */
 
     const short FLAG_ON          = 1 << 0; // 1  (0x01)
     const short FLAG_MOVEMENT    = 1 << 1; // 2  (0x02)
@@ -150,7 +150,8 @@ Use bit masks to manipulate some flags.
     int main() {
       short attributes = 0;
 
-      /* Set the attributes ON, TRANSPARENT, and BROKEN */
+      /* 属性をON、TRANSPARENT、BROKENに設定する */
+
       attributes |= FLAG_ON;
       attributes |= FLAG_TRANSPARENT;
       attributes |= FLAG_BROKEN;
@@ -160,7 +161,8 @@ Use bit masks to manipulate some flags.
 
       assert(attributes == (FLAG_ON | FLAG_TRANSPARENT | FLAG_BROKEN));
 
-      /* Modify (set/clear/toggle) so the only attributes are ON and ALIVE */
+      /* 属性がONとALIVEのみになるように変更（設定/クリア/切り替え）します */
+
       attributes &= ~FLAG_TRANSPARENT;
       // possible: attributes ^= FLAG_TRANSPARENT;
       attributes ^= FLAG_BROKEN;
@@ -169,13 +171,13 @@ Use bit masks to manipulate some flags.
 
       assert(attributes == (FLAG_ON | FLAG_ALIVE));
 
-      /* Check if the ALIVE flag is set */
+      /* ALIVEフラグが設定されているかどうかを確認する */
       assert(attributes & FLAG_ALIVE);
 
-      /* Check if the BROKEN flag is not set */
+      /* BROKENフラグが設定されていないか確認する */
       assert(!(attributes & FLAG_BROKEN));
 
-      /* Modify so only the EDIBLE attribute is set */
+      /* EDIBLE属性のみが設定されるように変更します */
       attributes = FLAG_EDIBLE;
 
       assert(attributes == FLAG_EDIBLE);
