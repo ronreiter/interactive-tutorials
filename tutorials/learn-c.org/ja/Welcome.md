@@ -1,14 +1,14 @@
-# Welcome
+# ようこそ
 
-Welcome to the learn-c.org free interactive C tutorial. This website is proudly supported by [Boot.dev's Learn Memory Management in C course](https://www.boot.dev/courses/learn-memory-management-c?promo=LEARNXORG). If you'd like to learn how to manage memory in C from start to finish, [become a member and use code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% off your first year!
+learn-c.org の無料インタラクティブ C チュートリアルへようこそ。このウェブサイトは、[Boot.dev の C 言語におけるメモリ管理を学ぶコース](https://www.boot.dev/courses/learn-memory-management-c?promo=LEARNXORG) によってサポートされています。C 言語でのメモリ管理を最初から最後まで学びたい方は、[メンバー登録をしてコード LEARNXORG を入力する](https://www.boot.dev/pricing?promo=LEARNXORG) で初年度の受講料が 25% オフになります！
 
-Whether you are an experienced programmer or not, this website is intended for everyone who wishes to learn the C programming language.
+経験豊富なプログラマーの方にもそうでない方にも、このウェブサイトは C プログラミング言語を学びたいすべての方を対象としています。
 
-There is no need to download anything - Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
+ダウンロードは不要です。開始したい章をクリックして、指示に従ってください。頑張ってください！
 
-learn-c.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
+learn-c.org は現在構築中です。チュートリアルを投稿していただける場合は、下部の「投稿チュートリアル」をクリックしてください。
 
-### Learn the Basics
+### 基本を学ぶ
 
 - [[Hello, World!]]
 - [[Variables and Types]]
@@ -21,7 +21,7 @@ learn-c.org is still under construction - If you wish to contribute tutorials, p
 - [[Functions]]
 - [[Static]]
 
-### Advanced
+### 一歩進んで
 
 - [[Pointers]]
 - [[Structures]]
@@ -36,7 +36,7 @@ learn-c.org is still under construction - If you wish to contribute tutorials, p
 - [[Function Pointers]]
 - [[Bitmasks]]
 
-### Contributing Tutorials
+### チュートリアルへの貢献
 
-Read more here: [[Contributing Tutorials]]
+詳細はこちら: [[Contributing Tutorials]]
 
