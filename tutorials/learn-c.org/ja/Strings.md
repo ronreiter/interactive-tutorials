@@ -1,5 +1,5 @@
-チュートリアル
--------------
+Tutorial
+--------
 
 ### 文字列の定義
 
@@ -66,13 +66,13 @@ C言語における文字列は、実際には文字の配列です。C言語に
     strncat(dest,src,20);
     printf("%s\n",dest);
 
-演習
-----
+Exercise
+--------
 
 ポインタ表記法を使用して、文字列 `first_name` を値 `John` で定義し、ローカル配列表記法を使用して、文字列 `last_name` を値 `Doe` で定義します。
 
-チュートリアル コード
--------------------
+Tutorial Code
+-------------
 
     #include <stdio.h>
     #include <string.h>
@@ -94,13 +94,13 @@ C言語における文字列は、実際には文字の配列です。C言語に
     }
 
 
-期待している出力
+Expected Output
 ---------------
 
     Done!
     JohnBoe
 
-解答
+Solution
 ----
 
     #include <stdio.h>

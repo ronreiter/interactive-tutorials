@@ -1,5 +1,5 @@
-チュートリアル
--------------
+Tutorial
+--------
 
 ビットマスクとは、データをchar/int/float型ではなく、ビットとして保存するプロセスです。特定の種類のデータをコンパクトかつ効率的に保存するのに非常に便利です。
 
@@ -84,14 +84,15 @@ bit = storage & (1 << n);
 00000000    00001000
 ```
 
-演習
-----
+Exercise
+--------
 
 ビットマスクを使用して一部のフラグを操作します。
 
 
-チュートリアル コード
--------------------
+Tutorial Code
+-------------
+
     #include <stdio.h>
     #include <assert.h>
 
@@ -129,11 +130,11 @@ bit = storage & (1 << n);
     }
 
 
-期待している出力
+Expected Output
 ---------------
    Done!
 
-解答
+Solution
 ----
     #include <stdio.h>
     #include <assert.h>

@@ -1,5 +1,5 @@
-チュートリアル
--------------
+Tutorial
+--------
 
 前回の[配列](https://www.learn-c.org/en/Arrays)のチュートリアルでは、配列とその仕組みについて説明しました。これまで見てきた配列はすべて1次元でしたが、C言語では多次元配列を作成・使用できます。多次元配列の宣言の一般的な形式は次のとおりです。
 
@@ -62,8 +62,8 @@ or maybe this one -
 
 というステートメントは、配列の 3 行目で 4 列目の要素を取得します。
 
-演習
-----
+Exercise
+--------
 
 数学と物理の2つの科目について、5人の生徒グループの平均点を調べてみましょう。そのためには、「grades」という2次元配列を使用します。数学の点数は1行目（「grades[0]」）に格納され、物理の点数は2行目（「grades[1]」）に格納されます。このプログラムを実行するには、以下の手順を実行してください。
 
@@ -71,8 +71,8 @@ or maybe this one -
 - 終了条件を指定してforループを完了する
 - 各科目の平均点を計算する
 
-チュートリアル コード
--------------------
+Tutorial Code
+-------------
 
 	#include <stdio.h>
 
@@ -109,13 +109,13 @@ or maybe this one -
 	}
 
 
-期待している出力
+Expected Output
 ---------------
 
     The average marks obtained in subject 0 is: 78.80
     The average marks obtained in subject 1 is: 82.80
 
-解答
+Solution
 ----
 
 	#include <stdio.h>
