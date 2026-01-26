@@ -1,6 +1,6 @@
 # Välkommen
 
-Välkommen till LearnPython.org's interaktiva Python-tutorial. Denna sida stöds stolt av [Boot.devs kurs "Lär dig Python"](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Vill du lära dig Python från början till slut? [Bli medlem och använd koden LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) för 25% rabatt första året!
+Välkommen till LearnPython.org's interaktiva Python-tutorial.
 
 Oavsett om du är en erfaren programmerare eller inte, är denna webbplats avsedd för alla som vill lära sig programmeringsspråket Python.<br>
 

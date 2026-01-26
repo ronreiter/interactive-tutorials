@@ -1,6 +1,6 @@
 # 환영합니다
 
-LearnPython.org의 상호작용 Python 튜토리얼에 오신 것을 환영합니다. 이 사이트는 [Boot.dev의 "파이썬 배우기" 코스](https://www.boot.dev/courses/learn-python?promo=LEARNXORG)의 후원을 받아 운영됩니다. 파이썬을 처음부터 끝까지 배우고 싶다면, [멤버가 되어 LEARNXORG 코드를 사용](https://www.boot.dev/pricing?promo=LEARNXORG)해 첫 해 25% 할인을 받아보세요!
+LearnPython.org의 상호작용 Python 튜토리얼에 오신 것을 환영합니다.
 
 경험 있는 프로그래머이든 아니든, 이 웹사이트는 Python 프로그래밍 언어를 배우고자 하는 모든 사람을 위해 준비되었습니다.<br>
 

@@ -1,6 +1,6 @@
 # Tervetuloa
 
-Tervetuloa LearnPython.org interaktiiviseen Python-oppaaseen. Tämä sivusto on ylpeänä tuettu [Boot.devin "Opi Python" -kurssin](https://www.boot.dev/courses/learn-python?promo=LEARNXORG) toimesta. Haluatko oppia Pythonin alusta loppuun? [Liity jäseneksi ja käytä koodia LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) saadaksesi 25% alennuksen ensimmäisestä vuodesta!
+Tervetuloa LearnPython.org interaktiiviseen Python-oppaaseen.
 
 Olitpa sitten kokenut ohjelmoija tai et, tämä verkkosivusto on tarkoitettu kaikille, jotka haluavat oppia Python-ohjelmointikieltä.<br>
 

@@ -1,6 +1,6 @@
 # Chào mừng
 
-Chào mừng bạn đến với khóa học tương tác Python trên LearnPython.org. Trang web này được tự hào hỗ trợ bởi [khóa học "Học Python" của Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Muốn học Python từ A đến Z? [Hãy trở thành thành viên và dùng mã LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) để nhận ưu đãi giảm 25% cho năm đầu!
+Chào mừng bạn đến với khóa học tương tác Python trên LearnPython.org.
 
 Dù bạn là một lập trình viên có kinh nghiệm hay không, trang web này đều hướng đến mọi người muốn học ngôn ngữ lập trình Python.<br>
 

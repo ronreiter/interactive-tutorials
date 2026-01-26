@@ -1,6 +1,6 @@
 # Welcome
 
-Bine ati venit la tutorialul interactiv de Python de pe LearnPython.org. Acest site este susținut cu mândrie de [cursul „Învățați Python” de la Boot.dev](https://www.boot.dev/courses/learn-python?promo=LEARNXORG). Doriți să învățați Python de la A la Z? [Deveniți membru și folosiți codul LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) pentru 25% reducere în primul an!
+Bine ati venit la tutorialul interactiv de Python de pe LearnPython.
 
 Indiferent dacă sunteți un programator experimentat sau nu, acest website este destinat tuturor celor care doresc să învețe limbajul de programare Python.<br>
 
