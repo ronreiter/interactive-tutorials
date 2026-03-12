@@ -143,58 +143,78 @@ Use selectors and `<ol>` to make five list items like this:
 
 Tutorial Code
 -------------
-
-<style>
-</style>
-<ol>
-</ol>
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+		<style>
+		</style>
+		<ol>
+		</ol>
+    </body>
+</html>
     
 Expected Output
 ---------------
-
-<style>
-li.simple {
-	font-family: sans-serif;
-}
-li.blueish {
-	color: blue;
-}
-li.reddish {
-	color: red;
-}
-li.purplish {
-	color: purple;
-}
-</style>
-<ol type="1">
-	<li class="simple">This is simple text.</li>
-	<li class="simple">This is simple text too.</li>
-	<li class="blueish">This is blue text</li>
-	<li class="reddish">This is red text</li>
-	<li class="purplish">Red and Blue make <strong>Purple</strong></li>
-</ol>
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+		<style>
+	li.simple {
+		font-family: sans-serif;
+	}
+	li.blueish {
+		color: blue;
+	}
+	li.reddish {
+		color: red;
+	}
+	li.purplish {
+		color: purple;
+	}
+	</style>
+	<ol type="1">
+		<li class="simple">This is simple text.</li>
+		<li class="simple">This is simple text too.</li>
+		<li class="blueish">This is blue text</li>
+		<li class="reddish">This is red text</li>
+		<li class="purplish">Red and Blue make <strong>Purple</strong></li>
+	</ol>
+	</body>
+	</html>
 
 Solution
 --------
 
-<style>
-li.simple {
-	font-family: sans-serif;
-}
-li.blueish {
-	color: blue;
-}
-li.reddish {
-	color: red;
-}
-li.purplish {
-	color: purple;
-}
-</style>
-<ol type="1">
-	<li class="simple">This is simple text.</li>
-	<li class="simple">This is simple text too.</li>
-	<li class="blueish">This is blue text</li>
-	<li class="reddish">This is red text</li>
-	<li class="purplish">Red and Blue make <strong>Purple</strong></li>
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+		<style>
+	li.simple {
+		font-family: sans-serif;
+	}
+	li.blueish {
+		color: blue;
+	}
+	li.reddish {
+		color: red;
+	}
+	li.purplish {
+		color: purple;
+	}
+	</style>
+	<ol type="1">
+		<li class="simple">This is simple text.</li>
+		<li class="simple">This is simple text too.</li>
+		<li class="blueish">This is blue text</li>
+		<li class="reddish">This is red text</li>
+		<li class="purplish">Red and Blue make <strong>Purple</strong></li>
+	</ol>
+	</body>
+	</html>rong>Purple</strong></li>
 </ol>
