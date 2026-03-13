@@ -97,8 +97,15 @@ Tutorial Code
         // 3. TODO: Delete John from the map
 
         for _, name := range []string{"Danny", "John", and "Belle"} {
-            // 4. TODO: Check to see if "Danny", "John", and "Belle" exists in the map
-            
+            // 4. TODO: Check to see if "Danny", "John", and "Belle" exists in the map, 
+            // use grade and exists as a variable name
+
+
+            if exists {
+                
+            } else {
+                
+            }
         }
     }
 
@@ -128,8 +135,9 @@ Solution
         delete(studentGrades, "John")
 
         for _, name := range []string{"Danny", "John", "Belle"} {
-            // 4. Check to see if "Danny", "John", and "Belle" exists in the map
-            if grade, exists := studentGrades[name]; exists {
+            // 4. TODO: Check to see if "Danny", "John", and "Belle" exists in the map
+            grade, exists := studentGrades[name]
+            if exists {
                 fmt.Println(name, "with a grade of", grade)
             } else {
                 fmt.Println(name, "doesn't have a grade in map")
