@@ -2,9 +2,9 @@ Tutorial
 --------
 Maps
 ----
-Maps are used to store key-value pairs, where the keys are unique and are used to access the corresponding values. So instead of accessing its elements/values using an index (start from index 0) like in Arrays and Slices, we access the values using the keys. When we add a key-value pairs with key that already exists in the map, the new value we set will replace the old value of the corresponding key. While arrays and slices have a fixed size, in maps, we can add as many as key-value pairs as we want.
+Maps are used to store key-value pairs, where the keys are unique and are used to access the corresponding values. So instead of accessing its elements/values using an index (starting from index 0) like in [[Arrays]] and [[Slices]], we access the values using the keys. When we add a key-value pair with key that already exists in the map, the new value we set will replace the old value of the corresponding key. While arrays have a fixed size, in maps, we can add as many as key-value pairs as we want.
 
-In other programming languages, maps are also known as dictionaries or hashmaps. For example, in Python or C#, we can use dictionaries to store key-value pairs. In Java or Javascrtipt, we can use hashmaps or objexts for the same purpose.
+In other programming languages, maps are also known as dictionaries or hashmaps. For example, in Python or C#, we can use dictionaries to store key-value pairs. In Java, we can also use hashmap to store them.
 
 Declaration
 -----------
@@ -41,7 +41,7 @@ To **access** or **retrieve** an element.
 
 If the key we are accessing for doesn't exist, it will return the default value for that value type, such as "" for string, false for boolean, and 0 for number.
 
-We can also **check** whether the key-value pairs exists or not in the map below. First return value is the value of correspoonding key and the second one tells us about the key-value pairs presents.
+We can also **check** whether the key-value pairs exists or not in the map below. First return value is the value of corresponding key and the second one tells us about the key-value pairs presents.
 
     userAddress, ok := user["address"]
 
@@ -96,7 +96,7 @@ Tutorial Code
 
         // 3. TODO: Delete John from the map
 
-        for _, name := range []string{"Danny", "John", and "Belle"} {
+        for _, name := range []string{"Danny", "John", "Belle"} {
             // 4. TODO: Check to see if "Danny", "John", and "Belle" exists in the map, 
             // use grade and exists as a variable name
 
