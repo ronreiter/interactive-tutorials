@@ -1,8 +1,8 @@
 Tutorial
 --------
 
-C Unions sind im Grunde dasselbe wie C Strukturen (structs), abgesehen davon, dass sie anstatt mehrere Variablen, die ihren eigenen Speicher besitzen, besitzen Unions die Eigenschaft mehrere Namen für die selbe Variable zu verwenden. Über diese Namen kann der Speicher als unterschiedliche Datentypen interpretiert werden (und die Größe der Union ist die des größten verwendeten typen + Puffer den ihm der Compiler eventuell mit gibt)
-Also wenn Sie in der Lage sein wollen Speicher in unterschiedlichen Wegen zu interpretieren, zum Beispiel einen integer Byte für Byte zu lesen hätte man so etwas wie das:
+C Unions sind im Grunde dasselbe wie C Strukturen (structs), mit dem Unterschied, dass sie anstatt mehrerer Variablen mit jeweils eigenem Speicher, mehrere Namen für die selbe Variable enthalten. Über diese Namen kann der Speicher als unterschiedliche Datentypen interpretiert werden (Die Größe der Union ist die des größten verwendeten Typen + Puffer den ihm der Compiler eventuell mit zuweist)
+Wenn Sie also in der Lage sein wollen Speicher auf unterschiedliche Arten auszulesen, zum Beispiel einen integer Byte für Byte, könnten Sie eine Union wie diese verwenden:
 
 	union intParts 
 	{
