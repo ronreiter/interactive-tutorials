@@ -58,7 +58,25 @@ The for-range loop provides us access to the index and value of the elements in 
 		myList := []int{1,2,3}
 
 		for index, value := range myList {
-			fmt.Printf("%d is index, %d is value", index, value)
+			fmt.Printf("%d is index, %d is value\n", index, value)
+		}
+	}
+
+For a map, for-range loop will provides us to the key and value of its elements we are looping through.
+
+	package main
+
+	import "fmt"
+
+	func main() {
+		myMap := map[string]int{
+			"one":   1,
+			"two":   2,
+			"three": 3,
+		}
+
+		for key, value := range myMap {
+			fmt.Printf("%s is key, %d is value\n", key, value)
 		}
 	}
 

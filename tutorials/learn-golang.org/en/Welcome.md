@@ -14,6 +14,7 @@ learn-golang.org is still under construction - If you wish to contribute tutoria
 - [[Variables]]
 - [[Arrays]]
 - [[Slices]]
+- [[Maps]]
 - [[If-Else]]
 - [[Loops]]
 - [[Functions]]
