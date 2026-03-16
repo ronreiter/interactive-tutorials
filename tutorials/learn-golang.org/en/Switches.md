@@ -75,7 +75,7 @@ Let's write an example code to check if the user's name is `John` or not
     }
 
     // let's change the username variable
-    userName := "Bob"
+    userName = "Bob"
 
     // prints Hi Bob!
     switch userName {
@@ -86,10 +86,9 @@ Let's write an example code to check if the user's name is `John` or not
     default:
         fmt.Println("I don't know you!")
     }
-        userName := "Bob"
 
     // let's change the username variable again
-    userName := "Matthew"
+    userName = "Matthew"
 
     // prints I don't know you!
     switch userName {
