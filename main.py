@@ -193,7 +193,11 @@ def init_tutorials():
             tutorials = os.listdir(tutorials_path)
 
             # place the index file first
-            tutorials.remove("Welcome.md")
+            # tutorials.remove("Welcome.md")
+            try:
+                tutorials.remove("Welcome.md")
+            except ValueError:
+                pass
             tutorials = ["Welcome.md"] + tutorials
             for tutorial_file in tutorials:
                 if not tutorial_file.endswith(".md"):
@@ -209,8 +213,13 @@ def init_tutorials():
 
                 tutorial_path = os.path.join(os.path.dirname(__file__), "tutorials", domain, language, tutorial_file)
 
-                tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n")
-
+                # tutorial_dict["text"] = open(tutorial_path).read().replace("\r\n", "\n")
+                try:
+                    with open(tutorial_path) as f:
+                        tutorial_dict["text"] = f.read().replace("\r\n", "\n")
+                except FileNotFoundError:
+                    print(f"WARNING: Missing file {tutorial_path}")
+                    continue
                 if domain == "learnpython.org":
                     # Handle logic specific for `learnpython.org`
                     if "en" not in tutorial_data[domain]:
