@@ -193,8 +193,9 @@ def init_tutorials():
             tutorials = os.listdir(tutorials_path)
 
             # place the index file first
-            tutorials.remove("Welcome.md")
-            tutorials = ["Welcome.md"] + tutorials
+            if "Welcome.md" in tutorials:
+                tutorials.remove("Welcome.md")
+                tutorials = ["Welcome.md"] + tutorials
             for tutorial_file in tutorials:
                 if not tutorial_file.endswith(".md"):
                     continue
