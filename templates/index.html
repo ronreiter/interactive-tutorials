@@ -27,7 +27,11 @@
             {% if domain_data.language == "javascript" %}
             <a href="https://coddyapp.onelink.me/bvMS/0nt24j38?af_sub1=learn-js.org" target="_blank">
                 <img src="/static/img/banners/coddy/coddy-billboard-js.png" style="width: 100%; margin-bottom: 10px"/>
-            </a>  
+            </a>
+            {% elif domain_data.language == "sql" %}
+            <a href="https://datacamp.pxf.io/c/67577/3120137/13294?sharedid=learnsql_topbanner" target="_blank">
+              <img src="/static/img/banners/datacamp/datacamp-billboard-sql.png" style="width: 100%; margin-bottom: 10px"/>
+            </a>
             {% else %}
             <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
               <img src="/static/img/banners/cfk/cfk-billboard.png" style="width: 100%; margin-bottom: 10px"/>
