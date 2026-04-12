@@ -138,15 +138,15 @@ Tutorial Code
         <head>
         </head>
         <body>
-         <p>
-            Paragraph 1.
-        </p>
-        <p class="p2">
-            Paragraph 2.
-        </p>
-        <p id="p3">
-            Paragraph 3.
-        </p>
+            <p>
+                Paragraph 1.
+            </p>
+            <p class="p2">
+                Paragraph 2.
+            </p>
+            <p id="p3">
+                Paragraph 3.
+            </p>
         </body>
     </html>
     
