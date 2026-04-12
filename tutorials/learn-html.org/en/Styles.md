@@ -124,9 +124,9 @@ For example:
 
 Exercise
 --------
-1. change the `font-family` of `Paragraph 1` to `sans-serif` using the Inline Method.
-2. change the `font-family` of `Paragraph 2` to `monospace` using the CSS Stylesheets and CSS selectors.
-3. change the `font-family` of `Paragraph 3` to `serif` using JavaScript (programmatically).
+1. Change the `font-family` of `Paragraph 1` to `sans-serif` using the Inline method.
+2. Change the `font-family` of `Paragraph 2` to `monospace` using a CSS `<style>` tag and a CSS selector.
+3. Change the `font-family` of `Paragraph 3` to `serif` using JavaScript programmatically.
 
 
 
