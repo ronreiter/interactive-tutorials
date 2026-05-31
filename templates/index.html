@@ -20,13 +20,29 @@
 {% block ogurl %}{{ domain_data.full_url }}{% if tutorial_page %}/{{ path }}{% endif %}{% endblock %}
 
 {% block content %}
+{% set coddy_banner_languages = {
+    "learnjavaonline.org":  {"img": "java",  "landing": "java"},
+    "learn-html.org":       {"img": "html",  "landing": "html"},
+    "learn-golang.org":     {"img": "go",    "landing": "go"},
+    "learn-c.org":          {"img": "c",     "landing": "c"},
+    "learn-cpp.org":        {"img": "cpp",   "landing": "cpp"},
+    "learn-ts.org":         {"img": "ts",    "landing": "js"},
+    "learn-php.org":        {"img": "php",   "landing": "php"},
+    "learnshell.org":       {"img": "shell", "landing": "terminal"},
+    "learncs.org":          {"img": "cs",    "landing": "csharp"},
+    "learnrubyonline.org":  {"img": "ruby",  "landing": "ruby"}
+} %}
 <div class="container" id="main">
     <div class="row">
         <div class="col-12">
             <div class="d-none d-lg-block">
             {% if domain_data.language == "javascript" %}
-            <a href="https://coddyapp.onelink.me/bvMS/0nt24j38?af_sub1=learn-js.org" target="_blank">
+            <a href="https://link.coddy.tech/bvMS?af_web_dp=https%3A%2F%2Fcoddy.tech%2Flanding%2Fjs&af_sub1=learn-js.org" target="_blank">
                 <img src="/static/img/banners/coddy/coddy-billboard-js.png" style="width: 100%; margin-bottom: 10px"/>
+            </a>
+            {% elif domain_data.namespace in coddy_banner_languages %}
+            <a href="https://link.coddy.tech/bvMS?af_web_dp=https%3A%2F%2Fcoddy.tech%2Flanding%2F{{ coddy_banner_languages[domain_data.namespace].landing }}&af_sub1={{ domain_data.namespace }}" target="_blank">
+                <img src="/static/img/banners/coddy/coddy-billboard-{{ coddy_banner_languages[domain_data.namespace].img }}.png" style="width: 100%; margin-bottom: 10px"/>
             </a>
             {% elif domain_data.language == "sql" %}
             <a href="https://datacamp.pxf.io/c/67577/3120137/13294?sharedid=learnsql_topbanner" target="_blank">
@@ -127,8 +143,12 @@
             <div class="row mt-2">
                 <div class="col">
                 {% if domain_data.language == "javascript" %}
-                    <a href="https://coddyapp.onelink.me/bvMS/0nt24j38?af_sub1=learn-js.org" target="_blank">
+                    <a href="https://link.coddy.tech/bvMS?af_web_dp=https%3A%2F%2Fcoddy.tech%2Flanding%2Fjs&af_sub1=learn-js.org" target="_blank">
                         <img src="/static/img/banners/coddy/coddy-billboard-js.png" style="width: 100%; margin-bottom: 10px"/>
+                    </a>
+                {% elif domain_data.namespace in coddy_banner_languages %}
+                    <a href="https://link.coddy.tech/bvMS?af_web_dp=https%3A%2F%2Fcoddy.tech%2Flanding%2F{{ coddy_banner_languages[domain_data.namespace].landing }}&af_sub1={{ domain_data.namespace }}" target="_blank">
+                        <img src="/static/img/banners/coddy/coddy-billboard-{{ coddy_banner_languages[domain_data.namespace].img }}.png" style="width: 100%; margin-bottom: 10px"/>
                     </a>
                 {% else %}
                     <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
@@ -165,8 +185,12 @@
 {#                </div>#}
                 <div class="mt-3">
                 {% if domain_data.language == "javascript" %}
-                 <a href="https://coddyapp.onelink.me/bvMS/0nt24j38?af_sub1=learn-js.org" target="_blank">
+                 <a href="https://link.coddy.tech/bvMS?af_web_dp=https%3A%2F%2Fcoddy.tech%2Flanding%2Fjs&af_sub1=learn-js.org" target="_blank">
                     <img src="/static/img/banners/coddy/coddy-billboard-long-js.png" style="width: 100%; margin-bottom: 10px"/>
+                  </a>
+                {% elif domain_data.namespace in coddy_banner_languages %}
+                  <a href="https://link.coddy.tech/bvMS?af_web_dp=https%3A%2F%2Fcoddy.tech%2Flanding%2F{{ coddy_banner_languages[domain_data.namespace].landing }}&af_sub1={{ domain_data.namespace }}" target="_blank">
+                    <img src="/static/img/banners/coddy/coddy-billboard-long-{{ coddy_banner_languages[domain_data.namespace].img }}.png" style="width: 100%; margin-bottom: 10px"/>
                   </a>
                 {% else %}
                   <a href="https://codingforkids.io?utm_source=learnpython&utm_medium=banner&utm_campaign=cfk-learnpython&utm_id=learnpython" target="_blank">
