@@ -90,4 +90,4 @@ Solution
     country = input("Enter your country: ")
     
     # Displaying the formatted sentence with name, age, and country
-    print("Hello, my name is {}, I am {} years old, and I am from {}.".format(name, age, country)) name is {}, I am {} years old, and I am from {}.".format(name, age, country))
+    print("Hello, my name is {}, I am {} years old, and I am from {}.".format(name, age, country))
