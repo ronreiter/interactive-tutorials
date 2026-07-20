@@ -15,7 +15,7 @@
 # written by: Jeff Ortel ( jortel@redhat.com )
 
 """
-The I{depsolve} module defines a class for performing dependancy solving.
+The I{depsolve} module defines a class for performing dependency solving.
 """
 
 from logging import getLogger
