@@ -51,19 +51,42 @@ Solution
   language folder, or `main.py` creates an empty stub page (acceptable only for
   genuinely-orphan links; prefer real files).
 
-## 3. Expected Output assertions
+## 3. Expected Output — two conventions (IMPORTANT)
 
-`Expected Output` is **executed by the server's runner**, not just displayed. Typical
-form:
+There are TWO different conventions across sites. Identify which one a site uses by
+reading an existing tutorial's `Expected Output` block, then follow that site's
+convention.
+
+### A) Checker DSL (learnpython.org only)
+
+learnpython.org uses a checker DSL inside `Expected Output`:
 
 ```
 test_output_contains("some string")
 success_msg('Great job!')
 ```
 
-- NEVER alter `test_output_contains(...)` / `success_msg(...)` lines — they are code.
-- In translations, keep these lines byte-for-byte identical to English.
-- Only the surrounding prose is translatable.
+Other checker functions seen: `test_object`, `test_objects`, `error_contains`,
+`output_contains`. These lines are code, NOT literal output:
+- NEVER alter them.
+- In translations, keep them byte-for-byte identical to English.
+
+### B) Literal output (ALL other sites: learn-js, learn-ts, learn-c, learn-html,
+learnsqlonline, learnjavaonline, learn-cpp, learncs, learnshell, learn-php,
+learnrubyonline, learn-perl, learn-golang, and the rest)
+
+The `Expected Output` block is the **literal expected output string** that the
+program must print, compared by exact trimmed string equality (the JS `print()`
+function does `$.trim(tutorialData.output) === $.trim(text)`).
+
+- When you WRITE a new tutorial, put the exact literal output the starter code /
+  solution produces (e.g. for `print("Hello")` the Expected Output is `Hello`).
+- Keep code, literal output, and whitespace EXACTLY matching what running the
+  solution produces — the "correct" check depends on it.
+- In translations, keep the literal output string byte-for-byte identical to English.
+
+> Note: learn-html.org compares rendered HTML structurally (not string equality);
+> the Expected Output there is the expected full HTML document.
 
 ## 4. Welcome.md
 
