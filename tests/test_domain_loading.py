@@ -9,10 +9,6 @@ def test_unsupported_domains_wired():
         assert d in constants.DOMAIN_DATA
 
 
-def test_vibecoding_is_browser_model():
-    assert constants.DOMAIN_DATA["learnvibecoding.org"]["is_browser_model"] is True
-
-
 def test_learnrust_has_en_folder():
     import os
     path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "tutorials", "learnrust.org", "en")

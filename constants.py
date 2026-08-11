@@ -20,7 +20,6 @@ LEARNSQL_DOMAIN = "learnsqlonline.org"
 LEARNTS_DOMAIN = "learn-ts.org"
 LEARNRUST_DOMAIN = "learnrust.org"
 LEARNASSEMBLY_DOMAIN = "learnassembly.org"
-LEARNVIBECODING_DOMAIN = "learnvibecoding.org"
 
 
 from collections import OrderedDict
@@ -509,23 +508,6 @@ SELECT * FROM helloworld WHERE phrase = "Hello, World!";
         "container" : """
 """,
 
-
-}
-
-# Browser-based model site: no IDEOne execution; the model runs in the browser.
-DOMAIN_DATA[LEARNVIBECODING_DOMAIN] = {
-        "language" : "text",
-        "language_id": 0,
-        "codemirror_mode": "text",
-        "prism_mode": "language-none",
-        "analytics" : "UA-22741967-19",
-        "language_uppercase" : "Vibe Coding",
-        "default_code" : "",
-        "is_browser_model" : True,
-        "container_word" : "",
-        "container_indent" : "",
-        "container" : """
-""",
 
 }
 
