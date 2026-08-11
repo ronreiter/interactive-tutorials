@@ -18,6 +18,9 @@ LEARNSCALA_DOMAIN = "learnscala.org"
 LEARNSOLIDITY_DOMAIN = "learnsolidity.org"
 LEARNSQL_DOMAIN = "learnsqlonline.org"
 LEARNTS_DOMAIN = "learn-ts.org"
+LEARNRUST_DOMAIN = "learnrust.org"
+LEARNASSEMBLY_DOMAIN = "learnassembly.org"
+LEARNVIBECODING_DOMAIN = "learnvibecoding.org"
 
 
 from collections import OrderedDict
@@ -414,22 +417,76 @@ object Main {
 """,
 }
 
-# DOMAIN_DATA[LEARNSOLIDITY_DOMAIN] = {
-#         "language" : "solidity",
-#         "codemirror_mode": "text/x-solidity",
-#         "prism_mode": "language-solidity",
-#         "analytics" : "UA-22741967-15",
-#         "language_uppercase" : "Solidity",
-#         "default_code" : """// Welcome to the Interactive Solidity Tutorial.
-# // Start by choosing a chapter, write your code in this window.
-#
-# """,
-#         "container_word" : "",
-#         "container_indent" : "",
-#         "container" : """
-# """,
-#
-# }
+DOMAIN_DATA[LEARNSOLIDITY_DOMAIN] = {
+        "language" : "solidity",
+        "codemirror_mode": "text/x-solidity",
+        "prism_mode": "language-solidity",
+        "analytics" : "UA-22741967-15",
+        "language_uppercase" : "Solidity",
+        "default_code" : """// Welcome to the Interactive Solidity Tutorial.
+// Start by choosing a chapter, write your code in this window.
+
+""",
+        "container_word" : "",
+        "container_indent" : "",
+        "container" : """
+""",
+
+}
+
+DOMAIN_DATA[LEARNASSEMBLY_DOMAIN] = {
+        "language" : "assembly",
+        "language_id": 13,
+        "codemirror_mode": "text/x-gas",
+        "prism_mode": "language-asm6502",
+        "analytics" : "UA-22741967-17",
+        "language_uppercase" : "Assembly",
+        "default_code" : """; Welcome to the Interactive Assembly Tutorial.
+; Start by choosing a chapter, write your code in this window.
+
+section .data
+    msg db 'Hello, World!', 0xa
+    len equ $ - msg
+
+section .text
+    global _start
+    _start:
+        mov rax, 1
+        mov rdi, 1
+        mov rsi, msg
+        mov rdx, len
+        syscall
+        mov rax, 60
+        xor rdi, rdi
+        syscall
+""",
+        "container_word" : "",
+        "container_indent" : "",
+        "container" : """
+""",
+
+}
+
+DOMAIN_DATA[LEARNRUST_DOMAIN] = {
+        "language" : "rust",
+        "language_id": 44,
+        "codemirror_mode": "text/x-rust",
+        "prism_mode": "language-rust",
+        "analytics" : "UA-22741967-18",
+        "language_uppercase" : "Rust",
+        "default_code" : """// Welcome to the Interactive Rust Tutorial.
+// Start by choosing a chapter, write your code in this window.
+
+fn main() {
+    println!("Hello, World!");
+}
+""",
+        "container_word" : "",
+        "container_indent" : "",
+        "container" : """
+""",
+
+}
 
 DOMAIN_DATA[LEARNSQL_DOMAIN] = {
         "language" : "sql",
@@ -452,6 +509,23 @@ SELECT * FROM helloworld WHERE phrase = "Hello, World!";
         "container" : """
 """,
 
+
+}
+
+# Browser-based model site: no IDEOne execution; the model runs in the browser.
+DOMAIN_DATA[LEARNVIBECODING_DOMAIN] = {
+        "language" : "text",
+        "language_id": 0,
+        "codemirror_mode": "text",
+        "prism_mode": "language-none",
+        "analytics" : "UA-22741967-19",
+        "language_uppercase" : "Vibe Coding",
+        "default_code" : "",
+        "is_browser_model" : True,
+        "container_word" : "",
+        "container_indent" : "",
+        "container" : """
+""",
 
 }
 
