@@ -17,18 +17,15 @@ contribuer avec des tutoriels, cliquez s'il vous plaît sur le lien
 
 ### Apprenez les bases
 
-- [[Salut, tout le monde !]]
-- [[Variables et types]]
-- [[Tableaux simples]]
-- [[Tableaux à clés]]
-- [[Tableaux multidimensionnels]]
-- [[Chaines]]
-- [[Boucles for]]
-- [[Boucles while]]
-- [[Fonctions]]
-- [[Objets]]
+- [[Hello, World!]]
+- [[Variables and Types]]
+- [[Simple arrays]]
+- [[Arrays with keys]]
+- [[Multidimensional arrays]]
+- [[Strings]]
+- [[For loops]]
+- [[While loops]]
+- [[Functions]]
+- [[Objects]]
 - [[Exceptions]]
 
-### Proposer des tutoriels
-
-Plus de détails ici : [[Proposer des tutoriels]]
