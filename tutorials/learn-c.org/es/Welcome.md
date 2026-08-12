@@ -25,8 +25,3 @@ learn-c.org sigue bajo construcción - Si deseas contribuir tutoriales, por favo
 
 - [Recursión](Recursion)
 - [Árboles binarios](Binary trees)
-
-### Contributing Tutorials
-
-Lee más aquí: [[Contributing Tutorials]]
-

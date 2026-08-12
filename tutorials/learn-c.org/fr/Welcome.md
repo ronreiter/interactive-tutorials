@@ -14,8 +14,3 @@ Table des Matières
 ### Apprentissage des Bases
 
 - [[Hello, World!]]
-
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]
-
