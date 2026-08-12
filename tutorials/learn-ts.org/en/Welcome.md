@@ -1,4 +1,4 @@
-### Welcome to Learn TypeScript - the Interactive TypeScript Tutorial
+# Welcome
 
 Welcome to learn-ts.org - the Interactive TypeScript tutorial. This website is proudly supported by [Boot.dev's Learn TypeScript course](https://www.boot.dev/courses/learn-typescript?promo=LEARNXORG). If you'd like to learn TypeScript from start to finish, [become a member and use code LEARNXORG](https://www.boot.dev/pricing?promo=LEARNXORG) for 25% off your first year!
 
@@ -10,7 +10,7 @@ features to the table, enhancing the development experience and ensuring more ro
 Dive into the chapters below to embark on your TypeScript journey. 
 Each section offers tutorials, example code, exercises, and solutions to consolidate your understanding.
 
-#### Basics
+### Basics
 
 1. [[Introduction]]
 2. [[Variables and Types]]
@@ -24,7 +24,7 @@ Each section offers tutorials, example code, exercises, and solutions to consoli
 10. [[Modules]]
 11. [[Type Assertions]]
 
-#### Advanced
+### Advanced
 
 1. [[keyof and typeof Operators]]
 2. [[Type Unions and Intersections]]
