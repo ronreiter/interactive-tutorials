@@ -10,14 +10,14 @@ learn-c.org仍在建设中——如果你想贡献教程，请点击下方的`�
 
 ### 基础学习
 
-- [[你好，世界!]]
-- [[变量和类型]]
-- [[数组]]
-- [[多维数组]]
-- [[条件语句]]
-- [[字符串]]
-- [[for循环]]
-- [[while循环]]
+- [[Hello, World!]]
+- [[Variables and Types]]
+- [[Arrays]]
+- [[Multidimensional Arrays]]
+- [[Conditions]]
+- [[Strings]]
+- [[For loops]]
+- [[While loops]]
 - [[Functions]]
 - [[Static]]
 
@@ -35,8 +35,3 @@ learn-c.org仍在建设中——如果你想贡献教程，请点击下方的`�
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
 - [[Bitmasks]]
-
-### 贡献教程
-
-在此阅读更多信息：[[Contributing Tutorials]]
-

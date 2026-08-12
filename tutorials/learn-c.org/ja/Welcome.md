@@ -35,8 +35,3 @@ learn-c.org は現在構築中です。チュートリアルを投稿してい�
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
 - [[Bitmasks]]
-
-### チュートリアルへの貢献
-
-詳細はこちら: [[Contributing Tutorials]]
-

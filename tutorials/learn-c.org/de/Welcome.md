@@ -13,28 +13,24 @@ Inhaltsverzeichnis
 
 ### Lerne die Grundlagen
 
-- [[Hallo, Welt!]]
-- [[Variablen und Typen]]
+- [[Hello, World!]]
+- [[Variables and Types]]
 - [[Arrays]]
 - [[Strings]]
-- [[For Schleifen]]
-- [[While Schleifen]]
-- [[Funktionen]]
+- [[For loops]]
+- [[While loops]]
+- [[Functions]]
 
 ### Fortgeschritten
 
-- [[Zeiger]]
-- [[Strukturen]]
-- [[Funktionsargument als Referenz]]
-- [[Dynamische Allozierung]]
-- [[Rekursion]]
-- [[Gelinkte Listen]]
-- [[Binäre Bäume]]
+- [[Pointers]]
+- [[Structures]]
+- [[Function arguments by reference]]
+- [[Dynamic allocation]]
+- [[Recursion]]
+- [[Linked lists]]
+- [[Binary trees]]
 - [[Unions]]
-- [[Zeiger Arithmetik]]
-- [[Funktionszeiger]]
+- [[Pointer Arithmetics]]
+- [[Function Pointers]]
 - [[Bitmasks]]
-
-### Tutorials beitragen
-
-Erfahre hier mehr: [[Tutorials beitragen|Contributing Tutorials]]
