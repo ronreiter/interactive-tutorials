@@ -14,28 +14,24 @@ Apesar de as lições e os códigos demonstrativos estarem traduzidos, jargões 
 
 ### Começando de Baixo
 
-- "[[Olá, Mundo!]]"
-- [[Variáveis e Tipos]]
-- [[Operadores Gerais]]
-- [[Operadores Lógicos]]
-- [[Funções]]
-- [[Funções Seta]]
-- [[Vetores]]
-- [[Manipulação de Vetores]]
-- [[Estruturas de Repetição]]
-- [[Objetos]]
-- [[Caixas Pop-up]]
-- [[Funções Callback]]
+- "[[Hello, World!]]"
+- [[Variables and Types]]
+- [[Operators]]
+- [[Conditions]]
+- [[Functions]]
+- [[Arrow Functions]]
+- [[Arrays]]
+- [[Manipulating Arrays]]
+- [[Loops]]
+- [[Objects]]
+- [[Pop-up Boxes]]
+- [[Callbacks]]
 
 ### Tutoriais Avançados
 
-- [[Promessas]]
-- [[Async e Await]]
-- [[JavaScript Orientado a Objetos]]
-- [[Contexto de Função]]
-- [[Herança]]
-- [[Desestruturação]]
-
-### Quero Ajudar
-
-Saiba mais em [[Tutoriais de Contribuição]].
+- [[Promises]]
+- [[Async and Await]]
+- [[Object Oriented JavaScript]]
+- [[Function Context]]
+- [[Inheritance]]
+- [[Destructuring]]
