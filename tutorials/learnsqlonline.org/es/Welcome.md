@@ -13,35 +13,17 @@ SQL también se puede utilizar para construir ductos de datos a largo plazo y da
 
 Para aprender SQL en este sitio web no hay necesidad de descargar nada - Simplemente haga clic en el capítulo desde el que desea empezar y siga las instrucciones. Buena suerte!
 
-learnsqlonline.org está todavía en construcción - Si desea contribuir con tutoriales, por favor haga clic en `Contributing Tutorials` abajo.
-
 ### Aprende las bases
 
-- [[Hola Mundo]]
-- [[Seleccionar datos]]
-- [[Crear tablas]]
-- [[Insertar filas]]
-- [[Actualizar filas]]
-- [[Eliminar filas]]
-- [[Unir tablas]]
+- [[Hello, World!]]
+- [[Selecting data]]
+- [[Creating tables]]
+- [[Inserting rows]]
+- [[Updating rows]]
+- [[Deleting rows]]
+- [[Joining tables]]
 - [[Group by]]
-- [[Funciones de agregación]]
-- [[HAVING]]
-- [[Consultas distintas]]
+- [[Aggregate functions]]
+- [[The HAVING statement]]
+- [[Distinct queries]]
 - [[Order by]]
-
-### Tutoriales avanzados
-- Operaciones de cadena
-- Inner y outer joins
-- UNION
-- CASE
-- Combinando INSERT INTO y SELECT
-- Subconsultas
-- Indexación
-- Alteración de tablas
-- Vistas
-- Funciones de ventana
-
-### Contribuir con tutoriales
-
-Lee más aquí: [[Contribuir con tutoriales]]
