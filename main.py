@@ -27,7 +27,7 @@ app = Flask(__name__)
 app.secret_key = constants.SECRET_KEY
 
 sections = re.compile(r"Tutorial\n[=\-]+\n+(.*)\n*Tutorial Code\n[=\-]+\n+(.*)\n*Expected Output\n[=\-]+\n+(.*)\n*Solution\n[=\-]+\n*(.*)\n*", re.MULTILINE | re.DOTALL)
-WIKI_WORD_PATTERN = re.compile('\[\[([^]|]+\|)?([^]]+)\]\]')
+WIKI_WORD_PATTERN = re.compile(r'\[\[([^]|]+\|)?([^]]+)\]\]')
 
 current_domain = os.environ.get("DEFAULT_DOMAIN", constants.LEARNPYTHON_DOMAIN)
 
@@ -161,9 +161,13 @@ def init_tutorials():
 
             tutorials = os.listdir(tutorials_path)
 
-            # place the index file first
-            tutorials.remove("Welcome.md")
-            tutorials = ["Welcome.md"] + tutorials
+            # place the index file first; tolerate a missing Welcome.md
+            if "Welcome.md" in tutorials:
+                tutorials.remove("Welcome.md")
+                tutorials = ["Welcome.md"] + tutorials
+            else:
+                logging.warning("No Welcome.md for domain %s language %s", domain, language)
+                tutorials.sort()
             for tutorial_file in tutorials:
                 if not tutorial_file.endswith(".md"):
                     continue
@@ -326,35 +330,12 @@ def static_file():
 
 @app.route("/signin")
 def signin():
-    email = request.args.get("email", None)
-    password = request.args.get("password", None)
-    user = users.findOne({"email": email})
-
-    if user:
-        session["user_id"] = str(user._id)
-        return make_response(json.dumps({"status": "error", "error": "no_user"}))
+    # No user store exists in this repository; these endpoints were non-functional.
+    return make_response(json.dumps({"status": "error", "error": "not_implemented"}), 501)
 
 @app.route("/signup")
 def signup():
-    email = request.args.get("email", None)
-    password = request.args.get("password", None)
-    confirm = request.args.get("confirm", None)
-
-    if not email or not password or not confirm:
-        return make_response(json.dumps({"status": "error", "error": "missing_field"}))
-
-    if not re.findall("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", email):
-        return make_response(json.dumps({"status": "error", "error": "invalid_email"}))
-
-    if password != confirm:
-        return make_response(json.dumps({"status": "error", "error": "passwords_dont_match"}))
-
-    id = users.insert({
-        "email": email,
-        "password": password,
-    })
-
-    session["user_id"] = str(id)
+    return make_response(json.dumps({"status": "error", "error": "not_implemented"}), 501)
 
 
 @app.route("/<language>/progress")
