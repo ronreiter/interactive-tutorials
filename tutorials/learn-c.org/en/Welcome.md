@@ -6,8 +6,6 @@ Whether you are an experienced programmer or not, this website is intended for e
 
 There is no need to download anything - Just click on the chapter you wish to begin from, and follow the instructions. Good luck!
 
-learn-c.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
-
 ### Learn the Basics
 
 - [[Hello, World!]]
@@ -35,8 +33,4 @@ learn-c.org is still under construction - If you wish to contribute tutorials, p
 - [[Pointer Arithmetics]]
 - [[Function Pointers]]
 - [[Bitmasks]]
-
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]
 

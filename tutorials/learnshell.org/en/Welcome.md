@@ -30,8 +30,5 @@ Just click on the chapter you wish to begin from, and follow the instructions. G
 - [[Pipelines]]
 - [[Process Substitution]]
 - [[Regular Expressions]]
-- [[Special Commands  sed,awk,grep,sort]]
-
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]
+- [[Special Commands]]
+- [[Users_Management]]

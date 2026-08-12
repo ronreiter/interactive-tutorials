@@ -390,8 +390,15 @@ def index(title, language="en"):
             response = None
         is_german_user = response and response.country.iso_code == 'DE'
 
+        if domain_data.get("is_browser_model"):
+            template_name = "index-vibecoding.html"
+        elif language == "en" and domain_data["language"] == "python":
+            template_name = "index-python.html"
+        else:
+            template_name = "index.html"
+
         return make_response(render_template(
-            "index-python.html" if (language == "en" and domain_data["language"] == "python") else "index.html",
+            template_name,
             tutorial_page=tutorial != "Welcome",
             domain_data=domain_data,
             all_data=constants.DOMAIN_DATA,

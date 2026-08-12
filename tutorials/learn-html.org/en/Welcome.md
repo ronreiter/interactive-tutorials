@@ -92,8 +92,3 @@ The advanced tutorials will guide you through all there is to know regarding HTM
 
 ### Resources
 - Startboostrap.com - A list of free bootstrap templates to start out from.
-
-
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]

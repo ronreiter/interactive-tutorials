@@ -8,7 +8,6 @@ There is no need to download anything - just click on the chapter you wish to be
 
 **Good luck!**
 
-**Note:** learn-php.org is still under construction - If you wish to contribute tutorials, please click on `Contributing Tutorials` down below.
 
 ### Learn the Basics
 
@@ -23,7 +22,3 @@ There is no need to download anything - just click on the chapter you wish to be
 - [[Functions]]
 - [[Objects]]
 - [[Exceptions]]
-
-### Contributing Tutorials
-
-Read more here: [[Contributing Tutorials]]

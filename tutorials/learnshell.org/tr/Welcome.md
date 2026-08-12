@@ -10,28 +10,25 @@ Hangi bölümden başlamak istiyorsan sadece tıkla ve talimatları takip et. İ
 
 ### Temel Bilgileri Öğrenin
 
-- [[Merhaba, dünya!]]
-- [[Değişkenler]]
-- [[Betiklere Argüman Gönderme]]
-- [[Diziler]]
-- [[Dizi Karşılaştırma]]
-- [[Temel İşlemler]]
-- [[Temel Dizgi İşlemleri]]
-- [[Koşullu Durumlar]]
-- [[Döngüler]]
-- [[Fonksiyonlar]]
+- [[Hello, World!]]
+- [[Variables]]
+- [[Passing Arguments to the Script]]
+- [[Arrays]]
+- [[Basic Operators]]
+- [[Basic String Operations]]
+- [[Decision Making]]
+- [[Loops]]
+- [[Array-Comparison]]
+- [[Shell Functions]]
 
 ### İleri Seviye Bilgiler
 
-- [[Özel Değişkenler]]
-- [[Kabuk trap komutu]]
-- [[Dosya testleri]]
-- [[Girdi değeri ayrıştırma]]
-- [[Pipe Kullanımı]]
-- [[İşlem ayrıştırma]]
-- [[Düzenli İfadeler (RegEx)]]
-- [[Özel Komutlar sed,awk,grep,sort]]
-
-### Öğreticiye Katkıda Bulunma
-
-Daha fazlası için burayı okuyun: [[Derslere Katkıda Bulunma]]
+- [[Special Variables]]
+- [[Bash trap command]]
+- [[File Testing]]
+- [[Input Parameter Parsing]]
+- [[Pipelines]]
+- [[Process Substitution]]
+- [[Regular Expressions]]
+- [[Special Commands]]
+- [[Users_Management]]

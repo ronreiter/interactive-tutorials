@@ -93,8 +93,3 @@ De geadvanceerde tutorials zullen u gidsen door alles wat er valt te weten omtre
 
 ### Bronnen
 - Startboostrap.com - Een lijst met gratis bootstrap templates om vanuit te starten.
-
-
-### Bijdragen aan Tutorials
-
-Lees hier meer: [[Bijdragen aan Tutorials]]

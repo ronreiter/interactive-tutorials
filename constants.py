@@ -533,4 +533,21 @@ for domain, v in list(DOMAIN_DATA.items()):
         raise Exception("no favicon for %s - %s" % (domain, v["favicon"][1:]))
 
 
+# Browser-based model site: no IDEOne execution; the model runs in the browser.
+LEARNVIBECODING_DOMAIN = "learnvibecoding.org"
+DOMAIN_DATA[LEARNVIBECODING_DOMAIN] = {
+    "language": "text",
+    "language_id": 0,
+    "codemirror_mode": "text",
+    "prism_mode": "language-none",
+    "analytics": "UA-22741967-19",
+    "language_uppercase": "Vibe Coding",
+    "default_code": "",
+    "is_browser_model": True,
+    "container_word": "",
+    "container_indent": "",
+    "container": "",
+}
+
+
 
