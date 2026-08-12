@@ -4,6 +4,8 @@ run-daemon:
 	docker-compose up -d
 run-js:
 	DEFAULT_DOMAIN=learn-js.org docker-compose up
+run-vibecoding:
+	DEFAULT_DOMAIN=learnvibecoding.org docker-compose up
 build-local:
 	python3 -m venv venv
 	venv/bin/pip install -r requirements.txt
