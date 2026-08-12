@@ -75,8 +75,8 @@ Tutorial Code
 	int main() {
 		/* TODO: declare the 2D array grades here */
 		float average;
-		int i;
-		int j;
+		int subjectIndex;
+		int studentIndex;
 
 		grades[0][0] = 80;
 		grades[0][1] = 70;
@@ -91,14 +91,14 @@ Tutorial Code
 		grades[1][4] = 87;
 
 		/* TODO: complete the for loop with appropriate terminating conditions */
-		for (i = 0; i < ; i++) {
+		for (subjectIndex = 0; subjectIndex < ; subjectIndex++) {
 			average = 0;
-			for (j = 0; j < ; j++) {
-				average += grades[i][j];
+			for (studentIndex = 0; studentIndex < ; studentIndex++) {
+				average += grades[subjectIndex][studentIndex];
 			}
 
-			/* TODO: compute the average marks for subject i */
-			printf("The average marks obtained in subject %d is: %.2f\n", i, average);
+			/* TODO: compute the average marks for the current subject */
+			printf("The average marks obtained in subject %d is: %.2f\n", subjectIndex, average);
 		}
 
 		return 0;
@@ -119,8 +119,8 @@ Solution
 	int main() {
 		int grades[2][5];
 		float average;
-		int i;
-		int j;
+		int subjectIndex;
+		int studentIndex;
 
 		grades[0][0] = 80;
 		grades[0][1] = 70;
@@ -134,15 +134,15 @@ Solution
 		grades[1][3] = 82;
 		grades[1][4] = 87;
 
-		for (i = 0; i < 2; i++) {
+		for (subjectIndex = 0; subjectIndex < 2; subjectIndex++) {
 			average = 0;
 			
-			for (j = 0; j < 5; j++) {
-				average += grades[i][j];
+			for (studentIndex = 0; studentIndex < 5; studentIndex++) {
+				average += grades[subjectIndex][studentIndex];
 			}
 
 			average /= 5.0;
-			printf("The average marks obtained in subject %d is: %.2f\n", i, average);
+			printf("The average marks obtained in subject %d is: %.2f\n", subjectIndex, average);
 		}
 
 		return 0;
