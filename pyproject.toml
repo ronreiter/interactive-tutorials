@@ -9,7 +9,7 @@ readme = "README.md"
 python = "^3.11"
 Flask = "^2.3.3"
 redis = "^5.0.0"
-gunicorn = "^21.2.0"
+gunicorn = ">=21.2,<23.0"
 python-geoip = "^1.2"
 
 
