@@ -21,6 +21,7 @@ Inhaltsverzeichnis - Shellprogrammierung
 - [[Basic String Operations]]
 - [[Decision Making]]
 - [[Loops]]
+- [[Array-Comparison]]
 - [[Shell Functions]]
 
 ### Fortgeschrittene Tutorials
@@ -29,10 +30,8 @@ Inhaltsverzeichnis - Shellprogrammierung
 - [[Bash trap command]]
 - [[File Testing]]
 - [[Input Parameter Parsing]]
+- [[Pipelines]]
 - [[Process Substitution]]
 - [[Regular Expressions]]
-- [[Special Commands  sed,awk,grep,sort]]
-
-### Tutorials beitragen
-
-Erfahre mehr unter: [[Contributing Tutorials]]
+- [[Special Commands]]
+- [[Users_Management]]

@@ -1,67 +1,66 @@
 Tutorial
------------------
+--------
+Sometimes you want to catch a special signal, interruption, or user input in your script to prevent the unpredictable.
 
-It often comes the situations that you want to catch 
-a special signal/interruption/user input in your script 
-to prevent the unpredictables.
-
-Trap is your command to try:
+`trap` is your command to try:
 
 * `trap <arg/function> <signal>`
 
-###Example
+When a signal is received, the function or command listed as `<arg>` runs. Some of the common signal types you can trap:
 
-	#!/bin/bash
-	# traptest.sh
-	# notice you cannot make Ctrl-C work in this shell, 
-	# try with your local one, also remeber to chmod +x 
-	# your local .sh file so you can execute it!
-
-	trap "echo Booh!" SIGINT SIGTERM
-	echo "it's going to run until you hit Ctrl+Z"
-	echo "hit Ctrl+C to be blown away!"
-
-	while true        
-	do
-	    sleep 60       
-	done
-
-Surely you can substitute the `"echo Booh!"` with a function:
-
-	function booh {
-		echo "booh!"
-	}
-
-and call it in trap:
-
-	trap booh SIGINT SIGTERM
-
-
-Some of the common signal types you can trap:
-
-* `SIGINT`: user sends an interrupt signal (Ctrl + C)
-
-* `SIGQUIT`: user sends a quit signal (Ctrl + D)
-
-* `SIGFPE`: attempted an illegal mathematical operation
+* `SIGINT` - user sends an interrupt signal (Ctrl + C)
+* `SIGQUIT` - user sends a quit signal (Ctrl + D)
+* `SIGFPE` - attempted an illegal mathematical operation
 
 You can check out all signal types by entering the following command:
-	
-	kill -l
 
-Notice the numbers before each signal name, you can use that number to avoid typing long strings in trap:
+    kill -l
 
-	#2 corresponds to SIGINT and 15 corresponds to SIGTERM
-	trap booh 2 15	
+Notice the numbers before each signal name. You can use that number to avoid typing long strings in trap:
 
+    # 2 corresponds to SIGINT and 15 corresponds to SIGTERM
+    trap booh 2 15
 
-one of the common usage of trap is to do cleanup temporary files:
+One common use of trap is to do cleanup of temporary files:
 
+    trap "rm -f folder; exit" 2
 
-	trap "rm -f folder; exit" 2
+Here is a complete runnable example. The script sets a trap for SIGINT, sends itself the signal, and the handler runs:
 
+    #!/bin/bash
+    trap 'echo "Caught SIGINT"' SIGINT
+    echo "before kill"
+    kill -SIGINT $$
+    echo "after kill"
+
+This prints:
+
+    before kill
+    Caught SIGINT
+    after kill
 
 Exercise
 --------
+Fix the trap handler below so that instead of printing `TODO: replace me`, it prints `Bye!` when SIGINT is received.
 
-There is no exercise for this section.
+Tutorial Code
+-------------
+    #!/bin/bash
+    trap 'echo "TODO: replace me"' SIGINT
+    echo "waiting..."
+    kill -SIGINT $$
+    echo "done"
+
+Expected Output
+---------------
+    waiting...
+    Bye!
+    done
+
+Solution
+--------
+    #!/bin/bash
+    trap 'echo "Bye!"' SIGINT
+    echo "waiting..."
+    kill -SIGINT $$
+    echo "done"

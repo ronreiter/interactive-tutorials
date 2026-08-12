@@ -1,15 +1,15 @@
 Tutorial
 --------
-Often you will want to do some file tests on the file system you are running. In this case, shell will provide you with several useful commands to achieve it.
+Oft möchtest du einige Dateitests auf dem Dateisystem ausführen, auf dem du arbeitest. In diesem Fall bietet die Shell mehrere nützliche Befehle, um dies zu erreichen.
 
-The command looks like the following:
+Der Befehl sieht wie folgt aus:
 
 * `-<command> [filename]`
 * `[filename1] -<command> [filename2]`
 
-We will briefly introduce some common commands you might encounter in your daily life.
+Wir stellen kurz einige gängige Befehle vor, die dir im Alltag begegnen könnten.
 
-**use "-e" to test if a file exists**
+**"-e" verwenden, um zu testen, ob eine Datei existiert**
 
     #!/bin/bash
     filename="sample.md"
@@ -17,7 +17,7 @@ We will briefly introduce some common commands you might encounter in your daily
         echo "$filename exists as a file"
     fi
 
-**use "-d" to test if a directory exists**
+**"-d" verwenden, um zu testen, ob ein Verzeichnis existiert**
 
     #!/bin/bash
     directory_name="test_directory"
@@ -25,7 +25,7 @@ We will briefly introduce some common commands you might encounter in your daily
         echo "$directory_name exists as a directory"
     fi
 
-**use "-r" to test if a file has read permission for the user running the script**
+**"-r" verwenden, um zu testen, ob eine Datei eine Leseeberechtigung für den Benutzer hat, der das Skript ausführt**
 
     #!/bin/bash
     filename="sample.md"
@@ -38,18 +38,18 @@ We will briefly introduce some common commands you might encounter in your daily
         echo "you are not allowed to read $filename"
     fi
 
-Other common test flags include `-w` (writable), `-x` (executable), `-f` (regular file), and `-s` (non-empty file).
+Weitere häufige Testflags sind `-w` (schreibbar), `-x` (ausführbar), `-f` (reguläre Datei) und `-s` (nicht leere Datei).
 
 Exercise
 --------
-`filename` is created as a regular file. Fix the condition below to use the `-f` test so that it only reports the file when it exists as a regular file.
+`filename` wird unten als reguläre Datei erstellt. Korrigiere die Bedingung so, dass der `-f`-Test verwendet wird und die Datei nur dann gemeldet wird, wenn sie als reguläre Datei existiert.
 
 Tutorial Code
 -------------
     #!/bin/bash
     filename="sample.md"
     touch "$filename"
-    # fix the condition to use the -f test
+    # korrigiere die Bedingung, um den -f-Test zu verwenden
     if [ -e "$filename" ]; then
         echo "$filename exists"
     fi
