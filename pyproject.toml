@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-Flask = "^2.3.3"
+Flask = ">=2.3.3,<4.0.0"
 redis = "^5.0.0"
 gunicorn = "^21.2.0"
 python-geoip = "^1.2"
