@@ -124,10 +124,10 @@ For example:
 
 Exercise
 --------
+1. Change the `font-family` of `Paragraph 1` to `sans-serif` using the Inline method.
+2. Change the `font-family` of `Paragraph 2` to `monospace` using a CSS `<style>` tag and a CSS selector.
+3. Change the `font-family` of `Paragraph 3` to `serif` using JavaScript programmatically.
 
-This page does not have an exercise yet. You are welcome to contribute one by sending me a pull request:
-
-[[https://github.com/ronreiter/interactive-tutorials]]
 
 
 Tutorial Code
@@ -138,6 +138,15 @@ Tutorial Code
         <head>
         </head>
         <body>
+            <p>
+                Paragraph 1.
+            </p>
+            <p class="p2">
+                Paragraph 2.
+            </p>
+            <p id="p3">
+                Paragraph 3.
+            </p>
         </body>
     </html>
     
@@ -147,11 +156,27 @@ Expected Output
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+            <style>
+                .p2 {
+                    font-family: monospace;
+                }
+            </style>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <p style="font-family: sans-serif">
+                Paragraph 1.
+            </p>
+            <p class="p2">
+                Paragraph 2.
+            </p>
+            <p id="p3">
+                Paragraph 3.
+            </p>
         </body>
+        <script>
+            var seriftext = document.getElementById("p3");
+            seriftext.style.fontFamily = "serif";
+        </script>
     </html>
 
 Solution
@@ -160,9 +185,25 @@ Solution
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+            <style>
+                .p2 {
+                    font-family: monospace;
+                }
+            </style>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <p style="font-family: sans-serif">
+                Paragraph 1.
+            </p>
+            <p class="p2">
+                Paragraph 2.
+            </p>
+            <p id="p3">
+                Paragraph 3.
+            </p>
         </body>
+        <script>
+            var seriftext = document.getElementById("p3");
+            seriftext.style.fontFamily = "serif";
+        </script>
     </html>
