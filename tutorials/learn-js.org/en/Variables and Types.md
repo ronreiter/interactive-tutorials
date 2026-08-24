@@ -9,6 +9,16 @@ We can define several types of variables to use in our code:
     const myString = "Hello, World!"      // a string
     const myBoolean = true;               // a boolean
 
+**Note:**
+
+Although older JavaScript code uses `var` to declare variables, modern JavaScript prefers `let` and `const`.
+
+- `var` has function scope and can lead to confusing behavior in some cases.
+- `let` is block-scoped and can be reassigned.
+- `const` is block-scoped and cannot be reassigned, making it safer for values that should not change.
+  
+For this reason, it is recommended to use `const` by default, and `let` only when you need to reassign a variable.
+
 A few notes about variable types in JavaScript:
 
 * In JavaScript, the Number type can be both a floating point number and an integer. 
