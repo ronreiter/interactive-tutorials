@@ -138,6 +138,12 @@ This page does not have an exercise yet. You are welcome to contribute one by se
 
 [[https://github.com/ronreiter/interactive-tutorials]]
 
+Write the CSS selectors that will make the page behave like this:
+
+- all `p` elements should be blue
+- all paragraphs with the class `highlight` should be green
+- the paragraph with the ID `important` should be red
+
 
 Tutorial Code
 -------------
@@ -145,33 +151,69 @@ Tutorial Code
     <!DOCTYPE html>
     <html>
         <head>
+            <style>
+                /* write your CSS here */
+            </style>
         </head>
         <body>
+            <p>Normal paragraph</p>
+            <p class="highlight">Highlighted paragraph</p>
+            <p id="important" class="highlight">Important paragraph</p>
         </body>
     </html>
     
 Expected Output
 ---------------
 
+ 
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+            <style>
+                p {
+                    color: blue;
+                }
+
+                p.highlight {
+                    color: green;
+                }
+
+                p#important {
+                    color: red;
+                }
+            </style>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <p>Normal paragraph</p>
+            <p class="highlight">Highlighted paragraph</p>
+            <p id="important" class="highlight">Important paragraph</p>
         </body>
     </html>
 
 Solution
 --------
 
+
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Hello, World!</title>
+            <style>
+                p {
+                    color: blue;
+                }
+
+                p.highlight {
+                    color: green;
+                }
+
+                p#important {
+                    color: red;
+                }
+            </style>
         </head>
         <body>
-            <p>Hello, World!</p>
+            <p>Normal paragraph</p>
+            <p class="highlight">Highlighted paragraph</p>
+            <p id="important" class="highlight">Important paragraph</p>
         </body>
     </html>
